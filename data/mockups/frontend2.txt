@@ -1,0 +1,214 @@
+<mockup version="1.0" skin="sketch" measuredW="842" measuredH="642">
+  <controls>
+    <control controlID="71" controlTypeID="com.balsamiq.mockups::MultilineButton" x="353" y="109" w="146" h="93" measuredW="163" measuredH="110" zOrder="22" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%232%20Player%20Name%0A%20%20%20%20%20%20%20%20800%20Kills%20%28+8%29%0A%20%20%20%20%20%20%20%20%20%20%20%20200%20Deaths%20%28+4%29%0A%20%20%20%20%20%20%20%20%20%20%20%20+600%20Balance%20%28+4%29</text>
+      </controlProperties>
+    </control>
+    <control controlID="72" controlTypeID="com.balsamiq.mockups::Icon" x="353" y="147" w="-1" h="-1" measuredW="48" measuredH="48" zOrder="23" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>ContactIcon%7Clarge</icon>
+      </controlProperties>
+    </control>
+    <control controlID="73" controlTypeID="com.balsamiq.mockups::MultilineButton" x="499" y="108" w="146" h="93" measuredW="162" measuredH="110" zOrder="24" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%233%20Player%20Name%0A%20%20%20%20%20%20%20%20600%20Kills%20%28+4%29%0A%20%20%20%20%20%20%20%20%20%20%20%20400%20Deaths%20%28+3%29%0A%20%20%20%20%20%20%20%20%20%20%20%20+200%20Balance%20%28+1%29</text>
+      </controlProperties>
+    </control>
+    <control controlID="74" controlTypeID="com.balsamiq.mockups::Icon" x="499" y="147" w="-1" h="-1" measuredW="48" measuredH="48" zOrder="25" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>ContactIcon%7Clarge</icon>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="32" y="32" w="800" h="600" measuredW="450" measuredH="400" zOrder="0" locked="true" isInGroup="-1">
+      <controlProperties>
+        <text>Call%20of%20Duty%20Stats%20-%20G-Day%20X%0Ahttp%3A//gday10/stats</text>
+      </controlProperties>
+    </control>
+    <control controlID="78" controlTypeID="com.balsamiq.mockups::Tooltip" x="413" y="321" w="-1" h="-1" measuredW="74" measuredH="33.9" zOrder="26" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Victim</text>
+        <tooltipDirection>NE</tooltipDirection>
+      </controlProperties>
+    </control>
+    <control controlID="79" controlTypeID="com.balsamiq.mockups::Tooltip" x="574" y="414" w="-1" h="-1" measuredW="68" measuredH="33.9" zOrder="27" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Killer</text>
+        <tooltipDirection>SW</tooltipDirection>
+      </controlProperties>
+    </control>
+    <control controlID="80" controlTypeID="com.balsamiq.mockups::Tooltip" x="636" y="206" w="151" h="62" measuredW="149" measuredH="43" zOrder="35" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Scrolling%20list%0Aof%20player%20rankings</text>
+        <tooltipDirection>NW</tooltipDirection>
+      </controlProperties>
+    </control>
+    <control controlID="81" controlTypeID="com.balsamiq.mockups::LineChart" x="47" y="158" w="148" h="44" measuredW="187" measuredH="175" zOrder="28" locked="false" isInGroup="-1"/>
+    <control controlID="18" controlTypeID="com.balsamiq.mockups::Map" x="207" y="201" w="618" h="401" measuredW="252" measuredH="222" zOrder="1" locked="false" isInGroup="-1"/>
+    <control controlID="83" controlTypeID="com.balsamiq.mockups::HRule" x="41" y="202" w="782" h="-1" measuredW="100" measuredH="5" zOrder="34" locked="false" isInGroup="-1"/>
+    <control controlID="84" controlTypeID="com.balsamiq.mockups::MultilineButton" x="645" y="108" w="146" h="93" measuredW="162" measuredH="110" zOrder="36" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%234%20Player%20Name%0A%20%20%20%20%20%20%20%20400%20Kills%20%28+2%29%0A%20%20%20%20%20%20%20%20%20%20%20%20600%20Deaths%20%28+6%29%0A%20%20%20%20%20%20%20%20%20%20%20%20-200%20Balance%20%28-4%29</text>
+      </controlProperties>
+    </control>
+    <control controlID="85" controlTypeID="com.balsamiq.mockups::Icon" x="645" y="147" w="-1" h="-1" measuredW="48" measuredH="48" zOrder="37" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>ContactIcon%7Clarge</icon>
+      </controlProperties>
+    </control>
+    <control controlID="82" controlTypeID="com.balsamiq.mockups::Tooltip" x="192" y="206" w="134" h="62" measuredW="203" measuredH="33.9" zOrder="29" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Plot%20of%20current%20death%20rate</text>
+        <tooltipDirection>NW</tooltipDirection>
+      </controlProperties>
+    </control>
+    <control controlID="28" controlTypeID="com.balsamiq.mockups::MultilineButton" x="207" y="109" w="146" h="93" measuredW="163" measuredH="110" zOrder="32" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%231%20Player%20Name%0A%20%20%20%201%2C000%20Kills%20%28+5%29%0A%20%20%20%20%20%20%20%20%20%20%20%20100%20Deaths%20%28+2%29%0A%20%20%20%20%20%20%20%20%20%20%20%20+900%20Balance%20%28+3%29</text>
+      </controlProperties>
+    </control>
+    <control controlID="29" controlTypeID="com.balsamiq.mockups::Icon" x="207" y="147" w="-1" h="-1" measuredW="48" measuredH="48" zOrder="33" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>ContactIcon%7Clarge</icon>
+      </controlProperties>
+    </control>
+    <control controlID="31" controlTypeID="com.balsamiq.mockups::HSplitter" x="195" y="202" w="-1" h="405" measuredW="12" measuredH="100" zOrder="2" locked="false" isInGroup="-1"/>
+    <control controlID="32" controlTypeID="com.balsamiq.mockups::List" x="47" y="312" w="145" h="287" measuredW="100" measuredH="126" zOrder="31" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderStyle>square</borderStyle>
+        <text>Main%20Menu%0ALeaderboard%0AAwards%0A%20-%20Players%0A%20-%20Weapons%0A%20-%20Games%0APlayers%0AGames%0AGame%20Types%0AMaps%0AWeapons%0AHit%20Zones</text>
+        <hasHeader>true</hasHeader>
+        <selectedIndex>0</selectedIndex>
+        <rowHeight>24</rowHeight>
+        <alternateRowColor>16777215</alternateRowColor>
+      </controlProperties>
+    </control>
+    <control controlID="38" controlTypeID="com.balsamiq.mockups::TextArea" x="47" y="213" w="143" h="61" measuredW="200" measuredH="140" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Call%20of%20Duty%0AStats%20Logo</text>
+        <align>center</align>
+        <size>16</size>
+      </controlProperties>
+    </control>
+    <control controlID="39" controlTypeID="com.balsamiq.mockups::TextArea" x="47" y="268" w="143" h="44" measuredW="200" measuredH="140" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>G-Day%20X%20Live%21%0A03-07-2009</text>
+        <align>center</align>
+        <bold>false</bold>
+        <size>11</size>
+        <italic>true</italic>
+      </controlProperties>
+    </control>
+    <control controlID="40" controlTypeID="com.balsamiq.mockups::TextArea" x="46" y="105" w="149" h="29" measuredW="200" measuredH="140" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Leaderboard</text>
+        <align>center</align>
+        <size>16</size>
+      </controlProperties>
+    </control>
+    <control controlID="41" controlTypeID="com.balsamiq.mockups::TextArea" x="47" y="134" w="148" h="24" measuredW="200" measuredH="140" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Last%20Updated%3A%203%3A30pm</text>
+        <align>center</align>
+        <bold>false</bold>
+        <size>9</size>
+        <italic>true</italic>
+      </controlProperties>
+    </control>
+    <control controlID="43" controlTypeID="com.balsamiq.mockups::Tooltip" x="195" y="410" w="156" h="62" measuredW="147" measuredH="43" zOrder="30" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Pop-out%20menu%20bar%0Aon%20mouse%20hover</text>
+      </controlProperties>
+    </control>
+    <control controlID="45" controlTypeID="com.balsamiq.mockups::Icon" x="365" y="312" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>SadFaceIcon%7Csmall</icon>
+        <color>16711680</color>
+      </controlProperties>
+    </control>
+    <control controlID="46" controlTypeID="com.balsamiq.mockups::Icon" x="353" y="249" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>SadFaceIcon%7Csmall</icon>
+        <color>16711680</color>
+      </controlProperties>
+    </control>
+    <control controlID="47" controlTypeID="com.balsamiq.mockups::Icon" x="560" y="285" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>SadFaceIcon%7Csmall</icon>
+        <color>16711680</color>
+      </controlProperties>
+    </control>
+    <control controlID="48" controlTypeID="com.balsamiq.mockups::Icon" x="748" y="312" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>SadFaceIcon%7Csmall</icon>
+        <color>16711680</color>
+      </controlProperties>
+    </control>
+    <control controlID="49" controlTypeID="com.balsamiq.mockups::Icon" x="565" y="336" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>SadFaceIcon%7Csmall</icon>
+        <color>16711680</color>
+      </controlProperties>
+    </control>
+    <control controlID="50" controlTypeID="com.balsamiq.mockups::Icon" x="463" y="297" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="12" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>SadFaceIcon%7Csmall</icon>
+        <color>16711680</color>
+      </controlProperties>
+    </control>
+    <control controlID="51" controlTypeID="com.balsamiq.mockups::Icon" x="545" y="225" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>SadFaceIcon%7Csmall</icon>
+        <color>16711680</color>
+      </controlProperties>
+    </control>
+    <control controlID="53" controlTypeID="com.balsamiq.mockups::Icon" x="521" y="410" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>EmoticonIcon%7Csmall</icon>
+        <color>255</color>
+      </controlProperties>
+    </control>
+    <control controlID="54" controlTypeID="com.balsamiq.mockups::Icon" x="341" y="429" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>EmoticonIcon%7Csmall</icon>
+        <color>255</color>
+      </controlProperties>
+    </control>
+    <control controlID="55" controlTypeID="com.balsamiq.mockups::Icon" x="470" y="453" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>EmoticonIcon%7Csmall</icon>
+        <color>255</color>
+      </controlProperties>
+    </control>
+    <control controlID="56" controlTypeID="com.balsamiq.mockups::Icon" x="560" y="443" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>EmoticonIcon%7Csmall</icon>
+        <color>255</color>
+      </controlProperties>
+    </control>
+    <control controlID="58" controlTypeID="com.balsamiq.mockups::Icon" x="389" y="453" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>EmoticonIcon%7Csmall</icon>
+        <color>255</color>
+      </controlProperties>
+    </control>
+    <control controlID="59" controlTypeID="com.balsamiq.mockups::Icon" x="420" y="418" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="19" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>EmoticonIcon%7Csmall</icon>
+        <color>255</color>
+      </controlProperties>
+    </control>
+    <control controlID="60" controlTypeID="com.balsamiq.mockups::Icon" x="226" y="468" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="20" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>EmoticonIcon%7Csmall</icon>
+        <color>255</color>
+      </controlProperties>
+    </control>
+    <control controlID="61" controlTypeID="com.balsamiq.mockups::Icon" x="274" y="312" w="-1" h="-1" measuredW="24" measuredH="24" zOrder="21" locked="false" isInGroup="-1">
+      <controlProperties>
+        <icon>SadFaceIcon%7Csmall</icon>
+        <color>16711680</color>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
