@@ -1,0 +1,51 @@
+.ui-nav {
+  position: absolute;
+  width: 17em;
+  z-index: 2000;
+}
+.ui-nav-ctrl {
+  border-left-width: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 8.45em;
+}
+.ui-nav-ctrl-icon {
+  background-image: url("images/navigation.png");
+  display: block;
+  height: 32px;
+  width: 32px;
+}
+.ui-nav-shadow {
+  position: absolute;
+}
+.ui-nav-content {
+  padding: 1em;
+  position: relative;
+}
+.ui-nav-logo {
+  border: 1px solid black;
+  height: 7.7em;
+  margin-bottom: 1em;
+  text-align: center;
+  width: 200px;
+  vertical-align: center;
+}
+.ui-nav-menu-header,
+.ui-nav-menu-footer {
+  margin-top: 1px;
+  padding: 0.4em 1em;
+  text-align: center;
+}
+.ui-nav-menu {
+  margin-top: 1px;
+}
+.ui-nav-menu-icon {
+  cursor: pointer;
+  left: 1.6em;
+  margin-top: 0.4em;
+  position: absolute;
+}
+.ui-nav-menu-link {
+  display: block;
+  padding: 0.4em 1em 0.4em 2.2em;
+}

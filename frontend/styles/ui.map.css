@@ -1,0 +1,69 @@
+.ui-map {
+  border-width: 1px 0 0 0;
+  cursor: url(images/hand.cur), default;
+  position: absolute;
+  top: 150px;
+  width: 100%;
+}
+.ui-map-shadow {
+  background: url(images/shadow.png) repeat-x;
+  height: 5px;
+  position: relative;
+  z-index: 1100;
+}
+.olControlCustomPanPanel {
+  background: url(images/pan-panel.png) no-repeat;
+  cursor: default;
+  height: 54px;
+  left: 10px;
+  top: 10px;
+  width: 54px;
+}  
+.olControlCustomPanPanel div {
+  cursor: pointer;
+  height: 16px;
+  position: absolute;
+  width: 16px;
+}
+.olControlPanNorthItemInactive {
+  left: 17px;
+  top: 0px;
+}
+.olControlPanSouthItemInactive {
+  left: 17px;
+  top: 34px;
+}
+.olControlPanWestItemInactive {
+  left: 0px;
+  top: 17px;
+}
+.olControlPanEastItemInactive {
+  top: 17px;
+  left: 34px;
+}
+.olControlZoomPanel {
+  background: url(images/zoom-panel.png) no-repeat;
+  cursor: default;
+  height: 64px;
+  left: 27px;
+  top: 74px;
+  width: 20px;
+} 
+.olControlZoomPanel div {
+  cursor: pointer;
+  height: 18px;
+  position: absolute;
+  width: 18px;
+}
+.olControlZoomInItemInactive {
+  left: 0px;
+  top: 2px;
+}
+.olControlZoomToMaxExtentItemInactive {
+  left: 0px;
+  top: 22px;
+}
+.olControlZoomOutItemInactive {
+  left: 0px;
+  top: 42px;
+}

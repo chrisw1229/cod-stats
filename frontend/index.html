@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>Game Statistics - Call of Duty:United Offensive</title>
+    <link type="image/x-icon" href="styles/images/favicon.png" rel="shortcut icon"/>
+
+    <link type="text/css" href="theme/ui.all.css" rel="stylesheet"/>
+    <link type="text/css" href="styles/ui.navigation.css" rel="stylesheet"/>
+    <link type="text/css" href="styles/ui.map.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="scripts/openlayers.js"></script>
+    <script type="text/javascript" src="scripts/jquery.js"></script>
+    <script type="text/javascript" src="scripts/jquery-ui.js"></script>
+    <script type="text/javascript" src="scripts/ui.navigation.js"></script>
+    <script type="text/javascript" src="scripts/ui.map.js"></script>
+
+    <style type="text/css">
+      body {
+        background-color: #C9C1A6;
+        font-family: "verdana", "arial", "sans-serif";
+        font-size: 85%;
+        margin: 0;
+      }
+    </style>
+
+    <script type="text/javascript">
+      $(function() {
+        $("#nav").navigation();
+        //Map.load("#map", { map: "wallpaper" });
+        //Map.load("#map", { map: "peaks" });
+        Map.load("#map", { map: "carentan" });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="ticker"></div>
+    <div id="nav"></div>
+    <div id="map"></div>
+  </body>
+</html>
