@@ -1,0 +1,118 @@
+// Note to translators:
+// If a sentence is the same in your language then please change it to "#same"
+//
+// eg:
+// LANG_ENGLISH  "HALT"
+// LANG_GERMAN   "#same"
+//
+// (This is so we can tell which strings have been signed-off as ok to be the same words for QA
+//  and because we do not store duplicate strings, which will then get exported again next time
+//  as being untranslated.)
+//
+VERSION             "1"
+CONFIG              "C:\COD\bin\StringEd\StringEd.cfg"
+FILENOTES           ""
+
+REFERENCE           5_30CAL
+LANG_ENGLISH        "5. M1919A6 .30 cal"
+
+REFERENCE           THE_MG34_MACHINE_GUN
+LANG_ENGLISH        "The MG34 light machine gun is ideal for the squad support role. Due to its large size, it must be deployed before firing."
+
+REFERENCE           THE_30CAL_MACHINE_GUN
+LANG_ENGLISH        "The M1919 A6 .30 caliber machine gun is excellent  in the role of squad support. Due to its large size, it must be deployed and cannot be fired on the move. "
+
+REFERENCE           6_30CAL
+LANG_ENGLISH        "6. M1919A6 .30 cal"
+
+REFERENCE           6_MG34
+LANG_ENGLISH        "6. MG34"
+
+REFERENCE           BATTLERANK
+LANG_ENGLISH        "Battle Rank:  "
+
+REFERENCE           SHELLSHOCK
+LANG_ENGLISH        "Shell Shock:  "
+
+REFERENCE           4_GEWEHR
+LANG_ENGLISH        "4. Gewehr 43"
+
+REFERENCE           5_SCOPED_KAR98K
+LANG_ENGLISH        "5. Scoped Kar98k"
+
+REFERENCE           THE_GEWEHR43
+LANG_ENGLISH        "The Gewehr 43 is a powerful and accurate semi-automatic rifle. Its 10 round magazine allows for quicker reloading during combat."
+
+REFERENCE           SPAWN_PRIMARY
+LANG_ENGLISH        "A) Primary Spawn Point"
+
+REFERENCE           SPAWN_SECONDARY
+LANG_ENGLISH        "B) Secondary Spawn Point"
+
+REFERENCE           3_SVT40
+LANG_ENGLISH        "3. Tokarev SVT40"
+
+REFERENCE           5_DP28
+LANG_ENGLISH        "5. Degtyarev DP28"
+
+REFERENCE           THE_SVT40
+LANG_ENGLISH        "The Tokarev SVT40  is a powerful and accurate semi-automatic rifle. Its box magazine  allows for quicker reloading."
+
+REFERENCE           THE_DP28
+LANG_ENGLISH        "The Degtyarev DP28  light machine gun is ideal  in  the squad support role. Due to its large size, it must be deployed before it can be fired."
+
+REFERENCE           A_M1A1_CARBINE
+LANG_ENGLISH        "a. M1A1 Carbine"
+
+REFERENCE           B_M1_GARAND
+LANG_ENGLISH        "b. M1 Garand"
+
+REFERENCE           C_THOMPSON
+LANG_ENGLISH        "c. Thompson"
+
+REFERENCE           D_BAR
+LANG_ENGLISH        "d. BAR"
+
+REFERENCE           E_SPRINGFIELD
+LANG_ENGLISH        "e. Springfield"
+
+REFERENCE           F_30CAL
+LANG_ENGLISH        "f. M1919A6 .30 cal"
+
+REFERENCE           A_LEEENFIELD
+LANG_ENGLISH        "a. Lee-Enfield"
+
+REFERENCE           C_BREN_LMG
+LANG_ENGLISH        "c. Bren LMG"
+
+REFERENCE           B_STEN
+LANG_ENGLISH        "b. Sten"
+
+REFERENCE           D_SPRINGFIELD
+LANG_ENGLISH        "d. Springfield"
+
+REFERENCE           E_30CAL
+LANG_ENGLISH        "e. M1919A6 .30 cal"
+
+REFERENCE           E_DP28
+LANG_ENGLISH        "e. DP28"
+
+REFERENCE           A_MOSINNAGANT
+LANG_ENGLISH        "a. Mosin-Nagant"
+
+REFERENCE           B_PPSH
+LANG_ENGLISH        "b. PPSH"
+
+REFERENCE           D_SCOPED_MOSINNAGANT
+LANG_ENGLISH        "d. Scoped Mosin-Nagant"
+
+REFERENCE           4_SCOPED_MOSINNAGANT
+LANG_ENGLISH        "4. Scoped Mosin-Nagant"
+
+REFERENCE           C_SVT40
+LANG_ENGLISH        "c. Tokarev SVT40"
+
+
+ENDMARKER
+
+
