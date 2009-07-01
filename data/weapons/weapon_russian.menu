@@ -35,6 +35,8 @@
 			hide nagant_info;
 			hide ppsh_info;
 			hide nagantsniper_info;
+			hide svt40_info;
+			hide dp28_info;
 		}
 
 // WINDOW BACKGROUND
@@ -434,7 +436,7 @@
 		{
 			name			"button_nagant"
 			visible			1
-			rect			16 46 160 22
+			rect			WEAPON_BUTTON_RECT_FIRST
 			origin			ORIGIN_MENUWINDOW
 			forecolor		1 1 1 1
 			type			ITEM_TYPE_BUTTON
@@ -455,6 +457,8 @@
 			{
 				hide ppsh_info;
 				hide nagantsniper_info;
+				hide svt40_info;
+				hide dp28_info;
 				play "mouse_over";
 				show nagant_info;
 				show weapon_propertiestext;
@@ -466,7 +470,7 @@
 		{
 			name			"button_ppsh"
 			visible			1
-			rect			16 70 160 22
+			rect			WEAPON_BUTTON_RECT_SECOND
 			origin			ORIGIN_MENUWINDOW
 			forecolor		1 1 1 1
 			type			ITEM_TYPE_BUTTON
@@ -487,6 +491,8 @@
 			{
 				hide nagant_info;
 				hide nagantsniper_info;
+				hide svt40_info;
+				hide dp28_info;
 				play "mouse_over";
 				show ppsh_info;
 				show weapon_propertiestext;
@@ -496,13 +502,47 @@
 		
 		itemDef 
 		{
-			name			"button_nagantsniper"
+			name			"button_svt40"
 			visible			1
-			rect			16 94 160 22
+			rect			WEAPON_BUTTON_RECT_THIRD
 			origin			ORIGIN_MENUWINDOW
 			forecolor		1 1 1 1
 			type			ITEM_TYPE_BUTTON
-			text			"@MPMENU_3_SCOPED_MOSINNAGANT"
+			text			"@GMI_MPMENU_3_SVT40"
+			textfont		UI_FONT_NORMAL
+			textscale		.24
+			textalignx		8
+			textaligny		16
+			cvartest		"ui_allow_svt40"
+			hideCvar		{ "0" }
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "svt40_mp";
+				close weapon_russian;
+			}
+			onFocus
+			{
+				hide nagant_info;
+				hide ppsh_info;
+				hide nagantsniper_info;
+				hide dp28_info;
+				play "mouse_over";
+				show svt40_info;
+				show weapon_propertiestext;
+			}
+		}
+		execKey "3" { play "mouse_click"; scriptMenuResponse "svt40_mp"; close weapon_russian }
+
+		itemDef 
+		{
+			name			"button_nagantsniper"
+			visible			1
+			rect			WEAPON_BUTTON_RECT_FOURTH
+			origin			ORIGIN_MENUWINDOW
+			forecolor		1 1 1 1
+			type			ITEM_TYPE_BUTTON
+			text			"@GMI_MPMENU_4_SCOPED_MOSINNAGANT"
 			textfont		UI_FONT_NORMAL
 			textscale		.24
 			textalignx		8
@@ -519,12 +559,48 @@
 			{
 				hide nagant_info;
 				hide ppsh_info;
+				hide svt40_info;
+				hide dp28_info;
 				play "mouse_over";
 				show nagantsniper_info;
 				show weapon_propertiestext;
 			}
 		}
-		execKey "3" { play "mouse_click"; scriptMenuResponse "mosin_nagant_sniper_mp"; close weapon_russian }
+		execKey "4" { play "mouse_click"; scriptMenuResponse "mosin_nagant_sniper_mp"; close weapon_russian }
+
+		itemDef 
+		{
+			name			"button_dp28"
+			visible			1
+			rect			WEAPON_BUTTON_RECT_FIFTH
+			origin			ORIGIN_MENUWINDOW
+			forecolor		1 1 1 1
+			type			ITEM_TYPE_BUTTON
+			text			"@GMI_MPMENU_5_DP28"
+			textfont		UI_FONT_NORMAL
+			textscale		.24
+			textalignx		8
+			textaligny		16
+			cvartest		"ui_allow_dp28"
+			hideCvar		{ "0" }
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "dp28_mp";
+				close weapon_russian;
+			}
+			onFocus
+			{
+				hide nagant_info;
+				hide ppsh_info;
+				hide nagantsniper_info;
+				hide svt40_info;
+				play "mouse_over";
+				show dp28_info;
+				show weapon_propertiestext;
+			}
+		}
+		execKey "5" { play "mouse_click"; scriptMenuResponse "dp28_mp"; close weapon_russian }
 
 // WEAPON IMAGES
 		itemDef
@@ -555,6 +631,26 @@
 			origin			ORIGIN_WEAPONIMAGE
 	 		style			WINDOW_STYLE_SHADER
 			background		"ui_mp/assets/hud@nagantscoped.tga"
+			decoration
+		}
+		itemDef
+		{
+			name			"svt40_info"
+			visible 		0
+			rect			0 10 224 112
+			origin			ORIGIN_WEAPONIMAGE
+	 		style			WINDOW_STYLE_SHADER
+			background		"ui_mp/assets/hud@svt40.dds"
+			decoration
+		}
+		itemDef
+		{
+			name			"dp28_info"
+			visible 		0
+			rect			0 10 224 112
+			origin			ORIGIN_WEAPONIMAGE
+	 		style			WINDOW_STYLE_SHADER
+			background		"ui_mp/assets/hud@dp28.dds"
 			decoration
 		}
 		
@@ -594,6 +690,32 @@
 			forecolor		1 1 1 1
 			autowrapped
 			text			"@MPMENU_THE_SCOPED_MOSINNAGANT"
+			textfont		UI_FONT_NORMAL
+			textscale		.24
+			decoration
+		}
+		itemDef
+		{
+			name			"svt40_info"
+			visible 		0
+			rect			0 17 224 64
+			origin			ORIGIN_WEAPONTEXT
+			forecolor		1 1 1 1
+			autowrapped
+			text			"@GMI_MPMENU_THE_SVT40"
+			textfont		UI_FONT_NORMAL
+			textscale		.24
+			decoration
+		}
+		itemDef
+		{
+			name			"dp28_info"
+			visible 		0
+			rect			0 17 224 64
+			origin			ORIGIN_WEAPONTEXT
+			forecolor		1 1 1 1
+			autowrapped
+			text			"@GMI_MPMENU_THE_DP28"
 			textfont		UI_FONT_NORMAL
 			textscale		.24
 			decoration
@@ -801,5 +923,131 @@
 	 		style			WINDOW_STYLE_FILLED
 			decoration
 		}
+		itemDef
+		{
+			name			"svt40_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONACCURACY
+			backcolor		1 1 1 .125
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+		itemDef
+		{
+			name			"svt40_info"
+			visible 		0
+			rect			0 0 80 10
+			origin			ORIGIN_WEAPONACCURACY
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+
+		itemDef
+		{
+			name			"svt40_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONDAMAGE
+			backcolor		1 1 1 .125
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+		itemDef
+		{
+			name			"svt40_info"
+			visible 		0
+			rect			0 0 96 10
+			origin			ORIGIN_WEAPONDAMAGE
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+
+		itemDef
+		{
+			name			"svt40_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONMOBILITY
+			backcolor		1 1 1 .125
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+		itemDef
+		{
+			name			"svt40_info"
+			visible 		0
+			rect			0 0 97 10
+			origin			ORIGIN_WEAPONMOBILITY
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+		
+		itemDef
+		{
+			name			"dp28_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONACCURACY
+			backcolor		1 1 1 .125
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+		itemDef
+		{
+			name			"dp28_info"
+			visible 		0
+			rect			0 0 70 10
+			origin			ORIGIN_WEAPONACCURACY
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+
+		itemDef
+		{
+			name			"dp28_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONDAMAGE
+			backcolor		1 1 1 .125
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+		itemDef
+		{
+			name			"dp28_info"
+			visible 		0
+			rect			0 0 90 10
+			origin			ORIGIN_WEAPONDAMAGE
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+
+		itemDef
+		{
+			name			"dp28_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONMOBILITY
+			backcolor		1 1 1 .125
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+		itemDef
+		{
+			name			"dp28_info"
+			visible 		0
+			rect			0 0 110 10
+			origin			ORIGIN_WEAPONMOBILITY
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+
 	}
 }

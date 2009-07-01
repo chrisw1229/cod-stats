@@ -2,12 +2,12 @@
 
 #define ORIGIN_MENUTABS				96 64
 #define ORIGIN_MENUWINDOW			96 96
-#define ORIGIN_WEAPONIMAGE			296 116
-#define ORIGIN_WEAPONTEXT			296 220
-#define ORIGIN_WEAPONPROPERTIESTEXT		296 330
-#define ORIGIN_WEAPONACCURACY			395 319
-#define ORIGIN_WEAPONDAMAGE			395 336
-#define ORIGIN_WEAPONMOBILITY			395 353
+#define ORIGIN_WEAPONIMAGE			296 104
+#define ORIGIN_WEAPONTEXT			296 208
+#define ORIGIN_WEAPONPROPERTIESTEXT		296 320
+#define ORIGIN_WEAPONACCURACY			392 312
+#define ORIGIN_WEAPONDAMAGE			392 326
+#define ORIGIN_WEAPONMOBILITY			392 340
 
 {
 	menuDef
@@ -36,6 +36,7 @@
 			hide sten_info;
 			hide bren_info;
 			hide springfield_info;
+			hide mg30cal_info;
 		}
 
 // WINDOW BACKGROUND
@@ -119,7 +120,7 @@
 			decoration
 		}
 
-// MAIN MENU BUTTON
+// MENU TABS
 		itemDef 
 		{
 			name			"button_mainmenu"
@@ -178,7 +179,6 @@
 			decoration
 		}
 
-// TEAM BUTTON
 		itemDef
 		{
 			name			"button_team"
@@ -237,7 +237,6 @@
 			decoration
 		}
 
-// WEAPON BUTTON
 		itemDef
 		{
 			name			"button_weapon"
@@ -265,8 +264,6 @@
 			backcolor		1 1 1 .125
 			decoration
 		}
-
-// VIEW MAP BUTTON
 		itemDef
 		{
 			name			"button_viewmap"
@@ -324,8 +321,6 @@
 			backcolor		1 1 1 .125
 			decoration
 		}
-
-// CALL VOTE BUTTON
 		itemDef
 		{
 			name			"button_callvote"
@@ -342,7 +337,7 @@
 			textalignx		42
 			textaligny		24
 			textalign		ITEM_ALIGN_CENTER
-			cvartest		"ui_allowvote"
+			cvartest		"scr_allow_vote"
 			hideCvar		{ "0" }
 			action
 			{
@@ -430,12 +425,13 @@
 			showCvar		{ "0" }
 		}
 
+
 // MENU CHOICES
 		itemDef 
 		{
 			name			"button_enfield"
 			visible			1
-			rect			16 46 160 22
+			rect			WEAPON_BUTTON_RECT_FIRST
 			origin			ORIGIN_MENUWINDOW
 			forecolor		1 1 1 1
 			type			ITEM_TYPE_BUTTON
@@ -457,6 +453,7 @@
 				hide sten_info;
 				hide bren_info;
 				hide springfield_info;
+				hide mg30cal_info;
 				play "mouse_over";
 				show enfield_info;
 				show weapon_propertiestext;
@@ -468,7 +465,7 @@
 		{
 			name			"button_sten"
 			visible			1
-			rect			16 70 160 22
+			rect			WEAPON_BUTTON_RECT_SECOND
 			origin			ORIGIN_MENUWINDOW
 			forecolor		1 1 1 1
 			type			ITEM_TYPE_BUTTON
@@ -490,6 +487,7 @@
 				hide enfield_info;
 				hide bren_info;
 				hide springfield_info;
+				hide mg30cal_info;
 				play "mouse_over";
 				show sten_info;
 				show weapon_propertiestext;
@@ -501,7 +499,7 @@
 		{
 			name			"button_bren"
 			visible			1
-			rect			16 94 160 22
+			rect			WEAPON_BUTTON_RECT_THIRD
 			origin			ORIGIN_MENUWINDOW
 			forecolor		1 1 1 1
 			type			ITEM_TYPE_BUTTON
@@ -523,6 +521,7 @@
 				hide enfield_info;
 				hide sten_info;
 				hide springfield_info;
+				hide mg30cal_info;
 				play "mouse_over";
 				show bren_info;
 				show weapon_propertiestext;
@@ -534,7 +533,7 @@
 		{
 			name			"button_springfield"
 			visible			1
-			rect			16 118 160 22
+			rect			WEAPON_BUTTON_RECT_FOURTH
 			origin			ORIGIN_MENUWINDOW
 			forecolor		1 1 1 1
 			type			ITEM_TYPE_BUTTON
@@ -556,6 +555,7 @@
 				hide enfield_info;
 				hide sten_info;
 				hide bren_info;
+				hide mg30cal_info;
 				play "mouse_over";
 				show springfield_info;
 				show weapon_propertiestext;
@@ -563,6 +563,40 @@
 		}
 		execKey "4" { play "mouse_click"; scriptMenuResponse "springfield_mp"; close weapon_british }
 		
+		itemDef 
+		{
+			name			"button_30cal"
+			visible			1
+			rect			WEAPON_BUTTON_RECT_FIFTH
+			origin			ORIGIN_MENUWINDOW
+			forecolor		1 1 1 1
+			type			ITEM_TYPE_BUTTON
+			text			"@GMI_MPMENU_5_30CAL"
+			textfont		UI_FONT_NORMAL
+			textscale		.24
+			textalignx		8
+			textaligny		16
+			cvartest		"ui_allow_mg30cal"
+			hideCvar		{ "0" }
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "mg30cal_mp";
+				close weapon_british;
+			}
+			onFocus
+			{
+				hide enfield_info;
+				hide sten_info;
+				hide bren_info;
+				hide springfield_info;
+				play "mouse_over";
+				show mg30cal_info;
+				show weapon_propertiestext;
+			}
+		}
+		execKey "5" { play "mouse_click"; scriptMenuResponse "mg30cal_mp"; close weapon_british }
+
 // WEAPON IMAGES
 		itemDef
 		{
@@ -602,6 +636,16 @@
 			origin			ORIGIN_WEAPONIMAGE
 	 		style			WINDOW_STYLE_SHADER
 			background		"ui_mp/assets/hud@springfield.tga"
+			decoration
+		}
+		itemDef
+		{
+			name			"mg30cal_info"
+			visible 		0
+			rect			0 10 224 112
+			origin			ORIGIN_WEAPONIMAGE
+	 		style			WINDOW_STYLE_SHADER
+			background		"ui_mp/assets/hud@30cal.dds"
 			decoration
 		}
 
@@ -654,6 +698,19 @@
 			forecolor		1 1 1 1
 			autowrapped
 			text			"@MPMENU_THIS_IS_A_SNIPER_RIFLE"
+			textfont		UI_FONT_NORMAL
+			textscale		.24
+			decoration
+		}
+		itemDef
+		{
+			name			"mg30cal_info"
+			visible 		0
+			rect			0 17 224 64
+			origin			ORIGIN_WEAPONTEXT
+			forecolor		1 1 1 1
+			autowrapped
+			text			"@GMI_MPMENU_THE_30CAL_MACHINE_GUN"
 			textfont		UI_FONT_NORMAL
 			textscale		.24
 			decoration
@@ -924,5 +981,68 @@
 	 		style			WINDOW_STYLE_FILLED
 			decoration
 		}
+		itemDef
+		{
+			name			"mg30cal_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONACCURACY
+			backcolor		1 1 1 .125
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+		itemDef
+		{
+			name			"mg30cal_info"
+			visible 		0
+			rect			0 0 70 10
+			origin			ORIGIN_WEAPONACCURACY
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+
+		itemDef
+		{
+			name			"mg30cal_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONDAMAGE
+			backcolor		1 1 1 .125
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+		itemDef
+		{
+			name			"mg30cal_info"
+			visible 		0
+			rect			0 0 90 10
+			origin			ORIGIN_WEAPONDAMAGE
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+
+		itemDef
+		{
+			name			"mg30cal_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONMOBILITY
+			backcolor		1 1 1 .125
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+		itemDef
+		{
+			name			"mg30cal_info"
+			visible 		0
+			rect			0 0 110 10
+			origin			ORIGIN_WEAPONMOBILITY
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+
 	}
 }

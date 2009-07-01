@@ -35,7 +35,9 @@
 			hide kar98k_info;
 			hide mp40_info;
 			hide mp44_info;
+			hide gewehr43_info;
 			hide kar98ksniper_info;
+			hide mg34_info;
 		}
 
 // WINDOW BACKGROUND
@@ -119,7 +121,7 @@
 			decoration
 		}
 
-// MAIN MENU BUTTON
+// MENU TABS
 		itemDef 
 		{
 			name			"button_mainmenu"
@@ -435,7 +437,7 @@
 		{
 			name			"button_kar98k"
 			visible			1
-			rect			16 46 160 22
+			rect			WEAPON_BUTTON_RECT_FIRST
 			origin			ORIGIN_MENUWINDOW
 			forecolor		1 1 1 1
 			type			ITEM_TYPE_BUTTON
@@ -457,6 +459,8 @@
 				hide mp40_info;
 				hide mp44_info;
 				hide kar98ksniper_info;
+				hide mg34_info;
+				hide gewehr43_info;
 				play "mouse_over";
 				show kar98k_info;
 				show weapon_propertiestext;
@@ -468,7 +472,7 @@
 		{
 			name			"button_mp40"
 			visible			1
-			rect			16 70 160 22
+			rect			WEAPON_BUTTON_RECT_SECOND
 			origin			ORIGIN_MENUWINDOW
 			forecolor		1 1 1 1
 			type			ITEM_TYPE_BUTTON
@@ -490,6 +494,8 @@
 				hide kar98k_info;
 				hide mp44_info;
 				hide kar98ksniper_info;
+				hide mg34_info;
+				hide gewehr43_info;
 				play "mouse_over";
 				show mp40_info;
 				show weapon_propertiestext;
@@ -501,7 +507,7 @@
 		{
 			name			"button_mp44"
 			visible			1
-			rect			16 94 160 22
+			rect			WEAPON_BUTTON_RECT_THIRD
 			origin			ORIGIN_MENUWINDOW
 			forecolor		1 1 1 1
 			type			ITEM_TYPE_BUTTON
@@ -523,6 +529,8 @@
 				hide kar98k_info;
 				hide mp40_info;
 				hide kar98ksniper_info;
+				hide mg34_info;
+				hide gewehr43_info;
 				play "mouse_over";
 				show mp44_info;
 				show weapon_propertiestext;
@@ -532,13 +540,48 @@
 		
 		itemDef 
 		{
-			name			"button_kar98ksniper"
+			name			"button_gewehr43"
 			visible			1
-			rect			16 118 160 22
+			rect			WEAPON_BUTTON_RECT_FOURTH
 			origin			ORIGIN_MENUWINDOW
 			forecolor		1 1 1 1
 			type			ITEM_TYPE_BUTTON
-			text			"@MPMENU_4_SCOPED_KAR98K"
+			text			"@GMI_MPMENU_4_GEWEHR"
+			textfont		UI_FONT_NORMAL
+			textscale		.24
+			textalignx		8
+			textaligny		16
+			cvartest		"ui_allow_gewehr43"
+			hideCvar		{ "0" }
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "gewehr43_mp";
+				close weapon_german;
+			}
+			onFocus
+			{
+				hide kar98k_info;
+				hide mp40_info;
+				hide mp44_info;
+				hide mg34_info;
+				hide kar98ksniper_info;
+				play "mouse_over";
+				show gewehr43_info;
+				show weapon_propertiestext;
+			}
+		}
+		execKey "4" { play "mouse_click"; scriptMenuResponse "gewehr43_mp"; close weapon_german }
+
+		itemDef 
+		{
+			name			"button_kar98ksniper"
+			visible			1
+			rect			WEAPON_BUTTON_RECT_FIFTH
+			origin			ORIGIN_MENUWINDOW
+			forecolor		1 1 1 1
+			type			ITEM_TYPE_BUTTON
+			text			"@GMI_MPMENU_5_SCOPED_KAR98K"
 			textfont		UI_FONT_NORMAL
 			textscale		.24
 			textalignx		8
@@ -556,13 +599,50 @@
 				hide kar98k_info;
 				hide mp40_info;
 				hide mp44_info;
+				hide mg34_info;
+				hide gewehr43_info;
 				play "mouse_over";
 				show kar98ksniper_info;
 				show weapon_propertiestext;
 			}
 		}
-		execKey "4" { play "mouse_click"; scriptMenuResponse "kar98k_sniper_mp"; close weapon_german }
+		execKey "5" { play "mouse_click"; scriptMenuResponse "kar98k_sniper_mp"; close weapon_german }
 		
+		itemDef 
+		{
+			name			"button_mg34"
+			visible			1
+			rect			WEAPON_BUTTON_RECT_SIXTH
+			origin			ORIGIN_MENUWINDOW
+			forecolor		1 1 1 1
+			type			ITEM_TYPE_BUTTON
+			text			"@GMI_MPMENU_6_MG34"
+			textfont		UI_FONT_NORMAL
+			textscale		.24
+			textalignx		8
+			textaligny		16
+			cvartest		"ui_allow_mg34"
+			hideCvar		{ "0" }
+			action
+			{
+				play "mouse_click";
+				scriptMenuResponse "mg34_mp";
+				close weapon_german;
+			}
+			onFocus
+			{
+				hide kar98k_info;
+				hide mp40_info;
+				hide mp44_info;
+				hide kar98ksniper_info;
+				hide gewehr43_info;
+				play "mouse_over";
+				show mg34_info;
+				show weapon_propertiestext;
+			}
+		}
+		execKey "6" { play "mouse_click"; scriptMenuResponse "mg34_mp"; close weapon_german }
+
 // WEAPON IMAGES
 		itemDef
 		{
@@ -596,6 +676,16 @@
 		}
 		itemDef
 		{
+			name			"gewehr43_info"
+			visible 		0
+			rect			0 10 224 112
+			origin			ORIGIN_WEAPONIMAGE
+	 		style			WINDOW_STYLE_SHADER
+			background		"ui_mp/assets/hud@G43.dds"
+			decoration
+		}
+		itemDef
+		{
 			name			"kar98ksniper_info"
 			visible 		0
 			rect			0 0 224 112
@@ -604,7 +694,16 @@
 			background		"ui_mp/assets/hud@kar98scoped.tga"
 			decoration
 		}
-
+		itemDef
+		{
+			name			"mg34_info"
+			visible 		0
+			rect			0 10 224 112
+			origin			ORIGIN_WEAPONIMAGE
+	 		style			WINDOW_STYLE_SHADER
+			background		"ui_mp/assets/hud@mg34.dds"
+			decoration
+		}
 // WEAPON DESCRIPTIONS
 		itemDef
 		{
@@ -658,6 +757,32 @@
 			textscale		.24
 			decoration
 		}	
+		itemDef
+		{
+			name			"gewehr43_info"
+			visible 		0
+			rect			0 0 224 64
+			origin			ORIGIN_WEAPONTEXT
+			forecolor		1 1 1 1
+			autowrapped
+			text			"@GMI_MPMENU_THE_GEWEHR43" 
+			textfont		UI_FONT_NORMAL
+			textscale		.24
+			decoration
+		}	
+		itemDef
+		{
+			name			"mg34_info"
+			visible 		0
+			rect			0 17 224 64
+			origin			ORIGIN_WEAPONTEXT
+			forecolor		1 1 1 1
+			autowrapped
+			text			"@GMI_MPMENU_THE_MG34_MACHINE_GUN"
+			textfont		UI_FONT_NORMAL
+			textscale		.24
+			decoration
+		}
 
 // WEAPON PROPERTIES
 		itemDef
@@ -864,6 +989,68 @@
 
 		itemDef
 		{
+			name			"gewehr43_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONACCURACY
+			backcolor		1 1 1 .125
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+		itemDef
+		{
+			name			"gewehr43_info"
+			visible 		0
+			rect			0 0 80 10
+			origin			ORIGIN_WEAPONACCURACY
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+
+		itemDef
+		{
+			name			"gewehr43_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONDAMAGE
+			backcolor		1 1 1 .125
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+		itemDef
+		{
+			name			"gewehr43_info"
+			visible 		0
+			rect			0 0 96 10
+			origin			ORIGIN_WEAPONDAMAGE
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+
+		itemDef
+		{
+			name			"gewehr43_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONMOBILITY
+			backcolor		1 1 1 .125
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+		itemDef
+		{
+			name			"gewehr43_info"
+			visible 		0
+			rect			0 0 97 10
+			origin			ORIGIN_WEAPONMOBILITY
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+		itemDef
+		{
 			name			"kar98ksniper_info"
 			visible 		0
 			rect			0 0 128 10
@@ -924,5 +1111,68 @@
 	 		style			WINDOW_STYLE_FILLED
 			decoration
 		}
+		itemDef
+		{
+			name			"mg34_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONACCURACY
+			backcolor		1 1 1 .125
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+		itemDef
+		{
+			name			"mg34_info"
+			visible 		0
+			rect			0 0 70 10
+			origin			ORIGIN_WEAPONACCURACY
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+
+		itemDef
+		{
+			name			"mg34_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONDAMAGE
+			backcolor		1 1 1 .125
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+		itemDef
+		{
+			name			"mg34_info"
+			visible 		0
+			rect			0 0 90 10
+			origin			ORIGIN_WEAPONDAMAGE
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+
+		itemDef
+		{
+			name			"mg34_info"
+			visible 		0
+			rect			0 0 128 10
+			origin			ORIGIN_WEAPONMOBILITY
+			backcolor		1 1 1 .125
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+		itemDef
+		{
+			name			"mg34_info"
+			visible 		0
+			rect			0 0 110 10
+			origin			ORIGIN_WEAPONMOBILITY
+			backcolor		1 1 1 1
+	 		style			WINDOW_STYLE_FILLED
+			decoration
+		}
+
 	}
 }
