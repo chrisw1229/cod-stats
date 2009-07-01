@@ -20,7 +20,7 @@
 (def line-break (b-char (rep+ (alt newline-lit return-lit))))
 (def ws (constant-semantics (rep* (alt space tab line-break)) :ws))
 (def rest-of-line
-  (complex [line-string get-remainder]
+  (complex [line-string (nb-char (rep* (except anything (alt newline-lit return-lit))))]
     (apply-str line-string)))
 
 (def digit-lit (lit-alt-seq "0123456789" nb-char-lit))
@@ -31,6 +31,9 @@
     character))
 (def not-colon-lit
   (complex [character (nb-char (except anything (lit \:)))]
+    character))
+(def not-backslash-lit
+  (complex [character (nb-char (except anything (lit \\)))]
     character))
 
 (def number-lit
@@ -45,3 +48,6 @@
 
 (def non-colon-string
   (semantics (rep+ not-colon-lit) apply-str))
+
+(def non-backslash-string
+  (semantics (rep+ not-backslash-lit) apply-str))

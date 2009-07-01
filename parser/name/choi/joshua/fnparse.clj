@@ -256,7 +256,7 @@
   (opt (rep+ subrule)))
 
 (defn rep+
-  "Creates a rule that is the zero-or-more greedy repetition of the given subrule. It
+  "Creates a rule that is the one-or-more greedy repetition of the given subrule. It
   fails only when its subrule fails immediately. It consumes tokens with its subrule until
   its subrule fails. Its result is the sequence of results from the subrule's repetitions.
   (def a (rep* b)) is equivalent to the EBNF:

@@ -102,7 +102,7 @@
 	    _ semi-colon-lit
 	    talker player
 	    _ semi-colon-lit
-	    message get-remainder]
+	    message rest-of-line]
     (struct talk-struct talker (apply-str message))))
 
 (defstruct pickup-struct :player :type :item)
@@ -184,12 +184,25 @@
   (and (contains? potential-struct :command)
        (contains? potential-struct :arguments)))
 
+(defstruct server-argument-struct :name :value)
+(defn server-argument? [potential-struct]
+  (and (contains? potential-struct :name)
+       (contains? potential-struct :value)))
+
+(def server-argument
+  (complex [_ (nb-char-lit \\)
+	    argument-name non-backslash-string
+	    _ (nb-char-lit \\)
+	    argument-value non-backslash-string]
+    (struct server-argument-struct argument-name argument-value)))
+
 (def server-action
   (complex [command non-colon-string
 	    _ colon-lit
 	    _ (opt ws)
-	    arguments get-remainder]
-    (struct server-action-struct command (apply-str arguments))))
+	    arguments (rep* server-argument)]
+    (struct server-action-struct command arguments)))
+
 
 (def section-splitter
   (rep* (nb-char-lit \-)))
