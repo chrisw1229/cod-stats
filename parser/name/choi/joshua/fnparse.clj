@@ -1,12 +1,14 @@
 (ns name.choi.joshua.fnparse
-  (:use clojure.contrib.monads clojure.contrib.except clojure.contrib.error-kit))
+  [:use clojure.contrib.monads clojure.contrib.except
+        clojure.contrib.error-kit])
 
 ; A rule is a delay object that contains a function that:
 ; - Takes a collection of tokens.
-; - If the token sequence is valid, it returns a (0) vector containing the (1) consumed
-;   symbols' products and (2) a state data object, usually a map. The state contains the (3)
-;   sequence of remaining tokens, usually with the key *remainder-accessor*.
-; - If the given token sequence is invalid, then the rule Fails, meaning that it either 
+; - If the token sequence is valid, it returns a (0) vector containing the (1)
+;   consumed symbols' products and (2) a state data object, usually a map. The
+;   state contains the (3) sequence of remaining tokens, usually with the key
+;   *remainder-accessor*.
+; - If the given token sequence is invalid, then the rule Fails, meaning that it either
 ;   simply returns nil.
 
 ; - (0) is called the rule's Result.
@@ -22,23 +24,25 @@
 (def parser-m (state-t maybe-m))
 
 (def
-  #^{:doc "The function, symbol, or other callable object that is used to access the
-     remainder inside a state object. In other words, (*remainder-accessor* a-state) has to
-     return the remainder inside a-state. By default, the remainder-accessor is :remainder 
-     (meaning that FnParse's default states are maps containing :remainder). But the
-     accessor is rebindable, so that you can use different kinds of state objects in your
-     parsing application. Myself, I usually put a struct-map accessor for :remainder in
-     here."}
+  #^{:doc "The function, symbol, or other callable object that is used to access
+     the remainder inside a state object. In other words,
+     (*remainder-accessor* a-state) has to return the remainder inside a-state.
+     By default, the remainder-accessor is :remainder (meaning that FnParse's
+     default states are maps containing :remainder). But the accessor is
+     rebindable, so that you can use different kinds of state objects in your
+     parsing application. Myself, I usually put a struct-map accessor for
+     :remainder in here."}
   *remainder-accessor*
   :remainder)
 (def
-  #^{:doc "The function, symbol, or other callable object that is used to change the
-     remainder inside a state object. In other words,
-     (*remainder-setter* a-state new-remainder) has to return the remainder inside a-state.
-     By default, the remainder-accessor is #(assoc %1 :remainder %2), which means that
-     FnParse's default states are maps containing :remainder. But the accessor is rebindable,
-     so that you can use different kinds of state objects in your parsing application.
-     Myself, I usually leave this variable alone."}
+  #^{:doc "The function, symbol, or other callable object that is used to change
+     the remainder inside a state object. In other words,
+     (*remainder-setter* a-state new-remainder) has to return the remainder
+     inside a-state. By default, the remainder-accessor is
+     #(assoc %1 :remainder %2), which means that FnParse's default states are
+     maps containing :remainder. But the accessor is rebindable, so that you can
+     use different kinds of state objects in your parsing application. Myself, I
+     usually leave this variable alone."}
   *remainder-setter*
   #(assoc %1 :remainder %2))
 
@@ -47,11 +51,12 @@
   `(domonad parser-m ~steps ~@product-expr))
 
 (def
-  #^{:doc "A rule that consumes no tokens. Its product is the entire current state.
+  #^{:doc "A rule that consumes no tokens. Its product is the entire current
+     state.
      [Equivalent to the result of fetch-state from clojure.contrib.monads.]"}
   get-state (fetch-state))
 (defn get-info
-  "Creates a rule that consumes no tokens. The new rule's product is the value of the given 
+  "Creates a rule that consumes no tokens. The new rule's product is the value of the given
   key in the current state.
   [Equivalent to fetch-val from clojure.contrib.monads.]"
   [key]
@@ -66,7 +71,7 @@
   "Creates a rule that consumes no tokens. The new rule directly changes the current state
   by associating the given key with the given value. The product is the old value of the
   changed key.
-  
+
   [Equivalent to set-val from clojure.contrib.monads.]"
   [key value]
   (set-val key value))
@@ -87,19 +92,20 @@
     emptiness (m-result nil)))
 
 (defn anything
-  "A rule that matches anything--that is, it matches the first token of the tokens it is
-  given.
-  This rule's product is the first token it receives."
+  "A rule that matches anything--that is, it matches the first token of the
+  tokens it is given.
+  This rule's product is the first token it receives. It fails if there are no
+  tokens left."
 ;  [{tokens *remainder-accessor*, :as state}]
   [state]
-  (let [tokens (*remainder-accessor* state)]
+  (if-let [tokens (*remainder-accessor* state)]
     [(first tokens) (*remainder-setter* state (next tokens))]))
 
 (defn validate
   "Creates a rule from attaching a product-validating function to the given subrule--that
   is, any products of the subrule must fulfill the validator function.
   (def a (validate b validator)) says that the rule a succeeds only when b succeeds and
-  also when the evaluated value of (validator b-product) is true. The new rule's product 
+  also when the evaluated value of (validator b-product) is true. The new rule's product
   would be b-product."
   [subrule validator]
   (complex [subproduct subrule, :when (validator subproduct)]
@@ -115,7 +121,7 @@
   (validate anything validator))
 
 (defn lit
-  "Creates a rule that is the terminal rule of the given literal token--that is, it accepts 
+  "Creates a rule that is the terminal rule of the given literal token--that is, it accepts
   only tokens that are equal to the given literal token.
   (def a (lit \"...\")) would be equivalent to the EBNF
     a = \"...\";
@@ -124,7 +130,7 @@
   (term (partial = literal-token)))
 
 (defn re-term
-  "Creates a rule that is the terminal rule of the given regex--that is, it accepts only 
+  "Creates a rule that is the terminal rule of the given regex--that is, it accepts only
   tokens that match the given regex.
   (def a (re-term #\"...\")) would be equivalent to the EBNF
     a = ? (re-matches #\"...\" %) evaluates to true ?;
@@ -161,7 +167,7 @@
     semantic-value))
 
 (def
-  #^{:doc "A rule that does not consume any tokens. Its product is the very next token in 
+  #^{:doc "A rule that does not consume any tokens. Its product is the very next token in
      the remainder."}
   remainder-peek
   (complex [remainder get-remainder]
@@ -253,22 +259,34 @@
   of b were found, or nil if there was no match. (Note that this means that, in the latter
   case, the result would be [nil given-state].) The new rule can never simply return nil."
   [subrule]
-  (opt (rep+ subrule)))
+  (fn [state]
+    (loop [cur-product [], cur-state state]
+      (if-let [[subproduct substate] (subrule cur-state)]
+        (if (seq (*remainder-accessor* substate))
+          (recur (conj cur-product subproduct) substate)
+          [(conj cur-product subproduct) substate])
+        [(if (not= cur-product []) cur-product) cur-state]))))
+  ; The following code was used until I found that the mutually recursive calls to rep+
+  ; resulted in an easily inflated function call stack.
+;  (opt (rep+ subrule)))
 
 (defn rep+
-  "Creates a rule that is the one-or-more greedy repetition of the given subrule. It
+  "Creates a rule that is the zero-or-more greedy repetition of the given subrule. It
   fails only when its subrule fails immediately. It consumes tokens with its subrule until
   its subrule fails. Its result is the sequence of results from the subrule's repetitions.
   (def a (rep* b)) is equivalent to the EBNF:
     a = {b}-;
-  The new rule's products would be either the vector [b-product ...] for how many matches
-  of b were found. If there was no match, then nil is simply returned."
+  The new rule's products would be the vector [b-product ...] for how many matches
+  of b were found. If there was no match, then the rule fails."
   [subrule]
-  (complex [cur-remainder get-remainder
-            :when (seq cur-remainder)
-            first-subproduct subrule
-            rest-subproducts (rep* subrule)]
-    (cons first-subproduct rest-subproducts)))
+  (complex [first-product subrule, rest-products (rep* subrule)]
+    (vec (cons first-product rest-products))))
+  ; See note at rep*.
+;  (complex [cur-remainder get-remainder
+;            :when (seq cur-remainder)
+;            first-subproduct subrule
+;            rest-subproducts (rep* subrule)]
+;    (cons first-subproduct rest-subproducts)))
 
 (defn except
   "Creates a rule that is the exception from the first given subrules with the second given
@@ -350,8 +368,8 @@
   (alt (factor= factor subrule) (rep< factor subrule)))
 
 (defn failpoint
-  "Creates a rule that applies a failpoint to a subrule. When the subrule failsâ€”i.e., it
-  returns nilâ€”then the failure hook function is called with one argument, the state at time
+  "Creates a rule that applies a failpoint to a subrule. When the subrule fails—i.e., it
+  returns nil—then the failure hook function is called with one argument, the state at time
   of failure."
   [subrule failure-hook]
   (fn [state]
@@ -384,7 +402,7 @@
   "Creates a rule from attaching a state-validating function to the given subrule--that
   is, any products of the subrule must fulfill the validator function.
   (def a (validate-state b validator)) says that the rule a succeeds only when b succeeds
-  and also when the evaluated value of (validator b-state) is true. The new rule's product 
+  and also when the evaluated value of (validator b-state) is true. The new rule's product
   would be b-product."
   [subrule validator]
   (complex [subproduct subrule, substate get-state, :when (validator substate)]
@@ -399,3 +417,28 @@
   [subrule validator]
   (complex [subproduct subrule, subremainder get-remainder, :when (validator subremainder)]
     subproduct))
+
+(defn rule-match
+  "Creates a function that tries to completely match the given rule to the given state, with
+  no remainder left.
+  - If (rule given-state) fails, then (failure-fn given-state) is called.
+  - If the remainder of (rule given-state) is not empty, then
+    (incomplete-fn given-state new-state-after-rule) is called.
+  - If the new remainder is empty, then the product of the rule is returned."
+  [rule failure-fn incomplete-fn state]
+  (if-let [[product new-state] (rule state)]
+    (if (empty? (*remainder-accessor* new-state))
+      product
+      (incomplete-fn state new-state))
+    (failure-fn state)))
+
+(defn rule-matcher
+  "DEPRECATED: Use rule-match instead.
+  Creates a function that tries to completely match the given rule to the given state, with
+  no remainder left.
+  - If (rule given-state) fails, then (failure-fn given-state) is called.
+  - If the remainder of (rule given-state) is not empty, then
+    (incomplete-fn given-state new-state-after-rule) is called.
+  - If the new remainder is empty, then the product of the rule is returned."
+  [rule failure-fn incomplete-fn]
+  (partial rule-match rule failure-fn incomplete-fn))

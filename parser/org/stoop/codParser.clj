@@ -190,22 +190,34 @@
        (contains? potential-struct :value)))
 
 (def server-argument
-  (complex [_ (nb-char-lit \\)
-	    argument-name non-backslash-string
-	    _ (nb-char-lit \\)
-	    argument-value non-backslash-string]
-    (struct server-argument-struct argument-name argument-value)))
+ (complex [_ (nb-char-lit \\)
+	   argument-name non-backslash-string
+	   _ (nb-char-lit \\)
+	   argument-value non-backslash-string]
+   (struct server-argument-struct argument-name argument-value)))
+
+(def server-command
+  (alt
+    (lit-conc-seq "InitGame" nb-char-lit)
+    (lit-conc-seq "ExitLevel" nb-char-lit)
+    (lit-conc-seq "RestartGame" nb-char-lit)
+    (lit-conc-seq "ShutdownGame" nb-char-lit)))
 
 (def server-action
-  (complex [command non-colon-string
-	    _ colon-lit
-	    _ (opt ws)
-	    arguments (rep* server-argument)]
-    (struct server-action-struct command arguments)))
-
+  (alt
+    (complex [command server-command
+	      _ colon-lit
+	      _ ws
+	      arguments (rep+ server-argument)]
+      (struct server-action-struct command arguments))
+    (complex [command server-command
+	      _ colon-lit
+	      _ (opt ws)
+	      argument rest-of-line]
+      (struct server-action-struct command argument))))
 
 (def section-splitter
-  (rep* (nb-char-lit \-)))
+  (factor= 60 (nb-char-lit \-)))
 
 (def player-action
   (alt damage-kill talk-action pickup join-quit game-event win-loss-event))
@@ -217,16 +229,24 @@
     (complex [_ (opt ws)
 	      time time-stamp
 	      _ ws
-	      log-entry player-action]
+	      log-entry player-action
+	      _ line-break]
       (struct log-entry-struct time log-entry))
     (complex [_ (opt ws)
 	      time time-stamp
 	      _ ws
-	      log-entry server-action]
+	      log-entry server-action
+	      _ line-break]
       (struct log-entry-struct time log-entry))
     (complex [_ (opt ws)
 	      time time-stamp
 	      _ ws
-	      log-entry section-splitter]
-      nil)))
-	      
+	      log-entry section-splitter
+	      _ line-break]
+      (struct log-entry-struct time log-entry))))
+
+(defstruct log-file-struct :entries)
+
+(def log-file
+  (complex [entries (rep+ log-line)]
+    (struct log-file-struct entries)))

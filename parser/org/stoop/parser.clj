@@ -9,7 +9,7 @@
 (defn- nb-char [subrule]
   (invisi-conc subrule (update-info :column inc)))
 (defn- b-char [subrule]
-  (invisi-conc subrule (update-info :line inc)))
+  (invisi-conc subrule (update-info :line inc) (set-info :column 0)))
 
 (def nb-char-lit (comp nb-char lit))
 
@@ -18,9 +18,9 @@
 (def newline-lit (lit \newline))
 (def return-lit (lit \return))
 (def line-break (b-char (rep+ (alt newline-lit return-lit))))
-(def ws (constant-semantics (rep* (alt space tab line-break)) :ws))
+(def ws (constant-semantics (rep+ (alt space tab)) :ws))
 (def rest-of-line
-  (complex [line-string (nb-char (rep* (except anything (alt newline-lit return-lit))))]
+  (complex [line-string (nb-char (rep+ (except anything (alt newline-lit return-lit))))]
     (apply-str line-string)))
 
 (def digit-lit (lit-alt-seq "0123456789" nb-char-lit))
