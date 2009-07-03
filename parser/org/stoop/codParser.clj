@@ -214,7 +214,11 @@
 	      _ colon-lit
 	      _ (opt ws)
 	      argument rest-of-line]
-      (struct server-action-struct command argument))))
+      (struct server-action-struct command argument))
+    (complex [command server-command
+	      _ colon-lit
+	      _ (opt ws)]
+      (struct server-action-struct command :none))))
 
 (def section-splitter
   (factor= 60 (nb-char-lit \-)))
@@ -229,24 +233,22 @@
     (complex [_ (opt ws)
 	      time time-stamp
 	      _ ws
-	      log-entry player-action
-	      _ line-break]
+	      log-entry player-action]
       (struct log-entry-struct time log-entry))
     (complex [_ (opt ws)
 	      time time-stamp
 	      _ ws
-	      log-entry server-action
-	      _ line-break]
+	      log-entry server-action]
       (struct log-entry-struct time log-entry))
     (complex [_ (opt ws)
 	      time time-stamp
 	      _ ws
-	      log-entry section-splitter
-	      _ line-break]
+	      log-entry section-splitter]
       (struct log-entry-struct time log-entry))))
 
 (defstruct log-file-struct :entries)
 
 (def log-file
-  (complex [entries (rep+ log-line)]
-    (struct log-file-struct entries)))
+  (complex [entries (rep* (invisi-conc log-line (rep+ line-break)))
+	    last-entry (invisi-conc log-line (opt line-break))]
+    (struct log-file-struct (conj entries last-entry))))
