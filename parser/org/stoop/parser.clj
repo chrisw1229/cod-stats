@@ -17,10 +17,10 @@
 (def tab (nb-char-lit \tab))
 (def newline-lit (lit \newline))
 (def return-lit (lit \return))
-(def line-break (b-char (rep+ (alt newline-lit return-lit))))
+(def line-break (rep+ (b-char (alt newline-lit return-lit))))
 (def ws (constant-semantics (rep+ (alt space tab)) :ws))
 (def rest-of-line
-  (complex [line-string (nb-char (rep+ (except anything (alt newline-lit return-lit))))]
+  (complex [line-string (rep+ (nb-char (except anything (alt newline-lit return-lit))))]
     (apply-str line-string)))
 
 (def digit-lit (lit-alt-seq "0123456789" nb-char-lit))

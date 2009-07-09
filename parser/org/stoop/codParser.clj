@@ -65,6 +65,12 @@
        (contains? potential-struct :victim)
        (contains? potential-struct :attacker)
        (contains? potential-struct :hit-details)))
+(defn kill? [dk-struct]
+  (= (dk-struct :type) :kill))
+(defn self-damage? [dk-struct]
+  (= (dk-struct :victim) (dk-struct :attacker)))
+(defn team-damage? [dk-struct]
+  (= (:team (dk-struct :victim)) (:team (dk-struct :attacker))))
 
 (def pain-type
   (alt
