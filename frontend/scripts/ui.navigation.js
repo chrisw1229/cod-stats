@@ -71,16 +71,18 @@ $.widget("ui.navigation", {
     this.ctrlDiv.stop().fadeTo("normal", 0.4);
   },
 
-  _moveShadow: function() {
-    this.shadowDiv.width(this.element.width());
-    this.shadowDiv.height(this.element.height());
-    this.shadowDiv.show();
-  },
-
   flyin: function(callback) {
+    if (this.flying) {
+      return;
+    }
+    this.flying = true;
+
+    this.shadowDiv.width(this.bodyDiv.width());
+    this.shadowDiv.height(this.bodyDiv.height());
+
     var self = this;
-    this.bodyDiv.show("slide", "normal", function() {
-      self._moveShadow();
+    this.bodyDiv.show("slide", "slow", function() {
+      self.flying = undefined;
       if (callback) {
         callback();
       }
@@ -88,8 +90,14 @@ $.widget("ui.navigation", {
   },
 
   flyout: function(callback) {
-    this.shadowDiv.hide();
-    this.bodyDiv.hide("slide", {}, "normal", function() {
+    if (this.flying) {
+      return;
+    }
+    this.flying = true;
+
+    var self = this;
+    this.bodyDiv.hide("slide", {}, "slow", function() {
+      self.flying = undefined;
       if (callback) {
         callback();
       }
