@@ -107,7 +107,7 @@ $.widget("ui.navigation", {
   activate: function(index) {
     var self = this;
     this.flyout(function() {
-      window.location = $("a", self.menus[index]).href;
+      window.location = $("a", self.menus[index]).attr("href");
     });
   }
 
