@@ -1,0 +1,62 @@
+.ui-ticker {
+  background-image: none;
+  border-width: 0 0 1px 0;
+  height: 150px;
+  width: 100%;
+}
+.ui-ticker-shadow {
+  background: url(images/shadow.png) repeat-x;
+  height: 5px;
+  position: absolute;
+  top: 150px;
+  width: 100%;
+  z-index: 1100;
+}
+.ui-ticker-items {
+  padding: 4px;
+}
+.ui-ticker-item {
+  cursor: pointer;
+  float: left;
+  margin-right: 10px;
+  position: relative;
+  width: 250px;
+}
+.ui-ticker-item-shadow {
+  height: 122px;
+  position: absolute;
+  width: 248px;
+}
+.ui-ticker-item-name {
+  border-bottom: none;
+  font-family: courier new;
+  font-size: 10pt;
+  height: 1.5em;
+  padding-top: 0.3em;
+  position: relative;
+  text-align: center;
+  z-index: 1050;
+}
+.ui-ticker-item-content {
+  height: 96px;
+  position: relative;
+  z-index: 1050;
+}
+.ui-ticker-item-image {
+  border-width: 0 1px 0 0;
+  float: left;
+  height: 96px;
+  margin-right: 4px;
+  width: 96px;
+}
+.ui-ticker-stats {
+  margin-top: 2px;
+}
+.ui-ticker-stats-head {
+  font-size: 1.5em;
+  margin-bottom: 8px;
+}
+.ui-ticker-stats-base {
+  font-size: 1.1em;
+  margin-bottom: 2px;
+}

@@ -49,7 +49,6 @@ Map._init = function(element, options) {
   Map.map.addLayer(Map.layer);
 
   // Set control tool tips
-  $('<div class="ui-map-shadow"></div>').appendTo(Map.owner);
   $(".olControlPanNorthItemInactive").attr("title", "Pan up");
   $(".olControlPanSouthItemInactive").attr("title", "Pan down");
   $(".olControlPanEastItemInactive").attr("title", "Pan right");
@@ -82,11 +81,10 @@ Map._tileURL = function(bounds) {
 Map._resize = function(e) {
 
   // Adjust the map height to fit the window
-  var height = $(window).height() - Map.owner.offset().top - parseInt(Map.owner.css("border-top-width"));
+  var height = $(window).height() - Map.owner.offset().top;
   Map.owner.css("height", height);
-  $(".ui-map-shadow").css("top", -1 * height);
 
-  // Set the initial appearance of the map
+  // Update the dimensions of the map
   Map.map.updateSize();
 };
 
