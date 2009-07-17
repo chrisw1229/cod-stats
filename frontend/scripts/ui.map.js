@@ -32,7 +32,8 @@ Map._init = function(element, options) {
     controls: [navCtrl, panCtrl, zoomCtrl, keyCtrl],
     maxExtent: new OpenLayers.Bounds(0, 0, options.maxSize, options.maxSize),
     maxResolution: (options.maxSize / options.maxTile),
-    numZoomLevels: options.maxZoom
+    numZoomLevels: options.maxZoom,
+    theme: null
   };
   Map.map = new OpenLayers.Map(Map.owner.attr("id"), mapOpts);
   $(window).bind("resize", Map._resize);
@@ -44,7 +45,7 @@ Map._init = function(element, options) {
     transitionEffect: "resize",
     type: "jpg"
   };
-  Map.layer = new OpenLayers.Layer.TMS("TMS",
+  Map.layer = new OpenLayers.Layer.TMS("Game",
       "tiles/" + options.map + "/", layerOpts);
   Map.map.addLayer(Map.layer);
 
