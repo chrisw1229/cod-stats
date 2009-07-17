@@ -9,7 +9,7 @@ $.widget("ui.ticker", {
     this.element.addClass("ui-widget-content ui-ticker");
     this.shadowDiv = $('<div class="ui-ticker-shadow"></div>').appendTo(this.element);
     this.itemsDiv = $('<div class="ui-ticker-items"></div>').appendTo(this.element);
-    for (var i in this.options.items) {
+    for (var i = 0; i < this.options.items.length; i++) {
       var item = this.options.items[i];
       var itemDiv = $('<div class="ui-ticker-item"></div>').appendTo(this.itemsDiv);
       $('<div class="ui-widget-shadow ui-ticker-item-shadow"></div>').appendTo(itemDiv);
@@ -19,9 +19,10 @@ $.widget("ui.ticker", {
       var image = $('<div class="ui-widget-content ui-corner-bl ui-ticker-item-image"></div>').appendTo(contDiv);
       image.css("background-image", "url(players/" + item.image + ")");
       var statsDiv = $('<div class="ui-ticker-stats"></div>').appendTo(contDiv);
+      $('<div class="game-rank rank' + (i + 1) + '-icon"></div>').appendTo(statsDiv);
       $('<div class="ui-ticker-stats-head">KILLS: ' + item.k + '</div>').appendTo(statsDiv);
       $('<div class="ui-ticker-stats-base">DEATHS: ' + item.d + '</div>').appendTo(statsDiv);
-      $('<div class="ui-ticker-stats-base">DAM: ' + item.dm + '</div>').appendTo(statsDiv);
+      $('<div class="ui-ticker-stats-base">DAMAGE: ' + item.dm + '</div>').appendTo(statsDiv);
       $('<div class="ui-ticker-stats-base">PERF: ' + item.p + '</div>').appendTo(statsDiv);
     }
   },
@@ -42,10 +43,10 @@ $.extend($.ui.ticker, {
   version: "1.7.2",
   defaults: {
     items: [
-      { name: "A Figment of Your Imagination", image: "player1.jpg", k: "789", d: "575", dm: "105,807", p: "0.313" },
-      { name: "CHUCKNORRISCOUNTEDTOINFINITY...", image: "player2.jpg", k: "1,079", d: "554", dm: "39,178", p: "-1.301" },
-      { name: "GOMER PYLE", image: "player3.jpg", k: "271", d: "546", dm: "134,936", p: "0.613" },
-      { name: "ThePine", image: "player4.jpg", k: "1,428", d: "803", dm: "183,928", p: "0.385" }
+      { name: "A Figment of Your Imagination", image: "player1.jpg", k: "79", d: "57", dm: "10k", p: "31" },
+      { name: "CHUCKNORRISCOUNTEDTOINFINITY...", image: "player2.jpg", k: "27", d: "55", dm: "3k", p: "13" },
+      { name: "GOMER PYLE", image: "player3.jpg", k: "108", d: "55", dm: "13k", p: "61" },
+      { name: "ThePine", image: "player4.jpg", k: "144", d: "80", dm: "18k", p: "38" }
     ]
   }
 });
