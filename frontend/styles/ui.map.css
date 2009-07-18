@@ -1,8 +1,11 @@
-.ui-map {
+.olMap {
   border: none;
-  cursor: url(images/hand.cur), default;
+  cursor: url(images/hand-opened.cur), default;
   position: absolute;
   width: 100%;
+}
+.olDragDown {
+  cursor: url(images/hand-closed.cur), default;
 }
 .olControlCustomPanPanel {
   background: url(images/pan-panel.png) no-repeat;

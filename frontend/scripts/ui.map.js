@@ -18,7 +18,7 @@ Map._init = function(element, options) {
 
   // Setup the map container
   Map.owner = $(element);
-  Map.owner.addClass("ui-widget-content ui-map");
+  Map.owner.addClass("ui-widget-content");
   $('<div class="ui-widget-overlay"></div>').appendTo(Map.owner);
 
   // Create the map controls
