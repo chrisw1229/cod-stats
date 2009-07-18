@@ -19,7 +19,7 @@ $.widget("ui.ticker", {
       var image = $('<div class="ui-widget-content ui-corner-bl ui-ticker-item-image"></div>').appendTo(contDiv);
       image.css("background-image", "url(players/" + item.image + ")");
       var statsDiv = $('<div class="ui-ticker-stats"></div>').appendTo(contDiv);
-      $('<div class="game-rank rank' + (i + 1) + '-icon"></div>').appendTo(statsDiv);
+      $('<div class="cod-icon-rank cod-icon-rank' + (i + 1) + '"></div>').appendTo(statsDiv);
       $('<div class="ui-ticker-stats-head">KILLS: ' + item.k + '</div>').appendTo(statsDiv);
       $('<div class="ui-ticker-stats-base">DEATHS: ' + item.d + '</div>').appendTo(statsDiv);
       $('<div class="ui-ticker-stats-base">DAMAGE: ' + item.dm + '</div>').appendTo(statsDiv);

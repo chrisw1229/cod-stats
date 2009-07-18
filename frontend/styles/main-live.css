@@ -1,23 +1,23 @@
-.game-rank {
-  background-image: url(images/game-ranks.png);
+.cod-icon-rank {
+  background-image: url(images/cod-icon-rank.png);
   background-repeat: no-repeat;
   float: right;
   height: 24px;
   width: 24px;	
 }
-.rank1-icon {
+.cod-icon-rank1 {
   background-position: 0 0;
 }
-.rank2-icon {
+.cod-icon-rank2 {
   background-position: -24px 0;	
 }
-.rank3-icon {
+.cod-icon-rank3 {
   background-position: -48px 0;
 }
-.rank4-icon {
+.cod-icon-rank4 {
   background-position: -72px 0;
 }
-.rank5-icon {
+.cod-icon-rank5 {
   background-position: -96px 0;
 }
 #meter {
