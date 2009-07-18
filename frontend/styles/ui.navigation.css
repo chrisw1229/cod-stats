@@ -12,8 +12,8 @@
 .ui-nav-ctrl-icon {
   background-image: url("images/navigation.png");
   display: block;
-  height: 32px;
-  width: 32px;
+  height: 2.35em;
+  width: 2.4em;
 }
 .ui-nav-shadow {
   position: absolute;
@@ -27,7 +27,7 @@
   height: 7.7em;
   margin-bottom: 1em;
   text-align: center;
-  width: 200px;
+  width: 14.7em;
   vertical-align: center;
 }
 .ui-nav-menu-header,
