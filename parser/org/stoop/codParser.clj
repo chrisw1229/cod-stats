@@ -252,9 +252,10 @@
 	      log-entry section-splitter]
       (struct log-entry-struct time log-entry))))
 
-(defstruct log-file-struct :entries)
-
 (def log-file
   (complex [entries (rep* (invisi-conc log-line (rep+ line-break)))
 	    last-entry (invisi-conc log-line (opt line-break))]
-    (struct log-file-struct (conj entries last-entry))))
+    (conj entries last-entry)))
+
+(defn parse-log [file]
+  (parse (slurp file) log-file))

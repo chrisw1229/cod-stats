@@ -51,3 +51,8 @@
 
 (def non-backslash-string
   (semantics (rep+ not-backslash-lit) apply-str))
+
+(defn parse [tokens parser]
+  (let [[product state :as result] (parser (struct state-s tokens 0 0))]
+    (println state)
+    product))
