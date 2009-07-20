@@ -12,18 +12,29 @@ $.widget("ui.ticker", {
     for (var i = 0; i < this.options.items.length; i++) {
       var item = this.options.items[i];
       var itemDiv = $('<div class="ui-ticker-item"></div>').appendTo(this.itemsDiv);
-      $('<div class="ui-widget-shadow ui-ticker-item-shadow"></div>').appendTo(itemDiv);
-      $('<div class="ui-widget-header ui-corner-top ui-state-default ui-ticker-item-name">'
+      var shadowDiv = $('<div class="ui-widget-shadow ui-ticker-item-shadow"></div>').appendTo(itemDiv);
+      var headerDiv = $('<div class="ui-state-default ui-corner-top ui-ticker-item-header">'
           + item.name + '</div>').appendTo(itemDiv);
-      var contDiv = $('<div class="ui-widget-content ui-corner-bottom ui-ticker-item-content"></div>').appendTo(itemDiv);
-      var image = $('<div class="ui-widget-content ui-corner-bl ui-ticker-item-image"></div>').appendTo(contDiv);
-      image.css("background-image", "url(players/" + item.image + ")");
-      var statsDiv = $('<div class="ui-ticker-stats"></div>').appendTo(contDiv);
-      $('<div class="cod-icon-rank cod-icon-rank' + (i + 1) + '"></div>').appendTo(statsDiv);
-      $('<div class="ui-ticker-stats-head">KILLS: ' + item.k + '</div>').appendTo(statsDiv);
-      $('<div class="ui-ticker-stats-base">DEATHS: ' + item.d + '</div>').appendTo(statsDiv);
-      $('<div class="ui-ticker-stats-base">DAMAGE: ' + item.dm + '</div>').appendTo(statsDiv);
-      $('<div class="ui-ticker-stats-base">PERF: ' + item.p + '</div>').appendTo(statsDiv);
+      var contDiv = $('<div class="ui-widget-content ui-ticker-item-content"></div>').appendTo(itemDiv);
+      var photoDiv = $('<div class="ui-widget-content ui-ticker-item-photo"></div>').appendTo(contDiv);
+      photoDiv.css("background-image", "url(players/" + item.photo + ")");
+
+      var stats = $('<table class="ui-ticker-stats">'
+          + '<tr class="ui-ticker-stat-line1">'
+            + '<td class="ui-ticker-stat-value">' + item.k + '</td>'
+            + '<td>Kills</td>'
+            + '<td></td>'
+          + '</tr><tr class="ui-ticker-stat-line2">'
+            + '<td class="ui-ticker-stat-value">' + item.d + '</td>'
+            + '<td>Deaths</td>'
+            + '<td><span class="icon-rank icon-rank-' + item.r + '"</span></td>'
+          + '</tr><tr class="ui-ticker-stat-line2">'
+            + '<td class="ui-ticker-stat-value">' + item.c + '</td>'
+            + '<td>Change</td>'
+            + '<td><span class="icon-team icon-team-' + item.t + '"</span></td>'
+          + '</tr></table>').appendTo(contDiv);
+      var enemyDiv = $('<div class="ui-corner-bottom ui-ticker-item-footer">'
+          + item.e + '</div>').appendTo(itemDiv);
     }
   },
 
@@ -43,10 +54,10 @@ $.extend($.ui.ticker, {
   version: "1.7.2",
   defaults: {
     items: [
-      { name: "A Figment of Your Imagination", image: "player1.jpg", k: "79", d: "57", dm: "10k", p: "31" },
-      { name: "CHUCKNORRISCOUNTEDTOINFINITY...", image: "player2.jpg", k: "27", d: "55", dm: "3k", p: "13" },
-      { name: "GOMER PYLE", image: "player3.jpg", k: "108", d: "55", dm: "13k", p: "61" },
-      { name: "ThePine", image: "player4.jpg", k: "144", d: "80", dm: "18k", p: "38" }
+      { name: "A Figment of Your Imagination", photo: "player1.jpg", k: "79", d: "57", c: "+4", r: "3", t: "a", e: "GOMER PYLE" },
+      { name: "CHUCKNORRISCOUNTEDTOINFINITY...", photo: "player2.jpg", k: "27", d: "55", c: "+2", r: "1", t: "b", e: "ThePine" },
+      { name: "GOMER PYLE", photo: "player3.jpg", k: "108", d: "55", c: "-3", r: "4", t: "r", e: "CHUCKNORRISCOUNTEDTOINFINITY..." },
+      { name: "ThePine", photo: "player4.jpg", k: "144", d: "80", c: "+1", r: "5", t: "g", e: "A Figment of Your Imagination" }
     ]
   }
 });

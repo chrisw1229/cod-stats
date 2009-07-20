@@ -1,19 +1,18 @@
 .ui-ticker {
   background-image: none;
   border-width: 0 0 1px 0;
-  height: 150px;
+  font-family: courier new;
+  font-weight: bold;
+  height: 160px;
   width: 100%;
 }
 .ui-ticker-shadow {
   background: url(images/shadow.png) repeat-x;
   height: 5px;
   position: absolute;
-  top: 150px;
+  top: 160px;
   width: 100%;
   z-index: 1100;
-}
-.ui-ticker-items {
-  padding: 4px;
 }
 .ui-ticker-item {
   cursor: pointer;
@@ -23,26 +22,27 @@
   width: 250px;
 }
 .ui-ticker-item-shadow {
-  height: 122px;
+  height: 135px;
   position: absolute;
   width: 248px;
+  z-index: 1025;
 }
-.ui-ticker-item-name {
-  border-bottom: none;
-  font-family: courier new;
-  font-size: 10pt;
-  height: 1.5em;
-  padding-top: 0.3em;
+.ui-ticker-item-header {
+  height: 1.4em;
+  padding-top: 0.2em;
   position: relative;
   text-align: center;
   z-index: 1050;
 }
+.ui-ticker-item-header.ui-state-default {
+  font-weight: bold;
+ }
 .ui-ticker-item-content {
   height: 96px;
   position: relative;
   z-index: 1050;
 }
-.ui-ticker-item-image {
+.ui-ticker-item-photo {
   border-width: 0 1px 0 0;
   float: left;
   height: 96px;
@@ -50,13 +50,29 @@
   width: 96px;
 }
 .ui-ticker-stats {
-  margin-top: 2px;
+  height: 96px;
+  width: 145px;
 }
-.ui-ticker-stats-head {
-  font-size: 1.5em;
-  margin-bottom: 8px;
+.ui-ticker-stat-line1 {
+  font-size: 1.6em;
 }
-.ui-ticker-stats-base {
-  font-size: 1.1em;
-  margin-bottom: 2px;
+.ui-ticker-stat-line2 {
+  font-size: 1.2em;
+}
+.ui-ticker-stat-value {
+  padding-right: 6px;
+  text-align: right;
+}
+.ui-ticker-item-footer {
+  background: #904C4C;
+  border: 1px solid #372B13;
+  border-top: 0;
+  color: #C9C1A6;
+  font-weight: normal;
+  height: 14px;
+  line-height: 0.9;
+  padding-top: 0;
+  position: relative;
+  text-align: center;
+  z-index: 1050;
 }
