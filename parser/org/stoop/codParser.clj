@@ -101,7 +101,9 @@
        (contains? potential-struct :message)))
 
 (def talk-id
-  (alt (lit-conc-seq "say" nb-char-lit) (lit-conc-seq "sayteam" nb-char-lit)))
+  (alt
+    (constant-semantics (lit-conc-seq "sayteam" nb-char-lit) :sayteam)
+    (constant-semantics (lit-conc-seq "say" nb-char-lit) :say)))
 
 (def talk-action
   (complex [talk-type talk-id
@@ -165,9 +167,9 @@
        (contains? potential-struct :players)
        (contains? potential-struct :type)))
 
-(def player-semi
-  (complex [player-name player
-	    _ (opt semi-colon-lit)]
+(def semi-player
+  (complex [_ semi-colon-lit
+	    player-name player]
     player-name))
 
 (def win-loss-event
@@ -175,14 +177,12 @@
     (complex [_ (nb-char-lit \W)
 	      _ semi-colon-lit
 	      team-name team
-	      _ semi-colon-lit
-	      players (rep* player-semi)]
+	      players (rep* semi-player)]
       (struct win-loss-struct team-name players :win))
     (complex [_ (nb-char-lit \L)
 	      _ semi-colon-lit
 	      team-name team
-	      _ semi-colon-lit
-	      players (rep* player-semi)]
+	      players (rep* semi-player)]
       (struct win-loss-struct team-name players :loss))))
 
 (defstruct server-action-struct :command :arguments)
@@ -259,3 +259,8 @@
 
 (defn parse-log [file]
   (parse (slurp file) log-file))
+
+(defn parse-log-line [file]
+  (with-open [fr (java.io.FileReader. file)
+              br (java.io.BufferedReader. fr)]
+    (doseq [line (line-seq br)] (parse line log-line))))

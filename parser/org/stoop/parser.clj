@@ -1,5 +1,5 @@
 (ns org.stoop.parser
-  (:use name.choi.joshua.fnparse clojure.contrib.str-utils 
+  (:use name.choi.joshua.fnparse clojure.contrib.str-utils clojure.contrib.error-kit
 	[clojure.contrib.seq-utils :only [flatten]]))
 
 (defstruct state-s :remainder :column :line)
@@ -10,6 +10,17 @@
   (invisi-conc subrule (update-info :column inc)))
 (defn- b-char [subrule]
   (invisi-conc subrule (update-info :line inc) (set-info :column 0)))
+
+(deferror parse-error [] [state message message-args]
+  {:msg (str (format "Error at line %s, column %s: "
+	       (:line state) (:column state))
+	     (apply format message message-args))
+   :unhandled (throw-msg Exception)})
+
+(defn expectation-error-fn [expectation]
+  (fn [remainder state]
+    (raise parse-error state "%s expected where \"%s\" is"
+      [expectation (or (first remainder) "the end of the file")])))
 
 (def nb-char-lit (comp nb-char lit))
 
@@ -54,5 +65,5 @@
 
 (defn parse [tokens parser]
   (let [[product state :as result] (parser (struct state-s tokens 0 0))]
-    (println state)
+    (when (nil? product) (println tokens))
     product))
