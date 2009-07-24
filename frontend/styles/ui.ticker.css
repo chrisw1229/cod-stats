@@ -19,12 +19,12 @@
   float: left;
   margin-right: 10px;
   position: relative;
-  width: 250px;
+  width: 255px;
 }
 .ui-ticker-item-shadow {
   height: 135px;
   position: absolute;
-  width: 248px;
+  width: 253px;
   z-index: 1025;
 }
 .ui-ticker-item-header {
@@ -43,36 +43,69 @@
   z-index: 1050;
 }
 .ui-ticker-item-photo {
-  border-width: 0 1px 0 0;
-  float: left;
+  border-width: 0 0 0 1px;
+  float: right;
   height: 96px;
-  margin-right: 4px;
+  margin-left: 4px;
   width: 96px;
 }
+.ui-ticker-item-icons {
+  float: right;
+  position: relative;
+}
+.ui-ticker-place {
+  border-width: 0 0 1px 1px;
+  font-weight: bold;
+  height: 26px;
+  left: -5px;
+  padding-top: 6px;
+  position: absolute;
+  text-align: center;
+  width: 32px;
+}
+.ui-ticker-place-label {
+  font-size: 0.8em;
+  position: relative;
+  top: -8px;
+  width: 100%;
+}
+.ui-ticker-place-value {
+  font-size: 1.9em;
+  font-weight: bold;	
+  position: relative;
+  top: -13px;
+}
+.ui-ticker-item-rank {
+  position: relative;
+  top: 40px;
+}
+.ui-ticker-item-team {
+  position: relative;
+  top: 44px;
+}
 .ui-ticker-stats {
-  height: 96px;
-  width: 145px;
+  height: 100%;
 }
 .ui-ticker-stat-line1 {
   font-size: 1.6em;
 }
 .ui-ticker-stat-line2 {
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 .ui-ticker-stat-value {
   padding-right: 6px;
   text-align: right;
 }
 .ui-ticker-item-footer {
-  background: #904C4C;
+  background: #C9C1A6;
   border: 1px solid #372B13;
   border-top: 0;
-  color: #C9C1A6;
+  color: #9E0505;
   font-weight: normal;
   height: 14px;
   line-height: 0.9;
-  padding-top: 0;
+  padding-left: 4px;
   position: relative;
-  text-align: center;
+  text-align: left;
   z-index: 1050;
 }
