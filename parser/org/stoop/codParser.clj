@@ -93,7 +93,7 @@
 	      _ semi-colon-lit
 	      _ (lit-conc-seq ";-1;world;;")
 	      hit-details hit-info]
-      (struct damage-kill-struct type victim :world hit-details))))
+      (struct damage-kill-struct type victim (struct player-struct 0 -1 "world" "world") hit-details))))
 
 (defstruct talk-struct :player :message)
 (defn talk? [potential-struct]
