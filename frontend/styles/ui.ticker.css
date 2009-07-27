@@ -3,26 +3,26 @@
   border-width: 0 0 1px 0;
   font-family: courier new;
   font-weight: bold;
-  height: 160px;
+  height: 145px;
   width: 100%;
 }
 .ui-ticker-shadow {
   background: url(images/shadow.png) repeat-x;
   height: 5px;
   position: absolute;
-  top: 160px;
+  top: 145px;
   width: 100%;
   z-index: 1100;
 }
 .ui-ticker-item {
   cursor: pointer;
   float: left;
-  margin-right: 10px;
+  margin-right: 6px;
   position: relative;
   width: 255px;
 }
 .ui-ticker-item-shadow {
-  height: 135px;
+  height: 120px;
   position: absolute;
   width: 253px;
   z-index: 1025;
@@ -90,22 +90,12 @@
   font-size: 1.6em;
 }
 .ui-ticker-stat-line2 {
-  font-size: 1.1em;
+  font-size: 1.2em;
+}
+.ui-ticker-stat-line3 {
+  font-size: 0.9em;
 }
 .ui-ticker-stat-value {
   padding-right: 6px;
   text-align: right;
-}
-.ui-ticker-item-footer {
-  background: #C9C1A6;
-  border: 1px solid #372B13;
-  border-top: 0;
-  color: #9E0505;
-  font-weight: normal;
-  height: 14px;
-  line-height: 0.9;
-  padding-left: 4px;
-  position: relative;
-  text-align: left;
-  z-index: 1050;
 }
