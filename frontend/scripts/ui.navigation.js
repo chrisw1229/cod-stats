@@ -8,20 +8,20 @@ $.widget("ui.navigation", {
     // Build the document model
     this.element.addClass("ui-nav");
     this.ctrlDiv = $('<div class="ui-state-default ui-corner-right ui-nav-ctrl" title="'
-        + this.options.tip + '"><span class="ui-nav-ctrl-icon"></span></div>').appendTo(this.element);
-    this.bodyDiv = $('<div class="ui-nav-body"></div>').appendTo(this.element);
-    this.shadowDiv = $('<div class="ui-widget-shadow ui-corner-all ui-nav-shadow"></div>').appendTo(this.bodyDiv);
-    this.contentDiv = $('<div class="ui-widget-content ui-corner-all ui-nav-content"></div>').appendTo(this.bodyDiv);
+        + this.options.tip + '"><span class="ui-nav-ctrl-icon"/></div>').appendTo(this.element);
+    this.bodyDiv = $('<div class="ui-nav-body"/>').appendTo(this.element);
+    this.shadowDiv = $('<div class="ui-widget-shadow ui-corner-all ui-nav-shadow"/>').appendTo(this.bodyDiv);
+    this.contentDiv = $('<div class="ui-widget-content ui-corner-all ui-nav-content"/>').appendTo(this.bodyDiv);
     this.logoDiv = $('<div class="ui-nav-logo">LOGO</div>').appendTo(this.contentDiv);
-    this.menuDiv = $('<div class="ui-nav-menu"></div>').appendTo(this.contentDiv);
+    this.menuDiv = $('<div class="ui-nav-menu"/>').appendTo(this.contentDiv);
     this.headerDiv = $('<h2 class="ui-helper-reset ui-widget-header ui-corner-top ui-nav-menu-header">'
         + this.options.header + '</h2>').appendTo(this.menuDiv);
     this.menus = [];
     for (var i = 0; i < this.options.menus.length; i++) {
       var item = this.options.menus[i];
-      var menu = $('<h3 class="ui-helper-reset ui-state-default ui-nav-menu"></h3>').appendTo(this.menuDiv);
+      var menu = $('<h3 class="ui-helper-reset ui-state-default ui-nav-menu"/>').appendTo(this.menuDiv);
       var icon = $('<span class="ui-icon ' + this.options.icon
-          + ' ui-nav-menu-icon"></span>').appendTo(menu);
+          + ' ui-nav-menu-icon"/>').appendTo(menu);
       var link = $('<a class="ui-nav-menu-link" href="' + item.url
           + '" title="' + item.tip + '">' + item.name + '</a>').appendTo(menu);
       this.menus[i] = menu;
@@ -29,7 +29,7 @@ $.widget("ui.navigation", {
     this.footerDiv = $('<h4 class="ui-helper-reset ui-widget-header ui-corner-bottom ui-nav-menu-footer">'
         + this.options.footer + '</h4>').appendTo(this.menuDiv);
 
-    // Bind the event callbacks
+    // Bind the event handlers
     this.ctrlDiv.bind("mouseenter", function() { self._ctrlOn(); });
     this.ctrlDiv.bind("mouseleave", function() { self._ctrlOff(); });
     this.ctrlDiv.bind("click", function() { self.flyin(); });
@@ -47,18 +47,18 @@ $.widget("ui.navigation", {
 
   destroy: function() {
 
+    // Clear the event handlers
+    this.ctrlDiv.unbind();
+    this.bodyDiv.unbind();
+    $(this.menus).each(function() {
+      $(this).unbind();
+      $("a", this).unbind();
+    });
+
     // Destroy the document model
     this.element.removeClass("ui-nav")
     this.ctrlDiv.remove();
     this.bodyDiv.remove();
-
-    // Unbind the event callbacks
-    this.ctrlDiv.unbind();
-    this.bodyDiv.unbind();
-    $(this.menus).each(function(i) {
-      $(this).unbind();
-      $("a", this).unbind();
-    });
 
     $.widget.prototype.destroy.apply(this, arguments);
   },

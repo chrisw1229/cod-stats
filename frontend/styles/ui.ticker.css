@@ -4,6 +4,7 @@
   font-family: courier new;
   font-weight: bold;
   height: 145px;
+  overflow: hidden;
   width: 100%;
 }
 .ui-ticker-shadow {
@@ -14,11 +15,13 @@
   width: 100%;
   z-index: 1100;
 }
+.ui-ticker-slider {
+  position: relative;
+}
 .ui-ticker-item {
   cursor: pointer;
-  float: left;
   margin-right: 6px;
-  position: relative;
+  position: absolute;
   width: 255px;
 }
 .ui-ticker-item-shadow {
@@ -27,14 +30,14 @@
   width: 253px;
   z-index: 1025;
 }
-.ui-ticker-item-header {
+.ui-ticker-item-name {
   height: 1.4em;
   padding-top: 0.2em;
   position: relative;
   text-align: center;
   z-index: 1050;
 }
-.ui-ticker-item-header.ui-state-default {
+.ui-ticker-item-name.ui-state-default {
   font-weight: bold;
  }
 .ui-ticker-item-content {
@@ -75,24 +78,25 @@
   position: relative;
   top: -13px;
 }
-.ui-ticker-item-rank {
+.ui-ticker-rank {
   position: relative;
   top: 40px;
 }
-.ui-ticker-item-team {
+.ui-ticker-team {
   position: relative;
   top: 44px;
 }
 .ui-ticker-stats {
   height: 100%;
 }
-.ui-ticker-stat-line1 {
+.ui-ticker-kills {
   font-size: 1.6em;
 }
-.ui-ticker-stat-line2 {
+.ui-ticker-deaths {
   font-size: 1.2em;
 }
-.ui-ticker-stat-line3 {
+.ui-ticker-inflicted,
+.ui-ticker-received {
   font-size: 0.9em;
 }
 .ui-ticker-stat-value {
