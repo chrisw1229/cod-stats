@@ -14,7 +14,7 @@ $.widget("ui.ticker", {
     // Bind the event handlers
     this.itemsDiv.bind("mouseenter", function() { self.stop(); });
     this.itemsDiv.bind("mouseleave", function() { self.start(); });
-    $(window).bind("resize", function() { self._resize(); });
+    $(window).bind("resize.ticker", function() { self._resize(); });
 
     this._resize();
   },
@@ -23,6 +23,7 @@ $.widget("ui.ticker", {
 
     // Clear the event handlers
     this.itemsDiv.unbind();
+    $(window).unbind("resize.ticker");
     this._unbindItems($("div.ui-ticker-item", this.itemsDiv));
 
     // Destroy the document model

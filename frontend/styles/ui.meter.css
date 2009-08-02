@@ -1,0 +1,20 @@
+.ui-meter {
+  position: absolute;
+  top: 128px;
+  width: 100%;
+}
+.ui-meter-bar {
+  height: 10px;
+  position: absolute;
+}
+.ui-meter-value {
+  width: 0;
+}
+.ui-meter-marker {
+  background-image: url(images/meter-marker.png);
+  height: 24px;
+  position: absolute;
+  top: -7px;
+  width: 46px;
+  z-index: 1030;
+}

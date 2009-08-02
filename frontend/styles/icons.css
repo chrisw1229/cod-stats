@@ -39,22 +39,3 @@
 .icon-team-g {
   background-position: -72px 0;
 }
-#meter {
-  height: 10px;
-  margin-left: 4px;
-  position: absolute;
-  top: 128px;
-  width: 99%;
-}
-#meter-value {
-  width: 50%;	
-}
-#meter-marker {
-  background-image: url(images/meter-marker.png);
-  height: 24px;
-  left: 48%;
-  position: absolute;
-  top: -7px;
-  width: 46px;
-  z-index: 1030;
-}
