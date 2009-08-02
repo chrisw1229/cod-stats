@@ -1,5 +1,7 @@
 (ns org.stoop.codParser
-  (:use name.choi.joshua.fnparse org.stoop.parser))
+  (:use name.choi.joshua.fnparse 
+	org.stoop.parser org.stoop.codData
+	clojure.contrib.seq-utils))
 
 (defstruct time-struct :minute :second)
 
@@ -48,6 +50,44 @@
        (contains? potential-struct :damage)
        (contains? potential-struct :type)
        (contains? potential-struct :area)))
+
+(defn is-pistol? [weapon-name]
+  (includes? *pistols*  weapon-name))
+(defn is-rifle? [weapon-name]
+  (includes? *rifles*  weapon-name))
+(defn is-light-mg? [weapon-name]
+  (includes? *light-mgs*  weapon-name))
+(defn is-heavy-mg? [weapon-name]
+  (includes? *heavy-mgs* weapon-name))
+(defn is-grenade? [weapon-name]
+  (includes? *grenades* weapon-name))
+(defn is-tank? [weapon-name]
+  (includes? *tanks* weapon-name))
+(defn is-jeep? [weapon-name]
+  (includes? *jeeps* weapon-name))
+(defn is-artillery? [weapon-name]
+  (includes? *artillery* weapon-name))
+(defn is-jeep-crush? [weapon-name]
+  (includes? ["jeepcrush_mp"] weapon-name))
+(defn is-tank-crush? [weapon-name]
+  (includes? ["tankcrush_mp"] weapon-name))
+(defn is-flame-thrower? [weapon-name]
+  (includes? ["flamethrower_mp"] weapon-name))
+(defn is-bazooka? [weapon-name]
+  (includes? *bazookas* weapon-name))
+(defn is-melee? [type-name]
+  (includes? ["MOD_MELEE"] type-name))
+(defn is-fubar? [weapon-name]
+  (includes? *fubars* weapon-name))
+
+(defn is-american? [weapon-name]
+  (includes? *american-weapons* weapon-name))
+(defn is-russian? [weapon-name]
+  (includes? *russian-weapons* weapon-name))
+(defn is-british? [weapon-name]
+  (includes? *british-weapons*  weapon-name))
+(defn is-german? [weapon-name]
+  (includes? *german-weapons*  weapon-name))
 
 (def hit-info
   (complex [weapon identifier
