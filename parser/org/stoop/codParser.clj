@@ -263,5 +263,4 @@
 (defn parse-log-line [file]
   (with-open [fr (java.io.FileReader. file)
               br (java.io.BufferedReader. fr)]
-    ;(doseq [line (line-seq br)] (parse line log-line))))
     (vec (doall (map #(parse % log-line) (line-seq br))))))
