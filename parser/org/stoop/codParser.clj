@@ -257,10 +257,10 @@
 	    last-entry (invisi-conc log-line (opt line-break))]
     (conj entries last-entry)))
 
-(defn parse-log [file]
-  (parse (slurp file) log-file))
+;(defn parse-log [file]
+;  (parse (slurp file) log-file))
 
-(defn parse-log-line [file]
+(defn parse-log [file]
   (with-open [fr (java.io.FileReader. file)
               br (java.io.BufferedReader. fr)]
     (vec (doall (map #(parse % log-line) (line-seq br))))))
