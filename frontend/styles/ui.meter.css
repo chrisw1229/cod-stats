@@ -18,3 +18,7 @@
   width: 46px;
   z-index: 1030;
 }
+.ui-meter-milestone {
+  position: absolute;
+  top: -7px;
+}

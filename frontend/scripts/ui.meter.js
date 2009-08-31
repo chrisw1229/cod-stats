@@ -55,6 +55,7 @@ $.widget("ui.meter", {
     // Stop the current meter animation if applicable
     this.stop();
 
+    // Compute the initial element dimensions
     var markerW = this.markerDiv.width();
     var barW = (maxW - markerW);
     this.barDiv.css("left", (markerW / 2) + "px");
@@ -62,6 +63,12 @@ $.widget("ui.meter", {
     this.markerDiv.css("left", (markerW / -2) + "px");
     this.markerDiv.hide();
     this.maxW = maxW;
+    this.barW = barW;
+
+    // Build the milestone models
+    for (var i = 0; i < this.options.milestones.length; i++) {
+      this._createMilestone(this.options.milestones[i]);
+    }
 
     // Configure and start the meter animation
     var value = barW * (this.options.value / this.options.max);
@@ -80,9 +87,28 @@ $.widget("ui.meter", {
     this.markerDiv.css("left", (leftPos - this.anim.offset) + "px");
     this.markerDiv.show();
 
+    // Display any milestones that have occurred
+    for (var i = 0; i < this.options.milestones.length; i++) {
+      var milestone = this.options.milestones[i];
+      if (leftPos >= milestone.valuePos) {
+        milestone.div.show();
+      } else {
+        milestone.div.hide();
+      }
+    }
+
+    // Stop the animation when the meter reaches the end
     if (this.anim.valuePos > this.anim.maxW) {
       this.stop();
     }
+  },
+
+  _createMilestone: function(milestone) {
+    milestone.valuePos = this.barW * (milestone.value / this.options.max);
+    milestone.div = $('<div class="ui-meter-milestone icon-team icon-team-'
+        + milestone.type + '"/>').appendTo(this.barDiv);
+    milestone.div.css("left", milestone.valuePos + "px");
+    milestone.div.hide();
   }
 
 });
@@ -91,7 +117,13 @@ $.extend($.ui.meter, {
   version: "1.7.2",
   defaults: {
     max: 5,
-    value: 0
+    value: 0,
+    milestones: [
+      { value: 1, type: "a" },
+      { value: 2, type: "b" },
+      { value: 3, type: "r" },
+      { value: 4, type: "g" }
+    ]
   }
 });
 
