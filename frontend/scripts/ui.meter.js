@@ -106,6 +106,7 @@ $.widget("ui.meter", {
     milestone.valuePos = this.barW * (milestone.value / this.options.max);
     milestone.div = $('<div class="ui-meter-milestone icon-team icon-team-'
         + milestone.type + '"/>').appendTo(this.barDiv);
+    milestone.div.attr("title", milestone.desc);
     milestone.div.css("left", milestone.valuePos);
     milestone.div.hide();
   }
