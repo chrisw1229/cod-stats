@@ -4,7 +4,7 @@ $.widget("ui.ticker", {
 
   _init: function() {
     var self = this;
-    this.index = 0;
+    this.loadIndex = 0;
 
     // Build the document model
     this.element.addClass("ui-widget-content ui-ticker");
@@ -37,7 +37,13 @@ $.widget("ui.ticker", {
   start: function() {
     if (!this.running) {
       var self = this;
-      this.running = setInterval(function() { self._animate(); }, 50);
+
+      // Start the slide animation after the pause interval
+      this.running = setTimeout(function() { 
+        self.sliding = setInterval(function() {
+          self._animate();
+        }, self.anim.rate);
+      }, this.anim.pause);
     }
   },
 
@@ -45,6 +51,8 @@ $.widget("ui.ticker", {
     if (this.running) {
       clearInterval(this.running);
       this.running = undefined;
+      clearInterval(this.sliding);
+      this.sliding = undefined;
     }
   },
 
@@ -71,8 +79,7 @@ $.widget("ui.ticker", {
 
     // Generate a group to hold a set of ticker items
     this.group1 = $('<div class="ui-ticker-slider"/>').appendTo(this.itemsDiv);
-    this.group1.css("width", (itemW * count) + "px");
-    this.group1.css("left", maxW + "px");
+    this.group1.css({ left: 0, width: (itemW * count) });
 
     // Generate the ticker items
     prototype.appendTo(this.group1);
@@ -91,9 +98,10 @@ $.widget("ui.ticker", {
     // Configure the ticker animation
     var groupW = this.group1.outerWidth(true);
     this.anim = {
-      maxW: maxW, groupW: groupW,
+      rate: 100, speed: 52, pause: 4000,
+      maxW: maxW, groupW: groupW, itemW: itemW,
       inPos: (maxW - groupW), outPos: (-1 * groupW),
-      x1: maxW, x2: groupW, move: 2, state: 0
+      x1: 0, x2: groupW, moved: 0, state: 0
     };
 
     // Fill the first group with data and start
@@ -108,14 +116,14 @@ $.widget("ui.ticker", {
 
     // Move the group 1 until it surpasses the left screen bounds
     if (this.anim.x1 > this.anim.outPos) {
-      this.anim.x1 -= this.anim.move;
-      this.group1.css("left", this.anim.x1 + "px");
+      this.anim.x1 -= this.anim.speed;
+      this.group1.css("left", this.anim.x1);
     }
 
     // Reset group 2 once group 1 reaches the left screen bounds
     if (this.anim.state != 1) {
       if (this.anim.x1 + this.anim.groupW <= this.anim.maxW) {
-        this.anim.x2 = this.anim.x1 + this.anim.groupW + this.anim.move;
+        this.anim.x2 = this.anim.x1 + this.anim.groupW + this.anim.speed;
         this._loadGroup(this.group2);
         this.group2.show();
         this.anim.state = 1;
@@ -125,8 +133,8 @@ $.widget("ui.ticker", {
     // Move group 2 until it surpasses the left screen bounds
     if (this.anim.state != 0) { 
       if (this.anim.x2 > this.anim.outPos) {
-        this.anim.x2 -= this.anim.move;
-        this.group2.css("left", this.anim.x2 + "px");
+        this.anim.x2 -= this.anim.speed;
+        this.group2.css("left", this.anim.x2);
       }
     }
 
@@ -136,9 +144,19 @@ $.widget("ui.ticker", {
       this._loadGroup(this.group1);
       this.anim.state = 2;
     }
+
+    // Pause for a few seconds after sliding one full item
+    this.anim.moved += this.anim.speed;
+    if (this.anim.moved >= this.anim.itemW) {
+      this.anim.moved = 0;
+      this.stop();
+      this.start();
+    }
   },
 
   _createItem: function() {
+
+    // Create the document model for a single ticker item
     var itemDiv = $('<div class="ui-ticker-item"/>').appendTo(this.itemsDiv);
     var shadowDiv = $('<div class="ui-widget-shadow ui-ticker-item-shadow"/>').appendTo(itemDiv);
     var nameDiv = $('<div class="ui-state-default ui-corner-top ui-ticker-item-name"/>').appendTo(itemDiv);
@@ -161,6 +179,8 @@ $.widget("ui.ticker", {
   },
 
   _bindItems: function() {
+
+    // Highlight the ticker item name upon mouse hover
     $("div.ui-ticker-item", this.itemsDiv).each(function() {
       var nameDiv = $("div.ui-ticker-item-name", this);
       $(this).bind("mouseenter", function() { nameDiv.addClass("ui-state-hover"); });
@@ -169,22 +189,28 @@ $.widget("ui.ticker", {
   },
 
   _unbindItems: function() {
+
+    // Remove ticker item name highlights
     $("div.ui-ticker-item", this.itemsDiv).each(function() {
       $(this).unbind();
     });
   },
 
   _loadGroup: function(group) {
+
+    // Load all the ticker item data for the given group
     var self = this;
     $("div.ui-ticker-item", group).each(function() {
-      self._loadItem(this, self.options.items[self.index++]);
-      if (self.index >= self.options.items.length) {
-        self.index = 0;
+      self._loadItem(this, self.options.items[self.loadIndex++]);
+      if (self.loadIndex >= self.options.items.length) {
+        self.loadIndex = 0;
       }
     });
   },
 
   _loadItem: function(itemDiv, item) {
+
+    // Load all the data values for the given ticker item
     $("div.ui-ticker-item-name", itemDiv).text(item.name)
     $("div.ui-ticker-item-photo", itemDiv).css("background-image",
         "url(players/" + item.photo + ")");
