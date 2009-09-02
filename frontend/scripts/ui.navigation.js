@@ -63,14 +63,6 @@ $.widget("ui.navigation", {
     $.widget.prototype.destroy.apply(this, arguments);
   },
 
-  _ctrlOn: function() {
-    this.ctrlDiv.stop().fadeTo("normal", 1.0);
-  },
-
-  _ctrlOff: function() {
-    this.ctrlDiv.stop().fadeTo("normal", 0.4);
-  },
-
   flyin: function(callback) {
     if (this.flying) {
       return;
@@ -109,6 +101,14 @@ $.widget("ui.navigation", {
     this.flyout(function() {
       window.location = $("a", self.menus[index]).attr("href");
     });
+  },
+
+  _ctrlOn: function() {
+    this.ctrlDiv.stop().fadeTo("normal", 1.0);
+  },
+
+  _ctrlOff: function() {
+    this.ctrlDiv.stop().fadeTo("normal", 0.4);
   }
 
 });
