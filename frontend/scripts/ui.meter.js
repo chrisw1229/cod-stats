@@ -58,9 +58,8 @@ $.widget("ui.meter", {
     // Compute the initial element dimensions
     var markerW = this.markerDiv.width();
     var barW = (maxW - markerW);
-    this.barDiv.css("left", (markerW / 2) + "px");
-    this.barDiv.css("width", barW + "px");
-    this.markerDiv.css("left", (markerW / -2) + "px");
+    this.barDiv.css({ left: (markerW / 2), width: barW });
+    this.markerDiv.css("left", (markerW / -2));
     this.markerDiv.hide();
     this.maxW = maxW;
     this.barW = barW;
@@ -83,8 +82,8 @@ $.widget("ui.meter", {
 
     // Adjust the position of the progress bar value and marker
     var leftPos = this.anim.valuePos++;
-    this.valueDiv.css("width", leftPos + "px");
-    this.markerDiv.css("left", (leftPos - this.anim.offset) + "px");
+    this.valueDiv.css("width", leftPos);
+    this.markerDiv.css("left", (leftPos - this.anim.offset));
     this.markerDiv.show();
 
     // Display any milestones that have occurred
@@ -107,7 +106,7 @@ $.widget("ui.meter", {
     milestone.valuePos = this.barW * (milestone.value / this.options.max);
     milestone.div = $('<div class="ui-meter-milestone icon-team icon-team-'
         + milestone.type + '"/>').appendTo(this.barDiv);
-    milestone.div.css("left", milestone.valuePos + "px");
+    milestone.div.css("left", milestone.valuePos);
     milestone.div.hide();
   }
 
@@ -119,9 +118,13 @@ $.extend($.ui.meter, {
     max: 5,
     value: 0,
     milestones: [
-      { value: 1, type: "a" },
-      { value: 2, type: "b" },
-      { value: 3, type: "r" },
+      { value: 0.5, type: "a" },
+      { value: 1, type: "b" },
+      { value: 1.5, type: "r" },
+      { value: 2, type: "g" },
+      { value: 2.5, type: "a" },
+      { value: 3, type: "b" },
+      { value: 3.5, type: "r" },
       { value: 4, type: "g" }
     ]
   }
