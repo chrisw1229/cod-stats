@@ -155,7 +155,7 @@ Map._initMarkerLayer = function(type) {
     context: {
       size: function(m) {
         return (m.cluster ? Math.min(m.attributes.count, 13) : 1) + 7;
-      },
+      }
     }
   });
 
