@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="cod-stats-mod" default="dist" basedir=".">
+
+   <!-- GLOBAL PROPERTIES -->
+   <property name="dist.dir" value="dist" />
+   <property name="mod.dir" value="cod-stats" />
+   <property name="mod.file" value="${ant.project.name}.pk3" />
+   <property name="cod.dir" value="C:/Program Files/Call of Duty" />
+
+   <!-- CLEAN -->
+   <target name="clean"
+         description="Removes the build directory.">
+      <echo>Cleaning compiled classes files.</echo>
+
+      <delete dir="${dist.dir}" />
+   </target>
+
+   <!-- MOD DISTRIBUTION -->
+   <target name="dist" depends="clean"
+         description="Creates the distribution package as a PK3 file.">
+      <echo>Creating PK3 package for distribution.</echo>
+      <mkdir dir="${dist.dir}" />
+
+      <!-- Create a PK3 package for the mod files -->
+   	  <zip destfile="${dist.dir}/${mod.file}">
+         <fileset dir="${mod.dir}">
+            <include name="**/**" />
+         </fileset>
+      </zip>
+
+      <!-- Attempt to copy the file to the game directory -->
+      <copy todir="${cod.dir}/${mod.dir}"
+          file="${dist.dir}/${mod.file}" />
+   </target>
+</project>
