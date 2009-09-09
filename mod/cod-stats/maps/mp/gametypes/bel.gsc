@@ -1104,6 +1104,14 @@ spawnPlayer()
 
 	// setup the hud rank indicator
 	self thread maps\mp\gametypes\_rank_gmi::RankHudInit();
+
+    // Log the spawn event
+	lpselfguid = self getGuid();
+    lpselfnum = self getEntityNumber();
+	lpselfname = self.name;
+	lporigin = self.origin;
+	lpangle = self.angles[1];
+    logPrint("Spawn;" + lpselfguid + ";" + lpselfnum + ";" + lpselfname + ";" + lporigin[0] + "," + lporigin[1] + "," + lporigin[2] + ";" + lpangle + "\n");
 }
 
 spawnSpectator()
