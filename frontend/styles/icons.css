@@ -5,19 +5,19 @@
   height: 24px;
   width: 24px;	
 }
-.icon-rank-1 {
+.icon-rank-0 {
   background-position: 0 0;
 }
-.icon-rank-2 {
+.icon-rank-1 {
   background-position: -24px 0;	
 }
-.icon-rank-3 {
+.icon-rank-2 {
   background-position: -48px 0;
 }
-.icon-rank-4 {
+.icon-rank-3 {
   background-position: -72px 0;
 }
-.icon-rank-5 {
+.icon-rank-4 {
   background-position: -96px 0;
 }
 .icon-team {

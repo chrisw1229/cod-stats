@@ -232,19 +232,19 @@ $.extend($.ui.ticker, {
   version: "1.7.2",
   defaults: {
     items: [
-      { name: "A Figment of Your Imagination", photo: "player0.jpg", place: "4", rank: "4", team: "a", kills: "79", deaths: "57", inflicted: "14,722", received: "8,353" },
-      { name: "Bazooka John", photo: "player1.jpg", place: "7", rank: "3", team: "g", kills: "48", deaths: "57", inflicted: "8,834", received: "7,149" },
-      { name: "CDJ Wobbly Wiggly", photo: "player2.jpg", place: "10", rank: "2", team: "b", kills: "32", deaths: "43", inflicted: "5,475", received: "9,252" },
-      { name: "CHUCKNORRISCOUNTEDTOINFINITY...", photo: "player3.jpg", place: "11", rank: "2", team: "r", kills: "27", deaths: "55", inflicted: "4,085", received: "6,768" },
-      { name: "Colonel Billiam", photo: "player4.jpg", place: "9", rank: "3", team: "a", kills: "44", deaths: "55", inflicted: "5,294", received: "6,245" },
-      { name: "GOMER PYLE", photo: "player5.jpg", place: "2", rank: "5", team: "g", kills: "108", deaths: "55", inflicted: "18,475", received: "7,809" },
-      { name: "Jaymz", photo: "player6.jpg", place: "6", rank: "4", team: "b", kills: "58", deaths: "53", inflicted: "3,119", received: "2,090" },
-      { name: "Luda", photo: "player7.jpg", place: "8", rank: "3", team: "r", kills: "45", deaths: "50", inflicted: "10,572", received: "10,978" },
-      { name: "Note To Self", photo: "player8.jpg", place: "5", rank: "4", team: "a", kills: "68", deaths: "53", inflicted: "11,222", received: "8,376" },
-      { name: "Scope", photo: "player9.jpg", place: "3", rank: "4", team: "g", kills: "82", deaths: "57", inflicted: "9,161", received: "9,162" },
-      { name: "ThePine", photo: "player10.jpg", place: "1", rank: "5", team: "b", kills: "143", deaths: "80", inflicted: "18,590", received: "11,193" },
-      { name: "Tim - Target Drone", photo: "player11.jpg", place: "12", rank: "1", team: "r", kills: "18", deaths: "50", inflicted: "2,879", received: "9,257" },
-      { name: "Turn Left Nower", photo: "player12.jpg", place: "13", rank: "1", team: "a", kills: "12", deaths: "31", inflicted: "2,741", received: "5,515" }
+      { name: "A Figment of Your Imagination", photo: "player0.jpg", place: "4", rank: "3", team: "a", kills: "79", deaths: "57", inflicted: "14,722", received: "8,353" },
+      { name: "Bazooka John", photo: "player1.jpg", place: "7", rank: "2", team: "g", kills: "48", deaths: "57", inflicted: "8,834", received: "7,149" },
+      { name: "CDJ Wobbly Wiggly", photo: "player2.jpg", place: "10", rank: "1", team: "b", kills: "32", deaths: "43", inflicted: "5,475", received: "9,252" },
+      { name: "CHUCKNORRISCOUNTEDTOINFINITY...", photo: "player3.jpg", place: "11", rank: "1", team: "r", kills: "27", deaths: "55", inflicted: "4,085", received: "6,768" },
+      { name: "Colonel Billiam", photo: "player4.jpg", place: "9", rank: "2", team: "a", kills: "44", deaths: "55", inflicted: "5,294", received: "6,245" },
+      { name: "GOMER PYLE", photo: "player5.jpg", place: "2", rank: "4", team: "g", kills: "108", deaths: "55", inflicted: "18,475", received: "7,809" },
+      { name: "Jaymz", photo: "player6.jpg", place: "6", rank: "3", team: "b", kills: "58", deaths: "53", inflicted: "3,119", received: "2,090" },
+      { name: "Luda", photo: "player7.jpg", place: "8", rank: "2", team: "r", kills: "45", deaths: "50", inflicted: "10,572", received: "10,978" },
+      { name: "Note To Self", photo: "player8.jpg", place: "5", rank: "3", team: "a", kills: "68", deaths: "53", inflicted: "11,222", received: "8,376" },
+      { name: "Scope", photo: "player9.jpg", place: "3", rank: "3", team: "g", kills: "82", deaths: "57", inflicted: "9,161", received: "9,162" },
+      { name: "ThePine", photo: "player10.jpg", place: "1", rank: "4", team: "b", kills: "143", deaths: "80", inflicted: "18,590", received: "11,193" },
+      { name: "Tim - Target Drone", photo: "player11.jpg", place: "12", rank: "0", team: "r", kills: "18", deaths: "50", inflicted: "2,879", received: "9,257" },
+      { name: "Turn Left Nower", photo: "player12.jpg", place: "13", rank: "0", team: "a", kills: "12", deaths: "31", inflicted: "2,741", received: "5,515" }
     ]
   }
 });
