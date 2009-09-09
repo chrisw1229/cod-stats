@@ -564,9 +564,9 @@ Callback_PlayerKilled(eInflictor, attacker, iDamage, sMeansOfDeath, sWeapon, vDi
 
 	lpselfnum = self getEntityNumber();
 	lpselfname = self.name;
-	lpselfteam = "";
+	lpselfteam = self.pers["team"];
 	lpselfguid = self getGuid();
-	lpattackerteam = "";
+	lpattackerteam = attacker.pers["team"];
 
 	attackerNum = -1;
 	if(isPlayer(attacker))
