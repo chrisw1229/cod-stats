@@ -2441,6 +2441,12 @@ SpawnSpectator(origin, angles)
 
 	updateTeamStatus();
 
+    // Log the spectator event
+	lpselfguid = self getGuid();
+    lpselfnum = self getEntityNumber();
+	lpselfname = self.name;
+    logPrint("Spec;" + lpselfguid + ";" + lpselfnum + ";" + lpselfname + "\n");
+
 	if( "allies" == self.pers["team"])
 		self setClientCvar("cg_objectiveText", game["dom_allies_obj_text"]);
 	else if("axis" == self.pers["team"])

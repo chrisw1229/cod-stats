@@ -775,6 +775,12 @@ spawnSpectator(origin, angles)
 			maps\mp\_utility::error("NO " + spawnpointname + " SPAWNPOINTS IN MAP");
 	}
 
+    // Log the spectator event
+	lpselfguid = self getGuid();
+    lpselfnum = self getEntityNumber();
+	lpselfname = self.name;
+    logPrint("Spec;" + lpselfguid + ";" + lpselfnum + ";" + lpselfname + "\n");
+
 	self setClientCvar("cg_objectiveText", &"DM_KILL_OTHER_PLAYERS");
 }
 

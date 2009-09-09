@@ -1778,6 +1778,12 @@ SpawnSpectator(origin, angles)
 
 	self.usedweapons = false;
 
+    // Log the spectator event
+	lpselfguid = self getGuid();
+    lpselfnum = self getEntityNumber();
+	lpselfname = self.name;
+    logPrint("Spec;" + lpselfguid + ";" + lpselfnum + ";" + lpselfname + "\n");
+
 	self setClientCvar("cg_objectiveText", game["ctf_spectator_obj_text"]);
 }
 

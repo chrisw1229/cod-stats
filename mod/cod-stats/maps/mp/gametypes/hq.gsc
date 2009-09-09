@@ -1090,6 +1090,12 @@ spawnSpectator(origin, angles)
 	
 	level hq_removeall_hudelems(self);
 	
+    // Log the spectator event
+	lpselfguid = self getGuid();
+    lpselfnum = self getEntityNumber();
+	lpselfname = self.name;
+    logPrint("Spec;" + lpselfguid + ";" + lpselfnum + ";" + lpselfname + "\n");
+
 	self setClientCvar("cg_objectiveText", &"HQ_OBJ_TEXT", level.scorelimit);
 }
 

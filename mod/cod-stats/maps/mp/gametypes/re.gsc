@@ -1408,6 +1408,12 @@ spawnSpectator(origin, angles)
 
 	self.usedweapons = false;
 
+    // Log the spectator event
+	lpselfguid = self getGuid();
+    lpselfnum = self getEntityNumber();
+	lpselfname = self.name;
+    logPrint("Spec;" + lpselfguid + ";" + lpselfnum + ";" + lpselfname + "\n");
+
 	//if(game["re_attackers"] == "allies")
 	//	self setClientCvar("cg_objectiveText", &"RE_ALLIES", game["re_attackers_obj_text"]);
 	//else if(game["re_attackers"] == "axis")

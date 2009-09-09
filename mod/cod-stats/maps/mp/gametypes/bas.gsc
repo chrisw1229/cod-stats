@@ -1981,6 +1981,12 @@ SpawnSpectator(origin, angles)
 
 	updateTeamStatus();
 
+    // Log the spectator event
+	lpselfguid = self getGuid();
+    lpselfnum = self getEntityNumber();
+	lpselfname = self.name;
+    logPrint("Spec;" + lpselfguid + ";" + lpselfnum + ";" + lpselfname + "\n");
+
 	self setClientCvar("cg_objectiveText", game["bas_obj_text"]);
 }
 
