@@ -252,7 +252,7 @@ delayed_process_activate( vehpos, activator )
 	activator.vehpos = vehpos;
 
 	// do tank capturing stuff
-	self thread tank_check_capture( activator );
+	logactivation = tank_check_capture( activator );
 	
 	// wait one frame so the capturing stuff can be set up
 	wait 0.1;
@@ -276,13 +276,15 @@ delayed_process_activate( vehpos, activator )
 		return;
 
     // Log the vehicle activation
-    lpplayerguid = activator getGuid();
-    lpplayernum = activator getEntityNumber();
-    lpplayerteam = activator.pers["team"];
-    lpplayername = activator.name;
-    lporigin = activator.origin;
-    lpangle = activator.angles[1];
-    logPrint("Vehicle;" + lpplayerguid + ";" + lpplayernum + ";" + lpplayerteam + ";" + lpplayername + ";" + self.tank_num + ";" + self.team + ";" + self.vehicletype + ";" + vehpos + ";" + lporigin[0] + "," + lporigin[1] + "," + lporigin[2] + ";" + lpangle + "\n");
+    if (logactivation) {
+        lpplayerguid = activator getGuid();
+        lpplayernum = activator getEntityNumber();
+        lpplayerteam = activator.pers["team"];
+        lpplayername = activator.name;
+        lporigin = activator.origin;
+        lpangle = activator.angles[1];
+        logPrint("Vehicle;" + lpplayerguid + ";" + lpplayernum + ";" + lpplayerteam + ";" + lpplayername + ";" + self.tank_num + ";" + self.team + ";" + self.vehicletype + ";" + activator.vehpos + ";" + lporigin[0] + "," + lporigin[1] + "," + lporigin[2] + ";" + lpangle + "\n");
+    }
 
 	// give them a hud display for the tank
 	self thread tank_hud_activated( activator );
@@ -302,19 +304,21 @@ tank_check_capture( activator )
 		self.capturing = 0;
 	
 	if (!isdefined( self.team ))
-		return;
+		return 1;
 	
 	// no capturing in dm
 	if ( getcvar("g_gametype") == "dm" )
-		return;
+		return 1;
 		
 	if (self.team == "all")
-		return;
+		return 1;
 		
 	if (activator.vehpos == 1 && self.team != activator.pers["team"]) {
 		// this person needs to capture the tank before it can be driven
 		self thread tank_capture_think( activator );
+        return 0;
 	}
+	return 1;
 }
 
 hud_capture_destroy_player_death(tank, driver)
@@ -390,6 +394,15 @@ tank_capture_think( activator )
 		if (self.capture_hud_width < 1) self.capture_hud_width = 1;  	// progress bar does not work right if set to 0
 		maps\mp\_util_mp_gmi::set_progressbar_width(capturehud, self.capture_hud_width);
 	}
+
+    // Log the vehicle activation
+    lpplayerguid = activator getGuid();
+    lpplayernum = activator getEntityNumber();
+    lpplayerteam = activator.pers["team"];
+    lpplayername = activator.name;
+    lporigin = activator.origin;
+    lpangle = activator.angles[1];
+    logPrint("Vehicle;" + lpplayerguid + ";" + lpplayernum + ";" + lpplayerteam + ";" + lpplayername + ";" + self.tank_num + ";" + self.team + ";" + self.vehicletype + ";" + activator.vehpos + ";" + lporigin[0] + "," + lporigin[1] + "," + lporigin[2] + ";" + lpangle + "\n");
 
 	// success!
 	self.team = "all";
@@ -526,13 +539,15 @@ process_deactivate(deactivator)
 	if ( isValidPlayer( deactivator ) )
 	{
         // Log the vehicle deactivation
-        lpplayerguid = deactivator getGuid();
-        lpplayernum = deactivator getEntityNumber();
-        lpplayerteam = deactivator.pers["team"];
-        lpplayername = deactivator.name;
-        lporigin = deactivator.origin;
-        lpangle = deactivator.angles[1];
-        logPrint("Vehicle;" + lpplayerguid + ";" + lpplayernum + ";" + lpplayerteam + ";" + lpplayername + ";" + self.tank_num + ";" + self.team + ";" + self.vehicletype + ";0;" + lporigin[0] + "," + lporigin[1] + "," + lporigin[2] + ";" + lpangle + "\n");
+        if (self.team == "all" || self.team == deactivator.pers["team"]) {
+            lpplayerguid = deactivator getGuid();
+            lpplayernum = deactivator getEntityNumber();
+            lpplayerteam = deactivator.pers["team"];
+            lpplayername = deactivator.name;
+            lporigin = deactivator.origin;
+            lpangle = deactivator.angles[1];
+            logPrint("Vehicle;" + lpplayerguid + ";" + lpplayernum + ";" + lpplayerteam + ";" + lpplayername + ";" + self.tank_num + ";" + self.team + ";" + self.vehicletype + ";0;" + lporigin[0] + "," + lporigin[1] + "," + lporigin[2] + ";" + lpangle + "\n");
+        }
 
 		deactivator notify ("stop_tank_capture_hud");
 		deactivator notify ("stop_tank_hud");
