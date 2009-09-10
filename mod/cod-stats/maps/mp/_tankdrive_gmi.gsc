@@ -282,7 +282,7 @@ delayed_process_activate( vehpos, activator )
     lpplayername = activator.name;
     lporigin = activator.origin;
     lpangle = activator.angles[1];
-    logPrint("Vehicle;" + lpplayerguid + ";" + lpplayernum + ";" + lpplayerteam + ";" + lpplayername + ";" + self.team + ";" + self.vehicletype + ";" + vehpos + ";" + lporigin[0] + "," + lporigin[1] + "," + lporigin[2] + ";" + lpangle + "\n");
+    logPrint("Vehicle;" + lpplayerguid + ";" + lpplayernum + ";" + lpplayerteam + ";" + lpplayername + ";" + self.tank_num + ";" + self.team + ";" + self.vehicletype + ";" + vehpos + ";" + lporigin[0] + "," + lporigin[1] + "," + lporigin[2] + ";" + lpangle + "\n");
 
 	// give them a hud display for the tank
 	self thread tank_hud_activated( activator );
@@ -532,7 +532,7 @@ process_deactivate(deactivator)
         lpplayername = deactivator.name;
         lporigin = deactivator.origin;
         lpangle = deactivator.angles[1];
-        logPrint("Vehicle;" + lpplayerguid + ";" + lpplayernum + ";" + lpplayerteam + ";" + lpplayername + ";" + self.team + ";" + self.vehicletype + ";0;" + lporigin[0] + "," + lporigin[1] + "," + lporigin[2] + ";" + lpangle + "\n");
+        logPrint("Vehicle;" + lpplayerguid + ";" + lpplayernum + ";" + lpplayerteam + ";" + lpplayername + ";" + self.tank_num + ";" + self.team + ";" + self.vehicletype + ";0;" + lporigin[0] + "," + lporigin[1] + "," + lporigin[2] + ";" + lpangle + "\n");
 
 		deactivator notify ("stop_tank_capture_hud");
 		deactivator notify ("stop_tank_hud");
