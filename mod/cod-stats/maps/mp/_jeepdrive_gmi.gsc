@@ -256,9 +256,13 @@ delayed_process_activate( vehpos, activator )
     lpplayernum = activator getEntityNumber();
     lpplayerteam = activator.pers["team"];
     lpplayername = activator.name;
+    lpitemnum = self.tank_num;
+    lpitemteam = self.tank_team;
+    lpitemtype = self.vehicletype;
+    lpitemseat = activator.vehpos;
     lporigin = activator.origin;
     lpangle = activator.angles[1];
-    logPrint("Vehicle;" + lpplayerguid + ";" + lpplayernum + ";" + lpplayerteam + ";" + lpplayername + ";" + self.tank_num + ";" + self.tank_team + ";" + self.vehicletype + ";" + activator.vehpos + ";" + lporigin[0] + "," + lporigin[1] + "," + lporigin[2] + ";" + lpangle + "\n");
+    logPrint("Use;" + lpplayerguid + ";" + lpplayernum + ";" + lpplayerteam + ";" + lpplayername + ";" + lpitemnum + ";" + lpitemteam + ";" + lpitemtype + ";" + lpitemseat + ";" + lporigin[0] + "," + lporigin[1] + "," + lporigin[2] + ";" + lpangle + "\n");
 
 	// give them a hud display for the tank
 	self thread hud_activated( activator );
@@ -457,9 +461,13 @@ process_deactivate(deactivator)
         lpplayernum = deactivator getEntityNumber();
         lpplayerteam = deactivator.pers["team"];
         lpplayername = deactivator.name;
+        lpitemnum = self.tank_num;
+        lpitemteam = self.tank_team;
+        lpitemtype = self.vehicletype;
+        lpitemseat = "0";
         lporigin = deactivator.origin;
         lpangle = deactivator.angles[1];
-        logPrint("Vehicle;" + lpplayerguid + ";" + lpplayernum + ";" + lpplayerteam + ";" + lpplayername + ";" + self.tank_num + ";" + self.tank_team + ";" + self.vehicletype + ";0;" + lporigin[0] + "," + lporigin[1] + "," + lporigin[2] + ";" + lpangle + "\n");
+        logPrint("Use;" + lpplayerguid + ";" + lpplayernum + ";" + lpplayerteam + ";" + lpplayername + ";" + lpitemnum + ";" + lpitemteam + ";" + lpitemtype + ";" + lpitemseat + ";" + lporigin[0] + "," + lporigin[1] + "," + lporigin[2] + ";" + lpangle + "\n");
 
 		deactivator notify ("stop_capture_hud");
 		deactivator notify ("stop_hud");
