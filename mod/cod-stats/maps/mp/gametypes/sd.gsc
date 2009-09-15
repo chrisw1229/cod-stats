@@ -1228,9 +1228,10 @@ spawnPlayer()
     lpselfnum = self getEntityNumber();
     lpplayerteam = self.pers["team"];
 	lpselfname = self.name;
+	lpweapon = self.pers["weapon"];
 	lporigin = self.origin;
 	lpangle = self.angles[1];
-    logPrint("Spawn;" + lpselfguid + ";" + lpselfnum + ";" + lpplayerteam + ";" + lpselfname + ";" + lporigin[0] + "," + lporigin[1] + "," + lporigin[2] + ";" + lpangle + "\n");
+    logPrint("Spawn;" + lpselfguid + ";" + lpselfnum + ";" + lpplayerteam + ";" + lpselfname + ";" + lpweapon + ";" + lporigin[0] + "," + lporigin[1] + "," + lporigin[2] + ";" + lpangle + "\n");
 }
 
 spawnSpectator(origin, angles)
