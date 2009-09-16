@@ -52,19 +52,25 @@ treefall_notrigger()
 	treeorg.angles = triggerer.angles;
 //	treeorg playsound (game["treefall_sound"]);
 	if(triggerer.classname == "script_vehicle") {
-	    if (isDefined(triggerer.driver)) {
+	    if (isValidPlayer(triggerer.driver)) {
+	        lpobjectguid = "";
+	        lpobjectnum = "-1";
+	        lpobjectteam = "world";
+	        lpobjectname = tree.model;
+
 	        player = triggerer.driver;
 	        lpplayerguid = player getGuid();
             lpplayernum = player getEntityNumber();
             lpplayerteam = player.pers["team"];
             lpplayername = player.name;
-            lpvehicletype = triggerer.vehicletype;
+            lpweapon = triggerer.vehicletype;
             lpdamage = 100;
             lpdamagemod = "MOD_CRUSH_TANK";
            	if (lpvehicletype == "willyjeep_mp" || lpvehicletype == "horch_mp" || lpvehicletype == "gaz67b_mp") {
                 lpdamagemod = "MOD_CRUSH_JEEP";
             }
-            logPrint("Tree;" + lpplayerguid + ";" + lpplayernum + ";" + lpplayerteam + ";" + lpplayername + ";" + lpvehicletype + ";" + lpdamage + ";" + lpdamagemod + "\n");
+            lphitloc = "none";
+            logPrint("D;" + lpobjectguid + ";" + lpobjectnum + ";" + lpobjectteam + ";" + lpobjectname + ";" + lpplayerguid + ";" + lpplayernum + ";" + lpplayerteam + ";" + lpplayername + ";" + lpweapon + ";" + lpdamage + ";" + lpdamagemod + ";" + lphitloc + "\n");
         }
 		triggerer joltbody((treeorg.origin + (0,0,64)),.3,.67,11);
 	}
@@ -119,14 +125,20 @@ treefall_checkdamage()
 			}
 			health = health - dmg;
 
+	        lpobjectguid = "";
+	        lpobjectnum = "-1";
+	        lpobjectteam = "world";
+	        lpobjectname = self.model;
+
 	        lpplayerguid = who getGuid();
             lpplayernum = who getEntityNumber();
             lpplayerteam = who.pers["team"];
             lpplayername = who.name;
-            lpweapon = who.pers["weapon"];
+            lpweapon = "none";
             lpdamage = dmg;
             lpdamagemod = mod;
-            logPrint("Tree;" + lpplayerguid + ";" + lpplayernum + ";" + lpplayerteam + ";" + lpplayername + ";" + lpweapon + ";" + lpdamage + ";" + lpdamagemod + "\n");
+            lphitloc = "none";
+            logPrint("D;" + lpobjectguid + ";" + lpobjectnum + ";" + lpobjectteam + ";" + lpobjectname + ";" + lpplayerguid + ";" + lpplayernum + ";" + lpplayerteam + ";" + lpplayername + ";" + lpweapon + ";" + lpdamage + ";" + lpdamagemod + ";" + lphitloc + "\n");
 
 			if (health <= 0)
 			{
