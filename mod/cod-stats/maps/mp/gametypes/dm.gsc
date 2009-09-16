@@ -566,7 +566,10 @@ Callback_PlayerKilled(eInflictor, attacker, iDamage, sMeansOfDeath, sWeapon, vDi
 	lpselfname = self.name;
 	lpselfteam = self.pers["team"];
 	lpselfguid = self getGuid();
-	lpattackerteam = attacker.pers["team"];
+	lpattackerteam = "";
+    vPos = self.origin;
+    vAngle = self.angles[1];
+    vStance = self getStance();
 
 	attackerNum = -1;
 	if(isPlayer(attacker))
@@ -589,6 +592,10 @@ Callback_PlayerKilled(eInflictor, attacker, iDamage, sMeansOfDeath, sWeapon, vDi
 		lpattacknum = attacker getEntityNumber();
 		lpattackguid = attacker getGuid();
 		lpattackname = attacker.name;
+        lpattackerteam = attacker.pers["team"];
+        aPos = attacker.origin;
+        aAngle = attacker.angles[1];
+        aStance = attacker getStance();
 	}
 	else // If you weren't killed by a player, you were in the wrong place at the wrong time
 	{
@@ -599,15 +606,11 @@ Callback_PlayerKilled(eInflictor, attacker, iDamage, sMeansOfDeath, sWeapon, vDi
 		lpattacknum = -1;
 		lpattackguid = "";
 		lpattackname = "";
+		lpattackerteam = "world";
+        aPos = (0, 0, 0);
+        aAngle = "0";
+        aStance = "none";
 	}
-
-    // Get data needed for custom logging
-    vPos = self.origin;
-    aPos = attacker.origin;
-    vAngle = self.angles[1];
-    aAngle = attacker.angles[1];
-    vStance = self getStance();
-    aStance = attacker getStance();
 
     // Log the kill
 	logPrint("K;" + lpselfguid + ";" + lpselfnum + ";" + lpselfteam + ";" + lpselfname + ";" + lpattackguid + ";" + lpattacknum + ";" + lpattackerteam + ";" + lpattackname + ";" + sWeapon + ";" + iDamage + ";" + sMeansOfDeath + ";" + sHitLoc+ ";" + vPos[0] + "," + vPos[1] + "," + vPos[2] + ";" + aPos[0] + "," + aPos[1] + "," + aPos[2] + ";" + vAngle + ";" + aAngle + ";" + vStance + ";" + aStance + "\n");
