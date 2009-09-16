@@ -17,7 +17,6 @@ main()
 	}
 	
 	script_turrets = getentarray ("misc_turret","classname");
-	logPrint(turret_num + "\n");
 	for (i=0;i<script_turrets.size;i++)
 	{
 	    script_turrets[i].turret_num = turret_num;
