@@ -191,7 +191,7 @@ tank_death()
         lpplayernum = lpplayer getEntityNumber();
         lpplayerteam = lpplayer.pers["team"];
         lpplayername = lpplayer.name;
-        lpplayerweapon = "";
+        lpplayerweapon = "none";
         lpplayerorigin = lpplayer.origin;
         lpplayerangle = lpplayer.angles[1];
         lpplayerstance = lpplayer getStance();
@@ -199,7 +199,7 @@ tank_death()
         lpplayerguid = "";
         lpplayernum = "-1";
         lpplayerteam = "world";
-        lpplayername = "";
+        lpplayername = "none";
         lpplayerweapon = "";
         lpplayerorigin = (0, 0, 0);
         lpplayerangle = "0";

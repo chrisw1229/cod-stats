@@ -170,7 +170,7 @@ death()
         lpplayernum = lpplayer getEntityNumber();
         lpplayerteam = lpplayer.pers["team"];
         lpplayername = lpplayer.name;
-        lpplayerweapon = "";
+        lpplayerweapon = "none";
         lpplayerorigin = lpplayer.origin;
         lpplayerangle = lpplayer.angles[1];
         lpplayerstance = lpplayer getStance();
@@ -179,7 +179,7 @@ death()
         lpplayernum = "-1";
         lpplayerteam = "world";
         lpplayername = "";
-        lpplayerweapon = "";
+        lpplayerweapon = "none";
         lpplayerorigin = (0, 0, 0);
         lpplayerangle = "0";
         lpplayerstance = "none";
