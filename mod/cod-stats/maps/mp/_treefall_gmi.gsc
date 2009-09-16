@@ -66,7 +66,7 @@ treefall_notrigger()
             lpweapon = triggerer.vehicletype;
             lpdamage = 100;
             lpdamagemod = "MOD_CRUSH_TANK";
-           	if (lpvehicletype == "willyjeep_mp" || lpvehicletype == "horch_mp" || lpvehicletype == "gaz67b_mp") {
+           	if (lpweapon == "willyjeep_mp" || lpweapon == "horch_mp" || lpweapon == "gaz67b_mp") {
                 lpdamagemod = "MOD_CRUSH_JEEP";
             }
             lphitloc = "none";
