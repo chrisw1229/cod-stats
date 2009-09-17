@@ -246,6 +246,10 @@ delayed_process_activate( vehpos, activator )
 		self.gunner = activator;
 		self thread player_shoot_gunner();
 	}
+	else if (vehpos == 3)
+	{
+		self.passenger = activator;
+	}
 
 	// if they got in and out on the same frame make sure we dont do the rest of this stuff
 	if ( !(activator isinvehicle()) )
@@ -452,6 +456,9 @@ process_deactivate(deactivator)
 	}
 	if (isdefined(deactivator) && deactivator.vehpos == 2) {	// gunner
 		self.gunner = undefined;
+	}
+	if (isdefined(deactivator) && deactivator.vehpos == 3) {	// passenger
+		self.passenger = undefined;
 	}
 
 	if ( isValidPlayer( deactivator ) )
