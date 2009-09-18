@@ -2363,7 +2363,10 @@ hold_objective(player) //the objective model runs this to be held by 'player'
 	
 	lpselfnum = player getEntityNumber();
 	lpselfguid = player getGuid();
-	logPrint("A;" + lpselfguid + ";" + lpselfnum + ";" + game["re_attackers"] + ";" + player.name + ";" + "re_pickup" + "\n");
+    lpselfpos = player.origin;
+    lpselfangle = player.angles[1];
+    lpselfstance = player getStance();
+	logPrint("A;" + lpselfguid + ";" + lpselfnum + ";" + game["re_attackers"] + ";" + player.name + ";" + "re_pickup" + ";" + lpselfpos[0] + "," + lpselfpos[1] + "," + lpselfpos[2] + ";" + lpselfangle + ";" + lpselfstance + "\n");
 	
 	if(player.pers["team"] == game["re_attackers"])
 
@@ -2490,9 +2493,11 @@ drop_objective(player, option)
 		
 		lpselfnum = player getEntityNumber();
 		lpselfguid = player getGuid();
-		logPrint("A;" + lpselfguid + ";" + lpselfnum + ";" + game["re_attackers"] + ";" + player.name + ";" + "re_capture" + "\n");
-		
-		
+        lpselfpos = player.origin;
+        lpselfangle = player.angles[1];
+        lpselfstance = player getStance();
+		logPrint("A;" + lpselfguid + ";" + lpselfnum + ";" + game["re_attackers"] + ";" + player.name + ";" + "re_capture" + ";" + lpselfpos[0] + "," + lpselfpos[1] + "," + lpselfpos[2] + ";" + lpselfangle + ";" + lpselfstance + "\n");
+
 		if((isdefined(self.script_objective_name)) && (isdefined(level.obj[self.script_objective_name])))
 			announcement(&"RE_OBJ_CAPTURED", level.obj[self.script_objective_name]);
 		else

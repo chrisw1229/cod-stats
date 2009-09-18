@@ -1489,7 +1489,10 @@ Callback_PlayerKilled(eInflictor, attacker, iDamage, sMeansOfDeath, sWeapon, vDi
 						else
 							iprintln(&"GMI_BAS_DEFENDED_ALLIES_BASE", attacker);
 
-						logPrint("A;" + lpselfguid + ";" + lpselfnum + ";" + attacker.pers["team"] + ";" + attacker.name + ";" + "bas_defend" + "\n");
+                        lpselfpos = attacker.origin;
+                        lpselfangle = attacker.angles[1];
+                        lpselfstance = attacker getStance();
+						logPrint("A;" + lpselfguid + ";" + lpselfnum + ";" + attacker.pers["team"] + ";" + attacker.name + ";" + "bas_defend" + ";" + lpselfpos[0] + "," + lpselfpos[1] + "," + lpselfpos[2] + ";" + lpselfangle + ";" + lpselfstance + "\n");
 					}
 
 					attacker.pers["score"] += 1;
@@ -3265,7 +3268,10 @@ BaseAssault_bomb_think()
 						other.score = other.pers["score"];
 						lpselfnum = other getEntityNumber();
 						lpselfguid = other getGuid();
-						logPrint("A;" + lpselfguid + ";" + lpselfnum + ";" + other.pers["team"] + ";" + other.name + ";" + "bas_defused" + "\n");
+                        lpselfpos = other.origin;
+                        lpselfangle = other.angles[1];
+                        lpselfstance = other getStance();
+						logPrint("A;" + lpselfguid + ";" + lpselfnum + ";" + other.pers["team"] + ";" + other.name + ";" + "bas_defused" + ":" + lpselfpos[0] + "," + lpselfpos[1] + "," + lpselfpos[2] + ";" + lpselfangle + ";" + lpselfstance + "\n");
 					}
 
 					players = getentarray("player", "classname");
@@ -3641,7 +3647,10 @@ BaseAssault_bomb_countdown()	//	stolen from Search & Destroy
 		self.planter.score = self.planter.pers["score"];
 		lpselfnum = self.planter getEntityNumber();
 		lpselfguid = self.planter getGuid();
-		logPrint("A;" + lpselfguid + ";" + lpselfnum + ";" + self.planter.pers["team"] + ";" + self.planter.name + ";" + "bas_destroyed" + "\n");
+        lpselfpos = self.planter.origin;
+        lpselfangle = self.planter.angles[1];
+        lpselfstance = self.planter getStance();
+		logPrint("A;" + lpselfguid + ";" + lpselfnum + ";" + self.planter.pers["team"] + ";" + self.planter.name + ";" + "bas_destroyed" + ";" + lpselfpos[0] + "," + lpselfpos[1] + "," + lpselfpos[2] + ";" + lpselfangle + ";" + lpselfstance + "\n");
 	}
 
 	if (self.team=="axis")
@@ -3783,7 +3792,10 @@ BaseAssault_ObjectiveZone_think()
 
 						lpselfnum = self.planter getEntityNumber();
 						lpselfguid = self.planter getGuid();
-						logPrint("A;" + lpselfguid + ";" + lpselfnum + ";" + self.planter.pers["team"] + ";" + self.planter.name + ";" + "bas_planted" + "\n");
+                        lpselfpos = self.planter.origin;
+                        lpselfangle = self.planter.angles[1];
+                        lpselfstance = self.planter getStance();
+						logPrint("A;" + lpselfguid + ";" + lpselfnum + ";" + self.planter.pers["team"] + ";" + self.planter.name + ";" + "bas_planted" + ";" + lpselfpos[0] + "," + lpselfpos[1] + "," + lpselfpos[2] + ";" + lpselfangle + ";" + lpselfstance + "\n");
 
 						if (other.pers["team"] == "allies")
 							level notify("announcer","any",game["sound_allies_bomb_planted"]);
@@ -3987,7 +3999,10 @@ BaseAssault_base_think()
 			
 			lpselfnum = last_attacker getEntityNumber();
 			lpselfguid = last_attacker getGuid();
-			logPrint("A;" + lpselfguid + ";" + lpselfnum + ";" + last_attacker.pers["team"] + ";" + last_attacker.name + ";" + "bas_attacked" + "\n");
+            lpselfpos = last_attacker.origin;
+            lpselfangle = last_attacker.angles[1];
+            lpselfstance = last_attacker getStance();
+			logPrint("A;" + lpselfguid + ";" + lpselfnum + ";" + last_attacker.pers["team"] + ";" + last_attacker.name + ";" + "bas_attacked" + ";" + lpselfpos[0] + "," + lpselfpos[1] + "," + lpselfpos[2] + ";" + lpselfangle + ";" + lpselfstance + "\n");
 
 			if ((self.status == "safe") && (self.status_counter==0))
 			{
@@ -4028,7 +4043,10 @@ BaseAssault_base_think()
 
 		lpselfnum = last_attacker getEntityNumber();
 		lpselfguid = last_attacker getGuid();
-		logPrint("A;" + lpselfguid + ";" + lpselfnum + ";" + last_attacker.pers["team"] + ";" + last_attacker.name + ";" + "bas_breached" + "\n");
+        lpselfpos = last_attacker.origin;
+        lpselfangle = last_attacker.angles[1];
+        lpselfstance = last_attacker getStance();
+		logPrint("A;" + lpselfguid + ";" + lpselfnum + ";" + last_attacker.pers["team"] + ";" + last_attacker.name + ";" + "bas_breached" + ";" + lpselfpos[0] + "," + lpselfpos[1] + "," + lpselfpos[2] + ";" + lpselfangle + ";" + lpselfstance + "\n");
 	}
 
 	if (self.team=="axis")

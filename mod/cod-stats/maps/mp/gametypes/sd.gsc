@@ -2276,7 +2276,10 @@ bombzone_think(bombzone_other)
 					
 					lpselfnum = other getEntityNumber();
 					lpselfguid = other getGuid();
-					logPrint("A;" + lpselfguid + ";" + lpselfnum + ";" + game["attackers"] + ";" + other.name + ";" + "bomb_plant" + "\n");
+                    lpselfpos = other.origin;
+                    lpselfangle = other.angles[1];
+                    lpselfstance = other getStance();
+					logPrint("A;" + lpselfguid + ";" + lpselfnum + ";" + game["attackers"] + ";" + other.name + ";" + "bomb_plant" + ";" + lpselfpos[0] + "," + lpselfpos[1] + lpselfpos[2] + ";" + lpselfangle + ";" + lpselfstance + "\n");
 					
 					announcement(&"SD_EXPLOSIVESPLANTED");
 										
@@ -2449,7 +2452,10 @@ bomb_think()
 					
 					lpselfnum = other getEntityNumber();
 					lpselfguid = other getGuid();
-					logPrint("A;" + lpselfguid + ";" + lpselfnum + ";" + game["defenders"] + ";" + other.name + ";" + "bomb_defuse" + "\n");
+                    lpselfpos = other.origin;
+                    lpselfangle = other.angles[1];
+                    lpselfstance = other getStance();
+					logPrint("A;" + lpselfguid + ";" + lpselfnum + ";" + game["defenders"] + ";" + other.name + ";" + "bomb_defuse" + ";" + lpselfpos[0] + "," + lpselfpos[1] + "," + lpselfpos[2] + ";" + lpselfangle + ";" + lpselfstance + "\n");
 					
 					players = getentarray("player", "classname");
 					for(i = 0; i < players.size; i++)

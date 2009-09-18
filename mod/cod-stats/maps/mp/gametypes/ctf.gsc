@@ -1319,7 +1319,10 @@ Callback_PlayerKilled(eInflictor, attacker, iDamage, sMeansOfDeath, sWeapon, vDi
 						gave_points = true;
 						lpattacknum = attacker getEntityNumber();
 						lpattackguid = attacker getGuid();
-						logPrint("A;" + lpattackguid + ";" + lpattacknum + ";" + attacker.pers["team"] + ";" + attacker.name + ";" + "ctf_defended" + "\n");
+                        lpattackpos = attacker.origin;
+                        lpattackangle = attacker.angles[1];
+                        lpattackstance = attacker getStance();
+						logPrint("A;" + lpattackguid + ";" + lpattacknum + ";" + attacker.pers["team"] + ";" + attacker.name + ";" + "ctf_defended" + ";" + lpattackpos[0] + "," + lpattackpos[1] + "," + lpattackpos[2] + ";" + lpattackangle + ";" + lpattackstance + "\n");
 					}
 					
 					// if the dead person was close to the flag carrier then give the killer a assist bonus
@@ -1335,7 +1338,10 @@ Callback_PlayerKilled(eInflictor, attacker, iDamage, sMeansOfDeath, sWeapon, vDi
 						gave_points = true;
 						lpattacknum = attacker getEntityNumber();
 						lpattackguid = attacker getGuid();
-						logPrint("A;" + lpattackguid + ";" + lpattacknum + ";" + attacker.pers["team"] + ";" + attacker.name + ";" + "ctf_assist" + "\n");
+                        lpattackpos = attacker.origin;
+                        lpattackangle = attacker.angles[1];
+                        lpattackstance = attacker getStance();
+						logPrint("A;" + lpattackguid + ";" + lpattacknum + ";" + attacker.pers["team"] + ";" + attacker.name + ";" + "ctf_assist" + ";" + lpattackpos[0] + "," + lpattackpos[1] + "," + lpattackpos[2] + ";" + lpattackangle + ";" + lpattackstance + "\n");
 					}
 					
 					// if they were not given assist or defense points then give normal points
@@ -2792,7 +2798,10 @@ ctf_think() //each flag model runs this to find it's trigger and goal
 			
 			lpselfnum = other getEntityNumber();
 			lpselfguid = other getGuid();
-			logPrint("A;" + lpselfguid + ";" + lpselfnum + ";" + other.pers["team"] + ";" + other.name + ";" + "ctf_take" + "\n");
+            lpselfpos = other.origin;
+            lpselfangle = other.angles[1];
+            lpselfstance = other getStance();
+			logPrint("A;" + lpselfguid + ";" + lpselfnum + ";" + other.pers["team"] + ";" + other.name + ";" + "ctf_take" + ";" + lpselfpos[0] + "," + lpselfpos[1] + "," + lpselfpos[2] + ";" + lpselfangle + ";" + lpselfstance + "\n");
 
 			self.returned_by = undefined;
 			
@@ -2819,7 +2828,10 @@ ctf_think() //each flag model runs this to find it's trigger and goal
 				
 			lpselfnum = other getEntityNumber();
 			lpselfguid = other getGuid();
-			logPrint("A;" + lpselfguid + ";" + lpselfnum + ";" + other.pers["team"] + ";" + other.name + ";" + "ctf_returned" + "\n");
+            lpselfpos = other.origin;
+            lpselfangle = other.angles[1];
+            lpselfstance = other getStance();
+			logPrint("A;" + lpselfguid + ";" + lpselfnum + ";" + other.pers["team"] + ";" + other.name + ";" + "ctf_returned" + ";" + lpselfpos[0] + "," + lpselfpos[1] + "," + lpselfpos[2] + ";" + lpselfangle + ";" + lpselfstance + "\n");
 
 			// play the flag has been returned sound
 			players = getentarray("player", "classname");
@@ -2948,7 +2960,10 @@ hold_flag(player) //the objective model runs this to be held by 'player'
 
 	lpselfnum = player getEntityNumber();
 	lpselfguid = player getGuid();
-	logPrint("A;" + lpselfguid + ";" + lpselfnum + ";" + self.team + ";" + player.name + ";" + "ctf_pickup" + "\n");
+    lpselfpos = player.origin;
+    lpselfangle = player.angles[1];
+    lpselfstance = player getStance();
+	logPrint("A;" + lpselfguid + ";" + lpselfnum + ";" + self.team + ";" + player.name + ";" + "ctf_pickup" + ";" + lpselfpos[0] + "," + lpselfpos[1] + "," + lpselfpos[2] + ";" + lpselfangle + ";" + lpselfstance + "\n");
 	
 	self notify("picked up");
 
@@ -3066,7 +3081,10 @@ flag_carrier_atgoal_wait(player)
 
 			lpselfnum = player getEntityNumber();
 			lpselfguid = player getGuid();
-			logPrint("A;" + lpselfguid + ";" + lpselfnum + ";" + player.pers["team"] + ";" + player.name + ";" + "ctf_captured" + "\n");
+            lpselfpos = player.origin;
+            lpselfangle = player.angles[1];
+            lpselfstance = player getStance();
+			logPrint("A;" + lpselfguid + ";" + lpselfnum + ";" + player.pers["team"] + ";" + player.name + ";" + "ctf_captured" + ";" + lpselfpos[0] + "," + lpselfpos[1] + "," + lpselfpos[2] + ";" + lpselfangle + ";" + lpselfstance + "\n");
 
 			// give assist points
 			if (isDefined(other_flag.returned_by) && isValidPlayer(other_flag.returned_by) && other_flag.returned_by != player)

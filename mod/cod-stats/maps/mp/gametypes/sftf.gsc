@@ -2169,7 +2169,10 @@ checkForFlags()
 					lpselfnum = self getEntityNumber();
 					lpselfguid = self getGuid();
 					lpaction = getCvar("g_gametype") + "_stole";
-					logPrint("A;" + lpselfguid + ";" + lpselfnum + ";" + myteam + ";" + self.name + ";" + lpaction + "\n");
+                    lpselfpos = self.origin;
+                    lpselfangle = self.angles[1];
+                    lpselfstance = self getStance();
+					logPrint("A;" + lpselfguid + ";" + lpselfnum + ";" + myteam + ";" + self.name + ";" + lpaction + ";" + lpselfpos[0] + "," + lpselfpos[1] + "," + lpselfpos[2] + ";" + lpselfangle + ";" + lpselfstance + "\n");
 				}
 				else
 				{
@@ -2238,7 +2241,10 @@ checkForFlags()
 					lpselfnum = self getEntityNumber();
 					lpselfguid = self getGuid();
 					lpaction = getCvar("g_gametype") + "_scored";
-					logPrint("A;" + lpselfguid + ";" + lpselfnum + ";" + myteam + ";" + self.name + ";" + lpaction + "\n");
+                    lpselfpos = self.origin;
+                    lpselfangle = self.angles[1];
+                    lpselfstance = self getStance();
+					logPrint("A;" + lpselfguid + ";" + lpselfnum + ";" + myteam + ";" + self.name + ";" + lpaction + ";" + lpselfpos[0] + "," + lpselfpos[1] + "," + lpselfpos[2] + ";" + lpselfangle + ";" + lpselfstance + "\n");
 
 					// Get score
 					myteamscore = getTeamScore(myteam);

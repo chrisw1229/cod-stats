@@ -3362,7 +3362,10 @@ GivePointsToCappers( team )
 
 			lpselfnum = player getEntityNumber();
 			lpselfguid = player getGuid();
-			logPrint("A;" + lpselfguid + ";" + lpselfnum + ";" + player.pers["team"] + ";" + player.name + ";" + "dom_captured" + "\n");
+            lpselfpos = player.origin;
+            lpselfangle = player.angles[1];
+            lpselfstance = player getStance();
+			logPrint("A;" + lpselfguid + ";" + lpselfnum + ";" + player.pers["team"] + ";" + player.name + ";" + "dom_captured" + ";" + lpselfpos[0] + "," + lpselfpos[1] + "," + lpselfpos[2] + ";" + lpselfangle + ";" + lpselfstance + "\n");
 		}
 	}
 }

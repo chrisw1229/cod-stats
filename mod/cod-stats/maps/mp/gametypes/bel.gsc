@@ -2053,7 +2053,12 @@ give_allied_points()
 		self.score++;
 		PointsEarned++;
 		self.god = false; //failsafe to fix a very rare bug
-		logPrint("A;" + guid + ";" + lpselfnum + ";allies;" + self.name + ";bel_alive_tick\n");
+
+        lpselfpos = self.origin;
+        lpselfangle = self.angles[1];
+        lpselfstance = self getStance();
+		logPrint("A;" + guid + ";" + lpselfnum + ";allies;" + self.name + ";bel_alive_tick;" + lpselfpos[0] + "," + lpselfpos[1] + "," + lpselfpos[2] + ";" + lpselfangle + ";" + lpselfstance + "\n");
+
 		self.hud_points setValue(PointsEarned);
 		self checkScoreLimit();
 	}
