@@ -929,6 +929,9 @@ Callback_PlayerKilled(eInflictor, attacker, iDamage, sMeansOfDeath, sWeapon, vDi
 	lpselfguid = self getGuid();
 	lpselfteam = self.pers["team"];
 	lpattackerteam = "";
+    vPos = self.origin;
+    vAngle = self.angles[1];
+    vStance = self getStance();
 
 	attackerNum = -1;
 	if(isPlayer(attacker))
@@ -979,6 +982,9 @@ Callback_PlayerKilled(eInflictor, attacker, iDamage, sMeansOfDeath, sWeapon, vDi
 		lpattackguid = attacker getGuid();
 		lpattackname = attacker.name;
 		lpattackerteam = attacker.pers["team"];
+        aPos = attacker.origin;
+        aAngle = attacker.angles[1];
+        aStance = attacker getStance();
 	}
 	else // If you weren't killed by a player, you were in the wrong place at the wrong time
 	{
@@ -990,9 +996,13 @@ Callback_PlayerKilled(eInflictor, attacker, iDamage, sMeansOfDeath, sWeapon, vDi
 		lpattackname = "";
 		lpattackguid = "";
 		lpattackerteam = "world";
+        aPos = (0, 0, 0);
+        aAngle = "0";
+        aStance = "none";
 	}
 
-	logPrint("K;" + lpselfguid + ";" + lpselfnum + ";" + lpselfteam + ";" + lpselfname + ";" + lpattackguid + ";" + lpattacknum + ";" + lpattackerteam + ";" + lpattackname + ";" + sWeapon + ";" + iDamage + ";" + sMeansOfDeath + ";" + sHitLoc + "\n");
+    // Log the kill
+	logPrint("K;" + lpselfguid + ";" + lpselfnum + ";" + lpselfteam + ";" + lpselfname + ";" + lpattackguid + ";" + lpattacknum + ";" + lpattackerteam + ";" + lpattackname + ";" + sWeapon + ";" + iDamage + ";" + sMeansOfDeath + ";" + sHitLoc+ ";" + vPos[0] + "," + vPos[1] + "," + vPos[2] + ";" + aPos[0] + "," + aPos[1] + "," + aPos[2] + ";" + vAngle + ";" + aAngle + ";" + vStance + ";" + aStance + "\n");
 
 	// Stop thread if map ended on this death
 	if(level.mapended)
@@ -1134,6 +1144,16 @@ spawnPlayer()
 	thread checkForFlags();
 
 	self.awe_nohealthpack = undefined;		
+
+    // Log the spawn event
+	lpselfguid = self getGuid();
+    lpselfnum = self getEntityNumber();
+    lpplayerteam = self.pers["team"];
+	lpselfname = self.name;
+	lpweapon = self.pers["weapon"];
+	lporigin = self.origin;
+	lpangle = self.angles[1];
+    logPrint("Spawn;" + lpselfguid + ";" + lpselfnum + ";" + lpplayerteam + ";" + lpselfname + ";" + lpweapon + ";" + lporigin[0] + "," + lporigin[1] + "," + lporigin[2] + ";" + lpangle + "\n");
 }
 
 spawnSpectator(origin, angles)
@@ -1167,8 +1187,14 @@ spawnSpectator(origin, angles)
 		else
 			maps\mp\_utility::error("NO " + spawnpointname + " SPAWNPOINTS IN MAP");
 	}
-	
-	Obj = "Hold the " + level.flagname + "\n\nGet the " + level.flagname + " and keep it within your team as long as possible to gain score.";
+
+    // Log the spectator event
+	lpselfguid = self getGuid();
+    lpselfnum = self getEntityNumber();
+	lpselfname = self.name;
+    logPrint("Spec;" + lpselfguid + ";" + lpselfnum + ";" + lpselfname + "\n");
+
+	Obj = "Grab the " + level.flagname + "!!!\n\nCapture the " + level.flagname + " and hold it for as long as possible to get points.\nReceive big score bonuses by using jeeps with your teammates.";
 	self setClientCvar("cg_objectiveText", Obj);
 }
 
