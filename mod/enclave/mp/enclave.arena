@@ -1,0 +1,9 @@
+{
+
+	map		"enclave"
+
+	longname	"The Enclave"
+
+	gametype	"dm ctf ftf"
+
+}
