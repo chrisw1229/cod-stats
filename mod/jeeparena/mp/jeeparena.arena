@@ -1,0 +1,9 @@
+{
+
+	map		"jeeparena"
+
+	longname	"Jeep Arena"
+
+	gametype	"dm ctf ftf sftf"
+
+}

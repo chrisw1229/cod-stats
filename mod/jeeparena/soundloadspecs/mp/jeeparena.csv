@@ -1,0 +1,10 @@
+#DEFAULTS
+dialog_mp.csv
+gmi_dialog_mp.csv
+generic_mp_sound.csv
+gmi_mp_weap_all_allied.csv
+gmi_mp_artillery.csv
+
+#VEHICLE 
+gmi_mp_vehicles_ge.csv
+gmi_mp_vehicles_us.csv
