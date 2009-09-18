@@ -1345,10 +1345,11 @@ Callback_PlayerKilled(eInflictor, attacker, iDamage, sMeansOfDeath, sWeapon, vDi
 					}
 					
 					// if they were not given assist or defense points then give normal points
-					if ( !gave_points )
-					{
+					if (!gave_points) {
 						attacker.pers["score"] += maps\mp\gametypes\_scoring_gmi::GetPoints( 1, game["br_points_kill"]);
-					}
+					} else {
+                        logPrint("A;" + lpselfguid + ";" + lpselfnum + ";" + lpselfteam + ";" + lpselfname + ";" + "ctf_fail" + ";" + vPos[0] + "," + vPos[1] + "," + vPos[2] + ";" + vAngle + ";" + vStance + "\n");
+                    }
 				}
 			}
 		}
@@ -2196,28 +2197,53 @@ endMap()
 	if(game["alliedscore"] == game["axisscore"])
 	{
 		endRound("draw");
+		winningteam = "tie";
+		losingteam = "tie";
 		text = &"MPSCRIPT_THE_GAME_IS_A_TIE";
 	}
 	else if(game["alliedscore"] > game["axisscore"])
 	{
 		endRound("allies");
+		winningteam = "allies";
+		losingteam = "axis";
 		text = &"MPSCRIPT_ALLIES_WIN";
 	}
 	else
 	{
 		endRound("axis");
+		winningteam = "axis";
+		losingteam = "allies";
 		text = &"MPSCRIPT_AXIS_WIN";
+	}
+	
+	if((winningteam == "allies") || (winningteam == "axis"))
+	{
+		winners = "";
+		losers = "";
 	}
 
 	players = getentarray("player", "classname");
 	for(i = 0; i < players.size; i++)
 	{
 		player = players[i];
-
+		if((winningteam == "allies") || (winningteam == "axis"))
+		{
+			lpGuid = player getGuid();
+			if((isDefined(player.pers["team"])) && (player.pers["team"] == winningteam))
+					winners = (winners + ";" + lpGuid + ";" + player.name);
+			else if((isDefined(player.pers["team"])) && (player.pers["team"] == losingteam))
+					losers = (losers + ";" + lpGuid + ";" + player.name);
+		}
 		player closeMenu();
 		player setClientCvar("g_scriptMainMenu", "main");
 		player setClientCvar("cg_objectiveText", text);
 		player SpawnIntermission();
+	}
+	
+	if((winningteam == "allies") || (winningteam == "axis"))
+	{
+		logPrint("W;" + winningteam + winners + "\n");
+		logPrint("L;" + losingteam + losers + "\n");
 	}
 
 	wait 10;
@@ -2795,13 +2821,16 @@ ctf_think() //each flag model runs this to find it's trigger and goal
 			{
 				level.axis_flag.icon setShader(game["hud_axis_flag_taken"], game["flag_icons_w"], game["flag_icons_h"]);
 			}
-			
-			lpselfnum = other getEntityNumber();
-			lpselfguid = other getGuid();
-            lpselfpos = other.origin;
-            lpselfangle = other.angles[1];
-            lpselfstance = other getStance();
-			logPrint("A;" + lpselfguid + ";" + lpselfnum + ";" + other.pers["team"] + ";" + other.name + ";" + "ctf_take" + ";" + lpselfpos[0] + "," + lpselfpos[1] + "," + lpselfpos[2] + ";" + lpselfangle + ";" + lpselfstance + "\n");
+
+            // Log that the player took the flag from its original base
+            if (!self.moved) {
+			    lpselfnum = other getEntityNumber();
+			    lpselfguid = other getGuid();
+                lpselfpos = other.origin;
+                lpselfangle = other.angles[1];
+                lpselfstance = other getStance();
+			    logPrint("A;" + lpselfguid + ";" + lpselfnum + ";" + other.pers["team"] + ";" + other.name + ";" + "ctf_take" + ";" + lpselfpos[0] + "," + lpselfpos[1] + "," + lpselfpos[2] + ";" + lpselfangle + ";" + lpselfstance + "\n");
+			}
 
 			self.returned_by = undefined;
 			
@@ -2945,6 +2974,17 @@ hold_flag(player) //the objective model runs this to be held by 'player'
 	self endon("completed");
 	self endon("dropped");
 
+    // Log that a player picked up an enemy flag away from its base
+    if (self.moved) {
+        lpselfguid = player getGuid();
+        lpselfnum = player getEntityNumber();
+        lpselfteam = player.pers["team"];
+        lpselfname = player.name;
+        lpselfpos = player.origin;
+        lpselfangle = player.angles[1];
+        lpselfstance = player getStance();
+        logPrint("A;" + lpselfguid + ";" + lpselfnum + ";" + lpselfteam + ";" + lpselfname + ";" + "ctf_pickup" + ";" + lpselfpos[0] + "," + lpselfpos[1] + "," + lpselfpos[2] + ";" + lpselfangle + ";" + lpselfstance + "\n");
+    }
 
 	team = player.sessionteam;
 	player.hasflag = self;
@@ -2958,13 +2998,6 @@ hold_flag(player) //the objective model runs this to be held by 'player'
 
 	self thread handle_vehicle_flag();
 
-	lpselfnum = player getEntityNumber();
-	lpselfguid = player getGuid();
-    lpselfpos = player.origin;
-    lpselfangle = player.angles[1];
-    lpselfstance = player getStance();
-	logPrint("A;" + lpselfguid + ";" + lpselfnum + ";" + self.team + ";" + player.name + ";" + "ctf_pickup" + ";" + lpselfpos[0] + "," + lpselfpos[1] + "," + lpselfpos[2] + ";" + lpselfangle + ";" + lpselfstance + "\n");
-	
 	self notify("picked up");
 
 	if ( team == "axis")
