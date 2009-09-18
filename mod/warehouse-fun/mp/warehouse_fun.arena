@@ -1,0 +1,9 @@
+{
+
+	map		"warehouse_fun"
+
+	longname	"Warehouse Fun"
+
+	gametype	"dm tdm ctf"
+
+}
