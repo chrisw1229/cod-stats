@@ -2,10 +2,25 @@
 <project name="cod-stats-mod" default="dist" basedir=".">
 
    <!-- GLOBAL PROPERTIES -->
-   <property name="dist.dir" value="dist" />
-   <property name="mod.dir" value="cod-stats" />
-   <property name="mod.file" value="${ant.project.name}.pk3" />
    <property name="cod.dir" value="C:/Program Files/Call of Duty" />
+   <property name="cod.uo.dir" value="${cod.dir}/uo" />
+   <property name="dist.dir" value="dist" />
+   <property name="package" value="stoop" />
+
+   <property name="mod.dir" value="cod-stats" />
+   <property name="mod.file" value="${package}-${ant.project.name}.pk3" />
+
+   <property name="enclave.dir" value="enclave" />
+   <property name="enclave.file" value="${package}-${enclave.dir}.pk3" />
+
+   <property name="jeeparena.dir" value="jeeparena" />
+   <property name="jeeparena.file" value="${package}-${jeeparena.dir}.pk3" />
+
+   <property name="reserves.dir" value="reserves" />
+   <property name="reserves.file" value="${package}-${reserves.dir}.pk3" />
+
+   <property name="warehouse.dir" value="warehouse-fun" />
+   <property name="warehouse.file" value="${package}-${warehouse.dir}.pk3" />
 
    <!-- CLEAN -->
    <target name="clean"
@@ -28,8 +43,50 @@
          </fileset>
       </zip>
 
-      <!-- Attempt to copy the file to the game directory -->
-      <copy todir="${cod.dir}/${mod.dir}"
-          file="${dist.dir}/${mod.file}" />
+      <!-- Create a PK3 package for the enclave map -->
+      <zip destfile="${dist.dir}/${enclave.file}">
+         <fileset dir="${enclave.dir}">
+            <include name="**/**" />
+         </fileset>
+         <fileset dir="${mod.dir}">
+            <include name="**/**/ftf.*" />
+         </fileset>
+      </zip>
+
+      <!-- Create a PK3 package for the jeep arena map -->
+      <zip destfile="${dist.dir}/${jeeparena.file}">
+         <fileset dir="${jeeparena.dir}">
+            <include name="**/**" />
+         </fileset>
+         <fileset dir="${mod.dir}">
+            <include name="**/**/_jeepdrive_gmi.gsc" />
+            <include name="**/**/*ftf.*" />
+         </fileset>
+      </zip>
+
+      <!-- Create a PK3 package for the reserves map -->
+      <zip destfile="${dist.dir}/${reserves.file}">
+         <fileset dir="${reserves.dir}">
+            <include name="**/**" />
+         </fileset>
+         <fileset dir="${mod.dir}">
+            <include name="**/**/ftf.*" />
+         </fileset>
+      </zip>
+
+      <!-- Create a PK3 package for the warehouse fun map -->
+      <zip destfile="${dist.dir}/${warehouse.file}">
+         <fileset dir="${warehouse.dir}">
+            <include name="**/**" />
+         </fileset>
+      </zip>
+
+      <!-- Attempt to copy the files to the game directory -->
+      <copy todir="${cod.dir}/${mod.dir}" file="${dist.dir}/${mod.file}" />
+      <copy todir="${cod.uo.dir}">
+         <fileset dir="${dist.dir}">
+            <exclude name="${mod.file}" />
+         </fileset>
+      </copy>
    </target>
 </project>
