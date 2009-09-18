@@ -1,0 +1,9 @@
+{
+
+	map		"reserves"
+
+	longname	"The Reserves"
+
+	gametype	"dm tdm dom ctf ftf"
+
+}
