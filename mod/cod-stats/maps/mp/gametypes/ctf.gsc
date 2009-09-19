@@ -2197,53 +2197,28 @@ endMap()
 	if(game["alliedscore"] == game["axisscore"])
 	{
 		endRound("draw");
-		winningteam = "tie";
-		losingteam = "tie";
 		text = &"MPSCRIPT_THE_GAME_IS_A_TIE";
 	}
 	else if(game["alliedscore"] > game["axisscore"])
 	{
 		endRound("allies");
-		winningteam = "allies";
-		losingteam = "axis";
 		text = &"MPSCRIPT_ALLIES_WIN";
 	}
 	else
 	{
 		endRound("axis");
-		winningteam = "axis";
-		losingteam = "allies";
 		text = &"MPSCRIPT_AXIS_WIN";
-	}
-	
-	if((winningteam == "allies") || (winningteam == "axis"))
-	{
-		winners = "";
-		losers = "";
 	}
 
 	players = getentarray("player", "classname");
 	for(i = 0; i < players.size; i++)
 	{
 		player = players[i];
-		if((winningteam == "allies") || (winningteam == "axis"))
-		{
-			lpGuid = player getGuid();
-			if((isDefined(player.pers["team"])) && (player.pers["team"] == winningteam))
-					winners = (winners + ";" + lpGuid + ";" + player.name);
-			else if((isDefined(player.pers["team"])) && (player.pers["team"] == losingteam))
-					losers = (losers + ";" + lpGuid + ";" + player.name);
-		}
+
 		player closeMenu();
 		player setClientCvar("g_scriptMainMenu", "main");
 		player setClientCvar("cg_objectiveText", text);
 		player SpawnIntermission();
-	}
-	
-	if((winningteam == "allies") || (winningteam == "axis"))
-	{
-		logPrint("W;" + winningteam + winners + "\n");
-		logPrint("L;" + losingteam + losers + "\n");
 	}
 
 	wait 10;
