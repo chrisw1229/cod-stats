@@ -67,12 +67,15 @@ Map._init = function(element, options) {
 
   // Add random markers to the map
   Map.markerCnt = 0;
-  setTimeout(function() {
-    Map.addMarkers(Map._randMarkers(100));
-  }, 1000);
-  setInterval(function() {
-    Map.addMarkers(Map._randMarkers(5));
-  }, 2000);
+//  setTimeout(function() {
+//    Map.addMarkers(Map._randMarkers(100));
+//  }, 1000);
+//  setInterval(function() {
+//    Map.addMarkers(Map._randMarkers(5));
+//  }, 2000);
+  $.comm.bind("map", function(data) {
+    Map.addMarkers(data);
+  });
 };
 
 // Adds the given marker to the map
