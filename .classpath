@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" output="tools/classes" path="tools/src"/>
+	<classpathentry kind="src" output="frontend/WEB-INF/classes" path="test/src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="test/lib/servlet.jar"/>
 	<classpathentry kind="output" path="classes"/>
 </classpath>
