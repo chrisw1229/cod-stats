@@ -1353,7 +1353,7 @@ endMap()
 			highscore = player.score;
 			playername = player;
 			name = player.name;
-			guid = player getGuid();
+			clientnum = player getEntityNumber();
 			continue;
 		}
 
@@ -1365,7 +1365,7 @@ endMap()
 			highscore = player.score;
 			playername = player;
 			name = player.name;
-			guid = player getGuid();
+			clientnum = player getEntityNumber();
 		}
 	}
 
@@ -1385,7 +1385,7 @@ endMap()
 		player spawnIntermission();
 	}
 	if(isDefined(name))
-		logPrint("W;;" + guid + ";" + name + "\n");
+		logPrint("W;;" + clientnum + ";" + name + "\n");
 	wait 10;
 	exitLevel(false);
 }

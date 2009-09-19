@@ -1656,11 +1656,11 @@ endRound(roundwinner)
 		players = getentarray("player", "classname");
 		for(i = 0; i < players.size; i++)
 		{
-			lpGuid = players[i] getGuid();
+			lpselfnum = players[i] getEntityNumber();
 			if((isdefined(players[i].pers["team"])) && (players[i].pers["team"] == "allies"))
-				winners = (winners + ";" + lpGuid + ";" + players[i].name);
+				winners = (winners + ";" + lpselfnum + ";" + players[i].name);
 			else if((isdefined(players[i].pers["team"])) && (players[i].pers["team"] == "axis"))
-				losers = (losers + ";" + lpGuid + ";" + players[i].name);
+				losers = (losers + ";" + lpselfnum + ";" + players[i].name);
 		}
 		logPrint("W;allies" + winners + "\n");
 		logPrint("L;axis" + losers + "\n");
@@ -1678,11 +1678,11 @@ endRound(roundwinner)
 		players = getentarray("player", "classname");
 		for(i = 0; i < players.size; i++)
 		{
-			lpGuid = players[i] getGuid();
+			lpselfnum = players[i] getEntityNumber();
 			if((isdefined(players[i].pers["team"])) && (players[i].pers["team"] == "axis"))
-				winners = (winners + ";" + lpGuid + ";" + players[i].name);
+				winners = (winners + ";" + lpselfnum + ";" + players[i].name);
 			else if((isdefined(players[i].pers["team"])) && (players[i].pers["team"] == "allies"))
-				losers = (losers + ";" + lpGuid + ";" + players[i].name);
+				losers = (losers + ";" + lpselfnum + ";" + players[i].name);
 		}
 		logPrint("W;axis" + winners + "\n");
 		logPrint("L;allies" + losers + "\n");

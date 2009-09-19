@@ -1496,11 +1496,11 @@ endMap()
 		player = players[i];
 		if ( (winningteam == "allies") || (winningteam == "axis") )
 		{
-			lpGuid = player getGuid();
+			lpselfnum = player getEntityNumber();
 			if ( (isdefined (player.pers["team"])) && (player.pers["team"] == winningteam) )
-					winners = (winners + ";" + lpGuid + ";" + player.name);
+					winners = (winners + ";" + lpselfnum + ";" + player.name);
 			else if ( (isdefined (player.pers["team"])) && (player.pers["team"] == losingteam) )
-					losers = (losers + ";" + lpGuid + ";" + player.name);
+					losers = (losers + ";" + lpselfnum + ";" + player.name);
 		}
 		player closeMenu();
 		player setClientCvar("g_scriptMainMenu", "main");
