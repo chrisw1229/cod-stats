@@ -936,6 +936,14 @@ Callback_PlayerKilled(eInflictor, attacker, iDamage, sMeansOfDeath, sWeapon, vDi
 	attackerNum = -1;
 	if(isPlayer(attacker))
 	{
+		lpattacknum = attacker getEntityNumber();
+		lpattackguid = attacker getGuid();
+		lpattackname = attacker.name;
+		lpattackerteam = attacker.pers["team"];
+        aPos = attacker.origin;
+        aAngle = attacker.angles[1];
+        aStance = attacker getStance();
+
 		if(attacker == self) // killed himself
 		{
 			doKillcam = false;
@@ -975,16 +983,28 @@ Callback_PlayerKilled(eInflictor, attacker, iDamage, sMeansOfDeath, sWeapon, vDi
 					attacker announce("^7killed the " + level.flagname + " carrier^7!");
 					attacker.score += 5;
 				}
+
+                // Log actions if applicable
+                if (attacker.carrying || (self is_near_carrier(attacker.pers["team"]))) {
+
+                    // Victim was near attacker's carrier teammate (attacker defended)
+                    lpaction = getCvar("g_gametype") + "_defended";
+                    logPrint("A;" + lpattackguid + ";" + lpattacknum + ";" + attacker.pers["team"] + ";" + attacker.name + ";" + lpaction + ";" + aPos[0] + "," + aPos[1] + "," + aPos[2] + ";" + aAngle + ";" + aStance + "\n");
+                } else if (isDefined(flagcarrier) || (self is_near_flag())
+                        || (self is_near_carrier(self.pers["team"]))) {
+
+                    // Victim was carrying or near the flag or near the teammate carrier (attacker assisted)
+                    lpaction = getCvar("g_gametype") + "_assist";
+                    logPrint("A;" + lpattackguid + ";" + lpattacknum + ";" + attacker.pers["team"] + ";" + attacker.name + ";" + lpaction + ";" + aPos[0] + "," + aPos[1] + "," + aPos[2] + ";" + aAngle + ";" + aStance + "\n");
+                }
+                if (isDefined(flagcarrier) || self is_near_flag() || self is_near_carrier()) {
+
+                    // Victim was carrying or near the flag or near the carrier (victim fail)
+                    lpaction = getCvar("g_gametype") + "_fail";
+                    logPrint("A;" + lpselfguid + ";" + lpselfnum + ";" + lpselfteam + ";" + lpselfname + ";" + lpaction + ";" + vPos[0] + "," + vPos[1] + "," + vPos[2] + ";" + vAngle + ";" + vStance + "\n");
+                }
 			}
 		}
-
-		lpattacknum = attacker getEntityNumber();
-		lpattackguid = attacker getGuid();
-		lpattackname = attacker.name;
-		lpattackerteam = attacker.pers["team"];
-        aPos = attacker.origin;
-        aAngle = attacker.angles[1];
-        aStance = attacker getStance();
 	}
 	else // If you weren't killed by a player, you were in the wrong place at the wrong time
 	{
@@ -2592,6 +2612,51 @@ alivePlayers(team)
 			alive[alive.size] = allplayers[i];
 	}
 	return alive.size;
+}
+
+// ----------------------------------------------------------------------------------
+//	is_near_flag
+//
+// 	 	checks if the player is near a flag
+// ----------------------------------------------------------------------------------
+is_near_flag() {
+    flag = level.flag["marker"];
+
+    // Check if the player is close to the flag
+    dist = distance(flag.origin, self.origin);
+    if (dist < 750) {
+        return true;
+    }
+    return false;
+}
+
+// ----------------------------------------------------------------------------------
+//	is_near_flag_carrier
+//
+// 	 	checks if the player is near the enemy flag carrier
+// ----------------------------------------------------------------------------------
+is_near_carrier(team) {
+
+    // If the attacker is the carrier then return false
+    if (self.carrying) {
+        return false;
+    }
+
+    players = getentarray("player", "classname");
+    for (i = 0; i < players.size; i++) {
+        player = players[i];
+        if (isDefined(player.pers["team"]) && player.pers["team"] != "spectator"
+                && self != player && isDefined(player.carrying)
+                && (!isDefined(team) || team == player.pers["team"])) {
+
+            // Check if the player is close to the flag carrier
+            dist = distance(self.origin, player.origin);
+            if (dist < 750) {
+                return true;
+            }
+        }
+    }
+    return false;
 }
 
 stopwatch(time)
