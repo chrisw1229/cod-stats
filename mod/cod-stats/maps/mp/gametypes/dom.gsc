@@ -1186,6 +1186,14 @@ Callback_PlayerKilled(eInflictor, attacker, iDamage, sMeansOfDeath, sWeapon, vDi
 	{
 		// check to see if they were killed in the process of capping the flag
 		capping = Capture_CheckCappingFlag(self);
+
+		lpattacknum = attacker getEntityNumber();
+		lpattackguid = attacker getGuid();
+		lpattackname = attacker.name;
+		lpattackerteam = attacker.pers["team"];
+        aPos = attacker.origin;
+        aAngle = attacker.angles[1];
+        aStance = attacker getStance();
 		
 		if(attacker == self) // killed himself
 		{
@@ -1213,30 +1221,37 @@ Callback_PlayerKilled(eInflictor, attacker, iDamage, sMeansOfDeath, sWeapon, vDi
 					attacker.teamkiller = 1;
 					attacker.teamkillertotal ++;
 					self.wereteamkilled = 1;
-				}
-				// if the dead person was capping then give the killer a defense bonus
-				else if ( capping )
-				{
-					attacker.pers["score"] += maps\mp\gametypes\_scoring_gmi::GetDefensePoints();
-				}
-				else
-				{
-					attacker.pers["score"] += maps\mp\gametypes\_scoring_gmi::GetKillPoints();;
-				}
+				} else {
+
+                    // if the dead person was capping then give the killer a defense bonus
+                    if (capping) {
+					    attacker.pers["score"] += maps\mp\gametypes\_scoring_gmi::GetDefensePoints();
+                    } else {
+                        attacker.pers["score"] += maps\mp\gametypes\_scoring_gmi::GetKillPoints();;
+                    }
+
+                    // Log actions if applicable
+                    if (capping || (self is_near_flag(attacker.pers["team"]))) {
+
+                       // Victim was capping or was near the attacker's flag (attacker defended)
+                       logPrint("A;" + lpattackguid + ";" + lpattacknum + ";" + attacker.pers["team"] + ";" + attacker.name + ";" + "dom_defended" + ";" + aPos[0] + "," + aPos[1] + "," + aPos[2] + ";" + aAngle + ";" + aStance + "\n");
+                    } else if ((self is_near_flag("neutral")) || (self is_near_flag(self.pers["team"]))) {
+
+                       // Victim was near a neutral flag or their own flag (attacker assisted)
+                       logPrint("A;" + lpattackguid + ";" + lpattacknum + ";" + attacker.pers["team"] + ";" + attacker.name + ";" + "dom_assist" + ";" + aPos[0] + "," + aPos[1] + "," + aPos[2] + ";" + aAngle + ";" + aStance + "\n");
+                    }
+                    if (self is_near_flag()) {
+
+                       // Victim was near any flag (victim fail)
+                       logPrint("A;" + lpselfguid + ";" + lpselfnum + ";" + lpselfteam + ";" + lpselfname + ";" + "dom_fail" + ";" + vPos[0] + "," + vPos[1] + "," + vPos[2] + ";" + vAngle + ";" + vStance + "\n");
+                    }
+                }
 			}
 		}
 		
 		attacker.pers["score"] = maps\mp\gametypes\_scoring_gmi::ValidateScore(attacker.pers["score"]);
 					
 		attacker.score = attacker.pers["score"];
-		
-		lpattacknum = attacker getEntityNumber();
-		lpattackguid = attacker getGuid();
-		lpattackname = attacker.name;
-		lpattackerteam = attacker.pers["team"];
-        aPos = attacker.origin;
-        aAngle = attacker.angles[1];
-        aStance = attacker getStance();
 	}
 	else // If you weren't killed by a player, you were in the wrong place at the wrong time
 	{
@@ -2001,6 +2016,16 @@ Capture_UpdateProgressBar(flag)
 	level endon("round_ended");
 	flag endon("capture_canceled");
 	flag endon("captured");
+
+    // Log the beginning of the capture
+	lpselfnum = self getEntityNumber();
+	lpselfguid = self getGuid();
+	lpselfname = self.name;
+	lpselfteam = self.pers["team"];
+    lpselfpos = self.origin;
+    lpselfangle = self.angles[1];
+    lpselfstance = self getStance();
+    logPrint("A;" + lpselfguid + ";" + lpselfnum + ";" + lpselfteam + ";" + lpselfname + ";" + "dom_take" + ";" + lpselfpos[0] + "," + lpselfpos[1] + "," + lpselfpos[2] + ";" + lpselfangle + ";" + lpselfstance + "\n");
 
 	barsize = maps\mp\_util_mp_gmi::get_progressbar_maxwidth();
 	height = maps\mp\_util_mp_gmi::get_progressbar_height();
@@ -3657,6 +3682,28 @@ drawFlagsOnCompass()
 		}
 	wait 0.5;
 	}
+}
+
+// ----------------------------------------------------------------------------------
+//	is_near_flag
+//
+// 	 	checks if the player is near a flag
+// ----------------------------------------------------------------------------------
+is_near_flag(team) {
+    for (i = 1; i < level.flagcount; i++) {
+        flag = getent("flag" + i, "targetname");
+
+        // Check if a team was given that matches
+        if (!isDefined(team) || flag.team == team) {
+
+            // Check if the player is close to the flag
+            dist = distance(flag.origin, self.origin);
+            if (dist < 750) {
+                return true;
+            }
+        }
+    }
+    return false;
 }
 
 // ----------------------------------------------------------------------------------
