@@ -20,6 +20,8 @@
 package org.stoop;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -34,6 +36,22 @@ import javax.servlet.http.HttpServletResponse;
 public class StatsLiveTestServlet extends HttpServlet {
 
    private static final long serialVersionUID = 24992353373816849L;
+
+   private List<Entry> entries;
+
+   /**
+    * The default constructor.
+    */
+   public StatsLiveTestServlet() {
+      super();
+
+      entries = new ArrayList<Entry>();
+      entries.add(new Entry(-416.63, 727.973, -499.359, 1945.19));
+      entries.add(new Entry(-95.1254, 712.424, -511.364, 1941.27));
+      entries.add(new Entry(302.01, 751.127, -521.318, 1937.3));
+      entries.add(new Entry(1398.96, 1071.05, 1734.44, 1872.86));
+      entries.add(new Entry(370.459, 2927.74, -723, 2162));
+   }
 
    /*
     * (non-Javadoc)
@@ -57,7 +75,12 @@ public class StatsLiveTestServlet extends HttpServlet {
             builder.append("[");
             builder.append("{ type: \"map\",");
             builder.append("  data: [");
-            builder.append("    { kx: 1000, ky: 1000, dx: 1000, dy: 1000 }");
+            for (int i = 0; i < entries.size(); i++) {
+               builder.append(entries.get(i).toString());
+               if (i < entries.size() - 1) {
+                  builder.append(",");
+               }
+            }
             builder.append("  ]");
             builder.append("}");
             builder.append("]");
@@ -72,6 +95,34 @@ public class StatsLiveTestServlet extends HttpServlet {
          response.getOutputStream().write(data);
       }
       response.getOutputStream().close();
+   }
+
+   class Entry {
+
+      int dx, dy, kx, ky;
+
+      public Entry(double dx, double dy, double kx, double ky) {
+         super();
+
+         this.dx = convertX(dx, dy);
+         this.dy = 4096 - convertY(dx, dy);
+         this.kx = convertX(kx, ky);
+         this.ky = 4096 - convertY(kx, ky);
+      }
+
+      public int convertX(double x, double y) {
+         return (int) (1070.3 - 0.0051 * x + 0.7253 * y);
+      }
+
+      public int convertY(double x, double y) {
+         return (int) (1643.3 + 0.7346 * x + 0.0061 * y);
+      }
+
+      @Override
+      public String toString() {
+         return "{ kx: " + kx + ", ky: " + ky + ", dx: " + dx + ", dy: " + dy
+               + " }";
+      }
    }
 }
 
