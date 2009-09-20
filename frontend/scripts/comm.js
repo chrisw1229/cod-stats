@@ -1,21 +1,16 @@
-
-// Build the communication object immediately
+// Provides dynamic network communication with the server
 (function($) {
 
-// Declare the communication object definition
-COMM = {
+// Register the communication object as a jQuery extension
+$.extend({ comm: {
 
-//  SERVER_URL: "http://cdjenkin-laptop/live",
-  SERVER_URL: "http://192.168.1.101:8080/live",
-//  SERVER_URL: "http://cward-nb/stats/live",
+  SERVICE: "live", // The address of the dynamic update servlet
+  processors: {}, // A map of registered data processors
+  timestamp: 0, // Stores the last update time from the server
+  errors: 0, // The number of consecutive communication errors
 
-  processors: {},
-
-  lastUpdate: 0,
-
-  timestamp: 0,
-
-  errors: 0,
+  // Check if real-time data updates should be used
+  enabled: location.href.match(/(.*\?update.*)|(.*&update.*)/i),
 
   // Registers a processor to a type of data
   bind: function(type, processor) {
@@ -27,73 +22,79 @@ COMM = {
     this.processors[type] = undefined;
   },
 
-  // Makes a request to the server for updated data
-  request: function(type, all) {
-    this.lastUpdate = new Date().getTime();
-
-    // Build a list of request parameters
-    var params = {};
-    if (type) {
-      params.type = type;
-    }
-    params.ts = (all ? 0 : this.timestamp);
-    params.rnd = this.lastUpdate;
-
-    // Send the request to the server
+  // Starts the dynamic update scheduler
+  start: function() {
     var self = this;
-    $.getJSON(this.SERVER_URL, params, function(data, status) {
-      self.response(data, status);
-    });
+    setTimeout(function() { self._update(); }, 2000);
   },
 
-  // Handles the response from the server for updated data
-  response: function(msgs, status) {
+  // Makes an update request to the server to get new data
+  _update: function(type, all) {
 
-    // Check if the remote server call was successful
-    if (status == "success") {
+    // Build a list of request parameters
+    var params = {
+      type: (type ? type : ""),
+      ts: (all ? 0 : this.timestamp)
+    };
 
-      // Clear any previous errors
-      this.errors = 0;
+    // Configure the request options
+    var options = {
+      url: this.SERVICE,
+      data: params,
+      dataType: "json",
+      cache: false,
+      success: $.call(this, '_handleSuccess'),
+      error: $.call(this, '_handleError'),
+      complete: $.call(this, '_handleComplete')
+    };
 
-      // Process all the messages received from the server
-      for (var i = 0; i < msgs.length; i++) {
-        var msg = msgs[i];
+    // Send the request to the server
+    $.ajax(options);
+  },
 
-        // Check if this is a time stamp message
-        if (msg.type == "ts") {
-          this.timestamp = msg.data;
-        } else {
+  // Handles updated data responses from the server
+  _handleSuccess: function(data, status) {
 
-          // Pass the parsed message to a registered processor
-          var processor = this.processors[msg.type];
-          if (processor != null) {
-            processor(msg.data);
-          }
+    // Clear any previous errors
+    this.errors = 0;
+
+    // Process all the messages received from the server
+    for (var i = 0; i < data.length; i++) {
+      var msg = data[i];
+
+      // Check if this is a time stamp message
+      if (msg.type == "ts") {
+        this.timestamp = msg.data;
+      } else {
+
+        // Pass the parsed message to a registered processor
+        var processor = this.processors[msg.type];
+        if (processor != null) {
+          processor(msg.data);
         }
       }
-    } else {
-
-      // TODO Show the error
-      this.errors++;
     }
+  },
 
-    // Calculate the delay until the next server request
+  // Handles error responses from the server
+  _handleError: function(request, status, error) {
+
+    // TODO Show this somewhere
+    this.errors++;
+  },
+
+  // Handles cleanup after an update completes
+  _handleComplete: function(request, status) {
+
+    // Calculate the delay until the next update
     // Retry quickly for initial errors then slow down for repeated errors
     var delay = (1 + (this.errors < 3 ? this.errors : 59)) * 1000;
 
-    // Request the next set of changes from the server
+    // Request the next set of updates from the server
     var self = this;
-    setTimeout(function() { self.request(); }, delay);
+    setTimeout(function() { self._update(); }, delay);
   }
 
-};
-
-// Register the communication object as an extension
-$.extend({ comm: COMM });
+}});
 
 })(jQuery);
-
-$(document).ready(function() {
-
-  
-});

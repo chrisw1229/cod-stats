@@ -21,6 +21,7 @@ Map.load = function(element, options) {
 // Initializes the actual map component
 Map._init = function(element, options) {
   Map.options = options;
+  Map.markerCnt = 0;
 
   // Setup the map container
   Map.owner = $(element);
@@ -42,7 +43,6 @@ Map._init = function(element, options) {
     theme: null
   };
   Map.ol = new OpenLayers.Map(Map.owner.attr("id"), mapOpts);
-  $(window).bind("resize", Map._resize);
 
   // Create the map layers
   Map._initTileLayer();
@@ -59,23 +59,28 @@ Map._init = function(element, options) {
   $(".olControlZoomToMaxExtentItemInactive").attr("title", "Zoom to show all");
   $(".olControlZoomOutItemInactive").attr("title", "Zoom out");
 
+  // Bind the event handlers
+  $(window).bind("resize", Map._resize);
+  $.comm.bind("map", Map.processData);
+
   // Set the initial map appearance
   var lon = (options.x ? options.x : (options.maxSize / 2));
   var lat = (options.y ? options.y : (options.maxSize / 2));
   Map.ol.setCenter(new OpenLayers.LonLat(lon, lat), 1);
   Map._resize();
 
-  // Add random markers to the map
-  Map.markerCnt = 0;
-//  setTimeout(function() {
-//    Map.addMarkers(Map._randMarkers(100));
-//  }, 1000);
-//  setInterval(function() {
-//    Map.addMarkers(Map._randMarkers(5));
-//  }, 2000);
-  $.comm.bind("map", function(data) {
-    Map.addMarkers(data);
-  });
+  // Fill the map with random markers if dynamic updates are disabled
+  if (!$.comm.enabled) {
+    setTimeout(function() { Map.addMarkers(Map._randMarkers(100)); }, 1000);
+    setInterval(function() { Map.addMarkers(Map._randMarkers(5)); }, 2000);
+  }
+};
+
+// Processes dynamic updates from the server
+Map.processData = function(data) {
+
+  // Add the array of markers to the map
+  Map.addMarkers(data);
 };
 
 // Adds the given marker to the map
