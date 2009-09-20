@@ -35,8 +35,10 @@
     (apply-str line-string)))
 
 (def digit-lit (lit-alt-seq "0123456789" nb-char-lit))
+(def neg-lit (nb-char-lit \-))
 (def semi-colon-lit (nb-char-lit \;))
 (def colon-lit (nb-char-lit \:))
+(def comma-lit (nb-char-lit \,))
 (def not-semi-colon-lit
   (complex [character (nb-char (except anything (alt (lit \;) newline-lit return-lit)))]
     character))
@@ -49,7 +51,7 @@
 
 (def number-lit
   (alt
-    (complex [number (conc (rep+ digit-lit) (nb-char-lit \.) (rep+ digit-lit))]
+    (complex [number (conc (opt neg-lit) (rep+ digit-lit) (nb-char-lit \.) (rep+ digit-lit))]
       (-> number flatten apply-str Float/parseFloat))
     (complex [number (rep+ digit-lit)]
       (-> number apply-str Integer/parseInt))))

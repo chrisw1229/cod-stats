@@ -59,7 +59,16 @@
 	    area identifier]
     (struct hit-info-struct weapon damage type area)))
 
-(defstruct damage-kill-struct :type :victim :attacker :hit-details)
+(def location
+  (complex [x number-lit
+	    _ comma-lit
+	    y number-lit
+	    _ comma-lit
+	    z number-lit]
+  {:z z :y y :x x}))
+
+(defstruct damage-kill-struct :type :victim :attacker :hit-details :victim-loc :attacker-loc :victim-angle :attacker-angle :victim-stance :attacker-stance)
+
 (defn damage-kill? [potential-struct]
   (and (contains? potential-struct :type)
        (contains? potential-struct :victim)
@@ -79,6 +88,38 @@
 
 (def damage-kill
   (alt
+    (complex [type pain-type
+	      _ semi-colon-lit
+	      victim player
+	      _ semi-colon-lit
+	      attacker player
+	      _ semi-colon-lit
+	      hit-details hit-info
+	      _ semi-colon-lit
+	      victim-loc location
+	      _ semi-colon-lit
+	      attacker-loc location
+	      _ semi-colon-lit
+	      victim-angle number-lit
+	      _ semi-colon-lit
+	      attacker-angle number-lit
+	      _ semi-colon-lit
+	      victim-stance identifier
+	      _ semi-colon-lit
+	      attacker-stance identifier]
+      (struct damage-kill-struct type victim attacker hit-details victim-loc attacker-loc victim-angle attacker-angle victim-stance attacker-stance))
+    (complex [type pain-type
+	      _ semi-colon-lit
+	      victim player
+	      _ semi-colon-lit
+	      attacker player
+	      _ semi-colon-lit
+	      hit-details hit-info
+	      _ semi-colon-lit
+	      victim-loc location
+	      _ semi-colon-lit
+	      attacker-loc location]
+      (struct damage-kill-struct type victim attacker hit-details victim-loc attacker-loc))
     (complex [type pain-type
 	      _ semi-colon-lit
 	      victim player
