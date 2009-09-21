@@ -8,8 +8,8 @@
 (add-classpath "file:///c:/projects/compojure/deps/jetty-util-6.1.15.jar")
 (add-classpath "file:///c:/projects/compojure/deps/servlet-api-2.5-20081211.jar")
 
-(add-classpath "file:///c:/projects/codParser/")
-(load-file "c:/Projects/codParser/test.clj")
+(add-classpath "file:///c:/projects/cod-stats/parser/")
+(load-file "c:/Projects/cod-stats/parser/test.clj")
 
 ;(def p-data (parse-log "C:/Projects/codParser/short-log.log"))
 ;(def dk-seq (get-log-type p-data damage-kill?))
