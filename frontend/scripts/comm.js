@@ -10,7 +10,7 @@ $.extend({ comm: {
   errors: 0, // The number of consecutive communication errors
 
   // Check if real-time data updates should be used
-  enabled: location.href.match(/(.*\?update.*)|(.*&update.*)/i),
+  enabled: (location.href.match(/(.*\?update.*)|(.*&update.*)/i) != null),
 
   // Registers a processor to a type of data
   bind: function(type, processor) {
@@ -24,8 +24,10 @@ $.extend({ comm: {
 
   // Starts the dynamic update scheduler
   start: function() {
-    var self = this;
-    setTimeout(function() { self._update(); }, 2000);
+    if (this.enabled) {
+      var self = this;
+      setTimeout(function() { self._update(); }, 2000);
+    }
   },
 
   // Makes an update request to the server to get new data
