@@ -105,17 +105,17 @@ public class StatsLiveTestServlet extends HttpServlet {
          super();
 
          this.dx = convertX(dx, dy);
-         this.dy = 4096 - convertY(dx, dy);
+         this.dy = convertY(dx, dy);
          this.kx = convertX(kx, ky);
-         this.ky = 4096 - convertY(kx, ky);
+         this.ky = convertY(kx, ky);
       }
 
       public int convertX(double x, double y) {
-         return (int) (1070.3 - 0.0051 * x + 0.7253 * y);
+         return (int) (1085.8 - 0.0142 * x + 0.7238 * y);
       }
 
       public int convertY(double x, double y) {
-         return (int) (1643.3 + 0.7346 * x + 0.0061 * y);
+         return (int) (1654.0 + 0.7171 * x + 0.0083 * y);
       }
 
       @Override

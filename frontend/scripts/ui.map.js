@@ -105,8 +105,12 @@ Map.addMarkers = function(markers) {
   var targets = [], deaths = [], kills = [];
   for (var i = 0; i < markers.length; i++) {
     var marker = markers[i];
-    var kp = new OpenLayers.Geometry.Point(marker.kx, marker.ky);
-    var dp = new OpenLayers.Geometry.Point(marker.dx, marker.dy);
+
+    // Invert the y-coordinates since we are plotting raw pixels
+    var kp = new OpenLayers.Geometry.Point(marker.kx,
+        Map.options.maxSize - marker.ky);
+    var dp = new OpenLayers.Geometry.Point(marker.dx,
+        Map.options.maxSize - marker.dy);
 
     targets.push(new OpenLayers.Feature.Vector(
       new OpenLayers.Geometry.LineString([kp, dp])
