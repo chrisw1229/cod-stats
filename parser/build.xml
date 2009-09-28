@@ -43,6 +43,7 @@
       <arg value="org.stoop.parser" />
       <arg value="org.stoop.codParser" />
       <arg value="org.stoop.codAnalytics" />
+	<arg value="org.stoop.codStatsIo" />
       <arg value="org.stoop.codStatsServlet"/>
     </java>
   </target>  

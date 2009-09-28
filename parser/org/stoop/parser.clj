@@ -53,8 +53,8 @@
   (alt
     (complex [number (conc (opt neg-lit) (rep+ digit-lit) (nb-char-lit \.) (rep+ digit-lit))]
       (-> number flatten apply-str Float/parseFloat))
-    (complex [number (rep+ digit-lit)]
-      (-> number apply-str Integer/parseInt))))
+    (complex [number (conc (opt neg-lit) (rep+ digit-lit))]
+      (-> number flatten apply-str Integer/parseInt))))
 
 (def identifier
   (semantics (rep+ not-semi-colon-lit) apply-str))

@@ -8,10 +8,8 @@
 ;web stuff
 (ns org.stoop.codStatsServlet
   (:gen-class :extends javax.servlet.http.HttpServlet)
-  (:use compojure.http clojure.contrib.json.write))
-
-(def game-records (ref []))
-(def player-stats-records (ref []))
+  (:use org.stoop.codStatsIo 
+	compojure.http clojure.contrib.json.write))
 
 (defn parse-integer [str]
   (try (Integer/parseInt str) 
@@ -23,13 +21,19 @@
 (defroutes cod-stats-routes
   (GET "/stats/live"
     (let [ts (parse-integer (params :ts))]
-      (if (< ts (count @game-records))
+      (if (< ts (count @*game-records*))
 	;If = to # game-records, sleep for a bit then try to send
-	(json-str [{:type "ts" :data (count @game-records)}
-		   {:type "map" :data (drop-first ts @game-records)}
-		   {:type "ticker" :data @player-stats-records}])
-	(json-str [{:type "ts" :data (count @game-records)}
-		   {:type "map" :data @game-records}
-		   {:type "ticker" :data @player-stats-records}])))))
+	(json-str [{:type "ts" :data (count @*game-records*)}
+		   {:type "map" :data (drop-first ts @*game-records*)}
+		   {:type "ticker" :data @*player-stats-records*}])
+	(json-str [{:type "ts" :data (count @*game-records*)}
+		   {:type "map" :data @*game-records*}
+		   {:type "ticker" :data @*player-stats-records*}]))))
+  (GET "/stats/add"
+    (let [tailer (tail-f *log-file-location*
+			 1000 
+			 process-input-line)]
+      ((tailer :start))
+      (str "File watching started"))))
 
 (defservice cod-stats-routes)

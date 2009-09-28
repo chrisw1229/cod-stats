@@ -12,7 +12,8 @@
 (def team
   (alt
     (constant-semantics (lit-conc-seq "axis" nb-char-lit) :axis)
-    (constant-semantics (lit-conc-seq "allies" nb-char-lit) :allies)))
+    (constant-semantics (lit-conc-seq "allies" nb-char-lit) :allies)
+    (constant-semantics (lit-conc-seq "all" nb-char-lit) :all)))
 
 (defstruct player-struct :num :id :team :name)
 (defn player? [potential-struct]
@@ -42,6 +43,20 @@
 	      player-name identifier]
 	     (struct player-struct player-num 0 :none player-name))))
 
+(def spectator
+  (complex [_ (lit-conc-seq "Spec" nb-char-lit)
+	    _ semi-colon-lit
+	    spectator-player player]
+    {:spectator spectator-player}))
+
+(def rank
+  (complex [_ (lit-conc-seq "Rank" nb-char-lit)
+	    _ semi-colon-lit
+	    rank-player player
+	    _ semi-colon-lit
+	    new-rank number-lit]
+    {:player rank-player :rank new-rank}))
+
 (defstruct hit-info-struct :weapon :damage :type :area)
 (defn hit-info? [potential-struct]
   (and (contains? potential-struct :weapon)
@@ -59,6 +74,14 @@
 	    area identifier]
     (struct hit-info-struct weapon damage type area)))
 
+(def shell-shock
+  (complex [_ (lit-conc-seq "Shock" nb-char-lit)
+	    _ semi-colon-lit
+	    shocked-player player
+	    _ semi-colon-lit
+	    shock-info hit-info]
+    {:shock shocked-player, :shock-info shock-info}))
+
 (def location
   (complex [x number-lit
 	    _ comma-lit
@@ -66,6 +89,16 @@
 	    _ comma-lit
 	    z number-lit]
   {:z z :y y :x x}))
+
+(def spawn
+  (complex [_ (lit-conc-seq "Spawn" nb-char-lit)
+	    _ semi-colon-lit
+	    spawned-player player
+	    _ semi-colon-lit
+	    spawn-weapon identifier
+	    _ semi-colon-lit
+	    spawn-location location]
+    {:spawn spawned-player, :weapon spawn-weapon, :location location}))
 
 (defstruct damage-kill-struct :type :victim :attacker :hit-details :victim-loc :attacker-loc :victim-angle :attacker-angle :victim-stance :attacker-stance)
 
@@ -132,9 +165,31 @@
 	      _ semi-colon-lit
 	      victim player
 	      _ semi-colon-lit
-	      _ (lit-conc-seq ";-1;world;;")
+	      _ (lit-conc-seq ";-1;world;;" nb-char-lit)
 	      hit-details hit-info]
       (struct damage-kill-struct type victim (struct player-struct 0 -1 "world" "world") hit-details))))
+
+(def vehicle
+  (complex [vehicle-num number-lit
+	    _ semi-colon-lit
+	    vehicle-team team
+	    _ semi-colon-lit
+	    vehicle-type identifier
+	    _ semi-colon-lit
+	    vehicle-seat number-lit]
+    {:vehicle vehicle-type :id vehicle-num :team team :seat vehicle-seat}))
+
+(def use-vehicle
+  (complex [_ (lit-conc-seq "Use" nb-char-lit)
+	    _ semi-colon-lit
+	    user-player player
+	    _ semi-colon-lit
+	    used-entity vehicle
+	    _ semi-colon-lit
+	    player-loc location
+	    _ semi-colon-lit
+	    player-angle number-lit]
+    {:player user-player :vehicle used-entity :location player-loc :angle player-angle}))
 
 (defstruct talk-struct :player :message)
 (defn talk? [potential-struct]
@@ -271,7 +326,7 @@
   (factor= 60 (nb-char-lit \-)))
 
 (def player-action
-  (alt damage-kill talk-action pickup join-quit game-event win-loss-event))
+  (alt damage-kill talk-action pickup join-quit game-event win-loss-event spectator shell-shock spawn rank use-vehicle))
 
 (defstruct log-entry-struct :time :entry)
 
