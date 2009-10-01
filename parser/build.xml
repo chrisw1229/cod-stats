@@ -1,7 +1,8 @@
-<project name="cod-stats-war" basedir="." default="compile">
+<project name="cod-stats-jar" basedir="." default="jar">
   <property environment="env" />
-  <property name="webapp.dir" value="C:/projects/cod-stats/frontend" />	
-  <property name="classes.dir" value="${webapp.dir}/WEB-INF/classes" />
+  <property name="webapp.dir" value="C:/projects/cod-stats/frontend" />
+  <property name="parser.dir" value="C:/projects/cod-stats/parser" />
+  <property name="classes.dir" value="${parser.dir}/classes" />
   <property name="lib.dir" value="${webapp.dir}/WEB-INF/lib" />
   <property name="src.dir" value="." />
   <property name="compojure.dir" value="C:/Projects/compojure" />
@@ -43,8 +44,13 @@
       <arg value="org.stoop.parser" />
       <arg value="org.stoop.codParser" />
       <arg value="org.stoop.codAnalytics" />
-	<arg value="org.stoop.codStatsIo" />
+      <arg value="org.stoop.codStatsIo" />
       <arg value="org.stoop.codStatsServlet"/>
     </java>
-  </target>  
+  </target>
+
+  <target name="jar" depends="compile">
+    <jar destfile="${lib.dir}/cod-stats.jar" basedir="${classes.dir}" />
+  </target>
+
 </project>
