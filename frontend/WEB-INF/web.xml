@@ -29,11 +29,12 @@
    <servlet> 
       <display-name>Stats Live Test Servlet</display-name>
       <servlet-name>StatsLiveTestServlet</servlet-name>  
-      <servlet-class>org.stoop.StatsLiveTestServlet</servlet-class>  
+      <servlet-class>org.stoop.codStatsServlet</servlet-class>  
    </servlet>  
 
    <servlet-mapping>
       <servlet-name>StatsLiveTestServlet</servlet-name>
       <url-pattern>/live</url-pattern>
+      <url-pattern>/start</url-pattern>
    </servlet-mapping>
 </web-app>
