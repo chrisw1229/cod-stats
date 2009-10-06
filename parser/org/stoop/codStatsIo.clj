@@ -14,7 +14,7 @@
 
 (def *game-records* (ref []))
 (def *player-stats-records* (ref []))
-(def *log-file-location* (str "C:/Program Files (x86)/Call of Duty Game of the Year Edition/cod-stats/games_mp.log"))
+(def *log-file-location* (ref (str "C:/Program Files/Call of Duty/cod-stats/games_mp.log")))
 
 (defn tail-f [file delay action]
   (let [keep-running (atom true)

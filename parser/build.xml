@@ -35,7 +35,7 @@
     </copy>   
   </target>
   
-  <target name="compile" depends="clean,init,copyjars">
+  <target name="compile" depends="init,copyjars">
     <java classname="clojure.lang.Compile" classpathref="project.classpath" failonerror="true">
       <classpath path="${src.dir}" />
       <sysproperty key="clojure.compile.path" value="${classes.dir}" />
@@ -43,9 +43,9 @@
       <arg value="name.choi.joshua.fnparse" />
       <arg value="org.stoop.parser" />
       <arg value="org.stoop.codParser" />
-      <arg value="org.stoop.codAnalytics" />
       <arg value="org.stoop.codStatsIo" />
-      <arg value="org.stoop.codStatsServlet"/>
+      <arg value="org.stoop.codAnalytics" />
+      <arg value="org.stoop.codStatsServlet" />
     </java>
   </target>
 

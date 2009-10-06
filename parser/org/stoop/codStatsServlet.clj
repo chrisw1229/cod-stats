@@ -29,11 +29,13 @@
 	(json-str [{:type "ts" :data (count @*game-records*)}
 		   {:type "map" :data @*game-records*}
 		   {:type "ticker" :data @*player-stats-records*}]))))
-  (GET "/stats/add"
-    (let [tailer (tail-f *log-file-location*
+  (GET "/stats/start"
+    (if (not (nil? (params :log)))
+      (dosync (ref-set *log-file-location* (params :log))))
+    (let [tailer (tail-f @*log-file-location*
 			 1000 
 			 process-input-line)]
       ((tailer :start))
-      (str "File watching started"))))
+      (str "File watching started for " @*log-file-location*))))
 
 (defservice cod-stats-routes)
