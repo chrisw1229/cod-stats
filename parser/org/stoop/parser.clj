@@ -39,6 +39,7 @@
 (def semi-colon-lit (nb-char-lit \;))
 (def colon-lit (nb-char-lit \:))
 (def comma-lit (nb-char-lit \,))
+(def backslash-lit (nb-char-lit \\))
 (def not-semi-colon-lit
   (complex [character (nb-char (except anything (alt (lit \;) newline-lit return-lit)))]
     character))
