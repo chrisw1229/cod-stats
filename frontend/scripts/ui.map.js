@@ -3,7 +3,7 @@ if (typeof Map == "undefined" || !Map) {
 
   Map.defaults = {
     cluster: 0,
-    maxMarkers: 100,
+    maxMarkers: 25,
     maxSize: 4096,
     maxTile: 256,
     maxZoom: 5,
@@ -71,8 +71,8 @@ Map._init = function(element, options) {
 
   // Fill the map with random markers if dynamic updates are disabled
   if (!$.comm.enabled) {
-    setTimeout(function() { Map.addMarkers(Map._randMarkers(100)); }, 1000);
-    setInterval(function() { Map.addMarkers(Map._randMarkers(5)); }, 2000);
+    setTimeout(function() { Map.addMarkers(Map._randMarkers(10)); }, 1000);
+    setInterval(function() { Map.addMarkers(Map._randMarkers(2)); }, 2000);
   }
 };
 
