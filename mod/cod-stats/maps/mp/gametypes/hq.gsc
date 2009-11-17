@@ -203,6 +203,8 @@ main()
 	level.checkteambalance = false;
 	level.spawnframe = 0;
 	hq_setup();
+
+    logPrint("Game;" + getCvar("g_gametype") + ";" + getCvar("mapname") + ";" + getCvar("scr_hq_timelimit") + "\n");
 }
 
 Callback_StartGameType()

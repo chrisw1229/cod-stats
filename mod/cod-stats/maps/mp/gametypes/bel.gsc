@@ -182,6 +182,8 @@ main()
 	level.objused = [];
 	for (i=0;i<16;i++)
 		level.objused[i] = false;
+
+    logPrint("Game;" + getCvar("g_gametype") + ";" + getCvar("mapname") + ";" + getCvar("scr_bel_timelimit") + "\n");
 }
 
 GetNextObjNum()

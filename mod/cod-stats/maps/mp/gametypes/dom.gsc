@@ -362,6 +362,8 @@ main() // Starts when map is loaded.
 		setCvar("scr_dom_startrounddelay", "5");
 		setCvar("scr_dom_respawn_wave_time", "10");
 	}
+
+    logPrint("Game;" + getCvar("g_gametype") + ";" + getCvar("mapname") + ";" + getCvar("scr_dom_roundlength") + "\n");
 }
 
 // ----------------------------------------------------------------------------------

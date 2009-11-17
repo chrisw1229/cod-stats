@@ -366,6 +366,8 @@ main() // Starts when map is loaded.
 	//
 	if(getCvar("scr_debug_ctf") == "")
 		setCvar("scr_debug_ctf", "0"); 
+
+    logPrint("Game;" + getCvar("g_gametype") + ";" + getCvar("mapname") + ";" + getCvar("scr_ctf_roundlength") + "\n");
 }
 
 // ----------------------------------------------------------------------------------

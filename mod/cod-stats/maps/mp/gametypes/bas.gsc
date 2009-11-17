@@ -355,6 +355,8 @@ main() // Starts when map is loaded.
 
 	level.basehealth = getCvarInt("scr_bas_basehealth");
 	level.basedamagedhealth = getCvarInt("scr_bas_damagedhealth");
+
+    logPrint("Game;" + getCvar("g_gametype") + ";" + getCvar("mapname") + ";" + getCvar("scr_bas_roundlength") + "\n");
 }
 
 precacheAlliesGfx()

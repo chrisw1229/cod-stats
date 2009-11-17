@@ -165,6 +165,8 @@ main()
 	
 	if(level.killcam >= 1)
 		setarchive(true);
+
+    logPrint("Game;" + getCvar("g_gametype") + ";" + getCvar("mapname") + ";" + getCvar("scr_tdm_timelimit") + "\n");
 }
 
 Callback_StartGameType()
