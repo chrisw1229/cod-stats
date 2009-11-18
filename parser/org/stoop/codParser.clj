@@ -298,6 +298,16 @@
 	   argument-value non-backslash-string]
    (struct server-argument-struct argument-name argument-value)))
 
+(def start-game
+  (complex [_ (lit-conc-seq "Game")
+	    _ semi-colon-lit
+	    game-type identifier
+	    _ semi-colon-lit
+	    map-name identifier
+	    _ semi-colon-lit
+	    round-time number-lit]
+    {:command :start, :arguments nil, :game-type game-type, :map-name map-name, :round-time round-time}))
+
 (def server-command
   (alt
     (lit-conc-seq "InitGame" nb-char-lit)
@@ -320,55 +330,8 @@
     (complex [command server-command
 	      _ colon-lit
 	      _ (opt ws)]
-      (struct server-action-struct command :none))))
-
-(def init-game-action
-  (complex [_ (lit-conc-seq "InitGame" nb-char-lit)
-	    _ colon-lit
-	    _ ws
-	    _ (lit-conc-seq "\\.Admin\\" nb-char-lit)
-	    admin non-backslash-string
-	    _ (lit-conc-seq "\\.Location\\" nb-char-lit)
-	    location non-backslash-string
-	    _ (lit-conc-seq "\\.Website\\" nb-char-lit)
-	    website non-backslash-string
-	    _ (lit-conc-seq "\\g_gametype\\" nb-char-lit)
-	    game-type non-backslash-string
-	    _ (lit-conc-seq "\\g_timeoutsallowed\\" nb-char-lit)
-	    timeouts-allowed number-lit
-	    _ (lit-conc-seq "\\gamename\\" nb-char-lit)
-	    game-name non-backslash-string
-	    _ (lit-conc-seq "\\mapname\\" nb-char-lit)
-	    map-name non-backslash-string
-	    _ (lit-conc-seq "\\protocol\\" nb-char-lit)
-	    protocol number-lit
-	    _ (lit-conc-seq "\\scr_allow_jeeps\\" nb-char-lit)
-	    allow-jeeps number-lit
-	    _ (lit-conc-seq "\\scr_allow_tanks\\" nb-char-lit)
-	    allow-tanks number-lit
-	    _ (lit-conc-seq "\\shortversion\\" nb-char-lit)
-	    short-version number-lit
-	    _ (lit-conc-seq "\\sv_allowAnonymous\\" nb-char-lit)
-	    allow-anon number-lit
-	    _ (lit-conc-seq "\\sv_floodProtect\\" nb-char-lit)
-	    flood-protect number-lit
-	    _ (lit-conc-seq "\\sv_hostname\\" nb-char-lit)
-	    hostname non-backslash-string
-	    _ (lit-conc-seq "\\sv_maxclients\\" nb-char-lit)
-	    max-clients number-lit
-	    _ (lit-conc-seq "\\sv_maxPing\\" nb-char-lit)
-	    max-ping number-lit
-	    _ (lit-conc-seq "\\sv_maxRate\\" nb-char-lit)
-	    max-rate number-lit
-	    _ (lit-conc-seq "\\sv_minPing\\" nb-char-lit)
-	    min-ping number-lit
-	    _ (lit-conc-seq "\\sv_privateClients\\" nb-char-lit)
-	    private-clients number-lit
-	    _ (lit-conc-seq "\\sv_punkbuster\\" nb-char-lit)
-	    punkbuster number-lit
-	    _ (lit-conc-seq "\\sv_pure\\" nb-char-lit)
-	    pure number-lit]
-    {:type "InitGame", :game-type game-type, :map-name map-name}))
+      (struct server-action-struct command :none))
+    start-game))
 
 (def section-splitter
   (factor= 60 (nb-char-lit \-)))
