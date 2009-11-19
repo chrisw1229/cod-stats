@@ -12,8 +12,6 @@
 ;Have some kind of loop to watch for the file to be created then start reading it in and processing.
 ;Watch for console_mp.log and games_mp.log.
 
-(def *game-records* (ref []))
-(def *player-stats-records* (ref []))
 (def *log-file-location* (ref (str "C:/Program Files/Call of Duty/cod-stats/games_mp.log")))
 
 (defn tail-f [file delay action]
@@ -53,6 +51,9 @@
 
 ;Real time processing
 
+(def *game-records* (ref []))
+(def *player-stats-records* (ref []))
+
 ;Need some kind of storage for the records as they come in.
 ;Possibly store based upon the type of record?
 ;Might as well go with the cached method.  So as data comes in, add it to a data set to be processed.
@@ -86,16 +87,25 @@
     (replace-player victim 
 		    (assoc old-victim :received (+ (old-victim :received) damage)) *player-stats-records*)))
 
-(defn process-kill [attacker victim kx ky dx dy]
+(defn make-coord-transformer [constant x-multiplier y-multiplier]
+  #(+ (+ constant (* x-multiplier %1)) (* y-multiplier %2)))
+
+(defn process-kill [attacker victim kx ky dx dy x-transformer y-transformer]
   (let [old-attacker (get-player attacker *player-stats-records*)
 	old-victim (get-player victim *player-stats-records*)
-        trans-kx (+ (- 1085.8 (* 0.0142 kx)) (* 0.7238 ky))
-	trans-ky (+ (+ 1654.0 (* 0.7171 kx)) (* 0.0083 ky))
-	trans-dx (+ (- 1085.8 (* 0.0142 dx)) (* 0.7238 dy))
-	trans-dy (+ (+ 1654.0 (* 0.7171 dx)) (* 0.0083 dy))]
+        trans-kx (x-transformer kx ky)
+	trans-ky (y-transformer kx ky)
+	trans-dx (x-transformer dx dy)
+	trans-dy (y-transformer dx dy)]
     (replace-player attacker (assoc old-attacker :kills (inc (old-attacker :kills))) *player-stats-records*)
     (replace-player victim (assoc old-victim :deaths (inc (old-victim :deaths))) *player-stats-records*)
     (dosync (ref-set *game-records* (conj @*game-records* {:kx trans-kx :ky trans-ky :dx trans-dx :dy trans-dy})))))
+
+;Move to codData?
+(def carentan-x-transformer (make-coord-transformer 1085.8 -0.0142 0.7238))
+(def carentan-y-transformer (make-coord-transformer 1654.0 0.7171 0.0083))
+(def peaks-x-transformer (make-coord-transformer 2618.2 0.5342 -0.0348))
+(def peaks-y-transformer (make-coord-transformer 2344.2 0.0043 -0.5479))
 
 (defn process-input-line [input-line]
   (let [parsed-input (parse input-line log-line)]
@@ -113,7 +123,9 @@
 			  (get-in parsed-input [:entry :attacker-loc :x])
 			  (get-in parsed-input [:entry :attacker-loc :y])
 			  (get-in parsed-input [:entry :victim-loc :x])
-			  (get-in parsed-input [:entry :victim-loc :y]))))))))
+			  (get-in parsed-input [:entry :victim-loc :y])
+			  carentan-x-transformer
+			  carentan-y-transformer)))))))
 
 ;process-parsed-input
 ;if this is a damage-kill record
