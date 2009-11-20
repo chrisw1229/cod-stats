@@ -14,12 +14,28 @@ $.extend({ comm: {
 
   // Registers a processor to a type of data
   bind: function(type, processor) {
-    this.processors[type] = processor;
+    var list = this.processors[type];
+    if (list == null) {
+      list = [];
+      this.processors[type] = list;
+    }
+    list.push(processor);
   },
 
   // Unregisters a processor from a type of data
   unbind: function(type, processor) {
-    this.processors[type] = undefined;
+    var list = this.processors[type];
+    if (list != null) {
+      for (var i = 0; i < list.length; i++) {
+        if (list[i] == processor) {
+          list.splice(i, 1);
+          break;
+        }
+      }
+      if (list.length == 0) {
+        this.processors[type] = undefined;
+      }
+    }
   },
 
   // Starts the dynamic update scheduler
@@ -45,9 +61,9 @@ $.extend({ comm: {
       data: params,
       dataType: "json",
       cache: false,
-      success: $.call(this, '_handleSuccess'),
-      error: $.call(this, '_handleError'),
-      complete: $.call(this, '_handleComplete')
+      success: $.call(this, "_handleSuccess"),
+      error: $.call(this, "_handleError"),
+      complete: $.call(this, "_handleComplete")
     };
 
     // Send the request to the server
@@ -69,10 +85,12 @@ $.extend({ comm: {
         this.timestamp = msg.data;
       } else {
 
-        // Pass the parsed message to a registered processor
-        var processor = this.processors[msg.type];
-        if (processor != null) {
-          processor(msg.data);
+        // Pass the parsed message to all matching processors
+        var list = this.processors[msg.type];
+        if (list != null) {
+          for (var processor in list) {
+            processor(msg.data);
+          }
         }
       }
     }
