@@ -87,9 +87,6 @@
     (replace-player victim 
 		    (assoc old-victim :received (+ (old-victim :received) damage)) *player-stats-records*)))
 
-(defn make-coord-transformer [constant x-multiplier y-multiplier]
-  #(+ (+ constant (* x-multiplier %1)) (* y-multiplier %2)))
-
 (defn process-kill [attacker victim kx ky dx dy x-transformer y-transformer]
   (let [old-attacker (get-player attacker *player-stats-records*)
 	old-victim (get-player victim *player-stats-records*)
@@ -101,16 +98,33 @@
     (replace-player victim (assoc old-victim :deaths (inc (old-victim :deaths))) *player-stats-records*)
     (dosync (ref-set *game-records* (conj @*game-records* {:kx trans-kx :ky trans-ky :dx trans-dx :dy trans-dy})))))
 
+;Update to archive game-records for whole match stats calculation
+(defn process-start-game [game-type map-name round-time]
+  (dosync (ref-set *game-records* (conj @*game-records* {:map map-name :type game-type :time round-time}))))
+
 ;Move to codData?
+(defn make-coord-transformer [constant x-multiplier y-multiplier]
+  #(+ (+ constant (* x-multiplier %1)) (* y-multiplier %2)))
+
 (def carentan-x-transformer (make-coord-transformer 1085.8 -0.0142 0.7238))
 (def carentan-y-transformer (make-coord-transformer 1654.0 0.7171 0.0083))
 (def peaks-x-transformer (make-coord-transformer 2618.2 0.5342 -0.0348))
 (def peaks-y-transformer (make-coord-transformer 2344.2 0.0043 -0.5479))
 
+; {"type":"game", "data": {"map":map-name, "type":game-type, "time": ##}}
+; {"type":"event", "data":{"team":team-name, "time":time-of-event}}
+; team-name is one of a, b, r or g
+
 (defn process-input-line [input-line]
   (let [parsed-input (parse input-line log-line)]
     ;if this is a new-game record reset game-records
-    (if (damage-kill? (parsed-input :entry))
+    (cond
+      (start-game? (parsed-input :entry))
+      (process-start-game (get-in parsed-input [:entry :game-type])
+			  (get-in parsed-input [:entry :map-name])
+			  (get-in parsed-input [:entry :round-time]))
+
+      (damage-kill? (parsed-input :entry))
       (do
 	(process-damage (get-in parsed-input [:entry :attacker :name])
 			(get-in parsed-input [:entry :victim :name])

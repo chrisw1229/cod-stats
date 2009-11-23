@@ -306,7 +306,12 @@
 	    map-name identifier
 	    _ semi-colon-lit
 	    round-time number-lit]
-    {:command :start, :arguments nil, :game-type game-type, :map-name map-name, :round-time round-time}))
+    {:game-type game-type, :map-name map-name, :round-time round-time}))
+
+(defn start-game? [potential-struct]
+  (and (contains? potential-struct :game-type)
+       (contains? potential-struct :map-name)
+       (contains? potential-struct :round-time)))
 
 (def server-command
   (alt

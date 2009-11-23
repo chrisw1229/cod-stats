@@ -18,17 +18,36 @@
 (defn drop-first [n s]
   (reverse (drop-last n (reverse s))))
 
+(defn map-record? [record]
+  (and (contains? record :kx)
+       (contains? record :ky)
+       (contains? record :dx)
+       (contains? record :dy)))
+
+(defn game-record? [record]
+  (and (contains? record :map)
+       (contains? record :type)
+       (contains? record :time)))
+
+(defn process-records [records]
+  [{:type "ts" :data (count records)}
+   {:type "map" :data (filter map-record? records)}
+   {:type "game" :data (filter game-record? records)}])
+
 (defroutes cod-stats-routes
   (GET "/stats/live"
     (let [ts (parse-integer (params :ts))]
       (if (< ts (count @*game-records*))
+	(json-str (process-records (drop-first ts @*game-records*)))
+	(json-str (process-records @*game-records*)))))
 	;If = to # game-records, sleep for a bit then try to send
-	(json-str [{:type "ts" :data (count @*game-records*)}
-		   {:type "map" :data (drop-first ts @*game-records*)}
-		   {:type "ticker" :data @*player-stats-records*}])
-	(json-str [{:type "ts" :data (count @*game-records*)}
-		   {:type "map" :data @*game-records*}
-		   {:type "ticker" :data @*player-stats-records*}]))))
+	;Update to put game record types into its own object.  Currently in *game-records*
+	;(json-str [{:type "ts" :data (count @*game-records*)}
+	;	   {:type "map" :data (drop-first ts @*game-records*)}
+	;	   {:type "ticker" :data @*player-stats-records*}])
+	;(json-str [{:type "ts" :data (count @*game-records*)}
+	;	   {:type "map" :data @*game-records*}
+	;	   {:type "ticker" :data @*player-stats-records*}]))))
   (GET "/stats/start"
     (if (not (nil? (params :log)))
       (dosync (ref-set *log-file-location* (params :log))))
