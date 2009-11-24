@@ -32,7 +32,7 @@
 (defn process-records [records]
   [{:type "ts" :data (count records)}
    {:type "map" :data (filter map-record? records)}
-   {:type "game" :data (filter game-record? records)}])
+   {:type "game" :data (last (filter game-record? records))}])
 
 (defroutes cod-stats-routes
   (GET "/stats/live"

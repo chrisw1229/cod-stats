@@ -100,7 +100,12 @@
 
 ;Update to archive game-records for whole match stats calculation
 (defn process-start-game [game-type map-name round-time]
-  (dosync (ref-set *game-records* (conj @*game-records* {:map map-name :type game-type :time round-time}))))
+  (dosync (ref-set *game-records* [{:map map-name :type game-type :time round-time}])))
+
+;Update to use timer to set time in minutes for :time
+;Don't have an obvious way to distinguish between american, british and russian
+(defn process-game-event [team]
+  (dosync (ref-set *game-records* (conj @*game-records* {:team team :time 0}))))
 
 ;Move to codData?
 (defn make-coord-transformer [constant x-multiplier y-multiplier]
@@ -139,7 +144,10 @@
 			  (get-in parsed-input [:entry :victim-loc :x])
 			  (get-in parsed-input [:entry :victim-loc :y])
 			  carentan-x-transformer
-			  carentan-y-transformer)))))))
+			  carentan-y-transformer))))
+      (game-event? (parsed-input :entry))
+      (process-game-event (get-in parsed-input [:entry :player :team])
+			  (get-in parsed-input [:entry :event])))))
 
 ;process-parsed-input
 ;if this is a damage-kill record
