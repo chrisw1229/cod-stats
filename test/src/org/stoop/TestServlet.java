@@ -33,24 +33,26 @@ import javax.servlet.http.HttpServletResponse;
  * 
  * @author Chris Ward
  */
-public class StatsLiveTestServlet extends HttpServlet {
+public class TestServlet extends HttpServlet {
 
    private static final long serialVersionUID = 24992353373816849L;
 
-   private List<Entry> entries;
+   private List<Packet> packets;
 
    /**
     * The default constructor.
     */
-   public StatsLiveTestServlet() {
+   public TestServlet() {
       super();
 
-      entries = new ArrayList<Entry>();
-      entries.add(new Entry(-416.63, 727.973, -499.359, 1945.19));
-      entries.add(new Entry(-95.1254, 712.424, -511.364, 1941.27));
-      entries.add(new Entry(302.01, 751.127, -521.318, 1937.3));
-      entries.add(new Entry(1398.96, 1071.05, 1734.44, 1872.86));
-      entries.add(new Entry(370.459, 2927.74, -723, 2162));
+      packets = new ArrayList<Packet>();
+      packets.add(new GamePacket("carentan", "tdm", 30));
+      packets.add(new MapPacket(-416.63, 727.973, -499.359, 1945.19));
+      packets.add(new MapPacket(-95.1254, 712.424, -511.364, 1941.27));
+      packets.add(new MapPacket(302.01, 751.127, -521.318, 1937.3));
+      packets.add(new MapPacket(1398.96, 1071.05, 1734.44, 1872.86));
+      packets.add(new MapPacket(370.459, 2927.74, -723, 2162));
+      packets.add(new GamePacket("peaks", "tdm", 30));
    }
 
    /*
@@ -70,23 +72,14 @@ public class StatsLiveTestServlet extends HttpServlet {
       } else {
          StringBuilder builder = new StringBuilder();
 
-         String ts = request.getParameter("ts");
-         if (ts != null) {
-            builder.append("[");
-            builder.append("{ type: \"map\",");
-            builder.append("  data: [");
-            for (int i = 0; i < entries.size(); i++) {
-               builder.append(entries.get(i).toString());
-               if (i < entries.size() - 1) {
-                  builder.append(",");
-               }
-            }
-            builder.append("  ]");
-            builder.append("}");
-            builder.append("]");
-         } else {
-            builder.append("[]");
+         int ts = Integer.valueOf(request.getParameter("ts"));
+         builder.append("[");
+         builder.append(new TimePacket(ts + 1));
+         if (ts < packets.size()) {
+            builder.append(", ");
+            builder.append(packets.get(ts));
          }
+         builder.append("]");
 
          byte[] data = builder.toString().getBytes();
          response.setHeader("Cache-Control", "no-cache");
@@ -97,12 +90,67 @@ public class StatsLiveTestServlet extends HttpServlet {
       response.getOutputStream().close();
    }
 
-   class Entry {
+   abstract class Packet {
 
-      int dx, dy, kx, ky;
+      private String type;
 
-      public Entry(double dx, double dy, double kx, double ky) {
+      public Packet(String type) {
          super();
+
+         this.type = type;
+      }
+
+      public abstract String getData();
+
+      @Override
+      public String toString() {
+         return "{ type: \"" + type + "\", data: " + getData() + " }";
+      }
+   }
+
+   class TimePacket extends Packet {
+
+      private int time;
+
+      public TimePacket(int time) {
+         super("ts");
+
+         this.time = time;
+      }
+
+      @Override
+      public String getData() {
+         return String.valueOf(time);
+      }
+   }
+
+   class GamePacket extends Packet {
+
+      private String map, gameType;
+
+      private int time;
+
+      public GamePacket(String map, String gameType, int time) {
+         super("game");
+
+         this.map = map;
+         this.gameType = gameType;
+         this.time = time;
+      }
+
+      @Override
+      public String getData() {
+         return "{ map: \"" + map + "\", type: \"" + gameType + "\", time: "
+               + time + " }";
+      }
+   }
+
+   class MapPacket extends Packet {
+
+      private int dx, dy, kx, ky;
+
+      public MapPacket(double dx, double dy, double kx, double ky) {
+         super("map");
 
          this.dx = convertX(dx, dy);
          this.dy = convertY(dx, dy);
@@ -110,16 +158,16 @@ public class StatsLiveTestServlet extends HttpServlet {
          this.ky = convertY(kx, ky);
       }
 
-      public int convertX(double x, double y) {
+      private int convertX(double x, double y) {
          return (int) (1085.8 - 0.0142 * x + 0.7238 * y);
       }
 
-      public int convertY(double x, double y) {
+      private int convertY(double x, double y) {
          return (int) (1654.0 + 0.7171 * x + 0.0083 * y);
       }
 
       @Override
-      public String toString() {
+      public String getData() {
          return "{ kx: " + kx + ", ky: " + ky + ", dx: " + dx + ", dy: " + dy
                + " }";
       }

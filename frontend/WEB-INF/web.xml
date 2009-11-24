@@ -26,16 +26,27 @@
      Player statistics for the game Call of Duty:United Offensive
   </description>
 
+   <servlet>
+      <display-name>Live Servlet</display-name>
+      <servlet-name>LiveServlet</servlet-name>
+      <servlet-class>org.stoop.codStatsServlet</servlet-class>
+   </servlet>
+
    <servlet> 
-      <display-name>Stats Live Test Servlet</display-name>
-      <servlet-name>StatsLiveTestServlet</servlet-name>  
-      <servlet-class>org.stoop.codStatsServlet</servlet-class>  
-   </servlet>  
+      <display-name>Test Servlet</display-name>
+      <servlet-name>TestServlet</servlet-name>
+      <servlet-class>org.stoop.TestServlet</servlet-class>
+   </servlet>
 
    <servlet-mapping>
-      <servlet-name>StatsLiveTestServlet</servlet-name>
+      <servlet-name>LiveServlet</servlet-name>
       <url-pattern>/live</url-pattern>
       <url-pattern>/start</url-pattern>
+   </servlet-mapping>
+
+   <servlet-mapping>
+      <servlet-name>TestServlet</servlet-name>
+      <url-pattern>/test</url-pattern>
    </servlet-mapping>
 
    <mime-mapping>
