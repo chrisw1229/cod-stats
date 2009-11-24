@@ -61,26 +61,12 @@ Map._init = function(element, options) {
 
   // Bind the event handlers
   $(window).bind("resize", Map._resize);
-  $.comm.bind("map", Map.processData);
 
   // Set the initial map appearance
   var lon = (options.x ? options.x : (options.maxSize / 2));
   var lat = (options.y ? options.y : (options.maxSize / 2));
   Map.ol.setCenter(new OpenLayers.LonLat(lon, lat), 1);
   Map._resize();
-
-  // Fill the map with random markers if dynamic updates are disabled
-  if (!$.comm.enabled) {
-    setTimeout(function() { Map.addMarkers(Map._randMarkers(10)); }, 1000);
-    setInterval(function() { Map.addMarkers(Map._randMarkers(2)); }, 2000);
-  }
-};
-
-// Processes dynamic updates from the server
-Map.processData = function(data) {
-
-  // Add the array of markers to the map
-  Map.addMarkers(data);
 };
 
 // Adds the given marker to the map
@@ -201,19 +187,6 @@ Map._resize = function(e) {
 
   // Update the dimensions of the map
   Map.ol.updateSize();
-};
-
-// Temporary function to generate random markers
-Map._randMarkers = function(count) {
-  var markers = [];
-  for (var i = 0; i < count; i++) {
-    var dx = ((parseInt(Math.random() * 3700))) + 200;
-    var dy = ((parseInt(Math.random() * 2700))) + 700;
-    var kx = ((parseInt(Math.random() * 3700))) + 200;
-    var ky = ((parseInt(Math.random() * 2700))) + 700;
-    markers.push({ dx: dx, dy: dy, kx: kx, ky: ky });
-  }
-  return markers;
 };
 
 // Custom pan panel used to set the slide factor

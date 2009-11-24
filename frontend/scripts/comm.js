@@ -4,13 +4,10 @@
 // Register the communication object as a jQuery extension
 $.extend({ comm: {
 
-  SERVICE: "live", // The address of the dynamic update servlet
+  SERVICE: "live", // The address of the dynamic update service
   processors: {}, // A map of registered data processors
   timestamp: 0, // Stores the last update time from the server
   errors: 0, // The number of consecutive communication errors
-
-  // Check if real-time data updates should be used
-  enabled: (location.href.match(/(.*\?update.*)|(.*&update.*)/i) != null),
 
   // Registers a processor to a type of data
   bind: function(type, processor) {
@@ -38,16 +35,8 @@ $.extend({ comm: {
     }
   },
 
-  // Starts the dynamic update scheduler
-  start: function() {
-    if (this.enabled) {
-      var self = this;
-      setTimeout(function() { self._update(); }, 2000);
-    }
-  },
-
   // Makes an update request to the server to get new data
-  _update: function(type, all) {
+  update: function(type, all) {
 
     // Build a list of request parameters
     var params = {
@@ -112,7 +101,7 @@ $.extend({ comm: {
 
     // Request the next set of updates from the server
     var self = this;
-    setTimeout(function() { self._update(); }, delay);
+    setTimeout(function() { self.update(); }, delay);
   }
 
 }});

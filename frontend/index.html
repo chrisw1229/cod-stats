@@ -21,6 +21,7 @@
     <script type="text/javascript" src="scripts/ui.ticker.js"></script>
     <script type="text/javascript" src="scripts/ui.meter.js"></script>
     <script type="text/javascript" src="scripts/ui.map.js"></script>
+    <script type="text/javascript" src="scripts/page.live.js"></script>
 
     <style type="text/css">
       html {
@@ -37,22 +38,6 @@
         top: 8.1em;
       }
     </style>
-
-    <script type="text/javascript">
-      $(function() {
-
-        // Load the jQuery UI components
-        $("#nav").navigation();
-        $("#ticker").ticker();
-        $("#meter").meter();
-
-        // Load the map component
-        Map.load("#map", { map: "carentan" });
-
-        // Start adding dynamic content
-        $.comm.start();
-      });
-    </script>
   </head>
   <body>
     <div id="nav"></div>
