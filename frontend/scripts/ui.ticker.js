@@ -71,11 +71,16 @@ $.widget("ui.ticker", {
     this._unbindItems();
     this.itemsDiv.empty();
 
+    // Check if there is at least 1 item to display
+    if (this.options.items.length == 0) {
+      return;
+    }
+
     // Calculate the number of ticker items that will fit on screen at once
     this.maxW = maxW;
     var prototype = this._createItem();
     var itemW = prototype.outerWidth(true);
-    var count = Math.ceil(maxW / itemW);
+    var count = Math.min(this.options.items.length, Math.ceil(maxW / itemW));
 
     // Generate a group to hold a set of ticker items
     this.group1 = $('<div class="ui-ticker-slider"/>').appendTo(this.itemsDiv);
@@ -95,6 +100,9 @@ $.widget("ui.ticker", {
     // Bind events to all the ticker items
     this._bindItems($("div.ui-ticker-item", this.itemsDiv));
 
+    // Fill the first group with data
+    this._loadGroup(this.group1);
+
     // Configure the ticker animation
     var groupW = this.group1.outerWidth(true);
     this.anim = {
@@ -104,9 +112,10 @@ $.widget("ui.ticker", {
       x1: 0, x2: groupW, moved: 0, state: 0
     };
 
-    // Fill the first group with data and start
-    this._loadGroup(this.group1);
-    this.start();
+    // Start the animation if all the items do not fit
+    if (this.options.items.length > count || count * itemW > maxW) {
+      this.start();
+    }
   },
 
   _animate: function() {
