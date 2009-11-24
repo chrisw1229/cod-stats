@@ -4,8 +4,13 @@ $(function() {
 // Register the page manager as a jQuery extension
 $.extend({ mgr: {
 
+  // Indicates whether or not live updates should be retrieved
   update: (location.href.match(/(.*\?update.*)|(.*&update.*)/i) != null),
 
+  // Indicates whether or not the test service should be used
+  test: (location.href.match(/(.*\?test.*)|(.*&test.*)/i) != null),
+
+  // TODO Remove this function that generates random map markers
   randMarkers: function(count) {
     var markers = [];
     for (var i = 0; i < count; i++) {
@@ -16,6 +21,16 @@ $.extend({ mgr: {
       markers.push({ dx: dx, dy: dy, kx: kx, ky: ky });
     }
     return markers;
+  },
+
+  // Server callback when the game changes
+  gameChanged: function(data) {
+    Map.setTiles(data.map);
+  },
+
+  // Server callback when map markers change
+  mapChanged: function(data) {
+    Map.addMarkers(data);
   }
 }});
 
@@ -24,18 +39,25 @@ $.extend({ mgr: {
   $("#ticker").ticker();
   $("#meter").meter();
 
-  // Load the map component with a default map
-  Map.load("#map", { map: "carentan" });
-
   // Check whether dynamic updates are enabled
   if ($.mgr.update) {
 
+    // Load the map component with an empty map
+    try {
+    Map.load("#map");
+    } catch (e) { alert(e); }
+
     // Configure the network processors
-    $.comm.bind("map", Map.addMarkers);
+    $.comm.service = ($.mgr.test ? "test" : "live");
+    $.comm.bind("game", $.mgr.gameChanged);
+    $.comm.bind("map", $.mgr.mapChanged);
 
     // Start fetching data from the server
     setTimeout(function() { $.comm.update(); }, 2000);
   } else {
+
+    // Load the map component with a default set of tiles
+    Map.load("#map", { tiles: "carentan" });
 
     // Fill the map with random markers if dynamic updates are disabled
     setTimeout(function() { Map.addMarkers($.mgr.randMarkers(10)); }, 1000);

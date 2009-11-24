@@ -4,7 +4,7 @@
 // Register the communication object as a jQuery extension
 $.extend({ comm: {
 
-  SERVICE: "live", // The address of the dynamic update service
+  service: "", // The address of the communication service
   processors: {}, // A map of registered data processors
   timestamp: 0, // Stores the last update time from the server
   errors: 0, // The number of consecutive communication errors
@@ -46,7 +46,7 @@ $.extend({ comm: {
 
     // Configure the request options
     var options = {
-      url: this.SERVICE,
+      url: this.service,
       data: params,
       dataType: "json",
       cache: false,
@@ -77,8 +77,11 @@ $.extend({ comm: {
         // Pass the parsed message to all matching processors
         var list = this.processors[msg.type];
         if (list != null) {
-          for (var processor in list) {
-            processor(msg.data);
+          for (var i = 0; i < list.length; i++) {
+            var processor = list[i];
+            if ($.isFunction(processor)) {
+              processor(msg.data);
+            }
           }
         }
       }

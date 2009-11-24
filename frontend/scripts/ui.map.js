@@ -45,10 +45,10 @@ Map._init = function(element, options) {
   Map.ol = new OpenLayers.Map(Map.owner.attr("id"), mapOpts);
 
   // Create the map layers
-  Map._initTileLayer();
-  Map._initTargetLayer();
-  Map._initMarkerLayer("death");
-  Map._initMarkerLayer("kill");
+  Map.tileLayer = Map._initTileLayer();
+  Map.targetLayer = Map._initTargetLayer();
+  Map.deathLayer = Map._initMarkerLayer("death");
+  Map.killLayer = Map._initMarkerLayer("kill");
 
   // Set control tool tips
   $(".olControlPanNorthItemInactive").attr("title", "Pan up");
@@ -69,8 +69,26 @@ Map._init = function(element, options) {
   Map._resize();
 };
 
+// Sets the tile layer displayed by the map
+Map.setTiles = function(tiles) {
+
+  // Check if the tile set is actually different
+  if (Map.options.tiles != tiles) {
+
+    // Check if there is an old tile layer to remove
+    if (Map.tileLayer) {
+      Map.ol.removeLayer(Map.tileLayer);
+    }
+
+    // Initialize a layer for the new tile set
+    Map.options.tiles = tiles;
+    Map.tileLayer = Map._initTileLayer();
+  }
+};
+
 // Adds the given marker to the map
 Map.addMarkers = function(markers) {
+  markers = ($.isArray(markers) ? markers : [ markers ]);
 
   // Remove the oldest markers if the given array exceeds the max
   if (markers.length > Map.options.maxMarkers) {
@@ -106,24 +124,28 @@ Map.addMarkers = function(markers) {
   }
 
   // Add all the markers to the appropriate layers
-  Map.ol.layers[1].addFeatures(targets);
-  Map.ol.layers[2].addFeatures(deaths);
-  Map.ol.layers[3].addFeatures(kills);
+  Map.targetLayer.addFeatures(targets);
+  Map.deathLayer.addFeatures(deaths);
+  Map.killLayer.addFeatures(kills);
   Map.markerCnt += markers.length;
 };
 
 // Creates the base layer that displays map tiles
 Map._initTileLayer = function() {
 
-  // Configure the layer and add it to the map
+  // Configure the tile layer
   var layerOpts = {
     getURL: Map._tileURL,
     layername: "base",
     transitionEffect: "resize",
     type: "jpg"
   };
-  Map.ol.addLayer(new OpenLayers.Layer.TMS("Tiles",
-      "tiles/" + Map.options.map + "/", layerOpts));
+
+  // Add the tile layer to the map
+  var layer = new OpenLayers.Layer.TMS("Tiles",
+      "tiles/" + Map.options.tiles + "/", layerOpts);
+  Map.ol.addLayer(layer);
+  return layer;
 };
 
 // Creates a layer that displays association lines
@@ -134,12 +156,16 @@ Map._initTargetLayer = function() {
     strokeColor: "#ffb709", strokeWidth: 1
   });
 
-  // Configure the layer and add it to the map
+  // Configure the target layer
   var layerOpts = {
     styleMap: new OpenLayers.StyleMap({ "default": styleOpts }),
     rendererOptions: { yOrdering: true }
   }
-  Map.ol.addLayer(new OpenLayers.Layer.Vector("Targets", layerOpts));
+
+  // Add the target layer to the map
+  var layer = new OpenLayers.Layer.Vector("Targets", layerOpts);
+  Map.ol.addLayer(layer);
+  return layer;
 };
 
 // Creates a layer that displays marker graphics
@@ -157,22 +183,34 @@ Map._initMarkerLayer = function(type) {
     }
   });
 
-  // Configure the layer and add it to the map
+  // Configure the marker layer
   var layerOpts = {
     styleMap: new OpenLayers.StyleMap({ "default": styleOpts }),
     strategies: Map.options.cluster ? [new OpenLayers.Strategy.Cluster()] : null,
     rendererOptions: { yOrdering: true }
   }
-  Map.ol.addLayer(new OpenLayers.Layer.Vector(type, layerOpts));
+
+  // Add the marker layer to the map
+  var layer = new OpenLayers.Layer.Vector(type, layerOpts);
+  Map.ol.addLayer(layer);
+  return layer;
 };
 
 // Builds the URL to a single tile for the given map bounds
 Map._tileURL = function(bounds) {
+
+  // Check whether a valid tile set was provided
+  if (Map.options.tiles == undefined) {
+    return null;
+  }
+
+  // Calculate the tile attributes for the given bounds
   var res = this.map.getResolution();
   var x = Math.round((bounds.left - this.maxExtent.left) / (res * this.tileSize.w));
   var y = Math.round((this.maxExtent.top - bounds.top) / (res * this.tileSize.h));
   var z = this.map.getZoom();
 
+  // Build a url to the appropriate tile
   var path = "tile_" + z + "_" + y + "_" + x + "." + this.type;
   var url = (url instanceof Array ? this.selectUrl(path, url) : this.url);
   return (url + path);
