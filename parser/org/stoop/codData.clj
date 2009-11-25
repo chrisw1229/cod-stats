@@ -1,6 +1,15 @@
 (ns org.stoop.codData
   (:use clojure.contrib.seq-utils))
 
+;Map data
+(defn make-coord-transformer [constant x-multiplier y-multiplier]
+  #(+ (+ constant (* x-multiplier %1)) (* y-multiplier %2)))
+
+(def carentan-x-transformer (make-coord-transformer 1085.8 -0.0142 0.7238))
+(def carentan-y-transformer (make-coord-transformer 1654.0 0.7171 0.0083))
+(def peaks-x-transformer (make-coord-transformer 2618.2 0.5342 -0.0348))
+(def peaks-y-transformer (make-coord-transformer 2344.2 0.0043 -0.5479))
+
 ;Weapon categories
 
 (def *pistols* ["luger_mp" 
