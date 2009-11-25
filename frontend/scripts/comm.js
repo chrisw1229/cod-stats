@@ -5,6 +5,7 @@
 $.extend({ comm: {
 
   service: "", // The address of the communication service
+  params: {}, // Optional set of parameters to add to the request
   processors: {}, // A map of registered data processors
   timestamp: 0, // Stores the last update time from the server
   errors: 0, // The number of consecutive communication errors
@@ -43,6 +44,9 @@ $.extend({ comm: {
       type: (type ? type : ""),
       ts: (all ? 0 : this.timestamp)
     };
+    for (var param in this.params) {
+      params[param] = this.params[param];
+    }
 
     // Configure the request options
     var options = {

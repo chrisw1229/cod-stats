@@ -5,10 +5,10 @@ $(function() {
 $.extend({ mgr: {
 
   // Indicates whether or not live updates should be retrieved
-  update: (location.href.match(/(.*\?update.*)|(.*&update.*)/i) != null),
+  update: ($.getParam(location.href, "update") != null),
 
   // Indicates whether or not the test service should be used
-  test: (location.href.match(/(.*\?test.*)|(.*&test.*)/i) != null),
+  test: $.getParam(location.href, "test"),
 
   // TODO Remove this function that generates random map markers
   randMarkers: function(count) {
@@ -31,6 +31,15 @@ $.extend({ mgr: {
   // Server callback when map markers change
   mapChanged: function(data) {
     Map.addMarkers(data);
+  },
+
+  // Server callback when a log message is generated
+  logReceived: function(data) {
+    if (data.error) {
+      $.logger.error(data.msg, data.error);
+    } else {
+      $.logger.info(data.msg);
+    }
   }
 }});
 
@@ -43,14 +52,14 @@ $.extend({ mgr: {
   if ($.mgr.update) {
 
     // Load the map component with an empty map
-    try {
     Map.load("#map");
-    } catch (e) { alert(e); }
 
     // Configure the network processors
     $.comm.service = ($.mgr.test ? "test" : "live");
+    $.comm.params = ($.mgr.test ? { test: $.mgr.test } : { });
     $.comm.bind("game", $.mgr.gameChanged);
     $.comm.bind("map", $.mgr.mapChanged);
+    $.comm.bind("log", $.mgr.logReceived);
 
     // Start fetching data from the server
     setTimeout(function() { $.comm.update(); }, 2000);
