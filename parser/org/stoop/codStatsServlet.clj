@@ -2,7 +2,7 @@
 (ns org.stoop.codStatsServlet
   (:gen-class :extends javax.servlet.http.HttpServlet)
   (:use org.stoop.codStatsIo org.stoop.codStatsRealTime
-	compojure.http clojure.contrib.json.write))
+	compojure.http clojure.contrib.json.write clojure.contrib.seq-utils))
 
 (defn parse-integer [str]
   (try (Integer/parseInt str) 
@@ -24,11 +24,17 @@
        (contains? record :time)))
 
 (defn process-records [records]
-  (conj [{:type "ts" :data (count records)}
-	 {:type "map" :data (filter map-record? records)}
-	 {:type "game" :data (last (filter game-record? records))}]
-	(for [record records :when (event-record? record)]
-	  {:type "event" :data record})))
+  (let [map-records (filter map-record? records)
+	game-records (filter game-record? records)
+	event-records (filter event-record? records)]
+    (flatten (filter #(not (nil? %)) [(if (> (count map-records) 0)
+					(for [record map-records]
+					  {:type "map" :data record}))
+				      (if (> (count game-records) 0)
+					{:type "game" :data (last game-records)})
+				      (if (> (count event-records) 0)
+					(for [record event-records]
+					  {:type "event" :data record}))]))))
 
 (defroutes cod-stats-routes
   (GET "/stats/live"
