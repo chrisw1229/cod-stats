@@ -1,5 +1,6 @@
 (ns org.stoop.codParser
-  (:use name.choi.joshua.fnparse org.stoop.parser))
+  (:use name.choi.joshua.fnparse org.stoop.parser
+	clojure.contrib.str-utils))
 
 (defstruct time-struct :minute :second)
 
@@ -369,10 +370,5 @@
 	    last-entry (invisi-conc log-line (opt line-break))]
     (conj entries last-entry)))
 
-;(defn parse-log [file]
-;  (parse (slurp file) log-file))
-
 (defn parse-log [file]
-  (with-open [fr (java.io.FileReader. file)
-              br (java.io.BufferedReader. fr)]
-    (vec (doall (map #(parse % log-line) (line-seq br))))))
+  (map #(parse % log-line) (re-split #"\n" (slurp file))))
