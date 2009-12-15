@@ -371,4 +371,4 @@
     (conj entries last-entry)))
 
 (defn parse-log [file]
-  (map #(parse % log-line) (re-split #"\n" (slurp file))))
+  (map #(parse % log-line) (re-split #"[\r*\n]+" (slurp file))))
