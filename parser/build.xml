@@ -40,9 +40,7 @@
       <classpath path="${src.dir}" />
       <sysproperty key="clojure.compile.path" value="${classes.dir}" />
       <arg value="org.stoop.codData" />
-      <arg value="name.choi.joshua.fnparse" />
-      <arg value="org.stoop.parser" />
-      <arg value="org.stoop.codParser" />
+      <arg value="org.stoop.codParser2" />
       <arg value="org.stoop.codStatsIo" />
       <arg value="org.stoop.codStatsRealTime" />
       <arg value="org.stoop.codAnalytics" />

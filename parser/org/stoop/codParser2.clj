@@ -163,8 +163,12 @@
 (def get-game-event (domonad state-m
 			     [_ get-string
 			      event-source get-person
-			      event get-string]
-			     {:player event-source :event event}))
+			      event get-string
+			      event-loc get-location
+			      source-angle get-float
+			      source-stance get-string]
+			     {:player event-source :event event 
+			      :location event-loc :angle source-angle :stance source-stance}))
 
 (defn get-win-loss-type [str-seq]
   (when (> (count str-seq) 0)
@@ -185,13 +189,78 @@
 			      round-time get-float]
 			     {:game-type game-type :map-name map-name :round-time round-time}))
 
+(defn line-dispatch [str-seq]
+  (let [first-entry (first str-seq)]
+    (cond
+      (= "Shell" first-entry) (first (get-shell-shock str-seq))
+      (= "Spec" first-entry) (first (get-spectator str-seq))
+      (= "Spawn" first-entry) (first (get-spawn str-seq))
+      (or (= "K" first-entry) (= "D" first-entry)) (first (get-dk str-seq))
+      (= "Use" first-entry) (first (get-use-vehicle str-seq))
+      (or (= "say" first-entry) (= "sayteam" first-entry)) (first (get-talk str-seq))
+      (or (= "Weapon" first-entry) (= "Use" first-entry)) (first (get-pickup str-seq))
+      (or (= "J" first-entry) (= "Q" first-entry)) (first (get-connection str-seq))
+      (or (= "W" first-entry) (= "L" first-entry)) (first (get-win-loss str-seq))
+      (= "Game" first-entry) (first (get-game-start str-seq)))))
+
 (defn parse-time [time-string]
   (let [split-seq (re-split #":" time-string)]
     (+ (Float/parseFloat (first split-seq)) (/ (Float/parseFloat (second split-seq)) 60))))
 
-(defn split-line [line]
+(defn parse-line [line]
   (let [split-seq (re-split #" " (.trim line) 2)]
-    {:time (parse-time (first split-seq)) :entry (re-split #";" (second split-seq))}))
+    {:time (parse-time (first split-seq)) :entry (line-dispatch (re-split #";" (second split-seq)))}))
 
 (defn split-log [file]
-  (map split-line (re-split #"[\r*\n]+" (slurp file))))
+  (map parse-line (re-split #"[\r*\n]+" (slurp file))))
+
+(defn player? [potential-struct]
+  (and (contains? potential-struct :num)
+       (contains? potential-struct :id)
+       (contains? potential-struct :team)
+       (contains? potential-struct :name)))
+
+(defn hit-info? [potential-struct]
+  (and (contains? potential-struct :weapon)
+       (contains? potential-struct :damage)
+       (contains? potential-struct :type)
+       (contains? potential-struct :area)))
+
+(defn damage-kill? [potential-struct]
+  (and (contains? potential-struct :type)
+       (contains? potential-struct :victim)
+       (contains? potential-struct :attacker)
+       (contains? potential-struct :hit-details)))
+(defn kill? [dk-struct]
+  (= (dk-struct :type) :kill))
+(defn self-damage? [dk-struct]
+  (= (dk-struct :victim) (dk-struct :attacker)))
+(defn team-damage? [dk-struct]
+  (= (:team (dk-struct :victim)) (:team (dk-struct :attacker))))
+
+(defn talk? [potential-struct]
+  (and (contains? potential-struct :player)
+       (contains? potential-struct :message)))
+
+(defn pickup? [potential-struct]
+  (and (contains? potential-struct :player)
+       (contains? potential-struct :type)
+       (contains? potential-struct :item)))
+
+(defn connection? [potential-struct]
+  (and (contains? potential-struct :player)
+       (contains? potential-struct :action)))
+
+(defn game-event? [potential-struct]
+  (and (contains? potential-struct :player)
+       (contains? potential-struct :event)))
+
+(defn win-loss? [potential-struct]
+  (and (contains? potential-struct :team)
+       (contains? potential-struct :players)
+       (contains? potential-struct :type)))
+
+(defn start-game? [potential-struct]
+  (and (contains? potential-struct :game-type)
+       (contains? potential-struct :map-name)
+       (contains? potential-struct :round-time)))

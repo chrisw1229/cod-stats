@@ -1,5 +1,5 @@
 (ns org.stoop.codStatsRealTime
-  (:use org.stoop.codParser org.stoop.parser org.stoop.codData
+  (:use org.stoop.codParser2 org.stoop.codData
 	clojure.contrib.seq-utils))
 
 ;Temporary, need to update my clojure-contrib
@@ -65,7 +65,7 @@
   (dosync (ref-set *game-records* (conj @*game-records* {:team team :time 0}))))
 
 (defn process-input-line [input-line]
-  (let [parsed-input (parse input-line log-line)]
+  (let [parsed-input (parse-line input-line)]
     ;if this is a new-game record reset game-records
     (cond
       (start-game? (parsed-input :entry))
