@@ -5,6 +5,11 @@ $.widget("ui.meter", {
   _init: function() {
     var self = this;
 
+    // Initialize the component attributes
+    this.value = this.options.value;
+    this.max = this.options.max;
+    this.milestones = [];
+
     // Build the document model
     this.element.addClass("ui-meter");
     this.barDiv = $('<div class="ui-progressbar ui-widget ui-widget-content ui-corner-all ui-meter-bar"/>').appendTo(this.element);
@@ -14,7 +19,9 @@ $.widget("ui.meter", {
     // Bind the event handlers
     $(window).bind("resize.meter", function() { self._resize(); });
 
+    // Set the initial meter appearance and add any default markers
     this._resize();
+    this.addMilestones(this.options.milestones);
   },
 
   destroy: function() {
@@ -29,19 +36,32 @@ $.widget("ui.meter", {
     $.widget.prototype.destroy.apply(this, arguments);
   },
 
-  start: function() {
-    if (!this.running) {
-      var self = this;
-      var dur = (this.options.max / this.maxW) * 60000;
-      this.running = setInterval(function() { self._animate(); }, dur);
+  addEvent: function(event) {
+    this.value = event.value;
+    if (event.type) {
+      this.addMilestones(event);
+    } else {
+      this._update();
     }
   },
 
-  stop: function() {
-    if (this.running) {
-      clearInterval(this.running);
-      this.running = undefined;
+  addMilestones: function(milestones) {
+    milestones = ($.isArray(milestones) ? milestones : [ milestones ]);
+
+    for (var i = 0; i < milestones.length; i++) {
+      this._createMilestone(milestones[i]);
+      this.milestones.push(milestones[i]);
     }
+    this._update();
+  },
+
+  reset: function() {
+    this.value = 0;
+    for (var i = 0; i < this.milestones.length; i++) {
+      this.milestones[i].div.remove();
+    }
+    this.milestones = [];
+    this._update();
   },
 
   _resize: function() {
@@ -52,9 +72,6 @@ $.widget("ui.meter", {
       return;
     }
 
-    // Stop the current meter animation if applicable
-    this.stop();
-
     // Compute the initial element dimensions
     var markerW = this.markerDiv.width();
     var barW = (maxW - markerW);
@@ -63,51 +80,34 @@ $.widget("ui.meter", {
     this.markerDiv.hide();
     this.maxW = maxW;
     this.barW = barW;
-
-    // Build the milestone models
-    for (var i = 0; i < this.options.milestones.length; i++) {
-      this._createMilestone(this.options.milestones[i]);
-    }
-
-    // Configure and start the meter animation
-    var value = barW * (this.options.value / this.options.max);
-    this.anim = { valuePos: value, offset: (markerW / 2), maxW: barW };
-    this.start();
+    this._update();
   },
 
-  _animate: function() {
-    if (!this.running) {
-      return;
-    }
+  _update: function() {
 
     // Adjust the position of the progress bar value and marker
-    var leftPos = this.anim.valuePos++;
-    this.valueDiv.css("width", leftPos);
-    this.markerDiv.css("left", (leftPos - this.anim.offset));
+    this.markerL = this.barW * (this.value / this.max);
+    this.valueDiv.css("width", this.markerL);
+    this.markerDiv.css("left", this.markerL - (this.markerDiv.width() / 2));
     this.markerDiv.show();
 
     // Display any milestones that have occurred
-    for (var i = 0; i < this.options.milestones.length; i++) {
-      var milestone = this.options.milestones[i];
-      if (leftPos >= milestone.valuePos) {
+    for (var i = 0; i < this.milestones.length; i++) {
+      var milestone = this.milestones[i];
+      if (this.value >= milestone.value) {
+        var pos = this.barW * (milestone.value / this.max) - (milestone.div.width() / 2);
+        milestone.div.css("left", pos);
         milestone.div.show();
       } else {
         milestone.div.hide();
       }
     }
-
-    // Stop the animation when the meter reaches the end
-    if (this.anim.valuePos > this.anim.maxW) {
-      this.stop();
-    }
   },
 
   _createMilestone: function(milestone) {
-    milestone.valuePos = this.barW * (milestone.value / this.options.max);
     milestone.div = $('<div class="ui-meter-milestone icon-team icon-team-'
         + milestone.type + '"/>').appendTo(this.barDiv);
     milestone.div.attr("title", milestone.desc);
-    milestone.div.css("left", milestone.valuePos);
     milestone.div.hide();
   }
 
@@ -116,18 +116,9 @@ $.widget("ui.meter", {
 $.extend($.ui.meter, {
   version: "1.7.2",
   defaults: {
-    max: 5,
+    max: 100,
     value: 0,
-    milestones: [
-      { value: 0.5, type: "a" },
-      { value: 1, type: "b" },
-      { value: 1.5, type: "r" },
-      { value: 2, type: "g" },
-      { value: 2.5, type: "a" },
-      { value: 3, type: "b" },
-      { value: 3.5, type: "r" },
-      { value: 4, type: "g" }
-    ]
+    milestones: []
   }
 });
 
