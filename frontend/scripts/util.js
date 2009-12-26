@@ -4,17 +4,40 @@
 // Register the logger object as a jQuery extension
 $.extend({ logger: {
 
-  info: function(message, exception) {
-    alert("INFO: " + message + (exception ? "\n" + exception : ""));
+  enabled: true,
+
+  listener: undefined,
+
+  listen: function(event) {
+    $.logger.log(event);
   },
 
-  warn: function(message, exception) {
-    alert("WARN: " + message + (exception ? "\n" + exception : ""));
+  info: function(msg, exc) {
+    if (this.enabled) { this._fire({ type: "info", msg: msg, exc: exc }); }
   },
 
-  error: function(message, exception) {
-    alert("ERROR: " + message + (exception ? "\n" + exception : ""));
+  error: function(msg, exc) {
+    if (this.enabled) { this._fire({ type: "error", msg: msg, exc: exc }); }
+  },
+
+  debug: function(message, exc) {
+    if (this.enabled) { this._fire({ type: "debug", msg: msg, exc: exc }); }
+  },
+
+  log: function(event) {
+    if (this.enabled && event) {
+      if (event.info) { this.info(event.info, event.exc); }
+      if (event.error) { this.error(event.error, event.exc); }
+      if (event.debug) { this.debug(event.debug, event.exc); }
+    }
+  },
+
+  _fire: function(event) {
+    if (this.enabled && this.listener != undefined) {
+      this.listener(event);
+    }
   }
+
 }});
 
 $.extend({
