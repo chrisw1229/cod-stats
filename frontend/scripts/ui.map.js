@@ -98,9 +98,11 @@ Map.addMarkers = function(markers) {
   // Remove the oldest markers if the new total exceeds the max
   if (Map.markerCnt + markers.length > Map.options.maxMarkers) {
     var offset = (Map.markerCnt + markers.length) - Map.options.maxMarkers;
-    for (var i = 1; i < Map.ol.layers.length; i++) {
+    for (var i = 0; i < Map.ol.layers.length; i++) {
       var layer = Map.ol.layers[i];
-      layer.removeFeatures(layer.features.slice(0, offset));
+      if (layer.features && layer.features.length > 0) {
+        layer.removeFeatures(layer.features.slice(0, offset));
+      }
     }
     Map.markerCnt -= offset;
   }
@@ -128,6 +130,17 @@ Map.addMarkers = function(markers) {
   Map.deathLayer.addFeatures(deaths);
   Map.killLayer.addFeatures(kills);
   Map.markerCnt += markers.length;
+};
+
+// Removes all the map markers
+Map.clearMarkers = function() {
+  for (var i = 0; i < Map.ol.layers.length; i++) {
+    var layer = Map.ol.layers[i];
+    if (layer.features && layer.features.length > 0) {
+      layer.removeFeatures(layer.features);
+    }
+  }
+  Map.markerCnt = 0;
 };
 
 // Creates the base layer that displays map tiles
