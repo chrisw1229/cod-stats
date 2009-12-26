@@ -1,0 +1,14 @@
+{ type: "log", data: { info: "Setting map to carentan" } } 
+{ type: "game", data: { map: "carentan", type: "tdm", time: 30 } }
+
+
+
+{ type: "log", data: { info: "Setting map to peaks" } }
+{ type: "game", data: { map: "peaks", type: "tdm", time: 30 } }
+
+
+
+{ type: "log", data: { info: "Setting map to carentan" } } 
+{ type: "game", data: { map: "carentan", type: "tdm", time: 30 } }
+
+{ type: "log", data: { info: "Test complete" } }  

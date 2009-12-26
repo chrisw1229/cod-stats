@@ -1,8 +1,10 @@
-{ type: "log", data: { msg: "Setting map to carentan" } } 
+{ type: "log", data: { info: "Setting map to carentan" } } 
 { type: "game", data: { map: "carentan", type: "tdm", time: 30 } }
-{ type: "log", data: { msg: "Displaying 5 sets of map markers" } }
+{ type: "log", data: { info: "Displaying 5 sets of map markers" } }
 { type: "map", data: { kx: 2500, ky: 1312, dx: 1618, dy: 1361 } }
 { type: "map", data: { kx: 2498, ky: 1303, dx: 1602, dy: 1591 } }
 { type: "map", data: { kx: 2495, ky: 1296, dx: 1625, dy: 1876 } }
 { type: "map", data: { kx: 2416, ky: 2913, dx: 1841, dy: 2666 } }
 { type: "map", data: { kx: 2660, ky: 1153, dx: 3199, dy: 1943 } }
+
+{ type: "log", data: { info: "Test complete" } }

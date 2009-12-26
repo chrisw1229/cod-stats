@@ -1,0 +1,28 @@
+{ type: "log", data: { info: "Setting game time to 30min" } } 
+{ type: "game", data: { map: "carentan", type: "tdm", time: 30 } }
+{ type: "log", data: { info: "Setting time to 10% by 1% units" } } 
+{ type: "event", data: { value: 1 } }
+{ type: "event", data: { value: 2 } }
+{ type: "event", data: { value: 3 } }
+{ type: "event", data: { value: 4 } }
+{ type: "event", data: { value: 5 } }
+{ type: "event", data: { value: 6 } }
+{ type: "event", data: { value: 7 } }
+{ type: "event", data: { value: 8 } }
+{ type: "event", data: { value: 9 } }
+{ type: "event", data: { value: 10 } }
+{ type: "log", data: { info: "Setting time to 100% by 10% units" } } 
+{ type: "event", data: { value: 20 } }
+{ type: "event", data: { value: 30 } }
+{ type: "event", data: { value: 40 } }
+{ type: "event", data: { value: 50 } }
+{ type: "event", data: { value: 60 } }
+{ type: "event", data: { value: 70 } }
+{ type: "event", data: { value: 80 } }
+{ type: "event", data: { value: 90 } }
+{ type: "event", data: { value: 100 } }
+{ type: "log", data: { info: "Resetting game time to 0%" } } 
+{ type: "game", data: { map: "carentan", type: "tdm", time: 30 } }
+
+
+{ type: "log", data: { info: "Test complete" } } 
