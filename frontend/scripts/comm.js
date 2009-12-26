@@ -4,20 +4,23 @@
 // Register the communication object as a jQuery extension
 $.extend({ comm: {
 
-  service: "", // The address of the communication service
+  service: "live", // The address of the communication service
   params: {}, // Optional set of parameters to add to the request
   processors: {}, // A map of registered data processors
   timestamp: 0, // Stores the last update time from the server
   errors: 0, // The number of consecutive communication errors
+  producer: undefined, // An optional function that produces synthetic packets
 
   // Registers a processor to a type of data
   bind: function(type, processor) {
-    var list = this.processors[type];
-    if (list == null) {
-      list = [];
-      this.processors[type] = list;
+    if (!$.isFunction(processor)) {
+      alert("Processor must be a function: " + processor);
+      return;
     }
+
+    var list = (this.processors[type] ? this.processors[type] : []);
     list.push(processor);
+    this.processors[type] = list;
   },
 
   // Unregisters a processor from a type of data
@@ -59,8 +62,17 @@ $.extend({ comm: {
       complete: $.call(this, "_handleComplete")
     };
 
-    // Send the request to the server
-    $.ajax(options);
+    // Check whether a synthetic packet producer is registered
+    if (this.producer) {
+
+      // Get the next packet from a local function
+      this._handleSuccess(this.producer(options));
+      this._handleComplete();
+    } else {
+
+      // Send the request to the server
+      $.ajax(options);
+    }
   },
 
   // Handles updated data responses from the server
@@ -81,10 +93,12 @@ $.extend({ comm: {
         // Pass the parsed message to all matching processors
         var list = this.processors[msg.type];
         if (list != null) {
-          for (var i = 0; i < list.length; i++) {
-            var processor = list[i];
-            if ($.isFunction(processor)) {
+          for (var j = 0; j < list.length; j++) {
+            try {
+              var processor = list[j];
               processor(msg.data);
+            } catch(err) {
+              $.logger.error("Error processing comm packet: " + msg.type, err);
             }
           }
         }
@@ -94,9 +108,8 @@ $.extend({ comm: {
 
   // Handles error responses from the server
   _handleError: function(request, status, error) {
-
-    // TODO Show this somewhere
     this.errors++;
+    $.logger.error("Error connecting to server", error);
   },
 
   // Handles cleanup after an update completes
