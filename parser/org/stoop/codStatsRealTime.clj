@@ -1,5 +1,5 @@
 (ns org.stoop.codStatsRealTime
-  (:use org.stoop.codParser2 org.stoop.codData
+  (:use org.stoop.codParser org.stoop.codData
 	clojure.contrib.seq-utils))
 
 ;Temporary, need to update my clojure-contrib

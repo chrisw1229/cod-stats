@@ -1,5 +1,5 @@
 (ns org.stoop.codAnalytics
-  (:use org.stoop.codParser org.stoop.parser org.stoop.codData))
+  (:use org.stoop.codParser org.stoop.codData))
 
 ;General stuff
 
