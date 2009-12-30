@@ -20,7 +20,7 @@ $.extend({ mgr: {
     if (ts == 0 || ts % 30 == 0) {
       packets.push({ type: "event", data: { value: 0 } });
     } else {
-      var data = { value: ((ts % 30) / 30) * 100 };
+      var data = { value: (ts % 30) };
       if (Math.floor(Math.random() * 100) > 80) {
         data.type = "abrg".charAt(Math.floor(Math.random() * 4));
       }
@@ -44,7 +44,7 @@ $.extend({ mgr: {
 
   // Server callback when the game changes
   gameChanged: function(data) {
-    $("#meter").meter("reset");
+    $("#meter").meter("reset", data.time);
     Map.clearMarkers();
     Map.setTiles(data.map);
   },

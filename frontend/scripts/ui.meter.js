@@ -55,11 +55,14 @@ $.widget("ui.meter", {
     this._update();
   },
 
-  reset: function() {
+  reset: function(max) {
     this.value = 0;
+    this.max = (max != undefined ? max : this.max);
+
     for (var i = 0; i < this.milestones.length; i++) {
       this.milestones[i].div.remove();
     }
+
     this.milestones = [];
     this._update();
   },

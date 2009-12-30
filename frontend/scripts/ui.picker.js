@@ -69,32 +69,34 @@ $.widget("ui.picker", {
   },
 
   _processIndex: function(items, status) {
-    if (status == "success") {
 
-      // Clear any previous list items
-      $("li", this.listDiv).unbind();
-      $("ul", this.listDiv).remove();
-
-      // Create elements for each list item entry
-      this.items = items;
-      var list = $('<ul/>').appendTo(this.listDiv);
-      for (var i = 0; i < items.length; i++) {
-        this._createItem(items[i]).appendTo(list);
-      }
-
-      // Bind event handlers to the list items
-      var self = this;
-      $("li", this.listDiv).each(function(i) {
-        $(this).bind("click", function() { self._itemSelected(i); });
-        $(this).bind("mouseenter", function() { $(this).addClass("ui-state-hover"); });
-        $(this).bind("mouseleave", function() { $(this).removeClass("ui-state-hover"); });
-      });
-
-      // Enable user interaction
-      this._enabled(true);
-    } else {
-      // TODO
+    // Check if the request was successful
+    if (status != "success") {
+      $.logger.error("Error retrieving list index: " + this.options.type, status);
+      return;
     }
+
+    // Clear any previous list items
+    $("li", this.listDiv).unbind();
+    $("ul", this.listDiv).remove();
+
+    // Create elements for each list item entry
+    this.items = items;
+    var list = $('<ul/>').appendTo(this.listDiv);
+    for (var i = 0; i < items.length; i++) {
+      this._createItem(items[i]).appendTo(list);
+    }
+
+    // Bind event handlers to the list items
+    var self = this;
+    $("li", this.listDiv).each(function(i) {
+      $(this).bind("click", function() { self._itemSelected(i); });
+      $(this).bind("mouseenter", function() { $(this).addClass("ui-state-hover"); });
+      $(this).bind("mouseleave", function() { $(this).removeClass("ui-state-hover"); });
+    });
+
+    // Enable user interaction
+    this._enabled(true);
   },
 
   _createItem: function(item) {
@@ -200,19 +202,11 @@ $.widget("ui.picker", {
 
   _processItem: function(data, status) {
     if (status == "success") {
-
-      // TODO Move this code to an extension file
-      $("#table tbody tr").remove();
-      var table = $("#table tbody");
-      for (var i = 0; i < data.length; i++) {
-        $('<tr><td>' + data[i].player + '</td><td>' + data[i].value
-            + '</td></tr>').appendTo(table);
-      }
       if (this.options.callback) {
-        this.callback(this.selection, data);
+        this.options.callback(this.selection, data);
       }
     } else {
-      // TODO
+      $.logger.error("Error selecting list item: " + this.selection.name, status);
     }
   }
 });

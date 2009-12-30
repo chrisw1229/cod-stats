@@ -1,4 +1,4 @@
-{ type: "log", data: { info: "Setting map to carentan" } } 
+{ type: "log", data: { info: "Setting map to carentan" } }
 { type: "game", data: { map: "carentan", type: "tdm", time: 30 } }
 { type: "log", data: { info: "Displaying 5 sets of map markers" } }
 { type: "map", data: { kx: 2500, ky: 1312, dx: 1618, dy: 1361 } }
