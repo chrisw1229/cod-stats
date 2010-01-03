@@ -10,9 +10,9 @@ $.extend({ mgr: {
     var packets = [ { type: "ts", data: ts + 1 } ];
 
     if (ts == 0 || ts % 60 == 0) {
-      packets.push({ type: "game", data: { map: "carentan", type: "tdm", time: 30 } });
+      packets.push({ type: "game", data: { map: "mp_carentan", type: "tdm", time: 30 } });
     } else if (ts % 30 == 0) {
-      packets.push({ type: "game", data: { map: "peaks", type: "tdm", time: 30 } });
+      packets.push({ type: "game", data: { map: "mp_peaks", type: "tdm", time: 30 } });
     } else {
       packets.push({ type: "map", data: $.mgr.randMarkers(1) });
     }

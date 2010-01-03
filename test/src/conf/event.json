@@ -1,5 +1,5 @@
 { type: "log", data: { info: "Setting max game time to 30s" } }
-{ type: "game", data: { map: "carentan", type: "tdm", time: 30 } }
+{ type: "game", data: { map: "mp_carentan", type: "tdm", time: 30 } }
 { type: "log", data: { info: "Adding 10 events" } }
 { type: "event", data: { time: 3, team: "a" } }
 { type: "event", data: { time: 6, team: "b" } }
@@ -12,7 +12,7 @@
 { type: "event", data: { time: 27, team: "a" } }
 { type: "event", data: { time: 30, team: "b" } }
 { type: "log", data: { info: "Resetting to 0 events" } }
-{ type: "game", data: { map: "carentan", type: "tdm", time: 30 } }
+{ type: "game", data: { map: "mp_carentan", type: "tdm", time: 30 } }
 
 
 { type: "log", data: { info: "Test complete" } }
