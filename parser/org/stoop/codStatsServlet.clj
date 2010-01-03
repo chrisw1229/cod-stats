@@ -40,8 +40,8 @@
   (GET "/stats/live"
     (let [ts (parse-integer (params :ts))]
       (if (< ts (count @*game-records*))
-	(json-str (process-records (drop ts @*game-records*)))
-	(json-str (process-records @*game-records*)))))
+	(json-str (conj (process-records (drop ts @*game-records*)) {:type "ts" :data (count @*game-records*)}))
+	(json-str (conj (process-records @*game-records*) {:type "ts" :data (count @*game-records*)})))))
 	;If = to # game-records, sleep for a bit then try to send
 	;Update to put game record types into its own object.  Currently in *game-records*
   (GET "/stats/start"
