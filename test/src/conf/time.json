@@ -1,21 +1,21 @@
 { type: "log", data: { info: "Setting max game time to 30s" } }
 { type: "game", data: { map: "carentan", type: "tdm", time: 30 } }
-{ type: "log", data: { info: "Setting time to 9s by 1s" } }
-{ type: "event", data: { value: 1 } }
-{ type: "event", data: { value: 2 } }
-{ type: "event", data: { value: 3 } }
-{ type: "event", data: { value: 4 } }
-{ type: "event", data: { value: 5 } }
-{ type: "event", data: { value: 6 } }
-{ type: "event", data: { value: 7 } }
-{ type: "event", data: { value: 8 } }
-{ type: "event", data: { value: 9 } }
-{ type: "event", data: { value: 10 } }
+{ type: "log", data: { info: "Setting time to 10s by 1s" } }
+{ type: "event", data: { time: 1 } }
+{ type: "event", data: { time: 2 } }
+{ type: "event", data: { time: 3 } }
+{ type: "event", data: { time: 4 } }
+{ type: "event", data: { time: 5 } }
+{ type: "event", data: { time: 6 } }
+{ type: "event", data: { time: 7 } }
+{ type: "event", data: { time: 8 } }
+{ type: "event", data: { time: 9 } }
+{ type: "event", data: { time: 10 } }
 { type: "log", data: { info: "Setting time to 30s by 5s" } }
-{ type: "event", data: { value: 15 } }
-{ type: "event", data: { value: 20 } }
-{ type: "event", data: { value: 25 } }
-{ type: "event", data: { value: 30 } }
+{ type: "event", data: { time: 15 } }
+{ type: "event", data: { time: 20 } }
+{ type: "event", data: { time: 25 } }
+{ type: "event", data: { time: 30 } }
 { type: "log", data: { info: "Resetting max game time to 0s" } }
 { type: "game", data: { map: "carentan", type: "tdm", time: 30 } }
 

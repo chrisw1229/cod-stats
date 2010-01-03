@@ -37,8 +37,8 @@ $.widget("ui.meter", {
   },
 
   addEvent: function(event) {
-    this.value = event.value;
-    if (event.type) {
+    this.value = event.time;
+    if (event.team) {
       this.addMilestones(event);
     } else {
       this._update();
@@ -97,8 +97,8 @@ $.widget("ui.meter", {
     // Display any milestones that have occurred
     for (var i = 0; i < this.milestones.length; i++) {
       var milestone = this.milestones[i];
-      if (this.value >= milestone.value) {
-        var pos = this.barW * (milestone.value / this.max) - (milestone.div.width() / 2);
+      if (this.value >= milestone.time) {
+        var pos = this.barW * (milestone.time / this.max) - (milestone.div.width() / 2);
         milestone.div.css("left", pos);
         milestone.div.show();
       } else {
@@ -109,7 +109,7 @@ $.widget("ui.meter", {
 
   _createMilestone: function(milestone) {
     milestone.div = $('<div class="ui-meter-milestone icon-team icon-team-'
-        + milestone.type + '"/>').appendTo(this.barDiv);
+        + milestone.team + '"/>').appendTo(this.barDiv);
     milestone.div.attr("title", milestone.desc);
     milestone.div.hide();
   }

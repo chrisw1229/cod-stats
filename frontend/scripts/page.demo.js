@@ -18,11 +18,11 @@ $.extend({ mgr: {
     }
 
     if (ts == 0 || ts % 30 == 0) {
-      packets.push({ type: "event", data: { value: 0 } });
+      packets.push({ type: "event", data: { time: 0 } });
     } else {
-      var data = { value: (ts % 30) };
+      var data = { time: (ts % 30) };
       if (Math.floor(Math.random() * 100) > 80) {
-        data.type = "abrg".charAt(Math.floor(Math.random() * 4));
+        data.team = "abrg".charAt(Math.floor(Math.random() * 4));
       }
       packets.push({ type: "event", data: data });
     }
