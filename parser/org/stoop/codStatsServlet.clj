@@ -39,7 +39,7 @@
 (defroutes cod-stats-routes
   (GET "/stats/live"
     (let [ts (parse-integer (params :ts))]
-      (if (< ts (count @*game-records*))
+      (if (<= ts (count @*game-records*))
 	(json-str (conj (process-records (drop ts @*game-records*)) {:type "ts" :data (count @*game-records*)}))
 	(json-str (conj (process-records @*game-records*) {:type "ts" :data (count @*game-records*)})))))
 	;If = to # game-records, sleep for a bit then try to send
