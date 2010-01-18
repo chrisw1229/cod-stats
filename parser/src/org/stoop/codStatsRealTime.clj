@@ -2,14 +2,14 @@
   (:use org.stoop.codParser org.stoop.codData
 	clojure.contrib.seq-utils))
 
-;Temporary, need to update my clojure-contrib
-(defn positions [pred coll]
-  (for [[idx elt] (indexed coll) :when (pred elt)] idx))
-
 ;Real time processing
 
 (def *game-records* (ref []))
-(def *player-stats-records* (ref []))
+(def *player-stats-map* (ref {}))
+
+(def *start-time* (ref (. System currentTimeMillis)))
+(defn calc-seconds [start-time-millis end-time-millis]
+  (int (* 0.001 (- end-time-millis start-time-millis))))
 
 ;Need some kind of storage for the records as they come in.
 ;Possibly store based upon the type of record?
@@ -19,50 +19,55 @@
 ;Store the just processed "new" data in the "old" data set.
 ;When a new game starts, reset the current stats and archive out the "old" data set.
 
-;photo - Where do i get this?
 (defstruct player-stats :name :photo :place :rank :team :kills :deaths :inflicted :received)
 
-(defn get-player [name records-ref]
-  (let [player (filter #(= name (% :name)) @records-ref)]
-    (if (> (count player) 0)
-      (first player)
-      (let [new-player (struct player-stats name "default.jpg" (+ 1 (count @records-ref)) 0 "none" 0 0 0 0)]
-	(dosync (ref-set records-ref (conj @records-ref new-player)))
+(defn get-player [player-struct]
+  (let [player (get @*player-stats-map* (:id player-struct))]
+    (if player
+      (do player)
+      (let [new-player (struct player-stats (:name player-struct) 
+			       "default.jpg" (inc (count @*player-stats-map*)) 0 "none" 0 0 0 0)]
+	(dosync (alter *player-stats-map* assoc (:id player-struct) new-player))
 	(do new-player)))))
 
-(defn get-player-index [name records]
-  (first (positions #(= name (% :name)) records)))
+(defn create-player-update-packet [player]
+  {:type "player"
+   :data [(merge {:update (:id player)} (get-player player))]})
 
-(defn replace-player [name new-stats records-ref]
-  (dosync (ref-set records-ref (assoc @records-ref (get-player-index name @records-ref) new-stats))))
+(defn update-player [player new-stats]
+  (dosync (alter *player-stats-map* assoc (:id player) new-stats)))
 
 (defn process-damage [attacker victim damage]
-  (let [old-attacker (get-player attacker *player-stats-records*)
-	old-victim (get-player victim *player-stats-records*)]
-    (replace-player attacker 
-		    (assoc old-attacker :inflicted (+ (old-attacker :inflicted) damage)) *player-stats-records*)
-    (replace-player victim 
-		    (assoc old-victim :received (+ (old-victim :received) damage)) *player-stats-records*)))
+  (let [old-attacker (get-player attacker)
+	old-victim (get-player victim)]
+    (update-player attacker (assoc old-attacker :inflicted (+ (old-attacker :inflicted) damage)))
+    (update-player victim (assoc old-victim :received (+ (old-victim :received) damage)))))
 
+;Need to update place upon each kill
 (defn process-kill [attacker victim kx ky dx dy x-transformer y-transformer]
-  (let [old-attacker (get-player attacker *player-stats-records*)
-	old-victim (get-player victim *player-stats-records*)
+  (let [old-attacker (get-player attacker)
+	old-victim (get-player victim)
         trans-kx (x-transformer kx ky)
 	trans-ky (y-transformer kx ky)
 	trans-dx (x-transformer dx dy)
 	trans-dy (y-transformer dx dy)]
-    (replace-player attacker (assoc old-attacker :kills (inc (old-attacker :kills))) *player-stats-records*)
-    (replace-player victim (assoc old-victim :deaths (inc (old-victim :deaths))) *player-stats-records*)
-    (dosync (ref-set *game-records* (conj @*game-records* {:kx trans-kx :ky trans-ky :dx trans-dx :dy trans-dy})))))
+    (update-player attacker (assoc old-attacker :kills (inc (old-attacker :kills))))
+    (update-player victim (assoc old-victim :deaths (inc (old-victim :deaths))))
+    (dosync (alter *game-records* conj 
+		   {:kx trans-kx :ky trans-ky :dx trans-dx :dy trans-dy}
+		   (create-player-update-packet attacker)
+		   (create-player-update-packet victim)))))
 
 ;Update to archive game-records for whole match stats calculation
 (defn process-start-game [game-type map-name round-time]
-  (dosync (ref-set *game-records* [{:map map-name :type game-type :time round-time}])))
+  (dosync (ref-set *game-records* [{:map map-name :type game-type :time round-time}])
+	  (ref-set *player-stats-map* {})
+	  (ref-set *start-time* (. System currentTimeMillis))))
 
-;Update to use timer to set time in minutes for :time
 ;Don't have an obvious way to distinguish between american, british and russian
 (defn process-game-event [team]
-  (dosync (ref-set *game-records* (conj @*game-records* {:team team :time 0}))))
+  (dosync (alter *game-records* conj {:team team 
+				      :time (calc-seconds @*start-time* (. System currentTimeMillis))})))
 
 (defn process-input-line [input-line]
   (let [parsed-input (parse-line input-line)]
@@ -75,23 +80,23 @@
 
       (damage-kill? (parsed-input :entry))
       (do
-	(process-damage (get-in parsed-input [:entry :attacker :name])
-			(get-in parsed-input [:entry :victim :name])
+	(process-damage (get-in parsed-input [:entry :attacker])
+			(get-in parsed-input [:entry :victim])
 			(get-in parsed-input [:entry :hit-details :damage]))
 	;Handle case of no location data as well
 	(if (kill? (parsed-input :entry))
 	  (do
-	    (process-kill (get-in parsed-input [:entry :attacker :name])
-			  (get-in parsed-input [:entry :victim :name])
+	    (process-kill (get-in parsed-input [:entry :attacker])
+			  (get-in parsed-input [:entry :victim])
 			  (get-in parsed-input [:entry :attacker-loc :x])
 			  (get-in parsed-input [:entry :attacker-loc :y])
 			  (get-in parsed-input [:entry :victim-loc :x])
 			  (get-in parsed-input [:entry :victim-loc :y])
 			  carentan-x-transformer
 			  carentan-y-transformer))))
+      
       (game-event? (parsed-input :entry))
-      (process-game-event (get-in parsed-input [:entry :player :team])
-			  (get-in parsed-input [:entry :event])))))
+      (process-game-event (get-in parsed-input [:entry :player :team])))))
 
 ;process-parsed-input
 ;if this is a damage-kill record
