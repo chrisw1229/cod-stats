@@ -43,6 +43,15 @@
     (update-player attacker (assoc old-attacker :inflicted (+ (old-attacker :inflicted) damage)))
     (update-player victim (assoc old-victim :received (+ (old-victim :received) damage)))))
 
+(defn- update-places []
+  (let [sorted-list (indexed (reverse (sort-by #(:kills (val %)) @*player-stats-map*)))]
+    (doall
+     (for [player-entry sorted-list]
+       (let [player-place (first player-entry)
+	     player-id (first (second player-entry))
+	     old-player (get @*player-stats-map* player-id)]
+	 (dosync (alter *player-stats-map* assoc player-id (assoc old-player :place (inc player-place)))))))))
+
 ;Need to update place upon each kill
 (defn process-kill [attacker victim kx ky dx dy x-transformer y-transformer]
   (let [old-attacker (get-player attacker)
@@ -53,6 +62,7 @@
 	trans-dy (y-transformer dx dy)]
     (update-player attacker (assoc old-attacker :kills (inc (old-attacker :kills))))
     (update-player victim (assoc old-victim :deaths (inc (old-victim :deaths))))
+    (update-places)
     (dosync (alter *game-records* conj 
 		   {:kx trans-kx :ky trans-ky :dx trans-dx :dy trans-dy}
 		   (create-player-update-packet attacker)
