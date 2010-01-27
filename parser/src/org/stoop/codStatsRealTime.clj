@@ -11,17 +11,12 @@
 (defn calc-seconds [start-time-millis end-time-millis]
   (int (* 0.001 (- end-time-millis start-time-millis))))
 
-;Need some kind of storage for the records as they come in.
-;Possibly store based upon the type of record?
-;Might as well go with the cached method.  So as data comes in, add it to a data set to be processed.
-;During processing, compute the stats for the current "new" data set.
-;Update the old stats based upon the new
-;Store the just processed "new" data in the "old" data set.
-;When a new game starts, reset the current stats and archive out the "old" data set.
-
 (defstruct player-stats :name :photo :place :rank :team :kills :deaths :inflicted :received)
 
-(defn get-player [player-struct]
+(defn get-player 
+  "Currently pulls the player's client id out of the player-struct and either returns the stats
+entry or creates a new entry and returns that."
+  [player-struct]
   (let [player (get @*player-stats-map* (:id player-struct))]
     (if player
       (do player)
@@ -30,58 +25,76 @@
 	(dosync (alter *player-stats-map* assoc (:id player-struct) new-player))
 	(do new-player)))))
 
-(defn create-player-update-packet [player]
+(defn create-player-update-packet 
+  "Creates a map to represent the player packet to send to the front end."
+  [player]
   {:type "player"
    :data [(merge {:update (:id player)} (get-player player))]})
 
-(defn update-player [player new-stats]
-  (dosync (alter *player-stats-map* assoc (:id player) new-stats)))
+(defn update-player 
+  "Merges new-stats with the player-stats structure currently associated with the player."
+  [player new-stats]
+  (dosync (alter *player-stats-map* assoc (:id player) (merge (get-player player) new-stats))))
 
-(defn process-damage [attacker victim damage]
+(defn process-damage 
+  "Increments the inflicted field for attacker and received field for victim by damage."
+  [attacker victim damage]
   (let [old-attacker (get-player attacker)
 	old-victim (get-player victim)]
-    (update-player attacker (assoc old-attacker :inflicted (+ (old-attacker :inflicted) damage)))
-    (update-player victim (assoc old-victim :received (+ (old-victim :received) damage)))))
+    (update-player attacker {:inflicted (+ (old-attacker :inflicted) damage)})
+    (update-player victim {:received (+ (old-victim :received) damage)})))
 
-(defn- update-places []
-  (let [sorted-list (indexed (reverse (sort-by #(:kills (val %)) @*player-stats-map*)))]
+(defn update-places 
+  "Recalculates the places for all players based upon current number of kills and sets them in map-ref."
+  [map-ref]
+  (let [sorted-list (indexed (reverse (sort-by #(:kills (val %)) @map-ref)))]
     (doall
      (for [player-entry sorted-list]
        (let [player-place (first player-entry)
 	     player-id (first (second player-entry))
-	     old-player (get @*player-stats-map* player-id)]
-	 (dosync (alter *player-stats-map* assoc player-id (assoc old-player :place (inc player-place)))))))))
+	     old-player (get @map-ref player-id)]
+	 (dosync (alter map-ref assoc player-id (assoc old-player :place (inc player-place)))))))))
 
-;Need to update place upon each kill
-(defn process-kill [attacker victim kx ky dx dy x-transformer y-transformer]
+(defn process-kill 
+  "Increments kills for attacker and deaths for victim.  Kills is not incremented for self kills.
+Also adds a map packet indicating the location of the kills and player update packets for both the attacker
+and victim to be sent to the frontend."
+  [attacker victim kx ky dx dy x-transformer y-transformer]
   (let [old-attacker (get-player attacker)
 	old-victim (get-player victim)
         trans-kx (x-transformer kx ky)
 	trans-ky (y-transformer kx ky)
 	trans-dx (x-transformer dx dy)
 	trans-dy (y-transformer dx dy)]
-    (update-player attacker (assoc old-attacker :kills (inc (old-attacker :kills))))
-    (update-player victim (assoc old-victim :deaths (inc (old-victim :deaths))))
-    (update-places)
+    (when (not (= (:name attacker) (:name victim)))
+      (update-player attacker {:kills (inc (old-attacker :kills))}))
+    (update-player victim {:deaths (inc (old-victim :deaths))})
+    (update-places *player-stats-map*)
     (dosync (alter *game-records* conj 
 		   {:kx trans-kx :ky trans-ky :dx trans-dx :dy trans-dy}
 		   (create-player-update-packet attacker)
 		   (create-player-update-packet victim)))))
 
 ;Update to archive game-records for whole match stats calculation
-(defn process-start-game [game-type map-name round-time]
+(defn process-start-game 
+  "Sets the data for the frontend to a game start packet, resets player stats records and resets the start
+time for this game."
+  [game-type map-name round-time]
   (dosync (ref-set *game-records* [{:map map-name :type game-type :time round-time}])
 	  (ref-set *player-stats-map* {})
 	  (ref-set *start-time* (. System currentTimeMillis))))
 
 ;Don't have an obvious way to distinguish between american, british and russian
-(defn process-game-event [team]
+(defn process-game-event 
+  "Adds an event packet to the data to be sent to the frontend."
+  [team]
   (dosync (alter *game-records* conj {:team team 
 				      :time (calc-seconds @*start-time* (. System currentTimeMillis))})))
 
-(defn process-input-line [input-line]
+(defn process-input-line
+  "Parses the input-line and then determines how to process the parsed input."
+  [input-line]
   (let [parsed-input (parse-line input-line)]
-    ;if this is a new-game record reset game-records
     (cond
       (start-game? (parsed-input :entry))
       (process-start-game (get-in parsed-input [:entry :game-type])
@@ -95,31 +108,14 @@
 			(get-in parsed-input [:entry :hit-details :damage]))
 	;Handle case of no location data as well
 	(if (kill? (parsed-input :entry))
-	  (do
-	    (process-kill (get-in parsed-input [:entry :attacker])
-			  (get-in parsed-input [:entry :victim])
-			  (get-in parsed-input [:entry :attacker-loc :x])
-			  (get-in parsed-input [:entry :attacker-loc :y])
-			  (get-in parsed-input [:entry :victim-loc :x])
-			  (get-in parsed-input [:entry :victim-loc :y])
-			  carentan-x-transformer
-			  carentan-y-transformer))))
+	  (process-kill (get-in parsed-input [:entry :attacker])
+			(get-in parsed-input [:entry :victim])
+			(get-in parsed-input [:entry :attacker-loc :x])
+			(get-in parsed-input [:entry :attacker-loc :y])
+			(get-in parsed-input [:entry :victim-loc :x])
+			(get-in parsed-input [:entry :victim-loc :y])
+			carentan-x-transformer
+			carentan-y-transformer)))
       
       (game-event? (parsed-input :entry))
       (process-game-event (get-in parsed-input [:entry :player :team])))))
-
-;process-parsed-input
-;if this is a damage-kill record
-  ;find-player attacker & victim
-    ;if name changed, update player name
-    ;if team changed, reset stats - handle in spawn case
-    ;if new-player, add new player to stats set
-    ;return player
-  ;update attacker inflicted and victim received
-  ;if this is a kill-record
-    ;update attacker kills and victim deaths
-    ;recalculate places
-  ;if this is a rank-change record
-    ;update attacker rank
-;if this is a quit record
-  ;remove player from stats set?
