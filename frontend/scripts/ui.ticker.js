@@ -4,6 +4,7 @@ $.widget("ui.ticker", {
 
   _init: function() {
     var self = this;
+    this.items = [];
     this.loadIndex = 0;
 
     // Build the document model
@@ -16,6 +17,8 @@ $.widget("ui.ticker", {
     this.itemsDiv.bind("mouseleave", function() { self.start(); });
     $(window).bind("resize.ticker", function() { self._resize(); });
 
+    // Set the initial ticker appearance and add any default items
+    this.updateItems(this.options.items);
     this._resize();
   },
 
@@ -24,7 +27,7 @@ $.widget("ui.ticker", {
     // Clear the event handlers
     this.itemsDiv.unbind();
     $(window).unbind("resize.ticker");
-    this._unbindItems($("div.ui-ticker-item", this.itemsDiv));
+    this._unbindItems();
 
     // Destroy the document model
     this.element.removeClass("ui-widget-content ui-ticker");
@@ -56,6 +59,63 @@ $.widget("ui.ticker", {
     }
   },
 
+  updateItems: function(items) {
+    items = ($.isArray(items) ? items : [ items ]);
+
+    // Apply the item updates to the stored model
+    var count = this.items.length;
+    for (var i = 0; i < items.length; i++) {
+      var newItem = items[i];
+
+      var updated = false;
+      for (var j = 0; j < this.items.length; j++) {
+        var oldItem = this.items[j];
+
+        // Check if the stored items matches the updated items
+        if (newItem.id == oldItem.id) {
+
+          // Check if the item should be updated or removed
+          if (newItem.team == "") {
+
+            // Remove the item from the list
+            this.items.splice(j, 1);
+
+            // Dim the associated element if it is being displayed
+            this._unloadItem(oldItem);
+
+            // Adjust the last loaded index if needed
+            if (j < this.loadIndex) {
+              this.loadIndex = (this.loadIndex > 0 ? this.loadIndex - 1 : 0);
+            } else if (this.loadIndex >= this.items.length) {
+              this.loadIndex = 0;
+            }
+            updated = true;
+            break;
+          } else {
+
+            // Merge the updated item into the stored item
+            $.extend(oldItem, newItem);
+
+            // Update the associated element if it is being displayed
+            this._refreshItem(oldItem);
+            updated = true;
+            break;
+          }
+        }
+      }
+
+      // Add the new item if it was not updated or removed
+      if (!updated) {
+        this.items.push(newItem);
+      }
+    }
+
+    // Load new items into the displayed group if it has room
+    if (this.group && this.anim && count < this.anim.count) {
+      this._loadGroup(this.group);
+    }
+  },
+
   _resize: function() {
 
     // Only recompute the ticker bounds if the width changed
@@ -71,16 +131,11 @@ $.widget("ui.ticker", {
     this._unbindItems();
     this.itemsDiv.empty();
 
-    // Check if there is at least 1 item to display
-    if (this.options.items.length == 0) {
-      return;
-    }
-
     // Calculate the number of ticker items that will fit on screen at once
     this.maxW = maxW;
     var prototype = this._createItem();
     var itemW = prototype.outerWidth(true);
-    var count = Math.min(this.options.items.length, Math.ceil(maxW / itemW));
+    var count = Math.ceil(maxW / itemW);
 
     // Generate a group to hold a set of ticker items
     this.group1 = $('<div class="ui-ticker-slider"/>').appendTo(this.itemsDiv);
@@ -98,7 +153,8 @@ $.widget("ui.ticker", {
     this.group2.hide();
 
     // Bind events to all the ticker items
-    this._bindItems($("div.ui-ticker-item", this.itemsDiv));
+    this.itemDivs = $("div.ui-ticker-item", this.itemsDiv);
+    this._bindItems();
 
     // Fill the first group with data
     this._loadGroup(this.group1);
@@ -109,14 +165,12 @@ $.widget("ui.ticker", {
       rate: 100, speed: 52, pause: 4000,
       maxW: maxW, groupW: groupW, itemW: itemW,
       inPos: (maxW - groupW), outPos: (-1 * groupW),
-      x1: 0, x2: groupW, moved: 0, state: 0
+      x1: 0, x2: groupW, moved: 0, state: 0, count: count
     };
 
-    // Start the animation if all the items do not fit
-    if (this.options.items.length > count || count * itemW > maxW) {
-      this.start();
-    }
-  },
+    // Start the ticker animation
+    this.start();
+ },
 
   _animate: function() {
     if (!this.running) {
@@ -127,6 +181,7 @@ $.widget("ui.ticker", {
     if (this.anim.x1 > this.anim.outPos) {
       this.anim.x1 -= this.anim.speed;
       this.group1.css("left", this.anim.x1);
+      this.group = this.group1;
     }
 
     // Reset group 2 once group 1 reaches the left screen bounds
@@ -144,6 +199,7 @@ $.widget("ui.ticker", {
       if (this.anim.x2 > this.anim.outPos) {
         this.anim.x2 -= this.anim.speed;
         this.group2.css("left", this.anim.x2);
+        this.group = this.group2;
       }
     }
 
@@ -190,29 +246,53 @@ $.widget("ui.ticker", {
   _bindItems: function() {
 
     // Highlight the ticker item name upon mouse hover
-    $("div.ui-ticker-item", this.itemsDiv).each(function() {
-      var nameDiv = $("div.ui-ticker-item-name", this);
-      $(this).bind("mouseenter", function() { nameDiv.addClass("ui-state-hover"); });
-      $(this).bind("mouseleave", function() { nameDiv.removeClass("ui-state-hover"); });
-    });
+    if (this.itemDivs) {
+      this.itemDivs.each(function() {
+        var nameDiv = $("div.ui-ticker-item-name", this);
+        $(this).bind("mouseenter", function() { nameDiv.addClass("ui-state-hover"); });
+        $(this).bind("mouseleave", function() { nameDiv.removeClass("ui-state-hover"); });
+      });
+    }
   },
 
   _unbindItems: function() {
 
     // Remove ticker item name highlights
-    $("div.ui-ticker-item", this.itemsDiv).each(function() {
-      $(this).unbind();
-    });
+    if (this.itemDivs) {
+      this.itemDivs.each(function() {
+        $(this).unbind();
+      });
+    }
   },
 
   _loadGroup: function(group) {
 
     // Load all the ticker item data for the given group
     var self = this;
+    var count = 0;
     $("div.ui-ticker-item", group).each(function() {
-      self._loadItem(this, self.options.items[self.loadIndex++]);
-      if (self.loadIndex >= self.options.items.length) {
-        self.loadIndex = 0;
+      var itemDiv = $(this);
+
+      // Check if there is enough data to display the item
+      if (count < self.items.length) {
+
+        // Make sure the element is fully visible
+        itemDiv.show();
+        itemDiv.fadeTo(0, 1.0);
+
+        // Load the item into the element
+        var item = self.items[self.loadIndex++];
+        self._loadItem(this, item);
+
+        // Remember the index of the next item to load
+        if (self.loadIndex >= self.items.length) {
+          self.loadIndex = 0;
+        }
+        count++;
+      } else {
+
+        // Hide the element since it will be empty
+        itemDiv.hide();
       }
     });
   },
@@ -229,10 +309,35 @@ $.widget("ui.ticker", {
     $("div.icon-team", itemDiv).attr("class",
         "icon-team icon-team-" + item.team + " ui-ticker-team");
 
-    $("tr.ui-ticker-kills td.ui-ticker-stat-value", itemDiv).text(item.kills)
-    $("tr.ui-ticker-deaths td.ui-ticker-stat-value", itemDiv).text(item.deaths)
-    $("tr.ui-ticker-inflicted td.ui-ticker-stat-value", itemDiv).text(item.inflicted)
-    $("tr.ui-ticker-received td.ui-ticker-stat-value", itemDiv).text(item.received)
+    $("tr.ui-ticker-kills td.ui-ticker-stat-value", itemDiv).text(item.kills);
+    $("tr.ui-ticker-deaths td.ui-ticker-stat-value", itemDiv).text(item.deaths);
+    $("tr.ui-ticker-inflicted td.ui-ticker-stat-value", itemDiv).text(item.inflicted);
+    $("tr.ui-ticker-received td.ui-ticker-stat-value", itemDiv).text(item.received);
+
+    // Update the mapping between element and item
+    itemDiv.item = item;
+  },
+
+  _unloadItem: function(item) {
+    if (this.itemDivs) {
+      this.itemDivs.each(function() {
+        if (this.item && this.item.id == item.id) {
+          $(this).fadeTo("slow", 0.3);
+          this.item = undefined;
+        }
+      });
+    }
+  },
+
+  _refreshItem: function(item) {
+    var self = this;
+    if (this.itemDivs) {
+      this.itemDivs.each(function() {
+        if (this.item && this.item.id == item.id) {
+          self._loadItem(this, item);
+        }
+      });
+    }
   }
 
 });
@@ -240,21 +345,7 @@ $.widget("ui.ticker", {
 $.extend($.ui.ticker, {
   version: "1.7.2",
   defaults: {
-    items: [
-      { name: "A Figment of Your Imagination", photo: "player0.jpg", place: "4", rank: "3", team: "a", kills: "79", deaths: "57", inflicted: "14,722", received: "8,353" },
-      { name: "Bazooka John", photo: "player1.jpg", place: "7", rank: "2", team: "g", kills: "48", deaths: "57", inflicted: "8,834", received: "7,149" },
-      { name: "CDJ Wobbly Wiggly", photo: "player2.jpg", place: "10", rank: "1", team: "b", kills: "32", deaths: "43", inflicted: "5,475", received: "9,252" },
-      { name: "CHUCKNORRISCOUNTEDTOINFINITY...", photo: "player3.jpg", place: "11", rank: "1", team: "r", kills: "27", deaths: "55", inflicted: "4,085", received: "6,768" },
-      { name: "Colonel Billiam", photo: "player4.jpg", place: "9", rank: "2", team: "a", kills: "44", deaths: "55", inflicted: "5,294", received: "6,245" },
-      { name: "GOMER PYLE", photo: "player5.jpg", place: "2", rank: "4", team: "g", kills: "108", deaths: "55", inflicted: "18,475", received: "7,809" },
-      { name: "Jaymz", photo: "player6.jpg", place: "6", rank: "3", team: "b", kills: "58", deaths: "53", inflicted: "3,119", received: "2,090" },
-      { name: "Luda", photo: "player7.jpg", place: "8", rank: "2", team: "r", kills: "45", deaths: "50", inflicted: "10,572", received: "10,978" },
-      { name: "Note To Self", photo: "player8.jpg", place: "5", rank: "3", team: "a", kills: "68", deaths: "53", inflicted: "11,222", received: "8,376" },
-      { name: "Scope", photo: "player9.jpg", place: "3", rank: "3", team: "g", kills: "82", deaths: "57", inflicted: "9,161", received: "9,162" },
-      { name: "ThePine", photo: "player10.jpg", place: "1", rank: "4", team: "b", kills: "143", deaths: "80", inflicted: "18,590", received: "11,193" },
-      { name: "Tim - Target Drone", photo: "player11.jpg", place: "12", rank: "0", team: "r", kills: "18", deaths: "50", inflicted: "2,879", received: "9,257" },
-      { name: "Turn Left Nower", photo: "player12.jpg", place: "13", rank: "0", team: "a", kills: "12", deaths: "31", inflicted: "2,741", received: "5,515" }
-    ]
+    items: []
   }
 });
 

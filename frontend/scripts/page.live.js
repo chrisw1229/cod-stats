@@ -14,6 +14,11 @@ $.extend({ mgr: {
     Map.setTiles(data.map);
   },
 
+  // Callback from the server when a player changes
+  playerChanged: function(data) {
+    $("#ticker").ticker("updateItems", data);
+  },
+
   // Callback from the server when an event changes
   eventChanged: function(data) {
     $("#meter").meter("addEvent", data);
@@ -39,6 +44,7 @@ $.extend({ mgr: {
   $.comm.service = ($.mgr.test ? "test" : "live");
   $.comm.params = ($.mgr.test ? { test: $.mgr.test } : { });
   $.comm.bind("game", $.mgr.gameChanged);
+  $.comm.bind("player", $.mgr.playerChanged);
   $.comm.bind("event", $.mgr.eventChanged);
   $.comm.bind("map", $.mgr.mapChanged);
   $.comm.bind("log", $.logger.listen);
