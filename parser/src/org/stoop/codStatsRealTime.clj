@@ -28,8 +28,7 @@ entry or creates a new entry and returns that."
 (defn create-player-update-packet 
   "Creates a map to represent the player packet to send to the front end."
   [player]
-  {:type "player"
-   :data [(merge {:update (:id player)} (get-player player))]})
+  (merge {:id (:id player)} (get-player player)))
 
 (defn update-player 
   "Merges new-stats with the player-stats structure currently associated with the player."
@@ -70,12 +69,13 @@ and victim to be sent to the frontend."
       (update-player attacker {:kills (inc (old-attacker :kills))}))
     (update-player victim {:deaths (inc (old-victim :deaths))})
     (update-places *player-stats-map*)
-    (dosync (alter *game-records* conj 
+    (dosync (alter *game-records* conj
 		   {:kx trans-kx :ky trans-ky :dx trans-dx :dy trans-dy}
 		   (create-player-update-packet attacker)
 		   (create-player-update-packet victim)))))
 
 ;Update to archive game-records for whole match stats calculation
+;Update to switch x and y transformers to correct map.
 (defn process-start-game 
   "Sets the data for the frontend to a game start packet, resets player stats records and resets the start
 time for this game."

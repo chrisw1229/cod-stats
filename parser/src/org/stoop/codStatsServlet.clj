@@ -23,10 +23,15 @@
   (and (contains? record :team)
        (contains? record :time)))
 
+(defn player-record? [record]
+  (and (contains? record :name)
+       (contains? record :team)))
+
 (defn process-records [records]
   (let [map-records (filter map-record? records)
 	game-records (filter game-record? records)
-	event-records (filter event-record? records)]
+	event-records (filter event-record? records)
+	player-records (filter player-record? records)]
     (flatten (filter #(not (nil? %)) [(if (> (count map-records) 0)
 					(for [record map-records]
 					  {:type "map" :data record}))
@@ -34,7 +39,10 @@
 					{:type "game" :data (last game-records)})
 				      (if (> (count event-records) 0)
 					(for [record event-records]
-					  {:type "event" :data record}))]))))
+					  {:type "event" :data record}))
+				      (if (> (count player-records) 0)
+					(for [record player-records]
+					  {:type "player" :data record}))]))))
 
 (defroutes cod-stats-routes
   (GET "/stats/live"
