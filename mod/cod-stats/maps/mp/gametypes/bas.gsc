@@ -355,8 +355,6 @@ main() // Starts when map is loaded.
 
 	level.basehealth = getCvarInt("scr_bas_basehealth");
 	level.basedamagedhealth = getCvarInt("scr_bas_damagedhealth");
-
-    logPrint("Game;" + getCvar("g_gametype") + ";" + getCvar("mapname") + ";" + getCvar("scr_bas_roundlength") + "\n");
 }
 
 precacheAlliesGfx()
@@ -437,7 +435,12 @@ Callback_StartGameType() // Setup the game.
 			game["allies"] = getCvar("scr_allies");	
 		if(getCvar("scr_axis") != "")
 			game["axis"] = getCvar("scr_axis");
+    }
 
+    logPrint("Game;" + getCvar("g_gametype") + ";" + getCvar("mapname") + ";" + getCvar("scr_bas_roundlength") + ";" + game["allies"] + ";" + game["axis"] + "\n");
+
+	if(!isDefined(game["gamestarted"]))
+	{
 		if (!isdefined(game["bas_allies_complete"]))
 			game["bas_allies_complete"] 	= "xmodel/mp_bunker_foy";
 		if (!isdefined(game["bas_allies_damaged"]))

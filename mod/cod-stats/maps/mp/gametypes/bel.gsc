@@ -182,8 +182,6 @@ main()
 	level.objused = [];
 	for (i=0;i<16;i++)
 		level.objused[i] = false;
-
-    logPrint("Game;" + getCvar("g_gametype") + ";" + getCvar("mapname") + ";" + getCvar("scr_bel_timelimit") + "\n");
 }
 
 GetNextObjNum()
@@ -217,6 +215,8 @@ Callback_StartGameType()
 		game["allies"] = getCvar("scr_allies");
 	if(getCvar("scr_axis") != "")
 		game["axis"] = getCvar("scr_axis");
+
+    logPrint("Game;" + getCvar("g_gametype") + ";" + getCvar("mapname") + ";" + getCvar("scr_bel_timelimit") + ";" + game["allies"] + ";" + game["axis"] + "\n");
 
 	game["menu_team"] = "team_germanonly";
 	

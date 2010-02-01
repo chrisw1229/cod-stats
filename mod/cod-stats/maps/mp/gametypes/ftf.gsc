@@ -182,8 +182,6 @@ main()
 	
 	if(level.killcam >= 1)
 		setarchive(true);
-
-    logPrint("Game;" + getCvar("g_gametype") + ";" + getCvar("mapname") + ";" + level.timelimit + "\n");
 }
 
 Callback_StartGameType()
@@ -215,6 +213,8 @@ Callback_StartGameType()
 		game["allies"] = getCvar("scr_allies");	
 	if(getCvar("scr_axis") != "")
 		game["axis"] = getCvar("scr_axis");
+
+    logPrint("Game;" + getCvar("g_gametype") + ";" + getCvar("mapname") + ";" + level.timelimit + ";" + game["allies"] + ";" + game["axis"] + "\n");
 	
 //	game["menu_serverinfo"] = "serverinfo_" + getCvar("g_gametype");
 	game["menu_team"] = "team_" + game["allies"] + game["axis"];

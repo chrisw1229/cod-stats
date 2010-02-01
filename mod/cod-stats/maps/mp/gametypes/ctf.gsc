@@ -366,8 +366,6 @@ main() // Starts when map is loaded.
 	//
 	if(getCvar("scr_debug_ctf") == "")
 		setCvar("scr_debug_ctf", "0"); 
-
-    logPrint("Game;" + getCvar("g_gametype") + ";" + getCvar("mapname") + ";" + getCvar("scr_ctf_roundlength") + "\n");
 }
 
 // ----------------------------------------------------------------------------------
@@ -403,7 +401,12 @@ Callback_StartGameType() // Setup the game.
 			game["allies"] = getCvar("scr_allies");	
 		if(getCvar("scr_axis") != "")
 			game["axis"] = getCvar("scr_axis");
+    }
 
+    logPrint("Game;" + getCvar("g_gametype") + ";" + getCvar("mapname") + ";" + getCvar("scr_ctf_roundlength") + ";" + game["allies"] + ";" + game["axis"] + "\n");
+
+	if(!isDefined(game["gamestarted"]))
+	{
 		game["menu_serverinfo"] = "serverinfo_" + getCvar("g_gametype");
 		game["menu_team"] = "team_" + game["allies"] + game["axis"];
 		game["menu_weapon_allies"] = "weapon_" + game["allies"];

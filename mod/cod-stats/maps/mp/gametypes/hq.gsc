@@ -203,8 +203,6 @@ main()
 	level.checkteambalance = false;
 	level.spawnframe = 0;
 	hq_setup();
-
-    logPrint("Game;" + getCvar("g_gametype") + ";" + getCvar("mapname") + ";" + getCvar("scr_hq_timelimit") + "\n");
 }
 
 Callback_StartGameType()
@@ -227,6 +225,8 @@ Callback_StartGameType()
 		game["allies"] = getcvar("scr_allies");	
 	if(getcvar("scr_axis") != "")
 		game["axis"] = getcvar("scr_axis");
+
+    logPrint("Game;" + getCvar("g_gametype") + ";" + getCvar("mapname") + ";" + getCvar("scr_hq_timelimit") + ";" + game["allies"] + ";" + game["axis"] + "\n");
 	
 	game["menu_serverinfo"] = "serverinfo_" + getCvar("g_gametype");
 	game["menu_team"] = "team_" + game["allies"] + game["axis"];
