@@ -118,7 +118,7 @@ $.extend($.ui.navigation, {
   defaults: {
     tip: "Click to show navigation",
     header: "Menu",
-    footer: "06-14-2009",
+    footer: "03-20-2010",
     icon: "ui-icon-triangle-1-e",
     menus: [
       { name: "Awards", tip: "", url: "awards.html" },
