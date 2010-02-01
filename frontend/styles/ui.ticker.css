@@ -103,3 +103,10 @@
   padding-right: 6px;
   text-align: right;
 }
+.ui-ticker-spec {
+  font-size: 1.3em;
+  font-weight: bold;
+  height: 100%;
+  margin-top: 38px;
+  text-align: center;
+}

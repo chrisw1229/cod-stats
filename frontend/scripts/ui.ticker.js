@@ -240,6 +240,7 @@ $.widget("ui.ticker", {
     $('<tr class="ui-ticker-deaths"><td class="ui-ticker-stat-value"></td><td>Deaths</td></tr>').appendTo(statsTbl);
     $('<tr class="ui-ticker-inflicted"><td class="ui-ticker-stat-value"></td><td>Inflicted</td></tr>').appendTo(statsTbl);
     $('<tr class="ui-ticker-received"><td class="ui-ticker-stat-value"></td><td>Received</td></tr>').appendTo(statsTbl);
+    $('<div class="ui-ticker-spec">SPECTATOR</div>').appendTo(contDiv);
     return itemDiv;
   },
 
@@ -299,20 +300,37 @@ $.widget("ui.ticker", {
 
   _loadItem: function(itemDiv, item) {
 
-    // Load all the data values for the given ticker item
-    $("div.ui-ticker-item-name", itemDiv).text(item.name)
+    // Load all the basic values for the given ticker item
+    $("div.ui-ticker-item-name", itemDiv).text(item.name);
     $("div.ui-ticker-item-photo", itemDiv).css("background-image",
         "url(players/" + item.photo + ")");
-    $("div.ui-ticker-place-value", itemDiv).text(item.place)
-    $("div.icon-rank", itemDiv).attr("class",
-        "icon-rank icon-rank-" + item.rank + " ui-ticker-rank");
-    $("div.icon-team", itemDiv).attr("class",
-        "icon-team icon-team-" + item.team + " ui-ticker-team");
 
-    $("tr.ui-ticker-kills td.ui-ticker-stat-value", itemDiv).text(item.kills);
-    $("tr.ui-ticker-deaths td.ui-ticker-stat-value", itemDiv).text(item.deaths);
-    $("tr.ui-ticker-inflicted td.ui-ticker-stat-value", itemDiv).text(item.inflicted);
-    $("tr.ui-ticker-received td.ui-ticker-stat-value", itemDiv).text(item.received);
+    // Check whether the current item is a spectator
+    var team = (item.team && item.team.length > 0 ? item.team.charAt(0) : "").toLowerCase();
+    if (team != "s") {
+
+      // Load all the icon content
+      $("div.ui-ticker-place-value", itemDiv).text(item.place);
+      $("div.icon-rank", itemDiv).attr("class",
+          "icon-rank icon-rank-" + item.rank + " ui-ticker-rank");
+      $("div.icon-team", itemDiv).attr("class",
+          "icon-team icon-team-" + item.team + " ui-ticker-team");
+      $("div.ui-ticker-item-icons", itemDiv).show();
+
+      // Load all the numeric content
+      $("tr.ui-ticker-kills td.ui-ticker-stat-value", itemDiv).text(item.kills);
+      $("tr.ui-ticker-deaths td.ui-ticker-stat-value", itemDiv).text(item.deaths);
+      $("tr.ui-ticker-inflicted td.ui-ticker-stat-value", itemDiv).text(item.inflicted);
+      $("tr.ui-ticker-received td.ui-ticker-stat-value", itemDiv).text(item.received);
+      $("table.ui-ticker-stats", itemDiv).show();
+      $("div.ui-ticker-spec", itemDiv).hide();
+    } else {
+
+      // Just show the spectator label
+      $("div.ui-ticker-item-icons", itemDiv).hide();
+      $("table.ui-ticker-stats", itemDiv).hide();
+      $("div.ui-ticker-spec", itemDiv).show();
+    }
 
     // Update the mapping between element and item
     itemDiv.item = item;
