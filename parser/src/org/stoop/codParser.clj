@@ -186,8 +186,11 @@
 			     [_ get-string
 			      game-type get-string
 			      map-name get-string
-			      round-time get-float]
-			     {:game-type game-type :map-name map-name :round-time round-time}))
+			      round-time get-float
+			      allies-team get-string
+			      axis-team get-string]
+			     {:game-type game-type :map-name map-name :round-time round-time
+			      :allies-team allies-team :axis-team axis-team}))
 
 (defn line-dispatch [str-seq]
   (let [first-entry (first str-seq)]
