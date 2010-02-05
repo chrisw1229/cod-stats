@@ -5,10 +5,16 @@
 (defn make-coord-transformer [constant x-multiplier y-multiplier]
   #(+ (+ constant (* x-multiplier %1)) (* y-multiplier %2)))
 
-(def carentan-x-transformer (make-coord-transformer 1085.8 -0.0142 0.7238))
-(def carentan-y-transformer (make-coord-transformer 1654.0 0.7171 0.0083))
-(def peaks-x-transformer (make-coord-transformer 2618.2 0.5342 -0.0348))
-(def peaks-y-transformer (make-coord-transformer 2344.2 0.0043 -0.5479))
+(def *map-transformers* {"mp_uo_carentan" {:x (make-coord-transformer 1085.8 -0.0142 0.7238)
+					   :y (make-coord-transformer 1654.0 0.7171 0.0083)}
+			 "mp_carentan" {:x (make-coord-transformer 1085.8 -0.0142 0.7238)
+					:y (make-coord-transformer 1654.0 0.7171 0.0083)}
+			 "mp_peaks" {:x (make-coord-transformer 2618.2 0.5342 -0.0348)
+				     :y (make-coord-transformer 2344.2 0.0043 -0.5479)}})
+
+(defn get-transformer [map-name]
+  (get *map-transformers* map-name {:x (make-coord-transformer 0 1 1)
+				    :y (make-coord-transformer 0 1 1)}))
 
 ;Weapon categories
 

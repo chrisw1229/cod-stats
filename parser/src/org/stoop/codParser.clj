@@ -204,7 +204,8 @@
       (or (= "Weapon" first-entry) (= "Use" first-entry)) (first (get-pickup str-seq))
       (or (= "J" first-entry) (= "Q" first-entry)) (first (get-connection str-seq))
       (or (= "W" first-entry) (= "L" first-entry)) (first (get-win-loss str-seq))
-      (= "Game" first-entry) (first (get-game-start str-seq)))))
+      (= "Game" first-entry) (first (get-game-start str-seq))
+      (= "A" first-entry) (first (get-game-event str-seq)))))
 
 (defn parse-time [time-string]
   (let [split-seq (re-split #":" time-string)]

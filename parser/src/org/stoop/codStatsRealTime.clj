@@ -6,11 +6,14 @@
 
 (def *game-records* (ref []))
 (def *player-stats-map* (ref {}))
+
 (def *player-id-map* (ref {}))
 (def *name-id-map* (ref {}))
 (def *client-id-id-map* (ref {}))
-
 (def *new-id* (ref 1))
+
+(def *transformer* (ref {:x nil :y nil}))
+(def *current-teams* (ref {:allies "american" :axis "german"}))
 
 (def *start-time* (ref (. System currentTimeMillis)))
 (defn calc-seconds [start-time-millis end-time-millis]
@@ -120,20 +123,20 @@ and victim to be sent to the frontend."
 		   (create-player-update-packet victim)))))
 
 ;Update to archive game-records for whole match stats calculation
-;Update to switch x and y transformers to correct map.
 (defn process-start-game 
   "Sets the data for the frontend to a game start packet, resets player stats records and resets the start
 time for this game."
-  [game-type map-name round-time]
+  [game-type map-name round-time allies-team axis-team]
   (dosync (ref-set *game-records* [{:map map-name :type game-type :time round-time}])
 	  (ref-set *player-stats-map* {})
-	  (ref-set *start-time* (. System currentTimeMillis))))
+	  (ref-set *start-time* (. System currentTimeMillis))
+	  (ref-set *transformer* (get-transformer map-name))
+	  (ref-set *current-teams* {:allies allies-team :axis axis-team})))
 
-;Don't have an obvious way to distinguish between american, british and russian
 (defn process-game-event 
   "Adds an event packet to the data to be sent to the frontend."
   [team]
-  (dosync (alter *game-records* conj {:team team 
+  (dosync (alter *game-records* conj {:team (str (first (get @*current-teams* (keyword team))))
 				      :time (calc-seconds @*start-time* (. System currentTimeMillis))})))
 
 (defn process-input-line
@@ -144,7 +147,9 @@ time for this game."
       (start-game? (parsed-input :entry))
       (process-start-game (get-in parsed-input [:entry :game-type])
 			  (get-in parsed-input [:entry :map-name])
-			  (get-in parsed-input [:entry :round-time]))
+			  (get-in parsed-input [:entry :round-time])
+			  (get-in parsed-input [:entry :allies-team])
+			  (get-in parsed-input [:entry :axis-team]))
 
       (damage-kill? (parsed-input :entry))
       (do
@@ -159,8 +164,8 @@ time for this game."
 			(get-in parsed-input [:entry :attacker-loc :y])
 			(get-in parsed-input [:entry :victim-loc :x])
 			(get-in parsed-input [:entry :victim-loc :y])
-			carentan-x-transformer
-			carentan-y-transformer)))
+			(get @*transformer* :x)
+			(get @*transformer* :y))))
       
       (game-event? (parsed-input :entry))
       (process-game-event (get-in parsed-input [:entry :player :team])))))
