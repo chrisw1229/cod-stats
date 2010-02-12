@@ -4,7 +4,9 @@ $.widget("ui.ticker", {
 
   _init: function() {
     var self = this;
-    this.items = [];
+    this.items = {};
+    this.sorted = [];
+    this.itemDivs = [];
     this.loadIndex = 0;
 
     // Build the document model
@@ -63,62 +65,106 @@ $.widget("ui.ticker", {
     items = ($.isArray(items) ? items : [ items ]);
 
     // Apply the item updates to the stored model
-    var count = this.items.length;
     for (var i = 0; i < items.length; i++) {
       var newItem = items[i];
 
-      var updated = false;
-      for (var j = 0; j < this.items.length; j++) {
-        var oldItem = this.items[j];
+      // Check if the new item is already stored
+      if (this.items[newItem.id]) {
 
-        // Check if the stored items matches the updated items
-        if (newItem.id == oldItem.id) {
+        // Check if the new item is being removed
+        if (newItem.team == "") {
 
-          // Check if the item should be updated or removed
-          if (newItem.team == "") {
+          // Remove the existing item
+          this._removeItem(newItem);
+        } else {
 
-            // Remove the item from the list
-            this.items.splice(j, 1);
-
-            // Dim the associated element if it is being displayed
-            this._unloadItem(oldItem);
-
-            // Adjust the last loaded index if needed
-            if (j < this.loadIndex) {
-              this.loadIndex = (this.loadIndex > 0 ? this.loadIndex - 1 : 0);
-            } else if (this.loadIndex >= this.items.length) {
-              this.loadIndex = 0;
-            }
-            updated = true;
-            break;
-          } else {
-
-            // Merge the updated item into the stored item
-            $.extend(oldItem, newItem);
-
-            // Update the associated element if it is being displayed
-            this._refreshItem(oldItem);
-            updated = true;
-            break;
-          }
+          // Update the existing item
+          this._updateItem(newItem);
         }
-      }
+      } else {
 
-      // Add the new item if it was not updated or removed
-      if (!updated) {
-        this.items.push(newItem);
+        // Add the completely new item
+        this._addItem(newItem);
+      }
+    }
+  },
+
+  _addItem: function(item) {
+
+    // Store the item for future lookup
+    this.items[item.id] = item;
+
+    // Find the correct sorted position for the item
+    var index = this.sorted.length;
+    for (var i = 0; i < this.sorted.length; i++) {
+      if (item.name < this.items[this.sorted[i].id].name) {
+        index = i;
+        break;
       }
     }
 
-    // Load new items into the displayed group if it has room
-    if (this.group && this.anim && count < this.anim.count) {
+    // Insert the item at the sorted position
+    this.sorted.splice(index, 0, item);
+
+    // Adjust the load index if the item was inserted before it
+    if (index < this.loadIndex) {
+      this.loadIndex = (this.loadIndex < this.sorted.length - 1 ? this.loadIndex + 1 : 0);
+    }
+
+    if (index < this.loadIndex) {
+      this.loadIndex++;
+    }
+    this.loadIndex = (this.loadIndex < this.sorted.length ? this.loadIndex : 0);
+
+    // Load the item into the displayed group if it has room
+    if (this.group && this.anim && this.sorted.length - 1 < this.anim.count) {
       this._loadGroup(this.group);
     }
+  },
+
+  _updateItem: function(item) {
+
+    // Merge the updated item into the stored item
+    var oldItem = this.items[item.id];
+    var name = oldItem.name;
+    $.extend(oldItem, item);
+
+    // Update the associated element if it is being displayed
+    this._refreshItem(oldItem);
+  },
+
+  _removeItem: function(item) {
+
+    // Remove the item from the model
+    delete this.items[item.id];
+
+    // Find the position of the item in the sorted list
+    var index = 0;
+    for (var i = 0; i < this.sorted.length; i++) {
+      if (item.id == this.sorted[i].id) {
+        index = i;
+        break;
+      }
+    }
+
+    // Remove the item from the sorted list
+    this.sorted.splice(index, 1);
+
+    // Adjust the load index if the item was removed before it
+    if (index < this.loadIndex) {
+      this.loadIndex = (this.loadIndex > 0 ? this.loadIndex - 1 : 0);
+    } else if (this.loadIndex >= this.sorted.length) {
+      this.loadIndex = 0;
+    }
+
+    // Unload the item if it is currently being displayed
+    this._unloadItem(item);
   },
 
   _resize: function() {
 
     // Only recompute the ticker bounds if the width changed
+    var self = this;
     var maxW = this.element.width();
     if (this.maxW == maxW) {
       return;
@@ -130,6 +176,7 @@ $.widget("ui.ticker", {
     // Clear any previous ticker items
     this._unbindItems();
     this.itemsDiv.empty();
+    this.itemDivs = [];
 
     // Calculate the number of ticker items that will fit on screen at once
     this.maxW = maxW;
@@ -144,16 +191,20 @@ $.widget("ui.ticker", {
     // Generate the ticker items
     prototype.appendTo(this.group1);
     for (var i = 1; i < count; i++) {
-      var item = prototype.clone().appendTo(this.group1);
-      item.css("left", i * itemW);
+      var itemDiv = prototype.clone().appendTo(this.group1);
+      itemDiv.css("left", i * itemW);
     }
 
     // Make a copy of the group to rotate through the ticker
     this.group2 = this.group1.clone().appendTo(this.itemsDiv);
     this.group2.hide();
 
+    // Store all the ticker items for future use
+    $("div.ui-ticker-item", this.itemsDiv).each(function() {
+      self.itemDivs.push(this);
+    });
+
     // Bind events to all the ticker items
-    this.itemDivs = $("div.ui-ticker-item", this.itemsDiv);
     this._bindItems();
 
     // Fill the first group with data
@@ -247,22 +298,19 @@ $.widget("ui.ticker", {
   _bindItems: function() {
 
     // Highlight the ticker item name upon mouse hover
-    if (this.itemDivs) {
-      this.itemDivs.each(function() {
-        var nameDiv = $("div.ui-ticker-item-name", this);
-        $(this).bind("mouseenter", function() { nameDiv.addClass("ui-state-hover"); });
-        $(this).bind("mouseleave", function() { nameDiv.removeClass("ui-state-hover"); });
-      });
+    for (var i = 0; i < this.itemDivs.length; i++) {
+      var itemDiv = $(this.itemDivs[i]);
+      var nameDiv = $("div.ui-ticker-item-name", itemDiv);
+      itemDiv.bind("mouseenter", function() { nameDiv.addClass("ui-state-hover"); });
+      itemDiv.bind("mouseleave", function() { nameDiv.removeClass("ui-state-hover"); });
     }
   },
 
   _unbindItems: function() {
 
     // Remove ticker item name highlights
-    if (this.itemDivs) {
-      this.itemDivs.each(function() {
-        $(this).unbind();
-      });
+    for (var i = 0; i < this.itemDivs.length; i++) {
+      this.$(itemDivs[i]).unbind();
     }
   },
 
@@ -275,18 +323,18 @@ $.widget("ui.ticker", {
       var itemDiv = $(this);
 
       // Check if there is enough data to display the item
-      if (count < self.items.length) {
+      if (count < self.sorted.length) {
 
         // Make sure the element is fully visible
         itemDiv.show();
         itemDiv.fadeTo(0, 1.0);
 
         // Load the item into the element
-        var item = self.items[self.loadIndex++];
+        var item = self.sorted[self.loadIndex++];
         self._loadItem(this, item);
 
         // Remember the index of the next item to load
-        if (self.loadIndex >= self.items.length) {
+        if (self.loadIndex >= self.sorted.length) {
           self.loadIndex = 0;
         }
         count++;
@@ -337,24 +385,25 @@ $.widget("ui.ticker", {
   },
 
   _unloadItem: function(item) {
-    if (this.itemDivs) {
-      this.itemDivs.each(function() {
-        if (this.item && this.item.id == item.id) {
-          $(this).fadeTo("slow", 0.3);
-          this.item = undefined;
-        }
-      });
+
+    // Fade out the item if it is currently being displayed
+    for (var i = 0; i < this.itemDivs.length; i++) {
+      var itemDiv = this.itemDivs[i];
+      if (itemDiv.item && itemDiv.item.id == item.id) {
+        $(itemDiv).fadeTo("slow", 0.3);
+        itemDiv.item = undefined;
+      }
     }
   },
 
   _refreshItem: function(item) {
-    var self = this;
-    if (this.itemDivs) {
-      this.itemDivs.each(function() {
-        if (this.item && this.item.id == item.id) {
-          self._loadItem(this, item);
-        }
-      });
+
+    // Reload the item attributes if it is currently beig displayed
+    for (var i = 0; i < this.itemDivs.length; i++) {
+      var itemDiv = this.itemDivs[i];
+      if (itemDiv.item && itemDiv.item.id == item.id) {
+        this._loadItem(itemDiv, item);
+      }
     }
   }
 
