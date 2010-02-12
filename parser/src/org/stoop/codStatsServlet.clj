@@ -59,6 +59,7 @@
 			 1000 
 			 process-input-line)]
       ((tailer :start))
+      ((*ratio-calculator* :start))
       (str "File watching started for " @*log-file-location*))))
 
 (defservice cod-stats-routes)

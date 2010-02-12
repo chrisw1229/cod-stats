@@ -4,6 +4,18 @@
 
 ;Real time processing
 
+(defn timed-action
+  "Calls a function f every interval seconds with arguments rest"
+  [interval f & rest]
+  (let [keep-running (atom true)
+	thread (Thread. #(while @keep-running
+			   (do
+			     (f rest)
+			     (Thread/sleep (* 1000 interval)))))]
+    {:start #(.start thread)
+     :stop #(do (reset! keep-running false)
+		(.join thread))}))
+
 (def *game-records* (ref []))
 (def *player-stats-map* (ref {}))
 
@@ -11,16 +23,16 @@
 (def *name-id-map* (ref {}))
 (def *client-id-id-map* (ref {}))
 (def *new-id* (ref 1))
+(def *player-id-ratio-map* (ref {}))
 
-(def *transformer* (ref {:x nil :y nil}))
+(def *transformer* (ref (get-transformer "none")))
 (def *current-teams* (ref {:allies "american" :axis "german"}))
 
 (def *start-time* (ref (. System currentTimeMillis)))
 (defn calc-seconds [start-time-millis end-time-millis]
   (int (* 0.001 (- end-time-millis start-time-millis))))
 
-;Add trend (values of +, - or "") - Recalc initially at 30-60 secs
-(defstruct player-stats :name :photo :place :rank :team :kills :deaths :inflicted :received)
+(defstruct player-stats :name :photo :place :rank :team :kills :deaths :inflicted :received :ratio)
 
 (defn create-new-player-id [name client-id]
   "Creates a new player ID to associate with name/client-id pair."
@@ -68,8 +80,9 @@ entry or creates a new entry and returns that."
     (if player
       (do player)
       (let [new-player (struct player-stats (:name player-struct)
-			       "default.jpg" (count @*player-stats-map*) 0 "none" 0 0 0 0)]
-	(dosync (alter *player-stats-map* assoc player-id new-player))
+			       "default.jpg" (count @*player-stats-map*) 0 "none" 0 0 0 0 "")]
+	(dosync (alter *player-stats-map* assoc player-id new-player)
+		(alter *player-id-ratio-map* assoc player-id 0))
 	(do new-player)))))
 
 (defn create-player-update-packet 
@@ -95,12 +108,42 @@ entry or creates a new entry and returns that."
   "Recalculates the places for all players based upon current number of kills and sets them in map-ref."
   [map-ref]
   (let [sorted-list (indexed (reverse (sort-by #(:kills (val %)) @map-ref)))]
-    (doall
+    (dorun
      (for [player-entry sorted-list]
        (let [player-place (first player-entry)
 	     player-id (first (second player-entry))
 	     old-player (get @map-ref player-id)]
 	 (dosync (alter map-ref assoc player-id (assoc old-player :place (inc player-place)))))))))
+
+(defn calculate-ratio
+  "Calculates the ratio of kills over deaths in a player struct"
+  [player-struct]
+  (if (= 0 (:deaths player-struct))
+    1.0
+    (/ (:kills player-struct) (:deaths player-struct))))
+
+(defn get-ratio-trend
+  "Determines if a new ratio is flat (\"\"), trending upward(+) or trending downward(-)."
+  [new-ratio old-ratio]
+  (cond 
+   (> new-ratio old-ratio) "+"
+   (= new-ratio old-ratio) ""
+   (< new-ratio old-ratio) "-"))
+
+(defn update-ratios
+  "Updates the ratios for all players in the stats-ref map and the 'old' ratios in ratio-ref map."
+  [stats-ref ratio-ref]
+  (dorun
+   (for [player-entry @stats-ref]
+    (let [player-id (first player-entry)
+	  old-ratio (get @ratio-ref player-id)
+	  old-player (get @stats-ref player-id)
+	  new-ratio (calculate-ratio old-player)
+	  ratio-trend (get-ratio-trend new-ratio old-ratio)]
+      (dosync (alter ratio-ref assoc player-id new-ratio)
+	      (alter stats-ref assoc player-id (assoc old-player :ratio ratio-trend)))))))
+
+(def *ratio-calculator* (timed-action 60 update-ratios *player-stats-map* *player-id-ratio-map*))
 
 (defn process-kill 
   "Increments kills for attacker and deaths for victim.  Kills is not incremented for self kills.
@@ -169,3 +212,6 @@ time for this game."
       
       (game-event? (parsed-input :entry))
       (process-game-event (get-in parsed-input [:entry :player :team])))))
+
+			   
+			   
