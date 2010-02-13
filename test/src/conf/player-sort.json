@@ -36,4 +36,11 @@
 { type: "player", data: { id: 1, team: "" } }
 { type: "player", data: { id: 2, team: "" } }
 
+
+
+{ type: "log", data: { info: "Renaming 3 players" } }
+{ type: "player", data: { id: 5, name: "A-Luda" } }
+{ type: "player", data: { id: 4, name: "Z-Bazooka John" } }
+{ type: "player", data: { id: 3, name: "M-CDJ Wobbly Wiggly" } }
+
 { type: "log", data: { info: "Test complete" } }

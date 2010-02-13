@@ -94,27 +94,20 @@ $.widget("ui.ticker", {
     // Store the item for future lookup
     this.items[item.id] = item;
 
-    // Find the correct sorted position for the item
+    // Insert the item at its sorted position
     var index = this.sorted.length;
     for (var i = 0; i < this.sorted.length; i++) {
-      if (item.name < this.items[this.sorted[i].id].name) {
+      if (item.name < this.sorted[i].name) {
         index = i;
         break;
       }
     }
-
-    // Insert the item at the sorted position
     this.sorted.splice(index, 0, item);
 
     // Adjust the load index if the item was inserted before it
     if (index < this.loadIndex) {
       this.loadIndex = (this.loadIndex < this.sorted.length - 1 ? this.loadIndex + 1 : 0);
     }
-
-    if (index < this.loadIndex) {
-      this.loadIndex++;
-    }
-    this.loadIndex = (this.loadIndex < this.sorted.length ? this.loadIndex : 0);
 
     // Load the item into the displayed group if it has room
     if (this.group && this.anim && this.sorted.length - 1 < this.anim.count) {
@@ -124,9 +117,39 @@ $.widget("ui.ticker", {
 
   _updateItem: function(item) {
 
-    // Merge the updated item into the stored item
+    // Check whether the item name changed
     var oldItem = this.items[item.id];
-    var name = oldItem.name;
+    if (item.name && oldItem.name != item.name) {
+
+      // Remove the item from its current sorted position
+      var oldIndex = 0;
+      for (var i = 0; i < this.sorted.length; i++) {
+        if (item.id == this.sorted[i].id) {
+          oldIndex = i;
+          break;
+        }
+      }
+      this.sorted.splice(oldIndex, 1);
+
+      // Add the item to its new sorted position
+      var newIndex = this.sorted.length;
+      for (var i = 0; i < this.sorted.length; i++) {
+        if (item.name < this.sorted[i].name) {
+          newIndex = i;
+          break;
+        }
+      }
+      this.sorted.splice(newIndex, 0, oldItem);
+
+      // Adjust the load index if the item moved across the load index
+      if (oldIndex < this.loadIndex && newIndex >= this.loadIndex) {
+        this.loadIndex = (this.loadIndex > 0 ? this.loadIndex - 1 : 0);
+      } else if (newIndex < this.loadIndex && oldIndex >= this.loadIndex) {
+        this.loadIndex = (this.loadIndex < this.sorted.length - 1 ? this.loadIndex + 1 : 0);
+      }
+    }
+
+    // Merge the updated item into the stored item
     $.extend(oldItem, item);
 
     // Update the associated element if it is being displayed
@@ -138,7 +161,7 @@ $.widget("ui.ticker", {
     // Remove the item from the model
     delete this.items[item.id];
 
-    // Find the position of the item in the sorted list
+    // Remove the item from its sorted position
     var index = 0;
     for (var i = 0; i < this.sorted.length; i++) {
       if (item.id == this.sorted[i].id) {
@@ -146,8 +169,6 @@ $.widget("ui.ticker", {
         break;
       }
     }
-
-    // Remove the item from the sorted list
     this.sorted.splice(index, 1);
 
     // Adjust the load index if the item was removed before it
@@ -329,14 +350,14 @@ $.widget("ui.ticker", {
         itemDiv.show();
         itemDiv.fadeTo(0, 1.0);
 
+        // Make sure the load index stays within range
+        if (self.loadIndex < 0 || self.loadIndex >= self.sorted.length) {
+          self.loadIndex = 0;
+        }
+
         // Load the item into the element
         var item = self.sorted[self.loadIndex++];
         self._loadItem(this, item);
-
-        // Remember the index of the next item to load
-        if (self.loadIndex >= self.sorted.length) {
-          self.loadIndex = 0;
-        }
         count++;
       } else {
 
