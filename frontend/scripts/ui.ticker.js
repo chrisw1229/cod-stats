@@ -12,10 +12,15 @@ $.widget("ui.ticker", {
     this.element.addClass("ui-widget-content ui-ticker");
     this.shadowDiv = $('<div class="ui-ticker-shadow"/>').appendTo(this.element);
     this.itemsDiv = $('<div class="ui-ticker-items"/>').appendTo(this.element);
+    this.nextDiv = $('<div class="ui-helper-reset ui-state-default ui-corner-left ui-ticker-nav">'
+        + '<span class="ui-icon ui-icon-triangle-1-e"/></div>').appendTo(this.element);
 
     // Bind the event handlers
-    this.itemsDiv.bind("mouseenter", function() { self.stop(); });
-    this.itemsDiv.bind("mouseleave", function() { self.start(); });
+    this.nextDiv.bind("click", function() { self.next(); });
+    this.nextDiv.hover(function() { $(this).stop().fadeTo("normal", 1.0); },
+        function() { $(this).stop().fadeTo("normal", 0.4); });
+    this.itemsDiv.hover(function() { self.stop(); },
+        function() { self.start(); });
     $(window).bind("resize.ticker", function() { self._resize(); });
 
     // Set the initial ticker appearance and add any default items
@@ -26,6 +31,7 @@ $.widget("ui.ticker", {
   destroy: function() {
 
     // Clear the event handlers
+    this.nextDiv.unbind();
     this.itemsDiv.unbind();
     $(window).unbind("resize.ticker");
     this._unbindItems();
@@ -42,21 +48,42 @@ $.widget("ui.ticker", {
     if (!this.running) {
       var self = this;
 
-      // Start the slide animation after the pause interval
+      // Schedule the ticker animation sometime in the future
       this.running = setTimeout(function() { 
-        self.sliding = setInterval(function() {
-          self._animate();
-        }, self.anim.rate);
-      }, this.anim.pause);
+
+        // Move the ticker at the configured frame rate
+        self.sliding = setInterval(function() { self._animate(); },
+            self.anim.rate);
+      },
+      
+      // Animate immediately if navigating otherwise use the configured time
+      (this.navigating ? 0 : this.anim.pause));
     }
   },
 
   stop: function() {
+
+    // Check whether the animation is active
     if (this.running) {
+
+      // Cleanup the animation timers
       clearInterval(this.running);
       this.running = undefined;
       clearInterval(this.sliding);
       this.sliding = undefined;
+    }
+  },
+
+  next: function() {
+
+    // Make sure there are items loaded
+    if (this.sorted.length >= 0) {
+
+      // Move the ticker by one item immediately
+      this.stop();
+      this.navigating = true;
+      this.start();
+      this.navigating = undefined;
     }
   },
 
@@ -196,6 +223,10 @@ $.widget("ui.ticker", {
     // Clear any previous ticker items
     this._unbindItems();
     this.itemsDiv.empty();
+
+    // Position the navigation control
+    this.nextDiv.css("left", maxW - this.nextDiv.width());
+    this.nextDiv.fadeTo("normal", 0.4);
 
     // Calculate the number of ticker items that will fit on screen at once
     this.maxW = maxW;

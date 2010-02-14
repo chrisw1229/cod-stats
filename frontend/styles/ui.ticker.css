@@ -18,6 +18,12 @@
 .ui-ticker-slider {
   position: relative;
 }
+.ui-ticker-nav {
+  cursor: hand;
+  position: absolute;
+  top: 3px;
+  z-index: 1200;
+}
 .ui-ticker-item {
   cursor: pointer;
   margin-right: 6px;
