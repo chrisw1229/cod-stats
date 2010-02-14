@@ -33,10 +33,11 @@ Map._init = function(element, options) {
   var panCtrl = new OpenLayers.Control.CustomPanPanel();
   var zoomCtrl = new OpenLayers.Control.ZoomPanel();
   var keyCtrl = new OpenLayers.Control.KeyboardDefaults();
+  Map.controls = [navCtrl, panCtrl, zoomCtrl, keyCtrl];
 
   // Create the actual map component
   var mapOpts = {
-    controls: [navCtrl, panCtrl, zoomCtrl, keyCtrl],
+    controls: [],
     maxExtent: new OpenLayers.Bounds(0, 0, options.maxSize, options.maxSize),
     maxResolution: (options.maxSize / options.maxTile),
     numZoomLevels: options.maxZoom,
@@ -84,6 +85,9 @@ Map.setTiles = function(tiles) {
     Map.options.tiles = tiles;
     Map.tileLayer = Map._initTileLayer();
   }
+
+  // Enable the map controls if tiles are configured
+  Map._enabled(Map.options.tiles);
 };
 
 // Adds the given marker to the map
@@ -238,6 +242,31 @@ Map._resize = function(e) {
 
   // Update the dimensions of the map
   Map.ol.updateSize();
+};
+
+// Enables or disables the map controls
+Map._enabled = function(enabled) {
+
+  // Check if the state actually changed
+  if (Map.enabled != enabled) {
+    Map.enabled = enabled;
+
+    // Add or remove the map controls based on the given state
+    for (var i = 0; i < Map.controls.length; i++) {
+      if (enabled) {
+        Map.ol.addControl(Map.controls[i]);
+      } else {
+        Map.ol.removeControl(Map.controls[i]);
+      }
+    }
+
+    // Enable the map navigation cursor
+    if (enabled) {
+      $(".olMap").addClass("enabled");
+    } else {
+      $(".olMap").removeClass("enabled");
+    }
+  }
 };
 
 // Custom pan panel used to set the slide factor

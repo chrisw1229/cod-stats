@@ -258,7 +258,7 @@ $.widget("ui.ticker", {
     this._loadGroup(this.group1);
 
     // Configure the ticker animation
-    var groupW = this.group1.outerWidth(true);
+    var groupW = this.group1.width();
     this.anim = {
       rate: 100, speed: 52, pause: 4000,
       maxW: maxW, groupW: groupW, itemW: itemW,

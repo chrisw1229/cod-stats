@@ -1,8 +1,10 @@
 .olMap {
   border: none;
-  cursor: url(images/hand-opened.cur), default;
   position: absolute;
   width: 100%;
+}
+.olMap.enabled {
+  cursor: url(images/hand-opened.cur), default;
 }
 .olDragDown {
   cursor: url(images/hand-closed.cur), default;
@@ -62,4 +64,7 @@
 .olControlZoomOutItemInactive {
   left: 0px;
   top: 42px;
+}
+img[src=""] {
+  display: none;
 }
