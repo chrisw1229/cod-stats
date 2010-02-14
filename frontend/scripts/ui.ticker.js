@@ -12,8 +12,9 @@ $.widget("ui.ticker", {
     this.element.addClass("ui-widget-content ui-ticker");
     this.shadowDiv = $('<div class="ui-ticker-shadow"/>').appendTo(this.element);
     this.itemsDiv = $('<div class="ui-ticker-items"/>').appendTo(this.element);
-    this.nextDiv = $('<div class="ui-helper-reset ui-state-default ui-corner-left ui-ticker-nav">'
-        + '<span class="ui-icon ui-icon-triangle-1-e"/></div>').appendTo(this.element);
+    this.nextDiv = $('<div class="ui-state-default ui-corner-left ui-ticker-nav"'
+        + ' title="Click to advance ticker">'
+        + '<span class="ui-icon ui-icon-circle-arrow-e"/></div>').appendTo(this.element);
 
     // Bind the event handlers
     this.nextDiv.bind("click", function() { self.next(); });
