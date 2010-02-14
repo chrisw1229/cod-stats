@@ -100,7 +100,7 @@ $.widget("ui.navigation", {
     this.flyout(function() {
       window.location = $("a", self.menus[index]).attr("href");
     });
-  },
+  }
 
 });
 
