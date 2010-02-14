@@ -6,7 +6,6 @@ $.widget("ui.ticker", {
     var self = this;
     this.items = {};
     this.sorted = [];
-    this.itemDivs = [];
     this.loadIndex = 0;
 
     // Build the document model
@@ -197,7 +196,6 @@ $.widget("ui.ticker", {
     // Clear any previous ticker items
     this._unbindItems();
     this.itemsDiv.empty();
-    this.itemDivs = [];
 
     // Calculate the number of ticker items that will fit on screen at once
     this.maxW = maxW;
@@ -219,11 +217,6 @@ $.widget("ui.ticker", {
     // Make a copy of the group to rotate through the ticker
     this.group2 = this.group1.clone().appendTo(this.itemsDiv);
     this.group2.hide();
-
-    // Store all the ticker items for future use
-    $("div.ui-ticker-item", this.itemsDiv).each(function() {
-      self.itemDivs.push(this);
-    });
 
     // Bind events to all the ticker items
     this._bindItems();
@@ -319,20 +312,20 @@ $.widget("ui.ticker", {
   _bindItems: function() {
 
     // Highlight the ticker item name upon mouse hover
-    for (var i = 0; i < this.itemDivs.length; i++) {
-      var itemDiv = $(this.itemDivs[i]);
+    $("div.ui-ticker-item", this.itemsDiv).each(function() {
+      var itemDiv = $(this);
       var nameDiv = $("div.ui-ticker-item-name", itemDiv);
       itemDiv.bind("mouseenter", function() { nameDiv.addClass("ui-state-hover"); });
       itemDiv.bind("mouseleave", function() { nameDiv.removeClass("ui-state-hover"); });
-    }
+    });
   },
 
   _unbindItems: function() {
 
     // Remove ticker item name highlights
-    for (var i = 0; i < this.itemDivs.length; i++) {
-      this.$(itemDivs[i]).unbind();
-    }
+    $("div.ui-ticker-item", this.itemsDiv).each(function() {
+      $(this).unbind();
+    });
   },
 
   _loadGroup: function(group) {
@@ -408,24 +401,23 @@ $.widget("ui.ticker", {
   _unloadItem: function(item) {
 
     // Fade out the item if it is currently being displayed
-    for (var i = 0; i < this.itemDivs.length; i++) {
-      var itemDiv = this.itemDivs[i];
-      if (itemDiv.item && itemDiv.item.id == item.id) {
-        $(itemDiv).fadeTo("slow", 0.3);
-        itemDiv.item = undefined;
+    $("div.ui-ticker-item", this.itemsDiv).each(function() {
+      if (this.item && this.item.id == item.id) {
+        $(this).fadeTo("slow", 0.3);
+        this.item = undefined;
       }
-    }
+    });
   },
 
   _refreshItem: function(item) {
 
-    // Reload the item attributes if it is currently beig displayed
-    for (var i = 0; i < this.itemDivs.length; i++) {
-      var itemDiv = this.itemDivs[i];
-      if (itemDiv.item && itemDiv.item.id == item.id) {
-        this._loadItem(itemDiv, item);
+    // Reload the item attributes if it is currently being displayed
+    var self = this;
+    $("div.ui-ticker-item", this.itemsDiv).each(function() {
+      if (this.item && this.item.id == item.id) {
+        self._loadItem(this, item);
       }
-    }
+    });
   }
 
 });
