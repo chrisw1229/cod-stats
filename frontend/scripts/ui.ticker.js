@@ -18,8 +18,8 @@ $.widget("ui.ticker", {
 
     // Bind the event handlers
     this.nextDiv.bind("click", function() { self.next(); });
-    this.nextDiv.hover(function() { $(this).stop().fadeTo("normal", 1.0); },
-        function() { $(this).stop().fadeTo("normal", 0.4); });
+    this.nextDiv.hover(function() { self._next(true); },
+        function() { self._next(false); });
     this.itemsDiv.hover(function() { self.stop(); },
         function() { self.start(); });
     $(window).bind("resize.ticker", function() { self._resize(); });
@@ -40,6 +40,7 @@ $.widget("ui.ticker", {
     // Destroy the document model
     this.element.removeClass("ui-widget-content ui-ticker");
     this.shadowDiv.remove();
+    this.nextDiv().remove();
     this.itemsDiv.remove();
 
     $.widget.prototype.destroy.apply(this, arguments);
@@ -267,7 +268,17 @@ $.widget("ui.ticker", {
 
     // Start the ticker animation
     this.start();
- },
+  },
+
+  _next: function(activated) {
+    if (activated) {
+      this.nextDiv.stop().fadeTo("normal", 1.0);
+      this.nextDiv.addClass("ui-state-hover");
+    } else {
+      this.nextDiv.removeClass("ui-state-hover");
+      this.nextDiv.stop().fadeTo("normal", 0.4);
+    }
+  },
 
   _animate: function() {
     if (!this.running) {

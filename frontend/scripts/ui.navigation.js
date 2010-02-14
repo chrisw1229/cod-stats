@@ -30,8 +30,8 @@ $.widget("ui.navigation", {
         + this.options.footer + '</h4>').appendTo(this.menuDiv);
 
     // Bind the event handlers
-    this.ctrlDiv.bind("mouseenter", function() { self._ctrlOn(); });
-    this.ctrlDiv.bind("mouseleave", function() { self._ctrlOff(); });
+    this.ctrlDiv.hover(function() { $(this).addClass("ui-state-hover"); },
+        function() { $(this).removeClass("ui-state-hover"); });
     this.ctrlDiv.bind("click", function() { self.flyin(); });
     this.bodyDiv.bind("mouseleave", function() { self.flyout(); });
     $(this.menus).each(function(i) {
@@ -42,7 +42,6 @@ $.widget("ui.navigation", {
 
     // Setup the initial appearance
     this.bodyDiv.hide();
-    setTimeout(function() { self.ctrlDiv.fadeTo("slow", 0.4); }, 500);
   },
 
   destroy: function() {
@@ -102,14 +101,6 @@ $.widget("ui.navigation", {
       window.location = $("a", self.menus[index]).attr("href");
     });
   },
-
-  _ctrlOn: function() {
-    this.ctrlDiv.stop().fadeTo("normal", 1.0);
-  },
-
-  _ctrlOff: function() {
-    this.ctrlDiv.stop().fadeTo("normal", 0.4);
-  }
 
 });
 
