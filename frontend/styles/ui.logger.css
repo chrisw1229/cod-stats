@@ -2,6 +2,7 @@
   display: none;
   margin: 2px;
   position: absolute;
+  z-index: 20000;
 }
 .ui-logger-icon {
   float: left;
