@@ -92,6 +92,13 @@
   position: relative;
   top: 44px;
 }
+.ui-ticker-item .ui-ticker-trend {
+  background: none;
+  border: none;
+  left: 5px;
+  position: absolute;
+  top: 33px;
+}
 .ui-ticker-stats {
   height: 100%;
 }
@@ -108,6 +115,7 @@
 .ui-ticker-stat-value {
   padding-right: 6px;
   text-align: right;
+  width: 42px;
 }
 .ui-ticker-spec {
   font-size: 1.3em;

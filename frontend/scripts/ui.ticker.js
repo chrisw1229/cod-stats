@@ -343,6 +343,9 @@ $.widget("ui.ticker", {
     $('<div class="icon-rank ui-ticker-rank"/>').appendTo(iconsDiv);
     $('<div class="icon-team ui-ticker-team"/>').appendTo(iconsDiv);
 
+    var trendDiv = $('<div class="ui-ticker-trend"/>').appendTo(contDiv);
+    $('<span class="ui-ticker-trend-icon"/>').appendTo(trendDiv);
+
     var statsTbl = $('<table class="ui-ticker-stats"/>').appendTo(contDiv);
     $('<tr class="ui-ticker-kills"><td class="ui-ticker-stat-value"></td><td>Kills</td></tr>').appendTo(statsTbl);
     $('<tr class="ui-ticker-deaths"><td class="ui-ticker-stat-value"></td><td>Deaths</td></tr>').appendTo(statsTbl);
@@ -414,13 +417,20 @@ $.widget("ui.ticker", {
     var team = (item.team && item.team.length > 0 ? item.team.charAt(0) : "").toLowerCase();
     if (team != "s") {
 
-      // Load all the icon content
+      // Load the place, rank, and team content
       $("div.ui-ticker-place-value", itemDiv).text(item.place);
       $("div.icon-rank", itemDiv).attr("class",
           "icon-rank icon-rank-" + item.rank + " ui-ticker-rank");
       $("div.icon-team", itemDiv).attr("class",
           "icon-team icon-team-" + item.team + " ui-ticker-team");
       $("div.ui-ticker-item-icons", itemDiv).show();
+
+      // Load the trend content
+      var trendState = (item.trend == "+" ? "highlight" : item.trend == "-" ? "error" : "");
+      var trendIcon = (item.trend == "+" ? "plus" : item.trend == "-" ? "close" : "minus");
+      $("div.ui-ticker-trend", itemDiv).attr("class", "ui-state-" + trendState + " ui-ticker-trend");
+      $("span.ui-ticker-trend-icon", itemDiv).attr("class", "ui-icon ui-icon-circle-"
+          + trendIcon + " ui-ticker-trend-icon");
 
       // Load all the numeric content
       $("tr.ui-ticker-kills td.ui-ticker-stat-value", itemDiv).text(item.kills);
