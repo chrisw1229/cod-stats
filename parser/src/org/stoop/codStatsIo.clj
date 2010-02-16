@@ -7,11 +7,10 @@
   (spit file (json-str {:award award-name :data award-data})))
 
 ;File watching functions
-
-;Have some kind of loop to watch for the file to be created then start reading it in and processing.
 ;Watch for console_mp.log and games_mp.log.
 
 (def *log-file-location* (ref (str "C:/Program Files/Call of Duty/cod-stats/games_mp.log")))
+(def *connect-log-location* (ref (str "C:/Program Files/Call of Duty/cod-stats/console_mp.log")))
 
 (defn tail-f [file delay action]
   (let [keep-running (atom true)

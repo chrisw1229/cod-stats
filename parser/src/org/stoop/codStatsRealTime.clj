@@ -1,5 +1,5 @@
 (ns org.stoop.codStatsRealTime
-  (:use org.stoop.codParser org.stoop.codData
+  (:use org.stoop.codParser org.stoop.codData org.stoop.codIdentity
 	clojure.contrib.seq-utils))
 
 ;Real time processing
@@ -16,15 +16,10 @@
      :stop #(do (reset! keep-running false)
 		(.join thread))}))
 
-(def *game-records* (ref []))
-(def *player-stats-map* (ref {}))
-
-(def *player-id-map* (ref {}))
-(def *name-id-map* (ref {}))
-(def *client-id-id-map* (ref {}))
-(def *new-id* (ref 1))
 (def *player-id-ratio-map* (ref {}))
 
+(def *game-records* (ref []))
+(def *player-stats-map* (ref {}))
 (def *transformer* (ref (get-transformer "none")))
 (def *current-teams* (ref {:allies "american" :axis "german"}))
 
@@ -33,43 +28,6 @@
   (int (* 0.001 (- end-time-millis start-time-millis))))
 
 (defstruct player-stats :name :photo :place :rank :team :kills :deaths :inflicted :received :ratio)
-
-(defn create-new-player-id [name client-id]
-  "Creates a new player ID to associate with name/client-id pair."
-  (dosync (alter *player-id-map* assoc [name client-id] @*new-id*)
-	  (alter *name-id-map* assoc name @*new-id*)
-	  (alter *client-id-id-map* assoc client-id @*new-id*)
-	  (alter *new-id* inc))
-  (dec @*new-id*))
-
-(defn get-player-id
-  "Gets the current id associated with name/client-id combination.
-
-If the name/client-id pair is not associated with an ID, a search will be done first to see if there is
-an ID that has been associated with the name and that will be returned along with associating the current
-name/client-id pair to that ID.
-
-If no ID is associated with the name, a search will be done to see if there is an ID that is associated
-with the client-id and that ID will be returned along with associating the current name/client-id pair to
-that ID.
-
-If no name or client-id is found to be a match, a new ID will be generated and associated with the
-client-id/name pair."
-  [name client-id]
-  (let [player-id (get @*player-id-map* [name client-id])]
-    (if player-id
-      (do player-id)
-      (let [player-id (get @*name-id-map* name)]
-	(if player-id
-	  (do (dosync (alter *player-id-map* assoc [name client-id] player-id)
-		      (alter *client-id-id-map* assoc client-id player-id)) 
-	      player-id)
-	  (let [player-id (get @*client-id-id-map* client-id)]
-	    (if player-id
-	      (do (dosync (alter *player-id-map* assoc [name client-id] player-id)
-			  (alter *player-id-map* assoc name player-id)) 
-		  player-id)
-	      (create-new-player-id name client-id))))))))
 
 (defn get-player
   "Currently pulls the player's client id out of the player-struct and either returns the stats
@@ -85,16 +43,16 @@ entry or creates a new entry and returns that."
 		(alter *player-id-ratio-map* assoc player-id 0))
 	(do new-player)))))
 
-(defn create-player-update-packet 
-  "Creates a map to represent the player packet to send to the front end."
-  [player]
-  (merge {:id (get-player-id (:name player) (:id player))} (get-player player)))
-
 (defn update-player 
   "Merges new-stats with the player-stats structure currently associated with the player."
   [player new-stats]
   (dosync (alter *player-stats-map* assoc (get-player-id (:name player) (:id player))
 		 (merge (get-player player) new-stats))))
+
+(defn create-player-update-packet 
+  "Creates a map to represent the player packet to send to the front end."
+  [player]
+  (merge {:id (get-player-id (:name player) (:id player))} (get-player player)))
 
 (defn process-damage 
   "Increments the inflicted field for attacker and received field for victim by damage."
@@ -212,6 +170,3 @@ time for this game."
       
       (game-event? (parsed-input :entry))
       (process-game-event (get-in parsed-input [:entry :player :team])))))
-
-			   
-			   
