@@ -45,6 +45,7 @@ $.widget("ui.picker", {
     $.widget.prototype.destroy.apply(this, arguments);
   },
 
+  // Enables/disables user input
   _enabled: function(enabled) {
     this.enabled = enabled;
     if (enabled) {
@@ -59,22 +60,27 @@ $.widget("ui.picker", {
     }
   },
 
+  // Fetches the picker index file from the server
   _requestIndex: function() {
 
     // Disable user interaction
     this._enabled(false);
 
+    // Configure the request options
+    var options = {
+      url: this.options.type + "/index.json",
+      dataType: "json",
+      cache: false,
+      success: $.call(this, "_handleIndexSuccess"),
+      error: $.call(this, "_handleIndexError"),
+    };
+
     // Fetch the index elements
-    $.getJSON(this.options.type + "/index.json", $.call(this, "_processIndex"));
+    $.ajax(options);
   },
 
-  _processIndex: function(items, status) {
-
-    // Check if the request was successful
-    if (status != "success") {
-      $.logger.error("Error retrieving list index: " + this.options.type, status);
-      return;
-    }
+  // Handles picker index file responses from the server
+  _handleIndexSuccess: function(items, status) {
 
     // Clear any previous list items
     $("li", this.listDiv).unbind();
@@ -99,6 +105,12 @@ $.widget("ui.picker", {
     this._enabled(true);
   },
 
+  // Handles picker index file error responses from the server
+  _handleIndexError: function(request, status, error) {
+    $.logger.error("Error retrieving list index: " + this.options.type, status);
+  },
+
+  // Creates a single item in the picker list
   _createItem: function(item) {
     var itemDiv = $('<li class="ui-state-default ui-corner-all" />');
     var nameDiv = $('<div class="item-name">' + item.name + '</div>').appendTo(itemDiv);
@@ -107,6 +119,7 @@ $.widget("ui.picker", {
     return itemDiv;
   },
 
+  // Toggles whether the picker button is activated
   _toggleButton: function() {
     if (!this.enabled || this.buttonDiv.hasClass("ui-state-hover")) {
       this.buttonDiv.removeClass("ui-state-hover");
@@ -115,6 +128,7 @@ $.widget("ui.picker", {
     }
   },
 
+  // Toggles whether the picker list is visible
   _toggleList: function(visible) {
     if (!this.enabled || visible != true) {
 
@@ -150,6 +164,7 @@ $.widget("ui.picker", {
     }
   },
 
+  // Handles keyboard input from the picker box
   _inputChanged: function(e) {
     if (e.keyCode == 27) {
 
@@ -164,6 +179,7 @@ $.widget("ui.picker", {
     }
   },
 
+  // Filters the list of picker list items based on user input
   _filterList: function(filter) {
 
     // Show only items that match the given filter
@@ -189,26 +205,38 @@ $.widget("ui.picker", {
     }
   },
 
+  // Fetches the content associated with the picker selection
   _itemSelected: function(index) {
     this.selection = this.items[index];
 
     // Update the appearance of the widget
     this.inputDiv.val(this.selection.name);
 
-    // Fetch the details for the selected item
-    $.getJSON(this.options.type + "/" + this.selection.name + ".json",
-        $.call(this, "_processItem"));
+    // Configure the request options
+    var options = {
+      url: this.selection.url,
+      dataType: "json",
+      cache: false,
+      success: $.call(this, "_handleContentSuccess"),
+      error: $.call(this, "_handleContentError"),
+    };
+
+    // Fetch the content for the selected item
+    $.ajax(options);
   },
 
-  _processItem: function(data, status) {
-    if (status == "success") {
-      if (this.options.callback) {
-        this.options.callback(this.selection, data);
-      }
-    } else {
-      $.logger.error("Error selecting list item: " + this.selection.name, status);
+  // Handles picker content file responses from the server
+  _handleContentSuccess: function(data, status) {
+    if (this.options.callback) {
+      this.options.callback(this.selection, data);
     }
+  },
+
+  // Handles picker content file error responses from the server
+  _handleContentError: function(request, status, error) {
+    $.logger.error("Error selecting list item: " + this.selection.name, status);
   }
+
 });
 
 $.extend($.ui.picker, {
