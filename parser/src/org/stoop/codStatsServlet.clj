@@ -53,12 +53,14 @@
 	;If = to # game-records, sleep for a bit then try to send
 	;Update to put game record types into its own object.  Currently in *game-records*
   (GET "/stats/start"
-    (if (not (nil? (params :log)))
+    (when (not (nil? (params :log)))
       (dosync (ref-set *log-file-location* (params :log))))
-    (let [tailer (tail-f @*log-file-location*
-			 1000 
-			 process-input-line)]
-      ((tailer :start))
+    (when (not (nil? (params :conn)))
+      (dosync (ref-set *connect-log-location* (params :conn))))
+    (let [log-reader (tail-f @*log-file-location* 1000 process-input-line)
+	  connect-reader (tail-f @*connect-log-location* 1000 process-connect-line)]
+      ((connect-reader :start))
+      ((log-reader :start))
       ((*ratio-calculator* :start))
       (str "File watching started for " @*log-file-location*))))
 

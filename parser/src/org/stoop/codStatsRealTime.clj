@@ -170,3 +170,10 @@ time for this game."
       
       (game-event? (parsed-input :entry))
       (process-game-event (get-in parsed-input [:entry :player :team])))))
+
+(defn process-connect-line
+  "Parses the input-line and updates the IP address records if its a valid line."
+  [input-line]
+  (let [parsed-input (parse-connect-line input-line)]
+    (when parsed-input
+      (associate-client-id-to-ip (:client-id parsed-input) (:ip-address parsed-input)))))

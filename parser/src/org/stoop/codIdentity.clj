@@ -44,7 +44,6 @@ client-id/name pair."
 	  (do player-id)
 	  (let [player-id (get @*name-id-map* name)]
 	    (if player-id
-	      (do (dosync (alter *player-id-map* assoc [name client-id] player-id)
-			  (alter *client-id-id-map* assoc client-id player-id)) 
+	      (do (dosync (alter *player-id-map* assoc [name client-id] player-id)) 
 		  player-id)
 	      (create-new-player-id name client-id))))))))
