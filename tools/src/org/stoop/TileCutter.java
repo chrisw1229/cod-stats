@@ -27,7 +27,7 @@ public class TileCutter {
 
    private static final int TILE_SIZE = 256;
 
-   private static final String TILE_NAME = "mp_uo_carentan";
+   private static final String TILE_NAME = "mp_uo_harbor";
 
    private static final String IMAGE_EXT = "jpg";
 
