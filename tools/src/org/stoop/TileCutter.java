@@ -13,6 +13,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FilenameFilter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -27,7 +28,7 @@ public class TileCutter {
 
    private static final int TILE_SIZE = 256;
 
-   private static final String TILE_NAME = "mp_uo_harbor";
+   private static final String TILE_NAME = "mp_uo_carentan";
 
    private static final String IMAGE_EXT = "jpg";
 
@@ -39,17 +40,25 @@ public class TileCutter {
 
    public static void main(String[] args) {
       System.out.println("Starting tile cutter...");
-      System.out.print("Removing old tiles...");
-      File outputDir = new File(OUTPUT_PATH);
-      outputDir.delete();
-      outputDir.mkdirs();
-      System.out.println("DONE");
 
-      BufferedImage image;
+      // Clean the target output folder
+      cleanOutput();
+
+      boolean running = true;
       int zoom = 0;
-      while ((image = loadImage(zoom + "." + IMAGE_EXT)) != null) {
-         System.out.print("Cutting tiles for zoom level: " + zoom + "...");
 
+      System.out.println("Processing new tiles...");
+      do {
+         System.out.println("Zoom Level: " + zoom);
+         System.out.print(" - Loading source image...");
+         BufferedImage image = loadImage(zoom + "." + IMAGE_EXT);
+         if (image == null) {
+            System.out.println("NONE");
+            break;
+         }
+         System.out.println("DONE");
+
+         System.out.print(" - Cutting and saving tiles...");
          int y = 0;
          for (int r = 0; r < image.getHeight(); r += TILE_SIZE) {
             int x = 0;
@@ -69,8 +78,29 @@ public class TileCutter {
          }
          System.out.println("DONE");
          zoom++;
-      }
+      } while (running);
+
       System.out.println("Exiting tile cutter.");
+   }
+
+   private static void cleanOutput() {
+      System.out.print("Deleting old tiles...");
+      File outputDir = new File(OUTPUT_PATH);
+      File[] tiles = outputDir.listFiles(new FilenameFilter() {
+
+         @Override
+         public boolean accept(File dir, String name) {
+            return name.endsWith(".jpg") || name.endsWith(".jpeg");
+         }
+
+      });
+      if (tiles != null) {
+         for (File tile : tiles) {
+            tile.delete();
+         }
+      }
+      outputDir.mkdirs();
+      System.out.println("DONE");
    }
 
    private static BufferedImage loadImage(String name) {
