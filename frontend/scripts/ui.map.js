@@ -37,7 +37,7 @@ Map._init = function(element, options) {
 
   // Create the actual map component
   var mapOpts = {
-    controls: [],
+    controls: Map.controls,
     maxExtent: new OpenLayers.Bounds(0, 0, options.maxSize, options.maxSize),
     maxResolution: (options.maxSize / options.maxTile),
     numZoomLevels: options.maxZoom,
@@ -68,6 +68,7 @@ Map._init = function(element, options) {
   var lat = (options.y ? options.y : (options.maxSize / 2));
   Map.ol.setCenter(new OpenLayers.LonLat(lon, lat), 1);
   Map._resize();
+  Map._enabled(false);
 };
 
 // Sets the tile layer displayed by the map
@@ -254,9 +255,9 @@ Map._enabled = function(enabled) {
     // Add or remove the map controls based on the given state
     for (var i = 0; i < Map.controls.length; i++) {
       if (enabled) {
-        Map.ol.addControl(Map.controls[i]);
+        Map.controls[i].activate();
       } else {
-        Map.ol.removeControl(Map.controls[i]);
+        Map.controls[i].deactivate();
       }
     }
 
