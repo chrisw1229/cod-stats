@@ -27,14 +27,14 @@ public class TileCutter {
 
    private static final int TILE_SIZE = 256;
 
-   private static final String TILE_NAME = "carentan";
+   private static final String TILE_NAME = "mp_uo_carentan";
 
    private static final String IMAGE_EXT = "jpg";
 
-   private static final String INPUT_PATH = "C:/develop/cod-stats/data/screenshots/"
+   private static final String INPUT_PATH = "C:/develop/cod-stats/data/maps/"
          + TILE_NAME + "/" + TILE_NAME;
 
-   private static final String OUTPUT_PATH = "C:/develop/cod-stats/www/tiles/"
+   private static final String OUTPUT_PATH = "C:/develop/cod-stats/frontend/tiles/"
          + TILE_NAME + "/";
 
    public static void main(String[] args) {
