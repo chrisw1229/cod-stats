@@ -5,12 +5,14 @@
 (defn make-coord-transformer [constant x-multiplier y-multiplier]
   #(+ (+ constant (* x-multiplier %1)) (* y-multiplier %2)))
 
-(def *map-transformers* {"mp_uo_carentan" {:x (make-coord-transformer 1085.8 -0.0142 0.7238)
-					   :y (make-coord-transformer 1654.0 0.7171 0.0083)}
-			 "mp_carentan" {:x (make-coord-transformer 1085.8 -0.0142 0.7238)
-					:y (make-coord-transformer 1654.0 0.7171 0.0083)}
-			 "mp_peaks" {:x (make-coord-transformer 2618.2 0.5342 -0.0348)
-				     :y (make-coord-transformer 2344.2 0.0043 -0.5479)}})
+(def *map-transformers* {"mp_uo_carentan" {:x (make-coord-transformer 3036.99 -0.0005 -0.748)
+					   :y (make-coord-transformer 2405.06 -0.746 0.0149)}
+			 "mp_carentan" {:x (make-coord-transformer 3036.99 -0.0005 -0.748)
+					:y (make-coord-transformer 2405.06 -0.746 0.0149)}
+			 "mp_uo_harbor" {:x (make-coord-transformer -3884.41 -0.654 -0.00161)
+					 :y (make-coord-transformer 1238.79 -0.0321 -0.0459)}
+			 "mp_kursk" {:x (make-coord-transformer 4712.94 -0.00459 -0.1852)
+				     :y (make-coord-transformer 1963.22 -0.1859 -0.002067)}})
 
 (defn get-transformer [map-name]
   (get *map-transformers* map-name {:x (make-coord-transformer 0 1 1)
