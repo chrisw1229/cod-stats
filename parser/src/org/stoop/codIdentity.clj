@@ -6,6 +6,8 @@
 (def *ip-id-map* (ref {}))
 (def *new-id* (ref 1))
 
+(def *check-ip* true)
+
 (defn associate-client-id-to-ip
   "Associates an IP address to the client ID passed in."
   [client-id ip-address]
@@ -16,8 +18,7 @@
   (let [ip-address (get @*client-id-ip-map* client-id)]
     (dosync (alter *player-id-map* assoc [name client-id] @*new-id*)
 	    (alter *name-id-map* assoc name @*new-id*)
-	    (when (not (nil? ip-address))
-	      (alter *ip-id-map* assoc (get @*client-id-ip-map* client-id) @*new-id*))
+	    (alter *ip-id-map* assoc (get @*client-id-ip-map* client-id) @*new-id*)
 	    (alter *new-id* inc))
     (dec @*new-id*)))
 
@@ -38,12 +39,20 @@ client-id/name pair."
   (let [player-id (get @*player-id-map* [name client-id])]
     (if player-id
       (do player-id)
-      (let [ip-address (get @*client-id-ip-map* client-id)
-	    player-id (get @*ip-id-map* ip-address)]
-	(if player-id
-	  (do player-id)
-	  (let [player-id (get @*name-id-map* name)]
+      ;Did not find player-id in main map
+      (do (if *check-ip*
+	    (loop [ip-address (get @*client-id-ip-map* client-id)]
+	      (when (nil? ip-address)
+		(Thread/sleep 500)
+		(recur (get @*client-id-ip-map* client-id)))))
+	  ;Found ip address or check-ip is turned off
+	  (let [ip-address (get @*client-id-ip-map* client-id)
+		player-id (get @*ip-id-map* ip-address)]
 	    (if player-id
-	      (do (dosync (alter *player-id-map* assoc [name client-id] player-id)) 
-		  player-id)
-	      (create-new-player-id name client-id))))))))
+	      (do player-id)
+	      ;Check to see if name has been used before
+	      (let [player-id (get @*name-id-map* name)]
+		(if player-id
+		  (do (dosync (alter *player-id-map* assoc [name client-id] player-id)) 
+		      player-id)
+		  (create-new-player-id name client-id)))))))))
