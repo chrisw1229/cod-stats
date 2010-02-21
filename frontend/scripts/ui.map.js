@@ -88,7 +88,7 @@ Map.setTiles = function(tiles) {
   }
 
   // Enable the map controls if tiles are configured
-  Map._enabled(Map.options.tiles);
+  Map._enabled(Map.options.tiles != undefined);
 };
 
 // Adds the given marker to the map
@@ -252,12 +252,12 @@ Map._enabled = function(enabled) {
   if (Map.enabled != enabled) {
     Map.enabled = enabled;
 
-    // Add or remove the map controls based on the given state
-    for (var i = 0; i < Map.controls.length; i++) {
+    // Only allow mouse wheel zoom when tiles are loaded
+    if (Map.controls && Map.controls.length > 0) {
       if (enabled) {
-        Map.controls[i].activate();
+        Map.controls[0].activate();
       } else {
-        Map.controls[i].deactivate();
+        Map.controls[0].deactivate();
       }
     }
 
