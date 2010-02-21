@@ -68,11 +68,12 @@ $.widget("ui.navigation", {
     }
     this.flying = true;
 
-    this.shadowDiv.width(this.bodyDiv.width());
-    this.shadowDiv.height(this.bodyDiv.height());
-
     var self = this;
     this.bodyDiv.show("slide", "slow", function() {
+      self.shadowDiv.width(self.bodyDiv.width());
+      self.shadowDiv.height(self.bodyDiv.height());
+      self.shadowDiv.show();
+
       self.flying = undefined;
       if (callback) {
         callback();
@@ -85,6 +86,8 @@ $.widget("ui.navigation", {
       return;
     }
     this.flying = true;
+
+    this.shadowDiv.hide();
 
     var self = this;
     this.bodyDiv.hide("slide", {}, "slow", function() {

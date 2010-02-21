@@ -35,11 +35,27 @@
   padding: 4px;
   position: relative;
 }
-.ui-picker-list {
-  background-color: 
-  border-top: 0;
-  overflow-y: scroll;
+.ui-picker-popup {
   position: absolute;
+  z-index: 1000;
+}
+.ui-picker-popup-content {
+  background: #E9E6DB;
+  border: 1px solid #372B13;
+  border-top: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+.ui-picker-shadow {
+  padding: 0 0 9px 4px;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+.ui-picker-list {
+  margin: 2px 2px 4px 4px;
+  overflow-y: scroll;
 }
 .ui-picker-list ul {
   margin: 0;
@@ -49,7 +65,7 @@
   cursor: pointer;
   font-size: 1.3em;
   list-style-type: none;
-  margin: 2px 0 0;
+  margin: 2px 2px 0 0;
   padding: 0 4px;
 }
 .ui-picker-list li .item-name {

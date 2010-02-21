@@ -18,15 +18,19 @@ $.widget("ui.picker", {
     this.buttonDiv = $('<div class="ui-state-default ui-corner-tr ui-corner-br'
         + ' ui-picker-combo-button">').appendTo(this.comboDiv);
     $('<span class="ui-icon ui-icon-circle-triangle-s" />').appendTo(this.buttonDiv);
-    this.listDiv = $('<div class="ui-picker-list"></div>').appendTo($("body"));
+
+    this.popupDiv = $('<div class="ui-picker-popup"></div>').appendTo($("body"));
+    this.popupContentDiv = $('<div class="ui-corner-bottom ui-picker-popup-content"/>').appendTo(this.popupDiv);
+    this.listDiv = $('<div class="ui-picker-list"/>').appendTo(this.popupContentDiv);
+    this.shadowDiv = $('<div class="ui-widget-shadow ui-corner-all ui-picker-shadow"/>').appendTo(this.popupDiv);
 
     // Bind the event handlers
     this.comboDiv.bind("mouseenter", function() { self._toggleButton(); });
     this.comboDiv.bind("mouseleave", function() { self._toggleButton(); });
     this.comboDiv.bind("click", function(e) { e.stopPropagation(); self._toggleList(true); });
     this.inputDiv.bind("keyup", function(e) { self._inputChanged(e); });
-    $("html").bind("click", function() { self._toggleList(false); });
-    $(window).bind("resize", function() { self._toggleList(false); });
+    $("html").bind("click.picker", function() { self._toggleList(false); });
+    $(window).bind("resize.picker", function() { self._toggleList(false); });
 
     // Fetch the remote content
     this._requestIndex();
@@ -36,11 +40,13 @@ $.widget("ui.picker", {
 
     // Clear the event handlers
     this.comboDiv.unbind();
+    $("html").unbind("click.picker");
+    $(window).unbind("resize.picker");
 
     // Destroy the document model
     this.element.removeClass("ui-picker");
     this.bodyDiv.remove();
-    this.listDiv.remove();
+    this.popupDiv.remove();
 
     $.widget.prototype.destroy.apply(this, arguments);
   },
@@ -53,7 +59,7 @@ $.widget("ui.picker", {
       this.inputDiv.removeClass("ui-state-disabled ui-picker-combo-loading");
       this.buttonDiv.removeClass("ui-state-disabled");
     } else {
-      this.listDiv.hide();
+      this.popupDiv.hide();
       this.inputDiv.val("Loading...");
       this.inputDiv.addClass("ui-state-disabled ui-picker-combo-loading");
       this.buttonDiv.addClass("ui-state-disabled");
@@ -103,6 +109,7 @@ $.widget("ui.picker", {
 
     // Enable user interaction
     this._enabled(true);
+    this.inputDiv.focus();
   },
 
   // Handles picker index file error responses from the server
@@ -133,35 +140,41 @@ $.widget("ui.picker", {
     if (!this.enabled || visible != true) {
 
       // Hide the list of items
-      this.listDiv.stop().slideUp("fast");
+      this.listDiv.scrollTop(0);
+      this.popupDiv.hide();
       this.inputDiv.addClass("ui-corner-bl");
       this.buttonDiv.addClass("ui-corner-br");
-    } else if (!this.listDiv.is(":visible")){
+    } else if (!this.popupDiv.is(":visible")){
 
       // Find the height of a single item while the list is off-screen
-      var listW = this.comboDiv.width() - 1;
-      this.listDiv.css({ width: listW, left: -listW });
-      this.listDiv.show();
+      var listW = this.comboDiv.width() - 3;
+      this.popupDiv.css({ width: listW, left: -2 * listW });
+      this.popupDiv.show();
       var itemH = $("li:first", this.listDiv).outerHeight(true);
-      this.listDiv.hide();
+      this.popupDiv.hide();
 
       // Calculate the position and dimensions for the list
       var offset = this.comboDiv.offset();
       var listT = offset.top + this.comboDiv.height() + 2;
-      var maxH = $(window).height() - listT;
+      var maxH = ($(window).height() / 2) - listT;
       var listH = Math.floor(maxH / itemH) * itemH; 
-      this.listDiv.css({ left: offset.left, top: listT });
+      this.popupDiv.css({ left: offset.left, top: listT });
       this.listDiv.css({ height: listH });
+
+      // Set the position of the shadow
+      this.shadowDiv.width(listW);
+      this.shadowDiv.height(listH);
 
       // Store the dimensions for use during dynamic filtering
       this.listDiv.maxHeight = listH;
       this.listDiv.itemHeight = itemH;
 
       // Display the list of items
-      this.listDiv.stop().slideDown("fast");
+      this.popupDiv.show();
       this.inputDiv.removeClass("ui-corner-bl");
       this.buttonDiv.removeClass("ui-corner-br");
     }
+    this.inputDiv.focus();
   },
 
   // Handles keyboard input from the picker box
@@ -195,13 +208,22 @@ $.widget("ui.picker", {
 
     // Re-size the list if the number of matched items changed
     if (this.listDiv.count != count) {
-      var prefH = count * this.listDiv.itemHeight;
-      if (prefH > this.listDiv.maxHeight) {
-        this.listDiv.css({ height: this.listDiv.maxHeight, overflowY: "scroll" });
-      } else if (prefH != this.listDiv.height()) {
-        this.listDiv.css({ height: prefH, overflowY: "hidden" });
-      }
       this.listDiv.count = count;
+
+      if (count == 0) {
+        this.popupDiv.hide();
+      } else {
+        var prefH = count * this.listDiv.itemHeight;
+
+        if (prefH > this.listDiv.maxHeight) {
+          this.listDiv.css({ height: this.listDiv.maxHeight, overflowY: "scroll" });
+          this.shadowDiv.height(this.listDiv.maxHeight);
+        } else if (prefH != this.listDiv.height()) {
+          this.listDiv.css({ height: prefH, overflowY: "hidden" });
+          this.shadowDiv.height(prefH);
+        }
+        this.popupDiv.show();
+      }
     }
   },
 
