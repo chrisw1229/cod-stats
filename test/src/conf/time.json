@@ -1,23 +1,23 @@
-{ type: "log", data: { info: "Setting max game time to 30s" } }
-{ type: "game", data: { map: "mp_uo_carentan", type: "tdm", time: 30 } }
-{ type: "log", data: { info: "Setting time to 10s by 1s" } }
-{ type: "event", data: { time: 1 } }
-{ type: "event", data: { time: 2 } }
-{ type: "event", data: { time: 3 } }
-{ type: "event", data: { time: 4 } }
-{ type: "event", data: { time: 5 } }
-{ type: "event", data: { time: 6 } }
-{ type: "event", data: { time: 7 } }
-{ type: "event", data: { time: 8 } }
-{ type: "event", data: { time: 9 } }
-{ type: "event", data: { time: 10 } }
-{ type: "log", data: { info: "Setting time to 30s by 5s" } }
-{ type: "event", data: { time: 15 } }
-{ type: "event", data: { time: 20 } }
-{ type: "event", data: { time: 25 } }
-{ type: "event", data: { time: 30 } }
-{ type: "log", data: { info: "Resetting max game time to 0s" } }
-{ type: "game", data: { map: "mp_uo_carentan", type: "tdm", time: 30 } }
+{ "type": "log", "data": { "info": "Setting max game time to 30s" } }
+{ "type": "game", "data": { "map": "mp_uo_carentan", "type": "tdm", "time": 30 } }
+{ "type": "log", "data": { "info": "Setting time to 10s by 1s" } }
+{ "type": "event", "data": { "time": 1 } }
+{ "type": "event", "data": { "time": 2 } }
+{ "type": "event", "data": { "time": 3 } }
+{ "type": "event", "data": { "time": 4 } }
+{ "type": "event", "data": { "time": 5 } }
+{ "type": "event", "data": { "time": 6 } }
+{ "type": "event", "data": { "time": 7 } }
+{ "type": "event", "data": { "time": 8 } }
+{ "type": "event", "data": { "time": 9 } }
+{ "type": "event", "data": { "time": 10 } }
+{ "type": "log", "data": { "info": "Setting time to 30s by 5s" } }
+{ "type": "event", "data": { "time": 15 } }
+{ "type": "event", "data": { "time": 20 } }
+{ "type": "event", "data": { "time": 25 } }
+{ "type": "event", "data": { "time": 30 } }
+{ "type": "log", "data": { "info": "Resetting max game time to 0s" } }
+{ "type": "game", "data": { "map": "mp_uo_carentan", "type": "tdm", "time": 30 } }
 
 
-{ type: "log", data: { info: "Test complete" } }
+{ "type": "log", "data": { "info": "Test complete" } }

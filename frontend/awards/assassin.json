@@ -1,6 +1,6 @@
 {
-  columns: [ "Player Name", "Kills" ],
-  records: [
+  "columns": [ "Player Name", "Kills" ],
+  "records": [
     [ "Jaymz-'Lil Dana's Sweet Caboose", 92 ],
     [ "Scope", 73 ],
     [ "A Figment of Your Imagination", 53 ],

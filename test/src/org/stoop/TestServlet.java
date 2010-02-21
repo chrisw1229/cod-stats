@@ -59,7 +59,8 @@ public class TestServlet extends HttpServlet {
          // Build the response including the next time stamp
          StringBuilder builder = new StringBuilder();
          builder.append("[");
-         builder.append("{ type: \"ts\", data: ").append(ts + 1).append(" }");
+         builder.append("{ \"type\": \"ts\", \"data\": ").append(ts + 1)
+               .append(" }");
 
          // Attempt to load the requested test case
          List<String> packets = loadTest(testName);

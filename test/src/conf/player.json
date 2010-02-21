@@ -1,51 +1,51 @@
-{ type: "log", data: { info: "Adding 1 player" } }
-{ type: "player", data: { id: 1, name: "A Figment of Your Imagination", photo: "player0.jpg", place: "4", rank: "3", team: "a", trend: "+", kills: "79", deaths: "57", inflicted: "14,722", received: "8,353" } }
+{ "type": "log", "data": { "info": "Adding 1 player" } }
+{ "type": "player", "data": { "id": 1, "name": "A Figment of Your Imagination", "photo": "player0.jpg", "place": "4", "rank": "3", "team": "a", "trend": "+", "kills": "79", "deaths": "57", "inflicted": "14,722", "received": "8,353" } }
 
 
 
 
-{ type: "log", data: { info: "Adding 2 players" } }
-{ type: "player", data: { id: 2, name: "Bazooka John", photo: "player1.jpg", place: "7", rank: "2", team: "s", trend: "-", kills: "48", deaths: "57", inflicted: "8,834", received: "7,149" } }
-{ type: "player", data: { id: 3, name: "CDJ Wobbly Wiggly", photo: "player2.jpg", place: "10", rank: "1", team: "b", trend: "-", kills: "32", deaths: "43", inflicted: "5,475", received: "9,252" } }
+{ "type": "log", "data": { "info": "Adding 2 players" } }
+{ "type": "player", "data": { "id": 2, "name": "Bazooka John", "photo": "player1.jpg", "place": "7", "rank": "2", "team": "s", "trend": "-", "kills": "48", "deaths": "57", "inflicted": "8,834", "received": "7,149" } }
+{ "type": "player", "data": { "id": 3, "name": "CDJ Wobbly Wiggly", "photo": "player2.jpg", "place": "10", "rank": "1", "team": "b", "trend": "-", "kills": "32", "deaths": "43", "inflicted": "5,475", "received": "9,252" } }
 
 
-{ type: "log", data: { info: "Adding 10 players" } }
-{ type: "player", data: { id: 4, name: "CHUCKNORRISCOUNTEDTOINFINITY...", photo: "player3.jpg", place: "11", rank: "1", team: "r", trend: "-", kills: "27", deaths: "55", inflicted: "4,085", received: "6,768" } }
-{ type: "player", data: { id: 5, name: "Colonel Billiam", photo: "player4.jpg", place: "9", rank: "2", team: "a", trend: "-", kills: "44", deaths: "55", inflicted: "5,294", received: "6,245" } }
-{ type: "player", data: { id: 6, name: "GOMER PYLE", photo: "player5.jpg", place: "2", rank: "4", team: "g", trend: "+", kills: "108", deaths: "55", inflicted: "18,475", received: "7,809" } }
-{ type: "player", data: { id: 7, name: "Jaymz", photo: "player6.jpg", place: "6", rank: "3", team: "b", trend: "", kills: "58", deaths: "53", inflicted: "3,119", received: "2,090" } }
-{ type: "player", data: { id: 8, name: "Luda", photo: "player7.jpg", place: "8", rank: "2", team: "r", trend: "", kills: "45", deaths: "50", inflicted: "10,572", received: "10,978" } }
-{ type: "player", data: { id: 9, name: "Note To Self", photo: "player8.jpg", place: "5", rank: "3", team: "a", trend: "+", kills: "68", deaths: "53", inflicted: "11,222", received: "8,376" } }
-{ type: "player", data: { id: 10, name: "Scope", photo: "player9.jpg", place: "3", rank: "3", team: "g", trend: "+", kills: "82", deaths: "57", inflicted: "9,161", received: "9,162" } }
-{ type: "player", data: { id: 11, name: "ThePine", photo: "player10.jpg", place: "1", rank: "4", team: "b", trend: "+", kills: "143", deaths: "80", inflicted: "18,590", received: "11,193" } }
-{ type: "player", data: { id: 12, name: "Tim - Target Drone", photo: "player11.jpg", place: "12", rank: "0", team: "r", trend: "-", kills: "18", deaths: "50", inflicted: "2,879", received: "9,257" } }
-{ type: "player", data: { id: 13, name: "Turn Left Nower", photo: "player12.jpg", place: "13", rank: "0", team: "a", trend: "-", kills: "12", deaths: "31", inflicted: "2,741", received: "5,515" } }
+{ "type": "log", "data": { "info": "Adding 10 players" } }
+{ "type": "player", "data": { "id": 4, "name": "CHUCKNORRISCOUNTEDTOINFINITY...", "photo": "player3.jpg", "place": "11", "rank": "1", "team": "r", "trend": "-", "kills": "27", "deaths": "55", "inflicted": "4,085", "received": "6,768" } }
+{ "type": "player", "data": { "id": 5, "name": "Colonel Billiam", "photo": "player4.jpg", "place": "9", "rank": "2", "team": "a", "trend": "-", "kills": "44", "deaths": "55", "inflicted": "5,294", "received": "6,245" } }
+{ "type": "player", "data": { "id": 6, "name": "GOMER PYLE", "photo": "player5.jpg", "place": "2", "rank": "4", "team": "g", "trend": "+", "kills": "108", "deaths": "55", "inflicted": "18,475", "received": "7,809" } }
+{ "type": "player", "data": { "id": 7, "name": "Jaymz", "photo": "player6.jpg", "place": "6", "rank": "3", "team": "b", "trend": "", "kills": "58", "deaths": "53", "inflicted": "3,119", "received": "2,090" } }
+{ "type": "player", "data": { "id": 8, "name": "Luda", "photo": "player7.jpg", "place": "8", "rank": "2", "team": "r", "trend": "", "kills": "45", "deaths": "50", "inflicted": "10,572", "received": "10,978" } }
+{ "type": "player", "data": { "id": 9, "name": "Note To Self", "photo": "player8.jpg", "place": "5", "rank": "3", "team": "a", "trend": "+", "kills": "68", "deaths": "53", "inflicted": "11,222", "received": "8,376" } }
+{ "type": "player", "data": { "id": 10, "name": "Scope", "photo": "player9.jpg", "place": "3", "rank": "3", "team": "g", "trend": "+", "kills": "82", "deaths": "57", "inflicted": "9,161", "received": "9,162" } }
+{ "type": "player", "data": { "id": 11, "name": "ThePine", "photo": "player10.jpg", "place": "1", "rank": "4", "team": "b", "trend": "+", "kills": "143", "deaths": "80", "inflicted": "18,590", "received": "11,193" } }
+{ "type": "player", "data": { "id": 12, "name": "Tim - Target Drone", "photo": "player11.jpg", "place": "12", "rank": "0", "team": "r", "trend": "-", "kills": "18", "deaths": "50", "inflicted": "2,879", "received": "9,257" } }
+{ "type": "player", "data": { "id": 13, "name": "Turn Left Nower", "photo": "player12.jpg", "place": "13", "rank": "0", "team": "a", "trend": "-", "kills": "12", "deaths": "31", "inflicted": "2,741", "received": "5,515" } }
 
 
-{ type: "log", data: { info: "Updating player values" } }
-{ type: "player", data: { id: 4, kills: "30", deaths: "60", inflicted: "4,500", received: "7,000" } }
-{ type: "player", data: { id: 5, kills: "50", deaths: "60", inflicted: "6,000", received: "7,000" } }
-{ type: "player", data: { id: 6, kills: "120", deaths: "60", inflicted: "20,000", received: "8,000" } }
-{ type: "player", data: { id: 7, kills: "60", deaths: "60", inflicted: "4,000", received: "3,000" } }
-{ type: "player", data: { id: 8, kills: "50", deaths: "60", inflicted: "11,000", received: "11,000" } }
-{ type: "player", data: { id: 9, kills: "70", deaths: "60", inflicted: "12,000", received: "9,000" } }
-{ type: "player", data: { id: 10, kills: "90", deaths: "60", inflicted: "10,000", received: "10,000" } }
-{ type: "player", data: { id: 11, kills: "150", deaths: "90", inflicted: "20,000", received: "12,000" } }
-{ type: "player", data: { id: 12, kills: "20", deaths: "60", inflicted: "3,000", received: "10,000" } }
-{ type: "player", data: { id: 13, kills: "20", deaths: "40", inflicted: "3,000", received: "6,000" } }
-{ type: "player", data: { id: 1, kills: "90", deaths: "60", inflicted: "15,000", received: "9,000" } }
-{ type: "player", data: { id: 2, kills: "50", deaths: "60", inflicted: "9,000", received: "8,000", team: "g" } }
-{ type: "player", data: { id: 3, kills: "40", deaths: "50", inflicted: "6,000", received: "10,000" } }
+{ "type": "log", "data": { "info": "Updating player values" } }
+{ "type": "player", "data": { "id": 4, "kills": "30", "deaths": "60", "inflicted": "4,500", "received": "7,000" } }
+{ "type": "player", "data": { "id": 5, "kills": "50", "deaths": "60", "inflicted": "6,000", "received": "7,000" } }
+{ "type": "player", "data": { "id": 6, "kills": "120", "deaths": "60", "inflicted": "20,000", "received": "8,000" } }
+{ "type": "player", "data": { "id": 7, "kills": "60", "deaths": "60", "inflicted": "4,000", "received": "3,000" } }
+{ "type": "player", "data": { "id": 8, "kills": "50", "deaths": "60", "inflicted": "11,000", "received": "11,000" } }
+{ "type": "player", "data": { "id": 9, "kills": "70", "deaths": "60", "inflicted": "12,000", "received": "9,000" } }
+{ "type": "player", "data": { "id": 10, "kills": "90", "deaths": "60", "inflicted": "10,000", "received": "10,000" } }
+{ "type": "player", "data": { "id": 11, "kills": "150", "deaths": "90", "inflicted": "20,000", "received": "12,000" } }
+{ "type": "player", "data": { "id": 12, "kills": "20", "deaths": "60", "inflicted": "3,000", "received": "10,000" } }
+{ "type": "player", "data": { "id": 13, "kills": "20", "deaths": "40", "inflicted": "3,000", "received": "6,000" } }
+{ "type": "player", "data": { "id": 1, "kills": "90", "deaths": "60", "inflicted": "15,000", "received": "9,000" } }
+{ "type": "player", "data": { "id": 2, "kills": "50", "deaths": "60", "inflicted": "9,000", "received": "8,000", "team": "g" } }
+{ "type": "player", "data": { "id": 3, "kills": "40", "deaths": "50", "inflicted": "6,000", "received": "10,000" } }
 
 
 
-{ type: "log", data: { info: "Removing 7 players" } }
-{ type: "player", data: { id: 1, team: "" } }
-{ type: "player", data: { id: 3, team: "" } }
-{ type: "player", data: { id: 5, team: "" } }
-{ type: "player", data: { id: 7, team: "" } }
-{ type: "player", data: { id: 9, team: "" } }
-{ type: "player", data: { id: 11, team: "" } }
-{ type: "player", data: { id: 13, team: "" } }
+{ "type": "log", "data": { "info": "Removing 7 players" } }
+{ "type": "player", "data": { "id": 1, "team": "" } }
+{ "type": "player", "data": { "id": 3, "team": "" } }
+{ "type": "player", "data": { "id": 5, "team": "" } }
+{ "type": "player", "data": { "id": 7, "team": "" } }
+{ "type": "player", "data": { "id": 9, "team": "" } }
+{ "type": "player", "data": { "id": 11, "team": "" } }
+{ "type": "player", "data": { "id": 13, "team": "" } }
 
-{ type: "log", data: { info: "Test complete" } }
+{ "type": "log", "data": { "info": "Test complete" } }
