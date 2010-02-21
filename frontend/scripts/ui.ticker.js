@@ -431,6 +431,7 @@ $.widget("ui.ticker", {
       $("div.ui-ticker-trend", itemDiv).attr("class", "ui-state-" + trendState + " ui-ticker-trend");
       $("span.ui-ticker-trend-icon", itemDiv).attr("class", "ui-icon ui-icon-circle-"
           + trendIcon + " ui-ticker-trend-icon");
+      $("div.ui-ticker-trend", itemDiv).show();
 
       // Load all the numeric content
       $("tr.ui-ticker-kills td.ui-ticker-stat-value", itemDiv).text(item.kills);
@@ -443,6 +444,7 @@ $.widget("ui.ticker", {
 
       // Just show the spectator label
       $("div.ui-ticker-item-icons", itemDiv).hide();
+      $("div.ui-ticker-trend", itemDiv).hide();
       $("table.ui-ticker-stats", itemDiv).hide();
       $("div.ui-ticker-spec", itemDiv).show();
     }
