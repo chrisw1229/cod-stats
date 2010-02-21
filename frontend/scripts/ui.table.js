@@ -56,7 +56,7 @@ $.widget("ui.table", {
     for (var i = 0; i < columns.length; i++) {
 
       // Store the column data for future use
-      var column = { name: columns[i] };
+      var column = columns[i];
       this.columns.push(column);
 
       // Create an element to represent the column header

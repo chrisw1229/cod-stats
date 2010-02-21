@@ -1,6 +1,9 @@
 {
-  "columns": [ "Player Name", "Kills" ],
-  "records": [
+  "columns": [
+    { "name": "Player Name", "type": "string" },
+    { "name": "Kills", "type": "number" }
+  ],
+  "rows": [
     [ "Jaymz-'Lil Dana's Sweet Caboose", 92 ],
     [ "Scope", 73 ],
     [ "A Figment of Your Imagination", 53 ],
