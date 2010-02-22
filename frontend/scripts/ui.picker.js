@@ -19,7 +19,8 @@ $.widget("ui.picker", {
     this.inputDiv = $('<input class="ui-widget-content ui-corner-tl'
         + ' ui-corner-bl ui-picker-combo-input" />').appendTo(this.comboDiv);
     this.buttonDiv = $('<div class="ui-state-default ui-corner-tr ui-corner-br'
-        + ' ui-picker-combo-button">').appendTo(this.comboDiv);
+        + ' ui-picker-combo-button" title="Click to choose from a list of '
+        + this.options.title.toLowerCase() + '">').appendTo(this.comboDiv);
     $('<span class="ui-icon ui-icon-circle-triangle-s" />').appendTo(this.buttonDiv);
 
     this.popupDiv = $('<div class="ui-picker-popup"></div>').appendTo($("body"));
