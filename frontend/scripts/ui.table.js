@@ -42,9 +42,9 @@ $.widget("ui.table", {
       return;
     }
 
-    // Update the default column element to store the row number
+    // Create a column element to store the row number
     this.headerDiv.children().remove();
-    $('<th class="ui-state-default ui-corner-top ui-table-cell-empty">&nbsp;</th>').appendTo(this.headerDiv);
+    $('<th class="ui-state-default ui-corner-tl ui-table-cell-num">#</th>').appendTo(this.headerDiv);
 
     // Add the new table column header elements
     for (var i = 0; i < columns.length; i++) {
