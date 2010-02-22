@@ -6,8 +6,12 @@ $.extend({ mgr: {
 
   // Callback when the user selects an award
   itemSelected: function(selection, data) {
-    $("#table").table("setColumns", data.columns);
-    $("#table").table("setRows", data.rows);
+    if (selection && data) {
+      $("#table").table("setColumns", data.columns);
+      $("#table").table("setRows", data.rows);
+    } else {
+      $("#table").table("reset");
+    }
   }
 
 }});

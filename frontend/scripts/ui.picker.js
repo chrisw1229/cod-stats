@@ -4,6 +4,9 @@ $.widget("ui.picker", {
 
   _init: function() {
     var self = this;
+    this.filter = "";
+    this.selection = undefined;
+    this.selectionIndex = -1;
 
     // Build the document model
     this.element.addClass("ui-picker");
@@ -28,8 +31,9 @@ $.widget("ui.picker", {
     this.comboDiv.bind("mouseenter", function() { self._toggleButton(); });
     this.comboDiv.bind("mouseleave", function() { self._toggleButton(); });
     this.comboDiv.bind("click", function(e) { e.stopPropagation(); self._toggleList(true); });
-    this.inputDiv.bind("keyup", function(e) { self._inputChanged(e); });
-    $("html").bind("click.picker", function() { self._toggleList(false); });
+    this.inputDiv.bind("keyup", function(e) { self._inputKeyUp(e); });
+    this.inputDiv.bind("keydown", function(e) { self._inputKeyDown(e); });
+    $("html").bind("click.picker", function() { self._undoChanges(); });
     $(window).bind("resize.picker", function() { self._toggleList(false); });
 
     // Fetch the remote content
@@ -40,6 +44,8 @@ $.widget("ui.picker", {
 
     // Clear the event handlers
     this.comboDiv.unbind();
+    this.inputDiv.unbind();
+    $("li", this.listDiv).unbind();
     $("html").unbind("click.picker");
     $(window).unbind("resize.picker");
 
@@ -122,7 +128,6 @@ $.widget("ui.picker", {
     var itemDiv = $('<li class="ui-state-default ui-corner-all" />');
     var nameDiv = $('<div class="item-name">' + item.name + '</div>').appendTo(itemDiv);
     var descDiv = $('<div class="item-desc">' + item.tip + '</div>').appendTo(itemDiv);
-    item.div = itemDiv;
     return itemDiv;
   },
 
@@ -135,8 +140,47 @@ $.widget("ui.picker", {
     }
   },
 
+  // Toggles whether a list item is highlighted
+  _toggleItem: function(item) {
+    this.hovered = item;
+    if (this.hovered == undefined) {
+      return;
+    }
+
+    // Check if the item should no longer be hovered
+    if (item.hasClass("ui-state-hover")) {
+      item.removeClass("ui-state-hover");
+      this.hovered = undefined;
+      return;
+    }
+
+    // Find the offset of the new item to hover
+    var top = item.offset().top;
+    var offset = Math.ceil(top / this.listDiv.itemHeight) * this.listDiv.itemHeight;
+
+    // Check whether the item is currently visible
+    if (top < this.listDiv.itemHeight - 1) {
+
+      // Move the list down because the item is scrolled off the top
+      offset -= this.listDiv.itemHeight;
+      var newTop = this.listDiv.scrollTop() + offset;
+      newTop -= (newTop % this.listDiv.itemHeight);
+      this.listDiv.scrollTop(newTop > 0 ? newTop : 0);
+    } else if (top > this.listDiv.maxHeight - 1) {
+
+      // Move the list up because the item is scrolled off the bottom
+      offset -= this.listDiv.maxHeight;
+      var newTop = this.listDiv.scrollTop() + offset;
+      newTop -= (newTop % this.listDiv.itemHeight);
+      var maxHeight = this.listDiv.attr("scrollHeight");
+      this.listDiv.scrollTop(newTop < maxHeight ? newTop : maxHeight);
+    }
+    item.addClass("ui-state-hover");
+  },
+
   // Toggles whether the picker list is visible
   _toggleList: function(visible) {
+    var oldVisible = this.popupDiv.is(":visible");
     if (!this.enabled || visible != true) {
 
       // Hide the list of items
@@ -144,7 +188,13 @@ $.widget("ui.picker", {
       this.popupDiv.hide();
       this.inputDiv.addClass("ui-corner-bl");
       this.buttonDiv.addClass("ui-corner-br");
-    } else if (!this.popupDiv.is(":visible")){
+
+      // Check if the list was visible
+      if (oldVisible) {
+        this._toggleItem(this.hovered);
+        this.inputDiv.focus();
+      }
+    } else if (!oldVisible) {
 
       // Find the height of a single item while the list is off-screen
       var listW = this.comboDiv.width() - 3;
@@ -168,25 +218,119 @@ $.widget("ui.picker", {
       // Store the dimensions for use during dynamic filtering
       this.listDiv.maxHeight = listH;
       this.listDiv.itemHeight = itemH;
+      this.listDiv.pageSize = (listH / itemH);
 
       // Display the list of items
       this.popupDiv.show();
       this.inputDiv.removeClass("ui-corner-bl");
       this.buttonDiv.removeClass("ui-corner-br");
+
+      // Attempt to move the list to the last selection
+      if (this.selectionIndex >= 0) {
+        this._toggleItem($("li", this.listDiv).eq(this.selectionIndex));
+      }
+
+      this.inputDiv.focus();
     }
-    this.inputDiv.focus();
   },
 
   // Handles keyboard input from the picker box
-  _inputChanged: function(e) {
-    if (e.keyCode == 27) {
+  _inputKeyDown: function(e) {
+    if (!this.popupDiv.is(":visible")) {
+      return;
+    }
 
-      // Hide the list when escape is pressed
-      this._toggleList(false);
+    if (e.keyCode == 38) {
+
+      // Move the list to the previous item when up is pressed
+      if (this.hovered) {
+        var prevItem = this.hovered.prevAll(":visible").eq(0);
+        if (prevItem.length > 0) {
+          this._toggleItem(this.hovered);
+          this._toggleItem(prevItem);
+        }
+      } else {
+        this._toggleItem($("li:visible", this.listDiv).eq(0));
+      }
+    } else if (e.keyCode == 40) {
+
+      // Move the list to the next item when down is pressed
+      if (this.hovered) {
+        var nextItem = this.hovered.nextAll(":visible").eq(0);
+        if (nextItem.length > 0) {
+          this._toggleItem(this.hovered);
+          this._toggleItem(nextItem);
+        }
+      } else {
+        this._toggleItem($("li:visible", this.listDiv).eq(0));
+      }
+    } else if (e.keyCode == 33) {
+
+      // Move the list to the previous page when page up is pressed
+      var page = this.listDiv.pageSize;
+      var visItems = $("li:visible", this.listDiv);
+      var offset = (this.listDiv.scrollTop() / this.listDiv.itemHeight) - page;
+      var index = (offset > 0 ? offset : 0);
+
+      this._toggleItem(this.hovered);
+      this._toggleItem(visItems.eq(index));
+    } else if (e.keyCode == 34) {
+
+      // Move the list to the next page when page down is pressed
+      var page = this.listDiv.pageSize;
+      var visItems = $("li:visible", this.listDiv);
+      var offset = (this.listDiv.scrollTop() / this.listDiv.itemHeight) + (2 * page) - 1;
+      var index = (offset < visItems.length ? offset : visItems.length - 1);
+
+      this._toggleItem(this.hovered);
+      this._toggleItem(visItems.eq(index));
+    }
+
+    if (this.hovered && e.keyCode >= 33 && e.keyCode <= 40) {
+      this.inputDiv.val($("div.item-name", this.hovered).text());
+    }
+  },
+
+  // Handles keyboard input from the picker box
+  _inputKeyUp: function(e) {
+
+    // Reset the list when escape is pressed
+    if (e.keyCode == 27) {
+      this._undoChanges();
+      return;
+    }
+
+    // Ignore keys used for navigation
+    if (e.keyCode >= 33 && e.keyCode <= 40) {
+      this._toggleList(true);
+      return;
+    }
+
+    if (e.keyCode == 13) {
+
+      // Find the index of the item that matches the input when enter is pressed
+      var index = -1;
+      var input = this.inputDiv.val().toLowerCase();
+      for (var i = 0; i < this.items.length; i++) {
+        if (this.items[i].name.toLowerCase() == input) {
+          index = i;
+          break;
+        }
+      }
+
+      // Update the selection
+      this._itemSelected(index);
     } else {
+
+      // Update the filter based on the new text input
       var filter = this.inputDiv.val().toLowerCase();
       if (this.filter != filter) {
         this.filter = filter;
+
+        // Clear the last hover focus
+        this._toggleItem(this.hovered);
+
+        // Update the list to show only items that match
         this._filterList(filter);
       }
     }
@@ -197,42 +341,73 @@ $.widget("ui.picker", {
 
     // Show only items that match the given filter
     var count = 0;
+    var itemDivs = $("li", this.listDiv);
     for (var i = 0; i < this.items.length; i++) {
       var item = this.items[i];
       var matches = (filter.length == 0
           || item.name.toLowerCase().indexOf(filter) >= 0
           || item.tip.toLowerCase().indexOf(filter) >= 0);
-      item.div.toggle(matches);
+      itemDivs.eq(i).toggle(matches);
       count += (matches ? 1 : 0);
     }
 
-    // Re-size the list if the number of matched items changed
-    if (this.listDiv.count != count) {
+    if (count == 0) {
+
+      // Simply hide the list if there are matching items
+      this._toggleList(false);
+    } else if (this.listDiv.count != count) {
+
+      // Re-size the list if the number of matched items changed
       this.listDiv.count = count;
+      var prefH = count * this.listDiv.itemHeight;
 
-      if (count == 0) {
-        this.popupDiv.hide();
-      } else {
-        var prefH = count * this.listDiv.itemHeight;
-
-        if (prefH > this.listDiv.maxHeight) {
-          this.listDiv.css({ height: this.listDiv.maxHeight, overflowY: "scroll" });
-          this.shadowDiv.height(this.listDiv.maxHeight);
-        } else if (prefH != this.listDiv.height()) {
-          this.listDiv.css({ height: prefH, overflowY: "hidden" });
-          this.shadowDiv.height(prefH);
-        }
-        this.popupDiv.show();
+      if (prefH > this.listDiv.maxHeight) {
+        this.listDiv.css({ height: this.listDiv.maxHeight, overflowY: "scroll" });
+        this.shadowDiv.height(this.listDiv.maxHeight);
+        this._toggleList(true);
+      } else if (prefH != this.listDiv.height()) {
+        this._toggleList(true);
+        this.listDiv.css({ height: prefH, overflowY: "scroll" });
+        this.shadowDiv.height(prefH);
       }
     }
   },
 
+  // Reverts the filter input box to its previous value
+  _undoChanges: function() {
+    this._filterList("");
+    this.inputDiv.val(this.selection ? this.selection.name : "");
+    this._toggleList(false);
+  },
+
   // Fetches the content associated with the picker selection
   _itemSelected: function(index) {
-    this.selection = this.items[index];
+
+    // Clear the old selected item
+    if (this.selection) {
+      $("li", this.listDiv).eq(this.selectionIndex).removeClass("ui-state-highlight");
+    }
+
+    // Store the selection for future use
+    this.selection = (index >= 0 ? this.items[index] : undefined);
+    this.selectionIndex = index;
+
+    // Clear the last hovered item
+    this._toggleItem(this.hovered);
+    this._filterList("");
+    this._toggleList(false);
+
+    // Notify listeners if the selection was cleared
+    if (!this.selection) {
+      if (this.options.callback) {
+        this.options.callback();
+      }
+      return;
+    }
 
     // Update the appearance of the widget
     this.inputDiv.val(this.selection.name);
+    $("li", this.listDiv).eq(this.selectionIndex).addClass("ui-state-highlight");
 
     // Configure the request options
     var options = {
@@ -249,6 +424,8 @@ $.widget("ui.picker", {
 
   // Handles picker content file responses from the server
   _handleContentSuccess: function(data, status) {
+
+    // Notify the listener of the selection
     if (this.options.callback) {
       this.options.callback(this.selection, data);
     }
@@ -257,6 +434,11 @@ $.widget("ui.picker", {
   // Handles picker content file error responses from the server
   _handleContentError: function(request, status, error) {
     $.logger.error("Error selecting list item: " + this.selection.name, status);
+
+    // Notify the listener of the failure
+    if (this.options.callback) {
+      this.options.callback();
+    }
   }
 
 });

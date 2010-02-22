@@ -34,23 +34,17 @@ $.widget("ui.table", {
   setColumns: function(columns) {
     var self = this;
 
-    // Clear the current table data
-    this.clear();
-
-    // Cleanup any previous table columns
-    this.columns = [];
-    var oldColumns = this.headerDiv.children();
-    oldColumns.unbind();
-    oldColumns.remove();
+    // Reset the table to clear previous columns and rows
+    this.reset();
 
     // Make sure there are columns to display
     if (columns == undefined || columns.length <= 0) {
-      $('<th class="ui-state-default ui-corner-top ui-table-cell-empty">&nbsp;</th>').appendTo(this.headerDiv);
       return;
     }
 
-    // Create a column element to store the row number
-    $('<th class="ui-state-default ui-corner-tl ui-table-cell-num">#</th>').appendTo(this.headerDiv);
+    // Update the default column element to store the row number
+    this.headerDiv.children().remove();
+    $('<th class="ui-state-default ui-corner-top ui-table-cell-empty">&nbsp;</th>').appendTo(this.headerDiv);
 
     // Add the new table column header elements
     for (var i = 0; i < columns.length; i++) {
@@ -139,6 +133,21 @@ $.widget("ui.table", {
 
     // Display the empty table message
     this.emptyDiv.insertBefore(this.footerDiv);
+  },
+
+  reset: function() {
+
+    // Clear the current table data
+    this.clear();
+
+    // Cleanup any previous table columns
+    this.columns = [];
+    var oldColumns = this.headerDiv.children();
+    oldColumns.unbind();
+    oldColumns.remove();
+
+    // Add a default column to display
+    $('<th class="ui-state-default ui-corner-top ui-table-cell-empty">&nbsp;</th>').appendTo(this.headerDiv);
   },
 
   _sort: function() {

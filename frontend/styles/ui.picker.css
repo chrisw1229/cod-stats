@@ -70,9 +70,13 @@
 }
 .ui-picker-list li .item-name {
   font-weight: bold;
+  position: relative;
+  top: -2px;
 }
 .ui-picker-list li .item-desc {
   font-size: 0.7em;
   font-style: italic;
+  position: relative;
+  top: -2px;
   margin-left: 20px;
 }
