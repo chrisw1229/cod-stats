@@ -36,6 +36,7 @@ $.widget("ui.picker", {
     this.inputDiv.bind("keydown", function(e) { self._inputKeyDown(e); });
     $("html").bind("click.picker", function() { self._undoChanges(); });
     $(window).bind("resize.picker", function() { self._toggleList(false); });
+    $(window).bind("hashchange.picker", function(e) { self._addressChanged(e); });
 
     // Fetch the remote content
     this._requestIndex();
@@ -49,6 +50,7 @@ $.widget("ui.picker", {
     $("li", this.listDiv).unbind();
     $("html").unbind("click.picker");
     $(window).unbind("resize.picker");
+    $(window).unbind("hashchange.picker");
 
     // Destroy the document model
     this.element.removeClass("ui-picker");
@@ -109,14 +111,22 @@ $.widget("ui.picker", {
     // Bind event handlers to the list items
     var self = this;
     $("li", this.listDiv).each(function(i) {
-      $(this).bind("click", function() { self._itemSelected(i); });
-      $(this).bind("mouseenter", function() { $(this).addClass("ui-state-hover"); });
-      $(this).bind("mouseleave", function() { $(this).removeClass("ui-state-hover"); });
+      $(this).bind("mouseenter", function() {
+        if (!$(this).hasClass("ui-state-highlight")) {
+          $(this).addClass("ui-state-hover");
+        }
+      });
+      $(this).bind("mouseleave", function() {
+        $(this).removeClass("ui-state-hover");
+      });
     });
 
     // Enable user interaction
     this._enabled(true);
     this.inputDiv.focus();
+
+    // Apply the current selection id in the address fragment
+    $(window).trigger("hashchange");
   },
 
   // Handles picker index file error responses from the server
@@ -127,8 +137,9 @@ $.widget("ui.picker", {
   // Creates a single item in the picker list
   _createItem: function(item) {
     var itemDiv = $('<li class="ui-state-default ui-corner-all" />');
-    var nameDiv = $('<div class="item-name">' + item.name + '</div>').appendTo(itemDiv);
-    var descDiv = $('<div class="item-desc">' + item.tip + '</div>').appendTo(itemDiv);
+    var linkDiv = $('<a href="#' + item.id + '"/>').appendTo(itemDiv);
+    var nameDiv = $('<span class="item-name">' + item.name + '</span>').appendTo(linkDiv);
+    var descDiv = $('<span class="item-desc">' + item.tip + '</span>').appendTo(linkDiv);
     return itemDiv;
   },
 
@@ -176,7 +187,10 @@ $.widget("ui.picker", {
       var maxHeight = this.listDiv.attr("scrollHeight");
       this.listDiv.scrollTop(newTop < maxHeight ? newTop : maxHeight);
     }
-    item.addClass("ui-state-hover");
+
+    if (!item.hasClass("ui-state-highlight")) {
+      item.addClass("ui-state-hover");
+    }
   },
 
   // Toggles whether the picker list is visible
@@ -288,7 +302,7 @@ $.widget("ui.picker", {
     }
 
     if (this.hovered && e.keyCode >= 33 && e.keyCode <= 40) {
-      this.inputDiv.val($("div.item-name", this.hovered).text());
+      this.inputDiv.val($("span.item-name", this.hovered).text());
     }
   },
 
@@ -309,18 +323,15 @@ $.widget("ui.picker", {
 
     if (e.keyCode == 13) {
 
-      // Find the index of the item that matches the input when enter is pressed
-      var index = -1;
+      // Select the item that matches the current input when enter is pressed
+      var id = -1;
       var input = this.inputDiv.val().toLowerCase();
       for (var i = 0; i < this.items.length; i++) {
         if (this.items[i].name.toLowerCase() == input) {
-          index = i;
+          window.location.replace("#" + this.items[i].id);
           break;
         }
       }
-
-      // Update the selection
-      this._itemSelected(index);
     } else {
 
       // Update the filter based on the new text input
@@ -381,12 +392,14 @@ $.widget("ui.picker", {
     this._toggleList(false);
   },
 
-  // Fetches the content associated with the picker selection
-  _itemSelected: function(index) {
+  // Fetches the content associated with the given selection
+  _selectItem: function(index) {
 
     // Clear the old selected item
     if (this.selection) {
-      $("li", this.listDiv).eq(this.selectionIndex).removeClass("ui-state-highlight");
+      var selectedDiv = $("li", this.listDiv).eq(this.selectionIndex);
+      selectedDiv.removeClass("ui-state-highlight");
+      selectedDiv.addClass("ui-state-default");
     }
 
     // Store the selection for future use
@@ -401,18 +414,25 @@ $.widget("ui.picker", {
     // Notify listeners if the selection was cleared
     if (!this.selection) {
       if (this.options.callback) {
-        this.options.callback();
+        this.options.callback({ selection: undefined });
       }
       return;
     }
 
+    // Notify listeners that the data is being loaded
+    if (this.options.callback) {
+      this.options.callback({ loading: true });
+    }
+
     // Update the appearance of the widget
     this.inputDiv.val(this.selection.name);
-    $("li", this.listDiv).eq(this.selectionIndex).addClass("ui-state-highlight");
+    var selectedDiv = $("li", this.listDiv).eq(this.selectionIndex);
+    selectedDiv.removeClass("ui-state-default");
+    selectedDiv.addClass("ui-state-highlight");
 
     // Configure the request options
     var options = {
-      url: this.selection.url,
+      url: this.options.type + "/" + this.selection.id + ".json",
       dataType: "json",
       cache: false,
       success: $.call(this, "_handleContentSuccess"),
@@ -428,17 +448,31 @@ $.widget("ui.picker", {
 
     // Notify the listener of the selection
     if (this.options.callback) {
-      this.options.callback(this.selection, data);
+      this.options.callback({ selection: this.selection, data: data });
     }
   },
 
   // Handles picker content file error responses from the server
   _handleContentError: function(request, status, error) {
-    $.logger.error("Error selecting list item: " + this.selection.name, status);
 
     // Notify the listener of the failure
     if (this.options.callback) {
-      this.options.callback();
+      this.options.callback({ error: true });
+    }
+  },
+
+  // Callback when the browser address changes
+  _addressChanged: function(e) {
+
+    // Get the selection id from the anchor fragment
+    var id = $.param.fragment();
+
+    // Select the item with the matching id if available
+    for (var i = 0; i < this.items.length; i++) {
+      if (this.items[i].id == id) {
+        this._selectItem(i);
+        break;
+      }
     }
   }
 

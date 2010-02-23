@@ -15,7 +15,9 @@ $.widget("ui.table", {
     this.bodyDiv = $('<tbody class="ui-table-body"/>').appendTo(this.tableDiv);
     this.headerDiv = $('<tr class="ui-table-header"/>').appendTo(this.bodyDiv);
     this.footerDiv = $('<tr class="ui-table-footer"><td class="ui-state-default ui-corner-bottom" colspan="0">&nbsp;</td></tr>').appendTo(this.bodyDiv);
-    this.emptyDiv = $('<tr class="ui-table-empty"><td colspan="0">No Results Available</td></tr>');
+    this.emptyDiv = $('<tr class="ui-state-active ui-table-empty"><td colspan="0">No Records Available</td></tr>');
+    this.loadDiv = $('<tr class="ui-state-active ui-table-loading"><td colspan="0">Loading...</td></tr>');
+    this.errorDiv = $('<tr class="ui-state-error ui-table-error"><td colspan="0">ERROR - Records Not Found</td></tr>');
 
     this.setColumns(this.options.columns);
   },
@@ -67,8 +69,10 @@ $.widget("ui.table", {
           function(e) { self.setSort(e.data.index); });
     }
 
-    // Align the empty and footer row elements
+    // Align the various message and footer row elements
     this.emptyDiv.children(":first").attr("colspan", columns.length + 1);
+    this.loadDiv.children(":first").attr("colspan", columns.length + 1);
+    this.errorDiv.children(":first").attr("colspan", columns.length + 1);
     this.footerDiv.children(":first").attr("colspan", columns.length + 1);
 
     // Style the table boundaries
@@ -132,6 +136,8 @@ $.widget("ui.table", {
     $(".ui-table-row", this.bodyDiv).remove();
 
     // Display the empty table message
+    this.loadDiv.remove();
+    this.errorDiv.remove();
     this.emptyDiv.insertBefore(this.footerDiv);
   },
 
@@ -148,6 +154,20 @@ $.widget("ui.table", {
 
     // Add a default column to display
     $('<th class="ui-state-default ui-corner-top ui-table-cell-empty">&nbsp;</th>').appendTo(this.headerDiv);
+  },
+
+  loading: function() {
+    this.reset();
+    this.emptyDiv.remove();
+    this.errorDiv.remove();
+    this.loadDiv.insertBefore(this.footerDiv);
+  },
+
+  error: function() {
+    this.reset();
+    this.emptyDiv.remove();
+    this.loadDiv.remove();
+    this.errorDiv.insertBefore(this.footerDiv);
   },
 
   _sort: function() {
@@ -184,8 +204,9 @@ $.widget("ui.table", {
       return;
     }
 
-    // Remove the empty table message
+    // Remove the loading and empty table messages
     this.emptyDiv.remove();
+    this.loadDiv.remove();
 
     // Fill in each row of values
     var rowDivs = this.bodyDiv.children();

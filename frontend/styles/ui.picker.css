@@ -68,15 +68,17 @@
   margin: 2px 2px 0 0;
   padding: 0 4px;
 }
-.ui-picker-list li .item-name {
-  font-weight: bold;
+.ui-picker-list a {
   position: relative;
   top: -2px;
 }
+.ui-picker-list li .item-name {
+  display: block;
+  font-weight: bold;
+}
 .ui-picker-list li .item-desc {
+  display: block;
   font-size: 0.7em;
   font-style: italic;
-  position: relative;
-  top: -2px;
   margin-left: 20px;
 }
