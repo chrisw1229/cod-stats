@@ -2,10 +2,11 @@
 
 (def *player-id-map* (ref {}))
 (def *name-id-map* (ref {}))
-(def *client-id-ip-map* (ref {}))
+(def *client-id-id-map* (ref {}))
 (def *ip-id-map* (ref {}))
 (def *new-id* (ref 1))
 
+(def *client-id-ip-map* (ref {}))
 (def *check-ip* true)
 
 (defn associate-client-id-to-ip
@@ -13,46 +14,65 @@
   [client-id ip-address]
   (dosync (alter *client-id-ip-map* assoc client-id ip-address)))
 
-(defn create-new-player-id [name client-id]
+(defn create-new-player-id
   "Creates a new player ID to associate with name/client-id pair."
-  (let [ip-address (get @*client-id-ip-map* client-id)]
-    (dosync (alter *player-id-map* assoc [name client-id] @*new-id*)
-	    (alter *name-id-map* assoc name @*new-id*)
-	    (alter *ip-id-map* assoc (get @*client-id-ip-map* client-id) @*new-id*)
-	    (alter *new-id* inc))
-    (dec @*new-id*)))
+  ([name client-id]
+     (dosync (alter *player-id-map* assoc [name client-id] @*new-id*)
+	     (alter *name-id-map* assoc name @*new-id*)
+	     (alter *client-id-id-map* assoc client-id @*new-id*)
+	     (alter *new-id* inc)
+	     (dec @*new-id*)))
+  ([name client-id ip-address]
+     (dosync (alter *player-id-map* assoc [name client-id] @*new-id*)
+	     (alter *name-id-map* assoc name @*new-id*)
+	     (alter *client-id-id-map* assoc client-id @*new-id*)
+	     (alter *ip-id-map* assoc ip-address @*new-id*)
+	     (alter *new-id* inc)
+	     (dec @*new-id*))))
 
 (defn get-player-id
-  "Gets the current id associated with name/client-id combination.
-
-If the name/client-id pair is not associated with an ID, a search will be done first to see if there is
-an ID that has been associated with the IP and that will be returned along with associating the current
-name/client-id pair to that ID.
-
-If no ID is associated with the IP, a search will be done to see if there is an ID that is associated
-with the name and that ID will be returned along with associating the current name/client-id pair to
-that ID.
-
-If no name or client-id is found to be a match, a new ID will be generated and associated with the
-client-id/name pair."
+  "Gets the current id associated with name/client-id combination."
   [name client-id]
-  (let [player-id (get @*player-id-map* [name client-id])]
-    (if player-id
-      (do player-id)
-      ;Did not find player-id in main map
-      (do (if *check-ip*
-	    (loop [ip-address (get @*client-id-ip-map* client-id)]
-	      (when (nil? ip-address)
-		(Thread/sleep 500)
-		(recur (get @*client-id-ip-map* client-id)))))
-	  ;Found ip address or check-ip is turned off
-	  (let [ip-address (get @*client-id-ip-map* client-id)
-		player-id (get @*ip-id-map* ip-address)]
-	    (if player-id
-	      (do player-id)
-	      ;Check to see if name has been used before
-	      (let [player-id (get @*name-id-map* name)]
-		(if player-id
-		  (do (dosync (alter *player-id-map* assoc [name client-id] player-id)) 
-		      player-id)
-		  (create-new-player-id name client-id)))))))))
+  (let [player-id (get @*player-id-map* [name client-id])
+	name-id (get @*name-id-map* name)
+	client-id-id (get @*client-id-id-map* client-id)
+	ip-address (get @*client-id-ip-map* client-id)
+	ip-id (get @*ip-id-map* ip-address)]
+    (cond
+     ;Everything matches and is non-nil
+     (and (not (nil? player-id)) (= player-id ip-id name-id client-id-id))
+     player-id
+     
+     ;We have an ID associated with the IP address that's different (IP takes precedence)
+     (not (nil? ip-id))
+     (dosync (alter *name-id-map* assoc name ip-id)
+	     (alter *client-id-id-map* assoc client-id ip-id)
+	     (alter *player-id-map* assoc [name client-id] ip-id)
+	     ip-id)
+
+     ;We have a new IP address and an old name (new machine, old player case)
+     (and (not (nil? ip-address)) (not (nil? name-id)))
+     (dosync (alter *ip-id-map* assoc ip-address name-id)
+	     name-id)
+
+     ;We have a new IP address new name (new machine, new player)
+     (not (nil? ip-address))
+     (create-new-player-id name client-id ip-address)
+
+     ;Perhaps we just don't have IP addresses for some reason
+     (not (nil? player-id)) player-id
+
+     ;Old player identified by name with new client ID
+     (not (nil? name-id))
+     (dosync (alter *player-id-map* assoc [name client-id] name-id)
+	     name-id)
+
+     ;Old player identified by client-id (change name case)
+     (not (nil? client-id-id))
+     (dosync (alter *player-id-map* assoc [name client-id] client-id-id)
+	     (alter *name-id-map* assoc name client-id-id)
+	     client-id-id)
+     
+     ;No IP address and a new player
+     :else
+     (create-new-player-id name client-id))))

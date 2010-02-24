@@ -25,7 +25,6 @@
 				  
 				  (= (char input-char) \newline)
 				  (do
-				    (println (.toString current-line))
 				    (action (.toString current-line))
 				    (.setLength current-line 0))
 				  

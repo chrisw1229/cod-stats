@@ -30,13 +30,13 @@
 (defstruct player-stats :name :photo :place :rank :team :kills :deaths :inflicted :received :ratio)
 
 (defn get-player
-  "Currently pulls the player's client id out of the player-struct and either returns the stats
-entry or creates a new entry and returns that."
+  "Gets the player's identity using codIdentity and either returns their current stats or creates a
+new stats object for them."
   [player-struct]
   (let [player-id (get-player-id (:name player-struct) (:id player-struct))
 	player (get @*player-stats-map* player-id)]
     (if player
-      (do player)
+      player
       (let [new-player (struct player-stats (:name player-struct)
 			       "default.jpg" (count @*player-stats-map*) 0 "none" 0 0 0 0 "")]
 	(dosync (alter *player-stats-map* assoc player-id new-player)
@@ -47,7 +47,7 @@ entry or creates a new entry and returns that."
   "Merges new-stats with the player-stats structure currently associated with the player."
   [player new-stats]
   (dosync (alter *player-stats-map* assoc (get-player-id (:name player) (:id player))
-		 (merge (get-player player) new-stats))))
+		 (merge (get-player player) new-stats {:name (:name player)}))))
 
 (defn create-player-update-packet 
   "Creates a map to represent the player packet to send to the front end."

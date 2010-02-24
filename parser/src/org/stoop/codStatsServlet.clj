@@ -61,7 +61,7 @@
 	  connect-reader (tail-f @*connect-log-location* 1000 process-connect-line)]
       ((connect-reader :start))
       ((log-reader :start))
-      ((*ratio-calculator* :start))
+      ;((*ratio-calculator* :start))
       (str "File watching started for " @*log-file-location*))))
 
 (defservice cod-stats-routes)
