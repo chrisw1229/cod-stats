@@ -10,7 +10,7 @@
   (let [keep-running (atom true)
 	thread (Thread. #(while @keep-running
 			   (do
-			     (f rest)
+			     (apply f rest)
 			     (Thread/sleep (* 1000 interval)))))]
     {:start #(.start thread)
      :stop #(do (reset! keep-running false)
@@ -47,7 +47,8 @@ new stats object for them."
   "Merges new-stats with the player-stats structure currently associated with the player."
   [player new-stats]
   (dosync (alter *player-stats-map* assoc (get-player-id (:name player) (:id player))
-		 (merge (get-player player) new-stats {:name (:name player)}))))
+		 (merge (get-player player) new-stats {:name (:name player)
+						       :team (:team player)}))))
 
 (defn create-player-update-packet 
   "Creates a map to represent the player packet to send to the front end."

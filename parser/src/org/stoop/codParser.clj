@@ -35,7 +35,10 @@
 	[{:id a :num b :team :none :name c} (drop 3 str-seq)]
 	
 	(and (is-int? a) (not (nil? b)))
-	[{:id :none :num a :team :none :name b} (drop 2 str-seq)]))))
+	[{:id :none :num a :team :none :name b} (drop 2 str-seq)]
+
+	(and (= "" a) (= "-1" b) (= "world" c) (= "" d))
+	[{:id :none :num b :team :all :name c} (drop 4 str-seq)]))))
 
 (defn get-people [str-seq]
   (loop [arg-list str-seq
@@ -46,8 +49,9 @@
       [people arg-list])))
 
 (defn get-string [str-seq]
-  (when (> (count str-seq) 0)
-    [(first str-seq) (rest str-seq)]))
+  (if (> (count str-seq) 0)
+    [(first str-seq) (rest str-seq)]
+    [nil (rest str-seq)]))
 
 (defn get-int [str-seq]
   (if (is-int? (first str-seq))

@@ -7,12 +7,18 @@
 
 (def *map-transformers* {"mp_uo_carentan" {:x (make-coord-transformer 3036.99 -0.0005 -0.748)
 					   :y (make-coord-transformer 2405.06 -0.746 0.0149)}
-			 "mp_carentan" {:x (make-coord-transformer 3036.99 -0.0005 -0.748)
-					:y (make-coord-transformer 2405.06 -0.746 0.0149)}
 			 "mp_uo_harbor" {:x (make-coord-transformer -3884.41 -0.654 -0.00161)
 					 :y (make-coord-transformer 1238.79 -0.0321 -0.0459)}
 			 "mp_kursk" {:x (make-coord-transformer 4712.94 -0.00459 -0.1852)
-				     :y (make-coord-transformer 1963.22 -0.1859 -0.002067)}})
+				     :y (make-coord-transformer 1963.22 -0.1859 -0.002067)}
+			 "mp_uo_dawnville" {:x (make-coord-transformer 8698.9 0.4451 -0.39842)
+					    :y (make-coord-transformer -5625.61 0.3846 -0.44599)}
+			 "mp_uo_hurtgen" {:x (make-coord-transformer 1670.37 0.35984 0.005116)
+					  :y (make-coord-transformer 1699.43 0.002471 -0.36013)}
+			 "mp_peaks" {:x (make-coord-transformer 2619.06 0.5361 -0.01583)
+				     :y (make-coord-transformer 2222.38 -0.002845 -0.5383)}
+			 "mp_foy" {:x (make-coord-transformer 2062.27 0.001055 0.2315)
+				   :y (make-coord-transformer 2158.63 0.2345 0.000368)}})
 
 (defn get-transformer [map-name]
   (get *map-transformers* map-name {:x (make-coord-transformer 0 1 1)
