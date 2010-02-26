@@ -5,8 +5,10 @@ $.widget("ui.picker", {
   _init: function() {
     var self = this;
     this.filter = "";
+    this.input = "";
     this.selection = undefined;
-    this.selectionIndex = -1;
+    this.selIndex = -1;
+    this.navIndex = -1;
 
     // Build the document model
     this.element.addClass("ui-picker");
@@ -29,13 +31,13 @@ $.widget("ui.picker", {
     this.shadowDiv = $('<div class="ui-widget-shadow ui-corner-all ui-picker-shadow"/>').appendTo(this.popupDiv);
 
     // Bind the event handlers
-    this.comboDiv.bind("mouseenter", function() { self._toggleButton(); });
-    this.comboDiv.bind("mouseleave", function() { self._toggleButton(); });
-    this.comboDiv.bind("click", function(e) { e.stopPropagation(); self._toggleList(true); });
+    this.comboDiv.bind("mouseenter", function(e) { self._toggleButton(); });
+    this.comboDiv.bind("mouseleave", function(e) { self._toggleButton(); });
+    this.buttonDiv.bind("click", function(e) { e.stopPropagation(); self._toggleList(true); });
     this.inputDiv.bind("keyup", function(e) { self._inputKeyUp(e); });
     this.inputDiv.bind("keydown", function(e) { self._inputKeyDown(e); });
-    $("html").bind("click.picker", function() { self._undoChanges(); });
-    $(window).bind("resize.picker", function() { self._toggleList(false); });
+    $("html").bind("click.picker", function(e) { self._undoChanges(e); });
+    $(window).bind("resize.picker", function(e) { self._resize(); });
     $(window).bind("hashchange.picker", function(e) { self._addressChanged(e); });
 
     // Fetch the remote content
@@ -108,6 +110,11 @@ $.widget("ui.picker", {
       this._createItem(items[i]).appendTo(list);
     }
 
+    // Check whether the list dimensions need to be calculated
+    if (this.listDiv.maxHeigh == undefined) {
+      this._resize();
+    }
+
     // Bind event handlers to the list items
     var self = this;
     $("li", this.listDiv).each(function(i) {
@@ -143,6 +150,44 @@ $.widget("ui.picker", {
     return itemDiv;
   },
 
+  _resize: function() {
+
+    // Hide the list if it is currently displayed
+    this._toggleList(false);
+
+    // Check whether there any prototype list items available yet
+    if (this.items.length == 0) {
+      this.listDiv.maxHeight = 0;
+      this.listDiv.itemHeight = 0;
+      this.listDiv.pageSize = 0;
+      return;
+    }
+
+    // Find the height of a single item while the list is off-screen
+    var listW = this.comboDiv.width() - 3;
+    this.popupDiv.css({ width: listW, left: -2 * listW });
+    this.popupDiv.show();
+    var itemH = $("li:first", this.listDiv).outerHeight(true);
+    this.popupDiv.hide();
+
+    // Calculate the position and dimensions for the list
+    var offset = this.comboDiv.offset();
+    var listT = offset.top + this.comboDiv.height() + 2;
+    var maxH = ($(window).height() / 2) - listT;
+    var listH = Math.floor(maxH / itemH) * itemH; 
+    this.popupDiv.css({ left: offset.left, top: listT });
+    this.listDiv.css({ height: listH });
+
+    // Set the position of the shadow
+    this.shadowDiv.width(listW);
+    this.shadowDiv.height(listH);
+
+    // Store the dimensions for use during dynamic filtering
+    this.listDiv.maxHeight = listH;
+    this.listDiv.itemHeight = itemH;
+    this.listDiv.pageSize = (listH / itemH);
+  },
+
   // Toggles whether the picker button is activated
   _toggleButton: function() {
     if (!this.enabled || this.buttonDiv.hasClass("ui-state-hover")) {
@@ -154,6 +199,13 @@ $.widget("ui.picker", {
 
   // Toggles whether a list item is highlighted
   _toggleItem: function(item) {
+
+    // Remove the hover state of the old item
+    if (this.hovered) {
+      this.hovered.removeClass("ui-state-hover");
+    }
+
+    // Check whether a new hover item was given
     this.hovered = item;
     if (this.hovered == undefined) {
       return;
@@ -206,34 +258,10 @@ $.widget("ui.picker", {
 
       // Check if the list was visible
       if (oldVisible) {
-        this._toggleItem(this.hovered);
+        this._toggleItem();
         this.inputDiv.focus();
       }
     } else if (!oldVisible) {
-
-      // Find the height of a single item while the list is off-screen
-      var listW = this.comboDiv.width() - 3;
-      this.popupDiv.css({ width: listW, left: -2 * listW });
-      this.popupDiv.show();
-      var itemH = $("li:first", this.listDiv).outerHeight(true);
-      this.popupDiv.hide();
-
-      // Calculate the position and dimensions for the list
-      var offset = this.comboDiv.offset();
-      var listT = offset.top + this.comboDiv.height() + 2;
-      var maxH = ($(window).height() / 2) - listT;
-      var listH = Math.floor(maxH / itemH) * itemH; 
-      this.popupDiv.css({ left: offset.left, top: listT });
-      this.listDiv.css({ height: listH });
-
-      // Set the position of the shadow
-      this.shadowDiv.width(listW);
-      this.shadowDiv.height(listH);
-
-      // Store the dimensions for use during dynamic filtering
-      this.listDiv.maxHeight = listH;
-      this.listDiv.itemHeight = itemH;
-      this.listDiv.pageSize = (listH / itemH);
 
       // Display the list of items
       this.popupDiv.show();
@@ -241,8 +269,8 @@ $.widget("ui.picker", {
       this.buttonDiv.removeClass("ui-corner-br");
 
       // Attempt to move the list to the last selection
-      if (this.selectionIndex >= 0) {
-        this._toggleItem($("li", this.listDiv).eq(this.selectionIndex));
+      if (this.selIndex >= 0) {
+        this._toggleItem($("li", this.listDiv).eq(this.selIndex));
       }
 
       this.inputDiv.focus();
@@ -251,9 +279,7 @@ $.widget("ui.picker", {
 
   // Handles keyboard input from the picker box
   _inputKeyDown: function(e) {
-    if (!this.popupDiv.is(":visible")) {
-      return;
-    }
+    var navSelect = (this.navIndex >= 0 && !this.popupDiv.is(":visible"));
 
     if (e.keyCode == 38) {
 
@@ -261,10 +287,13 @@ $.widget("ui.picker", {
       if (this.hovered) {
         var prevItem = this.hovered.prevAll(":visible").eq(0);
         if (prevItem.length > 0) {
-          this._toggleItem(this.hovered);
           this._toggleItem(prevItem);
         }
+      } else if (navSelect) {
+        this.navIndex = (this.navIndex > 0 ? this.navIndex - 1 : this.items.length - 1);
+        this.inputDiv.val(this.items[this.navIndex].name);
       } else {
+        this._toggleList(true);
         this._toggleItem($("li:visible", this.listDiv).eq(0));
       }
     } else if (e.keyCode == 40) {
@@ -273,34 +302,48 @@ $.widget("ui.picker", {
       if (this.hovered) {
         var nextItem = this.hovered.nextAll(":visible").eq(0);
         if (nextItem.length > 0) {
-          this._toggleItem(this.hovered);
           this._toggleItem(nextItem);
         }
+      } else if (navSelect) {
+        this.navIndex = (this.navIndex < this.items.length - 1 ? this.navIndex + 1 : 0);
+        this.inputDiv.val(this.items[this.navIndex].name);
       } else {
+        this._toggleList(true);
         this._toggleItem($("li:visible", this.listDiv).eq(0));
       }
     } else if (e.keyCode == 33) {
 
       // Move the list to the previous page when page up is pressed
       var page = this.listDiv.pageSize;
-      var visItems = $("li:visible", this.listDiv);
-      var offset = (this.listDiv.scrollTop() / this.listDiv.itemHeight) - page;
-      var index = (offset > 0 ? offset : 0);
-
-      this._toggleItem(this.hovered);
-      this._toggleItem(visItems.eq(index));
+      if (navSelect) {
+        this.navIndex -= page;
+        this.navIndex += (this.navIndex < 0 ? this.items.length : 0);
+        this.inputDiv.val(this.items[this.navIndex].name);
+      } else {
+        this._toggleList(true);
+        var visItems = $("li:visible", this.listDiv);
+        var offset = (this.listDiv.scrollTop() / this.listDiv.itemHeight) - page;
+        var index = (offset > 0 ? offset : 0);
+        this._toggleItem(visItems.eq(index));
+      }
     } else if (e.keyCode == 34) {
 
       // Move the list to the next page when page down is pressed
       var page = this.listDiv.pageSize;
-      var visItems = $("li:visible", this.listDiv);
-      var offset = (this.listDiv.scrollTop() / this.listDiv.itemHeight) + (2 * page) - 1;
-      var index = (offset < visItems.length ? offset : visItems.length - 1);
-
-      this._toggleItem(this.hovered);
-      this._toggleItem(visItems.eq(index));
+      if (navSelect) {
+        this.navIndex += page;
+        this.navIndex -= (this.navIndex >= this.items.length ? this.items.length : 0);
+        this.inputDiv.val(this.items[this.navIndex].name);
+      } else {
+        this._toggleList(true);
+        var visItems = $("li:visible", this.listDiv);
+        var offset = (this.listDiv.scrollTop() / this.listDiv.itemHeight) + (2 * page) - 1;
+        var index = (offset < visItems.length ? offset : visItems.length - 1);
+        this._toggleItem(visItems.eq(index));
+      }
     }
 
+    // Update the input box based on the current hovered item name
     if (this.hovered && e.keyCode >= 33 && e.keyCode <= 40) {
       this.inputDiv.val($("span.item-name", this.hovered).text());
     }
@@ -315,32 +358,25 @@ $.widget("ui.picker", {
       return;
     }
 
-    // Ignore keys used for navigation
-    if (e.keyCode >= 33 && e.keyCode <= 40) {
-      this._toggleList(true);
-      return;
-    }
+    // Check whether a navigation key was pressed
+    var navPressed = (e.keyCode >= 33 && e.keyCode <= 40);
 
-    if (e.keyCode == 13) {
+    // Check whether the selection should be adjusted based on key navigation
+    var navSelect = (navPressed && this.selIndex >= 0
+        && !this.popupDiv.is(":visible"));
+
+    if (e.keyCode == 13 || navSelect) {
 
       // Select the item that matches the current input when enter is pressed
-      var id = -1;
-      var input = this.inputDiv.val().toLowerCase();
-      for (var i = 0; i < this.items.length; i++) {
-        if (this.items[i].name.toLowerCase() == input) {
-          window.location.replace("#" + this.items[i].id);
-          break;
-        }
-      }
-    } else {
+      this._selectName(this.inputDiv.val());
+    } else if (!navPressed) {
 
       // Update the filter based on the new text input
       var filter = this.inputDiv.val().toLowerCase();
       if (this.filter != filter) {
-        this.filter = filter;
 
         // Clear the last hover focus
-        this._toggleItem(this.hovered);
+        this._toggleItem();
 
         // Update the list to show only items that match
         this._filterList(filter);
@@ -350,6 +386,10 @@ $.widget("ui.picker", {
 
   // Filters the list of picker list items based on user input
   _filterList: function(filter) {
+    this.filter = filter;
+    if (filter == undefined) {
+      return;
+    }
 
     // Show only items that match the given filter
     var count = 0;
@@ -363,11 +403,13 @@ $.widget("ui.picker", {
       count += (matches ? 1 : 0);
     }
 
+    // Simply hide the list if there are matching items
     if (count == 0) {
-
-      // Simply hide the list if there are matching items
       this._toggleList(false);
-    } else if (this.listDiv.count != count) {
+      return;
+    }
+
+    if (this.listDiv.count != count) {
 
       // Re-size the list if the number of matched items changed
       this.listDiv.count = count;
@@ -382,33 +424,82 @@ $.widget("ui.picker", {
         this.listDiv.css({ height: prefH, overflowY: "scroll" });
         this.shadowDiv.height(prefH);
       }
+    } else {
+      this._toggleList(true);
     }
+    this.listDiv.scrollTop(0);
   },
 
   // Reverts the filter input box to its previous value
-  _undoChanges: function() {
-    this._filterList("");
-    this.inputDiv.val(this.selection ? this.selection.name : "");
-    this._toggleList(false);
+  _undoChanges: function(e) {
+
+    // Make sure the list visible
+    if (this.popupDiv.is(":visible")) {
+
+      // Ignore click events on the input box
+      if (e && $(e.target).parents(".ui-picker-combo").length > 0) {
+        return;
+      }
+
+      // Reset the input box content and hide the list
+      this._filterList("");
+      this.inputDiv.val(this.selection ? this.selection.name : "");
+      this._toggleList(false);
+    } else {
+
+      // Restore the last selection name
+      this.inputDiv.val(this.selection ? this.selection.name : "");
+    }
+  },
+
+  // Selects the content associated with the given id
+  _selectId: function(id) {
+    id = (id ? id.trim().toLowerCase() : "");
+    for (var i = 0; i < this.items.length; i++) {
+      if (this.items[i].id == id) {
+        this._selectIndex(i);
+        break;
+      }
+    }
+  },
+
+  // Selects the content associated with the given name
+  _selectName: function(name) {
+    name = (name ? name.trim().toLowerCase() : "");
+    if (this.selection && this.selection.name.toLowerCase() == name) {
+      this._filterList();
+      this._toggleList(false);
+      return;
+    }
+    for (var i = 0; i < this.items.length; i++) {
+      if (this.items[i].name.toLowerCase() == name) {
+        window.location.replace("#" + this.items[i].id);
+        break;
+      }
+    }
   },
 
   // Fetches the content associated with the given selection
-  _selectItem: function(index) {
+  _selectIndex: function(index) {
+    if (index == this.selIndex) {
+      return;
+    }
 
     // Clear the old selected item
     if (this.selection) {
-      var selectedDiv = $("li", this.listDiv).eq(this.selectionIndex);
+      var selectedDiv = $("li", this.listDiv).eq(this.selIndex);
       selectedDiv.removeClass("ui-state-highlight");
       selectedDiv.addClass("ui-state-default");
     }
 
     // Store the selection for future use
-    this.selection = (index >= 0 ? this.items[index] : undefined);
-    this.selectionIndex = index;
+    this.selection = (index >= 0 && index < this.items.length ? this.items[index] : undefined);
+    this.selIndex = (this.selection ? index : -1);
+    this.navIndex = this.selIndex;
 
     // Clear the last hovered item
-    this._toggleItem(this.hovered);
-    this._filterList("");
+    this._toggleItem();
+    this._filterList();
     this._toggleList(false);
 
     // Notify listeners if the selection was cleared
@@ -426,7 +517,7 @@ $.widget("ui.picker", {
 
     // Update the appearance of the widget
     this.inputDiv.val(this.selection.name);
-    var selectedDiv = $("li", this.listDiv).eq(this.selectionIndex);
+    var selectedDiv = $("li", this.listDiv).eq(this.selIndex);
     selectedDiv.removeClass("ui-state-default");
     selectedDiv.addClass("ui-state-highlight");
 
@@ -464,16 +555,8 @@ $.widget("ui.picker", {
   // Callback when the browser address changes
   _addressChanged: function(e) {
 
-    // Get the selection id from the anchor fragment
-    var id = $.param.fragment();
-
-    // Select the item with the matching id if available
-    for (var i = 0; i < this.items.length; i++) {
-      if (this.items[i].id == id) {
-        this._selectItem(i);
-        break;
-      }
-    }
+    // Select the item based on the id from the anchor fragment
+    this._selectId($.param.fragment());
   }
 
 });
