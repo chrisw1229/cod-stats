@@ -16,8 +16,8 @@ $.widget("ui.table", {
     this.headerDiv = $('<tr class="ui-table-header"/>').appendTo(this.bodyDiv);
     this.footerDiv = $('<tr class="ui-table-footer"><td class="ui-state-default ui-corner-bottom" colspan="0">&nbsp;</td></tr>').appendTo(this.bodyDiv);
     this.emptyDiv = $('<tr class="ui-state-active ui-table-empty"><td colspan="0">No Records Available</td></tr>');
-    this.loadDiv = $('<tr class="ui-state-active ui-table-loading"><td colspan="0">Loading...</td></tr>');
-    this.errorDiv = $('<tr class="ui-state-error ui-table-error"><td colspan="0">ERROR - Records Not Found</td></tr>');
+    this.loadDiv = $('<tr class="ui-state-active ui-table-load"><td colspan="0"><span class="ui-icon"/>Loading...</td></tr>');
+    this.errorDiv = $('<tr class="ui-state-error ui-table-error"><td colspan="0"><span class="ui-icon ui-icon-alert"/>ERROR - Records Not Found</td></tr>');
 
     this.setColumns(this.options.columns);
   },

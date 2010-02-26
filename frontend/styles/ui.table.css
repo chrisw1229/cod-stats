@@ -22,14 +22,14 @@
   padding: 2px 4px;
 }
 .ui-table-empty,
-.ui-table-loading,
+.ui-table-load,
 .ui-table-error {
   background-color: #E9E6DB;
   font-style: italic;
   font-weight: bold;
 }
 .ui-table-empty td,
-.ui-table-loading td,
+.ui-table-load td,
 .ui-table-error td {
   border-color: #38563A;
   border-style: solid;
@@ -42,6 +42,19 @@
   border-left: 1px solid #38563A;
   cursor: default;
   text-align: center;
+}
+.ui-table-load .ui-icon {
+  background: url(images/table-load.gif) no-repeat;
+  float: left;
+  margin-right: 8px;
+  position: relative;
+  top: 1px;
+}
+.ui-table-error .ui-icon {
+  float: left;
+  margin-right: 8px;
+  position: relative;
+  top: 1px;
 }
 .ui-table-sort-icon {
   float: right;
