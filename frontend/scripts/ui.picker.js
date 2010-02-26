@@ -4,6 +4,7 @@ $.widget("ui.picker", {
 
   _init: function() {
     var self = this;
+    this.items = [];
     this.filter = "";
     this.input = "";
     this.selection = undefined;
@@ -454,7 +455,7 @@ $.widget("ui.picker", {
 
   // Selects the content associated with the given id
   _selectId: function(id) {
-    id = (id ? id.trim().toLowerCase() : "");
+    id = (id ? $.trim(id).toLowerCase() : "");
     for (var i = 0; i < this.items.length; i++) {
       if (this.items[i].id == id) {
         this._selectIndex(i);
@@ -465,7 +466,7 @@ $.widget("ui.picker", {
 
   // Selects the content associated with the given name
   _selectName: function(name) {
-    name = (name ? name.trim().toLowerCase() : "");
+    name = (name ? $.trim(name).toLowerCase() : "");
     if (this.selection && this.selection.name.toLowerCase() == name) {
       this._filterList();
       this._toggleList(false);
