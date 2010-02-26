@@ -279,3 +279,11 @@
   (and (contains? potential-struct :game-type)
        (contains? potential-struct :map-name)
        (contains? potential-struct :round-time)))
+
+(defn quit? [potential-struct]
+  (and (contains? potential-struct :player)
+       (contains? potential-struct :action)
+       (= :quit (:action potential-struct))))
+
+(defn spectator? [potential-struct]
+  (and (contains? potential-struct :spectator)))

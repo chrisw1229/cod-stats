@@ -21,7 +21,7 @@
 (def *game-records* (ref []))
 (def *player-stats-map* (ref {}))
 (def *transformer* (ref (get-transformer "none")))
-(def *current-teams* (ref {:allies "american" :axis "german"}))
+(def *current-teams* (ref {:allies "american" :axis "german" :spectator "spectator" :none ""}))
 
 (def *start-time* (ref (. System currentTimeMillis)))
 (defn calc-seconds [start-time-millis end-time-millis]
@@ -47,13 +47,19 @@ new stats object for them."
   "Merges new-stats with the player-stats structure currently associated with the player."
   [player new-stats]
   (dosync (alter *player-stats-map* assoc (get-player-id (:name player) (:id player))
-		 (merge (get-player player) new-stats {:name (:name player)
-						       :team (:team player)}))))
+		 (merge (get-player player) new-stats {:name (:name player)}))))
 
 (defn create-player-update-packet 
   "Creates a map to represent the player packet to send to the front end."
   [player]
-  (merge {:id (get-player-id (:name player) (:id player))} (get-player player)))
+  (let [player-team (get @*current-teams* (:team player))]
+    (if (nil? player-team)
+      (merge {:id (get-player-id (:name player) (:id player))} (get-player player))
+      (merge {:id (get-player-id (:name player) (:id player))}
+	     (get-player player)
+	     (if (not (nil? player-team))
+	       {:team (str (first player-team))}
+	       {:team ""})))))
 
 (defn process-damage 
   "Increments the inflicted field for attacker and received field for victim by damage."
@@ -115,9 +121,14 @@ and victim to be sent to the frontend."
 	trans-ky (y-transformer kx ky)
 	trans-dx (x-transformer dx dy)
 	trans-dy (y-transformer dx dy)]
+    ;Update kills and deaths
     (when (not (= (:name attacker) (:name victim)))
       (update-player attacker (update-in old-attacker [:kills] inc)))
     (update-player victim (update-in old-victim [:deaths] inc))
+    ;Update team values
+    (update-player attacker {:team (:team attacker)})
+    (update-player victim {:team (:team victim)})
+    ;Update stats and game records
     (update-places *player-stats-map*)
     (dosync (alter *game-records* conj
 		   {:kx trans-kx :ky trans-ky :dx trans-dx :dy trans-dy}
@@ -133,13 +144,25 @@ time for this game."
 	  (ref-set *player-stats-map* {})
 	  (ref-set *start-time* (. System currentTimeMillis))
 	  (ref-set *transformer* (get-transformer map-name))
-	  (ref-set *current-teams* {:allies allies-team :axis axis-team})))
+	  (ref-set *current-teams* {:allies allies-team :axis axis-team :spectator "spectator"})))
 
 (defn process-game-event 
   "Adds an event packet to the data to be sent to the frontend."
   [team]
   (dosync (alter *game-records* conj {:team (str (first (get @*current-teams* (keyword team))))
 				      :time (calc-seconds @*start-time* (. System currentTimeMillis))})))
+
+(defn process-quit-event
+  [player]
+  (do
+    (update-player player {:team :none})
+    (create-player-update-packet player)))
+
+(defn process-spectator-event
+  [player]
+  (do
+    (update-player player {:team :spectator})
+    (create-player-update-packet player)))
 
 (defn process-input-line
   "Parses the input-line and then determines how to process the parsed input."
@@ -170,7 +193,13 @@ time for this game."
 			(get @*transformer* :y))))
       
       (game-event? (parsed-input :entry))
-      (process-game-event (get-in parsed-input [:entry :player :team])))))
+      (process-game-event (get-in parsed-input [:entry :player :team]))
+      
+      (spectator? (parsed-input :entry))
+      (process-spectator-event (get-in parsed-input [:entry :spectator]))
+
+      (quit? (parsed-input :entry))
+      (process-quit-event (get-in parsed-input [:entry :player])))))
 
 (defn process-connect-line
   "Parses the input-line and updates the IP address records if its a valid line."
