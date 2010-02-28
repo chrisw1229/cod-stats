@@ -7,6 +7,8 @@ $.widget("ui.ticker", {
     this.items = {};
     this.sorted = [];
     this.loadIndex = 0;
+    this.ranks = [ "Private", "Rifleman", "Squad Leader", "Section Sergeant", "Platoon Sergeant" ];
+    this.teams = { a: "American", b: "British", g: "German", r: "Russian" };
 
     // Build the document model
     this.element.addClass("ui-widget-content ui-ticker");
@@ -356,7 +358,7 @@ $.widget("ui.ticker", {
     var photoDiv = $('<div class="ui-widget-content ui-corner-br ui-ticker-item-photo"/>').appendTo(contDiv);
 
     var iconsDiv = $('<div class="ui-ticker-item-icons"/>').appendTo(contDiv);
-    var placeDiv = $('<div class="ui-widget-header ui-corner-bl ui-ticker-place"/>').appendTo(iconsDiv);
+    var placeDiv = $('<div class="ui-widget-header ui-corner-bl ui-ticker-place" title="Leaderboard position"/>').appendTo(iconsDiv);
     $('<div class="ui-ticker-place-label">RANK</div>').appendTo(placeDiv);
     $('<div class="ui-ticker-place-value"/>').appendTo(placeDiv);
     $('<div class="icon-rank ui-ticker-rank"/>').appendTo(iconsDiv);
@@ -368,8 +370,8 @@ $.widget("ui.ticker", {
     var statsTbl = $('<table class="ui-ticker-stats"/>').appendTo(contDiv);
     $('<tr class="ui-ticker-kills"><td class="ui-ticker-stat-value"></td><td>Kills</td></tr>').appendTo(statsTbl);
     $('<tr class="ui-ticker-deaths"><td class="ui-ticker-stat-value"></td><td>Deaths</td></tr>').appendTo(statsTbl);
-    $('<tr class="ui-ticker-inflicted"><td class="ui-ticker-stat-value"></td><td>Inflicted</td></tr>').appendTo(statsTbl);
-    $('<tr class="ui-ticker-received"><td class="ui-ticker-stat-value"></td><td>Received</td></tr>').appendTo(statsTbl);
+    $('<tr class="ui-ticker-inflicted" title="Damage"><td class="ui-ticker-stat-value"></td><td>Inflicted</td></tr>').appendTo(statsTbl);
+    $('<tr class="ui-ticker-received" title="Damage"><td class="ui-ticker-stat-value"></td><td>Received</td></tr>').appendTo(statsTbl);
     $('<div class="ui-ticker-spec">SPECTATOR</div>').appendTo(contDiv);
     return itemDiv;
   },
@@ -436,20 +438,54 @@ $.widget("ui.ticker", {
     var team = (item.team && item.team.length > 0 ? item.team.charAt(0) : "").toLowerCase();
     if (team != "s") {
 
-      // Load the place, rank, and team content
+      // Load the player game place
       $("div.ui-ticker-place-value", itemDiv).text(item.place);
-      $("div.icon-rank", itemDiv).attr("class",
-          "icon-rank icon-rank-" + item.rank + " ui-ticker-rank");
-      $("div.icon-team", itemDiv).attr("class",
-          "icon-team icon-team-" + item.team + " ui-ticker-team");
+
+      // Load the player military rank
+      var rankTip = "Rank: ";
+      if (item.rank >= 0 && item.rank < this.ranks.length) {
+        rankTip += this.ranks[item.rank];
+      } else {
+        rankTip += "Unknown";
+      }
+      $("div.icon-rank", itemDiv).attr("class", "icon-rank icon-rank-"
+          + item.rank + " ui-ticker-rank").attr("title", rankTip);
+
+      // Load the player team
+      var teamTip = "Team: ";
+      if (item.team && this.teams[item.team]) {
+        teamTip += this.teams[item.team];
+      } else {
+        teamTip += "Unknown";
+      }
+      $("div.icon-team", itemDiv).attr("class", "icon-team icon-team-"
+          + item.team + " ui-ticker-team").attr("title", teamTip);
+
+      // Show all the icon content
       $("div.ui-ticker-item-icons", itemDiv).show();
 
       // Load the trend content
-      var trendState = (item.trend == "+" ? "highlight" : item.trend == "-" ? "error" : "");
-      var trendIcon = (item.trend == "+" ? "arrow-n" : item.trend == "-" ? "arrow-s" : "minus");
-      $("div.ui-ticker-trend", itemDiv).attr("class", "ui-state-" + trendState + " ui-ticker-trend");
-      $("span.ui-ticker-trend-icon", itemDiv).attr("class", "ui-icon ui-icon-circle-"
-          + trendIcon + " ui-ticker-trend-icon");
+      var trendState, trendIcon, trendTip = "Trend: ";
+      if (item.trend == "+") {
+        trendState = "highlight";
+        trendIcon = "arrow-n";
+        trendTip += "Improving"
+      } else if (item.trend == "-") {
+        trendState = "error";
+        trendIcon = "arrow-s";
+        trendTip += "Declining"
+      } else if (item.trend == "") {
+        trendState = "";
+        trendIcon = "minus";
+        trendTip += "Unchanged";
+      } else {
+        trendTip += "Unknown";
+      }
+      $("div.ui-ticker-trend", itemDiv).attr("class", "ui-state-" + trendState
+          + " ui-ticker-trend");
+      $("span.ui-ticker-trend-icon", itemDiv).attr("class",
+          "ui-icon ui-icon-circle-" + trendIcon + " ui-ticker-trend-icon")
+          .attr("title", trendTip);
       $("div.ui-ticker-trend", itemDiv).show();
 
       // Load all the numeric content
