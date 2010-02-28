@@ -193,7 +193,15 @@ Map._initMarkerLayer = function(type) {
   }, {
     context: {
       size: function(m) {
-        return (m.cluster ? Math.min(m.attributes.count, 13) : 1) + 7;
+
+        // Use the marker count to select an image size when clustering
+        if (m.cluster) {
+          return Math.min(m.attributes.count, 13);
+        }
+
+        // Use the current zoom level to select an image size otherwise
+        var zoom = Map.ol.getZoom();
+        return (2 * zoom + zoom + 8);
       }
     }
   });
