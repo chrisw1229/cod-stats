@@ -450,6 +450,7 @@ $.widget("ui.picker", {
 
       // Restore the last selection name
       this.inputDiv.val(this.selection ? this.selection.name : "");
+      this._filterList(this.inputDiv.val().toLowerCase());
     }
   },
 
@@ -474,7 +475,7 @@ $.widget("ui.picker", {
     }
     for (var i = 0; i < this.items.length; i++) {
       if (this.items[i].name.toLowerCase() == name) {
-        window.location.replace("#" + this.items[i].id);
+        window.location.assign("#" + this.items[i].id);
         break;
       }
     }
@@ -557,7 +558,13 @@ $.widget("ui.picker", {
   _addressChanged: function(e) {
 
     // Select the item based on the id from the anchor fragment
-    this._selectId($.param.fragment());
+    var id = $.param.fragment();
+    if (id.length > 0) {
+      this._selectId(id);
+    } else {
+      this.inputDiv.val("");
+      this._selectIndex(-1);
+    }
   }
 
 });
