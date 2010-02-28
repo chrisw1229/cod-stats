@@ -7,7 +7,7 @@ if (typeof Map == "undefined" || !Map) {
     maxSize: 4096,
     maxTile: 256,
     maxZoom: 5,
-    zoom: 0
+    zoom: 2
   };
 }
 
@@ -64,9 +64,6 @@ Map._init = function(element, options) {
   $(window).bind("resize", Map._resize);
 
   // Set the initial map appearance
-  var lon = (options.x ? options.x : (options.maxSize / 2));
-  var lat = (options.y ? options.y : (options.maxSize / 2));
-  Map.ol.setCenter(new OpenLayers.LonLat(lon, lat), 1);
   Map._resize();
   Map._enabled(false);
 };
@@ -219,7 +216,7 @@ Map._tileURL = function(bounds) {
 
   // Check whether a valid tile set was provided
   if (Map.options.tiles == undefined) {
-    return null;
+    return "";
   }
 
   // Calculate the tile attributes for the given bounds
@@ -261,9 +258,14 @@ Map._enabled = function(enabled) {
       }
     }
 
-    // Enable the map navigation cursor
+    // Adjust the map appearance
     if (enabled) {
       $(".olMap").addClass("enabled");
+
+      // Set the default pan and zoom values
+      var lon = (Map.options.x ? Map.options.x : (Map.options.maxSize / 2));
+      var lat = (Map.options.y ? Map.options.y : (Map.options.maxSize / 2));
+      Map.ol.setCenter(new OpenLayers.LonLat(lon, lat), Map.options.zoom);
     } else {
       $(".olMap").removeClass("enabled");
     }
