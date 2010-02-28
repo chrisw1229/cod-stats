@@ -523,13 +523,24 @@ $.widget("ui.picker", {
     selectedDiv.removeClass("ui-state-default");
     selectedDiv.addClass("ui-state-highlight");
 
+    this._requestSelection(this.selection);
+  },
+
+  _requestSelection: function(selection) {
+    if (this.loading) {
+      this.nextLoad = selection;
+      return;
+    }
+    this.loading = selection;
+
     // Configure the request options
     var options = {
-      url: this.options.type + "/" + this.selection.id + ".json",
+      url: this.options.type + "/" + selection.id + ".json",
       dataType: "json",
       cache: false,
       success: $.call(this, "_handleContentSuccess"),
       error: $.call(this, "_handleContentError"),
+      complete: $.call(this, "_handleContentComplete")
     };
 
     // Fetch the content for the selected item
@@ -540,7 +551,7 @@ $.widget("ui.picker", {
   _handleContentSuccess: function(data, status) {
 
     // Notify the listener of the selection
-    if (this.options.callback) {
+    if (this.options.callback && this.nextLoad == undefined) {
       this.options.callback({ selection: this.selection, data: data });
     }
   },
@@ -549,8 +560,16 @@ $.widget("ui.picker", {
   _handleContentError: function(request, status, error) {
 
     // Notify the listener of the failure
-    if (this.options.callback) {
+    if (this.options.callback && this.nextLoad == undefined) {
       this.options.callback({ error: true });
+    }
+  },
+
+  _handleContentComplete: function(request, status) {
+    this.loading = undefined;
+    if (this.nextLoad) {
+      this._requestSelection(this.nextLoad);
+      this.nextLoad = undefined;
     }
   },
 
