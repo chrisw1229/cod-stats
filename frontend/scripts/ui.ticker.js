@@ -14,7 +14,7 @@ $.widget("ui.ticker", {
     this.itemsDiv = $('<div class="ui-ticker-items"/>').appendTo(this.element);
     this.nextDiv = $('<div class="ui-state-default ui-corner-left ui-ticker-nav"'
         + ' title="Click to advance ticker">'
-        + '<span class="ui-icon ui-icon-circle-arrow-e"/></div>').appendTo(this.element);
+        + '<span class="ui-icon ui-icon-circle-triangle-e"/></div>').appendTo(this.element);
 
     // Bind the event handlers
     this.nextDiv.bind("click", function() { self.next(); });
@@ -446,7 +446,7 @@ $.widget("ui.ticker", {
 
       // Load the trend content
       var trendState = (item.trend == "+" ? "highlight" : item.trend == "-" ? "error" : "");
-      var trendIcon = (item.trend == "+" ? "plus" : item.trend == "-" ? "close" : "minus");
+      var trendIcon = (item.trend == "+" ? "arrow-n" : item.trend == "-" ? "arrow-s" : "minus");
       $("div.ui-ticker-trend", itemDiv).attr("class", "ui-state-" + trendState + " ui-ticker-trend");
       $("span.ui-ticker-trend-icon", itemDiv).attr("class", "ui-icon ui-icon-circle-"
           + trendIcon + " ui-ticker-trend-icon");
