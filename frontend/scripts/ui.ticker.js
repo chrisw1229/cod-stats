@@ -117,6 +117,23 @@ $.widget("ui.ticker", {
     }
   },
 
+  clear: function() {
+
+    // Check if there is any data to clear
+    if (this.sorted.length == 0) {
+      return;
+    }
+
+    // Reset all the model variables
+    this.items = {};
+    this.sorted = [];
+    this.loadIndex = 0;
+
+    // Reset the ticker elements
+    this.maxW = 0;
+    this._resize();
+  },
+
   _addItem: function(item) {
 
     // Store the item for future lookup
@@ -139,6 +156,7 @@ $.widget("ui.ticker", {
 
     // Load the item into the displayed group if it has room
     if (this.group && this.anim && this.sorted.length - 1 < this.anim.count) {
+      this.loadIndex = 0;
       this._loadGroup(this.group);
     }
   },
@@ -250,6 +268,7 @@ $.widget("ui.ticker", {
     // Make a copy of the group to rotate through the ticker
     this.group2 = this.group1.clone().appendTo(this.itemsDiv);
     this.group2.hide();
+    this.group = this.group2;
 
     // Bind events to all the ticker items
     this._bindItems();
