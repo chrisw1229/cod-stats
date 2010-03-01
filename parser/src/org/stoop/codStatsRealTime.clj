@@ -23,9 +23,7 @@
 (def *transformer* (ref (get-transformer "none")))
 (def *current-teams* (ref {:allies "american" :axis "german" :spectator "spectator" :none ""}))
 
-(def *start-time* (ref (. System currentTimeMillis)))
-(defn calc-seconds [start-time-millis end-time-millis]
-  (int (* 0.001 (- end-time-millis start-time-millis))))
+(def *start-time* (ref 0))
 
 (defstruct player-stats :name :photo :place :rank :team :kills :deaths :inflicted :received :trend)
 
@@ -39,8 +37,7 @@ new stats object for them."
       player
       (let [new-player (struct player-stats (:name player-struct)
 			       "default.jpg" (count @*player-stats-map*) 0 "none" 0 0 0 0 "")]
-	(dosync (alter *player-stats-map* assoc player-id new-player)
-		(alter *player-id-ratio-map* assoc player-id 0))
+	(dosync (alter *player-stats-map* assoc player-id new-player))
 	(do new-player)))))
 
 (defn update-player 
@@ -66,8 +63,8 @@ new stats object for them."
   [attacker victim damage]
   (let [old-attacker (get-player attacker)
 	old-victim (get-player victim)]
-    (update-player attacker (update-in old-attacker [:inflicted] + damage))
-    (update-player victim (update-in old-victim [:received] + damage))))
+    (update-player attacker (update-in old-attacker [:inflicted] + (int damage)))
+    (update-player victim (update-in old-victim [:received] + (int damage)))))
 
 (defn update-places 
   "Recalculates the places for all players based upon current number of kills and sets them in map-ref."
@@ -90,7 +87,8 @@ new stats object for them."
 (defn get-ratio-trend
   "Determines if a new ratio is flat (\"\"), trending upward(+) or trending downward(-)."
   [new-ratio old-ratio]
-  (cond 
+  (cond
+   (nil? old-ratio) ""
    (> new-ratio old-ratio) "+"
    (= new-ratio old-ratio) ""
    (< new-ratio old-ratio) "-"))
@@ -139,18 +137,22 @@ and victim to be sent to the frontend."
 (defn process-start-game 
   "Sets the data for the frontend to a game start packet, resets player stats records and resets the start
 time for this game."
-  [game-type map-name round-time allies-team axis-team]
-  (dosync (ref-set *game-records* [{:map map-name :type game-type :time round-time}])
+  [game-type map-name round-time allies-team axis-team time-stamp]
+  (dosync (ref-set *game-records* [{:map map-name :type game-type :time round-time}
+				   {:type "event" :data {:time 0}}])
 	  (ref-set *player-stats-map* {})
-	  (ref-set *start-time* (. System currentTimeMillis))
+	  (ref-set *start-time* time-stamp)
 	  (ref-set *transformer* (get-transformer map-name))
-	  (ref-set *current-teams* {:allies allies-team :axis axis-team :spectator "spectator"})))
+	  (ref-set *current-teams* {:allies allies-team :axis axis-team :spectator "spectator"})
+	  (ref-set *player-id-ratio-map* {})))
 
 (defn process-game-event
   "Adds an event packet to the data to be sent to the frontend."
-  [team]
-  (dosync (alter *game-records* conj {:team (str (first (get @*current-teams* (keyword team))))
-				      :time (calc-seconds @*start-time* (. System currentTimeMillis))})))
+  [team time-stamp]
+  (if (= team :none)
+    (dosync (alter *game-records* conj {:time (- time-stamp @*start-time*)}))
+    (dosync (alter *game-records* conj {:team (str (first (get @*current-teams* (keyword team))))
+					:time (- time-stamp @*start-time*)}))))
 
 (defn process-quit-event
   [player]
@@ -174,7 +176,8 @@ time for this game."
 			  (get-in parsed-input [:entry :map-name])
 			  (get-in parsed-input [:entry :round-time])
 			  (get-in parsed-input [:entry :allies-team])
-			  (get-in parsed-input [:entry :axis-team]))
+			  (get-in parsed-input [:entry :axis-team])
+			  (get parsed-input :time))
 
       (damage-kill? (parsed-input :entry))
       (do
@@ -193,7 +196,8 @@ time for this game."
 			(get @*transformer* :y))))
       
       (game-event? (parsed-input :entry))
-      (process-game-event (get-in parsed-input [:entry :player :team]))
+      (process-game-event (get-in parsed-input [:entry :player :team])
+			  (get parsed-input :time))
       
       (spectator? (parsed-input :entry))
       (process-spectator-event (get-in parsed-input [:entry :spectator]))
