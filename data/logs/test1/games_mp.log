@@ -1,0 +1,1377 @@
+  0:00 ------------------------------------------------------------
+  0:00 InitGame: \.Admin\Luda\.Location\Beavercreek, OH\.Website\http://cward-nb/gday10\fs_game\cod-stats\g_gametype\tdm\g_timeoutsallowed\0\gamename\CoD:United Offensive\mapname\mp_uo_carentan\protocol\22\scr_allow_jeeps\1\scr_allow_tanks\1\shortversion\1.51\sv_allowAnonymous\0\sv_floodProtect\1\sv_hostname\G-Day X\sv_maxclients\50\sv_maxPing\999\sv_maxRate\25000\sv_minPing\0\sv_privateClients\0\sv_punkbuster\0\sv_pure\0
+  0:00 Game;tdm;mp_uo_carentan;30;american;german
+  0:47 J;0;0;Luda-STATS 2.0!!!
+  0:47 Spec;0;0;Luda-STATS 2.0!!!
+  1:45 J;0;3;A Figment of Your Imagination
+  1:45 Spec;0;3;A Figment of Your Imagination
+  1:46 J;0;2;Bruce Dainis
+  1:46 Spec;0;2;Bruce Dainis
+  1:49 J;0;1;King
+  1:49 Spec;0;1;King
+  1:52 Spawn;0;2;axis;Bruce Dainis;mp44_mp;216,2088,-23.875;135
+  1:52 Spawn;0;3;allies;A Figment of Your Imagination;bar_mp;976.016,-863.939,-5.89044;-180
+  2:04 Use;0;2;axis;Bruce Dainis;1;all;mg42_turret_mp;1;-499.102,1943.43,144.125;-87.6709
+  2:23 J;0;4;Chickendales
+  2:23 Spec;0;4;Chickendales
+  2:32 Use;0;2;axis;Bruce Dainis;1;all;mg42_turret_mp;0;-495.821,1933.57,144.165;-61.3147
+  2:40 Spawn;0;4;axis;Chickendales;mp44_mp;-512,2688,-23.875;-135
+  2:45 Spawn;0;1;allies;King;springfield_mp;72,360,-7.87498;-180
+  2:52 Use;0;2;axis;Bruce Dainis;1;all;mg42_turret_mp;1;-514.946,1939.62,144.125;-64.7589
+  2:54 D;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;35;MOD_RIFLE_BULLET;right_arm_lower
+  2:56 Use;0;2;axis;Bruce Dainis;1;all;mg42_turret_mp;0;-514.968,1938.48,144.125;-86.2262
+  2:57 D;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;62;MOD_RIFLE_BULLET;torso_upper
+  3:20 Use;0;2;axis;Bruce Dainis;1;all;mg42_turret_mp;1;-517.808,1938.45,144.125;-59.7986
+  3:21 D;0;3;allies;A Figment of Your Imagination;0;2;axis;Bruce Dainis;mg42_bipod_stand_mp;48;MOD_RIFLE_BULLET;torso_lower
+  3:21 D;0;3;allies;A Figment of Your Imagination;0;2;axis;Bruce Dainis;mg42_bipod_stand_mp;48;MOD_RIFLE_BULLET;torso_lower
+  3:21 K;0;3;allies;A Figment of Your Imagination;0;2;axis;Bruce Dainis;mg42_bipod_stand_mp;48;MOD_RIFLE_BULLET;torso_lower;280.875,647.091,16.125;-518.828,1938.03,144.125;121.75;302.499;crouch;stand
+  3:23 D;0;1;allies;King;0;2;axis;Bruce Dainis;mg42_bipod_stand_mp;90;MOD_RIFLE_BULLET;head
+  3:23 K;0;1;allies;King;0;2;axis;Bruce Dainis;mg42_bipod_stand_mp;53;MOD_RIFLE_BULLET;torso_upper;-439.261,1385.99,0.125089;-501.102,1944.26,144.125;73.0865;302.505;stand;stand
+  3:27 Use;0;2;axis;Bruce Dainis;1;all;mg42_turret_mp;0;-514.184,1930.58,144.125;-57.4255
+  3:34 Spawn;0;1;allies;King;springfield_mp;1960,2304,-23.875;-135
+  3:34 Item;0;2;Bruce Dainis;item_health
+  3:36 Spawn;0;3;allies;A Figment of Your Imagination;bar_mp;1800,2696,-23.875;-135
+  3:53 K;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;62;MOD_RIFLE_BULLET;torso_upper;-699.374,2173.98,144.125;758,2548,-23;18.4845;-165.24;stand;crouch
+  3:56 Spawn;0;2;axis;Bruce Dainis;mp44_mp;-1176.01,1560.01,-13.9576;45
+  4:02 Weapon;0;3;A Figment of Your Imagination;fg42_mp
+  4:18 D;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;42;MOD_RIFLE_BULLET;right_leg_upper
+  4:18 D;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;35;MOD_RIFLE_BULLET;right_arm_lower
+  4:19 K;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;35;MOD_RIFLE_BULLET;right_arm_lower;191.896,2532.5,-23.875;752,2530,-23;-0.736084;-179.39;crouch;crouch
+  4:23 Spawn;0;2;axis;Bruce Dainis;mp44_mp;-1176.01,1560.01,-13.9576;45
+  4:33 K;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;105;MOD_HEAD_SHOT;head;-95.1268,2096.5,-23.875;-26,2257,-23;54.0308;-112.181;stand;stand
+  4:35 Spawn;0;2;axis;Bruce Dainis;mp44_mp;-992.012,2328.01,-22.4743;45
+  4:40 D;0;3;allies;A Figment of Your Imagination;0;2;axis;Bruce Dainis;mp44_mp;34;MOD_PISTOL_BULLET;right_leg_lower
+  4:40 D;0;3;allies;A Figment of Your Imagination;0;2;axis;Bruce Dainis;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower
+  4:40 D;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;35;MOD_RIFLE_BULLET;left_leg_lower
+  4:41 D;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;56;MOD_RIFLE_BULLET;torso_lower
+  4:41 K;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;56;MOD_RIFLE_BULLET;torso_lower;-517.512,2287.58,-23.9912;49,2418,-23;13.233;-167.179;crouch;prone
+  4:44 Spawn;0;2;axis;Bruce Dainis;mp44_mp;-1304,1680.01,-15.7549;45
+  4:46 Item;0;3;A Figment of Your Imagination;item_health
+  4:52 K;0;3;allies;A Figment of Your Imagination;0;2;axis;Bruce Dainis;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower;-581.742,2361.46,-23.875;-224,2054,-31;-41.4514;137.587;prone;stand
+  4:56 D;0;2;axis;Bruce Dainis;0;1;allies;King;springfield_mp;96;MOD_RIFLE_BULLET;torso_lower
+  4:56 Item;0;2;Bruce Dainis;item_health
+  5:01 Spawn;0;3;allies;A Figment of Your Imagination;bar_mp;844,3480,-23.875;90
+  5:03 K;0;2;axis;Bruce Dainis;0;1;allies;King;springfield_mp;96;MOD_RIFLE_BULLET;torso_lower;-750.705,2442.37,-23.8749;-12,2407,-23;-1.34583;178.072;stand;stand
+  5:06 Spawn;0;2;axis;Bruce Dainis;mp44_mp;-1304,1680.01,-15.7549;45
+  5:12 D;0;3;allies;A Figment of Your Imagination;0;2;axis;Bruce Dainis;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower
+  5:13 K;0;3;allies;A Figment of Your Imagination;0;2;axis;Bruce Dainis;mp44_mp;61;MOD_PISTOL_BULLET;torso_upper;47.6214,2614.23,-31.8749;-673,2020,-7;-140.971;39.1992;prone;crouch
+  5:14 K;0;2;axis;Bruce Dainis;0;1;allies;King;springfield_mp;180;MOD_HEAD_SHOT;head;-673.536,2020.71,-7.875;-201,2617,-23;50.8008;-128.491;crouch;stand
+  5:16 Spawn;0;2;axis;Bruce Dainis;mp44_mp;-632,1712,0.125012;-45
+  5:25 D;0;1;allies;King;0;2;axis;Bruce Dainis;mp44_mp;40;MOD_PISTOL_BULLET;left_leg_upper
+  5:28 D;0;1;allies;King;0;2;axis;Bruce Dainis;mp44_mp;27;MOD_PISTOL_BULLET;left_hand
+  5:28 K;0;1;allies;King;0;2;axis;Bruce Dainis;mp44_mp;61;MOD_PISTOL_BULLET;torso_upper;-619.282,2484.18,-23.8749;-589,1984,-7;-91.571;93.642;stand;crouch
+  5:32 Weapon;0;2;Bruce Dainis;mp44_mp
+  5:33 Weapon;0;2;Bruce Dainis;mp44_mp
+  5:39 Spawn;0;1;allies;King;m1garand_mp;976.016,-863.939,-5.89044;-180
+  5:42 Spawn;0;3;allies;A Figment of Your Imagination;bar_mp;976.016,-863.939,-5.89044;-180
+  7:06 D;0;1;allies;King;0;2;axis;Bruce Dainis;mp44_mp;40;MOD_PISTOL_BULLET;left_arm_upper
+  7:07 D;0;1;allies;King;0;2;axis;Bruce Dainis;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower
+  7:07 K;0;1;allies;King;0;2;axis;Bruce Dainis;mp44_mp;40;MOD_PISTOL_BULLET;left_arm_upper;-5.21296,2686.03,-31.8749;194,2028,160;-126.634;105.579;stand;stand
+  7:12 Spawn;0;1;allies;King;m1garand_mp;-1176.01,1560.01,-13.9576;45
+  7:24 D;0;4;axis;Chickendales;0;3;allies;A Figment of Your Imagination;bar_mp;56;MOD_RIFLE_BULLET;torso_lower
+  7:24 K;0;4;axis;Chickendales;0;3;allies;A Figment of Your Imagination;bar_mp;56;MOD_RIFLE_BULLET;torso_lower;-577.691,1851.7,-7.875;-729,2064,-7;114.478;-55.9534;crouch;prone
+  7:28 D;0;1;allies;King;0;2;axis;Bruce Dainis;mp44_mp;40;MOD_PISTOL_BULLET;left_leg_upper
+  7:28 Item;0;1;King;item_health
+  7:29 D;0;1;allies;King;0;2;axis;Bruce Dainis;mp44_mp;61;MOD_PISTOL_BULLET;torso_upper
+  7:32 D;0;2;axis;Bruce Dainis;0;1;allies;King;m1garand_mp;56;MOD_RIFLE_BULLET;torso_lower
+  7:32 K;0;2;axis;Bruce Dainis;0;1;allies;King;m1garand_mp;62;MOD_RIFLE_BULLET;torso_upper;-373.702,1896.1,164.125;-518,2192,-31;118.356;-63.858;stand;stand
+  7:34 Item;0;1;King;item_health
+  7:34 Spawn;0;2;axis;Bruce Dainis;mp44_mp;1192,3296,-23.875;45
+  7:43 Item;0;1;King;item_health
+  7:50 Shock;0;1;allies;King;stielhandgranate_mp;3;MOD_GRENADE_SPLASH;none
+  7:50 D;0;1;allies;King;0;2;axis;Bruce Dainis;stielhandgranate_mp;68;MOD_GRENADE_SPLASH;none
+  7:51 Weapon;0;2;Bruce Dainis;mp44_mp
+  7:52 K;0;1;allies;King;0;2;axis;Bruce Dainis;mp44_mp;40;MOD_PISTOL_BULLET;left_leg_upper;-788.96,2016.43,144.125;-813,1802,96;-93.3344;86.5118;stand;stand
+  8:07 D;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;35;MOD_RIFLE_BULLET;left_arm_lower
+  8:07 K;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;105;MOD_HEAD_SHOT;head;-704.484,1973.87,144.125;-951,2068,144;-161.84;-22.9669;stand;prone
+  8:07 Spawn;0;1;allies;King;m1garand_mp;-992.012,2328.01,-22.4743;45
+  8:09 Spawn;0;2;axis;Bruce Dainis;mp44_mp;1192,3296,-23.875;45
+  8:22 Weapon;0;1;King;m1garand_mp
+  8:23 D;0;2;axis;Bruce Dainis;0;1;allies;King;m1garand_mp;35;MOD_RIFLE_BULLET;right_arm_lower
+  8:26 D;0;1;allies;King;0;2;axis;Bruce Dainis;mp44_mp;40;MOD_PISTOL_BULLET;left_arm_upper
+  8:26 K;0;1;allies;King;0;2;axis;Bruce Dainis;mp44_mp;102;MOD_HEAD_SHOT;head;246.91,2847.37,-31.8749;397,3030,-23;46.1371;-132.621;stand;stand
+  8:32 Spawn;0;1;allies;King;m1garand_mp;-992.012,2328.01,-22.4743;45
+  8:38 D;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;56;MOD_RIFLE_BULLET;torso_lower
+  8:43 Weapon;0;2;Bruce Dainis;panzerfaust_mp
+  8:48 Spawn;0;4;axis;Chickendales;mp44_mp;1368,2608,-23.875;45
+  8:55 D;0;1;allies;King;0;4;axis;Chickendales;mp44_mp;40;MOD_PISTOL_BULLET;left_arm_upper
+  8:56 D;0;1;allies;King;0;4;axis;Chickendales;mp44_mp;34;MOD_PISTOL_BULLET;left_leg_lower
+  8:59 D;0;4;axis;Chickendales;0;3;allies;A Figment of Your Imagination;bar_mp;56;MOD_RIFLE_BULLET;torso_lower
+  8:59 D;0;4;axis;Chickendales;0;3;allies;A Figment of Your Imagination;bar_mp;35;MOD_RIFLE_BULLET;left_arm_lower
+  8:59 K;0;4;axis;Chickendales;0;3;allies;A Figment of Your Imagination;bar_mp;42;MOD_RIFLE_BULLET;left_arm_upper;230.97,2333.42,-23.8749;241,2245,-23;-89.2804;80.0409;stand;crouch
+  9:02 Spawn;0;4;axis;Chickendales;mp44_mp;72,360,-7.87498;-180
+  9:09 Item;0;2;Bruce Dainis;item_health
+  9:15 Item;0;2;Bruce Dainis;item_health
+  9:15 Weapon;0;2;Bruce Dainis;mp44_mp
+  9:16 K;0;1;allies;King;0;1;allies;King;fraggrenade_mp;70;MOD_GRENADE_SPLASH;none;488.527,1759.95,160.125;488.527,1759.95,160.125;79.3048;79.3048;stand;stand
+  9:16 Shock;0;1;allies;King;fraggrenade_mp;3;MOD_GRENADE_SPLASH;none
+  9:17 Item;0;2;Bruce Dainis;item_health
+  9:19 D;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;62;MOD_RIFLE_BULLET;torso_upper
+  9:19 K;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;105;MOD_RIFLE_BULLET;neck;-763.575,2133.84,144.125;-832,1821,96;-102.332;77.5909;crouch;crouch
+  9:20 Spawn;0;1;allies;King;m1garand_mp;-1304,1680.01,-15.7549;45
+  9:22 Spawn;0;2;axis;Bruce Dainis;mp44_mp;1200,1760,144.125;-90
+  9:31 Weapon;0;2;Bruce Dainis;panzerfaust_mp
+  9:51 Weapon;0;4;Chickendales;mp44_mp
+  9:55 D;0;4;axis;Chickendales;0;4;axis;Chickendales;mp44_mp;27;MOD_PISTOL_BULLET;torso_lower
+  9:55 D;0;4;axis;Chickendales;0;4;axis;Chickendales;mp44_mp;30.5;MOD_PISTOL_BULLET;torso_upper
+  9:56 D;0;4;axis;Chickendales;0;4;axis;Chickendales;mp44_mp;27;MOD_PISTOL_BULLET;torso_lower
+  9:59 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;1;-534.808,1927.77,144.125;-36.557
+ 10:01 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;0;-548.734,1933.67,144.125;-63.3746
+ 10:02 Item;0;2;Bruce Dainis;item_health
+ 10:03 J;0;5;Damndest Nob Talent
+ 10:03 Spec;0;5;Damndest Nob Talent
+ 10:03 K;0;4;axis;Chickendales;0;1;allies;King;fraggrenade_mp;41;MOD_GRENADE_SPLASH;none;-696.463,1770.02,144.125;-221.971,1426.79,-7.87489;56.0852;121.58;stand;stand
+ 10:03 Shock;0;4;axis;Chickendales;fraggrenade_mp;2;MOD_GRENADE_SPLASH;none
+ 10:05 Spawn;0;4;axis;Chickendales;mp44_mp;-992.012,2328.01,-22.4743;45
+ 10:06 Spawn;0;5;allies;Damndest Nob Talent;thompson_mp;-632,1712,0.125012;-45
+ 10:10 D;0;3;allies;A Figment of Your Imagination;0;2;axis;Bruce Dainis;mp44_mp;40;MOD_PISTOL_BULLET;right_leg_upper
+ 10:10 D;0;3;allies;A Figment of Your Imagination;0;2;axis;Bruce Dainis;mp44_mp;40;MOD_PISTOL_BULLET;left_arm_upper
+ 10:10 K;0;3;allies;A Figment of Your Imagination;0;2;axis;Bruce Dainis;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower;-815.747,2007.53,144.125;-907,2014,144;166.855;-14.5404;crouch;crouch
+ 10:12 Item;0;2;Bruce Dainis;item_health
+ 10:17 D;0;5;allies;Damndest Nob Talent;0;2;axis;Bruce Dainis;mp44_mp;34;MOD_PISTOL_BULLET;right_arm_lower
+ 10:17 D;0;5;allies;Damndest Nob Talent;0;2;axis;Bruce Dainis;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower
+ 10:18 D;0;1;allies;King;0;2;axis;Bruce Dainis;mp44_mp;40;MOD_PISTOL_BULLET;left_leg_upper
+ 10:19 Item;0;5;Damndest Nob Talent;item_health
+ 10:20 Spawn;0;3;allies;A Figment of Your Imagination;bar_mp;-632,1712,0.125012;-45
+ 10:23 Weapon;0;2;Bruce Dainis;mp44_mp
+ 10:23 Item;0;2;Bruce Dainis;item_health
+ 10:24 K;0;5;allies;Damndest Nob Talent;0;2;axis;Bruce Dainis;stielhandgranate_mp;83;MOD_GRENADE_SPLASH;none;-580,1849.39,-7.875;-704.525,1832.45,144.125;115.977;60.3424;crouch;stand
+ 10:24 Shock;0;5;allies;Damndest Nob Talent;stielhandgranate_mp;3;MOD_GRENADE_SPLASH;none
+ 10:24 Shock;0;1;allies;King;stielhandgranate_mp;2;MOD_GRENADE_SPLASH;none
+ 10:24 D;0;1;allies;King;0;2;axis;Bruce Dainis;stielhandgranate_mp;47;MOD_GRENADE_SPLASH;none
+ 10:25 Rank;0;2;axis;Bruce Dainis;1
+ 10:27 K;0;1;allies;King;0;4;axis;Chickendales;stielhandgranate_mp;48;MOD_GRENADE_SPLASH;none;-892.095,2111.38,-7.875;-355.431,2227.93,-31.8749;-20.3632;-149.886;stand;stand
+ 10:27 Shock;0;1;allies;King;stielhandgranate_mp;2;MOD_GRENADE_SPLASH;none
+ 10:29 Weapon;0;3;A Figment of Your Imagination;colt_mp
+ 10:30 Spawn;0;5;allies;Damndest Nob Talent;thompson_mp;976.077,-791.959,-4.50126;-180
+ 10:31 D;0;3;allies;A Figment of Your Imagination;0;4;axis;Chickendales;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower
+ 10:32 D;0;4;axis;Chickendales;0;3;allies;A Figment of Your Imagination;bar_mp;62;MOD_RIFLE_BULLET;torso_upper
+ 10:32 K;0;4;axis;Chickendales;0;3;allies;A Figment of Your Imagination;bar_mp;62;MOD_RIFLE_BULLET;torso_upper;-724.875,2029.24,-7.875;-715,2126,-7;75.7452;-96.394;crouch;crouch
+ 10:33 Spawn;0;0;axis;Luda-STATS 2.0!!!;mp40_mp;-512,2688,-23.875;-135
+ 10:33 Spawn;0;1;allies;King;m1garand_mp;976.077,-791.959,-4.50126;-180
+ 10:33 Item;0;3;A Figment of Your Imagination;item_health
+ 10:34 Spawn;0;4;axis;Chickendales;mp44_mp;-992.012,2328.01,-22.4743;45
+ 10:41 Weapon;0;3;A Figment of Your Imagination;bar_mp
+ 10:47 D;0;3;allies;A Figment of Your Imagination;0;2;axis;Bruce Dainis;mp44_mp;34;MOD_PISTOL_BULLET;left_leg_lower
+ 10:47 D;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;56;MOD_RIFLE_BULLET;torso_lower
+ 10:47 K;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;62;MOD_RIFLE_BULLET;torso_upper;-673.138,1974.15,144.125;-983,2009,144;174.694;-7.10815;stand;crouch
+ 10:48 Rank;0;3;allies;A Figment of Your Imagination;1
+ 10:49 Spawn;0;2;axis;Bruce Dainis;mp44_mp;-512,2688,-23.875;-135
+ 10:50 Weapon;0;4;Chickendales;mp44_mp
+ 10:51 Weapon;0;2;Bruce Dainis;mp44_mp
+ 10:56 D;0;4;axis;Chickendales;0;3;allies;A Figment of Your Imagination;bar_mp;56;MOD_RIFLE_BULLET;torso_lower
+ 10:56 K;0;4;axis;Chickendales;0;3;allies;A Figment of Your Imagination;bar_mp;56;MOD_RIFLE_BULLET;torso_lower;-788.484,1858.13,96.125;-839,1828,96;68.9557;32.3822;crouch;crouch
+ 10:58 Item;0;3;A Figment of Your Imagination;item_health
+ 10:59 Spawn;0;4;axis;Chickendales;mp44_mp;-568,2744,-23.875;-135
+ 11:02 Weapon;0;4;Chickendales;mp44_mp
+ 11:04 D;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;56;MOD_RIFLE_BULLET;torso_lower
+ 11:05 D;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;42;MOD_RIFLE_BULLET;left_leg_upper
+ 11:05 K;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;62;MOD_RIFLE_BULLET;torso_upper;-607.763,2067.77,-7.875;-830,1821,96;-118.356;46.4447;stand;crouch
+ 11:07 Spawn;0;2;axis;Bruce Dainis;mp44_mp;944,1468,-39.875;135
+ 11:08 D;0;4;axis;Chickendales;0;3;allies;A Figment of Your Imagination;bar_mp;28;MOD_RIFLE_BULLET;left_foot
+ 11:08 Item;0;4;Chickendales;item_health
+ 11:08 D;0;4;axis;Chickendales;0;3;allies;A Figment of Your Imagination;bar_mp;42;MOD_RIFLE_BULLET;left_leg_upper
+ 11:08 D;0;4;axis;Chickendales;0;3;allies;A Figment of Your Imagination;bar_mp;42;MOD_RIFLE_BULLET;left_leg_upper
+ 11:08 D;0;3;allies;A Figment of Your Imagination;0;4;axis;Chickendales;mp44_mp;34;MOD_PISTOL_BULLET;left_arm_lower
+ 11:08 K;0;3;allies;A Figment of Your Imagination;0;4;axis;Chickendales;stielhandgranate_mp;71;MOD_GRENADE_SPLASH;none;-633.783,1920.7,-7.875;-579.98,1849.41,-7.875;-49.2407;130.474;crouch;crouch
+ 11:08 Shock;0;3;allies;A Figment of Your Imagination;stielhandgranate_mp;3;MOD_GRENADE_SPLASH;none
+ 11:08 K;0;4;axis;Chickendales;0;4;axis;Chickendales;stielhandgranate_mp;56;MOD_GRENADE_SPLASH;none;-579.98,1849.41,-7.875;-579.98,1849.41,-7.875;130.474;130.474;crouch;crouch
+ 11:08 Shock;0;4;axis;Chickendales;stielhandgranate_mp;3;MOD_GRENADE_SPLASH;none
+ 11:12 Spawn;0;4;axis;Chickendales;mp44_mp;1312,1760,144.125;-90
+ 11:12 Weapon;0;2;Bruce Dainis;panzerfaust_mp
+ 11:13 Weapon;0;5;Damndest Nob Talent;thompson_mp
+ 11:18 Weapon;0;1;King;m1garand_mp
+ 11:19 Use;0;5;allies;Damndest Nob Talent;1;all;mg42_turret_mp;1;-512.23,1940.62,144.125;302.504
+ 11:20 Spawn;0;3;allies;A Figment of Your Imagination;bar_mp;-1304,1680.01,-15.7549;45
+ 11:23 Weapon;0;2;Bruce Dainis;mp44_mp
+ 11:26 Use;0;5;allies;Damndest Nob Talent;1;all;mg42_turret_mp;0;-515.346,1941.69,144.125;-69.6259
+ 11:33 D;0;4;axis;Chickendales;0;1;allies;King;m1garand_mp;56;MOD_RIFLE_BULLET;torso_lower
+ 11:33 D;0;4;axis;Chickendales;0;1;allies;King;m1garand_mp;42;MOD_RIFLE_BULLET;right_leg_upper
+ 11:34 D;0;2;axis;Bruce Dainis;0;5;allies;Damndest Nob Talent;thompson_mp;30;MOD_PISTOL_BULLET;left_leg_upper
+ 11:34 D;0;2;axis;Bruce Dainis;0;5;allies;Damndest Nob Talent;thompson_mp;30;MOD_PISTOL_BULLET;left_leg_upper
+ 11:34 Weapon;0;4;Chickendales;panzerfaust_mp
+ 11:35 D;0;2;axis;Bruce Dainis;0;5;allies;Damndest Nob Talent;thompson_mp;30;MOD_PISTOL_BULLET;left_arm_upper
+ 11:35 K;0;2;axis;Bruce Dainis;0;5;allies;Damndest Nob Talent;thompson_mp;30;MOD_PISTOL_BULLET;left_arm_upper;-802.154,1899.24,128.125;-728,1993,144;60.9137;-129.963;stand;crouch
+ 11:38 Spawn;0;2;axis;Bruce Dainis;mp44_mp;1200,1760,144.125;-90
+ 11:40 Shock;0;1;allies;King;panzerfaust_mp;3;MOD_PROJECTILE_SPLASH;none
+ 11:40 D;0;1;allies;King;0;4;axis;Chickendales;panzerfaust_mp;63;MOD_PROJECTILE_SPLASH;none
+ 11:40 Item;0;1;King;item_health
+ 11:41 D;0;1;allies;King;0;4;axis;Chickendales;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower
+ 11:42 K;0;1;allies;King;0;4;axis;Chickendales;mp44_mp;34;MOD_PISTOL_BULLET;left_leg_lower;273.477,2364.57,-23.8749;729,2519,-23;17.8638;-160.807;stand;stand
+ 11:45 K;0;4;axis;Chickendales;0;5;allies;Damndest Nob Talent;thompson_mp;73;MOD_HEAD_SHOT;head;244.588,2425.62,-23.875;-789,2264,144;-172.183;9.33289;stand;stand
+ 11:46 Weapon;0;2;Bruce Dainis;panzerfaust_mp
+ 11:48 Spawn;0;4;axis;Chickendales;mp44_mp;1200,1760,144.125;-90
+ 11:50 Spawn;0;1;allies;King;m1garand_mp;-1304,1680.01,-15.7549;45
+ 11:58 Weapon;0;4;Chickendales;panzerfaust_mp
+ 12:04 D;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;42;MOD_RIFLE_BULLET;left_leg_upper
+ 12:04 D;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;42;MOD_RIFLE_BULLET;right_leg_upper
+ 12:04 Shock;0;3;allies;A Figment of Your Imagination;panzerfaust_mp;2;MOD_PROJECTILE_SPLASH;none
+ 12:04 D;0;3;allies;A Figment of Your Imagination;0;2;axis;Bruce Dainis;panzerfaust_mp;45;MOD_PROJECTILE_SPLASH;none
+ 12:04 Shock;0;5;allies;Damndest Nob Talent;panzerfaust_mp;1;MOD_PROJECTILE_SPLASH;none
+ 12:04 D;0;5;allies;Damndest Nob Talent;0;2;axis;Bruce Dainis;panzerfaust_mp;14;MOD_PROJECTILE_SPLASH;none
+ 12:06 K;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;56;MOD_RIFLE_BULLET;torso_lower;-384.268,1843.61,153.494;-791,1999,144;160.697;-20.7916;stand;crouch
+ 12:07 Item;0;5;Damndest Nob Talent;item_health
+ 12:08 Item;0;3;A Figment of Your Imagination;item_health
+ 12:09 Spawn;0;2;axis;Bruce Dainis;mp44_mp;1368,2608,-23.875;45
+ 12:23 D;0;4;axis;Chickendales;0;5;allies;Damndest Nob Talent;thompson_mp;20;MOD_PISTOL_BULLET;right_foot
+ 12:23 D;0;4;axis;Chickendales;0;5;allies;Damndest Nob Talent;thompson_mp;30;MOD_PISTOL_BULLET;left_leg_upper
+ 12:24 D;0;4;axis;Chickendales;0;5;allies;Damndest Nob Talent;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower
+ 12:28 K;0;4;axis;Chickendales;0;3;allies;A Figment of Your Imagination;bar_mp;35;MOD_RIFLE_BULLET;right_arm_lower;-611.44,2405.58,-23.875;-682,2157,144;-93.8232;75.4871;stand;stand
+ 12:31 Shock;0;5;allies;Damndest Nob Talent;stielhandgranate_mp;2;MOD_GRENADE_SPLASH;none
+ 12:31 D;0;5;allies;Damndest Nob Talent;0;4;axis;Chickendales;stielhandgranate_mp;46;MOD_GRENADE_SPLASH;none
+ 12:32 Spawn;0;4;axis;Chickendales;mp44_mp;1200,1760,144.125;-90
+ 12:33 D;0;2;axis;Bruce Dainis;0;1;allies;King;m1garand_mp;62;MOD_RIFLE_BULLET;torso_upper
+ 12:35 Item;0;2;Bruce Dainis;item_health
+ 12:35 Weapon;0;2;Bruce Dainis;mp44_mp
+ 12:36 D;0;3;allies;A Figment of Your Imagination;0;2;axis;Bruce Dainis;mp44_mp;40;MOD_PISTOL_BULLET;left_arm_upper
+ 12:36 D;0;2;axis;Bruce Dainis;0;1;allies;King;m1garand_mp;42;MOD_RIFLE_BULLET;left_arm_upper
+ 12:36 D;0;3;allies;A Figment of Your Imagination;0;2;axis;Bruce Dainis;mp44_mp;34;MOD_PISTOL_BULLET;right_arm_lower
+ 12:37 K;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;62;MOD_RIFLE_BULLET;torso_upper;-589.533,2012.4,144.125;-659,1939,144;-130.627;51.806;stand;crouch
+ 12:39 Item;0;3;A Figment of Your Imagination;item_health
+ 12:39 Weapon;0;4;Chickendales;panzerfaust_mp
+ 12:40 Spawn;0;2;axis;Bruce Dainis;mp44_mp;1368,2608,-23.875;45
+ 12:47 Weapon;0;4;Chickendales;mp44_mp
+ 12:48 Item;0;5;Damndest Nob Talent;item_health
+ 12:49 Item;0;5;Damndest Nob Talent;item_health
+ 12:54 D;0;4;axis;Chickendales;0;5;allies;Damndest Nob Talent;thompson_mp;30;MOD_PISTOL_BULLET;right_leg_upper
+ 12:54 D;0;4;axis;Chickendales;0;5;allies;Damndest Nob Talent;thompson_mp;30;MOD_PISTOL_BULLET;left_leg_upper
+ 12:54 Weapon;0;4;Chickendales;mp44_mp
+ 12:54 K;0;4;axis;Chickendales;0;5;allies;Damndest Nob Talent;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower;-686.101,1972.24,-7.875;-490,1965,-7;-138.631;171.815;stand;crouch
+ 12:57 Spawn;0;4;axis;Chickendales;mp44_mp;1368,2608,-23.875;45
+ 12:59 Weapon;0;2;Bruce Dainis;mp44_mp
+ 13:01 D;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;56;MOD_RIFLE_BULLET;torso_lower
+ 13:01 D;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;42;MOD_RIFLE_BULLET;left_leg_upper
+ 13:02 K;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;42;MOD_RIFLE_BULLET;left_leg_upper;-774.874,1950.27,144.125;-823,1812,96;-110.072;66.2036;stand;crouch
+ 13:04 Item;0;3;A Figment of Your Imagination;item_health
+ 13:05 Spawn;0;2;axis;Bruce Dainis;mp44_mp;1080,3488,-23.875;90
+ 13:12 Shock;0;5;allies;Damndest Nob Talent;stielhandgranate_mp;3;MOD_GRENADE_SPLASH;none
+ 13:12 D;0;5;allies;Damndest Nob Talent;0;4;axis;Chickendales;stielhandgranate_mp;70;MOD_GRENADE_SPLASH;none
+ 13:17 D;0;4;axis;Chickendales;0;5;allies;Damndest Nob Talent;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower
+ 13:17 D;0;4;axis;Chickendales;0;5;allies;Damndest Nob Talent;thompson_mp;25;MOD_PISTOL_BULLET;left_arm_lower
+ 13:17 D;0;4;axis;Chickendales;0;5;allies;Damndest Nob Talent;thompson_mp;25;MOD_PISTOL_BULLET;left_arm_lower
+ 13:17 K;0;4;axis;Chickendales;0;5;allies;Damndest Nob Talent;thompson_mp;75;MOD_HEAD_SHOT;head;-589.725,2055.38,-7.875;-490,1965,-7;-52.3224;144.575;crouch;crouch
+ 13:19 Item;0;5;Damndest Nob Talent;item_health
+ 13:20 Spawn;0;4;axis;Chickendales;mp44_mp;216,2088,-23.875;135
+ 13:21 Item;0;5;Damndest Nob Talent;item_health
+ 13:21 D;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;62;MOD_RIFLE_BULLET;torso_upper
+ 13:21 K;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;56;MOD_RIFLE_BULLET;torso_lower;-678.355,2032.09,-7.875;-801,1799,96;143.69;58.4363;stand;crouch
+ 13:24 Spawn;0;2;axis;Bruce Dainis;mp44_mp;216,2088,-23.875;135
+ 13:25 Item;0;5;Damndest Nob Talent;item_health
+ 13:29 Shock;0;5;allies;Damndest Nob Talent;stielhandgranate_mp;3;MOD_GRENADE_SPLASH;none
+ 13:29 D;0;5;allies;Damndest Nob Talent;0;4;axis;Chickendales;stielhandgranate_mp;52;MOD_GRENADE_SPLASH;none
+ 13:31 D;0;5;allies;Damndest Nob Talent;0;4;axis;Chickendales;mp44_mp;40;MOD_PISTOL_BULLET;left_arm_upper
+ 13:31 K;0;5;allies;Damndest Nob Talent;0;4;axis;Chickendales;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower;-491.261,1964.86,-7.875;-605,2069,-7;131.396;-49.3286;crouch;crouch
+ 13:32 Weapon;0;4;Chickendales;mp44_mp
+ 13:34 Spawn;0;5;allies;Damndest Nob Talent;thompson_mp;1120,432,-7.87498;-45
+ 13:39 D;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;42;MOD_RIFLE_BULLET;left_leg_upper
+ 13:39 D;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;56;MOD_RIFLE_BULLET;torso_lower
+ 13:39 K;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;56;MOD_RIFLE_BULLET;torso_lower;-553.664,2318.88,-23.8749;-403,1936,152;-86.814;110.764;crouch;stand
+ 13:41 Weapon;0;4;Chickendales;mp44_mp
+ 13:45 Spawn;0;2;axis;Bruce Dainis;mp44_mp;-568,2744,-23.875;-135
+ 13:48 Weapon;0;2;Bruce Dainis;mp44_mp
+ 13:49 Weapon;0;2;Bruce Dainis;mp44_mp
+ 13:51 K;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;105;MOD_HEAD_SHOT;head;-837.343,1848.59,96.125;-718,1985,144;37.2162;-127.798;stand;crouch
+ 13:51 D;0;5;allies;Damndest Nob Talent;0;4;axis;Chickendales;mp44_mp;61;MOD_PISTOL_BULLET;torso_upper
+ 13:51 K;0;5;allies;Damndest Nob Talent;0;4;axis;Chickendales;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower;-892.681,1982.23,-7.875;-1045,2035,-7;15.238;-20.2863;crouch;crouch
+ 13:53 Spawn;0;2;axis;Bruce Dainis;mp44_mp;-184,1896,-7.87496;-135
+ 13:55 Spawn;0;5;allies;Damndest Nob Talent;thompson_mp;-663.905,440.078,3.92032;-135
+ 13:56 Weapon;0;4;Chickendales;mp44_mp
+ 13:59 K;0;4;axis;Chickendales;0;3;allies;A Figment of Your Imagination;bar_mp;105;MOD_HEAD_SHOT;head;-830.321,1873.16,104.125;-781,1970,144;67.901;-123.316;crouch;crouch
+ 14:00 Rank;0;3;allies;A Figment of Your Imagination;2
+ 14:01 Item;0;3;A Figment of Your Imagination;item_health
+ 14:01 Item;0;3;A Figment of Your Imagination;item_health
+ 14:02 Spawn;0;4;axis;Chickendales;mp44_mp;-512,2688,-23.875;-135
+ 14:02 D;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;62;MOD_RIFLE_BULLET;torso_upper
+ 14:02 K;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;62;MOD_RIFLE_BULLET;torso_upper;-711.314,1906.72,32.125;-813,1805,96;138.246;46.7413;stand;crouch
+ 14:05 Spawn;0;2;axis;Bruce Dainis;mp44_mp;844,3480,-23.875;90
+ 14:07 Weapon;0;3;A Figment of Your Imagination;mp44_mp
+ 14:07 Weapon;0;5;Damndest Nob Talent;thompson_mp
+ 14:11 Weapon;0;3;A Figment of Your Imagination;mp44_mp
+ 14:13 D;0;4;axis;Chickendales;0;3;allies;A Figment of Your Imagination;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower
+ 14:13 D;0;3;allies;A Figment of Your Imagination;0;4;axis;Chickendales;mp44_mp;34;MOD_PISTOL_BULLET;left_leg_lower
+ 14:13 K;0;4;axis;Chickendales;0;3;allies;A Figment of Your Imagination;mp44_mp;102;MOD_HEAD_SHOT;head;-541.164,2128.82,-23.8749;-812,1825,96;-133.676;49.6033;crouch;crouch
+ 14:15 Weapon;0;5;Damndest Nob Talent;thompson_mp
+ 14:16 Spawn;0;4;axis;Chickendales;mp44_mp;216,2088,-23.875;135
+ 14:18 Weapon;0;4;Chickendales;mp44_mp
+ 14:19 Shock;0;5;allies;Damndest Nob Talent;stielhandgranate_mp;4;MOD_GRENADE_SPLASH;none
+ 14:19 D;0;5;allies;Damndest Nob Talent;0;2;axis;Bruce Dainis;stielhandgranate_mp;91;MOD_GRENADE_SPLASH;none
+ 14:19 Item;0;5;Damndest Nob Talent;item_health
+ 14:20 Weapon;0;2;Bruce Dainis;mp44_mp
+ 14:21 K;0;5;allies;Damndest Nob Talent;0;2;axis;Bruce Dainis;mp44_mp;34;MOD_PISTOL_BULLET;right_leg_lower;-821.049,2133.99,-7.875;-700,2036,-7;136.423;143.113;stand;stand
+ 14:24 Spawn;0;5;allies;Damndest Nob Talent;thompson_mp;-663.905,440.078,3.92032;-135
+ 14:28 Weapon;0;2;Bruce Dainis;mp44_mp
+ 14:30 D;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower
+ 14:30 D;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;mp44_mp;34;MOD_PISTOL_BULLET;right_arm_lower
+ 14:31 K;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower;-916.093,2025.86,144.125;-632,1945,144;-17.1826;164.41;crouch;crouch
+ 14:33 Weapon;0;3;A Figment of Your Imagination;mp44_mp
+ 14:33 Spawn;0;2;axis;Bruce Dainis;mp44_mp;-184,1896,-7.87496;-135
+ 14:35 Item;0;3;A Figment of Your Imagination;item_health
+ 14:36 Weapon;0;3;A Figment of Your Imagination;mp44_mp
+ 14:37 D;0;4;axis;Chickendales;0;3;allies;A Figment of Your Imagination;mp44_mp;40;MOD_PISTOL_BULLET;right_leg_upper
+ 14:37 D;0;4;axis;Chickendales;0;3;allies;A Figment of Your Imagination;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower
+ 14:38 D;0;3;allies;A Figment of Your Imagination;0;4;axis;Chickendales;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower
+ 14:38 K;0;4;axis;Chickendales;0;3;allies;A Figment of Your Imagination;mp44_mp;102;MOD_HEAD_SHOT;head;-815.626,1805.02,96.125;-770,1974,144;76.701;-103.107;crouch;crouch
+ 14:40 D;0;5;allies;Damndest Nob Talent;0;2;axis;Bruce Dainis;mp44_mp;61;MOD_PISTOL_BULLET;torso_upper
+ 14:40 K;0;5;allies;Damndest Nob Talent;0;2;axis;Bruce Dainis;mp44_mp;40;MOD_PISTOL_BULLET;left_arm_upper;-710.788,2129.55,-7.875;-827,2070,-7;-128.375;27.6581;crouch;stand
+ 14:40 Spawn;0;4;axis;Chickendales;mp44_mp;-992.012,2328.01,-22.4743;45
+ 14:40 Item;0;3;A Figment of Your Imagination;item_health
+ 14:42 Spawn;0;5;allies;Damndest Nob Talent;thompson_mp;1176,1296,-7.875;90
+ 14:43 D;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower
+ 14:43 Item;0;2;Bruce Dainis;item_health
+ 14:43 D;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;mp44_mp;40;MOD_PISTOL_BULLET;left_arm_upper
+ 14:43 K;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;mp44_mp;40;MOD_PISTOL_BULLET;left_arm_upper;-715.255,2143.97,-7.875;-806,1795,96;-106.578;72.8943;stand;crouch
+ 14:48 Spawn;0;2;axis;Bruce Dainis;mp44_mp;-512,2688,-23.875;-135
+ 14:49 Weapon;0;3;A Figment of Your Imagination;mp44_mp
+ 14:51 K;0;3;allies;A Figment of Your Imagination;0;4;axis;Chickendales;mp44_mp;102;MOD_HEAD_SHOT;head;-810.354,1801.29,96.125;-548,2159,-23;54.1681;-126.931;crouch;crouch
+ 14:51 D;0;4;axis;Chickendales;0;1;allies;King;m1garand_mp;56;MOD_RIFLE_BULLET;torso_lower
+ 14:51 Item;0;4;Chickendales;item_health
+ 14:51 D;0;4;axis;Chickendales;0;1;allies;King;m1garand_mp;56;MOD_RIFLE_BULLET;torso_lower
+ 14:52 K;0;4;axis;Chickendales;0;1;allies;King;m1garand_mp;35;MOD_RIFLE_BULLET;right_arm_lower;-550.093,2119.49,-23.8749;-440,2322,-31;-127.26;-120.454;crouch;stand
+ 14:57 Spawn;0;4;axis;Chickendales;mp44_mp;-568,2744,-23.875;-135
+ 15:00 D;0;1;allies;King;0;2;axis;Bruce Dainis;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower
+ 15:00 K;0;1;allies;King;0;2;axis;Bruce Dainis;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower;-303.483,2549.58,-23.8749;-471,2356,-23;-128.216;47.9718;stand;stand
+ 15:01 Spawn;0;3;allies;A Figment of Your Imagination;bar_mp;976.077,-791.959,-4.50126;-180
+ 15:04 Weapon;0;2;Bruce Dainis;mp44_mp
+ 15:04 Spawn;0;1;allies;King;springfield_mp;976.016,-863.939,-5.89044;-180
+ 15:05 Weapon;0;2;Bruce Dainis;mp44_mp
+ 15:08 Use;0;2;axis;Bruce Dainis;1;all;mg42_turret_mp;1;-515.707,1938.33,144.125;-62.7704
+ 15:11 Weapon;0;4;Chickendales;mp44_mp
+ 15:14 D;0;3;allies;A Figment of Your Imagination;0;2;axis;Bruce Dainis;mg42_bipod_stand_mp;24;MOD_RIFLE_BULLET;left_foot
+ 15:14 D;0;3;allies;A Figment of Your Imagination;0;2;axis;Bruce Dainis;mg42_bipod_stand_mp;24;MOD_RIFLE_BULLET;left_foot
+ 15:25 sayteam;0;1;King;QUICKMESSAGE_FOLLOW_ME
+ 15:31 D;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;62;MOD_RIFLE_BULLET;torso_upper
+ 15:32 D;0;3;allies;A Figment of Your Imagination;0;2;axis;Bruce Dainis;mg42_bipod_stand_mp;36;MOD_RIFLE_BULLET;right_leg_upper
+ 15:33 D;0;5;allies;Damndest Nob Talent;0;2;axis;Bruce Dainis;mg42_bipod_stand_mp;24;MOD_RIFLE_BULLET;right_hand
+ 15:33 D;0;5;allies;Damndest Nob Talent;0;2;axis;Bruce Dainis;mg42_bipod_stand_mp;48;MOD_RIFLE_BULLET;torso_lower
+ 15:36 D;0;2;axis;Bruce Dainis;0;5;allies;Damndest Nob Talent;thompson_mp;30;MOD_PISTOL_BULLET;left_leg_upper
+ 15:36 K;0;2;axis;Bruce Dainis;0;5;allies;Damndest Nob Talent;thompson_mp;25;MOD_PISTOL_BULLET;right_arm_lower;-524.44,1936.05,144.125;-507,1827,156;302.503;104.073;stand;crouch
+ 15:36 Use;0;2;axis;Bruce Dainis;1;all;mg42_turret_mp;0;-510.213,1919.18,145.125;-51.6797
+ 15:39 Spawn;0;2;axis;Bruce Dainis;mp44_mp;-512,2688,-23.875;-135
+ 15:51 D;0;2;axis;Bruce Dainis;0;5;allies;Damndest Nob Talent;thompson_mp;30;MOD_PISTOL_BULLET;left_arm_upper
+ 15:51 D;0;2;axis;Bruce Dainis;0;5;allies;Damndest Nob Talent;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower
+ 15:53 Item;0;5;Damndest Nob Talent;item_health
+ 15:59 J;0;6;Doin it for the Kids
+ 15:59 Spec;0;6;Doin it for the Kids
+ 16:05 Item;0;5;Damndest Nob Talent;item_health
+ 16:06 D;0;4;axis;Chickendales;0;3;allies;A Figment of Your Imagination;bar_mp;62;MOD_RIFLE_BULLET;torso_upper
+ 16:06 K;0;4;axis;Chickendales;0;3;allies;A Figment of Your Imagination;bar_mp;56;MOD_RIFLE_BULLET;torso_lower;-1083.26,1530.13,-13.6227;-911,1745,-15;54.9756;-127.848;crouch;prone
+ 16:08 Spawn;0;4;axis;Chickendales;mp44_mp;216,2088,-23.875;135
+ 16:09 Item;0;3;A Figment of Your Imagination;item_health
+ 16:11 Weapon;0;2;Bruce Dainis;panzerfaust_mp
+ 16:11 D;0;1;allies;King;0;4;axis;Chickendales;mp44_mp;40;MOD_PISTOL_BULLET;left_leg_upper
+ 16:12 Item;0;3;A Figment of Your Imagination;item_health
+ 16:13 Item;0;2;Bruce Dainis;item_health
+ 16:14 Item;0;3;A Figment of Your Imagination;item_health
+ 16:17 Shock;0;3;allies;A Figment of Your Imagination;panzerfaust_mp;3;MOD_PROJECTILE_SPLASH;none
+ 16:17 D;0;3;allies;A Figment of Your Imagination;0;2;axis;Bruce Dainis;panzerfaust_mp;82;MOD_PROJECTILE_SPLASH;none
+ 16:21 K;0;3;allies;A Figment of Your Imagination;0;2;axis;Bruce Dainis;mp44_mp;40;MOD_PISTOL_BULLET;right_leg_upper;-696.118,2133.85,-7.875;-803,1798,96;-108.567;73.0371;crouch;stand
+ 16:23 Item;0;2;Bruce Dainis;item_health
+ 16:24 D;0;2;axis;Bruce Dainis;0;5;allies;Damndest Nob Talent;thompson_mp;30;MOD_PISTOL_BULLET;left_leg_upper
+ 16:24 D;0;2;axis;Bruce Dainis;0;5;allies;Damndest Nob Talent;thompson_mp;30;MOD_PISTOL_BULLET;left_leg_upper
+ 16:24 K;0;2;axis;Bruce Dainis;0;5;allies;Damndest Nob Talent;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower;-701.148,1977.97,-7.875;-580,1849,-7;-116.06;129.293;stand;crouch
+ 16:25 D;0;1;allies;King;0;4;axis;Chickendales;mp44_mp;34;MOD_PISTOL_BULLET;left_leg_lower
+ 16:26 Spawn;0;2;axis;Bruce Dainis;mp44_mp;216,2088,-23.875;135
+ 16:27 Item;0;5;Damndest Nob Talent;item_health
+ 16:29 K;0;1;allies;King;0;4;axis;Chickendales;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower;1360.3,3584.02,-23.99;1445,2970,-23;-85.7208;96.9379;stand;stand
+ 16:35 Spawn;0;3;allies;A Figment of Your Imagination;bar_mp;-1176.01,1560.01,-13.9576;45
+ 16:38 Spawn;0;1;allies;King;thompson_mp;-1304,1680.01,-15.7549;45
+ 16:44 Weapon;0;3;A Figment of Your Imagination;bar_mp
+ 16:46 Shock;0;5;allies;Damndest Nob Talent;stielhandgranate_mp;2;MOD_GRENADE_SPLASH;none
+ 16:46 D;0;5;allies;Damndest Nob Talent;0;2;axis;Bruce Dainis;stielhandgranate_mp;39;MOD_GRENADE_SPLASH;none
+ 16:47 Weapon;0;2;Bruce Dainis;mp44_mp
+ 16:50 D;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;56;MOD_RIFLE_BULLET;torso_lower
+ 16:50 K;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;56;MOD_RIFLE_BULLET;torso_lower;-791.211,2001.76,144.125;-810,1800,96;89.6869;83.0347;stand;crouch
+ 16:52 K;0;5;allies;Damndest Nob Talent;0;0;axis;Luda-STATS 2.0!!!;mp40_mp;72;MOD_HEAD_SHOT;head;-798.264,2271.84,144.125;-48,2244,-23;-1.81274;177.742;stand;stand
+ 16:53 Spawn;0;2;axis;Bruce Dainis;mp44_mp;844,3480,-23.875;90
+ 16:58 Spawn;0;5;allies;Damndest Nob Talent;thompson_mp;1120,432,-7.87498;-45
+ 17:01 D;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;28;MOD_RIFLE_BULLET;right_foot
+ 17:01 D;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;62;MOD_RIFLE_BULLET;torso_upper
+ 17:01 K;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;42;MOD_RIFLE_BULLET;right_leg_upper;-194.749,2473.05,-31.8749;-719,2167,144;-143.317;30.564;stand;stand
+ 17:03 D;0;3;allies;A Figment of Your Imagination;0;0;axis;Luda-STATS 2.0!!!;mp40_mp;38;MOD_PISTOL_BULLET;torso_lower
+ 17:04 Spawn;0;2;axis;Bruce Dainis;mp44_mp;-568,2744,-23.875;-135
+ 17:04 Spawn;0;6;allies;Doin it for the Kids;thompson_mp;1256,504,160.125;135
+ 17:05 Item;0;3;A Figment of Your Imagination;item_health
+ 17:08 D;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;62;MOD_RIFLE_BULLET;torso_upper
+ 17:08 K;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;105;MOD_RIFLE_BULLET;neck;-817.441,2566.33,-23.8749;-741,2343,130;-76.9373;108.995;stand;stand
+ 17:09 Item;0;3;A Figment of Your Imagination;item_health
+ 17:11 Shock;0;3;allies;A Figment of Your Imagination;stielhandgranate_mp;3;MOD_GRENADE_SPLASH;none
+ 17:11 D;0;3;allies;A Figment of Your Imagination;0;2;axis;Bruce Dainis;stielhandgranate_mp;66;MOD_GRENADE_SPLASH;none
+ 17:12 Spawn;0;2;axis;Bruce Dainis;mp44_mp;-512,2688,-23.875;-135
+ 17:14 K;0;3;allies;A Figment of Your Imagination;0;2;axis;Bruce Dainis;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower;-597.519,2594.82,-23.8749;-642,2633,-23;-84.1553;-29.8169;stand;stand
+ 17:15 D;0;0;axis;Luda-STATS 2.0!!!;0;1;allies;King;thompson_mp;75;MOD_PISTOL_BULLET;head
+ 17:16 K;0;0;axis;Luda-STATS 2.0!!!;0;1;allies;King;thompson_mp;44;MOD_PISTOL_BULLET;torso_upper;-48.8741,2241.74,-23.8749;812,2562,-23;158.681;-159.829;stand;stand
+ 17:16 Weapon;0;4;Chickendales;mp44_mp
+ 17:26 Spawn;0;3;allies;A Figment of Your Imagination;bar_mp;1000,1216,-23.875;0
+ 17:28 D;0;1;allies;King;0;4;axis;Chickendales;mp44_mp;34;MOD_PISTOL_BULLET;right_leg_lower
+ 17:29 Spawn;0;0;axis;Luda-STATS 2.0!!!;mp40_mp;-992.012,2328.01,-22.4743;45
+ 17:29 Weapon;0;5;Damndest Nob Talent;thompson_mp
+ 17:31 D;0;1;allies;King;0;4;axis;Chickendales;mp44_mp;27;MOD_PISTOL_BULLET;left_hand
+ 17:33 K;0;1;allies;King;0;4;axis;Chickendales;mp44_mp;40;MOD_PISTOL_BULLET;left_arm_upper;104.701,2688.2,-31.8749;-711,2177,144;-149.211;31.9263;stand;crouch
+ 17:39 Spawn;0;1;allies;King;thompson_mp;1872,936,-23.875;-180
+ 17:42 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;1;-537.75,1922.16,144.125;-28.2953
+ 17:49 Shock;0;3;allies;A Figment of Your Imagination;stielhandgranate_mp;1;MOD_GRENADE_SPLASH;none
+ 17:49 D;0;3;allies;A Figment of Your Imagination;0;2;axis;Bruce Dainis;stielhandgranate_mp;8;MOD_GRENADE_SPLASH;none
+ 17:49 Shock;0;5;allies;Damndest Nob Talent;stielhandgranate_mp;1;MOD_GRENADE_SPLASH;none
+ 17:49 D;0;5;allies;Damndest Nob Talent;0;2;axis;Bruce Dainis;stielhandgranate_mp;7;MOD_GRENADE_SPLASH;none
+ 17:49 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;0;-566.124,1930.3,144.424;-44.6649
+ 17:53 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;1;-525.564,1935.26,144.125;-50.4932
+ 17:57 sayteam;0;1;King;QUICKMESSAGE_FOLLOW_ME
+ 18:01 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;0;-548.369,1944.93,144.125;-71.3287
+ 18:03 Item;0;3;A Figment of Your Imagination;item_health
+ 18:03 K;0;3;allies;A Figment of Your Imagination;0;2;axis;Bruce Dainis;mp44_mp;102;MOD_HEAD_SHOT;head;-718.825,2101.97,-7.875;-804,1796,96;-102.129;73.3063;crouch;stand
+ 18:04 sayteam;0;1;King;QUICKMESSAGE_ENEMY_DOWN
+ 18:04 Item;0;5;Damndest Nob Talent;item_health
+ 18:07 D;0;5;allies;Damndest Nob Talent;0;2;axis;Bruce Dainis;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower
+ 18:07 K;0;5;allies;Damndest Nob Talent;0;2;axis;Bruce Dainis;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower;-694.667,2139.66,-7.875;-804,1796,96;-106.837;73.6853;crouch;stand
+ 18:07 Weapon;0;4;Chickendales;mp44_mp
+ 18:09 D;0;1;allies;King;0;4;axis;Chickendales;mp44_mp;34;MOD_PISTOL_BULLET;right_arm_lower
+ 18:09 Spawn;0;5;allies;Damndest Nob Talent;thompson_mp;1120,432,-7.87498;-45
+ 18:10 D;0;1;allies;King;0;4;axis;Chickendales;mp44_mp;61;MOD_PISTOL_BULLET;torso_upper
+ 18:13 K;0;1;allies;King;0;4;axis;Chickendales;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower;-54.6753,2764.42,-23.875;-711,2184,144;-137.499;39.3036;stand;crouch
+ 18:17 Spawn;0;1;allies;King;mg30cal_mp;1256,504,160.125;135
+ 18:18 D;0;5;allies;Damndest Nob Talent;0;5;allies;Damndest Nob Talent;thompson_mp;22;MOD_PISTOL_BULLET;torso_upper
+ 18:20 Spawn;0;3;allies;A Figment of Your Imagination;bar_mp;1008,504,160.125;45
+ 18:21 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;1;-517.071,1938.4,144.125;-60.7983
+ 18:21 D;0;1;allies;King;0;1;allies;King;thompson_mp;37.5;MOD_PISTOL_BULLET;head
+ 18:21 Shock;0;4;axis;Chickendales;fraggrenade_mp;3;MOD_GRENADE_SPLASH;none
+ 18:21 D;0;4;axis;Chickendales;0;5;allies;Damndest Nob Talent;fraggrenade_mp;76;MOD_GRENADE_SPLASH;none
+ 18:25 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;0;-519.608,1932.9,144.889;-61.7102
+ 18:27 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;1;-512.986,1939.94,144.125;-68.5767
+ 18:33 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;0;-507.415,1950.93,144.125;-70.3729
+ 18:35 Item;0;4;Chickendales;item_health
+ 18:45 K;0;4;axis;Chickendales;0;3;allies;A Figment of Your Imagination;fraggrenade_mp;72;MOD_GRENADE_SPLASH;none;-638.552,1935.65,144.125;-411.768,1676.11,0.125;-62.5891;172.293;crouch;crouch
+ 18:45 Shock;0;4;axis;Chickendales;fraggrenade_mp;3;MOD_GRENADE_SPLASH;none
+ 18:46 Rank;0;3;allies;A Figment of Your Imagination;3
+ 18:48 Spawn;0;4;axis;Chickendales;mp44_mp;-568,2744,-23.875;-135
+ 18:54 Weapon;0;5;Damndest Nob Talent;thompson_mp
+ 18:54 Weapon;0;5;Damndest Nob Talent;thompson_mp
+ 18:55 D;0;4;axis;Chickendales;0;5;allies;Damndest Nob Talent;thompson_mp;25;MOD_PISTOL_BULLET;right_arm_lower
+ 18:55 K;0;4;axis;Chickendales;0;5;allies;Damndest Nob Talent;thompson_mp;75;MOD_HEAD_SHOT;head;-801.411,1799.98,96.125;-664,1975,-7;52.1906;-129.655;crouch;crouch
+ 18:55 Weapon;0;2;Bruce Dainis;mp44_mp
+ 18:57 Weapon;0;3;A Figment of Your Imagination;bar_mp
+ 18:57 Spawn;0;4;axis;Chickendales;mp44_mp;-992.012,2328.01,-22.4743;45
+ 18:59 Weapon;0;4;Chickendales;stielhandgranate_mp
+ 19:09 Shock;0;5;allies;Damndest Nob Talent;stielhandgranate_mp;2;MOD_GRENADE_SPLASH;none
+ 19:09 D;0;5;allies;Damndest Nob Talent;0;4;axis;Chickendales;stielhandgranate_mp;41;MOD_GRENADE_SPLASH;none
+ 19:10 D;0;4;axis;Chickendales;0;5;allies;Damndest Nob Talent;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower
+ 19:12 K;0;5;allies;Damndest Nob Talent;0;4;axis;Chickendales;stielhandgranate_mp;37;MOD_GRENADE_SPLASH;none;-708.766,2046.87,-7.875;-473.323,2213.27,-31.8749;135.055;-134.193;stand;stand
+ 19:12 Shock;0;5;allies;Damndest Nob Talent;stielhandgranate_mp;2;MOD_GRENADE_SPLASH;none
+ 19:13 Item;0;4;Chickendales;item_health
+ 19:14 Weapon;0;4;Chickendales;mp44_mp
+ 19:15 D;0;4;axis;Chickendales;0;4;axis;Chickendales;mp44_mp;17;MOD_PISTOL_BULLET;right_arm_lower
+ 19:15 Spawn;0;5;allies;Damndest Nob Talent;thompson_mp;1008,504,160.125;45
+ 19:15 Item;0;4;Chickendales;item_health
+ 19:20 Item;0;2;Bruce Dainis;item_health
+ 19:20 D;0;4;axis;Chickendales;0;3;allies;A Figment of Your Imagination;bar_mp;62;MOD_RIFLE_BULLET;torso_upper
+ 19:21 K;0;4;axis;Chickendales;0;3;allies;A Figment of Your Imagination;bar_mp;62;MOD_RIFLE_BULLET;torso_upper;-806,1795.39,96.125;-693,2142,-7;63.1165;-108.435;stand;crouch
+ 19:23 Spawn;0;4;axis;Chickendales;mp44_mp;-512,2688,-23.875;-135
+ 19:32 Shock;0;3;allies;A Figment of Your Imagination;stielhandgranate_mp;1;MOD_GRENADE_SPLASH;none
+ 19:32 D;0;3;allies;A Figment of Your Imagination;0;4;axis;Chickendales;stielhandgranate_mp;12;MOD_GRENADE_SPLASH;none
+ 19:32 K;0;5;allies;Damndest Nob Talent;0;4;axis;Chickendales;stielhandgranate_mp;114;MOD_GRENADE_SPLASH;none;-951.801,1986.66,-7.875;-397.934,2151.07,-31.8749;37.6721;-160.192;crouch;stand
+ 19:32 Shock;0;5;allies;Damndest Nob Talent;stielhandgranate_mp;4;MOD_GRENADE_SPLASH;none
+ 19:32 Item;0;3;A Figment of Your Imagination;item_health
+ 19:33 Rank;0;4;axis;Chickendales;1
+ 19:36 Spawn;0;5;allies;Damndest Nob Talent;thompson_mp;1016.88,512.876,160.125;45
+ 19:46 D;0;3;allies;A Figment of Your Imagination;0;4;axis;Chickendales;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower
+ 19:47 D;0;3;allies;A Figment of Your Imagination;0;4;axis;Chickendales;mp44_mp;40;MOD_PISTOL_BULLET;left_leg_upper
+ 19:47 K;0;3;allies;A Figment of Your Imagination;0;4;axis;Chickendales;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower;-757.127,2090.88,-7.875;-562,1866,-7;-49.7845;131.281;crouch;crouch
+ 19:53 Spawn;0;3;allies;A Figment of Your Imagination;bar_mp;1008,504,160.125;45
+ 20:04 Shock;0;0;axis;Luda-STATS 2.0!!!;fraggrenade_mp;1;MOD_GRENADE_SPLASH;none
+ 20:04 D;0;0;axis;Luda-STATS 2.0!!!;0;5;allies;Damndest Nob Talent;fraggrenade_mp;23;MOD_GRENADE_SPLASH;none
+ 20:04 D;0;0;axis;Luda-STATS 2.0!!!;0;5;allies;Damndest Nob Talent;thompson_mp;25;MOD_PISTOL_BULLET;right_arm_lower
+ 20:04 D;0;0;axis;Luda-STATS 2.0!!!;0;5;allies;Damndest Nob Talent;thompson_mp;25;MOD_PISTOL_BULLET;left_arm_lower
+ 20:04 K;0;0;axis;Luda-STATS 2.0!!!;0;5;allies;Damndest Nob Talent;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower;-500.528,2410.86,-23.8749;-242,1862,158;35.1013;115.307;stand;stand
+ 20:08 Weapon;0;3;A Figment of Your Imagination;panzerfaust_mp
+ 20:12 D;0;2;axis;Bruce Dainis;0;5;allies;Damndest Nob Talent;thompson_mp;30;MOD_PISTOL_BULLET;left_leg_upper
+ 20:12 D;0;2;axis;Bruce Dainis;0;5;allies;Damndest Nob Talent;thompson_mp;30;MOD_PISTOL_BULLET;left_leg_upper
+ 20:12 K;0;2;axis;Bruce Dainis;0;5;allies;Damndest Nob Talent;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower;-625.992,2040.34,144.125;-685,2039,144;171.205;-20.7422;stand;crouch
+ 20:15 Spawn;0;2;axis;Bruce Dainis;mp44_mp;976.016,-863.939,-5.89044;-180
+ 20:16 Item;0;6;Doin it for the Kids;item_health
+ 20:19 D;0;4;axis;Chickendales;0;3;allies;A Figment of Your Imagination;bar_mp;42;MOD_RIFLE_BULLET;right_leg_upper
+ 20:19 D;0;4;axis;Chickendales;0;3;allies;A Figment of Your Imagination;bar_mp;56;MOD_RIFLE_BULLET;torso_lower
+ 20:20 Spawn;0;0;axis;Luda-STATS 2.0!!!;mp40_mp;976.077,-791.959,-4.50126;-180
+ 20:21 K;0;4;axis;Chickendales;0;6;allies;Doin it for the Kids;thompson_mp;30;MOD_PISTOL_BULLET;right_leg_upper;-564.264,1966.74,-7.875;-894,2159,-7;92.2302;-29.5422;crouch;stand
+ 20:21 Weapon;0;6;Doin it for the Kids;thompson_mp
+ 20:21 Item;0;6;Doin it for the Kids;item_health
+ 20:23 Item;0;6;Doin it for the Kids;item_health
+ 20:24 Spawn;0;4;axis;Chickendales;mp44_mp;976.016,-863.939,-5.89044;-180
+ 20:29 Weapon;0;4;Chickendales;panzerfaust_mp
+ 20:32 Use;0;5;allies;Damndest Nob Talent;1;all;mg42_turret_mp;1;-518.125,1938.37,144.125;-61.062
+ 20:37 Use;0;5;allies;Damndest Nob Talent;1;all;mg42_turret_mp;0;-530.883,1959.01,144.194;-21.9397
+ 20:39 Shock;0;5;allies;Damndest Nob Talent;stielhandgranate_mp;2;MOD_GRENADE_SPLASH;none
+ 20:39 D;0;5;allies;Damndest Nob Talent;0;2;axis;Bruce Dainis;stielhandgranate_mp;40;MOD_GRENADE_SPLASH;none
+ 20:42 Shock;0;1;allies;King;panzerfaust_mp;1;MOD_PROJECTILE_SPLASH;none
+ 20:42 D;0;1;allies;King;0;4;axis;Chickendales;panzerfaust_mp;17;MOD_PROJECTILE_SPLASH;none
+ 20:42 Shock;0;2;axis;Bruce Dainis;panzerfaust_mp;1;MOD_PROJECTILE_SPLASH;none
+ 20:42 D;0;2;axis;Bruce Dainis;0;2;axis;Bruce Dainis;panzerfaust_mp;11;MOD_PROJECTILE_SPLASH;none
+ 20:44 Shock;0;3;allies;A Figment of Your Imagination;stielhandgranate_mp;3;MOD_GRENADE_SPLASH;none
+ 20:44 D;0;3;allies;A Figment of Your Imagination;0;2;axis;Bruce Dainis;stielhandgranate_mp;51;MOD_GRENADE_SPLASH;none
+ 20:44 Shock;0;5;allies;Damndest Nob Talent;stielhandgranate_mp;2;MOD_GRENADE_SPLASH;none
+ 20:44 D;0;5;allies;Damndest Nob Talent;0;2;axis;Bruce Dainis;stielhandgranate_mp;39;MOD_GRENADE_SPLASH;none
+ 20:45 D;0;4;axis;Chickendales;0;1;allies;King;mg30cal_mp;42;MOD_RIFLE_BULLET;left_leg_upper
+ 20:45 K;0;4;axis;Chickendales;0;1;allies;King;mg30cal_mp;56;MOD_RIFLE_BULLET;torso_lower;-159.574,532,-7.87491;-246,1836,151;93.9825;-85.8417;stand;prone
+ 20:48 Spawn;0;4;axis;Chickendales;mp44_mp;976.077,-791.959,-4.50126;-180
+ 20:51 Item;0;3;A Figment of Your Imagination;item_health
+ 20:52 Item;0;1;King;item_health
+ 20:53 Weapon;0;4;Chickendales;panzerfaust_mp
+ 20:56 D;0;3;allies;A Figment of Your Imagination;0;2;axis;Bruce Dainis;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower
+ 20:56 K;0;3;allies;A Figment of Your Imagination;0;2;axis;Bruce Dainis;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower;-808.152,1797.54,96.125;-697,2142,-7;72.0099;-108.369;crouch;crouch
+ 20:59 D;0;2;axis;Bruce Dainis;0;6;allies;Doin it for the Kids;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower
+ 20:59 D;0;2;axis;Bruce Dainis;0;6;allies;Doin it for the Kids;thompson_mp;44;MOD_PISTOL_BULLET;torso_upper
+ 20:59 D;0;6;allies;Doin it for the Kids;0;2;axis;Bruce Dainis;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower
+ 20:59 K;0;2;axis;Bruce Dainis;0;6;allies;Doin it for the Kids;thompson_mp;30;MOD_PISTOL_BULLET;left_arm_upper;-681.128,1928.8,8.125;-759,1851,95;-133.715;40.5725;stand;stand
+ 21:00 Item;0;6;Doin it for the Kids;item_health
+ 21:01 Spawn;0;3;allies;A Figment of Your Imagination;bar_mp;-632,1712,0.125012;-45
+ 21:02 Item;0;6;Doin it for the Kids;item_health
+ 21:02 Shock;0;1;allies;King;panzerfaust_mp;3;MOD_PROJECTILE_SPLASH;none
+ 21:02 D;0;1;allies;King;0;4;axis;Chickendales;panzerfaust_mp;62;MOD_PROJECTILE_SPLASH;none
+ 21:02 Spawn;0;2;axis;Bruce Dainis;mp44_mp;976.077,-791.959,-4.50126;-180
+ 21:04 D;0;0;axis;Luda-STATS 2.0!!!;0;3;allies;A Figment of Your Imagination;bar_mp;56;MOD_RIFLE_BULLET;torso_lower
+ 21:06 D;0;0;axis;Luda-STATS 2.0!!!;0;3;allies;A Figment of Your Imagination;bar_mp;42;MOD_RIFLE_BULLET;left_leg_upper
+ 21:14 Shock;0;3;allies;A Figment of Your Imagination;stielhandgranate_mp;1;MOD_GRENADE_SPLASH;none
+ 21:14 D;0;3;allies;A Figment of Your Imagination;0;4;axis;Chickendales;stielhandgranate_mp;8;MOD_GRENADE_SPLASH;none
+ 21:17 D;0;3;allies;A Figment of Your Imagination;0;4;axis;Chickendales;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower
+ 21:17 D;0;3;allies;A Figment of Your Imagination;0;4;axis;Chickendales;mp44_mp;27;MOD_PISTOL_BULLET;left_hand
+ 21:18 D;0;4;axis;Chickendales;0;3;allies;A Figment of Your Imagination;bar_mp;62;MOD_RIFLE_BULLET;torso_upper
+ 21:19 Use;0;5;allies;Damndest Nob Talent;1;all;mg42_turret_mp;1;-532.569,1932.31,144.125;-43.4235
+ 21:19 K;0;4;axis;Chickendales;0;3;allies;A Figment of Your Imagination;bar_mp;42;MOD_RIFLE_BULLET;left_leg_upper;-190.694,1076.69,-7.87491;-98,1293,0;67.0276;-116.938;stand;crouch
+ 21:20 K;0;3;allies;A Figment of Your Imagination;0;0;axis;Luda-STATS 2.0!!!;mp40_mp;28;MOD_PISTOL_BULLET;right_leg_upper;-53.3493,1270.5,0.125082;243,712,0;-10.9644;118.954;crouch;stand
+ 21:21 Spawn;0;4;axis;Chickendales;mp44_mp;1120,432,-7.87498;-45
+ 21:21 K;0;0;axis;Luda-STATS 2.0!!!;0;5;allies;Damndest Nob Talent;mg42_bipod_stand_mp;30;MOD_RIFLE_BULLET;right_arm_lower;243.701,712.875,0.124996;-519.172,1937.83,144.125;118.954;302.5;stand;stand
+ 21:22 Rank;0;5;allies;Damndest Nob Talent;1
+ 21:24 Use;0;5;allies;Damndest Nob Talent;1;all;mg42_turret_mp;0;-547.31,1944.39,144.656;-91.7468
+ 21:27 K;0;1;allies;King;0;2;axis;Bruce Dainis;mp44_mp;40;MOD_PISTOL_BULLET;right_leg_upper;-119.519,1881.17,160.125;145,1928,160;171.502;-167.761;stand;stand
+ 21:31 Spawn;0;0;axis;Luda-STATS 2.0!!!;mp40_mp;-184,1896,-7.87496;-135
+ 21:31 Spawn;0;1;allies;King;springfield_mp;1080,3488,-23.875;90
+ 21:32 Spawn;0;3;allies;A Figment of Your Imagination;bar_mp;1080,3488,-23.875;90
+ 21:53 Weapon;0;4;Chickendales;mp44_mp
+ 21:53 Weapon;0;4;Chickendales;mp44_mp
+ 21:54 D;0;2;axis;Bruce Dainis;0;5;allies;Damndest Nob Talent;thompson_mp;30;MOD_PISTOL_BULLET;right_leg_upper
+ 21:55 K;0;2;axis;Bruce Dainis;0;5;allies;Damndest Nob Talent;thompson_mp;75;MOD_HEAD_SHOT;head;-781.449,2159.45,144.125;-908,1897,144;-78.0469;59.4635;stand;crouch
+ 21:58 D;0;4;axis;Chickendales;0;5;allies;Damndest Nob Talent;thompson_mp;30;MOD_PISTOL_BULLET;left_arm_upper
+ 21:58 Spawn;0;2;axis;Bruce Dainis;mp44_mp;-1304,1680.01,-15.7549;45
+ 21:58 D;0;4;axis;Chickendales;0;5;allies;Damndest Nob Talent;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower
+ 21:59 K;0;4;axis;Chickendales;0;5;allies;Damndest Nob Talent;thompson_mp;30;MOD_PISTOL_BULLET;right_leg_upper;-792.365,1999.56,144.125;-908,1897,144;-126.7;47.9663;crouch;crouch
+ 22:02 Weapon;0;5;Damndest Nob Talent;mp44_mp
+ 22:02 Weapon;0;5;Damndest Nob Talent;mp44_mp
+ 22:02 Spawn;0;4;axis;Chickendales;mp44_mp;-992.012,2328.01,-22.4743;45
+ 22:03 Item;0;5;Damndest Nob Talent;item_health
+ 22:09 D;0;4;axis;Chickendales;0;3;allies;A Figment of Your Imagination;bar_mp;42;MOD_RIFLE_BULLET;right_leg_upper
+ 22:09 Weapon;0;4;Chickendales;mp44_mp
+ 22:10 K;0;5;allies;Damndest Nob Talent;0;4;axis;Chickendales;stielhandgranate_mp;78;MOD_GRENADE_SPLASH;none;-908,1897.39,144.125;-567.529,1869.47,-7.875;45.0165;138.582;crouch;stand
+ 22:10 Shock;0;5;allies;Damndest Nob Talent;stielhandgranate_mp;3;MOD_GRENADE_SPLASH;none
+ 22:13 Spawn;0;5;allies;Damndest Nob Talent;thompson_mp;1176,1296,-7.875;90
+ 22:18 Shock;0;1;allies;King;stielhandgranate_mp;2;MOD_GRENADE_SPLASH;none
+ 22:18 D;0;1;allies;King;0;4;axis;Chickendales;stielhandgranate_mp;30;MOD_GRENADE_SPLASH;none
+ 22:24 D;0;0;axis;Luda-STATS 2.0!!!;0;0;axis;Luda-STATS 2.0!!!;mp44_mp;30.5;MOD_PISTOL_BULLET;torso_upper
+ 22:24 K;0;0;axis;Luda-STATS 2.0!!!;0;1;allies;King;fraggrenade_mp;83;MOD_GRENADE_SPLASH;none;-730.975,2076.33,-7.875;-305.863,2175.89,-31.875;88.9288;-156.132;stand;stand
+ 22:24 Shock;0;0;axis;Luda-STATS 2.0!!!;fraggrenade_mp;3;MOD_GRENADE_SPLASH;none
+ 22:24 Shock;0;4;axis;Chickendales;fraggrenade_mp;1;MOD_GRENADE_SPLASH;none
+ 22:24 D;0;4;axis;Chickendales;0;1;allies;King;fraggrenade_mp;21;MOD_GRENADE_SPLASH;none
+ 22:26 Item;0;6;Doin it for the Kids;item_health
+ 22:28 Spawn;0;0;axis;Luda-STATS 2.0!!!;mp40_mp;-1176.01,1560.01,-13.9576;45
+ 22:29 Shock;0;2;axis;Bruce Dainis;fraggrenade_mp;1;MOD_GRENADE_SPLASH;none
+ 22:29 D;0;2;axis;Bruce Dainis;0;5;allies;Damndest Nob Talent;fraggrenade_mp;20;MOD_GRENADE_SPLASH;none
+ 22:30 D;0;1;allies;King;0;4;axis;Chickendales;mp44_mp;40;MOD_PISTOL_BULLET;right_leg_upper
+ 22:33 Item;0;4;Chickendales;item_health
+ 22:35 D;0;0;axis;Luda-STATS 2.0!!!;0;6;allies;Doin it for the Kids;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower
+ 22:35 D;0;0;axis;Luda-STATS 2.0!!!;0;6;allies;Doin it for the Kids;thompson_mp;25;MOD_PISTOL_BULLET;left_arm_lower
+ 22:35 D;0;0;axis;Luda-STATS 2.0!!!;0;6;allies;Doin it for the Kids;thompson_mp;20;MOD_PISTOL_BULLET;left_hand
+ 22:36 K;0;0;axis;Luda-STATS 2.0!!!;0;6;allies;Doin it for the Kids;thompson_mp;30;MOD_PISTOL_BULLET;right_arm_upper;-1186.03,1551.8,-13.9358;-1100,1568,-13;31.4648;-158.11;stand;stand
+ 22:37 K;0;4;axis;Chickendales;0;1;allies;King;colt_mp;75;MOD_HEAD_SHOT;head;-609.426,1950.19,-7.875;-822,1923,-7;64.0997;9.6405;crouch;stand
+ 22:39 Weapon;0;6;Doin it for the Kids;thompson_mp
+ 22:39 Spawn;0;4;axis;Chickendales;mp44_mp;976.016,-863.939,-5.89044;-180
+ 22:42 Shock;0;1;allies;King;fraggrenade_mp;1;MOD_GRENADE_SPLASH;none
+ 22:42 D;0;1;allies;King;0;1;allies;King;fraggrenade_mp;22;MOD_GRENADE_SPLASH;none
+ 22:42 Shock;0;6;allies;Doin it for the Kids;fraggrenade_mp;1;MOD_GRENADE_SPLASH;none
+ 22:42 D;0;6;allies;Doin it for the Kids;0;6;allies;Doin it for the Kids;fraggrenade_mp;8.5;MOD_GRENADE_SPLASH;none
+ 22:43 Item;0;6;Doin it for the Kids;item_health
+ 22:44 Weapon;0;4;Chickendales;panzerfaust_mp
+ 22:46 Weapon;0;3;A Figment of Your Imagination;bar_mp
+ 22:47 D;0;3;allies;A Figment of Your Imagination;0;3;allies;A Figment of Your Imagination;thompson_mp;22;MOD_PISTOL_BULLET;torso_upper
+ 22:51 Spawn;0;0;axis;Luda-STATS 2.0!!!;mp40_mp;976.016,-863.939,-5.89044;-180
+ 22:55 Weapon;0;5;Damndest Nob Talent;thompson_mp
+ 22:55 Item;0;1;King;item_health
+ 22:56 Weapon;0;1;King;springfield_mp
+ 23:03 Item;0;6;Doin it for the Kids;item_health
+ 23:04 D;0;2;axis;Bruce Dainis;0;5;allies;Damndest Nob Talent;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower
+ 23:04 K;0;2;axis;Bruce Dainis;0;5;allies;Damndest Nob Talent;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower;-707.298,1722.09,144.125;-550,1969,144;64.0668;-122.333;crouch;crouch
+ 23:07 Spawn;0;2;axis;Bruce Dainis;mp44_mp;976.016,-863.939,-5.89044;-180
+ 23:17 Use;0;5;allies;Damndest Nob Talent;1;all;mg42_turret_mp;1;-530.657,1932.76,144.125;-45.3406
+ 23:18 K;0;1;allies;King;0;4;axis;Chickendales;panzerfaust_mp;54;MOD_PROJECTILE_SPLASH;none;-610.893,2697.69,-23.8749;-118.442,1824.44,160.125;-80.0574;126.211;stand;stand
+ 23:18 Shock;0;1;allies;King;panzerfaust_mp;3;MOD_PROJECTILE_SPLASH;none
+ 23:18 D;0;2;axis;Bruce Dainis;0;5;allies;Damndest Nob Talent;mg42_bipod_stand_mp;48;MOD_RIFLE_BULLET;torso_lower
+ 23:19 K;0;2;axis;Bruce Dainis;0;5;allies;Damndest Nob Talent;mg42_bipod_stand_mp;53;MOD_RIFLE_BULLET;torso_upper;181.444,1088.35,0.125088;-526.577,1934.98,144.125;129.023;302.499;stand;stand
+ 23:22 Spawn;0;2;axis;Bruce Dainis;mp44_mp;1960,2304,-23.875;-135
+ 23:22 Use;0;5;allies;Damndest Nob Talent;1;all;mg42_turret_mp;0;-549.024,1958.46,144.125;-54.1077
+ 23:25 Spawn;0;1;allies;King;thompson_mp;-992.012,2328.01,-22.4743;45
+ 23:27 Weapon;0;2;Bruce Dainis;panzerfaust_mp
+ 23:28 Shock;0;5;allies;Damndest Nob Talent;stielhandgranate_mp;2;MOD_GRENADE_SPLASH;none
+ 23:28 D;0;5;allies;Damndest Nob Talent;0;4;axis;Chickendales;stielhandgranate_mp;28;MOD_GRENADE_SPLASH;none
+ 23:30 Shock;0;5;allies;Damndest Nob Talent;stielhandgranate_mp;1;MOD_GRENADE_SPLASH;none
+ 23:30 D;0;5;allies;Damndest Nob Talent;0;4;axis;Chickendales;stielhandgranate_mp;24;MOD_GRENADE_SPLASH;none
+ 23:32 D;0;5;allies;Damndest Nob Talent;0;4;axis;Chickendales;mp44_mp;34;MOD_PISTOL_BULLET;right_leg_lower
+ 23:33 K;0;5;allies;Damndest Nob Talent;0;4;axis;Chickendales;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower;-824,2298.61,144.125;-763,2107,144;-38.551;111.143;crouch;crouch
+ 23:33 D;0;4;axis;Chickendales;0;3;allies;A Figment of Your Imagination;bar_mp;62;MOD_RIFLE_BULLET;torso_upper
+ 23:34 Item;0;4;Chickendales;item_health
+ 23:34 K;0;4;axis;Chickendales;0;3;allies;A Figment of Your Imagination;bar_mp;105;MOD_HEAD_SHOT;head;-755.15,2125.67,144.125;-799,1802,96;110.231;86.413;crouch;crouch
+ 23:36 Spawn;0;5;allies;Damndest Nob Talent;thompson_mp;-184,1896,-7.87496;-135
+ 23:40 Spawn;0;4;axis;Chickendales;mp44_mp;1176,1296,-7.875;90
+ 23:46 D;0;0;axis;Luda-STATS 2.0!!!;0;6;allies;Doin it for the Kids;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower
+ 23:46 D;0;0;axis;Luda-STATS 2.0!!!;0;6;allies;Doin it for the Kids;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower
+ 23:47 K;0;0;axis;Luda-STATS 2.0!!!;0;6;allies;Doin it for the Kids;thompson_mp;20;MOD_PISTOL_BULLET;right_hand;799.125,2131.28,-23.875;821,1969,-32;32.3822;94.801;stand;stand
+ 23:47 K;0;6;allies;Doin it for the Kids;0;4;axis;Chickendales;mp44_mp;102;MOD_HEAD_SHOT;head;816.322,2025.56,-28.2961;1115,1973,-41;95.1306;167.25;stand;stand
+ 23:51 D;0;2;axis;Bruce Dainis;0;1;allies;King;thompson_mp;75;MOD_PISTOL_BULLET;head
+ 23:51 Spawn;0;6;allies;Doin it for the Kids;thompson_mp;-632,1712,0.125012;-45
+ 23:52 K;0;2;axis;Bruce Dainis;0;1;allies;King;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower;-101.149,1840.62,160.125;105,1864,160;173.32;-170.502;stand;stand
+ 23:52 Weapon;0;4;Chickendales;panzerfaust_mp
+ 23:55 Spawn;0;2;axis;Bruce Dainis;mp44_mp;1960,2304,-23.875;-135
+ 23:59 Spawn;0;0;axis;Luda-STATS 2.0!!!;mp40_mp;1192,3296,-23.875;45
+ 24:00 Weapon;0;2;Bruce Dainis;panzerfaust_mp
+ 24:00 Shock;0;6;allies;Doin it for the Kids;panzerfaust_mp;3;MOD_PROJECTILE_SPLASH;none
+ 24:00 D;0;6;allies;Doin it for the Kids;0;4;axis;Chickendales;panzerfaust_mp;83;MOD_PROJECTILE_SPLASH;none
+ 24:00 Shock;0;3;allies;A Figment of Your Imagination;panzerfaust_mp;2;MOD_PROJECTILE_SPLASH;none
+ 24:00 D;0;3;allies;A Figment of Your Imagination;0;4;axis;Chickendales;panzerfaust_mp;43;MOD_PROJECTILE_SPLASH;none
+ 24:01 K;0;6;allies;Doin it for the Kids;0;3;allies;A Figment of Your Imagination;bar_mp;28;MOD_RIFLE_BULLET;torso_lower;-762.578,1869.69,80.125;-800,1801,96;-163.883;54.5636;stand;crouch
+ 24:01 K;0;3;allies;A Figment of Your Imagination;0;3;allies;A Figment of Your Imagination;bar_mp;28;MOD_RIFLE_BULLET;torso_lower;-800,1801,96;-800,1801,96;54.5636;54.5636;crouch;crouch
+ 24:01 D;0;4;axis;Chickendales;0;3;allies;A Figment of Your Imagination;bar_mp;52;MOD_RIFLE_BULLET;head
+ 24:04 Spawn;0;6;allies;Doin it for the Kids;thompson_mp;-1304,1680.01,-15.7549;45
+ 24:04 Item;0;4;Chickendales;item_health
+ 24:05 Item;0;4;Chickendales;item_health
+ 24:08 Use;0;5;allies;Damndest Nob Talent;1;all;mg42_turret_mp;1;-525.844,1935.48,144.125;-50.4163
+ 24:10 Spawn;0;3;allies;A Figment of Your Imagination;bar_mp;-632,1712,0.125013;-45
+ 24:10 D;0;5;allies;Damndest Nob Talent;0;4;axis;Chickendales;mp44_mp;40;MOD_PISTOL_BULLET;right_leg_upper
+ 24:10 D;0;5;allies;Damndest Nob Talent;0;4;axis;Chickendales;mp44_mp;40;MOD_PISTOL_BULLET;right_leg_upper
+ 24:10 Use;0;5;allies;Damndest Nob Talent;1;all;mg42_turret_mp;0;-534.33,1933.24,144.405;-72.1252
+ 24:10 K;0;5;allies;Damndest Nob Talent;0;4;axis;Chickendales;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower;-527.01,1933.58,144.125;-909,2006,144;-69.884;-10.7281;crouch;crouch
+ 24:11 K;0;1;allies;King;0;2;axis;Bruce Dainis;panzerfaust_mp;1000;MOD_PROJECTILE;none;491.614,1727.13,175.542;583.291,1736.33,160.125;-30.7947;-177.462;stand;stand
+ 24:11 Shock;0;1;allies;King;panzerfaust_mp;4;MOD_PROJECTILE;none
+ 24:11 Shock;0;2;axis;Bruce Dainis;panzerfaust_mp;3;MOD_PROJECTILE_SPLASH;none
+ 24:11 D;0;2;axis;Bruce Dainis;0;2;axis;Bruce Dainis;panzerfaust_mp;63;MOD_PROJECTILE_SPLASH;none
+ 24:11 Weapon;0;6;Doin it for the Kids;thompson_mp
+ 24:12 Rank;0;2;axis;Bruce Dainis;2
+ 24:13 Spawn;0;5;allies;Damndest Nob Talent;thompson_mp;-632,1712,0.125012;-45
+ 24:14 Item;0;2;Bruce Dainis;item_health
+ 24:15 D;0;6;allies;Doin it for the Kids;0;4;axis;Chickendales;mp44_mp;40;MOD_PISTOL_BULLET;left_leg_upper
+ 24:15 D;0;4;axis;Chickendales;0;6;allies;Doin it for the Kids;thompson_mp;30;MOD_PISTOL_BULLET;right_leg_upper
+ 24:15 D;0;4;axis;Chickendales;0;6;allies;Doin it for the Kids;thompson_mp;30;MOD_PISTOL_BULLET;right_leg_upper
+ 24:15 D;0;6;allies;Doin it for the Kids;0;4;axis;Chickendales;mp44_mp;27;MOD_PISTOL_BULLET;right_foot
+ 24:16 D;0;4;axis;Chickendales;0;6;allies;Doin it for the Kids;thompson_mp;25;MOD_PISTOL_BULLET;left_leg_lower
+ 24:16 K;0;4;axis;Chickendales;0;6;allies;Doin it for the Kids;thompson_mp;25;MOD_PISTOL_BULLET;left_leg_lower;-976.851,2066.98,144.125;-898,2223,144;38.2983;-120.8;crouch;stand
+ 24:17 Item;0;6;Doin it for the Kids;item_health
+ 24:18 Spawn;0;4;axis;Chickendales;mp44_mp;1960,2304,-23.875;-135
+ 24:19 Item;0;2;Bruce Dainis;item_health
+ 24:21 Item;0;6;Doin it for the Kids;item_health
+ 24:22 Spawn;0;1;allies;King;thompson_mp;-992.012,2328.01,-22.4743;45
+ 24:23 Weapon;0;3;A Figment of Your Imagination;bar_mp
+ 24:24 Weapon;0;4;Chickendales;panzerfaust_mp
+ 24:26 D;0;1;allies;King;0;0;axis;Luda-STATS 2.0!!!;mp40_mp;28;MOD_PISTOL_BULLET;left_arm_upper
+ 24:26 Item;0;6;Doin it for the Kids;item_health
+ 24:26 D;0;1;allies;King;0;0;axis;Luda-STATS 2.0!!!;mp40_mp;24;MOD_PISTOL_BULLET;right_arm_lower
+ 24:27 Shock;0;2;axis;Bruce Dainis;stielhandgranate_mp;3;MOD_GRENADE_SPLASH;none
+ 24:27 D;0;2;axis;Bruce Dainis;0;2;axis;Bruce Dainis;stielhandgranate_mp;56;MOD_GRENADE_SPLASH;none
+ 24:27 D;0;0;axis;Luda-STATS 2.0!!!;0;1;allies;King;thompson_mp;75;MOD_PISTOL_BULLET;head
+ 24:27 K;0;0;axis;Luda-STATS 2.0!!!;0;1;allies;King;thompson_mp;30;MOD_PISTOL_BULLET;right_arm_upper;164.929,2593.83,-23.875;-165,2435,-31;-153.078;25.329;stand;stand
+ 24:27 Shock;0;1;allies;King;panzerfaust_mp;2;MOD_PROJECTILE_SPLASH;none
+ 24:27 D;0;1;allies;King;0;4;axis;Chickendales;panzerfaust_mp;33;MOD_PROJECTILE_SPLASH;none
+ 24:28 Rank;0;1;allies;King;1
+ 24:32 Weapon;0;2;Bruce Dainis;mp44_mp
+ 24:32 D;0;4;axis;Chickendales;0;6;allies;Doin it for the Kids;thompson_mp;30;MOD_PISTOL_BULLET;left_leg_upper
+ 24:32 D;0;4;axis;Chickendales;0;6;allies;Doin it for the Kids;thompson_mp;30;MOD_PISTOL_BULLET;right_arm_upper
+ 24:33 D;0;4;axis;Chickendales;0;6;allies;Doin it for the Kids;thompson_mp;30;MOD_PISTOL_BULLET;right_leg_upper
+ 24:33 K;0;4;axis;Chickendales;0;6;allies;Doin it for the Kids;thompson_mp;30;MOD_PISTOL_BULLET;left_leg_upper;70.0002,2683.98,-31.8749;-20,2509,-31;18.6383;57.3871;stand;stand
+ 24:35 Spawn;0;4;axis;Chickendales;mp44_mp;976.016,-863.939,-5.89044;-180
+ 24:36 Spawn;0;0;axis;Luda-STATS 2.0!!!;mp40_mp;976.077,-791.959,-4.50126;-180
+ 24:37 D;0;3;allies;A Figment of Your Imagination;0;2;axis;Bruce Dainis;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower
+ 24:38 D;0;3;allies;A Figment of Your Imagination;0;2;axis;Bruce Dainis;mp44_mp;40;MOD_PISTOL_BULLET;left_arm_upper
+ 24:38 K;0;3;allies;A Figment of Your Imagination;0;2;axis;Bruce Dainis;mp44_mp;34;MOD_PISTOL_BULLET;left_arm_lower;-543.357,1891.84,144.125;-670,2054,144;88.7036;-55.1569;stand;crouch
+ 24:38 Weapon;0;4;Chickendales;panzerfaust_mp
+ 24:40 Item;0;1;King;item_health
+ 24:41 Weapon;0;2;Bruce Dainis;mp44_mp
+ 24:41 Item;0;2;Bruce Dainis;item_health
+ 24:43 Item;0;1;King;item_health
+ 24:44 Item;0;2;Bruce Dainis;item_health
+ 24:45 Weapon;0;2;Bruce Dainis;fraggrenade_mp
+ 24:49 D;0;5;allies;Damndest Nob Talent;0;2;axis;Bruce Dainis;mp44_mp;34;MOD_PISTOL_BULLET;left_arm_lower
+ 24:49 D;0;5;allies;Damndest Nob Talent;0;2;axis;Bruce Dainis;mp44_mp;40;MOD_PISTOL_BULLET;right_leg_upper
+ 24:49 Item;0;1;King;item_health
+ 24:49 D;0;2;axis;Bruce Dainis;0;5;allies;Damndest Nob Talent;thompson_mp;30;MOD_PISTOL_BULLET;right_leg_upper
+ 24:50 K;0;5;allies;Damndest Nob Talent;0;2;axis;Bruce Dainis;mp44_mp;61;MOD_PISTOL_BULLET;torso_upper;-677.862,1947.25,144.125;-537,1956,144;17.4847;177.495;crouch;stand
+ 24:50 Spawn;0;3;allies;A Figment of Your Imagination;bar_mp;-568,2744,-23.875;-135
+ 24:51 Item;0;2;Bruce Dainis;item_health
+ 24:52 Spawn;0;5;allies;Damndest Nob Talent;thompson_mp;-512,2688,-23.875;-135
+ 24:54 Weapon;0;1;King;thompson_mp
+ 25:03 D;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;62;MOD_RIFLE_BULLET;torso_upper
+ 25:04 D;0;3;allies;A Figment of Your Imagination;0;2;axis;Bruce Dainis;mp44_mp;40;MOD_PISTOL_BULLET;left_arm_upper
+ 25:04 K;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;105;MOD_RIFLE_BULLET;neck;-800.639,1836.52,96.125;-630,2052,-7;49.0265;-126.354;crouch;stand
+ 25:06 Item;0;3;A Figment of Your Imagination;item_health
+ 25:06 Spawn;0;2;axis;Bruce Dainis;mp44_mp;-1304,1680.01,-15.7549;45
+ 25:08 D;0;4;axis;Chickendales;0;5;allies;Damndest Nob Talent;thompson_mp;25;MOD_PISTOL_BULLET;left_arm_lower
+ 25:08 K;0;4;axis;Chickendales;0;5;allies;Damndest Nob Talent;thompson_mp;75;MOD_HEAD_SHOT;head;-858.518,2029.79,-7.875;-678,2056,-7;7.41028;-171.936;crouch;crouch
+ 25:09 D;0;5;allies;Damndest Nob Talent;0;2;axis;Bruce Dainis;mp44_mp;40;MOD_PISTOL_BULLET;left_leg_upper
+ 25:09 Item;0;5;Damndest Nob Talent;item_health
+ 25:10 D;0;5;allies;Damndest Nob Talent;0;0;axis;Luda-STATS 2.0!!!;mp40_mp;24;MOD_PISTOL_BULLET;right_leg_lower
+ 25:10 D;0;5;allies;Damndest Nob Talent;0;0;axis;Luda-STATS 2.0!!!;mp40_mp;38;MOD_PISTOL_BULLET;torso_lower
+ 25:10 K;0;5;allies;Damndest Nob Talent;0;0;axis;Luda-STATS 2.0!!!;mp40_mp;72;MOD_HEAD_SHOT;head;-902.875,2075.16,-7.875;-949,1925,-7;-59.502;69.5599;crouch;stand
+ 25:11 D;0;0;axis;Luda-STATS 2.0!!!;0;0;axis;Luda-STATS 2.0!!!;mp44_mp;20;MOD_PISTOL_BULLET;right_arm_upper
+ 25:11 D;0;0;axis;Luda-STATS 2.0!!!;0;0;axis;Luda-STATS 2.0!!!;mp44_mp;20;MOD_PISTOL_BULLET;right_arm_upper
+ 25:11 Spawn;0;4;axis;Chickendales;mp44_mp;-1176.01,1560.01,-13.9576;45
+ 25:13 Spawn;0;5;allies;Damndest Nob Talent;thompson_mp;-184,1896,-7.87496;-135
+ 25:13 D;0;2;axis;Bruce Dainis;0;2;axis;Bruce Dainis;mp40_mp;36;MOD_PISTOL_BULLET;head
+ 25:13 K;0;2;axis;Bruce Dainis;0;0;axis;Luda-STATS 2.0!!!;mp40_mp;36;MOD_HEAD_SHOT;head;-960.606,1885.31,-7.875;-948,1925,-7;69.873;-107.622;stand;stand
+ 25:13 K;0;0;axis;Luda-STATS 2.0!!!;0;0;axis;Luda-STATS 2.0!!!;mp40_mp;36;MOD_HEAD_SHOT;head;-948,1925,-7;-948,1925,-7;-107.622;-107.622;stand;stand
+ 25:15 Item;0;1;King;item_health
+ 25:16 D;0;1;allies;King;0;4;axis;Chickendales;mp44_mp;40;MOD_PISTOL_BULLET;left_arm_upper
+ 25:16 Weapon;0;1;King;thompson_mp
+ 25:16 D;0;4;axis;Chickendales;0;1;allies;King;colt_mp;30;MOD_PISTOL_BULLET;left_arm_upper
+ 25:17 D;0;4;axis;Chickendales;0;1;allies;King;colt_mp;30;MOD_PISTOL_BULLET;left_arm_upper
+ 25:17 D;0;1;allies;King;0;4;axis;Chickendales;mp44_mp;40;MOD_PISTOL_BULLET;left_arm_upper
+ 25:17 Spawn;0;2;axis;Bruce Dainis;mp44_mp;976.016,-863.939,-5.89044;-180
+ 25:17 K;0;1;allies;King;0;4;axis;Chickendales;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower;-871.564,1935.71,-7.875;-856,2067,-7;75.4156;-95.993;stand;stand
+ 25:21 Shock;0;4;axis;Chickendales;fraggrenade_mp;2;MOD_GRENADE_SPLASH;none
+ 25:21 D;0;4;axis;Chickendales;0;5;allies;Damndest Nob Talent;fraggrenade_mp;38;MOD_GRENADE_SPLASH;none
+ 25:21 Spawn;0;1;allies;King;thompson_mp;-632,1712,0.125012;-45
+ 25:23 K;0;4;axis;Chickendales;0;5;allies;Damndest Nob Talent;thompson_mp;25;MOD_PISTOL_BULLET;left_arm_lower;-1037.78,2057.67,-7.875;-920,1956,-7;-57.3761;133.583;crouch;stand
+ 25:25 Spawn;0;4;axis;Chickendales;mp44_mp;976.077,-791.959,-4.50126;-180
+ 25:28 Weapon;0;5;Damndest Nob Talent;panzerfaust_mp
+ 25:28 Spawn;0;0;axis;Luda-STATS 2.0!!!;mp40_mp;976.016,-863.939,-5.89044;-180
+ 25:30 Weapon;0;4;Chickendales;panzerfaust_mp
+ 25:36 Weapon;0;2;Bruce Dainis;panzerfaust_mp
+ 25:41 Use;0;3;allies;A Figment of Your Imagination;1;all;mg42_turret_mp;1;-508.563,1941.92,144.125;-75.0311
+ 25:43 D;0;1;allies;King;0;0;axis;Luda-STATS 2.0!!!;mp40_mp;38;MOD_PISTOL_BULLET;torso_lower
+ 25:43 D;0;1;allies;King;0;0;axis;Luda-STATS 2.0!!!;mp40_mp;38;MOD_PISTOL_BULLET;torso_lower
+ 25:44 K;0;1;allies;King;0;0;axis;Luda-STATS 2.0!!!;mp40_mp;38;MOD_PISTOL_BULLET;torso_lower;1465.24,1082.08,-31.8749;1369,659,-19;167.794;78.6896;stand;stand
+ 25:45 Use;0;3;allies;A Figment of Your Imagination;1;all;mg42_turret_mp;0;-516.331,1936.73,144.146;-72.6801
+ 25:49 Spawn;0;1;allies;King;thompson_mp;-992.012,2328.01,-22.4743;45
+ 25:58 D;0;2;axis;Bruce Dainis;0;6;allies;Doin it for the Kids;thompson_mp;25;MOD_PISTOL_BULLET;right_arm_lower
+ 25:58 D;0;2;axis;Bruce Dainis;0;6;allies;Doin it for the Kids;thompson_mp;30;MOD_PISTOL_BULLET;right_arm_upper
+ 25:58 D;0;1;allies;King;0;2;axis;Bruce Dainis;mp44_mp;34;MOD_PISTOL_BULLET;right_leg_lower
+ 25:58 D;0;2;axis;Bruce Dainis;0;6;allies;Doin it for the Kids;thompson_mp;30;MOD_PISTOL_BULLET;right_leg_upper
+ 25:58 K;0;2;axis;Bruce Dainis;0;6;allies;Doin it for the Kids;thompson_mp;30;MOD_PISTOL_BULLET;right_leg_upper;-120.875,1823.83,160.125;313,1995,160;132.847;-158.467;stand;stand
+ 26:00 Shock;0;3;allies;A Figment of Your Imagination;stielhandgranate_mp;3;MOD_GRENADE_SPLASH;none
+ 26:00 D;0;3;allies;A Figment of Your Imagination;0;4;axis;Chickendales;stielhandgranate_mp;54;MOD_GRENADE_SPLASH;none
+ 26:02 Spawn;0;2;axis;Bruce Dainis;mp44_mp;1872,936,-23.875;-180
+ 26:06 K;0;5;allies;Damndest Nob Talent;0;4;axis;Chickendales;stielhandgranate_mp;113;MOD_GRENADE_SPLASH;none;-668.393,2143,-7.875;-1075.32,1915.25,-15.8749;-143.844;-0.373535;crouch;crouch
+ 26:06 Shock;0;5;allies;Damndest Nob Talent;stielhandgranate_mp;4;MOD_GRENADE_SPLASH;none
+ 26:09 D;0;2;axis;Bruce Dainis;0;6;allies;Doin it for the Kids;thompson_mp;20;MOD_PISTOL_BULLET;right_foot
+ 26:09 Weapon;0;4;Chickendales;mp44_mp
+ 26:09 Weapon;0;4;Chickendales;mp44_mp
+ 26:09 Spawn;0;5;allies;Damndest Nob Talent;thompson_mp;-632,1712,0.125012;-45
+ 26:09 D;0;2;axis;Bruce Dainis;0;6;allies;Doin it for the Kids;thompson_mp;75;MOD_PISTOL_BULLET;head
+ 26:09 K;0;2;axis;Bruce Dainis;0;6;allies;Doin it for the Kids;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower;964.005,2180.55,-31.8749;760,2117,160;142.245;12.2772;stand;stand
+ 26:12 Spawn;0;2;axis;Bruce Dainis;mp44_mp;1040,432,-7.87496;-90
+ 26:15 Shock;0;4;axis;Chickendales;fraggrenade_mp;1;MOD_GRENADE_SPLASH;none
+ 26:15 D;0;4;axis;Chickendales;0;5;allies;Damndest Nob Talent;fraggrenade_mp;16;MOD_GRENADE_SPLASH;none
+ 26:17 K;0;3;allies;A Figment of Your Imagination;0;4;axis;Chickendales;mp44_mp;40;MOD_PISTOL_BULLET;left_arm_upper;-700.038,1940.77,8.125;-656,1959,-7;-2.36206;-147.047;stand;crouch
+ 26:17 Item;0;4;Chickendales;item_health
+ 26:18 Weapon;0;1;King;thompson_mp
+ 26:24 K;0;1;allies;King;0;2;axis;Bruce Dainis;stielhandgranate_mp;110;MOD_GRENADE_SPLASH;none;-648.715,1956.39,144.125;177.973,1535.81,0.125004;164.405;153.018;stand;stand
+ 26:24 Shock;0;1;allies;King;stielhandgranate_mp;4;MOD_GRENADE_SPLASH;none
+ 26:29 Weapon;0;5;Damndest Nob Talent;thompson_mp
+ 26:29 Spawn;0;1;allies;King;thompson_mp;-632,1712,0.125012;-45
+ 26:33 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;1;-536.457,1924.08,144.125;-31.4813
+ 26:33 Spawn;0;3;allies;A Figment of Your Imagination;bar_mp;-632,1712,0.125012;-45
+ 26:34 D;0;1;allies;King;0;4;axis;Chickendales;mg42_bipod_stand_mp;30;MOD_RIFLE_BULLET;right_arm_lower
+ 26:34 D;0;1;allies;King;0;4;axis;Chickendales;mg42_bipod_stand_mp;48;MOD_RIFLE_BULLET;torso_lower
+ 26:34 K;0;1;allies;King;0;4;axis;Chickendales;mg42_bipod_stand_mp;36;MOD_RIFLE_BULLET;right_leg_upper;-127.617,1301.96,0.125088;-518.388,1937.68,144.125;-51.8719;302.498;stand;stand
+ 26:35 Rank;0;4;axis;Chickendales;2
+ 26:38 D;0;6;allies;Doin it for the Kids;0;4;axis;Chickendales;mg42_bipod_stand_mp;36;MOD_RIFLE_BULLET;left_arm_upper
+ 26:39 D;0;6;allies;Doin it for the Kids;0;4;axis;Chickendales;mg42_bipod_stand_mp;53;MOD_RIFLE_BULLET;torso_upper
+ 26:39 K;0;6;allies;Doin it for the Kids;0;4;axis;Chickendales;mg42_bipod_stand_mp;53;MOD_RIFLE_BULLET;torso_upper;-524.913,1314.31,0.125088;-494.807,1944.69,144.125;112.269;302.497;stand;stand
+ 26:40 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;0;-542.291,1929.11,144.125;-58.3429
+ 26:41 Weapon;0;5;Damndest Nob Talent;thompson_mp
+ 26:41 Shock;0;4;axis;Chickendales;fraggrenade_mp;2;MOD_GRENADE_SPLASH;none
+ 26:41 D;0;4;axis;Chickendales;0;3;allies;A Figment of Your Imagination;fraggrenade_mp;41;MOD_GRENADE_SPLASH;none
+ 26:41 D;0;4;axis;Chickendales;0;4;axis;Chickendales;mp44_mp;13.5;MOD_PISTOL_BULLET;left_hand
+ 26:41 Item;0;2;Bruce Dainis;item_health
+ 26:42 Spawn;0;6;allies;Doin it for the Kids;thompson_mp;-1304,1680.01,-15.7549;45
+ 26:43 Spawn;0;1;allies;King;thompson_mp;-1176.01,1560.01,-13.9576;45
+ 26:43 K;0;4;axis;Chickendales;0;5;allies;Damndest Nob Talent;thompson_mp;61;MOD_MELEE;left_leg_upper;-499.706,1883.09,176.125;-538,1904,144;-8.78906;-18.6328;stand;crouch
+ 26:45 Weapon;0;6;Doin it for the Kids;colt_mp
+ 26:51 Weapon;0;2;Bruce Dainis;mp44_mp
+ 26:51 D;0;2;axis;Bruce Dainis;0;6;allies;Doin it for the Kids;thompson_mp;25;MOD_PISTOL_BULLET;left_arm_lower
+ 26:51 D;0;6;allies;Doin it for the Kids;0;2;axis;Bruce Dainis;mp44_mp;40;MOD_PISTOL_BULLET;right_arm_upper
+ 26:51 Item;0;2;Bruce Dainis;item_health
+ 26:52 D;0;2;axis;Bruce Dainis;0;6;allies;Doin it for the Kids;thompson_mp;30;MOD_PISTOL_BULLET;right_leg_upper
+ 26:52 D;0;2;axis;Bruce Dainis;0;6;allies;Doin it for the Kids;thompson_mp;30;MOD_PISTOL_BULLET;right_leg_upper
+ 26:52 Item;0;2;Bruce Dainis;item_health
+ 26:53 D;0;2;axis;Bruce Dainis;0;6;allies;Doin it for the Kids;thompson_mp;44;MOD_PISTOL_BULLET;torso_upper
+ 26:54 D;0;2;axis;Bruce Dainis;0;6;allies;Doin it for the Kids;thompson_mp;20;MOD_PISTOL_BULLET;left_foot
+ 26:54 Spawn;0;4;axis;Chickendales;mp44_mp;1200,1760,144.125;-90
+ 26:54 D;0;6;allies;Doin it for the Kids;0;2;axis;Bruce Dainis;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower
+ 26:54 K;0;6;allies;Doin it for the Kids;0;2;axis;Bruce Dainis;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower;-604.11,1828.85,144.125;-661,1767,144;-136.198;47.6422;stand;stand
+ 26:57 Item;0;2;Bruce Dainis;item_health
+ 26:57 Spawn;0;6;allies;Doin it for the Kids;thompson_mp;-992.012,2328.01,-22.4743;45
+ 26:58 K;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;35;MOD_RIFLE_BULLET;left_arm_lower;-653.615,1968.84,144.125;-685,1972,144;165.487;-23.4723;stand;crouch
+ 27:02 Spawn;0;2;axis;Bruce Dainis;mp44_mp;1803,1354,-23.875;-138.005
+ 27:02 D;0;6;allies;Doin it for the Kids;0;6;allies;Doin it for the Kids;thompson_mp;12.5;MOD_PISTOL_BULLET;right_leg_lower
+ 27:04 Weapon;0;4;Chickendales;panzerfaust_mp
+ 27:06 D;0;1;allies;King;0;0;axis;Luda-STATS 2.0!!!;mp40_mp;22;MOD_PISTOL_BULLET;left_leg_lower
+ 27:06 D;0;1;allies;King;0;0;axis;Luda-STATS 2.0!!!;mp40_mp;27;MOD_PISTOL_BULLET;left_arm_upper
+ 27:06 D;0;1;allies;King;0;0;axis;Luda-STATS 2.0!!!;mp40_mp;35;MOD_PISTOL_BULLET;torso_lower
+ 27:08 D;0;0;axis;Luda-STATS 2.0!!!;0;6;allies;Doin it for the Kids;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower
+ 27:08 D;0;0;axis;Luda-STATS 2.0!!!;0;6;allies;Doin it for the Kids;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower
+ 27:08 Weapon;0;2;Bruce Dainis;panzerfaust_mp
+ 27:08 K;0;0;axis;Luda-STATS 2.0!!!;0;6;allies;Doin it for the Kids;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower;730.77,2498.5,-23.8749;95,2341,-23;-163.185;12.475;stand;stand
+ 27:12 D;0;4;axis;Chickendales;0;5;allies;Damndest Nob Talent;thompson_mp;23;MOD_PISTOL_BULLET;left_leg_lower
+ 27:12 D;0;5;allies;Damndest Nob Talent;0;4;axis;Chickendales;mp44_mp;40;MOD_PISTOL_BULLET;left_arm_upper
+ 27:13 D;0;5;allies;Damndest Nob Talent;0;4;axis;Chickendales;mp44_mp;34;MOD_PISTOL_BULLET;right_arm_lower
+ 27:13 D;0;2;axis;Bruce Dainis;0;6;allies;Doin it for the Kids;thompson_mp;25;MOD_PISTOL_BULLET;left_arm_lower
+ 27:13 D;0;2;axis;Bruce Dainis;0;6;allies;Doin it for the Kids;thompson_mp;20;MOD_PISTOL_BULLET;right_hand
+ 27:14 Spawn;0;0;axis;Luda-STATS 2.0!!!;mp40_mp;1960,2304,-23.875;-135
+ 27:14 D;0;2;axis;Bruce Dainis;0;6;allies;Doin it for the Kids;thompson_mp;30;MOD_PISTOL_BULLET;right_arm_upper
+ 27:15 K;0;2;axis;Bruce Dainis;0;6;allies;Doin it for the Kids;thompson_mp;30;MOD_PISTOL_BULLET;left_leg_upper;307.216,1838.03,8.125;371,1832,8;-0.357056;176.188;stand;stand
+ 27:15 Item;0;6;Doin it for the Kids;item_health
+ 27:16 Rank;0;6;allies;Doin it for the Kids;1
+ 27:16 D;0;4;axis;Chickendales;0;5;allies;Damndest Nob Talent;thompson_mp;23;MOD_PISTOL_BULLET;left_arm_lower
+ 27:17 Spawn;0;2;axis;Bruce Dainis;mp44_mp;1960,2304,-23.875;-135
+ 27:17 K;0;4;axis;Chickendales;0;3;allies;A Figment of Your Imagination;bar_mp;105;MOD_HEAD_SHOT;head;344.307,2948.32,-23.8749;-394,1947,149;-148.266;53.3771;crouch;prone
+ 27:19 Spawn;0;4;axis;Chickendales;mp44_mp;1960,2304,-23.875;-135
+ 27:25 Weapon;0;4;Chickendales;panzerfaust_mp
+ 27:29 Item;0;1;King;item_health
+ 27:39 D;0;4;axis;Chickendales;0;3;allies;A Figment of Your Imagination;bar_mp;56;MOD_RIFLE_BULLET;torso_lower
+ 27:39 K;0;4;axis;Chickendales;0;3;allies;A Figment of Your Imagination;bar_mp;56;MOD_RIFLE_BULLET;torso_lower;-177.4,2697.14,-23.8749;-681,2155,144;-134.011;47.5269;stand;stand
+ 27:39 Shock;0;3;allies;A Figment of Your Imagination;panzerfaust_mp;1;MOD_PROJECTILE_SPLASH;none
+ 27:39 D;0;3;allies;A Figment of Your Imagination;0;4;axis;Chickendales;panzerfaust_mp;18;MOD_PROJECTILE_SPLASH;none
+ 27:39 K;0;5;allies;Damndest Nob Talent;0;4;axis;Chickendales;panzerfaust_mp;18;MOD_PROJECTILE_SPLASH;none;-780.472,2221.92,144.125;-173.732,2700.88,-23.8749;34.8926;-134.121;crouch;stand
+ 27:39 Shock;0;5;allies;Damndest Nob Talent;panzerfaust_mp;1;MOD_PROJECTILE_SPLASH;none
+ 27:41 Spawn;0;5;allies;Damndest Nob Talent;thompson_mp;216,2088,-23.875;135
+ 27:45 D;0;1;allies;King;0;0;axis;Luda-STATS 2.0!!!;mp40_mp;24;MOD_PISTOL_BULLET;left_arm_lower
+ 27:45 K;0;1;allies;King;0;0;axis;Luda-STATS 2.0!!!;mp40_mp;72;MOD_HEAD_SHOT;head;939.295,2543.84,-31.8749;822,2218,-23;-110.05;69.7906;stand;stand
+ 27:48 Spawn;0;1;allies;King;m1carbine_mp;224,1816,-143.875;135
+ 27:50 Shock;0;2;axis;Bruce Dainis;stielhandgranate_mp;1;MOD_GRENADE_SPLASH;none
+ 27:50 D;0;2;axis;Bruce Dainis;0;2;axis;Bruce Dainis;stielhandgranate_mp;5;MOD_GRENADE_SPLASH;none
+ 27:50 Shock;0;3;allies;A Figment of Your Imagination;stielhandgranate_mp;3;MOD_GRENADE_SPLASH;none
+ 27:50 D;0;3;allies;A Figment of Your Imagination;0;2;axis;Bruce Dainis;stielhandgranate_mp;54;MOD_GRENADE_SPLASH;none
+ 27:52 Spawn;0;4;axis;Chickendales;mp44_mp;844,3480,-23.875;90
+ 27:53 Item;0;3;A Figment of Your Imagination;item_health
+ 27:53 Item;0;2;Bruce Dainis;item_health
+ 27:57 Weapon;0;2;Bruce Dainis;mp44_mp
+ 27:59 D;0;3;allies;A Figment of Your Imagination;0;2;axis;Bruce Dainis;mp44_mp;27;MOD_PISTOL_BULLET;right_hand
+ 28:00 K;0;3;allies;A Figment of Your Imagination;0;2;axis;Bruce Dainis;mp44_mp;102;MOD_HEAD_SHOT;head;-712.195,2181.75,144.125;-702,2136,144;29.6301;103.37;crouch;stand
+ 28:02 Weapon;0;2;Bruce Dainis;mp44_mp
+ 28:05 D;0;1;allies;King;0;0;axis;Luda-STATS 2.0!!!;mp40_mp;24;MOD_PISTOL_BULLET;left_arm_lower
+ 28:05 D;0;1;allies;King;0;0;axis;Luda-STATS 2.0!!!;mp40_mp;24;MOD_PISTOL_BULLET;right_leg_lower
+ 28:05 D;0;1;allies;King;0;0;axis;Luda-STATS 2.0!!!;mp40_mp;28;MOD_PISTOL_BULLET;right_leg_upper
+ 28:05 K;0;1;allies;King;0;0;axis;Luda-STATS 2.0!!!;mp40_mp;24;MOD_PISTOL_BULLET;left_arm_lower;926.956,2100.81,-31.8749;706,2591,-23;117.114;-66.9122;stand;stand
+ 28:07 Spawn;0;3;allies;A Figment of Your Imagination;bar_mp;-184,1896,-7.87496;-135
+ 28:08 Shock;0;4;axis;Chickendales;fraggrenade_mp;4;MOD_GRENADE_SPLASH;none
+ 28:08 D;0;4;axis;Chickendales;0;5;allies;Damndest Nob Talent;fraggrenade_mp;98;MOD_GRENADE_SPLASH;none
+ 28:08 K;0;4;axis;Chickendales;0;5;allies;Damndest Nob Talent;thompson_mp;30;MOD_PISTOL_BULLET;right_leg_upper;-446.373,2105.77,-31.8749;-258,2304,-31;-150.046;-134.742;stand;stand
+ 28:09 Spawn;0;1;allies;King;m1carbine_mp;216,2088,-23.875;135
+ 28:12 Shock;0;5;allies;Damndest Nob Talent;stielhandgranate_mp;1;MOD_GRENADE_SPLASH;none
+ 28:12 D;0;5;allies;Damndest Nob Talent;0;4;axis;Chickendales;stielhandgranate_mp;89;MOD_GRENADE_SPLASH;none
+ 28:19 Spawn;0;4;axis;Chickendales;mp44_mp;1800,2696,-23.875;-135
+ 28:22 Weapon;0;5;Damndest Nob Talent;stielhandgranate_mp
+ 28:25 D;0;3;allies;A Figment of Your Imagination;0;2;axis;Bruce Dainis;mp44_mp;40;MOD_PISTOL_BULLET;left_arm_upper
+ 28:25 D;0;3;allies;A Figment of Your Imagination;0;2;axis;Bruce Dainis;mp44_mp;34;MOD_PISTOL_BULLET;left_leg_lower
+ 28:25 K;0;3;allies;A Figment of Your Imagination;0;2;axis;Bruce Dainis;mp44_mp;34;MOD_PISTOL_BULLET;right_arm_lower;-703.341,2040.74,-7.875;-796,1804,96;-110.056;68.2965;crouch;stand
+ 28:28 D;0;0;axis;Luda-STATS 2.0!!!;0;1;allies;King;m1carbine_mp;44;MOD_RIFLE_BULLET;torso_upper
+ 28:28 Weapon;0;4;Chickendales;panzerfaust_mp
+ 28:28 D;0;0;axis;Luda-STATS 2.0!!!;0;1;allies;King;m1carbine_mp;44;MOD_RIFLE_BULLET;torso_upper
+ 28:28 K;0;0;axis;Luda-STATS 2.0!!!;0;1;allies;King;m1carbine_mp;40;MOD_RIFLE_BULLET;torso_lower;672.874,2215.13,-23.8749;54,2457,-23;161.669;-21.1926;stand;stand
+ 28:28 D;0;2;axis;Bruce Dainis;0;6;allies;Doin it for the Kids;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower
+ 28:29 D;0;2;axis;Bruce Dainis;0;6;allies;Doin it for the Kids;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower
+ 28:29 K;0;2;axis;Bruce Dainis;0;6;allies;Doin it for the Kids;thompson_mp;25;MOD_PISTOL_BULLET;right_arm_lower;-597.865,1901.26,144.125;-95,1814,160;172.37;171.074;stand;crouch
+ 28:30 Spawn;0;3;allies;A Figment of Your Imagination;bar_mp;-184,1896,-7.87496;-135
+ 28:31 K;0;1;allies;King;0;4;axis;Chickendales;panzerfaust_mp;1000;MOD_PROJECTILE;none;146.151,2312.09,-23.875;726.201,2493.68,-18.0493;13.7604;-162.614;stand;crouch
+ 28:31 Shock;0;1;allies;King;panzerfaust_mp;4;MOD_PROJECTILE;none
+ 28:31 Spawn;0;2;axis;Bruce Dainis;mp44_mp;1800,2696,-23.875;-135
+ 28:32 Spawn;0;0;axis;Luda-STATS 2.0!!!;mp40_mp;1368,2608,-23.875;45
+ 28:37 Weapon;0;2;Bruce Dainis;panzerfaust_mp
+ 28:37 Spawn;0;1;allies;King;bar_mp;-632,1712,0.125012;-45
+ 28:39 D;0;4;axis;Chickendales;0;5;allies;Damndest Nob Talent;thompson_mp;30;MOD_PISTOL_BULLET;right_arm_upper
+ 28:40 D;0;4;axis;Chickendales;0;5;allies;Damndest Nob Talent;thompson_mp;30;MOD_PISTOL_BULLET;right_leg_upper
+ 28:42 D;0;2;axis;Bruce Dainis;0;6;allies;Doin it for the Kids;thompson_mp;25;MOD_PISTOL_BULLET;right_arm_lower
+ 28:42 D;0;2;axis;Bruce Dainis;0;6;allies;Doin it for the Kids;thompson_mp;25;MOD_PISTOL_BULLET;right_arm_lower
+ 28:42 D;0;2;axis;Bruce Dainis;0;6;allies;Doin it for the Kids;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower
+ 28:42 K;0;2;axis;Bruce Dainis;0;6;allies;Doin it for the Kids;thompson_mp;44;MOD_PISTOL_BULLET;torso_upper;414.728,1802.34,-22.875;385,1820,-4;162.092;-24.2029;stand;stand
+ 28:43 K;0;5;allies;Damndest Nob Talent;0;4;axis;Chickendales;stielhandgranate_mp;74;MOD_GRENADE_SPLASH;none;-493.238,1962.88,-7.875;-427.326,2447.28,-23.875;141.064;-116.741;crouch;crouch
+ 28:43 Shock;0;5;allies;Damndest Nob Talent;stielhandgranate_mp;3;MOD_GRENADE_SPLASH;none
+ 28:44 Spawn;0;2;axis;Bruce Dainis;mp44_mp;1192,3296,-23.875;45
+ 28:46 Spawn;0;5;allies;Damndest Nob Talent;thompson_mp;-1304,1680.01,-15.7549;45
+ 28:48 D;0;0;axis;Luda-STATS 2.0!!!;0;6;allies;Doin it for the Kids;thompson_mp;30;MOD_PISTOL_BULLET;left_leg_upper
+ 28:49 D;0;0;axis;Luda-STATS 2.0!!!;0;6;allies;Doin it for the Kids;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower
+ 28:49 K;0;0;axis;Luda-STATS 2.0!!!;0;6;allies;Doin it for the Kids;thompson_mp;44;MOD_PISTOL_BULLET;torso_upper;1129.5,2715.68,-23.8749;732,2391,-23;-149.453;37.8314;stand;stand
+ 28:49 Weapon;0;4;Chickendales;mp44_mp
+ 28:52 Shock;0;3;allies;A Figment of Your Imagination;fraggrenade_mp;1;MOD_GRENADE_SPLASH;none
+ 28:52 D;0;3;allies;A Figment of Your Imagination;0;3;allies;A Figment of Your Imagination;fraggrenade_mp;21.5;MOD_GRENADE_SPLASH;none
+ 28:58 Item;0;5;Damndest Nob Talent;item_health
+ 28:59 Weapon;0;5;Damndest Nob Talent;thompson_mp
+ 29:01 D;0;2;axis;Bruce Dainis;0;6;allies;Doin it for the Kids;thompson_mp;25;MOD_PISTOL_BULLET;left_arm_lower
+ 29:01 D;0;6;allies;Doin it for the Kids;0;2;axis;Bruce Dainis;mp44_mp;40;MOD_PISTOL_BULLET;left_arm_upper
+ 29:01 D;0;2;axis;Bruce Dainis;0;6;allies;Doin it for the Kids;thompson_mp;25;MOD_PISTOL_BULLET;right_arm_lower
+ 29:01 D;0;2;axis;Bruce Dainis;0;6;allies;Doin it for the Kids;thompson_mp;30;MOD_PISTOL_BULLET;right_arm_upper
+ 29:01 K;0;2;axis;Bruce Dainis;0;6;allies;Doin it for the Kids;thompson_mp;30;MOD_PISTOL_BULLET;right_leg_upper;594.435,1675.73,8.125;511,1666,8;-68.8239;15.2875;stand;stand
+ 29:02 Item;0;6;Doin it for the Kids;item_health
+ 29:03 Weapon;0;6;Doin it for the Kids;mp44_mp
+ 29:04 Weapon;0;3;A Figment of Your Imagination;bar_mp
+ 29:04 Spawn;0;2;axis;Bruce Dainis;mp44_mp;-663.905,440.078,3.92032;-135
+ 29:05 D;0;5;allies;Damndest Nob Talent;0;4;axis;Chickendales;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower
+ 29:05 D;0;5;allies;Damndest Nob Talent;0;4;axis;Chickendales;mp44_mp;40;MOD_PISTOL_BULLET;right_leg_upper
+ 29:06 K;0;5;allies;Damndest Nob Talent;0;4;axis;Chickendales;mp44_mp;34;MOD_PISTOL_BULLET;right_leg_lower;-657.517,1958.37,144.125;-898,2035,144;-26.944;-15.683;crouch;crouch
+ 29:08 Spawn;0;5;allies;Damndest Nob Talent;thompson_mp;1312,1760,144.125;-90
+ 29:10 Item;0;4;Chickendales;item_health
+ 29:11 Weapon;0;4;Chickendales;mp44_mp
+ 29:11 Item;0;4;Chickendales;item_health
+ 29:12 Spawn;0;0;axis;Luda-STATS 2.0!!!;mp40_mp;-632,1712,0.125012;-45
+ 29:13 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;1;-517.757,1938.22,144.125;-59.903
+ 29:18 Weapon;0;5;Damndest Nob Talent;panzerfaust_mp
+ 29:23 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;0;-526.61,1957.25,144.359;-64.4678
+ 29:29 D;0;2;axis;Bruce Dainis;0;5;allies;Damndest Nob Talent;thompson_mp;25;MOD_PISTOL_BULLET;right_arm_lower
+ 29:31 D;0;4;axis;Chickendales;0;4;axis;Chickendales;mp44_mp;20;MOD_PISTOL_BULLET;left_leg_upper
+ 29:31 D;0;2;axis;Bruce Dainis;0;5;allies;Damndest Nob Talent;thompson_mp;30;MOD_PISTOL_BULLET;left_arm_upper
+ 29:35 Item;0;6;Doin it for the Kids;item_health
+ 29:37 K;0;2;axis;Bruce Dainis;0;5;allies;Damndest Nob Talent;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower;-744.041,1994.96,144.125;-878,1868,96;-152.424;43.6047;stand;crouch
+ 29:40 Spawn;0;2;axis;Bruce Dainis;mp44_mp;1368,2608,-23.875;45
+ 29:42 D;0;1;allies;King;0;4;axis;Chickendales;mp44_mp;40;MOD_PISTOL_BULLET;right_leg_upper
+ 29:42 D;0;1;allies;King;0;4;axis;Chickendales;mp44_mp;40;MOD_PISTOL_BULLET;left_leg_upper
+ 29:42 K;0;1;allies;King;0;4;axis;Chickendales;mp44_mp;40;MOD_PISTOL_BULLET;right_leg_upper;-866.902,2011.59,144.125;-597,1968,144;151.089;171.672;stand;crouch
+ 29:45 D;0;4;axis;Chickendales;0;5;allies;Damndest Nob Talent;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower
+ 29:45 K;0;4;axis;Chickendales;0;5;allies;Damndest Nob Talent;thompson_mp;30;MOD_PISTOL_BULLET;left_leg_upper;-565.392,1964.38,144.125;-720,1984,144;172.881;-11.239;crouch;crouch
+ 29:46 Rank;0;5;allies;Damndest Nob Talent;2
+ 29:46 Weapon;0;5;Damndest Nob Talent;thompson_mp
+ 29:46 Spawn;0;1;allies;King;bar_mp;-632,1712,0.125012;-45
+ 29:47 Item;0;3;A Figment of Your Imagination;item_health
+ 29:50 Use;0;5;allies;Damndest Nob Talent;1;all;mg42_turret_mp;1;-498.917,1944.39,144.125;-80.2167
+ 29:52 Spawn;0;4;axis;Chickendales;mp44_mp;1800,2696,-23.875;-135
+ 29:54 Use;0;5;allies;Damndest Nob Talent;1;all;mg42_turret_mp;0;-511.099,1960.56,144.686;-80.5463
+ 29:55 Shock;0;3;allies;A Figment of Your Imagination;stielhandgranate_mp;1;MOD_GRENADE_SPLASH;none
+ 29:55 D;0;3;allies;A Figment of Your Imagination;0;2;axis;Bruce Dainis;stielhandgranate_mp;50;MOD_GRENADE_SPLASH;none
+ 29:57 Item;0;3;A Figment of Your Imagination;item_health
+ 29:58 K;0;2;axis;Bruce Dainis;0;3;allies;A Figment of Your Imagination;bar_mp;105;MOD_HEAD_SHOT;head;-378.054,2269.84,-31.8749;-712,2166,144;-128.265;17.7264;stand;stand
+ 29:58 Shock;0;3;allies;A Figment of Your Imagination;stielhandgranate_mp;1;MOD_GRENADE_SPLASH;none
+ 29:58 D;0;3;allies;A Figment of Your Imagination;0;2;axis;Bruce Dainis;stielhandgranate_mp;21;MOD_GRENADE_SPLASH;none
+ 30:00 W;allies;1;King;3;A Figment of Your Imagination;5;Damndest Nob Talent;6;Doin it for the Kids
+ 30:00 L;axis;0;Luda-STATS 2.0!!!;2;Bruce Dainis;4;Chickendales
+ 30:10 ExitLevel: executed
+ 30:10 RestartGame:
+ 30:10 ------------------------------------------------------------
+ 30:10 ------------------------------------------------------------
+ 30:10 InitGame: \.Admin\Luda\.Location\Beavercreek, OH\.Website\http://cward-nb/gday10\fs_game\cod-stats\g_gametype\tdm\g_timeoutsallowed\0\gamename\CoD:United Offensive\mapname\mp_uo_carentan\protocol\22\scr_allow_jeeps\1\scr_allow_tanks\1\shortversion\1.51\sv_allowAnonymous\0\sv_floodProtect\1\sv_hostname\G-Day X\sv_maxclients\50\sv_maxPing\999\sv_maxRate\25000\sv_minPing\0\sv_privateClients\0\sv_punkbuster\0\sv_pure\0
+ 30:10 Game;tdm;mp_uo_carentan;30;american;german
+ 30:10 J;0;6;Doin it for the Kids
+ 30:10 Spec;0;6;Doin it for the Kids
+ 30:10 J;0;5;Damndest Nob Talent
+ 30:10 Spec;0;5;Damndest Nob Talent
+ 30:10 J;0;4;Chickendales
+ 30:10 Spec;0;4;Chickendales
+ 30:10 J;0;3;A Figment of Your Imagination
+ 30:10 Spec;0;3;A Figment of Your Imagination
+ 30:10 J;0;2;Bruce Dainis
+ 30:10 Spec;0;2;Bruce Dainis
+ 30:10 J;0;1;King
+ 30:10 Spec;0;1;King
+ 30:10 J;0;0;Luda-STATS 2.0!!!
+ 30:10 Spec;0;0;Luda-STATS 2.0!!!
+ 30:21 Spawn;0;1;allies;King;springfield_mp;-992.012,2328.01,-22.4743;45
+ 30:27 Spawn;0;2;axis;Bruce Dainis;mp44_mp;1803,1354,-23.875;-138.005
+ 30:34 Weapon;0;2;Bruce Dainis;panzerfaust_mp
+ 30:43 Spawn;0;4;axis;Chickendales;mp44_mp;944,1468,-39.875;135
+ 30:45 Spawn;0;6;allies;Doin it for the Kids;thompson_mp;-992.012,2328.01,-22.4743;45
+ 30:46 Spawn;0;3;axis;A Figment of Your Imagination;gewehr43_mp;1312,1760,144.125;-90
+ 30:49 J;0;7;CDJ Bazooka Pillow
+ 30:49 Spec;0;7;CDJ Bazooka Pillow
+ 30:53 D;0;2;axis;Bruce Dainis;0;6;allies;Doin it for the Kids;thompson_mp;25;MOD_PISTOL_BULLET;left_arm_lower
+ 30:53 D;0;2;axis;Bruce Dainis;0;6;allies;Doin it for the Kids;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower
+ 30:53 D;0;6;allies;Doin it for the Kids;0;2;axis;Bruce Dainis;mp44_mp;40;MOD_PISTOL_BULLET;left_arm_upper
+ 30:54 K;0;2;axis;Bruce Dainis;0;6;allies;Doin it for the Kids;thompson_mp;44;MOD_PISTOL_BULLET;torso_upper;-730.857,2005.83,144.125;-742,1965,144;-116.351;64.3304;stand;stand
+ 30:54 Item;0;6;Doin it for the Kids;item_health
+ 30:57 Use;0;6;allies;Doin it for the Kids;1;all;mg42_turret_mp;1;-522.5,1936.29,144.125;-54.1077
+ 30:57 Spawn;0;0;allies;Luda-STATS 2.0!!!;thompson_mp;-1304,1680.01,-15.7549;45
+ 30:58 Weapon;0;3;A Figment of Your Imagination;panzerfaust_mp
+ 31:00 Spawn;0;5;axis;Bukkake-sound a chicken makes;mp44_mp;1368,2608,-23.875;45
+ 31:03 Use;0;6;allies;Doin it for the Kids;1;all;mg42_turret_mp;0;-519.52,1926.98,144.191;-61.3477
+ 31:03 Spawn;0;2;axis;Bruce Dainis;mp44_mp;1800,2696,-23.875;-135
+ 31:04 Weapon;0;4;Chickendales;panzerfaust_mp
+ 31:13 Weapon;0;5;Bukkake-sound a chicken makes;panzerfaust_mp
+ 31:14 D;0;1;allies;King;0;4;axis;Chickendales;mp44_mp;34;MOD_PISTOL_BULLET;right_arm_lower
+ 31:14 D;0;1;allies;King;0;4;axis;Chickendales;mp44_mp;40;MOD_PISTOL_BULLET;right_arm_upper
+ 31:15 K;0;1;allies;King;0;4;axis;Chickendales;mp44_mp;27;MOD_PISTOL_BULLET;left_hand;-603.17,2647.72,-23.8749;-601,2519,-23;-70.2631;94.5209;stand;stand
+ 31:19 D;0;4;axis;Chickendales;0;6;allies;Doin it for the Kids;thompson_mp;44;MOD_PISTOL_BULLET;torso_upper
+ 31:19 D;0;4;axis;Chickendales;0;6;allies;Doin it for the Kids;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower
+ 31:19 K;0;4;axis;Chickendales;0;6;allies;Doin it for the Kids;thompson_mp;20;MOD_PISTOL_BULLET;right_hand;-607.09,2703.85,-23.8749;-617,2215,-23;-87.627;87.1985;stand;stand
+ 31:20 Spawn;0;1;allies;King;springfield_mp;-992.012,2328.01,-22.4743;45
+ 31:22 Spawn;0;4;axis;Chickendales;mp44_mp;1803,1354,-23.875;-138.005
+ 31:22 Item;0;6;Doin it for the Kids;item_health
+ 31:27 Weapon;0;2;Raped Bung;panzerfaust_mp
+ 31:32 D;0;0;allies;Luda-STATS 2.0!!!;0;3;axis;A Figment of Your Imagination;gewehr43_mp;99;MOD_RIFLE_BULLET;head
+ 31:32 D;0;2;axis;Raped Bung;0;6;allies;Doin it for the Kids;thompson_mp;30;MOD_PISTOL_BULLET;left_arm_upper
+ 31:33 D;0;2;axis;Raped Bung;0;6;allies;Doin it for the Kids;thompson_mp;44;MOD_PISTOL_BULLET;torso_upper
+ 31:33 D;0;2;axis;Raped Bung;0;6;allies;Doin it for the Kids;thompson_mp;25;MOD_PISTOL_BULLET;left_arm_lower
+ 31:33 K;0;2;axis;Raped Bung;0;6;allies;Doin it for the Kids;thompson_mp;25;MOD_PISTOL_BULLET;right_leg_lower;332.875,1852.66,8.125;380,2099,8;73.4491;-99.0582;stand;stand
+ 31:33 Weapon;0;4;Chickendales;panzerfaust_mp
+ 31:33 K;0;0;allies;Luda-STATS 2.0!!!;0;3;axis;A Figment of Your Imagination;gewehr43_mp;59;MOD_RIFLE_BULLET;torso_upper;-591.486,2085.9,-7.875;-857,2029,-7;-151.76;11.2775;stand;crouch
+ 31:36 Spawn;0;2;axis;Raped Bung;mp44_mp;-184,1896,-7.87496;-135
+ 31:38 Spawn;0;0;allies;Luda-STATS 2.0!!!;thompson_mp;1080,3488,-23.875;90
+ 31:40 Weapon;0;5;Bukkake-sound a chicken makes;mp44_mp
+ 31:55 D;0;2;axis;Raped Bung;0;6;allies;Doin it for the Kids;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower
+ 31:55 D;0;2;axis;Raped Bung;0;6;allies;Doin it for the Kids;thompson_mp;25;MOD_PISTOL_BULLET;left_arm_lower
+ 31:55 D;0;2;axis;Raped Bung;0;6;allies;Doin it for the Kids;thompson_mp;30;MOD_PISTOL_BULLET;right_arm_upper
+ 31:55 K;0;2;axis;Raped Bung;0;6;allies;Doin it for the Kids;thompson_mp;25;MOD_PISTOL_BULLET;right_arm_lower;-606.243,1895.06,144.125;-11,1874,160;-5.64148;177.918;crouch;stand
+ 31:58 Spawn;0;2;axis;Raped Bung;mp44_mp;-1304,1680.01,-15.7549;45
+ 32:16 Shock;0;0;allies;Luda-STATS 2.0!!!;panzerfaust_mp;1;MOD_PROJECTILE_SPLASH;none
+ 32:16 D;0;0;allies;Luda-STATS 2.0!!!;0;5;axis;Bukkake-sound a chicken makes;panzerfaust_mp;7;MOD_PROJECTILE_SPLASH;none
+ 32:18 K;0;0;allies;Luda-STATS 2.0!!!;0;5;axis;Bukkake-sound a chicken makes;mp44_mp;102;MOD_HEAD_SHOT;head;-47.0653,2198.35,-23.9357;-638,2098,-7;37.3425;9.57458;stand;crouch
+ 32:25 Spawn;0;0;allies;Luda-STATS 2.0!!!;thompson_mp;1872,936,-23.875;-180
+ 32:26 Weapon;0;2;Raped Bung;mp44_mp
+ 32:26 Use;0;2;axis;Raped Bung;1;all;mg42_turret_mp;1;-540.445,1919.05,144.125;-24.4006
+ 32:37 Use;0;2;axis;Raped Bung;1;all;mg42_turret_mp;0;-533.81,1921.88,144.203;-67.4286
+ 32:39 Q;0;7;CDJ Bazooka Pillow
+ 32:54 Use;0;2;axis;Raped Bung;1;all;mg42_turret_mp;1;-537.152,1922.33,144.125;-27.6306
+ 33:01 Use;0;2;axis;Raped Bung;1;all;mg42_turret_mp;0;-524.741,1920.22,144.165;-57.9913
+ 33:06 Use;0;5;axis;Bukkake-sound a chicken makes;1;all;mg42_turret_mp;1;-521.726,1936.72,144.125;-54.5746
+ 33:11 Weapon;0;1;King;panzerfaust_mp
+ 33:12 Use;0;5;axis;Bukkake-sound a chicken makes;1;all;mg42_turret_mp;0;-544.699,1964.68,144.125;-26.0046
+ 33:16 Use;0;2;axis;Raped Bung;1;all;mg42_turret_mp;1;-539.78,1918.93,144.125;-23.4119
+ 33:17 D;0;6;allies;Doin it for the Kids;0;3;axis;A Figment of Your Imagination;gewehr43_mp;59;MOD_RIFLE_BULLET;torso_upper
+ 33:18 Item;0;6;Doin it for the Kids;item_health
+ 33:20 Use;0;2;axis;Raped Bung;1;all;mg42_turret_mp;0;-545.419,1929.63,144.165;-53.6188
+ 33:20 Weapon;0;1;King;fg42_mp
+ 33:30 D;0;6;allies;Doin it for the Kids;0;3;axis;A Figment of Your Imagination;gewehr43_mp;26;MOD_RIFLE_BULLET;left_foot
+ 33:31 D;0;6;allies;Doin it for the Kids;0;3;axis;A Figment of Your Imagination;gewehr43_mp;39;MOD_RIFLE_BULLET;right_leg_upper
+ 33:31 K;0;6;allies;Doin it for the Kids;0;3;axis;A Figment of Your Imagination;gewehr43_mp;52;MOD_RIFLE_BULLET;torso_lower;220.025,1691.45,0.125089;760,1693,64;0.807495;-178.358;stand;crouch
+ 33:33 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;1;-495.973,1944.24,144.125;-89.4617
+ 33:34 Spawn;0;6;allies;Doin it for the Kids;thompson_mp;976.016,-863.939,-5.89044;-180
+ 33:35 D;0;1;allies;King;0;4;axis;Chickendales;mg42_bipod_stand_mp;30;MOD_RIFLE_BULLET;right_leg_lower
+ 33:35 D;0;1;allies;King;0;4;axis;Chickendales;mg42_bipod_stand_mp;24;MOD_RIFLE_BULLET;left_foot
+ 33:40 D;0;1;allies;King;0;4;axis;Chickendales;mg42_bipod_stand_mp;36;MOD_RIFLE_BULLET;left_leg_upper
+ 33:40 K;0;1;allies;King;0;4;axis;Chickendales;mg42_bipod_stand_mp;36;MOD_RIFLE_BULLET;left_leg_upper;-309.688,-368.872,95.3533;-499.65,1945.61,144.125;94.8944;302.505;stand;stand
+ 33:46 Shock;0;6;allies;Doin it for the Kids;fraggrenade_mp;1;MOD_GRENADE_SPLASH;none
+ 33:46 D;0;6;allies;Doin it for the Kids;0;6;allies;Doin it for the Kids;fraggrenade_mp;14;MOD_GRENADE_SPLASH;none
+ 33:50 Spawn;0;1;allies;King;springfield_mp;976.077,-791.959,-4.50126;-180
+ 33:53 Weapon;0;1;King;springfield_mp
+ 33:56 Weapon;0;0;Luda-STATS 2.0!!!;thompson_mp
+ 34:00 D;0;0;allies;Luda-STATS 2.0!!!;0;3;axis;A Figment of Your Imagination;gewehr43_mp;52;MOD_RIFLE_BULLET;torso_lower
+ 34:00 K;0;0;allies;Luda-STATS 2.0!!!;0;3;axis;A Figment of Your Imagination;gewehr43_mp;52;MOD_RIFLE_BULLET;torso_lower;23.9034,2395.49,-23.8749;530,2090,8;153.82;149.189;stand;crouch
+ 34:02 D;0;1;allies;King;0;4;axis;Chickendales;mg42_bipod_stand_mp;53;MOD_RIFLE_BULLET;torso_upper
+ 34:02 K;0;1;allies;King;0;4;axis;Chickendales;mg42_bipod_stand_mp;53;MOD_RIFLE_BULLET;torso_upper;-46.6528,-722.393,81.8071;-504.353,1944.5,144.125;99.2725;302.501;stand;stand
+ 34:05 Spawn;0;1;allies;King;springfield_mp;976.016,-863.939,-5.89044;-180
+ 34:08 Spawn;0;0;allies;Luda-STATS 2.0!!!;thompson_mp;976.077,-791.959,-4.50126;-180
+ 34:18 Weapon;0;6;Doin it for the Kids;thompson_mp
+ 34:35 D;0;4;axis;Chickendales;0;1;allies;King;springfield_mp;60;MOD_RIFLE_BULLET;right_arm_lower
+ 34:37 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;0;-497.367,1940.86,144.125;-83.1445
+ 34:41 K;0;4;axis;Chickendales;0;1;allies;King;springfield_mp;107;MOD_RIFLE_BULLET;torso_upper;-529.331,1985.33,144.125;-174,-746,71;-82.37;97.9102;stand;stand
+ 34:44 Spawn;0;4;axis;Chickendales;mp44_mp;-992.012,2328.01,-22.4743;45
+ 34:48 Weapon;0;1;King;springfield_mp
+ 34:48 Item;0;6;Doin it for the Kids;item_health
+ 34:56 Weapon;0;1;King;panzerfaust_mp
+ 34:57 Use;0;2;axis;Raped Bung;1;all;mg42_turret_mp;1;-520.875,1936.69,144.125;-55.4535
+ 34:59 D;0;0;allies;Luda-STATS 2.0!!!;0;2;axis;Raped Bung;mg42_bipod_stand_mp;48;MOD_RIFLE_BULLET;torso_lower
+ 34:59 D;0;0;allies;Luda-STATS 2.0!!!;0;2;axis;Raped Bung;mg42_bipod_stand_mp;48;MOD_RIFLE_BULLET;torso_lower
+ 35:00 K;0;0;allies;Luda-STATS 2.0!!!;0;2;axis;Raped Bung;mg42_bipod_stand_mp;36;MOD_RIFLE_BULLET;left_leg_upper;-96.5929,1269.54,0.125088;-518.702,1937.59,144.125;101.459;302.499;stand;stand
+ 35:00 Weapon;0;4;Chickendales;mp44_mp
+ 35:02 K;0;2;axis;Raped Bung;0;1;allies;King;springfield_mp;180;MOD_HEAD_SHOT;head;-499.84,1944.95,144.125;-131,-741,76;-85.3748;97.3938;stand;stand
+ 35:02 Use;0;2;axis;Raped Bung;1;all;mg42_turret_mp;0;-556.749,1976.12,144.345;-85.3748
+ 35:03 Weapon;0;4;Chickendales;mp44_mp
+ 35:05 Spawn;0;2;axis;Raped Bung;mp44_mp;-992.012,2328.01,-22.4743;45
+ 35:05 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;1;-534.131,1928.66,144.125;-37.6337
+ 35:10 Spawn;0;0;allies;Luda-STATS 2.0!!!;thompson_mp;976.016,-863.939,-5.89044;-180
+ 35:14 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;0;-553.974,1939.72,144.125;-84.7815
+ 35:24 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;1;-503.078,1944.39,144.125;-81.6833
+ 35:35 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;0;-524.071,1986.99,144.125;-82.6886
+ 35:38 Shock;0;2;axis;Raped Bung;panzerfaust_mp;2;MOD_PROJECTILE_SPLASH;none
+ 35:38 D;0;2;axis;Raped Bung;0;1;allies;King;panzerfaust_mp;28;MOD_PROJECTILE_SPLASH;none
+ 35:38 D;0;1;allies;King;0;2;axis;Raped Bung;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower
+ 35:39 D;0;0;allies;Luda-STATS 2.0!!!;0;3;axis;A Figment of Your Imagination;gewehr43_mp;52;MOD_RIFLE_BULLET;torso_lower
+ 35:40 K;0;0;allies;Luda-STATS 2.0!!!;0;3;axis;A Figment of Your Imagination;gewehr43_mp;99;MOD_HEAD_SHOT;head;946.281,1217.72,112.125;637,1230,0;15.1007;-2.40601;stand;crouch
+ 35:46 Spawn;0;0;allies;Luda-STATS 2.0!!!;thompson_mp;976.077,-791.959,-4.50126;-180
+ 35:57 K;0;0;allies;Luda-STATS 2.0!!!;0;2;axis;Raped Bung;mp44_mp;102;MOD_HEAD_SHOT;head;-375.729,-52.3915,80.7787;-861,397,23;117.74;-43.5498;stand;crouch
+ 35:59 Item;0;1;King;item_health
+ 36:00 Item;0;2;Raped Bung;item_health
+ 36:01 D;0;6;allies;Doin it for the Kids;0;3;axis;A Figment of Your Imagination;gewehr43_mp;52;MOD_RIFLE_BULLET;torso_lower
+ 36:01 D;0;6;allies;Doin it for the Kids;0;3;axis;A Figment of Your Imagination;gewehr43_mp;33;MOD_RIFLE_BULLET;right_arm_lower
+ 36:01 D;0;3;axis;A Figment of Your Imagination;0;6;allies;Doin it for the Kids;thompson_mp;30;MOD_PISTOL_BULLET;right_arm_upper
+ 36:01 D;0;3;axis;A Figment of Your Imagination;0;6;allies;Doin it for the Kids;thompson_mp;25;MOD_PISTOL_BULLET;left_arm_lower
+ 36:01 D;0;3;axis;A Figment of Your Imagination;0;6;allies;Doin it for the Kids;thompson_mp;30;MOD_PISTOL_BULLET;left_arm_upper
+ 36:02 K;0;3;axis;A Figment of Your Imagination;0;6;allies;Doin it for the Kids;thompson_mp;75;MOD_HEAD_SHOT;head;794.003,1573.89,-39.9124;737,1536,-39;-118.564;28.493;prone;stand
+ 36:03 Item;0;6;Doin it for the Kids;item_health
+ 36:04 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;1;-515.509,1939.34,144.125;-64.0778
+ 36:07 Spawn;0;0;allies;Luda-STATS 2.0!!!;thompson_mp;1008,504,160.125;45
+ 36:07 D;0;2;axis;Raped Bung;0;1;allies;King;colt_mp;23;MOD_PISTOL_BULLET;left_leg_lower
+ 36:07 Item;0;6;Doin it for the Kids;item_health
+ 36:07 Weapon;0;6;Doin it for the Kids;thompson_mp
+ 36:08 Spawn;0;3;axis;A Figment of Your Imagination;gewehr43_mp;-1304,1680.01,-15.7549;45
+ 36:09 D;0;1;allies;King;0;2;axis;Raped Bung;mp44_mp;40;MOD_PISTOL_BULLET;left_leg_upper
+ 36:09 D;0;1;allies;King;0;4;axis;Chickendales;mg42_bipod_stand_mp;24;MOD_RIFLE_BULLET;right_foot
+ 36:09 K;0;1;allies;King;0;2;axis;Raped Bung;mp44_mp;34;MOD_PISTOL_BULLET;left_arm_lower;-2.63894,-517.965,110.322;-341,-161,101;128.205;-49.7296;stand;crouch
+ 36:14 Spawn;0;1;allies;King;springfield_mp;1008,504,160.125;45
+ 36:31 Item;0;2;Raped Bung;item_health
+ 36:46 K;0;4;axis;Chickendales;0;1;allies;King;springfield_mp;107;MOD_RIFLE_BULLET;torso_upper;-502.745,1944.46,144.125;-33,-942,51;-82.0184;99.6954;stand;stand
+ 36:46 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;0;-515.646,1930.32,144.258;-82.0184
+ 36:48 Spawn;0;4;axis;Chickendales;mp44_mp;-512,2688,-23.875;-135
+ 36:49 Weapon;0;4;Chickendales;mp44_mp
+ 36:52 D;0;6;allies;Doin it for the Kids;0;3;axis;A Figment of Your Imagination;gewehr43_mp;52;MOD_RIFLE_BULLET;torso_lower
+ 36:52 K;0;6;allies;Doin it for the Kids;0;3;axis;A Figment of Your Imagination;gewehr43_mp;52;MOD_RIFLE_BULLET;torso_lower;510.28,1924.62,-143.875;731,2092,-143;29.8553;-145.294;stand;crouch
+ 36:55 Spawn;0;6;allies;Doin it for the Kids;thompson_mp;974.527,-863.938,-5.87449;-180
+ 36:55 Item;0;2;Raped Bung;item_health
+ 36:55 Weapon;0;1;King;panzerfaust_mp
+ 36:57 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;1;-531.69,1931.91,144.125;-46.0931
+ 37:00 D;0;1;allies;King;0;4;axis;Chickendales;mg42_bipod_stand_mp;36;MOD_RIFLE_BULLET;right_leg_upper
+ 37:00 D;0;1;allies;King;0;4;axis;Chickendales;mg42_bipod_stand_mp;36;MOD_RIFLE_BULLET;right_leg_upper
+ 37:06 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;0;-544.844,1950.68,144.913;-83.2544
+ 37:13 Use;0;2;axis;Raped Bung;1;all;mg42_turret_mp;1;-512.457,1939.56,144.125;-69.2249
+ 37:25 K;0;2;axis;Raped Bung;0;1;allies;King;springfield_mp;180;MOD_HEAD_SHOT;head;-502.794,1944.64,144.125;-135,-747,75;302.503;97.3828;stand;stand
+ 37:26 Use;0;2;axis;Raped Bung;1;all;mg42_turret_mp;0;-512.504,1942.62,144.324;-57.4969
+ 37:31 Spawn;0;2;axis;Raped Bung;mp44_mp;-632,1712,0.125012;-45
+ 37:31 Weapon;0;4;Chickendales;mp44_mp
+ 37:32 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;1;-533.43,1930.24,144.125;-40.4572
+ 37:40 K;0;4;axis;Chickendales;0;1;allies;King;springfield_mp;180;MOD_HEAD_SHOT;head;-502.811,1944.88,144.125;-97,-868,59;-81.8701;98.6957;stand;stand
+ 37:40 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;0;-550.375,1948.7,144.125;-81.8701
+ 37:42 Spawn;0;4;axis;Chickendales;kar98k_sniper_mp;-663.905,440.078,3.92032;-135
+ 37:44 K;0;1;allies;King;0;3;axis;A Figment of Your Imagination;gewehr43_mp;33;MOD_RIFLE_BULLET;left_leg_lower;-111.501,-820.237,63.8361;-348,-352,91;-30.0311;-61.3531;stand;stand
+ 37:49 Spawn;0;1;allies;King;springfield_mp;1960,2304,-23.875;-135
+ 37:50 Use;0;5;axis;Bukkake-sound a chicken makes;1;all;mg42_turret_mp;1;-533.078,1930.96,144.125;-42.0062
+ 37:59 D;0;2;axis;Raped Bung;0;0;allies;Luda-STATS 2.0!!!;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower
+ 37:59 D;0;2;axis;Raped Bung;0;0;allies;Luda-STATS 2.0!!!;thompson_mp;20;MOD_PISTOL_BULLET;right_foot
+ 37:59 K;0;2;axis;Raped Bung;0;0;allies;Luda-STATS 2.0!!!;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower;-420.465,1418.41,0.12509;-103,457,0;99.8383;108.001;stand;stand
+ 38:00 D;0;0;allies;Luda-STATS 2.0!!!;0;5;axis;Bukkake-sound a chicken makes;mg42_bipod_stand_mp;48;MOD_RIFLE_BULLET;torso_lower
+ 38:00 D;0;0;allies;Luda-STATS 2.0!!!;0;5;axis;Bukkake-sound a chicken makes;mg42_bipod_stand_mp;48;MOD_RIFLE_BULLET;torso_lower
+ 38:00 K;0;0;allies;Luda-STATS 2.0!!!;0;5;axis;Bukkake-sound a chicken makes;mg42_bipod_stand_mp;48;MOD_RIFLE_BULLET;torso_lower;-101.55,450.133,0.125089;-508.927,1942.31,144.125;108.111;302.497;stand;stand
+ 38:02 Spawn;0;2;axis;Raped Bung;mp44_mp;-632,1712,0.125012;-45
+ 38:03 Use;0;5;axis;Bukkake-sound a chicken makes;1;all;mg42_turret_mp;0;-558.1,1963.34,144.125;-60.3259
+ 38:10 Weapon;0;1;King;panzerfaust_mp
+ 38:13 D;0;6;allies;Doin it for the Kids;0;2;axis;Raped Bung;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower
+ 38:13 Weapon;0;1;King;springfield_mp
+ 38:15 Spawn;0;0;allies;Luda-STATS 2.0!!!;thompson_mp;976.077,-791.959,-4.50126;-180
+ 38:15 D;0;2;axis;Raped Bung;0;6;allies;Doin it for the Kids;thompson_mp;24;MOD_PISTOL_BULLET;left_leg_lower
+ 38:16 D;0;2;axis;Raped Bung;0;6;allies;Doin it for the Kids;thompson_mp;24;MOD_PISTOL_BULLET;right_leg_lower
+ 38:16 D;0;2;axis;Raped Bung;0;6;allies;Doin it for the Kids;thompson_mp;39;MOD_PISTOL_BULLET;torso_lower
+ 38:16 K;0;2;axis;Raped Bung;0;6;allies;Doin it for the Kids;thompson_mp;29;MOD_PISTOL_BULLET;left_arm_upper;-618.775,2067.25,-7.875;44,2912,-23;52.5641;-128.04;stand;crouch
+ 38:39 Spawn;0;2;axis;Raped Bung;mp44_mp;-632,1712,0.125012;-45
+ 38:39 K;0;6;allies;Doin it for the Kids;0;5;axis;Bukkake-sound a chicken makes;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower;447.551,2745.59,-31.8749;-667,2038,-7;-154.248;32.6733;stand;crouch
+ 38:42 Spawn;0;6;allies;Doin it for the Kids;thompson_mp;974.718,-791.891,-4.3404;-180
+ 38:45 Weapon;0;0;Luda-STATS 2.0!!!;thompson_mp
+ 38:45 Weapon;0;6;Doin it for the Kids;panzerfaust_mp
+ 38:47 Use;0;5;axis;Bukkake-sound a chicken makes;1;all;mg42_turret_mp;1;-522.549,1936.55,144.125;-55.1459
+ 38:49 D;0;0;allies;Luda-STATS 2.0!!!;0;5;axis;Bukkake-sound a chicken makes;mg42_bipod_stand_mp;24;MOD_RIFLE_BULLET;left_foot
+ 38:49 D;0;0;allies;Luda-STATS 2.0!!!;0;5;axis;Bukkake-sound a chicken makes;mg42_bipod_stand_mp;30;MOD_RIFLE_BULLET;left_leg_lower
+ 38:49 D;0;0;allies;Luda-STATS 2.0!!!;0;5;axis;Bukkake-sound a chicken makes;mg42_bipod_stand_mp;30;MOD_RIFLE_BULLET;right_leg_lower
+ 38:51 Use;0;5;axis;Bukkake-sound a chicken makes;1;all;mg42_turret_mp;0;-561.919,1965.63,144.198;-85.8856
+ 38:59 Shock;0;5;axis;Bukkake-sound a chicken makes;panzerfaust_mp;1;MOD_PROJECTILE_SPLASH;none
+ 38:59 D;0;5;axis;Bukkake-sound a chicken makes;0;6;allies;Doin it for the Kids;panzerfaust_mp;12;MOD_PROJECTILE_SPLASH;none
+ 38:59 Shock;0;4;axis;Chickendales;panzerfaust_mp;2;MOD_PROJECTILE_SPLASH;none
+ 38:59 D;0;4;axis;Chickendales;0;6;allies;Doin it for the Kids;panzerfaust_mp;28;MOD_PROJECTILE_SPLASH;none
+ 38:59 Item;0;5;Bukkake-sound a chicken makes;item_health
+ 38:59 Item;0;4;Chickendales;item_health
+ 38:59 Item;0;4;Chickendales;item_health
+ 39:01 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;1;-520.019,1937.19,144.125;-57.8101
+ 39:05 Weapon;0;1;King;fg42_mp
+ 39:09 Weapon;0;6;Doin it for the Kids;panzerfaust_mp
+ 39:09 D;0;4;axis;Chickendales;0;1;allies;King;fg42_mp;53;MOD_RIFLE_BULLET;torso_upper
+ 39:10 Item;0;4;Chickendales;item_health
+ 39:10 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;0;-554.797,1970.1,144.125;-54.6405
+ 39:21 Weapon;0;3;A Figment of Your Imagination;panzerfaust_mp
+ 39:24 D;0;4;axis;Chickendales;0;1;allies;King;fg42_mp;47;MOD_RIFLE_BULLET;torso_lower
+ 39:25 K;0;4;axis;Chickendales;0;1;allies;King;fg42_mp;53;MOD_RIFLE_BULLET;torso_upper;-519.076,1987.22,144.125;-301,-388,96;-84.8529;95.1746;stand;stand
+ 39:28 Spawn;0;4;axis;Chickendales;kar98k_sniper_mp;-992.012,2328.01,-22.4743;45
+ 39:28 Use;0;2;axis;Raped Bung;1;all;mg42_turret_mp;1;-519.378,1936.79,144.125;-59.1833
+ 39:29 D;0;2;axis;Raped Bung;0;0;allies;Luda-STATS 2.0!!!;thompson_mp;25;MOD_PISTOL_BULLET;left_arm_lower
+ 39:30 Use;0;2;axis;Raped Bung;1;all;mg42_turret_mp;0;-517.764,1944.34,145.125;-80.6342
+ 39:31 Use;0;2;axis;Raped Bung;1;all;mg42_turret_mp;1;-502.396,1944.42,144.125;-82.6062
+ 39:32 Use;0;2;axis;Raped Bung;1;all;mg42_turret_mp;0;-510.729,1947.79,144.165;-91.0052
+ 39:35 K;0;0;allies;Luda-STATS 2.0!!!;0;3;axis;A Figment of Your Imagination;panzerfaust_mp;79;MOD_PROJECTILE_SPLASH;none;-521.563,1281.03,0.0192574;9.51998,1257.78,0.125088;86.7865;177.177;stand;crouch
+ 39:35 Shock;0;0;allies;Luda-STATS 2.0!!!;panzerfaust_mp;3;MOD_PROJECTILE_SPLASH;none
+ 39:36 D;0;6;allies;Doin it for the Kids;0;3;axis;A Figment of Your Imagination;gewehr43_mp;33;MOD_RIFLE_BULLET;right_leg_lower
+ 39:37 Weapon;0;5;Bukkake-sound a chicken makes;mp44_mp
+ 39:37 D;0;6;allies;Doin it for the Kids;0;3;axis;A Figment of Your Imagination;gewehr43_mp;52;MOD_RIFLE_BULLET;torso_lower
+ 39:37 D;0;3;axis;A Figment of Your Imagination;0;6;allies;Doin it for the Kids;thompson_mp;20;MOD_PISTOL_BULLET;right_foot
+ 39:37 K;0;6;allies;Doin it for the Kids;0;3;axis;A Figment of Your Imagination;gewehr43_mp;39;MOD_RIFLE_BULLET;left_leg_upper;-685.66,1038.19,0.110065;76,1315,0;19.1766;-160.021;stand;crouch
+ 39:38 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;1;-523.092,1936.36,144.125;-53.0365
+ 39:40 D;0;1;allies;King;0;4;axis;Chickendales;mg42_bipod_stand_mp;36;MOD_RIFLE_BULLET;right_leg_upper
+ 39:40 D;0;1;allies;King;0;4;axis;Chickendales;mg42_bipod_stand_mp;36;MOD_RIFLE_BULLET;right_leg_upper
+ 39:40 K;0;1;allies;King;0;4;axis;Chickendales;mg42_bipod_stand_mp;36;MOD_RIFLE_BULLET;right_leg_upper;-326.573,-496.229,87.3885;-499.559,1945.54,144.125;93.8892;302.505;crouch;stand
+ 39:41 Spawn;0;6;allies;Doin it for the Kids;thompson_mp;1798.95,2694.95,-23.8736;-135
+ 39:42 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;0;-540.996,1968.69,144.125;-80.733
+ 39:44 Spawn;0;1;allies;King;springfield_mp;1800,2696,-23.875;-135
+ 39:44 Weapon;0;4;Chickendales;kar98k_sniper_mp
+ 39:45 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;1;-530.433,1932.51,144.125;-47.6917
+ 39:45 Spawn;0;0;allies;Luda-STATS 2.0!!!;thompson_mp;1800,2696,-23.875;-135
+ 39:50 Weapon;0;2;Raped Bung;mp44_mp
+ 39:51 Item;0;2;Raped Bung;item_health
+ 40:05 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;0;-511.344,1930.37,144.125;-46.4117
+ 40:08 Weapon;0;1;King;panzerfaust_mp
+ 40:10 D;0;5;axis;Bukkake-sound a chicken makes;0;6;allies;Doin it for the Kids;thompson_mp;25;MOD_PISTOL_BULLET;left_leg_lower
+ 40:13 D;0;4;axis;Chickendales;0;0;allies;Luda-STATS 2.0!!!;thompson_mp;19;MOD_PISTOL_BULLET;left_hand
+ 40:18 D;0;4;axis;Chickendales;0;0;allies;Luda-STATS 2.0!!!;thompson_mp;24;MOD_PISTOL_BULLET;left_arm_lower
+ 40:19 D;0;0;allies;Luda-STATS 2.0!!!;0;4;axis;Chickendales;kar98k_sniper_mp;72;MOD_RIFLE_BULLET;left_leg_upper
+ 40:19 Weapon;0;1;King;fg42_mp
+ 40:23 Weapon;0;6;Doin it for the Kids;thompson_mp
+ 40:25 K;0;0;allies;Luda-STATS 2.0!!!;0;4;axis;Chickendales;kar98k_sniper_mp;107;MOD_RIFLE_BULLET;torso_upper;249.437,2591.13,-23.8749;-819,2265,144;-156.231;16.7322;crouch;stand
+ 40:31 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;1;-527.511,1934.21,144.125;-48.4497
+ 40:31 Spawn;0;0;allies;Luda-STATS 2.0!!!;thompson_mp;976.077,-791.959,-4.50126;-180
+ 40:34 K;0;4;axis;Chickendales;0;1;allies;King;fg42_mp;88;MOD_HEAD_SHOT;head;-503.052,1944.88,144.125;-175,-459,104;-81.5845;97.4817;stand;stand
+ 40:34 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;0;-561.626,1974.7,144.126;-81.5845
+ 40:37 Spawn;0;4;axis;Chickendales;kar98k_sniper_mp;224,1816,-143.875;135
+ 40:37 D;0;3;axis;A Figment of Your Imagination;0;6;allies;Doin it for the Kids;thompson_mp;30;MOD_PISTOL_BULLET;left_arm_upper
+ 40:37 D;0;3;axis;A Figment of Your Imagination;0;6;allies;Doin it for the Kids;thompson_mp;25;MOD_PISTOL_BULLET;left_arm_lower
+ 40:37 K;0;3;axis;A Figment of Your Imagination;0;6;allies;Doin it for the Kids;thompson_mp;44;MOD_PISTOL_BULLET;torso_upper;809.409,1583.14,-39.8749;703,1563,-39;178.973;1.5271;prone;stand
+ 40:41 Spawn;0;3;axis;A Figment of Your Imagination;gewehr43_mp;216,2088,-23.875;135
+ 40:41 Item;0;5;Bukkake-sound a chicken makes;item_health
+ 40:41 Use;0;5;axis;Bukkake-sound a chicken makes;1;all;mg42_turret_mp;1;-527.861,1934.23,144.125;-48.1915
+ 40:42 D;0;0;allies;Luda-STATS 2.0!!!;0;5;axis;Bukkake-sound a chicken makes;mg42_bipod_stand_mp;36;MOD_RIFLE_BULLET;left_leg_upper
+ 40:42 D;0;0;allies;Luda-STATS 2.0!!!;0;5;axis;Bukkake-sound a chicken makes;mg42_bipod_stand_mp;30;MOD_RIFLE_BULLET;left_leg_lower
+ 40:42 D;0;0;allies;Luda-STATS 2.0!!!;0;5;axis;Bukkake-sound a chicken makes;mg42_bipod_stand_mp;30;MOD_RIFLE_BULLET;left_leg_lower
+ 40:43 K;0;0;allies;Luda-STATS 2.0!!!;0;5;axis;Bukkake-sound a chicken makes;mg42_bipod_stand_mp;36;MOD_RIFLE_BULLET;right_leg_upper;-119.854,634.604,0.125089;-510.025,1941.66,144.125;134.132;302.499;stand;stand
+ 40:44 Use;0;5;axis;Bukkake-sound a chicken makes;1;all;mg42_turret_mp;0;-567.802,1958.41,145.125;-73.4216
+ 40:47 D;0;4;axis;Chickendales;0;6;allies;Doin it for the Kids;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower
+ 40:48 D;0;4;axis;Chickendales;0;6;allies;Doin it for the Kids;thompson_mp;30;MOD_PISTOL_BULLET;right_leg_upper
+ 40:48 K;0;4;axis;Chickendales;0;6;allies;Doin it for the Kids;thompson_mp;30;MOD_PISTOL_BULLET;right_leg_upper;-85.3066,1262.42,0.125089;295,1002,-7;139.839;142.427;stand;stand
+ 40:49 Spawn;0;0;allies;Luda-STATS 2.0!!!;thompson_mp;976.016,-863.939,-5.89044;-180
+ 40:49 Weapon;0;2;Raped Bung;mp44_mp
+ 40:50 Spawn;0;4;axis;Chickendales;kar98k_sniper_mp;-992.012,2328.01,-22.4743;45
+ 40:53 Weapon;0;3;A Figment of Your Imagination;gewehr43_mp
+ 41:00 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;1;-536.526,1923.57,144.125;-32.4426
+ 41:00 Weapon;0;0;Luda-STATS 2.0!!!;thompson_mp
+ 41:02 D;0;0;allies;Luda-STATS 2.0!!!;0;4;axis;Chickendales;mg42_bipod_stand_mp;36;MOD_RIFLE_BULLET;right_leg_upper
+ 41:02 D;0;0;allies;Luda-STATS 2.0!!!;0;4;axis;Chickendales;mg42_bipod_stand_mp;36;MOD_RIFLE_BULLET;right_leg_upper
+ 41:02 K;0;0;allies;Luda-STATS 2.0!!!;0;4;axis;Chickendales;mg42_bipod_stand_mp;30;MOD_RIFLE_BULLET;left_leg_lower;-48.2102,1076.19,0.124996;-516.759,1938.7,144.125;65.929;302.496;stand;stand
+ 41:05 D;0;1;allies;King;0;4;axis;Chickendales;mg42_bipod_stand_mp;24;MOD_RIFLE_BULLET;right_foot
+ 41:05 D;0;1;allies;King;0;4;axis;Chickendales;mg42_bipod_stand_mp;24;MOD_RIFLE_BULLET;right_foot
+ 41:05 D;0;1;allies;King;0;4;axis;Chickendales;mg42_bipod_stand_mp;30;MOD_RIFLE_BULLET;right_leg_lower
+ 41:05 Item;0;1;King;item_health
+ 41:05 D;0;1;allies;King;0;4;axis;Chickendales;mg42_bipod_stand_mp;24;MOD_RIFLE_BULLET;right_foot
+ 41:05 K;0;1;allies;King;0;4;axis;Chickendales;mg42_bipod_stand_mp;24;MOD_RIFLE_BULLET;right_foot;-303.706,-468.245,93.3915;-500.146,1945.17,144.125;94.9988;302.505;stand;stand
+ 41:05 Spawn;0;0;allies;Luda-STATS 2.0!!!;thompson_mp;974.718,-791.891,-4.3404;-180
+ 41:08 Spawn;0;1;allies;King;springfield_mp;976.016,-863.939,-5.89044;-180
+ 41:12 Weapon;0;1;King;panzerfaust_mp
+ 41:14 D;0;6;allies;Doin it for the Kids;0;3;axis;A Figment of Your Imagination;gewehr43_mp;52;MOD_RIFLE_BULLET;torso_lower
+ 41:15 K;0;6;allies;Doin it for the Kids;0;3;axis;A Figment of Your Imagination;gewehr43_mp;52;MOD_RIFLE_BULLET;torso_lower;641.303,219.753,-7.87494;395,1133,8;105.084;-74.5532;stand;crouch
+ 41:18 Spawn;0;6;allies;Doin it for the Kids;thompson_mp;974.527,-863.938,-5.87449;-180
+ 41:19 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;0;-550.781,1932.59,144.765;-84.3201
+ 41:20 D;0;3;axis;A Figment of Your Imagination;0;0;allies;Luda-STATS 2.0!!!;thompson_mp;24;MOD_PISTOL_BULLET;left_leg_lower
+ 41:20 Weapon;0;5;Bukkake-sound a chicken makes;mp44_mp
+ 41:22 Use;0;2;axis;Raped Bung;1;all;mg42_turret_mp;1;-520.386,1936.65,144.125;302.503
+ 41:23 Weapon;0;1;King;fg42_mp
+ 41:24 D;0;1;allies;King;0;2;axis;Raped Bung;mg42_bipod_stand_mp;36;MOD_RIFLE_BULLET;left_leg_upper
+ 41:24 D;0;1;allies;King;0;2;axis;Raped Bung;mg42_bipod_stand_mp;36;MOD_RIFLE_BULLET;left_leg_upper
+ 41:24 K;0;1;allies;King;0;2;axis;Raped Bung;mg42_bipod_stand_mp;36;MOD_RIFLE_BULLET;left_leg_upper;-270.155,-424.301,98.7218;-500.695,1945.27,144.125;61.7926;302.505;stand;stand
+ 41:27 D;0;2;axis;Raped Bung;0;2;axis;Raped Bung;kar98k_sniper_mp;90;MOD_RIFLE_BULLET;head
+ 41:27 Item;0;4;Chickendales;item_health
+ 41:27 Use;0;2;axis;Raped Bung;1;all;mg42_turret_mp;0;-510.3,1919.1,145.125;-63.9404
+ 41:28 Spawn;0;1;allies;King;springfield_mp;976.016,-863.939,-5.89044;-180
+ 41:32 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;1;-509.878,1941.71,144.125;-73.125
+ 41:42 K;0;4;axis;Chickendales;0;1;allies;King;springfield_mp;180;MOD_HEAD_SHOT;head;-503.461,1944.34,144.125;-58,-919,54;-81.2384;99.1571;stand;crouch
+ 41:42 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;0;-540.218,1988.49,144.609;-81.2384
+ 41:46 Spawn;0;4;axis;Chickendales;kar98k_sniper_mp;-992.012,2328.01,-22.4743;45
+ 41:47 Item;0;3;A Figment of Your Imagination;item_health
+ 41:48 Item;0;2;Raped Bung;item_health
+ 41:49 Use;0;5;axis;Bukkake-sound a chicken makes;1;all;mg42_turret_mp;1;-507.043,1942.33,144.125;-76.7395
+ 41:53 D;0;0;allies;Luda-STATS 2.0!!!;0;3;axis;A Figment of Your Imagination;gewehr43_mp;39;MOD_RIFLE_BULLET;right_leg_upper
+ 41:53 Weapon;0;1;King;fg42_mp
+ 41:53 D;0;0;allies;Luda-STATS 2.0!!!;0;3;axis;A Figment of Your Imagination;gewehr43_mp;52;MOD_RIFLE_BULLET;torso_lower
+ 41:53 K;0;0;allies;Luda-STATS 2.0!!!;0;3;axis;A Figment of Your Imagination;gewehr43_mp;52;MOD_RIFLE_BULLET;torso_lower;634.293,758.044,0.124996;68,1071,0;-117.301;-28.4326;stand;crouch
+ 41:54 Rank;0;3;axis;A Figment of Your Imagination;1
+ 41:54 D;0;3;axis;A Figment of Your Imagination;0;6;allies;Doin it for the Kids;thompson_mp;30;MOD_PISTOL_BULLET;right_arm_upper
+ 41:55 D;0;3;axis;A Figment of Your Imagination;0;6;allies;Doin it for the Kids;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower
+ 41:55 D;0;1;allies;King;0;5;axis;Bukkake-sound a chicken makes;mg42_bipod_stand_mp;48;MOD_RIFLE_BULLET;torso_lower
+ 41:55 D;0;3;axis;A Figment of Your Imagination;0;6;allies;Doin it for the Kids;thompson_mp;20;MOD_PISTOL_BULLET;left_foot
+ 41:55 K;0;3;axis;A Figment of Your Imagination;0;6;allies;Doin it for the Kids;thompson_mp;30;MOD_PISTOL_BULLET;right_leg_upper;161.358,1079.36,0.125089;306,995,-7;-59.3427;152.996;crouch;stand
+ 41:55 D;0;1;allies;King;0;5;axis;Bukkake-sound a chicken makes;mg42_bipod_stand_mp;48;MOD_RIFLE_BULLET;torso_lower
+ 41:55 K;0;1;allies;King;0;5;axis;Bukkake-sound a chicken makes;mg42_bipod_stand_mp;48;MOD_RIFLE_BULLET;torso_lower;-302.114,-643.314,72.9067;-499.745,1945.56,144.125;-36.7218;302.505;stand;stand
+ 41:57 Use;0;5;axis;Bukkake-sound a chicken makes;1;all;mg42_turret_mp;0;-547.231,1985.08,144.659;-85.6824
+ 42:00 Spawn;0;1;allies;King;springfield_mp;1872,936,-23.875;-180
+ 42:01 Spawn;0;3;axis;A Figment of Your Imagination;gewehr43_mp;-632,1712,0.125012;-45
+ 42:01 Spawn;0;0;allies;Luda-STATS 2.0!!!;thompson_mp;1803,1354,-23.875;-138.005
+ 42:02 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;1;-502.891,1943.9,144.125;-81.8152
+ 42:08 Item;0;2;Raped Bung;item_health
+ 42:09 Weapon;0;0;Luda-STATS 2.0!!!;thompson_mp
+ 42:16 D;0;0;allies;Luda-STATS 2.0!!!;0;4;axis;Chickendales;mg42_bipod_stand_mp;48;MOD_RIFLE_BULLET;torso_lower
+ 42:16 D;0;0;allies;Luda-STATS 2.0!!!;0;4;axis;Chickendales;mg42_bipod_stand_mp;48;MOD_RIFLE_BULLET;torso_lower
+ 42:16 K;0;0;allies;Luda-STATS 2.0!!!;0;4;axis;Chickendales;mg42_bipod_stand_mp;48;MOD_RIFLE_BULLET;torso_lower;521.755,544.999,-7.87489;-523.748,1936.49,144.125;128.606;302.503;stand;stand
+ 42:19 Spawn;0;0;allies;Luda-STATS 2.0!!!;thompson_mp;976.016,-863.939,-5.89044;-180
+ 42:24 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;0;-508.73,1945.92,144.125;-83.0951
+ 42:33 K;0;4;axis;Chickendales;0;1;allies;King;springfield_mp;180;MOD_HEAD_SHOT;head;-508.066,1982.67,144.125;-51,-857,59;-81.189;99.0857;stand;crouch
+ 42:37 Spawn;0;4;axis;Chickendales;kar98k_sniper_mp;-184,1896,-7.87496;-135
+ 42:38 D;0;1;allies;King;0;3;axis;A Figment of Your Imagination;gewehr43_mp;39;MOD_RIFLE_BULLET;right_leg_upper
+ 42:39 D;0;1;allies;King;0;3;axis;A Figment of Your Imagination;gewehr43_mp;52;MOD_RIFLE_BULLET;torso_lower
+ 42:39 Item;0;1;King;item_health
+ 42:39 Item;0;1;King;item_health
+ 42:39 D;0;1;allies;King;0;3;axis;A Figment of Your Imagination;gewehr43_mp;39;MOD_RIFLE_BULLET;right_leg_upper
+ 42:42 K;0;1;allies;King;0;3;axis;A Figment of Your Imagination;gewehr43_mp;39;MOD_RIFLE_BULLET;right_leg_upper;-232.869,-311.125,101.42;16,-804,67;-62.5726;116.785;crouch;crouch
+ 42:43 D;0;6;allies;Doin it for the Kids;0;2;axis;Raped Bung;mp44_mp;27;MOD_PISTOL_BULLET;left_hand
+ 42:44 Use;0;5;axis;Bukkake-sound a chicken makes;1;all;mg42_turret_mp;1;-503.379,1943.59,144.125;-81.2
+ 42:44 D;0;6;allies;Doin it for the Kids;0;2;axis;Raped Bung;mp44_mp;34;MOD_PISTOL_BULLET;right_arm_lower
+ 42:44 D;0;2;axis;Raped Bung;0;6;allies;Doin it for the Kids;thompson_mp;30;MOD_PISTOL_BULLET;left_leg_upper
+ 42:44 D;0;2;axis;Raped Bung;0;6;allies;Doin it for the Kids;thompson_mp;20;MOD_PISTOL_BULLET;right_hand
+ 42:44 K;0;2;axis;Raped Bung;0;6;allies;Doin it for the Kids;thompson_mp;20;MOD_PISTOL_BULLET;right_hand;485.433,1740.52,160.125;745,1703,64;4.37805;174.007;stand;stand
+ 42:45 Rank;0;6;allies;Doin it for the Kids;1
+ 42:46 Spawn;0;1;allies;King;springfield_mp;1368,2608,-23.875;45
+ 42:47 Item;0;6;Doin it for the Kids;item_health
+ 42:47 Spawn;0;2;axis;Raped Bung;mp44_mp;-663.905,440.078,3.92032;-135
+ 42:56 Weapon;0;0;Luda-STATS 2.0!!!;thompson_mp
+ 42:57 Use;0;5;axis;Bukkake-sound a chicken makes;1;all;mg42_turret_mp;0;-519.263,1993.87,144.165;-73.7018
+ 43:00 D;0;4;axis;Chickendales;0;0;allies;Luda-STATS 2.0!!!;thompson_mp;30;MOD_PISTOL_BULLET;left_arm_upper
+ 43:00 K;0;4;axis;Chickendales;0;0;allies;Luda-STATS 2.0!!!;thompson_mp;75;MOD_HEAD_SHOT;head;-784.422,1973.81,144.125;-798,1947,144;-132.16;45.0439;crouch;stand
+ 43:02 Spawn;0;4;axis;Chickendales;kar98k_sniper_mp;-1304,1680.01,-15.7549;45
+ 43:02 D;0;0;allies;Luda-STATS 2.0!!!;0;2;axis;Raped Bung;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower
+ 43:02 Item;0;0;Luda-STATS 2.0!!!;item_health
+ 43:03 D;0;0;allies;Luda-STATS 2.0!!!;0;2;axis;Raped Bung;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower
+ 43:03 K;0;0;allies;Luda-STATS 2.0!!!;0;2;axis;Raped Bung;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower;-791.8,1954.81,144.125;-867,1856,96;31.6791;60.3314;stand;stand
+ 43:06 Spawn;0;0;allies;Luda-STATS 2.0!!!;thompson_mp;1803,1354,-23.875;-138.005
+ 43:20 Weapon;0;1;King;panzerfaust_mp
+ 43:28 Use;0;2;axis;Raped Bung;1;all;mg42_turret_mp;1;-504.741,1943.27,144.125;-79.5081
+ 43:32 Use;0;2;axis;Raped Bung;1;all;mg42_turret_mp;0;-515.314,1944.77,144.125;-81.8536
+ 43:34 Use;0;2;axis;Raped Bung;1;all;mg42_turret_mp;1;-506.147,1942.79,144.125;-77.6678
+ 43:37 D;0;1;allies;King;0;3;axis;A Figment of Your Imagination;gewehr43_mp;59;MOD_RIFLE_BULLET;torso_upper
+ 43:37 K;0;1;allies;King;0;3;axis;A Figment of Your Imagination;gewehr43_mp;99;MOD_RIFLE_BULLET;neck;-89.2552,-834.613,61.7799;240,-823,49;98.6353;-176.836;crouch;crouch
+ 43:38 D;0;2;axis;Raped Bung;0;0;allies;Luda-STATS 2.0!!!;thompson_mp;72;MOD_PISTOL_BULLET;head
+ 43:38 Item;0;2;Raped Bung;item_health
+ 43:39 Item;0;2;Raped Bung;item_health
+ 43:39 Use;0;2;axis;Raped Bung;1;all;mg42_turret_mp;0;-506.523,1963.82,144.645;-81.3263
+ 43:39 D;0;2;axis;Raped Bung;0;0;allies;Luda-STATS 2.0!!!;thompson_mp;72;MOD_PISTOL_BULLET;head
+ 43:40 Spawn;0;1;allies;King;springfield_mp;176,520,0.125;90
+ 43:41 Item;0;2;Raped Bung;item_health
+ 43:48 Use;0;5;axis;Bukkake-sound a chicken makes;1;all;mg42_turret_mp;1;-524.572,1935.73,144.125;-51.6522
+ 43:51 D;0;0;allies;Luda-STATS 2.0!!!;0;3;axis;A Figment of Your Imagination;gewehr43_mp;52;MOD_RIFLE_BULLET;torso_lower
+ 43:51 D;0;5;axis;Bukkake-sound a chicken makes;0;6;allies;Doin it for the Kids;thompson_mp;25;MOD_PISTOL_BULLET;left_arm_lower
+ 43:51 D;0;5;axis;Bukkake-sound a chicken makes;0;6;allies;Doin it for the Kids;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower
+ 43:52 D;0;0;allies;Luda-STATS 2.0!!!;0;3;axis;A Figment of Your Imagination;gewehr43_mp;39;MOD_RIFLE_BULLET;left_leg_upper
+ 43:52 D;0;5;axis;Bukkake-sound a chicken makes;0;6;allies;Doin it for the Kids;thompson_mp;25;MOD_PISTOL_BULLET;left_arm_lower
+ 43:52 K;0;5;axis;Bukkake-sound a chicken makes;0;6;allies;Doin it for the Kids;thompson_mp;25;MOD_PISTOL_BULLET;left_arm_lower;-520.963,1937.29,144.125;-489,1827,153;-64.0833;103.557;stand;stand
+ 43:52 Use;0;5;axis;Bukkake-sound a chicken makes;1;all;mg42_turret_mp;0;-548.821,1979.89,144.125;-64.0833
+ 43:52 K;0;0;allies;Luda-STATS 2.0!!!;0;3;axis;A Figment of Your Imagination;gewehr43_mp;52;MOD_RIFLE_BULLET;torso_lower;-518.275,1284.33,0.019269;-840,587,6;99.4592;64.8029;stand;crouch
+ 43:55 Spawn;0;5;axis;Bukkake-sound a chicken makes;mp44_mp;-1176.01,1560.01,-13.9576;45
+ 43:55 Weapon;0;4;Chickendales;kar98k_sniper_mp
+ 43:58 Weapon;0;1;King;springfield_mp
+ 43:59 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;1;-511.425,1941.5,144.125;-71.0596
+ 43:59 D;0;5;axis;Bukkake-sound a chicken makes;0;6;allies;Doin it for the Kids;thompson_mp;30;MOD_PISTOL_BULLET;left_leg_upper
+ 43:59 D;0;5;axis;Bukkake-sound a chicken makes;0;6;allies;Doin it for the Kids;thompson_mp;30;MOD_PISTOL_BULLET;right_arm_upper
+ 44:00 D;0;5;axis;Bukkake-sound a chicken makes;0;6;allies;Doin it for the Kids;thompson_mp;30;MOD_PISTOL_BULLET;left_arm_upper
+ 44:00 K;0;5;axis;Bukkake-sound a chicken makes;0;6;allies;Doin it for the Kids;thompson_mp;25;MOD_PISTOL_BULLET;left_arm_lower;-602.821,1512.93,0.125089;-627,1605,0;113.066;-77.7228;stand;stand
+ 44:02 Item;0;6;Doin it for the Kids;item_health
+ 44:02 Spawn;0;0;allies;Luda-STATS 2.0!!!;thompson_mp;976.016,-863.939,-5.89044;-180
+ 44:02 Spawn;0;5;axis;Bukkake-sound a chicken makes;mp44_mp;-1304,1680.01,-15.7549;45
+ 44:04 D;0;6;allies;Doin it for the Kids;0;5;axis;Bukkake-sound a chicken makes;mp44_mp;34;MOD_PISTOL_BULLET;left_leg_lower
+ 44:05 D;0;6;allies;Doin it for the Kids;0;5;axis;Bukkake-sound a chicken makes;mp44_mp;40;MOD_PISTOL_BULLET;right_leg_upper
+ 44:05 D;0;5;axis;Bukkake-sound a chicken makes;0;6;allies;Doin it for the Kids;thompson_mp;30;MOD_PISTOL_BULLET;left_leg_upper
+ 44:06 D;0;5;axis;Bukkake-sound a chicken makes;0;6;allies;Doin it for the Kids;thompson_mp;25;MOD_PISTOL_BULLET;left_leg_lower
+ 44:06 D;0;5;axis;Bukkake-sound a chicken makes;0;6;allies;Doin it for the Kids;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower
+ 44:06 K;0;5;axis;Bukkake-sound a chicken makes;0;6;allies;Doin it for the Kids;thompson_mp;25;MOD_PISTOL_BULLET;left_arm_lower;-939.207,1921.88,-7.875;-836,2030,-7;52.9156;-130.88;stand;stand
+ 44:07 Weapon;0;1;King;panzerfaust_mp
+ 44:07 Item;0;6;Doin it for the Kids;item_health
+ 44:09 Spawn;0;5;axis;Bukkake-sound a chicken makes;mp44_mp;-632,1712,0.125012;-45
+ 44:09 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;0;-529.2,1977.35,144.209;-80.6946
+ 44:11 Weapon;0;6;Doin it for the Kids;mp44_mp
+ 44:14 K;0;6;allies;Doin it for the Kids;0;2;axis;Raped Bung;mp44_mp;102;MOD_HEAD_SHOT;head;-682.796,1939.21,0.124999;-800,1801,96;-138.17;51.9104;stand;crouch
+ 44:16 K;0;1;allies;King;0;4;axis;Chickendales;kar98k_sniper_mp;180;MOD_HEAD_SHOT;head;-89.2677,-827.267,62.9228;-511,1985,144;96.438;-81.3647;crouch;stand
+ 44:17 Spawn;0;6;allies;Doin it for the Kids;thompson_mp;1872,936,-23.875;-180
+ 44:17 Weapon;0;2;Raped Bung;mp44_mp
+ 44:18 Item;0;2;Raped Bung;item_health
+ 44:18 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;1;-505.86,1943.38,144.125;-77.926
+ 44:20 Spawn;0;1;allies;King;springfield_mp;1803,1354,-23.875;-138.005
+ 44:26 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;0;-510.114,1919.28,144.193;-79.4916
+ 44:28 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;1;-498.476,1944.92,144.125;-86.9183
+ 44:35 Item;0;2;Raped Bung;item_health
+ 44:35 Weapon;0;6;Doin it for the Kids;panzerfaust_mp
+ 44:35 D;0;6;allies;Doin it for the Kids;0;3;axis;A Figment of Your Imagination;gewehr43_mp;33;MOD_RIFLE_BULLET;left_arm_lower
+ 44:36 D;0;6;allies;Doin it for the Kids;0;3;axis;A Figment of Your Imagination;gewehr43_mp;39;MOD_RIFLE_BULLET;right_leg_upper
+ 44:36 Use;0;4;axis;Chickendales;1;all;mg42_turret_mp;0;-513.003,1982.61,144.126;-87.1161
+ 44:37 Shock;0;3;axis;A Figment of Your Imagination;panzerfaust_mp;3;MOD_PROJECTILE_SPLASH;none
+ 44:37 D;0;3;axis;A Figment of Your Imagination;0;6;allies;Doin it for the Kids;panzerfaust_mp;80;MOD_PROJECTILE_SPLASH;none
+ 44:39 K;0;3;axis;A Figment of Your Imagination;0;6;allies;Doin it for the Kids;thompson_mp;30;MOD_PISTOL_BULLET;left_arm_upper;-49.4501,-732.064,79.8783;-18,-489,110;61.3751;-96.5094;stand;stand
+ 44:40 Item;0;6;Doin it for the Kids;item_health
+ 44:40 Item;0;6;Doin it for the Kids;item_health
+ 44:40 Item;0;6;Doin it for the Kids;item_health
+ 44:43 Use;0;2;axis;Raped Bung;1;all;mg42_turret_mp;1;-510.862,1941.09,144.125;302.502
+ 44:44 Weapon;0;6;Doin it for the Kids;panzerfaust_mp

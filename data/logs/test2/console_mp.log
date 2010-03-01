@@ -1,0 +1,5415 @@
+logfile opened on Fri Feb 26 22:56:27 2010
+
+      cvar set g_log games_mp.log
+      cvar set g_logsync 1
+      cvar set g_banips 
+      cvar set sv_kickbantime 300
+      cvar set sv_fps 20
+      cvar set sv_allowanonymous 0
+      cvar set sv_floodprotect 1
+      cvar set sv_maxrate 25000
+      cvar set sv_dl_maxrate 900000
+      cvar set sv_maxping 999
+      cvar set sv_minping 0
+      cvar set sv_timeout 960
+      cvar set g_gametype tdm
+g_gametype will be changed upon restarting.
+      cvar set g_allowvote 1
+      cvar set g_deadChat 1
+      cvar set scr_allow_vote 1
+      cvar set scr_drawfriend 1
+      cvar set scr_forcerespawn 0
+      cvar set scr_friendlyfire 3
+      cvar set scr_killcam 1
+      cvar set scr_freelook 1
+      cvar set scr_spectateenemy 1
+      cvar set scr_teambalance 0
+      cvar set scr_dm_scorelimit 0
+      cvar set scr_dm_timelimit 30
+      cvar set scr_tdm_scorelimit 0
+      cvar set scr_tdm_timelimit 30
+      cvar set scr_bel_scorelimit 0
+      cvar set scr_bel_timelimit 30
+      cvar set scr_bel_alivepointtime 10
+      cvar set scr_re_scorelimit 0
+      cvar set scr_re_timelimit 30
+      cvar set scr_re_graceperiod 15
+      cvar set scr_re_roundlength 5
+      cvar set scr_re_roundlimit 0
+      cvar set scr_re_showcarrier 1
+      cvar set scr_sd_scorelimit 0
+      cvar set scr_sd_timelimit 30
+      cvar set scr_sd_graceperiod 15
+      cvar set scr_sd_roundlength 5
+      cvar set scr_sd_roundlimit 0
+      cvar set scr_hq_scorelimit 0
+      cvar set scr_hq_timelimit 30
+      cvar set scr_allow_m1carbine 1
+      cvar set scr_allow_m1garand 1
+      cvar set scr_allow_thompson 1
+      cvar set scr_allow_bar 1
+      cvar set scr_allow_enfield 1
+      cvar set scr_allow_sten 1
+      cvar set scr_allow_bren 1
+      cvar set scr_allow_springfield 1
+      cvar set scr_allow_kar98k 1
+      cvar set scr_allow_mp40 1
+      cvar set scr_allow_mp44 1
+      cvar set scr_allow_kar98ksniper 1
+      cvar set scr_allow_nagant 1
+      cvar set scr_allow_ppsh 1
+      cvar set scr_allow_nagantsniper 1
+      cvar set scr_allow_fg42 1
+      cvar set scr_allow_panzerfaust 1
+      cvar set g_allowvotetempbanuser 1
+      cvar set g_allowvotetempbanclient 1
+      cvar set g_allowvotekick 1
+      cvar set g_allowvoteclientkick 1
+      cvar set g_allowvotegametype 1
+      cvar set g_allowvotetypemap 1
+      cvar set g_allowvotemap 1
+      cvar set g_allowvotemaprotate 1
+      cvar set g_allowvotemaprestart 1
+      cvar set scr_shellshock 1
+      cvar set scr_drophealth 1
+      cvar set scr_battlerank 1
+      cvar set scr_allow_pistols 1
+      cvar set scr_allow_satchel 1
+      cvar set scr_allow_smoke 1
+      cvar set scr_allow_grenades 1
+      cvar set scr_allow_flamethrower 1
+      cvar set scr_allow_artillery 1
+      cvar set scr_allow_bazooka 1
+      cvar set scr_allow_mg34 1
+      cvar set scr_allow_dp28 1
+      cvar set scr_allow_mg30cal 1
+      cvar set scr_allow_gewehr43 1
+      cvar set scr_allow_svt40 1
+      cvar set scr_allow_flak88 1
+      cvar set scr_allow_su152 1
+      cvar set scr_allow_elefant 1
+      cvar set scr_allow_panzeriv 1
+      cvar set scr_allow_t34 1
+      cvar set scr_allow_sherman 1
+      cvar set scr_allow_horch 1
+      cvar set scr_allow_gaz67b 1
+      cvar set scr_allow_willyjeep 1
+      cvar set scr_bas_scorelimit 0
+      cvar set scr_bas_timelimit 60
+      cvar set scr_bas_roundlimit 0
+      cvar set scr_bas_roundlength 20
+      cvar set scr_bas_respawn_wave_time 10
+      cvar set scr_bas_startrounddelay 15
+      cvar set scr_bas_endrounddelay 10
+      cvar set scr_bas_clearscoreeachround 0
+      cvar set scr_ctf_scorelimit 0
+      cvar set scr_ctf_timelimit 60
+      cvar set scr_ctf_roundlimit 0
+      cvar set scr_ctf_roundlength 20
+      cvar set scr_ctf_startrounddelay 10
+      cvar set scr_ctf_endrounddelay 10
+      cvar set scr_ctf_clearscoreeachround 0
+      cvar set scr_ctf_showoncompass 1
+      cvar set scr_dom_scorelimit 0
+      cvar set scr_dom_timelimit 60
+      cvar set scr_dom_roundlimit 0
+      cvar set scr_dom_roundlength 20
+      cvar set scr_dom_respawn_wave_time 10
+      cvar set scr_dom_startrounddelay 10
+      cvar set scr_dom_endrounddelay 10
+      cvar set scr_dom_clearscoreeachround 0
+      cvar set scr_ftf_timelimit 20
+      cvar set scr_ftf_scorelimit 10
+      cvar set scr_ftf_mode 3
+      cvar set scr_ftf_holdtime 90
+      cvar set scr_ftf_flagspawndelay 20
+      cvar set scr_ftf_flagrecovertime 10
+      cvar set scr_ftf_removeflagspawns 1
+      cvar set scr_ftf_respawntime 0
+      cvar set scr_ftf_flagicons 1
+      cvar set scr_forcerespawn_ftf 0
+      cvar set scr_ftf_flagmodel cow_standing
+      cvar set scr_ftf_flagmodel_dropped cow_dead
+      cvar set scr_ftf_flagname cow
+couldn't exec mp_peaks_dm.cfg
+      cvar set g_gametype tdm
+------ Server Initialization ------
+Server: mp_peaks
+Hunk_Clear: reset the hunk ok
+Current language: english
+Current search path:
+C:\Program Files\Call of Duty/cod-stats
+C:\Program Files\Call of Duty\uo\uomappack00.pk3 (143 files)
+C:\Program Files\Call of Duty\uo\stoop-warehouse-fun.pk3 (6 files)
+C:\Program Files\Call of Duty\uo\stoop-reserves.pk3 (16 files)
+C:\Program Files\Call of Duty\uo\stoop-jeeparena.pk3 (24 files)
+C:\Program Files\Call of Duty\uo\stoop-enclave.pk3 (16 files)
+C:\Program Files\Call of Duty\uo\pakuo07.pk3 (157 files)
+C:\Program Files\Call of Duty\uo\pakuo06.pk3 (12 files)
+C:\Program Files\Call of Duty\uo\pakuo05.pk3 (3 files)
+C:\Program Files\Call of Duty\uo\pakuo04.pk3 (7646 files)
+C:\Program Files\Call of Duty\uo\pakuo03.pk3 (2275 files)
+C:\Program Files\Call of Duty\uo\pakuo02.pk3 (790 files)
+C:\Program Files\Call of Duty\uo\pakuo01.pk3 (1657 files)
+C:\Program Files\Call of Duty\uo\pakuo00.pk3 (6233 files)
+C:\Program Files\Call of Duty/uo
+C:\Program Files\Call of Duty\main\paka.pk3 (41 files)
+C:\Program Files\Call of Duty\main\pak9.pk3 (149 files)
+C:\Program Files\Call of Duty\main\pak8.pk3 (235 files)
+C:\Program Files\Call of Duty\main\pak6.pk3 (3 files)
+C:\Program Files\Call of Duty\main\pak5.pk3 (4858 files)
+C:\Program Files\Call of Duty\main\pak4.pk3 (1668 files)
+C:\Program Files\Call of Duty\main\pak3.pk3 (1992 files)
+C:\Program Files\Call of Duty\main\pak2.pk3 (694 files)
+C:\Program Files\Call of Duty\main\pak1.pk3 (2642 files)
+C:\Program Files\Call of Duty\main\pak0.pk3 (12816 files)
+C:\Program Files\Call of Duty/main
+C:\Program Files\Call of Duty\uo\localized_english_pakuo02.pk3 (12 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\uo\localized_english_pakuo01.pk3 (37 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\uo\localized_english_pakuo00.pk3 (2578 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\main\localized_english_pak3.pk3 (7 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\main\localized_english_pak2.pk3 (9 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\main\localized_english_pak1.pk3 (3736 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\main\localized_english_pak0.pk3 (1204 files)
+    localized assets pak file for english
+
+File Handles:
+handle 1: console_mp.log
+----------------------
+51659 files in pk3 files
+      cvar set cl_languagesavailable 1
+      cvar set sv_running 1
+      cvar set g_gametype tdm
+      cvar set nextmap map_restart
+      cvar set com_expectedhunkusage 90603904
+      cvar set cl_paused 0
+      cvar set cm_playerCurveClip 1
+      cvar set mapname mp_peaks
+      cvar set sv_serverid 16
+      cvar set sv_serverRestarting 1
+------- Game Initialization -------
+gamename: CoD:United Offensive
+gamedate: Dec  6 2004
+      cvar set cg_atmos -1
+      cvar set g_gravity 800
+0 teams with 0 entities
+      cvar set ui_allowvote 1
+      cvar set ui_allowVoteMapRestart 1
+      cvar set ui_allowVoteMapRotate 1
+      cvar set ui_allowVoteTypeMap 1
+      cvar set ui_allowVoteMap 1
+      cvar set ui_allowVoteGameType 1
+      cvar set ui_allowVoteKick 1
+      cvar set ui_allowVoteClientKick 1
+      cvar set ui_allowVoteTempBanUser 1
+      cvar set ui_allowVoteTempBanClient 1
+      cvar set ui_allowVoteDrawFriend 0
+      cvar set ui_allowVoteKillCam 0
+      cvar set ui_allowVoteFriendlyFire 0
+      cvar set ui_drawfriend 1
+      cvar set ui_friendlyfire 3
+      cvar set ui_killcam 1
+      cvar set ui_timeoutsAllowed 0
+      cvar set ui_timeoutBank 180000
+      cvar set ui_timeoutLength 90000
+      cvar set ui_timeoutRecovery 10000
+      cvar set cg_atmos -1
+-----------------------------------
+      cvar set scr_rank_ppr 10
+      cvar set scr_artillery_first_interval 45
+      cvar set scr_artillery_interval 120
+      cvar set scr_artillery_interval_range 15
+      cvar set scr_forcerank 0
+      cvar set ui_tdm_timelimit 30
+      cvar set ui_tdm_scorelimit 0
+      cvar set scr_teamscorepenalty 1
+      cvar set ui_battlerank 1
+      cvar set ui_shellshock 1
+      cvar set cg_hudcompassMaxRange 1024
+      cvar set scr_killcam 1
+      cvar set scr_ceasefire 0
+      cvar set sv_night 0
+      cvar set scr_tank_respawn_wait 10
+      cvar set scr_tank_spawn_limit 0
+      cvar set scr_allow_tanks 1
+      cvar set ui_allow_tanks 1
+      cvar set scr_allow_t34 1
+      cvar set ui_allow_t34 1
+      cvar set scr_allow_elefant 1
+      cvar set ui_allow_elefant 1
+      cvar set scr_allow_sherman 1
+      cvar set ui_allow_sherman 1
+      cvar set scr_allow_panzeriv 1
+      cvar set ui_allow_panzeriv 1
+      cvar set scr_allow_su152 1
+      cvar set ui_allow_su152 1
+      cvar set scr_jeep_respawn_wait 5
+      cvar set scr_jeep_spawn_limit 0
+      cvar set scr_allow_jeeps 1
+      cvar set ui_allow_jeeps 1
+      cvar set scr_allow_willyjeep 1
+      cvar set ui_allow_willyjeep 1
+      cvar set scr_allow_gaz67b 1
+      cvar set ui_allow_gaz67b 1
+      cvar set scr_allow_horch 1
+      cvar set ui_allow_horch 1
+      cvar set hurtgentrees off
+      cvar set scr_layoutimage levelshots/layouts/hud@layout_mp_peaks.dds
+      cvar set g_TeamName_Allies MPSCRIPT_AMERICAN
+      cvar set g_TeamColor_Allies .25 .75 .25
+      cvar set g_ScoresBanner_Allies gfx/hud/hud@mpflag_american.tga
+      cvar set g_TeamName_Axis MPSCRIPT_GERMAN
+      cvar set g_TeamColor_Axis .6 .6 .6
+      cvar set g_ScoresBanner_Axis gfx/hud/hud@mpflag_german.tga
+      cvar set sv_hostname G-Day X
+      cvar set ui_hostname G-Day X
+      cvar set scr_motd Welcome to G-Day X!
+      cvar set ui_motd Welcome to G-Day X!
+      cvar set g_allowvote 1
+      cvar set ui_allowvote 1
+      cvar set g_allowvotemaprestart 1
+      cvar set ui_allowvotemaprestart 1
+      cvar set g_allowvotemaprotate 1
+      cvar set ui_allowvotemaprotate 1
+      cvar set g_allowvotemap 1
+      cvar set ui_allowvotemap 1
+      cvar set g_allowvotetypemap 1
+      cvar set ui_allowvotetypemap 1
+      cvar set g_allowvotekick 1
+      cvar set ui_allowvotekick 1
+      cvar set g_allowvotetempbanuser 1
+      cvar set ui_allowvotetempbanuser 1
+      cvar set scr_friendlyfire 3
+      cvar set ui_friendlyfire 3
+      cvar set scr_allow_m1carbine 1
+      cvar set ui_allow_m1carbine 1
+      cvar set scr_allow_m1garand 1
+      cvar set ui_allow_m1garand 1
+      cvar set scr_allow_thompson 1
+      cvar set ui_allow_thompson 1
+      cvar set scr_allow_bar 1
+      cvar set ui_allow_bar 1
+      cvar set scr_allow_springfield 1
+      cvar set ui_allow_springfield 1
+      cvar set scr_allow_mg30cal 1
+      cvar set ui_allow_mg30cal 1
+      cvar set scr_allow_enfield 1
+      cvar set ui_allow_enfield 1
+      cvar set scr_allow_sten 1
+      cvar set ui_allow_sten 1
+      cvar set scr_allow_bren 1
+      cvar set ui_allow_bren 1
+      cvar set scr_allow_nagant 1
+      cvar set ui_allow_nagant 1
+      cvar set scr_allow_svt40 1
+      cvar set ui_allow_svt40 1
+      cvar set scr_allow_ppsh 1
+      cvar set ui_allow_ppsh 1
+      cvar set scr_allow_nagantsniper 1
+      cvar set ui_allow_nagantsniper 1
+      cvar set scr_allow_dp28 1
+      cvar set ui_allow_dp28 1
+      cvar set scr_allow_kar98k 1
+      cvar set ui_allow_kar98k 1
+      cvar set scr_allow_gewehr43 1
+      cvar set ui_allow_gewehr43 1
+      cvar set scr_allow_mp40 1
+      cvar set ui_allow_mp40 1
+      cvar set scr_allow_mp44 1
+      cvar set ui_allow_mp44 1
+      cvar set scr_allow_kar98ksniper 1
+      cvar set ui_allow_kar98ksniper 1
+      cvar set scr_allow_mg34 1
+      cvar set ui_allow_mg34 1
+      cvar set scr_allow_fg42 1
+      cvar set ui_allow_fg42 1
+      cvar set scr_allow_panzerfaust 1
+      cvar set ui_allow_panzerfaust 1
+      cvar set scr_allow_bazooka 1
+      cvar set ui_allow_bazooka 1
+      cvar set scr_allow_panzerschreck 1
+      cvar set ui_allow_panzerschreck 1
+      cvar set scr_allow_flamethrower 1
+      cvar set ui_allow_flamethrower 1
+      cvar set scr_allow_binoculars 1
+      cvar set ui_allow_binoculars 1
+      cvar set scr_allow_artillery 1
+      cvar set ui_allow_artillery 1
+      cvar set scr_allow_satchel 1
+      cvar set ui_allow_satchel 1
+      cvar set scr_allow_grenades 1
+      cvar set ui_allow_grenades 1
+      cvar set scr_allow_smoke 1
+      cvar set ui_allow_smoke 1
+      cvar set scr_allow_pistols 1
+      cvar set ui_allow_pistols 1
+=============================== CVAR DUMP ========================================
+
+631 total cvars
+631 cvar indexes
+=============================== END CVAR DUMP =====================================
+      cvar set sv_paks 
+      cvar set sv_pakNames 
+      cvar set sv_referencedPaks 1091839960 217417886 419375006 401794639 -914447005 -235342179 -659938473 -858314597 77111478 -1825805837 1048127331 411039402 323984529 -788625739 968878365 -961133319 
+      cvar set sv_referencedPakNames uo/uomappack00 uo/stoop-jeeparena uo/pakuo07 uo/pakuo04 uo/pakuo03 uo/pakuo01 uo/pakuo00 main/pak8 main/pak5 main/pak4 main/pak0 uo/localized_english_pakuo01 uo/localized_english_pakuo00 main/localized_english_pak3 main/localized_english_pak2 main/localized_english_pak1
+      cvar set sv_serverRestarting 0
+-----------------------------------
+      cvar set sv_punkbuster 0
+      cvar set sv_cheats 0
+PunkBuster Server: 0 Aliases Written to pbalias.dat
+PunkBuster Server: 0 Stat Records Written to pbstat.dat
+PunkBuster Server: Preparing to Disable PB Server... (C:\Program Files\Call of Duty\pb\)
+Hitch warning: 2263 msec frame time
+Client 0 connecting with 50 challenge ping from 192.168.1.251:28960
+      cvar set cg_atmos -1
+Going from CS_FREE to CS_CONNECTED for King (num 0 guid 0)
+Client 1 connecting with 50 challenge ping from 192.168.1.161:28960
+      cvar set cg_atmos -1
+Going from CS_FREE to CS_CONNECTED for A Figment of Your Imagination (num 1 guid 0)
+Client 2 connecting with 0 challenge ping from 192.168.1.109:28960
+      cvar set cg_atmos -1
+Going from CS_FREE to CS_CONNECTED for Jaymz-All His Holes (num 2 guid 0)
+Client 3 connecting with 0 challenge ping from 192.168.1.246:28960
+      cvar set cg_atmos -1
+Going from CS_FREE to CS_CONNECTED for jpt-all the tea (num 3 guid 0)
+Client 4 connecting with 0 challenge ping from 192.168.1.14:28960
+      cvar set cg_atmos -1
+Going from CS_FREE to CS_CONNECTED for Luda-STATS 2.0!!! (num 4 guid 0)
+Client 5 connecting with 50 challenge ping from 192.168.1.175:28960
+      cvar set cg_atmos -1
+Going from CS_FREE to CS_CONNECTED for Doin it for the Kids (num 5 guid 0)
+^8(GAME_ALLIES)King^7: QUICKMESSAGE_FOLLOW_ME
+^9(GAME_AXIS)A Figment of Your Imagination^7: QUICKMESSAGE_NO_SIR
+^8(GAME_ALLIES)King^7: GMI_QUICKMESSAGE_NEED_BAZOOKA
+^8(GAME_ALLIES)King^7: QUICKMESSAGE_SNIPER
+^8(GAME_ALLIES)King^7: QUICKMESSAGE_SNIPER
+^9(GAME_AXIS)A Figment of Your Imagination^7: GMI_QUICKMESSAGE_NEED_PICKUP
+^8(GAME_ALLIES)King^7: QUICKMESSAGE_SNIPER
+^8(GAME_ALLIES)King^7: QUICKMESSAGE_SNIPER
+^8(GAME_ALLIES)King^7: QUICKMESSAGE_SNIPER
+^8(GAME_ALLIES)King^7: QUICKMESSAGE_SNIPER
+^9(GAME_AXIS)A Figment of Your Imagination^7: QUICKMESSAGE_IM_IN_POSITION
+^8(GAME_ALLIES)Jaymz-All His Holes^7: QUICKMESSAGE_NO_SIR
+^8(GAME_ALLIES)King^7: QUICKMESSAGE_FOLLOW_ME
+^8(GAME_ALLIES)Jaymz-All His Holes^7: GMI_QUICKMESSAGE_REDEPLOY_FORWARD
+^9(GAME_AXIS)A Figment of Your Imagination^7: QUICKMESSAGE_SUPPRESSING_FIRE
+      cvar set scr_selfDestructJeepTime 90
+^8(GAME_ALLIES)King^7: GMI_QUICKMESSAGE_JEEP_SPOTTED
+^8(GAME_ALLIES)King^7: GMI_QUICKMESSAGE_JEEP_SPOTTED
+^8(GAME_ALLIES)King^7: GMI_QUICKMESSAGE_JEEP_SPOTTED
+Client 6 connecting with 150 challenge ping from 192.168.1.229:28960
+      cvar set cg_atmos -1
+Going from CS_FREE to CS_CONNECTED for Palpatine (num 6 guid 0)
+^8(GAME_ALLIES)King^7: GMI_QUICKMESSAGE_JEEP_SPOTTED
+^8(GAME_ALLIES)King^7: GMI_QUICKMESSAGE_JEEP_SPOTTED
+^8(GAME_ALLIES)King^7: GMI_QUICKMESSAGE_GET_ON_GUN
+^8(GAME_ALLIES)King^7: GMI_QUICKMESSAGE_GET_ON_GUN
+Hitch warning: 635 msec frame time
+^8(GAME_ALLIES)King^7: GMI_QUICKMESSAGE_GET_IN_JEEP
+^8(GAME_ALLIES)King^7: GMI_QUICKMESSAGE_GET_IN_JEEP
+^9(GAME_AXIS)Doin it for the Kids^7: QUICKMESSAGE_SUPPRESSING_FIRE
+^8(GAME_ALLIES)King^7: GMI_QUICKMESSAGE_GET_IN_JEEP
+^9(GAME_AXIS)Doin it for the Kids^7: QUICKMESSAGE_AREA_SECURE
+^8(GAME_ALLIES)Jaymz-All His Holes^7: Shut the fuck up!
+^8(GAME_ALLIES)King^7: GMI_QUICKMESSAGE_GET_ON_GUN
+^8(GAME_ALLIES)King^7: GMI_QUICKMESSAGE_GET_IN_JEEP
+^8(GAME_ALLIES)Jaymz-All His Holes^7: QUICKMESSAGE_NO_SIR
+^8(GAME_ALLIES)King^7: QUICKMESSAGE_NO_SIR
+^9(GAME_AXIS)Doin it for the Kids^7: GMI_QUICKMESSAGE_GET_IN_JEEP
+^8(GAME_ALLIES)King^7: GMI_QUICKMESSAGE_ENEMY_SPOTTED_AHEAD
+^9(GAME_AXIS)Doin it for the Kids^7: GMI_QUICKMESSAGE_GET_IN_JEEP
+^8(GAME_ALLIES)King^7: QUICKMESSAGE_SORRY
+^8(GAME_ALLIES)King^7: GMI_QUICKMESSAGE_NEED_ARMOR
+^8(GAME_ALLIES)King^7: GMI_QUICKMESSAGE_NEED_PICKUP
+^8(GAME_ALLIES)King^7: GMI_QUICKMESSAGE_INCOMING_ARMOR
+^8(GAME_ALLIES)King^7: QUICKMESSAGE_ENEMY_DOWN
+^8(GAME_ALLIES)King^7: QUICKMESSAGE_ENEMY_DOWN
+^9(GAME_AXIS)Doin it for the Kids^7: GMI_QUICKMESSAGE_GET_IN_JEEP
+^9(GAME_AXIS)Doin it for the Kids^7: GMI_QUICKMESSAGE_GET_IN_JEEP
+^8(GAME_ALLIES)King^7: QUICKMESSAGE_NEED_REINFORCEMENTS
+^9(GAME_AXIS)Doin it for the Kids^7: GMI_QUICKMESSAGE_GET_IN_JEEP
+^8(GAME_ALLIES)King^7: QUICKMESSAGE_HOLD_YOUR_FIRE
+^8Palpatine^7: Beer has been drunk...rape whistle.
+^9(GAME_AXIS)Doin it for the Kids^7: QUICKMESSAGE_YES_SIR
+^9(GAME_AXIS)A Figment of Your Imagination^7: QUICKMESSAGE_ENEMY_DOWN
+^8(GAME_ALLIES)King^7: QUICKMESSAGE_FOLLOW_ME
+^8(GAME_ALLIES)King^7: QUICKMESSAGE_FOLLOW_ME
+^8(GAME_ALLIES)King^7: QUICKMESSAGE_FOLLOW_ME
+^8(GAME_ALLIES)King^7: GMI_QUICKMESSAGE_NEED_PICKUP
+^8(GAME_ALLIES)King^7: QUICKMESSAGE_FOLLOW_ME
+map_rotate...
+
+"sv_mapRotation" is:""
+
+"sv_mapRotationCurrent" is:""
+
+      cvar set sv_mapRotationCurrent 
+      cvar set sv_mapRotationCurrent 
+      cvar set sv_mapRotationCurrent 
+      cvar set sv_mapRotationCurrent 
+No map specified in sv_mapRotation - forcing map_restart.
+      cvar set g_gametype tdm
+      cvar set sv_serverid 17
+      cvar set sv_serverRestarting 1
+==== RestartGame ====
+------- Game Initialization -------
+gamename: CoD:United Offensive
+gamedate: Dec  6 2004
+      cvar set g_debugDamage 0
+      cvar set g_debugBullets 0
+      cvar set g_tracerchancelmg 0.7
+      cvar set g_vehicleDrawPath 0
+      cvar set g_vehicleDebug 0
+      cvar set g_vehicleTexScrollScale 0
+      cvar set g_vehicleTrafficStressTest 0
+      cvar set bg_nofatigue 0
+      cvar set bg_fallDamageMinHeight 256
+      cvar set bg_fallDamageMaxHeight 480
+      cvar set bg_debugWeaponAnim 0
+      cvar set bg_debugWeaponState 0
+      cvar set g_bounds_width 30
+      cvar set g_bounds_height_standing 70
+      cvar set g_debugShowHit 0
+      cvar set g_debugLocDamage 0
+      cvar set g_debuganim 0
+      cvar set bg_swingSpeed 0.2
+      cvar set g_dumpAnims -1
+      cvar set cg_atmos -1
+      cvar set g_gravity 800
+0 teams with 0 entities
+      cvar set ui_allowvote 1
+      cvar set ui_allowVoteMapRestart 1
+      cvar set ui_allowVoteMapRotate 1
+      cvar set ui_allowVoteTypeMap 1
+      cvar set ui_allowVoteMap 1
+      cvar set ui_allowVoteGameType 1
+      cvar set ui_allowVoteKick 1
+      cvar set ui_allowVoteClientKick 1
+      cvar set ui_allowVoteTempBanUser 1
+      cvar set ui_allowVoteTempBanClient 1
+      cvar set ui_allowVoteDrawFriend 0
+      cvar set ui_allowVoteKillCam 0
+      cvar set ui_allowVoteFriendlyFire 0
+      cvar set ui_drawfriend 1
+      cvar set ui_friendlyfire 3
+      cvar set ui_killcam 1
+      cvar set ui_timeoutsAllowed 0
+      cvar set ui_timeoutBank 180000
+      cvar set ui_timeoutLength 90000
+      cvar set ui_timeoutRecovery 10000
+      cvar set cg_atmos -1
+-----------------------------------
+      cvar set ui_tdm_timelimit 30
+      cvar set ui_tdm_scorelimit 0
+      cvar set scr_teamscorepenalty 1
+      cvar set ui_battlerank 1
+      cvar set ui_shellshock 1
+      cvar set cg_hudcompassMaxRange 1024
+      cvar set scr_killcam 1
+      cvar set scr_ceasefire 0
+      cvar set sv_night 0
+      cvar set scr_allow_tanks 1
+      cvar set ui_allow_tanks 1
+      cvar set scr_allow_t34 1
+      cvar set ui_allow_t34 1
+      cvar set scr_allow_elefant 1
+      cvar set ui_allow_elefant 1
+      cvar set scr_allow_sherman 1
+      cvar set ui_allow_sherman 1
+      cvar set scr_allow_panzeriv 1
+      cvar set ui_allow_panzeriv 1
+      cvar set scr_allow_su152 1
+      cvar set ui_allow_su152 1
+      cvar set scr_allow_jeeps 1
+      cvar set ui_allow_jeeps 1
+      cvar set scr_allow_willyjeep 1
+      cvar set ui_allow_willyjeep 1
+      cvar set scr_allow_gaz67b 1
+      cvar set ui_allow_gaz67b 1
+      cvar set scr_allow_horch 1
+      cvar set ui_allow_horch 1
+      cvar set scr_layoutimage levelshots/layouts/hud@layout_mp_peaks.dds
+      cvar set g_TeamName_Allies MPSCRIPT_AMERICAN
+      cvar set g_TeamColor_Allies .25 .75 .25
+      cvar set g_ScoresBanner_Allies gfx/hud/hud@mpflag_american.tga
+      cvar set g_TeamName_Axis MPSCRIPT_GERMAN
+      cvar set g_TeamColor_Axis .6 .6 .6
+      cvar set g_ScoresBanner_Axis gfx/hud/hud@mpflag_german.tga
+      cvar set sv_hostname G-Day X
+      cvar set ui_hostname G-Day X
+      cvar set scr_motd Welcome to G-Day X!
+      cvar set ui_motd Welcome to G-Day X!
+      cvar set g_allowvote 1
+      cvar set ui_allowvote 1
+      cvar set g_allowvotemaprestart 1
+      cvar set ui_allowvotemaprestart 1
+      cvar set g_allowvotemaprotate 1
+      cvar set ui_allowvotemaprotate 1
+      cvar set g_allowvotemap 1
+      cvar set ui_allowvotemap 1
+      cvar set g_allowvotetypemap 1
+      cvar set ui_allowvotetypemap 1
+      cvar set g_allowvotekick 1
+      cvar set ui_allowvotekick 1
+      cvar set g_allowvotetempbanuser 1
+      cvar set ui_allowvotetempbanuser 1
+      cvar set scr_friendlyfire 3
+      cvar set ui_friendlyfire 3
+      cvar set scr_allow_m1carbine 1
+      cvar set ui_allow_m1carbine 1
+      cvar set scr_allow_m1garand 1
+      cvar set ui_allow_m1garand 1
+      cvar set scr_allow_thompson 1
+      cvar set ui_allow_thompson 1
+      cvar set scr_allow_bar 1
+      cvar set ui_allow_bar 1
+      cvar set scr_allow_springfield 1
+      cvar set ui_allow_springfield 1
+      cvar set scr_allow_mg30cal 1
+      cvar set ui_allow_mg30cal 1
+      cvar set scr_allow_enfield 1
+      cvar set ui_allow_enfield 1
+      cvar set scr_allow_sten 1
+      cvar set ui_allow_sten 1
+      cvar set scr_allow_bren 1
+      cvar set ui_allow_bren 1
+      cvar set scr_allow_nagant 1
+      cvar set ui_allow_nagant 1
+      cvar set scr_allow_svt40 1
+      cvar set ui_allow_svt40 1
+      cvar set scr_allow_ppsh 1
+      cvar set ui_allow_ppsh 1
+      cvar set scr_allow_nagantsniper 1
+      cvar set ui_allow_nagantsniper 1
+      cvar set scr_allow_dp28 1
+      cvar set ui_allow_dp28 1
+      cvar set scr_allow_kar98k 1
+      cvar set ui_allow_kar98k 1
+      cvar set scr_allow_gewehr43 1
+      cvar set ui_allow_gewehr43 1
+      cvar set scr_allow_mp40 1
+      cvar set ui_allow_mp40 1
+      cvar set scr_allow_mp44 1
+      cvar set ui_allow_mp44 1
+      cvar set scr_allow_kar98ksniper 1
+      cvar set ui_allow_kar98ksniper 1
+      cvar set scr_allow_mg34 1
+      cvar set ui_allow_mg34 1
+      cvar set scr_allow_fg42 1
+      cvar set ui_allow_fg42 1
+      cvar set scr_allow_panzerfaust 1
+      cvar set ui_allow_panzerfaust 1
+      cvar set scr_allow_bazooka 1
+      cvar set ui_allow_bazooka 1
+      cvar set scr_allow_panzerschreck 1
+      cvar set ui_allow_panzerschreck 1
+      cvar set scr_allow_flamethrower 1
+      cvar set ui_allow_flamethrower 1
+      cvar set scr_allow_binoculars 1
+      cvar set ui_allow_binoculars 1
+      cvar set scr_allow_artillery 1
+      cvar set ui_allow_artillery 1
+      cvar set scr_allow_satchel 1
+      cvar set ui_allow_satchel 1
+      cvar set scr_allow_grenades 1
+      cvar set ui_allow_grenades 1
+      cvar set scr_allow_smoke 1
+      cvar set ui_allow_smoke 1
+      cvar set scr_allow_pistols 1
+      cvar set ui_allow_pistols 1
+=============================== CVAR DUMP ========================================
+      .Admin "Luda"
+      .Email ""
+      .Irc ""
+      .Location "Beavercreek, OH"
+      .Website "http://cward-nb/gday10"
+      arch "winnt"
+      bg_debugWeaponAnim "0"
+      bg_debugWeaponState "0"
+      bg_fallDamageMaxHeight "480"
+      bg_fallDamageMinHeight "256"
+      bg_foliagesnd_fastinterval "500"
+      bg_foliagesnd_maxspeed "180"
+      bg_foliagesnd_minspeed "40"
+      bg_foliagesnd_resetinterval "500"
+      bg_foliagesnd_slowinterval "1500"
+      bg_ladder_yawcap "100"
+      bg_lmg_yawcap "55"
+      bg_nofatigue "0"
+      bg_prone_yawcap "85"
+      bg_swingSpeed "0.2"
+      bg_viewheight_crouched "40"
+      bg_viewheight_prone "11"
+      bg_viewheight_standing "60"
+      cg_announcerSounds "1"
+      cg_atmos "-1"
+      cg_autodemo "0"
+      cg_autoscreenshot "0"
+      cg_blood "1"
+      cg_bobAmplitudeDucked "0.0075"
+      cg_bobAmplitudeProne "0.03"
+      cg_bobAmplitudeStanding "0.007"
+      cg_bobMax "8"
+      cg_brass "1"
+      cg_chatHeight "8"
+      cg_chatTime "12000"
+      cg_crosshairAlpha "1.0"
+      cg_crosshairAlphaMin "0.7"
+      cg_crosshairDynamic "0"
+      cg_crosshairNoGun "gfx/reticle/hud@center_ads.tga"
+      cg_crosshairSize "48"
+      cg_currentSelectedPlayer "0"
+      cg_currentSelectedPlayerName ""
+      cg_cursorHints "4"
+      cg_deadbodyque "32"
+      cg_descriptiveText "1"
+      cg_drawCompass "1"
+      cg_drawCrosshair "1"
+      cg_drawCrosshairNames "1"
+      cg_drawCrosshairPickups "1"
+      cg_drawFPS "0"
+      cg_drawGun "1"
+      cg_drawNotifyText "1"
+      cg_drawRewards "1"
+      cg_drawSnapshot "0"
+      cg_drawStatus "1"
+      cg_drawTeamOverlay "2"
+      cg_fov "80"
+      cg_gameBoldMessageWidth "60"
+      cg_gameMessageWidth "70"
+      cg_hintFadeTime "100"
+      cg_hudAlpha "1.0"
+      cg_hudCompassMaxRange "1024"
+      cg_hudCompassMinRadius "0"
+      cg_hudCompassMinRange "0"
+      cg_hudCompassSize "1.0"
+      cg_hudCompassSpringyPointers "0"
+      cg_hudDamageIconHeight "64"
+      cg_hudDamageIconInScope "0"
+      cg_hudDamageIconOffset "32"
+      cg_hudDamageIconTime "2000"
+      cg_hudDamageIconWidth "128"
+      cg_hudObjectiveMaxHeight "70"
+      cg_hudObjectiveMaxRange "2048"
+      cg_hudObjectiveMinAlpha "1"
+      cg_hudObjectiveMinHeight "-70"
+      cg_hudStanceHintPrints "1"
+      cg_lagometer "0"
+      cg_marks "1"
+      cg_noTaunt "0"
+      cg_noVoiceChats "0"
+      cg_noVoiceText "0"
+      cg_predictItems "1"
+      cg_railTrailTime "400"
+      cg_scoreboardScrollStep "3"
+      cg_selectedPlayer "0"
+      cg_shadows "0"
+      cg_showdemoname "1"
+      cg_stereoSeparation "0.4"
+      cg_subtitleMinTime "3"
+      cg_subtitles "1"
+      cg_subtitleWidth "80"
+      cg_teamChatsOnly "0"
+      cg_vehicletrails "1"
+      cg_viewsize "100"
+      cg_voiceSpriteTime "6000"
+      cg_weaponCycleDelay "0"
+      cl_allowDownload "0"
+      cl_anonymous "0"
+      cl_autocmd "1"
+      cl_freelook "1"
+      cl_goStandJumpTime "0"
+      cl_language "0"
+      cl_languagesavailable "1"
+      cl_languagetranslate "1"
+      cl_languagewarnings "0"
+      cl_languagewarningsaserrors "0"
+      cl_maxpackets "30"
+      cl_maxPing "800"
+      cl_mouseAccel "0"
+      cl_packetdup "1"
+      cl_paused "0"
+      cl_pitchspeed "140"
+      cl_punkbuster "0"
+      cl_running "0"
+      cl_wwwDownload "1"
+      cl_xmodelcheck "0"
+      cl_yawspeed "140"
+      cm_noCurves "0"
+      cm_playerCurveClip "1"
+      com_animCheck "0"
+      com_expectedhunkusage "90603904"
+      com_hunkmegs "128"
+      com_introplayed "1"
+      com_maxfps "85"
+      com_recommendedSet "1"
+      com_speeds "0"
+      com_statmon "0"
+      con_debug "0"
+      con_minicon "0"
+      con_miniconlines "5"
+      con_minicontime "4"
+      dedicated "1"
+      developer "0"
+      developer_script "0"
+      fixedtime "0"
+      fs_basegame "uo"
+      fs_basepath "C:\Program Files\Call of Duty"
+      fs_cdpath ""
+      fs_copyfiles "0"
+      fs_debug "0"
+      fs_game "cod-stats"
+      fs_homepath "C:\Program Files\Call of Duty"
+      fs_ignoreLozalized "0"
+      fs_restrict ""
+      fx_cullbias "0"
+      fx_cullscale "1"
+      g_allowvote "1"
+      g_allowVoteClientKick "1"
+      g_allowVoteDrawFriend "0"
+      g_allowVoteFriendlyFire "0"
+      g_allowVoteGameType "1"
+      g_allowVoteKick "1"
+      g_allowVoteKillCam "0"
+      g_allowVoteMap "1"
+      g_allowVoteMapRestart "1"
+      g_allowVoteMapRotate "1"
+      g_allowVoteTempBanClient "1"
+      g_allowVoteTempBanUser "1"
+      g_allowVoteTypeMap "1"
+      g_autodemo "0"
+      g_autoscreenshot "0"
+      g_banIPs ""
+      g_bounds_height_standing "70"
+      g_bounds_width "30"
+      g_complaintlimit "3"
+      g_deadChat "1"
+      g_debugAlloc "0"
+      g_debuganim "0"
+      g_debugBullets "0"
+      g_debugDamage "0"
+      g_debugLocDamage "0"
+      g_debugMove "0"
+      g_debugProneCheck "0"
+      g_debugProneCheckDepthCheck "1"
+      g_debugShowHit "0"
+      g_dumpAnims "-1"
+      g_gametype "tdm"
+      g_gravity "800"
+      g_inactivity "0"
+      g_inactivityspectator "0"
+      g_intermissionDelay "1000"
+      g_knockback "1000"
+      g_listEntity "0"
+      g_log "games_mp.log"
+      g_logSync "1"
+      g_maxDroppedWeapons "16"
+      g_motd ""
+      g_no_script_spam "0"
+      g_password ""
+      g_ScoresBanner_Allies "gfx/hud/hud@mpflag_american.tga"
+      g_ScoresBanner_Axis "gfx/hud/hud@mpflag_german.tga"
+      g_ScoresBanner_None "gfx/hud/hud@mpflag_none.tga"
+      g_ScoresBanner_Spectators "gfx/hud/hud@mpflag_spectator.tga"
+      g_scriptMainMenu ""
+      g_scriptMap ""
+      g_smoothClients "1"
+      g_speed "190"
+      g_synchronousClients "0"
+      g_TeamColor_Allies ".25 .75 .25"
+      g_TeamColor_Axis ".6 .6 .6"
+      g_TeamName_Allies "MPSCRIPT_AMERICAN"
+      g_TeamName_Axis "MPSCRIPT_GERMAN"
+      g_timeoutBank "180000"
+      g_timeoutlength "90000"
+      g_timeoutRecovery "10000"
+      g_timeoutsallowed "0"
+      g_tracerchance "0.4"
+      g_tracerchancelmg "0.7"
+      g_useGear "1"
+      g_vehicleBurnTime "10"
+      g_vehicleDebug "0"
+      g_vehicleDrawPath "0"
+      g_vehicleEnableCollisionDamage "0"
+      g_vehicleForceBulletDamage "0"
+      g_vehicleForceGrenadeDamage "0"
+      g_vehicleHorns "1"
+      g_vehicleTexScrollScale "0"
+      g_vehicleTrafficStressTest "0"
+      g_voiceChatsAllowed "4"
+      g_weaponAmmoPools "0"
+      g_weaponrespawn "5"
+      gamedate "Dec  6 2004"
+      gamename "CoD:United Offensive"
+      handicap "100"
+      head ""
+      hurtgentrees "off"
+      in_debugjoystick "0"
+      in_joyBallScale "0.02"
+      in_joystick "0"
+      in_midi "0"
+      in_midichannel "1"
+      in_mididevice "0"
+      in_midiport "1"
+      in_mouse "1"
+      journal "0"
+      joy_threshold "0.15"
+      logfile "2"
+      m_filter "0"
+      m_forward "0.25"
+      m_pitch "0.022"
+      m_side "0.25"
+      m_yaw "0.022"
+      mapname "mp_peaks"
+      model ""
+      mss_3d_provider "Miles Fast 2D Positional Audio"
+      mss_bits "16"
+      mss_errorOnMissing "1"
+      mss_khz "44"
+      mss_stereo "1"
+      mss_volume "0.8"
+      name "Luda"
+      net_ip "localhost"
+      net_lanauthorize "0"
+      net_noipx "0"
+      net_noudp "0"
+      net_port "28960"
+      net_profile "0"
+      net_qport "16618"
+      net_showprofile "0"
+      net_socksEnabled "0"
+      net_socksPassword ""
+      net_socksPort "1080"
+      net_socksServer ""
+      net_socksUsername ""
+      nextmap "map_restart"
+      pmove_fixed "0"
+      pmove_msec "8"
+      protocol "22"
+      r_ati_fsaa_samples "1"
+      r_ati_pntriangles "0"
+      r_ati_truform_normalmode "QUADRATIC"
+      r_ati_truform_pointmode "CUBIC"
+      r_ati_truform_tess "1"
+      r_colorbits "32"
+      r_customaspect "1"
+      r_customheight "1024"
+      r_customwidth "1600"
+      r_depthbits "0"
+      r_detailtextures "1"
+      r_diffuseSunQuality "2"
+      r_diffuseSunSteps "3"
+      r_dlightQuality "1"
+      r_drawSun "1"
+      r_dynamiclight "1"
+      r_entLightCutoff "0.2"
+      r_ext_texture_filter_anisotropic "0"
+      r_finish "0"
+      r_fullscreen "1"
+      r_gamma "1.0"
+      r_ignoreGLErrors "1"
+      r_ignorehwgamma "0"
+      r_inGameVideo "1"
+      r_lastValidRenderer "Quadro FX 1600M/PCI/SSE2"
+      r_lodbias "0"
+      r_lodscale "1"
+      r_maxEntLights "8"
+      r_mem_agp "8"
+      r_mem_backend "0.5"
+      r_mem_manual "0"
+      r_mem_video "2"
+      r_minEntLightIntensity "0.02"
+      r_mode "6"
+      r_nv_fog_dist "1"
+      r_nv_fogdist_mode "GL_EYE_RADIAL_NV"
+      r_overBrightBits "1"
+      r_picmip "1"
+      r_picmip2 "1"
+      r_portalbevels "0.7"
+      r_primitives "0"
+      r_railCoreWidth "1"
+      r_railSegmentLength "32"
+      r_railWidth "16"
+      r_simpleMipMaps "1"
+      r_skip_auto_config "0"
+      r_stencilbits "8"
+      r_swapDelay "0"
+      r_swapInterval "1"
+      r_texturebits "0"
+      r_textureMode "GL_LINEAR_MIPMAP_NEAREST"
+      r_uiFullScreen "1"
+      r_vbo_interleave "0"
+      r_vbo_paranoia "0"
+      r_vbo_smc_static_draw "1"
+      r_vbo_stream_draw "1"
+      rate "25000"
+      rconPassword "jeeps"
+      scr_allow_artillery "1"
+      scr_allow_bar "1"
+      scr_allow_bazooka "1"
+      scr_allow_binoculars "1"
+      scr_allow_bren "1"
+      scr_allow_dp28 "1"
+      scr_allow_elefant "1"
+      scr_allow_enfield "1"
+      scr_allow_fg42 "1"
+      scr_allow_flak88 "1"
+      scr_allow_flamethrower "1"
+      scr_allow_gaz67b "1"
+      scr_allow_gewehr43 "1"
+      scr_allow_grenades "1"
+      scr_allow_horch "1"
+      scr_allow_jeeps "1"
+      scr_allow_kar98k "1"
+      scr_allow_kar98ksniper "1"
+      scr_allow_m1carbine "1"
+      scr_allow_m1garand "1"
+      scr_allow_mg30cal "1"
+      scr_allow_mg34 "1"
+      scr_allow_mp40 "1"
+      scr_allow_mp44 "1"
+      scr_allow_nagant "1"
+      scr_allow_nagantsniper "1"
+      scr_allow_panzerfaust "1"
+      scr_allow_panzeriv "1"
+      scr_allow_panzerschreck "1"
+      scr_allow_pistols "1"
+      scr_allow_ppsh "1"
+      scr_allow_satchel "1"
+      scr_allow_sherman "1"
+      scr_allow_smoke "1"
+      scr_allow_springfield "1"
+      scr_allow_sten "1"
+      scr_allow_su152 "1"
+      scr_allow_svt40 "1"
+      scr_allow_t34 "1"
+      scr_allow_tanks "1"
+      scr_allow_thompson "1"
+      scr_allow_vote "1"
+      scr_allow_willyjeep "1"
+      scr_artillery_first_interval "45"
+      scr_artillery_interval "120"
+      scr_artillery_interval_range "15"
+      scr_bas_clearscoreeachround "0"
+      scr_bas_endrounddelay "10"
+      scr_bas_respawn_wave_time "10"
+      scr_bas_roundlength "20"
+      scr_bas_roundlimit "0"
+      scr_bas_scorelimit "0"
+      scr_bas_startrounddelay "15"
+      scr_bas_timelimit "60"
+      scr_battlerank "1"
+      scr_bel_alivepointtime "10"
+      scr_bel_scorelimit "0"
+      scr_bel_timelimit "30"
+      scr_ceasefire "0"
+      scr_ctf_clearscoreeachround "0"
+      scr_ctf_endrounddelay "10"
+      scr_ctf_roundlength "20"
+      scr_ctf_roundlimit "0"
+      scr_ctf_scorelimit "0"
+      scr_ctf_showoncompass "1"
+      scr_ctf_startrounddelay "10"
+      scr_ctf_timelimit "60"
+      scr_death_wait_time "5"
+      scr_dm_scorelimit "0"
+      scr_dm_timelimit "30"
+      scr_dom_clearscoreeachround "0"
+      scr_dom_endrounddelay "10"
+      scr_dom_respawn_wave_time "10"
+      scr_dom_roundlength "20"
+      scr_dom_roundlimit "0"
+      scr_dom_scorelimit "0"
+      scr_dom_startrounddelay "10"
+      scr_dom_timelimit "60"
+      scr_drawfriend "1"
+      scr_drophealth "1"
+      scr_forcerank "0"
+      scr_forcerespawn "0"
+      scr_forcerespawn_ftf "0"
+      scr_freelook "1"
+      scr_friendlyfire "3"
+      scr_ftf_flagicons "1"
+      scr_ftf_flagmodel "cow_standing"
+      scr_ftf_flagmodel_dropped "cow_dead"
+      scr_ftf_flagname "cow"
+      scr_ftf_flagrecovertime "10"
+      scr_ftf_flagspawndelay "20"
+      scr_ftf_holdtime "90"
+      scr_ftf_mode "3"
+      scr_ftf_removeflagspawns "1"
+      scr_ftf_respawntime "0"
+      scr_ftf_scorelimit "10"
+      scr_ftf_timelimit "20"
+      scr_hq_scorelimit "0"
+      scr_hq_timelimit "30"
+      scr_jeep_respawn_wait "5"
+      scr_jeep_spawn_limit "0"
+      scr_killcam "1"
+      scr_layoutimage "levelshots/layouts/hud@layout_mp_peaks.dds"
+      scr_motd "Welcome to G-Day X!"
+      scr_rank_ppr "10"
+      scr_re_graceperiod "15"
+      scr_re_roundlength "5"
+      scr_re_roundlimit "0"
+      scr_re_scorelimit "0"
+      scr_re_showcarrier "1"
+      scr_re_timelimit "30"
+      scr_sd_graceperiod "15"
+      scr_sd_roundlength "5"
+      scr_sd_roundlimit "0"
+      scr_sd_scorelimit "0"
+      scr_sd_timelimit "30"
+      scr_selfDestructJeepTime "90"
+      scr_shellshock "1"
+      scr_spectateenemy "1"
+      scr_tank_respawn_wait "10"
+      scr_tank_spawn_limit "0"
+      scr_tdm_scorelimit "0"
+      scr_tdm_timelimit "30"
+      scr_teambalance "0"
+      scr_teamscorepenalty "1"
+      scr_ttdm_scorelimit "100"
+      scr_ttdm_timelimit "30"
+      sensitivity "3.114583"
+      server1 ""
+      server10 ""
+      server11 ""
+      server12 ""
+      server13 ""
+      server14 ""
+      server15 ""
+      server16 ""
+      server2 ""
+      server3 ""
+      server4 ""
+      server5 ""
+      server6 ""
+      server7 ""
+      server8 ""
+      server9 ""
+      shortversion "1.51"
+      showdrop "0"
+      showpackets "0"
+      snaps "20"
+      sv_allowAnonymous "0"
+      sv_allowDownload "1"
+      sv_cheats "0"
+      sv_console_lockout "0"
+      sv_disableClientConsole "0"
+      sv_dl_maxrate "900000"
+      sv_floodProtect "1"
+      sv_fps "20"
+      sv_hostname "G-Day X"
+      sv_invulnerabletime "3"
+      sv_keywords ""
+      sv_kickBanTime "300"
+      sv_killserver "0"
+      sv_mapname ""
+      sv_mapRotation ""
+      sv_mapRotationCurrent ""
+      sv_maxclients "50"
+      sv_maxPing "999"
+      sv_maxRate "25000"
+      sv_minPing "0"
+      sv_night "0"
+      sv_obituary "1"
+      sv_onlyVisibleClients "0"
+      sv_packet_info "0"
+      sv_padPackets "0"
+      sv_pakNames ""
+      sv_paks ""
+      sv_paused "0"
+      sv_privateClients "0"
+      sv_privatePassword ""
+      sv_punkbuster "0"
+      sv_pure "0"
+      sv_reconnectlimit "3"
+      sv_referencedPakNames "uo/uomappack00 uo/stoop-jeeparena uo/pakuo07 uo/pakuo04 uo/pakuo03 uo/pakuo01 uo/pakuo00 main/pak8 main/pak5 main/pak4 main/pak0 uo/localized_english_pakuo01 uo/localized_english_pakuo00 main/localized_english_pak3 main/localized_english_pak2 main/localized_english_pak1"
+      sv_referencedPaks "1091839960 217417886 419375006 401794639 -914447005 -235342179 -659938473 -858314597 77111478 -1825805837 1048127331 411039402 323984529 -788625739 968878365 -961133319 "
+      sv_running "1"
+      sv_serverid "17"
+      sv_serverRestarting "1"
+      sv_showAverageBPS "0"
+      sv_showCommands "0"
+      sv_showloss "0"
+      sv_timeout "960"
+      sv_wwwBaseURL ""
+      sv_wwwDlDisconnected "0"
+      sv_wwwDownload "0"
+      sv_zombietime "2"
+      sys_configSum "70957801"
+      sys_cpuid "35"
+      sys_cpuMHz "2491.69"
+      sys_cpustring "Intel Pentium III"
+      sys_sysMB "1024"
+      sys_vidMB "512"
+      timescale "1"
+      ui_allow_artillery "1"
+      ui_allow_bar "1"
+      ui_allow_bazooka "1"
+      ui_allow_binoculars "1"
+      ui_allow_bren "1"
+      ui_allow_dp28 "1"
+      ui_allow_elefant "1"
+      ui_allow_enfield "1"
+      ui_allow_fg42 "1"
+      ui_allow_flamethrower "1"
+      ui_allow_gaz67b "1"
+      ui_allow_gewehr43 "1"
+      ui_allow_grenades "1"
+      ui_allow_horch "1"
+      ui_allow_jeeps "1"
+      ui_allow_kar98k "1"
+      ui_allow_kar98ksniper "1"
+      ui_allow_m1carbine "1"
+      ui_allow_m1garand "1"
+      ui_allow_mg30cal "1"
+      ui_allow_mg34 "1"
+      ui_allow_mp40 "1"
+      ui_allow_mp44 "1"
+      ui_allow_nagant "1"
+      ui_allow_nagantsniper "1"
+      ui_allow_panzerfaust "1"
+      ui_allow_panzeriv "1"
+      ui_allow_panzerschreck "1"
+      ui_allow_pistols "1"
+      ui_allow_ppsh "1"
+      ui_allow_satchel "1"
+      ui_allow_sherman "1"
+      ui_allow_smoke "1"
+      ui_allow_sniperrifles "1"
+      ui_allow_springfield "1"
+      ui_allow_sten "1"
+      ui_allow_su152 "1"
+      ui_allow_svt40 "1"
+      ui_allow_t34 "1"
+      ui_allow_tanks "1"
+      ui_allow_thompson "1"
+      ui_allow_willyjeep "1"
+      ui_allowVote "1"
+      ui_allowVoteClientKick "1"
+      ui_allowVoteDrawFriend "0"
+      ui_allowVoteFriendlyFire "0"
+      ui_allowVoteGameType "1"
+      ui_allowVoteKick "1"
+      ui_allowVoteKillCam "0"
+      ui_allowVoteMap "1"
+      ui_allowVoteMapRestart "1"
+      ui_allowVoteMapRotate "1"
+      ui_allowVoteTempBanClient "1"
+      ui_allowVoteTempBanUser "1"
+      ui_allowVoteTypeMap "1"
+      ui_battlerank "1"
+      ui_bigFont "0.4"
+      ui_browserFriendlyfire "-1"
+      ui_browserGameType "0"
+      ui_browserKillcam "-1"
+      ui_browserMaster "0"
+      ui_browserMod "-1"
+      ui_browserShowDedicated "0"
+      ui_browserShowEmpty "1"
+      ui_browserShowFull "1"
+      ui_browserShowJeeps "-1"
+      ui_browserShowNoPassword "1"
+      ui_browserShowPassword "1"
+      ui_browserShowPunkBuster "-1"
+      ui_browserShowPure "0"
+      ui_browserShowTanks "-1"
+      ui_browserSortKey "4"
+      ui_currentMap "11"
+      ui_currentNetMap "11"
+      ui_dedicated "0"
+      ui_drawfriend "1"
+      ui_extraBigFont "0.55"
+      ui_friendlyfire "3"
+      ui_gametype "3"
+      ui_hostname "G-Day X"
+      ui_joinGametype "0"
+      ui_killcam "1"
+      ui_mapIndex "8"
+      ui_motd "Welcome to G-Day X!"
+      ui_mousePitch "0"
+      ui_netGametype "4"
+      ui_netGametypeName "bel"
+      ui_netSource "0"
+      ui_serverStatusTimeOut "7000"
+      ui_shellshock "1"
+      ui_smallFont "0.25"
+      ui_tdm_scorelimit "0"
+      ui_tdm_timelimit "30"
+      ui_timeoutBank "180000"
+      ui_timeoutLength "90000"
+      ui_timeoutRecovery "10000"
+      ui_timeoutsAllowed "0"
+      username "CWARD"
+      version "CODUO MP 1.51 build 1463 Dec  6 2004 20:33:18 win-x86"
+      vid_xpos "388"
+      vid_ypos "181"
+      viewlog "1"
+      win_allowalttab "0"
+      win_hinstance "4194304"
+      win_wndproc "4651856"
+
+632 total cvars
+632 cvar indexes
+=============================== END CVAR DUMP =====================================
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set sv_serverRestarting 0
+Client 7 connecting with 0 challenge ping from 192.168.1.115:28960
+      cvar set cg_atmos -1
+Going from CS_FREE to CS_CONNECTED for CDJ Bazooka Pillow (num 7 guid 0)
+Hitch warning: 527 msec frame time
+Hitch warning: 516 msec frame time
+Hitch warning: 631 msec frame time
+Hitch warning: 530 msec frame time
+^8(GAME_ALLIES)A Figment of Your Imagination^7: QUICKMESSAGE_YES_SIR
+^8(GAME_ALLIES)Doin it for the Kids^7: QUICKMESSAGE_FOLLOW_ME
+^8(GAME_ALLIES)Akiba^7: QUICKMESSAGE_SQUAD_STICK_TOGETHER
+^8(GAME_ALLIES)Akiba^7: QUICKMESSAGE_SQUAD_STICK_TOGETHER
+^8(GAME_ALLIES)Doin it for the Kids^7: QUICKMESSAGE_MOVE_IN
+Hitch warning: 753 msec frame time
+^8(GAME_ALLIES)Doin it for the Kids^7: QUICKMESSAGE_ENEMY_DOWN
+Hitch warning: 566 msec frame time
+Hitch warning: 543 msec frame time
+^8(GAME_ALLIES)Doin it for the Kids^7: QUICKMESSAGE_FOLLOW_ME
+Hitch warning: 503 msec frame time
+7:CDJ Bazooka Pillow EXE_DISCONNECTED
+Hitch warning: 519 msec frame time
+^8(GAME_ALLIES)Akiba^7: QUICKMESSAGE_MOVE_IN
+^8(GAME_ALLIES)Akiba^7: QUICKMESSAGE_ENEMY_DOWN
+^8(GAME_ALLIES)Akiba^7: QUICKMESSAGE_NO_SIR
+^8(GAME_ALLIES)Akiba^7: QUICKMESSAGE_NO_SIR
+^8(GAME_ALLIES)Doin it for the Kids^7: QUICKMESSAGE_ENEMY_DOWN
+^8(GAME_ALLIES)Akiba^7: QUICKMESSAGE_SORRY
+^8(GAME_ALLIES)Akiba^7: GMI_QUICKMESSAGE_GET_IN_JEEP
+^8(GAME_ALLIES)Akiba^7: GMI_QUICKMESSAGE_GET_IN_JEEP
+^8(GAME_ALLIES)Doin it for the Kids^7: GMI_QUICKMESSAGE_NEED_BAZOOKA
+^8(GAME_ALLIES)Akiba^7: GMI_QUICKMESSAGE_JEEP_SPOTTED
+^8(GAME_ALLIES)Akiba^7: QUICKMESSAGE_NO_SIR
+^8(GAME_ALLIES)Doin it for the Kids^7: GMI_QUICKMESSAGE_SMOKE_OUT
+Hitch warning: 523 msec frame time
+^8(GAME_ALLIES)Doin it for the Kids^7: QUICKMESSAGE_FOLLOW_ME
+Hitch warning: 509 msec frame time
+Hitch warning: 513 msec frame time
+Hitch warning: 517 msec frame time
+Hitch warning: 587 msec frame time
+^8(GAME_ALLIES)Akiba^7: GMI_QUICKMESSAGE_NEED_ARMOR
+^8(GAME_ALLIES)Akiba^7: GMI_QUICKMESSAGE_JEEP_FULL
+^8(GAME_ALLIES)Doin it for the Kids^7: QUICKMESSAGE_AREA_SECURE
+^8(GAME_ALLIES)Akiba^7: GMI_QUICKMESSAGE_GET_IN_JEEP
+^8(GAME_ALLIES)Akiba^7: GMI_QUICKMESSAGE_JEEP_FULL
+^8(GAME_ALLIES)Doin it for the Kids^7: GMI_QUICKMESSAGE_NEED_ARMOR
+^8(GAME_ALLIES)Doin it for the Kids^7: GMI_QUICKMESSAGE_NEED_ARMOR
+^8(GAME_ALLIES)Doin it for the Kids^7: GMI_QUICKMESSAGE_NEED_ARMOR
+Hitch warning: 525 msec frame time
+Hitch warning: 520 msec frame time
+Hitch warning: 591 msec frame time
+Hitch warning: 502 msec frame time
+map_rotate...
+
+"sv_mapRotation" is:""
+
+"sv_mapRotationCurrent" is:""
+
+      cvar set sv_mapRotationCurrent 
+      cvar set sv_mapRotationCurrent 
+      cvar set sv_mapRotationCurrent 
+      cvar set sv_mapRotationCurrent 
+No map specified in sv_mapRotation - forcing map_restart.
+      cvar set g_gametype tdm
+      cvar set sv_serverid 18
+      cvar set sv_serverRestarting 1
+==== RestartGame ====
+------- Game Initialization -------
+gamename: CoD:United Offensive
+gamedate: Dec  6 2004
+      cvar set g_debugDamage 0
+      cvar set g_debugBullets 0
+      cvar set g_tracerchancelmg 0.7
+      cvar set g_vehicleDrawPath 0
+      cvar set g_vehicleDebug 0
+      cvar set g_vehicleTexScrollScale 0
+      cvar set g_vehicleTrafficStressTest 0
+      cvar set bg_nofatigue 0
+      cvar set bg_fallDamageMinHeight 256
+      cvar set bg_fallDamageMaxHeight 480
+      cvar set bg_debugWeaponAnim 0
+      cvar set bg_debugWeaponState 0
+      cvar set g_bounds_width 30
+      cvar set g_bounds_height_standing 70
+      cvar set g_debugShowHit 0
+      cvar set g_debugLocDamage 0
+      cvar set g_debuganim 0
+      cvar set bg_swingSpeed 0.2
+      cvar set g_dumpAnims -1
+      cvar set cg_atmos -1
+      cvar set g_gravity 800
+0 teams with 0 entities
+      cvar set ui_allowvote 1
+      cvar set ui_allowVoteMapRestart 1
+      cvar set ui_allowVoteMapRotate 1
+      cvar set ui_allowVoteTypeMap 1
+      cvar set ui_allowVoteMap 1
+      cvar set ui_allowVoteGameType 1
+      cvar set ui_allowVoteKick 1
+      cvar set ui_allowVoteClientKick 1
+      cvar set ui_allowVoteTempBanUser 1
+      cvar set ui_allowVoteTempBanClient 1
+      cvar set ui_allowVoteDrawFriend 0
+      cvar set ui_allowVoteKillCam 0
+      cvar set ui_allowVoteFriendlyFire 0
+      cvar set ui_drawfriend 1
+      cvar set ui_friendlyfire 3
+      cvar set ui_killcam 1
+      cvar set ui_timeoutsAllowed 0
+      cvar set ui_timeoutBank 180000
+      cvar set ui_timeoutLength 90000
+      cvar set ui_timeoutRecovery 10000
+      cvar set cg_atmos -1
+-----------------------------------
+      cvar set ui_tdm_timelimit 30
+      cvar set ui_tdm_scorelimit 0
+      cvar set scr_teamscorepenalty 1
+      cvar set ui_battlerank 1
+      cvar set ui_shellshock 1
+      cvar set cg_hudcompassMaxRange 1024
+      cvar set scr_killcam 1
+      cvar set scr_ceasefire 0
+      cvar set sv_night 0
+      cvar set scr_allow_tanks 1
+      cvar set ui_allow_tanks 1
+      cvar set scr_allow_t34 1
+      cvar set ui_allow_t34 1
+      cvar set scr_allow_elefant 1
+      cvar set ui_allow_elefant 1
+      cvar set scr_allow_sherman 1
+      cvar set ui_allow_sherman 1
+      cvar set scr_allow_panzeriv 1
+      cvar set ui_allow_panzeriv 1
+      cvar set scr_allow_su152 1
+      cvar set ui_allow_su152 1
+      cvar set scr_allow_jeeps 1
+      cvar set ui_allow_jeeps 1
+      cvar set scr_allow_willyjeep 1
+      cvar set ui_allow_willyjeep 1
+      cvar set scr_allow_gaz67b 1
+      cvar set ui_allow_gaz67b 1
+      cvar set scr_allow_horch 1
+      cvar set ui_allow_horch 1
+      cvar set scr_layoutimage levelshots/layouts/hud@layout_mp_peaks.dds
+      cvar set g_TeamName_Allies MPSCRIPT_AMERICAN
+      cvar set g_TeamColor_Allies .25 .75 .25
+      cvar set g_ScoresBanner_Allies gfx/hud/hud@mpflag_american.tga
+      cvar set g_TeamName_Axis MPSCRIPT_GERMAN
+      cvar set g_TeamColor_Axis .6 .6 .6
+      cvar set g_ScoresBanner_Axis gfx/hud/hud@mpflag_german.tga
+      cvar set sv_hostname G-Day X
+      cvar set ui_hostname G-Day X
+      cvar set scr_motd Welcome to G-Day X!
+      cvar set ui_motd Welcome to G-Day X!
+      cvar set g_allowvote 1
+      cvar set ui_allowvote 1
+      cvar set g_allowvotemaprestart 1
+      cvar set ui_allowvotemaprestart 1
+      cvar set g_allowvotemaprotate 1
+      cvar set ui_allowvotemaprotate 1
+      cvar set g_allowvotemap 1
+      cvar set ui_allowvotemap 1
+      cvar set g_allowvotetypemap 1
+      cvar set ui_allowvotetypemap 1
+      cvar set g_allowvotekick 1
+      cvar set ui_allowvotekick 1
+      cvar set g_allowvotetempbanuser 1
+      cvar set ui_allowvotetempbanuser 1
+      cvar set scr_friendlyfire 3
+      cvar set ui_friendlyfire 3
+      cvar set scr_allow_m1carbine 1
+      cvar set ui_allow_m1carbine 1
+      cvar set scr_allow_m1garand 1
+      cvar set ui_allow_m1garand 1
+      cvar set scr_allow_thompson 1
+      cvar set ui_allow_thompson 1
+      cvar set scr_allow_bar 1
+      cvar set ui_allow_bar 1
+      cvar set scr_allow_springfield 1
+      cvar set ui_allow_springfield 1
+      cvar set scr_allow_mg30cal 1
+      cvar set ui_allow_mg30cal 1
+      cvar set scr_allow_enfield 1
+      cvar set ui_allow_enfield 1
+      cvar set scr_allow_sten 1
+      cvar set ui_allow_sten 1
+      cvar set scr_allow_bren 1
+      cvar set ui_allow_bren 1
+      cvar set scr_allow_nagant 1
+      cvar set ui_allow_nagant 1
+      cvar set scr_allow_svt40 1
+      cvar set ui_allow_svt40 1
+      cvar set scr_allow_ppsh 1
+      cvar set ui_allow_ppsh 1
+      cvar set scr_allow_nagantsniper 1
+      cvar set ui_allow_nagantsniper 1
+      cvar set scr_allow_dp28 1
+      cvar set ui_allow_dp28 1
+      cvar set scr_allow_kar98k 1
+      cvar set ui_allow_kar98k 1
+      cvar set scr_allow_gewehr43 1
+      cvar set ui_allow_gewehr43 1
+      cvar set scr_allow_mp40 1
+      cvar set ui_allow_mp40 1
+      cvar set scr_allow_mp44 1
+      cvar set ui_allow_mp44 1
+      cvar set scr_allow_kar98ksniper 1
+      cvar set ui_allow_kar98ksniper 1
+      cvar set scr_allow_mg34 1
+      cvar set ui_allow_mg34 1
+      cvar set scr_allow_fg42 1
+      cvar set ui_allow_fg42 1
+      cvar set scr_allow_panzerfaust 1
+      cvar set ui_allow_panzerfaust 1
+      cvar set scr_allow_bazooka 1
+      cvar set ui_allow_bazooka 1
+      cvar set scr_allow_panzerschreck 1
+      cvar set ui_allow_panzerschreck 1
+      cvar set scr_allow_flamethrower 1
+      cvar set ui_allow_flamethrower 1
+      cvar set scr_allow_binoculars 1
+      cvar set ui_allow_binoculars 1
+      cvar set scr_allow_artillery 1
+      cvar set ui_allow_artillery 1
+      cvar set scr_allow_satchel 1
+      cvar set ui_allow_satchel 1
+      cvar set scr_allow_grenades 1
+      cvar set ui_allow_grenades 1
+      cvar set scr_allow_smoke 1
+      cvar set ui_allow_smoke 1
+      cvar set scr_allow_pistols 1
+      cvar set ui_allow_pistols 1
+=============================== CVAR DUMP ========================================
+      .Admin "Luda"
+      .Email ""
+      .Irc ""
+      .Location "Beavercreek, OH"
+      .Website "http://cward-nb/gday10"
+      arch "winnt"
+      bg_debugWeaponAnim "0"
+      bg_debugWeaponState "0"
+      bg_fallDamageMaxHeight "480"
+      bg_fallDamageMinHeight "256"
+      bg_foliagesnd_fastinterval "500"
+      bg_foliagesnd_maxspeed "180"
+      bg_foliagesnd_minspeed "40"
+      bg_foliagesnd_resetinterval "500"
+      bg_foliagesnd_slowinterval "1500"
+      bg_ladder_yawcap "100"
+      bg_lmg_yawcap "55"
+      bg_nofatigue "0"
+      bg_prone_yawcap "85"
+      bg_swingSpeed "0.2"
+      bg_viewheight_crouched "40"
+      bg_viewheight_prone "11"
+      bg_viewheight_standing "60"
+      cg_announcerSounds "1"
+      cg_atmos "-1"
+      cg_autodemo "0"
+      cg_autoscreenshot "0"
+      cg_blood "1"
+      cg_bobAmplitudeDucked "0.0075"
+      cg_bobAmplitudeProne "0.03"
+      cg_bobAmplitudeStanding "0.007"
+      cg_bobMax "8"
+      cg_brass "1"
+      cg_chatHeight "8"
+      cg_chatTime "12000"
+      cg_crosshairAlpha "1.0"
+      cg_crosshairAlphaMin "0.7"
+      cg_crosshairDynamic "0"
+      cg_crosshairNoGun "gfx/reticle/hud@center_ads.tga"
+      cg_crosshairSize "48"
+      cg_currentSelectedPlayer "0"
+      cg_currentSelectedPlayerName ""
+      cg_cursorHints "4"
+      cg_deadbodyque "32"
+      cg_descriptiveText "1"
+      cg_drawCompass "1"
+      cg_drawCrosshair "1"
+      cg_drawCrosshairNames "1"
+      cg_drawCrosshairPickups "1"
+      cg_drawFPS "0"
+      cg_drawGun "1"
+      cg_drawNotifyText "1"
+      cg_drawRewards "1"
+      cg_drawSnapshot "0"
+      cg_drawStatus "1"
+      cg_drawTeamOverlay "2"
+      cg_fov "80"
+      cg_gameBoldMessageWidth "60"
+      cg_gameMessageWidth "70"
+      cg_hintFadeTime "100"
+      cg_hudAlpha "1.0"
+      cg_hudCompassMaxRange "1024"
+      cg_hudCompassMinRadius "0"
+      cg_hudCompassMinRange "0"
+      cg_hudCompassSize "1.0"
+      cg_hudCompassSpringyPointers "0"
+      cg_hudDamageIconHeight "64"
+      cg_hudDamageIconInScope "0"
+      cg_hudDamageIconOffset "32"
+      cg_hudDamageIconTime "2000"
+      cg_hudDamageIconWidth "128"
+      cg_hudObjectiveMaxHeight "70"
+      cg_hudObjectiveMaxRange "2048"
+      cg_hudObjectiveMinAlpha "1"
+      cg_hudObjectiveMinHeight "-70"
+      cg_hudStanceHintPrints "1"
+      cg_lagometer "0"
+      cg_marks "1"
+      cg_noTaunt "0"
+      cg_noVoiceChats "0"
+      cg_noVoiceText "0"
+      cg_predictItems "1"
+      cg_railTrailTime "400"
+      cg_scoreboardScrollStep "3"
+      cg_selectedPlayer "0"
+      cg_shadows "0"
+      cg_showdemoname "1"
+      cg_stereoSeparation "0.4"
+      cg_subtitleMinTime "3"
+      cg_subtitles "1"
+      cg_subtitleWidth "80"
+      cg_teamChatsOnly "0"
+      cg_vehicletrails "1"
+      cg_viewsize "100"
+      cg_voiceSpriteTime "6000"
+      cg_weaponCycleDelay "0"
+      cl_allowDownload "0"
+      cl_anonymous "0"
+      cl_autocmd "1"
+      cl_freelook "1"
+      cl_goStandJumpTime "0"
+      cl_language "0"
+      cl_languagesavailable "1"
+      cl_languagetranslate "1"
+      cl_languagewarnings "0"
+      cl_languagewarningsaserrors "0"
+      cl_maxpackets "30"
+      cl_maxPing "800"
+      cl_mouseAccel "0"
+      cl_packetdup "1"
+      cl_paused "0"
+      cl_pitchspeed "140"
+      cl_punkbuster "0"
+      cl_running "0"
+      cl_wwwDownload "1"
+      cl_xmodelcheck "0"
+      cl_yawspeed "140"
+      cm_noCurves "0"
+      cm_playerCurveClip "1"
+      com_animCheck "0"
+      com_expectedhunkusage "90603904"
+      com_hunkmegs "128"
+      com_introplayed "1"
+      com_maxfps "85"
+      com_recommendedSet "1"
+      com_speeds "0"
+      com_statmon "0"
+      con_debug "0"
+      con_minicon "0"
+      con_miniconlines "5"
+      con_minicontime "4"
+      dedicated "1"
+      developer "0"
+      developer_script "0"
+      fixedtime "0"
+      fs_basegame "uo"
+      fs_basepath "C:\Program Files\Call of Duty"
+      fs_cdpath ""
+      fs_copyfiles "0"
+      fs_debug "0"
+      fs_game "cod-stats"
+      fs_homepath "C:\Program Files\Call of Duty"
+      fs_ignoreLozalized "0"
+      fs_restrict ""
+      fx_cullbias "0"
+      fx_cullscale "1"
+      g_allowvote "1"
+      g_allowVoteClientKick "1"
+      g_allowVoteDrawFriend "0"
+      g_allowVoteFriendlyFire "0"
+      g_allowVoteGameType "1"
+      g_allowVoteKick "1"
+      g_allowVoteKillCam "0"
+      g_allowVoteMap "1"
+      g_allowVoteMapRestart "1"
+      g_allowVoteMapRotate "1"
+      g_allowVoteTempBanClient "1"
+      g_allowVoteTempBanUser "1"
+      g_allowVoteTypeMap "1"
+      g_autodemo "0"
+      g_autoscreenshot "0"
+      g_banIPs ""
+      g_bounds_height_standing "70"
+      g_bounds_width "30"
+      g_complaintlimit "3"
+      g_deadChat "1"
+      g_debugAlloc "0"
+      g_debuganim "0"
+      g_debugBullets "0"
+      g_debugDamage "0"
+      g_debugLocDamage "0"
+      g_debugMove "0"
+      g_debugProneCheck "0"
+      g_debugProneCheckDepthCheck "1"
+      g_debugShowHit "0"
+      g_dumpAnims "-1"
+      g_gametype "tdm"
+      g_gravity "800"
+      g_inactivity "0"
+      g_inactivityspectator "0"
+      g_intermissionDelay "1000"
+      g_knockback "1000"
+      g_listEntity "0"
+      g_log "games_mp.log"
+      g_logSync "1"
+      g_maxDroppedWeapons "16"
+      g_motd ""
+      g_no_script_spam "0"
+      g_password ""
+      g_ScoresBanner_Allies "gfx/hud/hud@mpflag_american.tga"
+      g_ScoresBanner_Axis "gfx/hud/hud@mpflag_german.tga"
+      g_ScoresBanner_None "gfx/hud/hud@mpflag_none.tga"
+      g_ScoresBanner_Spectators "gfx/hud/hud@mpflag_spectator.tga"
+      g_scriptMainMenu ""
+      g_scriptMap ""
+      g_smoothClients "1"
+      g_speed "190"
+      g_synchronousClients "0"
+      g_TeamColor_Allies ".25 .75 .25"
+      g_TeamColor_Axis ".6 .6 .6"
+      g_TeamName_Allies "MPSCRIPT_AMERICAN"
+      g_TeamName_Axis "MPSCRIPT_GERMAN"
+      g_timeoutBank "180000"
+      g_timeoutlength "90000"
+      g_timeoutRecovery "10000"
+      g_timeoutsallowed "0"
+      g_tracerchance "0.4"
+      g_tracerchancelmg "0.7"
+      g_useGear "1"
+      g_vehicleBurnTime "10"
+      g_vehicleDebug "0"
+      g_vehicleDrawPath "0"
+      g_vehicleEnableCollisionDamage "0"
+      g_vehicleForceBulletDamage "0"
+      g_vehicleForceGrenadeDamage "0"
+      g_vehicleHorns "1"
+      g_vehicleTexScrollScale "0"
+      g_vehicleTrafficStressTest "0"
+      g_voiceChatsAllowed "4"
+      g_weaponAmmoPools "0"
+      g_weaponrespawn "5"
+      gamedate "Dec  6 2004"
+      gamename "CoD:United Offensive"
+      handicap "100"
+      head ""
+      hurtgentrees "off"
+      in_debugjoystick "0"
+      in_joyBallScale "0.02"
+      in_joystick "0"
+      in_midi "0"
+      in_midichannel "1"
+      in_mididevice "0"
+      in_midiport "1"
+      in_mouse "1"
+      journal "0"
+      joy_threshold "0.15"
+      logfile "2"
+      m_filter "0"
+      m_forward "0.25"
+      m_pitch "0.022"
+      m_side "0.25"
+      m_yaw "0.022"
+      mapname "mp_peaks"
+      model ""
+      mss_3d_provider "Miles Fast 2D Positional Audio"
+      mss_bits "16"
+      mss_errorOnMissing "1"
+      mss_khz "44"
+      mss_stereo "1"
+      mss_volume "0.8"
+      name "Luda"
+      net_ip "localhost"
+      net_lanauthorize "0"
+      net_noipx "0"
+      net_noudp "0"
+      net_port "28960"
+      net_profile "0"
+      net_qport "16618"
+      net_showprofile "0"
+      net_socksEnabled "0"
+      net_socksPassword ""
+      net_socksPort "1080"
+      net_socksServer ""
+      net_socksUsername ""
+      nextmap "map_restart"
+      pmove_fixed "0"
+      pmove_msec "8"
+      protocol "22"
+      r_ati_fsaa_samples "1"
+      r_ati_pntriangles "0"
+      r_ati_truform_normalmode "QUADRATIC"
+      r_ati_truform_pointmode "CUBIC"
+      r_ati_truform_tess "1"
+      r_colorbits "32"
+      r_customaspect "1"
+      r_customheight "1024"
+      r_customwidth "1600"
+      r_depthbits "0"
+      r_detailtextures "1"
+      r_diffuseSunQuality "2"
+      r_diffuseSunSteps "3"
+      r_dlightQuality "1"
+      r_drawSun "1"
+      r_dynamiclight "1"
+      r_entLightCutoff "0.2"
+      r_ext_texture_filter_anisotropic "0"
+      r_finish "0"
+      r_fullscreen "1"
+      r_gamma "1.0"
+      r_ignoreGLErrors "1"
+      r_ignorehwgamma "0"
+      r_inGameVideo "1"
+      r_lastValidRenderer "Quadro FX 1600M/PCI/SSE2"
+      r_lodbias "0"
+      r_lodscale "1"
+      r_maxEntLights "8"
+      r_mem_agp "8"
+      r_mem_backend "0.5"
+      r_mem_manual "0"
+      r_mem_video "2"
+      r_minEntLightIntensity "0.02"
+      r_mode "6"
+      r_nv_fog_dist "1"
+      r_nv_fogdist_mode "GL_EYE_RADIAL_NV"
+      r_overBrightBits "1"
+      r_picmip "1"
+      r_picmip2 "1"
+      r_portalbevels "0.7"
+      r_primitives "0"
+      r_railCoreWidth "1"
+      r_railSegmentLength "32"
+      r_railWidth "16"
+      r_simpleMipMaps "1"
+      r_skip_auto_config "0"
+      r_stencilbits "8"
+      r_swapDelay "0"
+      r_swapInterval "1"
+      r_texturebits "0"
+      r_textureMode "GL_LINEAR_MIPMAP_NEAREST"
+      r_uiFullScreen "1"
+      r_vbo_interleave "0"
+      r_vbo_paranoia "0"
+      r_vbo_smc_static_draw "1"
+      r_vbo_stream_draw "1"
+      rate "25000"
+      rconPassword "jeeps"
+      scr_allow_artillery "1"
+      scr_allow_bar "1"
+      scr_allow_bazooka "1"
+      scr_allow_binoculars "1"
+      scr_allow_bren "1"
+      scr_allow_dp28 "1"
+      scr_allow_elefant "1"
+      scr_allow_enfield "1"
+      scr_allow_fg42 "1"
+      scr_allow_flak88 "1"
+      scr_allow_flamethrower "1"
+      scr_allow_gaz67b "1"
+      scr_allow_gewehr43 "1"
+      scr_allow_grenades "1"
+      scr_allow_horch "1"
+      scr_allow_jeeps "1"
+      scr_allow_kar98k "1"
+      scr_allow_kar98ksniper "1"
+      scr_allow_m1carbine "1"
+      scr_allow_m1garand "1"
+      scr_allow_mg30cal "1"
+      scr_allow_mg34 "1"
+      scr_allow_mp40 "1"
+      scr_allow_mp44 "1"
+      scr_allow_nagant "1"
+      scr_allow_nagantsniper "1"
+      scr_allow_panzerfaust "1"
+      scr_allow_panzeriv "1"
+      scr_allow_panzerschreck "1"
+      scr_allow_pistols "1"
+      scr_allow_ppsh "1"
+      scr_allow_satchel "1"
+      scr_allow_sherman "1"
+      scr_allow_smoke "1"
+      scr_allow_springfield "1"
+      scr_allow_sten "1"
+      scr_allow_su152 "1"
+      scr_allow_svt40 "1"
+      scr_allow_t34 "1"
+      scr_allow_tanks "1"
+      scr_allow_thompson "1"
+      scr_allow_vote "1"
+      scr_allow_willyjeep "1"
+      scr_artillery_first_interval "45"
+      scr_artillery_interval "120"
+      scr_artillery_interval_range "15"
+      scr_bas_clearscoreeachround "0"
+      scr_bas_endrounddelay "10"
+      scr_bas_respawn_wave_time "10"
+      scr_bas_roundlength "20"
+      scr_bas_roundlimit "0"
+      scr_bas_scorelimit "0"
+      scr_bas_startrounddelay "15"
+      scr_bas_timelimit "60"
+      scr_battlerank "1"
+      scr_bel_alivepointtime "10"
+      scr_bel_scorelimit "0"
+      scr_bel_timelimit "30"
+      scr_ceasefire "0"
+      scr_ctf_clearscoreeachround "0"
+      scr_ctf_endrounddelay "10"
+      scr_ctf_roundlength "20"
+      scr_ctf_roundlimit "0"
+      scr_ctf_scorelimit "0"
+      scr_ctf_showoncompass "1"
+      scr_ctf_startrounddelay "10"
+      scr_ctf_timelimit "60"
+      scr_death_wait_time "5"
+      scr_dm_scorelimit "0"
+      scr_dm_timelimit "30"
+      scr_dom_clearscoreeachround "0"
+      scr_dom_endrounddelay "10"
+      scr_dom_respawn_wave_time "10"
+      scr_dom_roundlength "20"
+      scr_dom_roundlimit "0"
+      scr_dom_scorelimit "0"
+      scr_dom_startrounddelay "10"
+      scr_dom_timelimit "60"
+      scr_drawfriend "1"
+      scr_drophealth "1"
+      scr_forcerank "0"
+      scr_forcerespawn "0"
+      scr_forcerespawn_ftf "0"
+      scr_freelook "1"
+      scr_friendlyfire "3"
+      scr_ftf_flagicons "1"
+      scr_ftf_flagmodel "cow_standing"
+      scr_ftf_flagmodel_dropped "cow_dead"
+      scr_ftf_flagname "cow"
+      scr_ftf_flagrecovertime "10"
+      scr_ftf_flagspawndelay "20"
+      scr_ftf_holdtime "90"
+      scr_ftf_mode "3"
+      scr_ftf_removeflagspawns "1"
+      scr_ftf_respawntime "0"
+      scr_ftf_scorelimit "10"
+      scr_ftf_timelimit "20"
+      scr_hq_scorelimit "0"
+      scr_hq_timelimit "30"
+      scr_jeep_respawn_wait "5"
+      scr_jeep_spawn_limit "0"
+      scr_killcam "1"
+      scr_layoutimage "levelshots/layouts/hud@layout_mp_peaks.dds"
+      scr_motd "Welcome to G-Day X!"
+      scr_rank_ppr "10"
+      scr_re_graceperiod "15"
+      scr_re_roundlength "5"
+      scr_re_roundlimit "0"
+      scr_re_scorelimit "0"
+      scr_re_showcarrier "1"
+      scr_re_timelimit "30"
+      scr_sd_graceperiod "15"
+      scr_sd_roundlength "5"
+      scr_sd_roundlimit "0"
+      scr_sd_scorelimit "0"
+      scr_sd_timelimit "30"
+      scr_selfDestructJeepTime "90"
+      scr_shellshock "1"
+      scr_spectateenemy "1"
+      scr_tank_respawn_wait "10"
+      scr_tank_spawn_limit "0"
+      scr_tdm_scorelimit "0"
+      scr_tdm_timelimit "30"
+      scr_teambalance "0"
+      scr_teamscorepenalty "1"
+      scr_ttdm_scorelimit "100"
+      scr_ttdm_timelimit "30"
+      sensitivity "3.114583"
+      server1 ""
+      server10 ""
+      server11 ""
+      server12 ""
+      server13 ""
+      server14 ""
+      server15 ""
+      server16 ""
+      server2 ""
+      server3 ""
+      server4 ""
+      server5 ""
+      server6 ""
+      server7 ""
+      server8 ""
+      server9 ""
+      shortversion "1.51"
+      showdrop "0"
+      showpackets "0"
+      snaps "20"
+      sv_allowAnonymous "0"
+      sv_allowDownload "1"
+      sv_cheats "0"
+      sv_console_lockout "0"
+      sv_disableClientConsole "0"
+      sv_dl_maxrate "900000"
+      sv_floodProtect "1"
+      sv_fps "20"
+      sv_hostname "G-Day X"
+      sv_invulnerabletime "3"
+      sv_keywords ""
+      sv_kickBanTime "300"
+      sv_killserver "0"
+      sv_mapname ""
+      sv_mapRotation ""
+      sv_mapRotationCurrent ""
+      sv_maxclients "50"
+      sv_maxPing "999"
+      sv_maxRate "25000"
+      sv_minPing "0"
+      sv_night "0"
+      sv_obituary "1"
+      sv_onlyVisibleClients "0"
+      sv_packet_info "0"
+      sv_padPackets "0"
+      sv_pakNames ""
+      sv_paks ""
+      sv_paused "0"
+      sv_privateClients "0"
+      sv_privatePassword ""
+      sv_punkbuster "0"
+      sv_pure "0"
+      sv_reconnectlimit "3"
+      sv_referencedPakNames "uo/uomappack00 uo/stoop-jeeparena uo/pakuo07 uo/pakuo04 uo/pakuo03 uo/pakuo01 uo/pakuo00 main/pak8 main/pak5 main/pak4 main/pak0 uo/localized_english_pakuo01 uo/localized_english_pakuo00 main/localized_english_pak3 main/localized_english_pak2 main/localized_english_pak1"
+      sv_referencedPaks "1091839960 217417886 419375006 401794639 -914447005 -235342179 -659938473 -858314597 77111478 -1825805837 1048127331 411039402 323984529 -788625739 968878365 -961133319 "
+      sv_running "1"
+      sv_serverid "18"
+      sv_serverRestarting "1"
+      sv_showAverageBPS "0"
+      sv_showCommands "0"
+      sv_showloss "0"
+      sv_timeout "960"
+      sv_wwwBaseURL ""
+      sv_wwwDlDisconnected "0"
+      sv_wwwDownload "0"
+      sv_zombietime "2"
+      sys_configSum "70957801"
+      sys_cpuid "35"
+      sys_cpuMHz "2491.69"
+      sys_cpustring "Intel Pentium III"
+      sys_sysMB "1024"
+      sys_vidMB "512"
+      timescale "1"
+      ui_allow_artillery "1"
+      ui_allow_bar "1"
+      ui_allow_bazooka "1"
+      ui_allow_binoculars "1"
+      ui_allow_bren "1"
+      ui_allow_dp28 "1"
+      ui_allow_elefant "1"
+      ui_allow_enfield "1"
+      ui_allow_fg42 "1"
+      ui_allow_flamethrower "1"
+      ui_allow_gaz67b "1"
+      ui_allow_gewehr43 "1"
+      ui_allow_grenades "1"
+      ui_allow_horch "1"
+      ui_allow_jeeps "1"
+      ui_allow_kar98k "1"
+      ui_allow_kar98ksniper "1"
+      ui_allow_m1carbine "1"
+      ui_allow_m1garand "1"
+      ui_allow_mg30cal "1"
+      ui_allow_mg34 "1"
+      ui_allow_mp40 "1"
+      ui_allow_mp44 "1"
+      ui_allow_nagant "1"
+      ui_allow_nagantsniper "1"
+      ui_allow_panzerfaust "1"
+      ui_allow_panzeriv "1"
+      ui_allow_panzerschreck "1"
+      ui_allow_pistols "1"
+      ui_allow_ppsh "1"
+      ui_allow_satchel "1"
+      ui_allow_sherman "1"
+      ui_allow_smoke "1"
+      ui_allow_sniperrifles "1"
+      ui_allow_springfield "1"
+      ui_allow_sten "1"
+      ui_allow_su152 "1"
+      ui_allow_svt40 "1"
+      ui_allow_t34 "1"
+      ui_allow_tanks "1"
+      ui_allow_thompson "1"
+      ui_allow_willyjeep "1"
+      ui_allowVote "1"
+      ui_allowVoteClientKick "1"
+      ui_allowVoteDrawFriend "0"
+      ui_allowVoteFriendlyFire "0"
+      ui_allowVoteGameType "1"
+      ui_allowVoteKick "1"
+      ui_allowVoteKillCam "0"
+      ui_allowVoteMap "1"
+      ui_allowVoteMapRestart "1"
+      ui_allowVoteMapRotate "1"
+      ui_allowVoteTempBanClient "1"
+      ui_allowVoteTempBanUser "1"
+      ui_allowVoteTypeMap "1"
+      ui_battlerank "1"
+      ui_bigFont "0.4"
+      ui_browserFriendlyfire "-1"
+      ui_browserGameType "0"
+      ui_browserKillcam "-1"
+      ui_browserMaster "0"
+      ui_browserMod "-1"
+      ui_browserShowDedicated "0"
+      ui_browserShowEmpty "1"
+      ui_browserShowFull "1"
+      ui_browserShowJeeps "-1"
+      ui_browserShowNoPassword "1"
+      ui_browserShowPassword "1"
+      ui_browserShowPunkBuster "-1"
+      ui_browserShowPure "0"
+      ui_browserShowTanks "-1"
+      ui_browserSortKey "4"
+      ui_currentMap "11"
+      ui_currentNetMap "11"
+      ui_dedicated "0"
+      ui_drawfriend "1"
+      ui_extraBigFont "0.55"
+      ui_friendlyfire "3"
+      ui_gametype "3"
+      ui_hostname "G-Day X"
+      ui_joinGametype "0"
+      ui_killcam "1"
+      ui_mapIndex "8"
+      ui_motd "Welcome to G-Day X!"
+      ui_mousePitch "0"
+      ui_netGametype "4"
+      ui_netGametypeName "bel"
+      ui_netSource "0"
+      ui_serverStatusTimeOut "7000"
+      ui_shellshock "1"
+      ui_smallFont "0.25"
+      ui_tdm_scorelimit "0"
+      ui_tdm_timelimit "30"
+      ui_timeoutBank "180000"
+      ui_timeoutLength "90000"
+      ui_timeoutRecovery "10000"
+      ui_timeoutsAllowed "0"
+      username "CWARD"
+      version "CODUO MP 1.51 build 1463 Dec  6 2004 20:33:18 win-x86"
+      vid_xpos "388"
+      vid_ypos "181"
+      viewlog "1"
+      win_allowalttab "0"
+      win_hinstance "4194304"
+      win_wndproc "4651856"
+
+632 total cvars
+632 cvar indexes
+=============================== END CVAR DUMP =====================================
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set sv_serverRestarting 0
+Hitch warning: 503 msec frame time
+couldn't exec mp_uo_dawnville_tdm.cfg
+==== ShutdownGame ====
+------ Server Initialization ------
+Server: mp_uo_dawnville
+Hunk_Clear: reset the hunk ok
+Current language: english
+Current search path:
+C:\Program Files\Call of Duty/cod-stats
+C:\Program Files\Call of Duty\uo\uomappack00.pk3 (143 files)
+C:\Program Files\Call of Duty\uo\stoop-warehouse-fun.pk3 (6 files)
+C:\Program Files\Call of Duty\uo\stoop-reserves.pk3 (16 files)
+C:\Program Files\Call of Duty\uo\stoop-jeeparena.pk3 (24 files)
+C:\Program Files\Call of Duty\uo\stoop-enclave.pk3 (16 files)
+C:\Program Files\Call of Duty\uo\pakuo07.pk3 (157 files)
+C:\Program Files\Call of Duty\uo\pakuo06.pk3 (12 files)
+C:\Program Files\Call of Duty\uo\pakuo05.pk3 (3 files)
+C:\Program Files\Call of Duty\uo\pakuo04.pk3 (7646 files)
+C:\Program Files\Call of Duty\uo\pakuo03.pk3 (2275 files)
+C:\Program Files\Call of Duty\uo\pakuo02.pk3 (790 files)
+C:\Program Files\Call of Duty\uo\pakuo01.pk3 (1657 files)
+C:\Program Files\Call of Duty\uo\pakuo00.pk3 (6233 files)
+C:\Program Files\Call of Duty/uo
+C:\Program Files\Call of Duty\main\paka.pk3 (41 files)
+C:\Program Files\Call of Duty\main\pak9.pk3 (149 files)
+C:\Program Files\Call of Duty\main\pak8.pk3 (235 files)
+C:\Program Files\Call of Duty\main\pak6.pk3 (3 files)
+C:\Program Files\Call of Duty\main\pak5.pk3 (4858 files)
+C:\Program Files\Call of Duty\main\pak4.pk3 (1668 files)
+C:\Program Files\Call of Duty\main\pak3.pk3 (1992 files)
+C:\Program Files\Call of Duty\main\pak2.pk3 (694 files)
+C:\Program Files\Call of Duty\main\pak1.pk3 (2642 files)
+C:\Program Files\Call of Duty\main\pak0.pk3 (12816 files)
+C:\Program Files\Call of Duty/main
+C:\Program Files\Call of Duty\uo\localized_english_pakuo02.pk3 (12 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\uo\localized_english_pakuo01.pk3 (37 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\uo\localized_english_pakuo00.pk3 (2578 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\main\localized_english_pak3.pk3 (7 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\main\localized_english_pak2.pk3 (9 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\main\localized_english_pak1.pk3 (3736 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\main\localized_english_pak0.pk3 (1204 files)
+    localized assets pak file for english
+
+File Handles:
+handle 1: console_mp.log
+----------------------
+51659 files in pk3 files
+      cvar set cl_languagesavailable 1
+      cvar set g_gametype tdm
+      cvar set nextmap map_restart
+      cvar set com_expectedhunkusage 82082720
+      cvar set cl_paused 0
+      cvar set cm_noCurves 0
+      cvar set cm_playerCurveClip 1
+      cvar set mapname mp_uo_dawnville
+      cvar set sv_serverid 34
+      cvar set sv_serverRestarting 1
+WARNING: Com_PushEvent overflow
+------- Game Initialization -------
+gamename: CoD:United Offensive
+gamedate: Dec  6 2004
+      cvar set g_debugDamage 0
+      cvar set g_debugBullets 0
+      cvar set g_tracerchancelmg 0.7
+      cvar set g_vehicleDrawPath 0
+      cvar set g_vehicleDebug 0
+      cvar set g_vehicleTexScrollScale 0
+      cvar set g_vehicleTrafficStressTest 0
+      cvar set bg_nofatigue 0
+      cvar set bg_fallDamageMinHeight 256
+      cvar set bg_fallDamageMaxHeight 480
+      cvar set bg_debugWeaponAnim 0
+      cvar set bg_debugWeaponState 0
+      cvar set g_bounds_width 30
+      cvar set g_bounds_height_standing 70
+      cvar set g_debugShowHit 0
+      cvar set g_debugLocDamage 0
+      cvar set g_debuganim 0
+      cvar set bg_swingSpeed 0.2
+      cvar set g_dumpAnims -1
+      cvar set cg_atmos -1
+      cvar set g_gravity 800
+0 teams with 0 entities
+      cvar set ui_allowvote 1
+      cvar set ui_allowVoteMapRestart 1
+      cvar set ui_allowVoteMapRotate 1
+      cvar set ui_allowVoteTypeMap 1
+      cvar set ui_allowVoteMap 1
+      cvar set ui_allowVoteGameType 1
+      cvar set ui_allowVoteKick 1
+      cvar set ui_allowVoteClientKick 1
+      cvar set ui_allowVoteTempBanUser 1
+      cvar set ui_allowVoteTempBanClient 1
+      cvar set ui_allowVoteDrawFriend 0
+      cvar set ui_allowVoteKillCam 0
+      cvar set ui_allowVoteFriendlyFire 0
+      cvar set ui_drawfriend 1
+      cvar set ui_friendlyfire 3
+      cvar set ui_killcam 1
+      cvar set ui_timeoutsAllowed 0
+      cvar set ui_timeoutBank 180000
+      cvar set ui_timeoutLength 90000
+      cvar set ui_timeoutRecovery 10000
+      cvar set cg_atmos -1
+-----------------------------------
+      cvar set ui_tdm_timelimit 30
+      cvar set ui_tdm_scorelimit 0
+      cvar set scr_teamscorepenalty 1
+      cvar set ui_battlerank 1
+      cvar set ui_shellshock 1
+      cvar set cg_hudcompassMaxRange 1024
+      cvar set scr_killcam 1
+      cvar set scr_ceasefire 0
+      cvar set sv_night 0
+      cvar set sv_night 0
+      cvar set scr_layoutimage levelshots/layouts/hud@layout_mp_uo_dawnville
+      cvar set g_TeamName_Allies MPSCRIPT_AMERICAN
+      cvar set g_TeamColor_Allies .25 .75 .25
+      cvar set g_ScoresBanner_Allies gfx/hud/hud@mpflag_american.tga
+      cvar set g_TeamName_Axis MPSCRIPT_GERMAN
+      cvar set g_TeamColor_Axis .6 .6 .6
+      cvar set g_ScoresBanner_Axis gfx/hud/hud@mpflag_german.tga
+      cvar set sv_hostname G-Day X
+      cvar set ui_hostname G-Day X
+      cvar set scr_motd Welcome to G-Day X!
+      cvar set ui_motd Welcome to G-Day X!
+      cvar set g_allowvote 1
+      cvar set ui_allowvote 1
+      cvar set g_allowvotemaprestart 1
+      cvar set ui_allowvotemaprestart 1
+      cvar set g_allowvotemaprotate 1
+      cvar set ui_allowvotemaprotate 1
+      cvar set g_allowvotemap 1
+      cvar set ui_allowvotemap 1
+      cvar set g_allowvotetypemap 1
+      cvar set ui_allowvotetypemap 1
+      cvar set g_allowvotekick 1
+      cvar set ui_allowvotekick 1
+      cvar set g_allowvotetempbanuser 1
+      cvar set ui_allowvotetempbanuser 1
+      cvar set scr_friendlyfire 3
+      cvar set ui_friendlyfire 3
+      cvar set scr_allow_m1carbine 1
+      cvar set ui_allow_m1carbine 1
+      cvar set scr_allow_m1garand 1
+      cvar set ui_allow_m1garand 1
+      cvar set scr_allow_thompson 1
+      cvar set ui_allow_thompson 1
+      cvar set scr_allow_bar 1
+      cvar set ui_allow_bar 1
+      cvar set scr_allow_springfield 1
+      cvar set ui_allow_springfield 1
+      cvar set scr_allow_mg30cal 1
+      cvar set ui_allow_mg30cal 1
+      cvar set scr_allow_enfield 1
+      cvar set ui_allow_enfield 1
+      cvar set scr_allow_sten 1
+      cvar set ui_allow_sten 1
+      cvar set scr_allow_bren 1
+      cvar set ui_allow_bren 1
+      cvar set scr_allow_nagant 1
+      cvar set ui_allow_nagant 1
+      cvar set scr_allow_svt40 1
+      cvar set ui_allow_svt40 1
+      cvar set scr_allow_ppsh 1
+      cvar set ui_allow_ppsh 1
+      cvar set scr_allow_nagantsniper 1
+      cvar set ui_allow_nagantsniper 1
+      cvar set scr_allow_dp28 1
+      cvar set ui_allow_dp28 1
+      cvar set scr_allow_kar98k 1
+      cvar set ui_allow_kar98k 1
+      cvar set scr_allow_gewehr43 1
+      cvar set ui_allow_gewehr43 1
+      cvar set scr_allow_mp40 1
+      cvar set ui_allow_mp40 1
+      cvar set scr_allow_mp44 1
+      cvar set ui_allow_mp44 1
+      cvar set scr_allow_kar98ksniper 1
+      cvar set ui_allow_kar98ksniper 1
+      cvar set scr_allow_mg34 1
+      cvar set ui_allow_mg34 1
+      cvar set scr_allow_fg42 1
+      cvar set ui_allow_fg42 1
+      cvar set scr_allow_panzerfaust 1
+      cvar set ui_allow_panzerfaust 1
+      cvar set scr_allow_bazooka 1
+      cvar set ui_allow_bazooka 1
+      cvar set scr_allow_panzerschreck 1
+      cvar set ui_allow_panzerschreck 1
+      cvar set scr_allow_flamethrower 1
+      cvar set ui_allow_flamethrower 1
+      cvar set scr_allow_binoculars 1
+      cvar set ui_allow_binoculars 1
+      cvar set scr_allow_artillery 1
+      cvar set ui_allow_artillery 1
+      cvar set scr_allow_satchel 1
+      cvar set ui_allow_satchel 1
+      cvar set scr_allow_grenades 1
+      cvar set ui_allow_grenades 1
+      cvar set scr_allow_smoke 1
+      cvar set ui_allow_smoke 1
+      cvar set scr_allow_pistols 1
+      cvar set ui_allow_pistols 1
+=============================== CVAR DUMP ========================================
+
+632 total cvars
+632 cvar indexes
+=============================== END CVAR DUMP =====================================
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set sv_paks 
+      cvar set sv_pakNames 
+      cvar set sv_referencedPaks 1091839960 217417886 419375006 401794639 -914447005 -235342179 -659938473 1622099944 -858314597 77111478 -1825805837 1048127331 411039402 323984529 -788625739 968878365 -961133319 
+      cvar set sv_referencedPakNames uo/uomappack00 uo/stoop-jeeparena uo/pakuo07 uo/pakuo04 uo/pakuo03 uo/pakuo01 uo/pakuo00 main/pak9 main/pak8 main/pak5 main/pak4 main/pak0 uo/localized_english_pakuo01 uo/localized_english_pakuo00 main/localized_english_pak3 main/localized_english_pak2 main/localized_english_pak1
+      cvar set sv_serverRestarting 0
+-----------------------------------
+      cvar set sv_punkbuster 0
+      cvar set sv_cheats 0
+PunkBuster Server: 0 Aliases Written to pbalias.dat
+PunkBuster Server: 0 Stat Records Written to pbstat.dat
+PunkBuster Server: Preparing to Disable PB Server... (C:\Program Files\Call of Duty\pb\)
+Hitch warning: 2688 msec frame time
+Hitch warning: 527 msec frame time
+Hitch warning: 527 msec frame time
+^8(GAME_ALLIES)Doin it for the Kids^7: QUICKMESSAGE_ENEMY_DOWN
+Hitch warning: 505 msec frame time
+Hitch warning: 591 msec frame time
+Hitch warning: 518 msec frame time
+Hitch warning: 562 msec frame time
+Hitch warning: 525 msec frame time
+Hitch warning: 542 msec frame time
+Hitch warning: 529 msec frame time
+Hitch warning: 511 msec frame time
+^9(GAME_AXIS)Xenomorph^7: QUICKMESSAGE_FOLLOW_ME
+^9(GAME_AXIS)Xenomorph^7: QUICKMESSAGE_MOVE_IN
+^9(GAME_DEAD)Xenomorph^7: rdddawdawdawdawdawdadfasd
+Hitch warning: 1075 msec frame time
+Hitch warning: 578 msec frame time
+Hitch warning: 626 msec frame time
+Hitch warning: 640 msec frame time
+Hitch warning: 561 msec frame time
+Hitch warning: 534 msec frame time
+Hitch warning: 501 msec frame time
+Hitch warning: 503 msec frame time
+Hitch warning: 505 msec frame time
+Hitch warning: 596 msec frame time
+Hitch warning: 540 msec frame time
+Hitch warning: 501 msec frame time
+Hitch warning: 552 msec frame time
+Hitch warning: 514 msec frame time
+Hitch warning: 505 msec frame time
+Hitch warning: 583 msec frame time
+Hitch warning: 534 msec frame time
+Hitch warning: 549 msec frame time
+map_rotate...
+
+"sv_mapRotation" is:""
+
+"sv_mapRotationCurrent" is:""
+
+      cvar set sv_mapRotationCurrent 
+      cvar set sv_mapRotationCurrent 
+      cvar set sv_mapRotationCurrent 
+      cvar set sv_mapRotationCurrent 
+No map specified in sv_mapRotation - forcing map_restart.
+      cvar set g_gametype tdm
+      cvar set sv_serverid 35
+      cvar set sv_serverRestarting 1
+==== RestartGame ====
+------- Game Initialization -------
+gamename: CoD:United Offensive
+gamedate: Dec  6 2004
+      cvar set g_debugDamage 0
+      cvar set g_debugBullets 0
+      cvar set g_tracerchancelmg 0.7
+      cvar set g_vehicleDrawPath 0
+      cvar set g_vehicleDebug 0
+      cvar set g_vehicleTexScrollScale 0
+      cvar set g_vehicleTrafficStressTest 0
+      cvar set bg_nofatigue 0
+      cvar set bg_fallDamageMinHeight 256
+      cvar set bg_fallDamageMaxHeight 480
+      cvar set bg_debugWeaponAnim 0
+      cvar set bg_debugWeaponState 0
+      cvar set g_bounds_width 30
+      cvar set g_bounds_height_standing 70
+      cvar set g_debugShowHit 0
+      cvar set g_debugLocDamage 0
+      cvar set g_debuganim 0
+      cvar set bg_swingSpeed 0.2
+      cvar set g_dumpAnims -1
+      cvar set cg_atmos -1
+      cvar set g_gravity 800
+0 teams with 0 entities
+      cvar set ui_allowvote 1
+      cvar set ui_allowVoteMapRestart 1
+      cvar set ui_allowVoteMapRotate 1
+      cvar set ui_allowVoteTypeMap 1
+      cvar set ui_allowVoteMap 1
+      cvar set ui_allowVoteGameType 1
+      cvar set ui_allowVoteKick 1
+      cvar set ui_allowVoteClientKick 1
+      cvar set ui_allowVoteTempBanUser 1
+      cvar set ui_allowVoteTempBanClient 1
+      cvar set ui_allowVoteDrawFriend 0
+      cvar set ui_allowVoteKillCam 0
+      cvar set ui_allowVoteFriendlyFire 0
+      cvar set ui_drawfriend 1
+      cvar set ui_friendlyfire 3
+      cvar set ui_killcam 1
+      cvar set ui_timeoutsAllowed 0
+      cvar set ui_timeoutBank 180000
+      cvar set ui_timeoutLength 90000
+      cvar set ui_timeoutRecovery 10000
+      cvar set cg_atmos -1
+-----------------------------------
+      cvar set ui_tdm_timelimit 30
+      cvar set ui_tdm_scorelimit 0
+      cvar set scr_teamscorepenalty 1
+      cvar set ui_battlerank 1
+      cvar set ui_shellshock 1
+      cvar set cg_hudcompassMaxRange 1024
+      cvar set scr_killcam 1
+      cvar set scr_ceasefire 0
+      cvar set sv_night 0
+      cvar set sv_night 0
+      cvar set scr_layoutimage levelshots/layouts/hud@layout_mp_uo_dawnville
+      cvar set g_TeamName_Allies MPSCRIPT_AMERICAN
+      cvar set g_TeamColor_Allies .25 .75 .25
+      cvar set g_ScoresBanner_Allies gfx/hud/hud@mpflag_american.tga
+      cvar set g_TeamName_Axis MPSCRIPT_GERMAN
+      cvar set g_TeamColor_Axis .6 .6 .6
+      cvar set g_ScoresBanner_Axis gfx/hud/hud@mpflag_german.tga
+      cvar set sv_hostname G-Day X
+      cvar set ui_hostname G-Day X
+      cvar set scr_motd Welcome to G-Day X!
+      cvar set ui_motd Welcome to G-Day X!
+      cvar set g_allowvote 1
+      cvar set ui_allowvote 1
+      cvar set g_allowvotemaprestart 1
+      cvar set ui_allowvotemaprestart 1
+      cvar set g_allowvotemaprotate 1
+      cvar set ui_allowvotemaprotate 1
+      cvar set g_allowvotemap 1
+      cvar set ui_allowvotemap 1
+      cvar set g_allowvotetypemap 1
+      cvar set ui_allowvotetypemap 1
+      cvar set g_allowvotekick 1
+      cvar set ui_allowvotekick 1
+      cvar set g_allowvotetempbanuser 1
+      cvar set ui_allowvotetempbanuser 1
+      cvar set scr_friendlyfire 3
+      cvar set ui_friendlyfire 3
+      cvar set scr_allow_m1carbine 1
+      cvar set ui_allow_m1carbine 1
+      cvar set scr_allow_m1garand 1
+      cvar set ui_allow_m1garand 1
+      cvar set scr_allow_thompson 1
+      cvar set ui_allow_thompson 1
+      cvar set scr_allow_bar 1
+      cvar set ui_allow_bar 1
+      cvar set scr_allow_springfield 1
+      cvar set ui_allow_springfield 1
+      cvar set scr_allow_mg30cal 1
+      cvar set ui_allow_mg30cal 1
+      cvar set scr_allow_enfield 1
+      cvar set ui_allow_enfield 1
+      cvar set scr_allow_sten 1
+      cvar set ui_allow_sten 1
+      cvar set scr_allow_bren 1
+      cvar set ui_allow_bren 1
+      cvar set scr_allow_nagant 1
+      cvar set ui_allow_nagant 1
+      cvar set scr_allow_svt40 1
+      cvar set ui_allow_svt40 1
+      cvar set scr_allow_ppsh 1
+      cvar set ui_allow_ppsh 1
+      cvar set scr_allow_nagantsniper 1
+      cvar set ui_allow_nagantsniper 1
+      cvar set scr_allow_dp28 1
+      cvar set ui_allow_dp28 1
+      cvar set scr_allow_kar98k 1
+      cvar set ui_allow_kar98k 1
+      cvar set scr_allow_gewehr43 1
+      cvar set ui_allow_gewehr43 1
+      cvar set scr_allow_mp40 1
+      cvar set ui_allow_mp40 1
+      cvar set scr_allow_mp44 1
+      cvar set ui_allow_mp44 1
+      cvar set scr_allow_kar98ksniper 1
+      cvar set ui_allow_kar98ksniper 1
+      cvar set scr_allow_mg34 1
+      cvar set ui_allow_mg34 1
+      cvar set scr_allow_fg42 1
+      cvar set ui_allow_fg42 1
+      cvar set scr_allow_panzerfaust 1
+      cvar set ui_allow_panzerfaust 1
+      cvar set scr_allow_bazooka 1
+      cvar set ui_allow_bazooka 1
+      cvar set scr_allow_panzerschreck 1
+      cvar set ui_allow_panzerschreck 1
+      cvar set scr_allow_flamethrower 1
+      cvar set ui_allow_flamethrower 1
+      cvar set scr_allow_binoculars 1
+      cvar set ui_allow_binoculars 1
+      cvar set scr_allow_artillery 1
+      cvar set ui_allow_artillery 1
+      cvar set scr_allow_satchel 1
+      cvar set ui_allow_satchel 1
+      cvar set scr_allow_grenades 1
+      cvar set ui_allow_grenades 1
+      cvar set scr_allow_smoke 1
+      cvar set ui_allow_smoke 1
+      cvar set scr_allow_pistols 1
+      cvar set ui_allow_pistols 1
+=============================== CVAR DUMP ========================================
+      .Admin "Luda"
+      .Email ""
+      .Irc ""
+      .Location "Beavercreek, OH"
+      .Website "http://cward-nb/gday10"
+      arch "winnt"
+      bg_debugWeaponAnim "0"
+      bg_debugWeaponState "0"
+      bg_fallDamageMaxHeight "480"
+      bg_fallDamageMinHeight "256"
+      bg_foliagesnd_fastinterval "500"
+      bg_foliagesnd_maxspeed "180"
+      bg_foliagesnd_minspeed "40"
+      bg_foliagesnd_resetinterval "500"
+      bg_foliagesnd_slowinterval "1500"
+      bg_ladder_yawcap "100"
+      bg_lmg_yawcap "55"
+      bg_nofatigue "0"
+      bg_prone_yawcap "85"
+      bg_swingSpeed "0.2"
+      bg_viewheight_crouched "40"
+      bg_viewheight_prone "11"
+      bg_viewheight_standing "60"
+      cg_announcerSounds "1"
+      cg_atmos "-1"
+      cg_autodemo "0"
+      cg_autoscreenshot "0"
+      cg_blood "1"
+      cg_bobAmplitudeDucked "0.0075"
+      cg_bobAmplitudeProne "0.03"
+      cg_bobAmplitudeStanding "0.007"
+      cg_bobMax "8"
+      cg_brass "1"
+      cg_chatHeight "8"
+      cg_chatTime "12000"
+      cg_crosshairAlpha "1.0"
+      cg_crosshairAlphaMin "0.7"
+      cg_crosshairDynamic "0"
+      cg_crosshairNoGun "gfx/reticle/hud@center_ads.tga"
+      cg_crosshairSize "48"
+      cg_currentSelectedPlayer "0"
+      cg_currentSelectedPlayerName ""
+      cg_cursorHints "4"
+      cg_deadbodyque "32"
+      cg_descriptiveText "1"
+      cg_drawCompass "1"
+      cg_drawCrosshair "1"
+      cg_drawCrosshairNames "1"
+      cg_drawCrosshairPickups "1"
+      cg_drawFPS "0"
+      cg_drawGun "1"
+      cg_drawNotifyText "1"
+      cg_drawRewards "1"
+      cg_drawSnapshot "0"
+      cg_drawStatus "1"
+      cg_drawTeamOverlay "2"
+      cg_fov "80"
+      cg_gameBoldMessageWidth "60"
+      cg_gameMessageWidth "70"
+      cg_hintFadeTime "100"
+      cg_hudAlpha "1.0"
+      cg_hudCompassMaxRange "1024"
+      cg_hudCompassMinRadius "0"
+      cg_hudCompassMinRange "0"
+      cg_hudCompassSize "1.0"
+      cg_hudCompassSpringyPointers "0"
+      cg_hudDamageIconHeight "64"
+      cg_hudDamageIconInScope "0"
+      cg_hudDamageIconOffset "32"
+      cg_hudDamageIconTime "2000"
+      cg_hudDamageIconWidth "128"
+      cg_hudObjectiveMaxHeight "70"
+      cg_hudObjectiveMaxRange "2048"
+      cg_hudObjectiveMinAlpha "1"
+      cg_hudObjectiveMinHeight "-70"
+      cg_hudStanceHintPrints "1"
+      cg_lagometer "0"
+      cg_marks "1"
+      cg_noTaunt "0"
+      cg_noVoiceChats "0"
+      cg_noVoiceText "0"
+      cg_predictItems "1"
+      cg_railTrailTime "400"
+      cg_scoreboardScrollStep "3"
+      cg_selectedPlayer "0"
+      cg_shadows "0"
+      cg_showdemoname "1"
+      cg_stereoSeparation "0.4"
+      cg_subtitleMinTime "3"
+      cg_subtitles "1"
+      cg_subtitleWidth "80"
+      cg_teamChatsOnly "0"
+      cg_vehicletrails "1"
+      cg_viewsize "100"
+      cg_voiceSpriteTime "6000"
+      cg_weaponCycleDelay "0"
+      cl_allowDownload "0"
+      cl_anonymous "0"
+      cl_autocmd "1"
+      cl_freelook "1"
+      cl_goStandJumpTime "0"
+      cl_language "0"
+      cl_languagesavailable "1"
+      cl_languagetranslate "1"
+      cl_languagewarnings "0"
+      cl_languagewarningsaserrors "0"
+      cl_maxpackets "30"
+      cl_maxPing "800"
+      cl_mouseAccel "0"
+      cl_packetdup "1"
+      cl_paused "0"
+      cl_pitchspeed "140"
+      cl_punkbuster "0"
+      cl_running "0"
+      cl_wwwDownload "1"
+      cl_xmodelcheck "0"
+      cl_yawspeed "140"
+      cm_noCurves "0"
+      cm_playerCurveClip "1"
+      com_animCheck "0"
+      com_expectedhunkusage "82082720"
+      com_hunkmegs "128"
+      com_introplayed "1"
+      com_maxfps "85"
+      com_recommendedSet "1"
+      com_speeds "0"
+      com_statmon "0"
+      con_debug "0"
+      con_minicon "0"
+      con_miniconlines "5"
+      con_minicontime "4"
+      dedicated "1"
+      developer "0"
+      developer_script "0"
+      fixedtime "0"
+      fs_basegame "uo"
+      fs_basepath "C:\Program Files\Call of Duty"
+      fs_cdpath ""
+      fs_copyfiles "0"
+      fs_debug "0"
+      fs_game "cod-stats"
+      fs_homepath "C:\Program Files\Call of Duty"
+      fs_ignoreLozalized "0"
+      fs_restrict ""
+      fx_cullbias "0"
+      fx_cullscale "1"
+      g_allowvote "1"
+      g_allowVoteClientKick "1"
+      g_allowVoteDrawFriend "0"
+      g_allowVoteFriendlyFire "0"
+      g_allowVoteGameType "1"
+      g_allowVoteKick "1"
+      g_allowVoteKillCam "0"
+      g_allowVoteMap "1"
+      g_allowVoteMapRestart "1"
+      g_allowVoteMapRotate "1"
+      g_allowVoteTempBanClient "1"
+      g_allowVoteTempBanUser "1"
+      g_allowVoteTypeMap "1"
+      g_autodemo "0"
+      g_autoscreenshot "0"
+      g_banIPs ""
+      g_bounds_height_standing "70"
+      g_bounds_width "30"
+      g_complaintlimit "3"
+      g_deadChat "1"
+      g_debugAlloc "0"
+      g_debuganim "0"
+      g_debugBullets "0"
+      g_debugDamage "0"
+      g_debugLocDamage "0"
+      g_debugMove "0"
+      g_debugProneCheck "0"
+      g_debugProneCheckDepthCheck "1"
+      g_debugShowHit "0"
+      g_dumpAnims "-1"
+      g_gametype "tdm"
+      g_gravity "800"
+      g_inactivity "0"
+      g_inactivityspectator "0"
+      g_intermissionDelay "1000"
+      g_knockback "1000"
+      g_listEntity "0"
+      g_log "games_mp.log"
+      g_logSync "1"
+      g_maxDroppedWeapons "16"
+      g_motd ""
+      g_no_script_spam "0"
+      g_password ""
+      g_ScoresBanner_Allies "gfx/hud/hud@mpflag_american.tga"
+      g_ScoresBanner_Axis "gfx/hud/hud@mpflag_german.tga"
+      g_ScoresBanner_None "gfx/hud/hud@mpflag_none.tga"
+      g_ScoresBanner_Spectators "gfx/hud/hud@mpflag_spectator.tga"
+      g_scriptMainMenu ""
+      g_scriptMap ""
+      g_smoothClients "1"
+      g_speed "190"
+      g_synchronousClients "0"
+      g_TeamColor_Allies ".25 .75 .25"
+      g_TeamColor_Axis ".6 .6 .6"
+      g_TeamName_Allies "MPSCRIPT_AMERICAN"
+      g_TeamName_Axis "MPSCRIPT_GERMAN"
+      g_timeoutBank "180000"
+      g_timeoutlength "90000"
+      g_timeoutRecovery "10000"
+      g_timeoutsallowed "0"
+      g_tracerchance "0.4"
+      g_tracerchancelmg "0.7"
+      g_useGear "1"
+      g_vehicleBurnTime "10"
+      g_vehicleDebug "0"
+      g_vehicleDrawPath "0"
+      g_vehicleEnableCollisionDamage "0"
+      g_vehicleForceBulletDamage "0"
+      g_vehicleForceGrenadeDamage "0"
+      g_vehicleHorns "1"
+      g_vehicleTexScrollScale "0"
+      g_vehicleTrafficStressTest "0"
+      g_voiceChatsAllowed "4"
+      g_weaponAmmoPools "0"
+      g_weaponrespawn "5"
+      gamedate "Dec  6 2004"
+      gamename "CoD:United Offensive"
+      handicap "100"
+      head ""
+      hurtgentrees "off"
+      in_debugjoystick "0"
+      in_joyBallScale "0.02"
+      in_joystick "0"
+      in_midi "0"
+      in_midichannel "1"
+      in_mididevice "0"
+      in_midiport "1"
+      in_mouse "1"
+      journal "0"
+      joy_threshold "0.15"
+      logfile "2"
+      m_filter "0"
+      m_forward "0.25"
+      m_pitch "0.022"
+      m_side "0.25"
+      m_yaw "0.022"
+      mapname "mp_uo_dawnville"
+      model ""
+      mss_3d_provider "Miles Fast 2D Positional Audio"
+      mss_bits "16"
+      mss_errorOnMissing "1"
+      mss_khz "44"
+      mss_stereo "1"
+      mss_volume "0.8"
+      name "Luda"
+      net_ip "localhost"
+      net_lanauthorize "0"
+      net_noipx "0"
+      net_noudp "0"
+      net_port "28960"
+      net_profile "0"
+      net_qport "16618"
+      net_showprofile "0"
+      net_socksEnabled "0"
+      net_socksPassword ""
+      net_socksPort "1080"
+      net_socksServer ""
+      net_socksUsername ""
+      nextmap "map_restart"
+      pmove_fixed "0"
+      pmove_msec "8"
+      protocol "22"
+      r_ati_fsaa_samples "1"
+      r_ati_pntriangles "0"
+      r_ati_truform_normalmode "QUADRATIC"
+      r_ati_truform_pointmode "CUBIC"
+      r_ati_truform_tess "1"
+      r_colorbits "32"
+      r_customaspect "1"
+      r_customheight "1024"
+      r_customwidth "1600"
+      r_depthbits "0"
+      r_detailtextures "1"
+      r_diffuseSunQuality "2"
+      r_diffuseSunSteps "3"
+      r_dlightQuality "1"
+      r_drawSun "1"
+      r_dynamiclight "1"
+      r_entLightCutoff "0.2"
+      r_ext_texture_filter_anisotropic "0"
+      r_finish "0"
+      r_fullscreen "1"
+      r_gamma "1.0"
+      r_ignoreGLErrors "1"
+      r_ignorehwgamma "0"
+      r_inGameVideo "1"
+      r_lastValidRenderer "Quadro FX 1600M/PCI/SSE2"
+      r_lodbias "0"
+      r_lodscale "1"
+      r_maxEntLights "8"
+      r_mem_agp "8"
+      r_mem_backend "0.5"
+      r_mem_manual "0"
+      r_mem_video "2"
+      r_minEntLightIntensity "0.02"
+      r_mode "6"
+      r_nv_fog_dist "1"
+      r_nv_fogdist_mode "GL_EYE_RADIAL_NV"
+      r_overBrightBits "1"
+      r_picmip "1"
+      r_picmip2 "1"
+      r_portalbevels "0.7"
+      r_primitives "0"
+      r_railCoreWidth "1"
+      r_railSegmentLength "32"
+      r_railWidth "16"
+      r_simpleMipMaps "1"
+      r_skip_auto_config "0"
+      r_stencilbits "8"
+      r_swapDelay "0"
+      r_swapInterval "1"
+      r_texturebits "0"
+      r_textureMode "GL_LINEAR_MIPMAP_NEAREST"
+      r_uiFullScreen "1"
+      r_vbo_interleave "0"
+      r_vbo_paranoia "0"
+      r_vbo_smc_static_draw "1"
+      r_vbo_stream_draw "1"
+      rate "25000"
+      rconPassword "jeeps"
+      scr_allow_artillery "1"
+      scr_allow_bar "1"
+      scr_allow_bazooka "1"
+      scr_allow_binoculars "1"
+      scr_allow_bren "1"
+      scr_allow_dp28 "1"
+      scr_allow_elefant "1"
+      scr_allow_enfield "1"
+      scr_allow_fg42 "1"
+      scr_allow_flak88 "1"
+      scr_allow_flamethrower "1"
+      scr_allow_gaz67b "1"
+      scr_allow_gewehr43 "1"
+      scr_allow_grenades "1"
+      scr_allow_horch "1"
+      scr_allow_jeeps "1"
+      scr_allow_kar98k "1"
+      scr_allow_kar98ksniper "1"
+      scr_allow_m1carbine "1"
+      scr_allow_m1garand "1"
+      scr_allow_mg30cal "1"
+      scr_allow_mg34 "1"
+      scr_allow_mp40 "1"
+      scr_allow_mp44 "1"
+      scr_allow_nagant "1"
+      scr_allow_nagantsniper "1"
+      scr_allow_panzerfaust "1"
+      scr_allow_panzeriv "1"
+      scr_allow_panzerschreck "1"
+      scr_allow_pistols "1"
+      scr_allow_ppsh "1"
+      scr_allow_satchel "1"
+      scr_allow_sherman "1"
+      scr_allow_smoke "1"
+      scr_allow_springfield "1"
+      scr_allow_sten "1"
+      scr_allow_su152 "1"
+      scr_allow_svt40 "1"
+      scr_allow_t34 "1"
+      scr_allow_tanks "1"
+      scr_allow_thompson "1"
+      scr_allow_vote "1"
+      scr_allow_willyjeep "1"
+      scr_artillery_first_interval "45"
+      scr_artillery_interval "120"
+      scr_artillery_interval_range "15"
+      scr_bas_clearscoreeachround "0"
+      scr_bas_endrounddelay "10"
+      scr_bas_respawn_wave_time "10"
+      scr_bas_roundlength "20"
+      scr_bas_roundlimit "0"
+      scr_bas_scorelimit "0"
+      scr_bas_startrounddelay "15"
+      scr_bas_timelimit "60"
+      scr_battlerank "1"
+      scr_bel_alivepointtime "10"
+      scr_bel_scorelimit "0"
+      scr_bel_timelimit "30"
+      scr_ceasefire "0"
+      scr_ctf_clearscoreeachround "0"
+      scr_ctf_endrounddelay "10"
+      scr_ctf_roundlength "20"
+      scr_ctf_roundlimit "0"
+      scr_ctf_scorelimit "0"
+      scr_ctf_showoncompass "1"
+      scr_ctf_startrounddelay "10"
+      scr_ctf_timelimit "60"
+      scr_death_wait_time "5"
+      scr_dm_scorelimit "0"
+      scr_dm_timelimit "30"
+      scr_dom_clearscoreeachround "0"
+      scr_dom_endrounddelay "10"
+      scr_dom_respawn_wave_time "10"
+      scr_dom_roundlength "20"
+      scr_dom_roundlimit "0"
+      scr_dom_scorelimit "0"
+      scr_dom_startrounddelay "10"
+      scr_dom_timelimit "60"
+      scr_drawfriend "1"
+      scr_drophealth "1"
+      scr_forcerank "0"
+      scr_forcerespawn "0"
+      scr_forcerespawn_ftf "0"
+      scr_freelook "1"
+      scr_friendlyfire "3"
+      scr_ftf_flagicons "1"
+      scr_ftf_flagmodel "cow_standing"
+      scr_ftf_flagmodel_dropped "cow_dead"
+      scr_ftf_flagname "cow"
+      scr_ftf_flagrecovertime "10"
+      scr_ftf_flagspawndelay "20"
+      scr_ftf_holdtime "90"
+      scr_ftf_mode "3"
+      scr_ftf_removeflagspawns "1"
+      scr_ftf_respawntime "0"
+      scr_ftf_scorelimit "10"
+      scr_ftf_timelimit "20"
+      scr_hq_scorelimit "0"
+      scr_hq_timelimit "30"
+      scr_jeep_respawn_wait "5"
+      scr_jeep_spawn_limit "0"
+      scr_killcam "1"
+      scr_layoutimage "levelshots/layouts/hud@layout_mp_uo_dawnville"
+      scr_motd "Welcome to G-Day X!"
+      scr_rank_ppr "10"
+      scr_re_graceperiod "15"
+      scr_re_roundlength "5"
+      scr_re_roundlimit "0"
+      scr_re_scorelimit "0"
+      scr_re_showcarrier "1"
+      scr_re_timelimit "30"
+      scr_sd_graceperiod "15"
+      scr_sd_roundlength "5"
+      scr_sd_roundlimit "0"
+      scr_sd_scorelimit "0"
+      scr_sd_timelimit "30"
+      scr_selfDestructJeepTime "90"
+      scr_shellshock "1"
+      scr_spectateenemy "1"
+      scr_tank_respawn_wait "10"
+      scr_tank_spawn_limit "0"
+      scr_tdm_scorelimit "0"
+      scr_tdm_timelimit "30"
+      scr_teambalance "0"
+      scr_teamscorepenalty "1"
+      scr_ttdm_scorelimit "100"
+      scr_ttdm_timelimit "30"
+      sensitivity "3.114583"
+      server1 ""
+      server10 ""
+      server11 ""
+      server12 ""
+      server13 ""
+      server14 ""
+      server15 ""
+      server16 ""
+      server2 ""
+      server3 ""
+      server4 ""
+      server5 ""
+      server6 ""
+      server7 ""
+      server8 ""
+      server9 ""
+      shortversion "1.51"
+      showdrop "0"
+      showpackets "0"
+      snaps "20"
+      sv_allowAnonymous "0"
+      sv_allowDownload "1"
+      sv_cheats "0"
+      sv_console_lockout "0"
+      sv_disableClientConsole "0"
+      sv_dl_maxrate "900000"
+      sv_floodProtect "1"
+      sv_fps "20"
+      sv_hostname "G-Day X"
+      sv_invulnerabletime "3"
+      sv_keywords ""
+      sv_kickBanTime "300"
+      sv_killserver "0"
+      sv_mapname ""
+      sv_mapRotation ""
+      sv_mapRotationCurrent ""
+      sv_maxclients "50"
+      sv_maxPing "999"
+      sv_maxRate "25000"
+      sv_minPing "0"
+      sv_night "0"
+      sv_obituary "1"
+      sv_onlyVisibleClients "0"
+      sv_packet_info "0"
+      sv_padPackets "0"
+      sv_pakNames ""
+      sv_paks ""
+      sv_paused "0"
+      sv_privateClients "0"
+      sv_privatePassword ""
+      sv_punkbuster "0"
+      sv_pure "0"
+      sv_reconnectlimit "3"
+      sv_referencedPakNames "uo/uomappack00 uo/stoop-jeeparena uo/pakuo07 uo/pakuo04 uo/pakuo03 uo/pakuo01 uo/pakuo00 main/pak9 main/pak8 main/pak5 main/pak4 main/pak0 uo/localized_english_pakuo01 uo/localized_english_pakuo00 main/localized_english_pak3 main/localized_english_pak2 main/localized_english_pak1"
+      sv_referencedPaks "1091839960 217417886 419375006 401794639 -914447005 -235342179 -659938473 1622099944 -858314597 77111478 -1825805837 1048127331 411039402 323984529 -788625739 968878365 -961133319 "
+      sv_running "1"
+      sv_serverid "35"
+      sv_serverRestarting "1"
+      sv_showAverageBPS "0"
+      sv_showCommands "0"
+      sv_showloss "0"
+      sv_timeout "960"
+      sv_wwwBaseURL ""
+      sv_wwwDlDisconnected "0"
+      sv_wwwDownload "0"
+      sv_zombietime "2"
+      sys_configSum "70957801"
+      sys_cpuid "35"
+      sys_cpuMHz "2491.69"
+      sys_cpustring "Intel Pentium III"
+      sys_sysMB "1024"
+      sys_vidMB "512"
+      timescale "1"
+      ui_allow_artillery "1"
+      ui_allow_bar "1"
+      ui_allow_bazooka "1"
+      ui_allow_binoculars "1"
+      ui_allow_bren "1"
+      ui_allow_dp28 "1"
+      ui_allow_elefant "1"
+      ui_allow_enfield "1"
+      ui_allow_fg42 "1"
+      ui_allow_flamethrower "1"
+      ui_allow_gaz67b "1"
+      ui_allow_gewehr43 "1"
+      ui_allow_grenades "1"
+      ui_allow_horch "1"
+      ui_allow_jeeps "1"
+      ui_allow_kar98k "1"
+      ui_allow_kar98ksniper "1"
+      ui_allow_m1carbine "1"
+      ui_allow_m1garand "1"
+      ui_allow_mg30cal "1"
+      ui_allow_mg34 "1"
+      ui_allow_mp40 "1"
+      ui_allow_mp44 "1"
+      ui_allow_nagant "1"
+      ui_allow_nagantsniper "1"
+      ui_allow_panzerfaust "1"
+      ui_allow_panzeriv "1"
+      ui_allow_panzerschreck "1"
+      ui_allow_pistols "1"
+      ui_allow_ppsh "1"
+      ui_allow_satchel "1"
+      ui_allow_sherman "1"
+      ui_allow_smoke "1"
+      ui_allow_sniperrifles "1"
+      ui_allow_springfield "1"
+      ui_allow_sten "1"
+      ui_allow_su152 "1"
+      ui_allow_svt40 "1"
+      ui_allow_t34 "1"
+      ui_allow_tanks "1"
+      ui_allow_thompson "1"
+      ui_allow_willyjeep "1"
+      ui_allowVote "1"
+      ui_allowVoteClientKick "1"
+      ui_allowVoteDrawFriend "0"
+      ui_allowVoteFriendlyFire "0"
+      ui_allowVoteGameType "1"
+      ui_allowVoteKick "1"
+      ui_allowVoteKillCam "0"
+      ui_allowVoteMap "1"
+      ui_allowVoteMapRestart "1"
+      ui_allowVoteMapRotate "1"
+      ui_allowVoteTempBanClient "1"
+      ui_allowVoteTempBanUser "1"
+      ui_allowVoteTypeMap "1"
+      ui_battlerank "1"
+      ui_bigFont "0.4"
+      ui_browserFriendlyfire "-1"
+      ui_browserGameType "0"
+      ui_browserKillcam "-1"
+      ui_browserMaster "0"
+      ui_browserMod "-1"
+      ui_browserShowDedicated "0"
+      ui_browserShowEmpty "1"
+      ui_browserShowFull "1"
+      ui_browserShowJeeps "-1"
+      ui_browserShowNoPassword "1"
+      ui_browserShowPassword "1"
+      ui_browserShowPunkBuster "-1"
+      ui_browserShowPure "0"
+      ui_browserShowTanks "-1"
+      ui_browserSortKey "4"
+      ui_currentMap "11"
+      ui_currentNetMap "11"
+      ui_dedicated "0"
+      ui_drawfriend "1"
+      ui_extraBigFont "0.55"
+      ui_friendlyfire "3"
+      ui_gametype "3"
+      ui_hostname "G-Day X"
+      ui_joinGametype "0"
+      ui_killcam "1"
+      ui_mapIndex "8"
+      ui_motd "Welcome to G-Day X!"
+      ui_mousePitch "0"
+      ui_netGametype "4"
+      ui_netGametypeName "bel"
+      ui_netSource "0"
+      ui_serverStatusTimeOut "7000"
+      ui_shellshock "1"
+      ui_smallFont "0.25"
+      ui_tdm_scorelimit "0"
+      ui_tdm_timelimit "30"
+      ui_timeoutBank "180000"
+      ui_timeoutLength "90000"
+      ui_timeoutRecovery "10000"
+      ui_timeoutsAllowed "0"
+      username "CWARD"
+      version "CODUO MP 1.51 build 1463 Dec  6 2004 20:33:18 win-x86"
+      vid_xpos "388"
+      vid_ypos "181"
+      viewlog "1"
+      win_allowalttab "0"
+      win_hinstance "4194304"
+      win_wndproc "4651856"
+
+632 total cvars
+632 cvar indexes
+=============================== END CVAR DUMP =====================================
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set sv_serverRestarting 0
+Hitch warning: 518 msec frame time
+Hitch warning: 515 msec frame time
+      cvar set g_gametype ctf
+g_gametype will be changed upon restarting.
+couldn't exec mp_kursk_tdm.cfg
+      cvar set g_gametype ctf
+==== ShutdownGame ====
+------ Server Initialization ------
+Server: mp_kursk
+Hunk_Clear: reset the hunk ok
+Current language: english
+Current search path:
+C:\Program Files\Call of Duty/cod-stats
+C:\Program Files\Call of Duty\uo\uomappack00.pk3 (143 files)
+C:\Program Files\Call of Duty\uo\stoop-warehouse-fun.pk3 (6 files)
+C:\Program Files\Call of Duty\uo\stoop-reserves.pk3 (16 files)
+C:\Program Files\Call of Duty\uo\stoop-jeeparena.pk3 (24 files)
+C:\Program Files\Call of Duty\uo\stoop-enclave.pk3 (16 files)
+C:\Program Files\Call of Duty\uo\pakuo07.pk3 (157 files)
+C:\Program Files\Call of Duty\uo\pakuo06.pk3 (12 files)
+C:\Program Files\Call of Duty\uo\pakuo05.pk3 (3 files)
+C:\Program Files\Call of Duty\uo\pakuo04.pk3 (7646 files)
+C:\Program Files\Call of Duty\uo\pakuo03.pk3 (2275 files)
+C:\Program Files\Call of Duty\uo\pakuo02.pk3 (790 files)
+C:\Program Files\Call of Duty\uo\pakuo01.pk3 (1657 files)
+C:\Program Files\Call of Duty\uo\pakuo00.pk3 (6233 files)
+C:\Program Files\Call of Duty/uo
+C:\Program Files\Call of Duty\main\paka.pk3 (41 files)
+C:\Program Files\Call of Duty\main\pak9.pk3 (149 files)
+C:\Program Files\Call of Duty\main\pak8.pk3 (235 files)
+C:\Program Files\Call of Duty\main\pak6.pk3 (3 files)
+C:\Program Files\Call of Duty\main\pak5.pk3 (4858 files)
+C:\Program Files\Call of Duty\main\pak4.pk3 (1668 files)
+C:\Program Files\Call of Duty\main\pak3.pk3 (1992 files)
+C:\Program Files\Call of Duty\main\pak2.pk3 (694 files)
+C:\Program Files\Call of Duty\main\pak1.pk3 (2642 files)
+C:\Program Files\Call of Duty\main\pak0.pk3 (12816 files)
+C:\Program Files\Call of Duty/main
+C:\Program Files\Call of Duty\uo\localized_english_pakuo02.pk3 (12 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\uo\localized_english_pakuo01.pk3 (37 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\uo\localized_english_pakuo00.pk3 (2578 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\main\localized_english_pak3.pk3 (7 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\main\localized_english_pak2.pk3 (9 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\main\localized_english_pak1.pk3 (3736 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\main\localized_english_pak0.pk3 (1204 files)
+    localized assets pak file for english
+
+File Handles:
+handle 1: console_mp.log
+----------------------
+51659 files in pk3 files
+      cvar set cl_languagesavailable 1
+      cvar set g_gametype ctf
+      cvar set nextmap map_restart
+      cvar set com_expectedhunkusage 94362944
+      cvar set cl_paused 0
+      cvar set cm_noCurves 0
+      cvar set cm_playerCurveClip 1
+      cvar set mapname mp_kursk
+      cvar set sv_serverid 51
+      cvar set sv_serverRestarting 1
+------- Game Initialization -------
+gamename: CoD:United Offensive
+gamedate: Dec  6 2004
+      cvar set g_debugDamage 0
+      cvar set g_debugBullets 0
+      cvar set g_tracerchancelmg 0.7
+      cvar set g_vehicleDrawPath 0
+      cvar set g_vehicleDebug 0
+      cvar set g_vehicleTexScrollScale 0
+      cvar set g_vehicleTrafficStressTest 0
+      cvar set bg_nofatigue 0
+      cvar set bg_fallDamageMinHeight 256
+      cvar set bg_fallDamageMaxHeight 480
+      cvar set bg_debugWeaponAnim 0
+      cvar set bg_debugWeaponState 0
+      cvar set g_bounds_width 30
+      cvar set g_bounds_height_standing 70
+      cvar set g_debugShowHit 0
+      cvar set g_debugLocDamage 0
+      cvar set g_debuganim 0
+      cvar set bg_swingSpeed 0.2
+      cvar set g_dumpAnims -1
+      cvar set cg_atmos -1
+      cvar set g_gravity 800
+0 teams with 0 entities
+      cvar set ui_allowvote 1
+      cvar set ui_allowVoteMapRestart 1
+      cvar set ui_allowVoteMapRotate 1
+      cvar set ui_allowVoteTypeMap 1
+      cvar set ui_allowVoteMap 1
+      cvar set ui_allowVoteGameType 1
+      cvar set ui_allowVoteKick 1
+      cvar set ui_allowVoteClientKick 1
+      cvar set ui_allowVoteTempBanUser 1
+      cvar set ui_allowVoteTempBanClient 1
+      cvar set ui_allowVoteDrawFriend 0
+      cvar set ui_allowVoteKillCam 0
+      cvar set ui_allowVoteFriendlyFire 0
+      cvar set ui_drawfriend 1
+      cvar set ui_friendlyfire 3
+      cvar set ui_killcam 1
+      cvar set ui_timeoutsAllowed 0
+      cvar set ui_timeoutBank 180000
+      cvar set ui_timeoutLength 90000
+      cvar set ui_timeoutRecovery 10000
+      cvar set cg_atmos -1
+-----------------------------------
+      cvar set ui_ctf_timelimit 60
+      cvar set ui_ctf_roundlength 20
+      cvar set ui_ctf_scorelimit 0
+      cvar set scr_showicons 1
+      cvar set ui_ctf_clearscoreeachround 0
+      cvar set ui_battlerank 1
+      cvar set ui_shellshock 1
+      cvar set scr_allow_vote 1
+      cvar set scr_ceasefire 0
+      cvar set scr_killcam 1
+      cvar set ui_killcam 1
+      cvar set ui_ctf_roundlimit 0
+      cvar set cg_hudcompassMaxRange 1024
+      cvar set scr_ctf_positiontime 6
+      cvar set scr_debug_ctf 0
+      cvar set sv_night 0
+      cvar set sv_night 0
+      cvar set scr_allow_flak88 1
+      cvar set ui_allow_flak88 1
+      cvar set scr_allow_tanks 1
+      cvar set ui_allow_tanks 1
+      cvar set scr_allow_t34 1
+      cvar set ui_allow_t34 1
+      cvar set scr_allow_elefant 1
+      cvar set ui_allow_elefant 1
+      cvar set scr_allow_sherman 1
+      cvar set ui_allow_sherman 1
+      cvar set scr_allow_panzeriv 1
+      cvar set ui_allow_panzeriv 1
+      cvar set scr_allow_su152 1
+      cvar set ui_allow_su152 1
+      cvar set scr_allow_jeeps 1
+      cvar set ui_allow_jeeps 1
+      cvar set scr_allow_willyjeep 1
+      cvar set ui_allow_willyjeep 1
+      cvar set scr_allow_gaz67b 1
+      cvar set ui_allow_gaz67b 1
+      cvar set scr_allow_horch 1
+      cvar set ui_allow_horch 1
+      cvar set scr_layoutimage levelshots/layouts/hud@layout_mp_kursk_ctf.dds
+      cvar set g_TeamName_Allies MPSCRIPT_RUSSIAN
+      cvar set g_TeamColor_Allies .75 .25 .25
+      cvar set g_ScoresBanner_Allies gfx/hud/hud@mpflag_russian.tga
+      cvar set g_TeamName_Axis MPSCRIPT_GERMAN
+      cvar set g_TeamColor_Axis .6 .6 .6
+      cvar set g_ScoresBanner_Axis gfx/hud/hud@mpflag_german.tga
+      cvar set sv_hostname G-Day X
+      cvar set ui_hostname G-Day X
+      cvar set scr_motd Welcome to G-Day X!
+      cvar set ui_motd Welcome to G-Day X!
+      cvar set g_allowvote 1
+      cvar set ui_allowvote 1
+      cvar set g_allowvotemaprestart 1
+      cvar set ui_allowvotemaprestart 1
+      cvar set g_allowvotemaprotate 1
+      cvar set ui_allowvotemaprotate 1
+      cvar set g_allowvotemap 1
+      cvar set ui_allowvotemap 1
+      cvar set g_allowvotetypemap 1
+      cvar set ui_allowvotetypemap 1
+      cvar set g_allowvotekick 1
+      cvar set ui_allowvotekick 1
+      cvar set g_allowvotetempbanuser 1
+      cvar set ui_allowvotetempbanuser 1
+      cvar set scr_friendlyfire 3
+      cvar set ui_friendlyfire 3
+      cvar set scr_allow_m1carbine 1
+      cvar set ui_allow_m1carbine 1
+      cvar set scr_allow_m1garand 1
+      cvar set ui_allow_m1garand 1
+      cvar set scr_allow_thompson 1
+      cvar set ui_allow_thompson 1
+      cvar set scr_allow_bar 1
+      cvar set ui_allow_bar 1
+      cvar set scr_allow_springfield 1
+      cvar set ui_allow_springfield 1
+      cvar set scr_allow_mg30cal 1
+      cvar set ui_allow_mg30cal 1
+      cvar set scr_allow_enfield 1
+      cvar set ui_allow_enfield 1
+      cvar set scr_allow_sten 1
+      cvar set ui_allow_sten 1
+      cvar set scr_allow_bren 1
+      cvar set ui_allow_bren 1
+      cvar set scr_allow_nagant 1
+      cvar set ui_allow_nagant 1
+      cvar set scr_allow_svt40 1
+      cvar set ui_allow_svt40 1
+      cvar set scr_allow_ppsh 1
+      cvar set ui_allow_ppsh 1
+      cvar set scr_allow_nagantsniper 1
+      cvar set ui_allow_nagantsniper 1
+      cvar set scr_allow_dp28 1
+      cvar set ui_allow_dp28 1
+      cvar set scr_allow_kar98k 1
+      cvar set ui_allow_kar98k 1
+      cvar set scr_allow_gewehr43 1
+      cvar set ui_allow_gewehr43 1
+      cvar set scr_allow_mp40 1
+      cvar set ui_allow_mp40 1
+      cvar set scr_allow_mp44 1
+      cvar set ui_allow_mp44 1
+      cvar set scr_allow_kar98ksniper 1
+      cvar set ui_allow_kar98ksniper 1
+      cvar set scr_allow_mg34 1
+      cvar set ui_allow_mg34 1
+      cvar set scr_allow_fg42 1
+      cvar set ui_allow_fg42 1
+      cvar set scr_allow_panzerfaust 1
+      cvar set ui_allow_panzerfaust 1
+      cvar set scr_allow_bazooka 1
+      cvar set ui_allow_bazooka 1
+      cvar set scr_allow_panzerschreck 1
+      cvar set ui_allow_panzerschreck 1
+      cvar set scr_allow_flamethrower 1
+      cvar set ui_allow_flamethrower 1
+      cvar set scr_allow_binoculars 1
+      cvar set ui_allow_binoculars 1
+      cvar set scr_allow_artillery 1
+      cvar set ui_allow_artillery 1
+      cvar set scr_allow_satchel 1
+      cvar set ui_allow_satchel 1
+      cvar set scr_allow_grenades 1
+      cvar set ui_allow_grenades 1
+      cvar set scr_allow_smoke 1
+      cvar set ui_allow_smoke 1
+      cvar set scr_allow_pistols 1
+      cvar set ui_allow_pistols 1
+=============================== CVAR DUMP ========================================
+
+641 total cvars
+641 cvar indexes
+=============================== END CVAR DUMP =====================================
+      cvar set scr_allow_allied_secondary 1
+      cvar set scr_allow_axis_secondary 1
+FinishSpawningItem: mpweapon_panzerschreck startsolid at (-1144 -860 377)
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set sv_paks 
+      cvar set sv_pakNames 
+      cvar set sv_referencedPaks 217417886 419375006 401794639 -914447005 -235342179 -659938473 1622099944 -858314597 77111478 -1825805837 1048127331 411039402 323984529 -788625739 968878365 -961133319 
+      cvar set sv_referencedPakNames uo/stoop-jeeparena uo/pakuo07 uo/pakuo04 uo/pakuo03 uo/pakuo01 uo/pakuo00 main/pak9 main/pak8 main/pak5 main/pak4 main/pak0 uo/localized_english_pakuo01 uo/localized_english_pakuo00 main/localized_english_pak3 main/localized_english_pak2 main/localized_english_pak1
+      cvar set sv_serverRestarting 0
+-----------------------------------
+      cvar set sv_punkbuster 0
+      cvar set sv_cheats 0
+PunkBuster Server: 0 Aliases Written to pbalias.dat
+PunkBuster Server: 0 Stat Records Written to pbstat.dat
+PunkBuster Server: Preparing to Disable PB Server... (C:\Program Files\Call of Duty\pb\)
+Hitch warning: 3166 msec frame time
+Client 8 connecting with 50 challenge ping from 192.168.1.115:28960
+      cvar set cg_atmos -1
+Going from CS_FREE to CS_CONNECTED for CDJ Bazooka Pillow (num 7 guid 0)
+      cvar set g_gametype ctf
+      cvar set g_gametype ctf
+      cvar set sv_serverid 52
+      cvar set sv_serverRestarting 1
+==== RestartGame ====
+------- Game Initialization -------
+gamename: CoD:United Offensive
+gamedate: Dec  6 2004
+      cvar set cg_atmos -1
+      cvar set g_gravity 800
+0 teams with 0 entities
+      cvar set ui_allowvote 1
+      cvar set ui_allowVoteMapRestart 1
+      cvar set ui_allowVoteMapRotate 1
+      cvar set ui_allowVoteTypeMap 1
+      cvar set ui_allowVoteMap 1
+      cvar set ui_allowVoteGameType 1
+      cvar set ui_allowVoteKick 1
+      cvar set ui_allowVoteClientKick 1
+      cvar set ui_allowVoteTempBanUser 1
+      cvar set ui_allowVoteTempBanClient 1
+      cvar set ui_allowVoteDrawFriend 0
+      cvar set ui_allowVoteKillCam 0
+      cvar set ui_allowVoteFriendlyFire 0
+      cvar set ui_drawfriend 1
+      cvar set ui_friendlyfire 3
+      cvar set ui_killcam 1
+      cvar set ui_timeoutsAllowed 0
+      cvar set ui_timeoutBank 180000
+      cvar set ui_timeoutLength 90000
+      cvar set ui_timeoutRecovery 10000
+      cvar set cg_atmos -1
+-----------------------------------
+      cvar set ui_ctf_timelimit 60
+      cvar set ui_ctf_roundlength 20
+      cvar set ui_ctf_scorelimit 0
+      cvar set ui_ctf_clearscoreeachround 0
+      cvar set ui_battlerank 1
+      cvar set ui_shellshock 1
+      cvar set scr_allow_vote 1
+      cvar set scr_ceasefire 0
+      cvar set scr_killcam 1
+      cvar set ui_killcam 1
+      cvar set ui_ctf_roundlimit 0
+      cvar set cg_hudcompassMaxRange 13000
+      cvar set sv_night 0
+      cvar set sv_night 0
+      cvar set scr_allow_flak88 1
+      cvar set ui_allow_flak88 1
+      cvar set scr_allow_tanks 1
+      cvar set ui_allow_tanks 1
+      cvar set scr_allow_t34 1
+      cvar set ui_allow_t34 1
+      cvar set scr_allow_elefant 1
+      cvar set ui_allow_elefant 1
+      cvar set scr_allow_sherman 1
+      cvar set ui_allow_sherman 1
+      cvar set scr_allow_panzeriv 1
+      cvar set ui_allow_panzeriv 1
+      cvar set scr_allow_su152 1
+      cvar set ui_allow_su152 1
+      cvar set scr_allow_jeeps 1
+      cvar set ui_allow_jeeps 1
+      cvar set scr_allow_willyjeep 1
+      cvar set ui_allow_willyjeep 1
+      cvar set scr_allow_gaz67b 1
+      cvar set ui_allow_gaz67b 1
+      cvar set scr_allow_horch 1
+      cvar set ui_allow_horch 1
+      cvar set sv_hostname G-Day X
+      cvar set ui_hostname G-Day X
+      cvar set scr_motd Welcome to G-Day X!
+      cvar set ui_motd Welcome to G-Day X!
+      cvar set g_allowvote 1
+      cvar set ui_allowvote 1
+      cvar set g_allowvotemaprestart 1
+      cvar set ui_allowvotemaprestart 1
+      cvar set g_allowvotemaprotate 1
+      cvar set ui_allowvotemaprotate 1
+      cvar set g_allowvotemap 1
+      cvar set ui_allowvotemap 1
+      cvar set g_allowvotetypemap 1
+      cvar set ui_allowvotetypemap 1
+      cvar set g_allowvotekick 1
+      cvar set ui_allowvotekick 1
+      cvar set g_allowvotetempbanuser 1
+      cvar set ui_allowvotetempbanuser 1
+      cvar set scr_friendlyfire 3
+      cvar set ui_friendlyfire 3
+      cvar set scr_allow_m1carbine 1
+      cvar set ui_allow_m1carbine 1
+      cvar set scr_allow_m1garand 1
+      cvar set ui_allow_m1garand 1
+      cvar set scr_allow_thompson 1
+      cvar set ui_allow_thompson 1
+      cvar set scr_allow_bar 1
+      cvar set ui_allow_bar 1
+      cvar set scr_allow_springfield 1
+      cvar set ui_allow_springfield 1
+      cvar set scr_allow_mg30cal 1
+      cvar set ui_allow_mg30cal 1
+      cvar set scr_allow_enfield 1
+      cvar set ui_allow_enfield 1
+      cvar set scr_allow_sten 1
+      cvar set ui_allow_sten 1
+      cvar set scr_allow_bren 1
+      cvar set ui_allow_bren 1
+      cvar set scr_allow_nagant 1
+      cvar set ui_allow_nagant 1
+      cvar set scr_allow_svt40 1
+      cvar set ui_allow_svt40 1
+      cvar set scr_allow_ppsh 1
+      cvar set ui_allow_ppsh 1
+      cvar set scr_allow_nagantsniper 1
+      cvar set ui_allow_nagantsniper 1
+      cvar set scr_allow_dp28 1
+      cvar set ui_allow_dp28 1
+      cvar set scr_allow_kar98k 1
+      cvar set ui_allow_kar98k 1
+      cvar set scr_allow_gewehr43 1
+      cvar set ui_allow_gewehr43 1
+      cvar set scr_allow_mp40 1
+      cvar set ui_allow_mp40 1
+      cvar set scr_allow_mp44 1
+      cvar set ui_allow_mp44 1
+      cvar set scr_allow_kar98ksniper 1
+      cvar set ui_allow_kar98ksniper 1
+      cvar set scr_allow_mg34 1
+      cvar set ui_allow_mg34 1
+      cvar set scr_allow_fg42 1
+      cvar set ui_allow_fg42 1
+      cvar set scr_allow_panzerfaust 1
+      cvar set ui_allow_panzerfaust 1
+      cvar set scr_allow_bazooka 1
+      cvar set ui_allow_bazooka 1
+      cvar set scr_allow_panzerschreck 1
+      cvar set ui_allow_panzerschreck 1
+      cvar set scr_allow_flamethrower 1
+      cvar set ui_allow_flamethrower 1
+      cvar set scr_allow_binoculars 1
+      cvar set ui_allow_binoculars 1
+      cvar set scr_allow_artillery 1
+      cvar set ui_allow_artillery 1
+      cvar set scr_allow_satchel 1
+      cvar set ui_allow_satchel 1
+      cvar set scr_allow_grenades 1
+      cvar set ui_allow_grenades 1
+      cvar set scr_allow_smoke 1
+      cvar set ui_allow_smoke 1
+      cvar set scr_allow_pistols 1
+      cvar set ui_allow_pistols 1
+=============================== CVAR DUMP ========================================
+      .Admin "Luda"
+      .Email ""
+      .Irc ""
+      .Location "Beavercreek, OH"
+      .Website "http://cward-nb/gday10"
+      arch "winnt"
+      bg_debugWeaponAnim "0"
+      bg_debugWeaponState "0"
+      bg_fallDamageMaxHeight "480"
+      bg_fallDamageMinHeight "256"
+      bg_foliagesnd_fastinterval "500"
+      bg_foliagesnd_maxspeed "180"
+      bg_foliagesnd_minspeed "40"
+      bg_foliagesnd_resetinterval "500"
+      bg_foliagesnd_slowinterval "1500"
+      bg_ladder_yawcap "100"
+      bg_lmg_yawcap "55"
+      bg_nofatigue "0"
+      bg_prone_yawcap "85"
+      bg_swingSpeed "0.2"
+      bg_viewheight_crouched "40"
+      bg_viewheight_prone "11"
+      bg_viewheight_standing "60"
+      cg_announcerSounds "1"
+      cg_atmos "-1"
+      cg_autodemo "0"
+      cg_autoscreenshot "0"
+      cg_blood "1"
+      cg_bobAmplitudeDucked "0.0075"
+      cg_bobAmplitudeProne "0.03"
+      cg_bobAmplitudeStanding "0.007"
+      cg_bobMax "8"
+      cg_brass "1"
+      cg_chatHeight "8"
+      cg_chatTime "12000"
+      cg_crosshairAlpha "1.0"
+      cg_crosshairAlphaMin "0.7"
+      cg_crosshairDynamic "0"
+      cg_crosshairNoGun "gfx/reticle/hud@center_ads.tga"
+      cg_crosshairSize "48"
+      cg_currentSelectedPlayer "0"
+      cg_currentSelectedPlayerName ""
+      cg_cursorHints "4"
+      cg_deadbodyque "32"
+      cg_descriptiveText "1"
+      cg_drawCompass "1"
+      cg_drawCrosshair "1"
+      cg_drawCrosshairNames "1"
+      cg_drawCrosshairPickups "1"
+      cg_drawFPS "0"
+      cg_drawGun "1"
+      cg_drawNotifyText "1"
+      cg_drawRewards "1"
+      cg_drawSnapshot "0"
+      cg_drawStatus "1"
+      cg_drawTeamOverlay "2"
+      cg_fov "80"
+      cg_gameBoldMessageWidth "60"
+      cg_gameMessageWidth "70"
+      cg_hintFadeTime "100"
+      cg_hudAlpha "1.0"
+      cg_hudCompassMaxRange "13000"
+      cg_hudCompassMinRadius "0"
+      cg_hudCompassMinRange "0"
+      cg_hudCompassSize "1.0"
+      cg_hudCompassSpringyPointers "0"
+      cg_hudDamageIconHeight "64"
+      cg_hudDamageIconInScope "0"
+      cg_hudDamageIconOffset "32"
+      cg_hudDamageIconTime "2000"
+      cg_hudDamageIconWidth "128"
+      cg_hudObjectiveMaxHeight "70"
+      cg_hudObjectiveMaxRange "2048"
+      cg_hudObjectiveMinAlpha "1"
+      cg_hudObjectiveMinHeight "-70"
+      cg_hudStanceHintPrints "1"
+      cg_lagometer "0"
+      cg_marks "1"
+      cg_noTaunt "0"
+      cg_noVoiceChats "0"
+      cg_noVoiceText "0"
+      cg_predictItems "1"
+      cg_railTrailTime "400"
+      cg_scoreboardScrollStep "3"
+      cg_selectedPlayer "0"
+      cg_shadows "0"
+      cg_showdemoname "1"
+      cg_stereoSeparation "0.4"
+      cg_subtitleMinTime "3"
+      cg_subtitles "1"
+      cg_subtitleWidth "80"
+      cg_teamChatsOnly "0"
+      cg_vehicletrails "1"
+      cg_viewsize "100"
+      cg_voiceSpriteTime "6000"
+      cg_weaponCycleDelay "0"
+      cl_allowDownload "0"
+      cl_anonymous "0"
+      cl_autocmd "1"
+      cl_freelook "1"
+      cl_goStandJumpTime "0"
+      cl_language "0"
+      cl_languagesavailable "1"
+      cl_languagetranslate "1"
+      cl_languagewarnings "0"
+      cl_languagewarningsaserrors "0"
+      cl_maxpackets "30"
+      cl_maxPing "800"
+      cl_mouseAccel "0"
+      cl_packetdup "1"
+      cl_paused "0"
+      cl_pitchspeed "140"
+      cl_punkbuster "0"
+      cl_running "0"
+      cl_wwwDownload "1"
+      cl_xmodelcheck "0"
+      cl_yawspeed "140"
+      cm_noCurves "0"
+      cm_playerCurveClip "1"
+      com_animCheck "0"
+      com_expectedhunkusage "94362944"
+      com_hunkmegs "128"
+      com_introplayed "1"
+      com_maxfps "85"
+      com_recommendedSet "1"
+      com_speeds "0"
+      com_statmon "0"
+      con_debug "0"
+      con_minicon "0"
+      con_miniconlines "5"
+      con_minicontime "4"
+      dedicated "1"
+      developer "0"
+      developer_script "0"
+      fixedtime "0"
+      fs_basegame "uo"
+      fs_basepath "C:\Program Files\Call of Duty"
+      fs_cdpath ""
+      fs_copyfiles "0"
+      fs_debug "0"
+      fs_game "cod-stats"
+      fs_homepath "C:\Program Files\Call of Duty"
+      fs_ignoreLozalized "0"
+      fs_restrict ""
+      fx_cullbias "0"
+      fx_cullscale "1"
+      g_allowvote "1"
+      g_allowVoteClientKick "1"
+      g_allowVoteDrawFriend "0"
+      g_allowVoteFriendlyFire "0"
+      g_allowVoteGameType "1"
+      g_allowVoteKick "1"
+      g_allowVoteKillCam "0"
+      g_allowVoteMap "1"
+      g_allowVoteMapRestart "1"
+      g_allowVoteMapRotate "1"
+      g_allowVoteTempBanClient "1"
+      g_allowVoteTempBanUser "1"
+      g_allowVoteTypeMap "1"
+      g_autodemo "0"
+      g_autoscreenshot "0"
+      g_banIPs ""
+      g_bounds_height_standing "70"
+      g_bounds_width "30"
+      g_complaintlimit "3"
+      g_deadChat "1"
+      g_debugAlloc "0"
+      g_debuganim "0"
+      g_debugBullets "0"
+      g_debugDamage "0"
+      g_debugLocDamage "0"
+      g_debugMove "0"
+      g_debugProneCheck "0"
+      g_debugProneCheckDepthCheck "1"
+      g_debugShowHit "0"
+      g_dumpAnims "-1"
+      g_gametype "ctf"
+      g_gravity "800"
+      g_inactivity "0"
+      g_inactivityspectator "0"
+      g_intermissionDelay "1000"
+      g_knockback "1000"
+      g_listEntity "0"
+      g_log "games_mp.log"
+      g_logSync "1"
+      g_maxDroppedWeapons "16"
+      g_motd ""
+      g_no_script_spam "0"
+      g_password ""
+      g_ScoresBanner_Allies "gfx/hud/hud@mpflag_russian.tga"
+      g_ScoresBanner_Axis "gfx/hud/hud@mpflag_german.tga"
+      g_ScoresBanner_None "gfx/hud/hud@mpflag_none.tga"
+      g_ScoresBanner_Spectators "gfx/hud/hud@mpflag_spectator.tga"
+      g_scriptMainMenu ""
+      g_scriptMap ""
+      g_smoothClients "1"
+      g_speed "190"
+      g_synchronousClients "0"
+      g_TeamColor_Allies ".75 .25 .25"
+      g_TeamColor_Axis ".6 .6 .6"
+      g_TeamName_Allies "MPSCRIPT_RUSSIAN"
+      g_TeamName_Axis "MPSCRIPT_GERMAN"
+      g_timeoutBank "180000"
+      g_timeoutlength "90000"
+      g_timeoutRecovery "10000"
+      g_timeoutsallowed "0"
+      g_tracerchance "0.4"
+      g_tracerchancelmg "0.7"
+      g_useGear "1"
+      g_vehicleBurnTime "10"
+      g_vehicleDebug "0"
+      g_vehicleDrawPath "0"
+      g_vehicleEnableCollisionDamage "0"
+      g_vehicleForceBulletDamage "0"
+      g_vehicleForceGrenadeDamage "0"
+      g_vehicleHorns "1"
+      g_vehicleTexScrollScale "0"
+      g_vehicleTrafficStressTest "0"
+      g_voiceChatsAllowed "4"
+      g_weaponAmmoPools "0"
+      g_weaponrespawn "5"
+      gamedate "Dec  6 2004"
+      gamename "CoD:United Offensive"
+      handicap "100"
+      head ""
+      hurtgentrees "off"
+      in_debugjoystick "0"
+      in_joyBallScale "0.02"
+      in_joystick "0"
+      in_midi "0"
+      in_midichannel "1"
+      in_mididevice "0"
+      in_midiport "1"
+      in_mouse "1"
+      journal "0"
+      joy_threshold "0.15"
+      logfile "2"
+      m_filter "0"
+      m_forward "0.25"
+      m_pitch "0.022"
+      m_side "0.25"
+      m_yaw "0.022"
+      mapname "mp_kursk"
+      model ""
+      mss_3d_provider "Miles Fast 2D Positional Audio"
+      mss_bits "16"
+      mss_errorOnMissing "1"
+      mss_khz "44"
+      mss_stereo "1"
+      mss_volume "0.8"
+      name "Luda"
+      net_ip "localhost"
+      net_lanauthorize "0"
+      net_noipx "0"
+      net_noudp "0"
+      net_port "28960"
+      net_profile "0"
+      net_qport "16618"
+      net_showprofile "0"
+      net_socksEnabled "0"
+      net_socksPassword ""
+      net_socksPort "1080"
+      net_socksServer ""
+      net_socksUsername ""
+      nextmap "map_restart"
+      pmove_fixed "0"
+      pmove_msec "8"
+      protocol "22"
+      r_ati_fsaa_samples "1"
+      r_ati_pntriangles "0"
+      r_ati_truform_normalmode "QUADRATIC"
+      r_ati_truform_pointmode "CUBIC"
+      r_ati_truform_tess "1"
+      r_colorbits "32"
+      r_customaspect "1"
+      r_customheight "1024"
+      r_customwidth "1600"
+      r_depthbits "0"
+      r_detailtextures "1"
+      r_diffuseSunQuality "2"
+      r_diffuseSunSteps "3"
+      r_dlightQuality "1"
+      r_drawSun "1"
+      r_dynamiclight "1"
+      r_entLightCutoff "0.2"
+      r_ext_texture_filter_anisotropic "0"
+      r_finish "0"
+      r_fullscreen "1"
+      r_gamma "1.0"
+      r_ignoreGLErrors "1"
+      r_ignorehwgamma "0"
+      r_inGameVideo "1"
+      r_lastValidRenderer "Quadro FX 1600M/PCI/SSE2"
+      r_lodbias "0"
+      r_lodscale "1"
+      r_maxEntLights "8"
+      r_mem_agp "8"
+      r_mem_backend "0.5"
+      r_mem_manual "0"
+      r_mem_video "2"
+      r_minEntLightIntensity "0.02"
+      r_mode "6"
+      r_nv_fog_dist "1"
+      r_nv_fogdist_mode "GL_EYE_RADIAL_NV"
+      r_overBrightBits "1"
+      r_picmip "1"
+      r_picmip2 "1"
+      r_portalbevels "0.7"
+      r_primitives "0"
+      r_railCoreWidth "1"
+      r_railSegmentLength "32"
+      r_railWidth "16"
+      r_simpleMipMaps "1"
+      r_skip_auto_config "0"
+      r_stencilbits "8"
+      r_swapDelay "0"
+      r_swapInterval "1"
+      r_texturebits "0"
+      r_textureMode "GL_LINEAR_MIPMAP_NEAREST"
+      r_uiFullScreen "1"
+      r_vbo_interleave "0"
+      r_vbo_paranoia "0"
+      r_vbo_smc_static_draw "1"
+      r_vbo_stream_draw "1"
+      rate "25000"
+      rconPassword "jeeps"
+      scr_allow_allied_secondary "1"
+      scr_allow_artillery "1"
+      scr_allow_axis_secondary "1"
+      scr_allow_bar "1"
+      scr_allow_bazooka "1"
+      scr_allow_binoculars "1"
+      scr_allow_bren "1"
+      scr_allow_dp28 "1"
+      scr_allow_elefant "1"
+      scr_allow_enfield "1"
+      scr_allow_fg42 "1"
+      scr_allow_flak88 "1"
+      scr_allow_flamethrower "1"
+      scr_allow_gaz67b "1"
+      scr_allow_gewehr43 "1"
+      scr_allow_grenades "1"
+      scr_allow_horch "1"
+      scr_allow_jeeps "1"
+      scr_allow_kar98k "1"
+      scr_allow_kar98ksniper "1"
+      scr_allow_m1carbine "1"
+      scr_allow_m1garand "1"
+      scr_allow_mg30cal "1"
+      scr_allow_mg34 "1"
+      scr_allow_mp40 "1"
+      scr_allow_mp44 "1"
+      scr_allow_nagant "1"
+      scr_allow_nagantsniper "1"
+      scr_allow_panzerfaust "1"
+      scr_allow_panzeriv "1"
+      scr_allow_panzerschreck "1"
+      scr_allow_pistols "1"
+      scr_allow_ppsh "1"
+      scr_allow_satchel "1"
+      scr_allow_sherman "1"
+      scr_allow_smoke "1"
+      scr_allow_springfield "1"
+      scr_allow_sten "1"
+      scr_allow_su152 "1"
+      scr_allow_svt40 "1"
+      scr_allow_t34 "1"
+      scr_allow_tanks "1"
+      scr_allow_thompson "1"
+      scr_allow_vote "1"
+      scr_allow_willyjeep "1"
+      scr_artillery_first_interval "45"
+      scr_artillery_interval "120"
+      scr_artillery_interval_range "15"
+      scr_bas_clearscoreeachround "0"
+      scr_bas_endrounddelay "10"
+      scr_bas_respawn_wave_time "10"
+      scr_bas_roundlength "20"
+      scr_bas_roundlimit "0"
+      scr_bas_scorelimit "0"
+      scr_bas_startrounddelay "15"
+      scr_bas_timelimit "60"
+      scr_battlerank "1"
+      scr_bel_alivepointtime "10"
+      scr_bel_scorelimit "0"
+      scr_bel_timelimit "30"
+      scr_ceasefire "0"
+      scr_ctf_clearscoreeachround "0"
+      scr_ctf_endrounddelay "10"
+      scr_ctf_positiontime "6"
+      scr_ctf_roundlength "20"
+      scr_ctf_roundlimit "0"
+      scr_ctf_scorelimit "0"
+      scr_ctf_showoncompass "1"
+      scr_ctf_startrounddelay "10"
+      scr_ctf_timelimit "60"
+      scr_death_wait_time "5"
+      scr_debug_ctf "0"
+      scr_dm_scorelimit "0"
+      scr_dm_timelimit "30"
+      scr_dom_clearscoreeachround "0"
+      scr_dom_endrounddelay "10"
+      scr_dom_respawn_wave_time "10"
+      scr_dom_roundlength "20"
+      scr_dom_roundlimit "0"
+      scr_dom_scorelimit "0"
+      scr_dom_startrounddelay "10"
+      scr_dom_timelimit "60"
+      scr_drawfriend "1"
+      scr_drophealth "1"
+      scr_forcerank "0"
+      scr_forcerespawn "0"
+      scr_forcerespawn_ftf "0"
+      scr_freelook "1"
+      scr_friendlyfire "3"
+      scr_ftf_flagicons "1"
+      scr_ftf_flagmodel "cow_standing"
+      scr_ftf_flagmodel_dropped "cow_dead"
+      scr_ftf_flagname "cow"
+      scr_ftf_flagrecovertime "10"
+      scr_ftf_flagspawndelay "20"
+      scr_ftf_holdtime "90"
+      scr_ftf_mode "3"
+      scr_ftf_removeflagspawns "1"
+      scr_ftf_respawntime "0"
+      scr_ftf_scorelimit "10"
+      scr_ftf_timelimit "20"
+      scr_hq_scorelimit "0"
+      scr_hq_timelimit "30"
+      scr_jeep_respawn_wait "5"
+      scr_jeep_spawn_limit "0"
+      scr_killcam "1"
+      scr_layoutimage "levelshots/layouts/hud@layout_mp_kursk_ctf.dds"
+      scr_motd "Welcome to G-Day X!"
+      scr_rank_ppr "10"
+      scr_re_graceperiod "15"
+      scr_re_roundlength "5"
+      scr_re_roundlimit "0"
+      scr_re_scorelimit "0"
+      scr_re_showcarrier "1"
+      scr_re_timelimit "30"
+      scr_sd_graceperiod "15"
+      scr_sd_roundlength "5"
+      scr_sd_roundlimit "0"
+      scr_sd_scorelimit "0"
+      scr_sd_timelimit "30"
+      scr_selfDestructJeepTime "90"
+      scr_shellshock "1"
+      scr_showicons "1"
+      scr_spectateenemy "1"
+      scr_tank_respawn_wait "10"
+      scr_tank_spawn_limit "0"
+      scr_tdm_scorelimit "0"
+      scr_tdm_timelimit "30"
+      scr_teambalance "0"
+      scr_teamscorepenalty "1"
+      scr_ttdm_scorelimit "100"
+      scr_ttdm_timelimit "30"
+      sensitivity "3.114583"
+      server1 ""
+      server10 ""
+      server11 ""
+      server12 ""
+      server13 ""
+      server14 ""
+      server15 ""
+      server16 ""
+      server2 ""
+      server3 ""
+      server4 ""
+      server5 ""
+      server6 ""
+      server7 ""
+      server8 ""
+      server9 ""
+      shortversion "1.51"
+      showdrop "0"
+      showpackets "0"
+      snaps "20"
+      sv_allowAnonymous "0"
+      sv_allowDownload "1"
+      sv_cheats "0"
+      sv_console_lockout "0"
+      sv_disableClientConsole "0"
+      sv_dl_maxrate "900000"
+      sv_floodProtect "1"
+      sv_fps "20"
+      sv_hostname "G-Day X"
+      sv_invulnerabletime "3"
+      sv_keywords ""
+      sv_kickBanTime "300"
+      sv_killserver "0"
+      sv_mapname ""
+      sv_mapRotation ""
+      sv_mapRotationCurrent ""
+      sv_maxclients "50"
+      sv_maxPing "999"
+      sv_maxRate "25000"
+      sv_minPing "0"
+      sv_night "0"
+      sv_obituary "1"
+      sv_onlyVisibleClients "0"
+      sv_packet_info "0"
+      sv_padPackets "0"
+      sv_pakNames ""
+      sv_paks ""
+      sv_paused "0"
+      sv_privateClients "0"
+      sv_privatePassword ""
+      sv_punkbuster "0"
+      sv_pure "0"
+      sv_reconnectlimit "3"
+      sv_referencedPakNames "uo/stoop-jeeparena uo/pakuo07 uo/pakuo04 uo/pakuo03 uo/pakuo01 uo/pakuo00 main/pak9 main/pak8 main/pak5 main/pak4 main/pak0 uo/localized_english_pakuo01 uo/localized_english_pakuo00 main/localized_english_pak3 main/localized_english_pak2 main/localized_english_pak1"
+      sv_referencedPaks "217417886 419375006 401794639 -914447005 -235342179 -659938473 1622099944 -858314597 77111478 -1825805837 1048127331 411039402 323984529 -788625739 968878365 -961133319 "
+      sv_running "1"
+      sv_serverid "52"
+      sv_serverRestarting "1"
+      sv_showAverageBPS "0"
+      sv_showCommands "0"
+      sv_showloss "0"
+      sv_timeout "960"
+      sv_wwwBaseURL ""
+      sv_wwwDlDisconnected "0"
+      sv_wwwDownload "0"
+      sv_zombietime "2"
+      sys_configSum "70957801"
+      sys_cpuid "35"
+      sys_cpuMHz "2491.69"
+      sys_cpustring "Intel Pentium III"
+      sys_sysMB "1024"
+      sys_vidMB "512"
+      timescale "1"
+      ui_allow_artillery "1"
+      ui_allow_bar "1"
+      ui_allow_bazooka "1"
+      ui_allow_binoculars "1"
+      ui_allow_bren "1"
+      ui_allow_dp28 "1"
+      ui_allow_elefant "1"
+      ui_allow_enfield "1"
+      ui_allow_fg42 "1"
+      ui_allow_flak88 "1"
+      ui_allow_flamethrower "1"
+      ui_allow_gaz67b "1"
+      ui_allow_gewehr43 "1"
+      ui_allow_grenades "1"
+      ui_allow_horch "1"
+      ui_allow_jeeps "1"
+      ui_allow_kar98k "1"
+      ui_allow_kar98ksniper "1"
+      ui_allow_m1carbine "1"
+      ui_allow_m1garand "1"
+      ui_allow_mg30cal "1"
+      ui_allow_mg34 "1"
+      ui_allow_mp40 "1"
+      ui_allow_mp44 "1"
+      ui_allow_nagant "1"
+      ui_allow_nagantsniper "1"
+      ui_allow_panzerfaust "1"
+      ui_allow_panzeriv "1"
+      ui_allow_panzerschreck "1"
+      ui_allow_pistols "1"
+      ui_allow_ppsh "1"
+      ui_allow_satchel "1"
+      ui_allow_sherman "1"
+      ui_allow_smoke "1"
+      ui_allow_sniperrifles "1"
+      ui_allow_springfield "1"
+      ui_allow_sten "1"
+      ui_allow_su152 "1"
+      ui_allow_svt40 "1"
+      ui_allow_t34 "1"
+      ui_allow_tanks "1"
+      ui_allow_thompson "1"
+      ui_allow_willyjeep "1"
+      ui_allowVote "1"
+      ui_allowVoteClientKick "1"
+      ui_allowVoteDrawFriend "0"
+      ui_allowVoteFriendlyFire "0"
+      ui_allowVoteGameType "1"
+      ui_allowVoteKick "1"
+      ui_allowVoteKillCam "0"
+      ui_allowVoteMap "1"
+      ui_allowVoteMapRestart "1"
+      ui_allowVoteMapRotate "1"
+      ui_allowVoteTempBanClient "1"
+      ui_allowVoteTempBanUser "1"
+      ui_allowVoteTypeMap "1"
+      ui_battlerank "1"
+      ui_bigFont "0.4"
+      ui_browserFriendlyfire "-1"
+      ui_browserGameType "0"
+      ui_browserKillcam "-1"
+      ui_browserMaster "0"
+      ui_browserMod "-1"
+      ui_browserShowDedicated "0"
+      ui_browserShowEmpty "1"
+      ui_browserShowFull "1"
+      ui_browserShowJeeps "-1"
+      ui_browserShowNoPassword "1"
+      ui_browserShowPassword "1"
+      ui_browserShowPunkBuster "-1"
+      ui_browserShowPure "0"
+      ui_browserShowTanks "-1"
+      ui_browserSortKey "4"
+      ui_ctf_clearscoreeachround "0"
+      ui_ctf_roundlength "20"
+      ui_ctf_roundlimit "0"
+      ui_ctf_scorelimit "0"
+      ui_ctf_timelimit "60"
+      ui_currentMap "11"
+      ui_currentNetMap "11"
+      ui_dedicated "0"
+      ui_drawfriend "1"
+      ui_extraBigFont "0.55"
+      ui_friendlyfire "3"
+      ui_gametype "3"
+      ui_hostname "G-Day X"
+      ui_joinGametype "0"
+      ui_killcam "1"
+      ui_mapIndex "8"
+      ui_motd "Welcome to G-Day X!"
+      ui_mousePitch "0"
+      ui_netGametype "4"
+      ui_netGametypeName "bel"
+      ui_netSource "0"
+      ui_serverStatusTimeOut "7000"
+      ui_shellshock "1"
+      ui_smallFont "0.25"
+      ui_tdm_scorelimit "0"
+      ui_tdm_timelimit "30"
+      ui_timeoutBank "180000"
+      ui_timeoutLength "90000"
+      ui_timeoutRecovery "10000"
+      ui_timeoutsAllowed "0"
+      username "CWARD"
+      version "CODUO MP 1.51 build 1463 Dec  6 2004 20:33:18 win-x86"
+      vid_xpos "388"
+      vid_ypos "181"
+      viewlog "1"
+      win_allowalttab "0"
+      win_hinstance "4194304"
+      win_wndproc "4651856"
+
+643 total cvars
+643 cvar indexes
+=============================== END CVAR DUMP =====================================
+      cvar set scr_allow_allied_secondary 1
+      cvar set scr_allow_axis_secondary 1
+FinishSpawningItem: mpweapon_panzerschreck startsolid at (-1144 -860 377)
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set sv_serverRestarting 0
+Hitch warning: 533 msec frame time
+Hitch warning: 531 msec frame time
+Hitch warning: 655 msec frame time
+Hitch warning: 573 msec frame time
+Hitch warning: 530 msec frame time
+6:Shart Sighted EXE_DISCONNECTED
+Hitch warning: 508 msec frame time
+Hitch warning: 538 msec frame time
+Hitch warning: 508 msec frame time
+Hitch warning: 622 msec frame time
+Hitch warning: 527 msec frame time
+Hitch warning: 541 msec frame time
+^8(GAME_ALLIES)Doin it for the Kids^7: QUICKMESSAGE_FOLLOW_ME
+Hitch warning: 528 msec frame time
+3:jpt-spiky diarrhea EXE_DISCONNECTED
+5:Doin it for the Kids EXE_DISCONNECTED
+Hitch warning: 516 msec frame time
+      cvar set g_gametype dom
+g_gametype will be changed upon restarting.
+Client 9 connecting with 0 challenge ping from 192.168.1.229:28960
+      cvar set cg_atmos -1
+Going from CS_FREE to CS_CONNECTED for The 5k (num 3 guid 0)
+couldn't exec mp_foy_ctf.cfg
+      cvar set g_gametype dom
+==== ShutdownGame ====
+------ Server Initialization ------
+Server: mp_foy
+Hunk_Clear: reset the hunk ok
+Current language: english
+Current search path:
+C:\Program Files\Call of Duty/cod-stats
+C:\Program Files\Call of Duty\uo\uomappack00.pk3 (143 files)
+C:\Program Files\Call of Duty\uo\stoop-warehouse-fun.pk3 (6 files)
+C:\Program Files\Call of Duty\uo\stoop-reserves.pk3 (16 files)
+C:\Program Files\Call of Duty\uo\stoop-jeeparena.pk3 (24 files)
+C:\Program Files\Call of Duty\uo\stoop-enclave.pk3 (16 files)
+C:\Program Files\Call of Duty\uo\pakuo07.pk3 (157 files)
+C:\Program Files\Call of Duty\uo\pakuo06.pk3 (12 files)
+C:\Program Files\Call of Duty\uo\pakuo05.pk3 (3 files)
+C:\Program Files\Call of Duty\uo\pakuo04.pk3 (7646 files)
+C:\Program Files\Call of Duty\uo\pakuo03.pk3 (2275 files)
+C:\Program Files\Call of Duty\uo\pakuo02.pk3 (790 files)
+C:\Program Files\Call of Duty\uo\pakuo01.pk3 (1657 files)
+C:\Program Files\Call of Duty\uo\pakuo00.pk3 (6233 files)
+C:\Program Files\Call of Duty/uo
+C:\Program Files\Call of Duty\main\paka.pk3 (41 files)
+C:\Program Files\Call of Duty\main\pak9.pk3 (149 files)
+C:\Program Files\Call of Duty\main\pak8.pk3 (235 files)
+C:\Program Files\Call of Duty\main\pak6.pk3 (3 files)
+C:\Program Files\Call of Duty\main\pak5.pk3 (4858 files)
+C:\Program Files\Call of Duty\main\pak4.pk3 (1668 files)
+C:\Program Files\Call of Duty\main\pak3.pk3 (1992 files)
+C:\Program Files\Call of Duty\main\pak2.pk3 (694 files)
+C:\Program Files\Call of Duty\main\pak1.pk3 (2642 files)
+C:\Program Files\Call of Duty\main\pak0.pk3 (12816 files)
+C:\Program Files\Call of Duty/main
+C:\Program Files\Call of Duty\uo\localized_english_pakuo02.pk3 (12 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\uo\localized_english_pakuo01.pk3 (37 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\uo\localized_english_pakuo00.pk3 (2578 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\main\localized_english_pak3.pk3 (7 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\main\localized_english_pak2.pk3 (9 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\main\localized_english_pak1.pk3 (3736 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\main\localized_english_pak0.pk3 (1204 files)
+    localized assets pak file for english
+
+File Handles:
+handle 1: console_mp.log
+----------------------
+51659 files in pk3 files
+      cvar set cl_languagesavailable 1
+      cvar set g_gametype dom
+      cvar set nextmap map_restart
+      cvar set com_expectedhunkusage 98583456
+      cvar set cl_paused 0
+      cvar set cm_noCurves 0
+      cvar set cm_playerCurveClip 1
+      cvar set mapname mp_foy
+      cvar set sv_serverid 68
+      cvar set sv_serverRestarting 1
+WARNING: Com_PushEvent overflow
+------- Game Initialization -------
+gamename: CoD:United Offensive
+gamedate: Dec  6 2004
+      cvar set g_debugDamage 0
+      cvar set g_debugBullets 0
+      cvar set g_tracerchancelmg 0.7
+      cvar set g_vehicleDrawPath 0
+      cvar set g_vehicleDebug 0
+      cvar set g_vehicleTexScrollScale 0
+      cvar set g_vehicleTrafficStressTest 0
+      cvar set bg_nofatigue 0
+      cvar set bg_fallDamageMinHeight 256
+      cvar set bg_fallDamageMaxHeight 480
+      cvar set bg_debugWeaponAnim 0
+      cvar set bg_debugWeaponState 0
+      cvar set g_bounds_width 30
+      cvar set g_bounds_height_standing 70
+      cvar set g_debugShowHit 0
+      cvar set g_debugLocDamage 0
+      cvar set g_debuganim 0
+      cvar set bg_swingSpeed 0.2
+      cvar set g_dumpAnims -1
+      cvar set cg_atmos -1
+      cvar set g_gravity 800
+0 teams with 0 entities
+      cvar set ui_allowvote 1
+      cvar set ui_allowVoteMapRestart 1
+      cvar set ui_allowVoteMapRotate 1
+      cvar set ui_allowVoteTypeMap 1
+      cvar set ui_allowVoteMap 1
+      cvar set ui_allowVoteGameType 1
+      cvar set ui_allowVoteKick 1
+      cvar set ui_allowVoteClientKick 1
+      cvar set ui_allowVoteTempBanUser 1
+      cvar set ui_allowVoteTempBanClient 1
+      cvar set ui_allowVoteDrawFriend 0
+      cvar set ui_allowVoteKillCam 0
+      cvar set ui_allowVoteFriendlyFire 0
+      cvar set ui_drawfriend 1
+      cvar set ui_friendlyfire 3
+      cvar set ui_killcam 1
+      cvar set ui_timeoutsAllowed 0
+      cvar set ui_timeoutBank 180000
+      cvar set ui_timeoutLength 90000
+      cvar set ui_timeoutRecovery 10000
+      cvar set cg_atmos -1
+-----------------------------------
+WARNING: Spawn point entity 424 is in solid at (-1439, -2740, 9)
+      cvar set ui_dom_timelimit 60
+      cvar set ui_dom_roundlength 20
+      cvar set ui_dom_scorelimit 0
+      cvar set ui_battlerank 1
+      cvar set ui_dom_clearscoreeachround 0
+      cvar set ui_shellshock 1
+      cvar set scr_allow_vote 1
+      cvar set scr_dom_domination_points 2
+      cvar set scr_ceasefire 0
+      cvar set scr_killcam 1
+      cvar set ui_killcam 1
+      cvar set ui_dom_roundlimit 0
+      cvar set cg_hudcompassMaxRange 1024
+      cvar set scr_debug_dom 0
+      cvar set sv_night 0
+      cvar set sv_night 0
+      cvar set scr_allow_flak88 1
+      cvar set ui_allow_flak88 1
+      cvar set scr_allow_tanks 1
+      cvar set ui_allow_tanks 1
+      cvar set scr_allow_t34 1
+      cvar set ui_allow_t34 1
+      cvar set scr_allow_elefant 1
+      cvar set ui_allow_elefant 1
+      cvar set scr_allow_sherman 1
+      cvar set ui_allow_sherman 1
+      cvar set scr_allow_panzeriv 1
+      cvar set ui_allow_panzeriv 1
+      cvar set scr_allow_su152 1
+      cvar set ui_allow_su152 1
+      cvar set scr_allow_jeeps 1
+      cvar set ui_allow_jeeps 1
+      cvar set scr_allow_willyjeep 1
+      cvar set ui_allow_willyjeep 1
+      cvar set scr_allow_gaz67b 1
+      cvar set ui_allow_gaz67b 1
+      cvar set scr_allow_horch 1
+      cvar set ui_allow_horch 1
+      cvar set scr_layoutimage levelshots/layouts/hud@layout_mp_foy_dom
+      cvar set g_TeamName_Allies MPSCRIPT_AMERICAN
+      cvar set g_TeamColor_Allies .25 .75 .25
+      cvar set g_ScoresBanner_Allies gfx/hud/hud@mpflag_american.tga
+      cvar set g_TeamName_Axis MPSCRIPT_GERMAN
+      cvar set g_TeamColor_Axis .6 .6 .6
+      cvar set g_ScoresBanner_Axis gfx/hud/hud@mpflag_german.tga
+      cvar set sv_hostname G-Day X
+      cvar set ui_hostname G-Day X
+      cvar set scr_motd Welcome to G-Day X!
+      cvar set ui_motd Welcome to G-Day X!
+      cvar set g_allowvote 1
+      cvar set ui_allowvote 1
+      cvar set g_allowvotemaprestart 1
+      cvar set ui_allowvotemaprestart 1
+      cvar set g_allowvotemaprotate 1
+      cvar set ui_allowvotemaprotate 1
+      cvar set g_allowvotemap 1
+      cvar set ui_allowvotemap 1
+      cvar set g_allowvotetypemap 1
+      cvar set ui_allowvotetypemap 1
+      cvar set g_allowvotekick 1
+      cvar set ui_allowvotekick 1
+      cvar set g_allowvotetempbanuser 1
+      cvar set ui_allowvotetempbanuser 1
+      cvar set scr_friendlyfire 3
+      cvar set ui_friendlyfire 3
+      cvar set scr_allow_m1carbine 1
+      cvar set ui_allow_m1carbine 1
+      cvar set scr_allow_m1garand 1
+      cvar set ui_allow_m1garand 1
+      cvar set scr_allow_thompson 1
+      cvar set ui_allow_thompson 1
+      cvar set scr_allow_bar 1
+      cvar set ui_allow_bar 1
+      cvar set scr_allow_springfield 1
+      cvar set ui_allow_springfield 1
+      cvar set scr_allow_mg30cal 1
+      cvar set ui_allow_mg30cal 1
+      cvar set scr_allow_enfield 1
+      cvar set ui_allow_enfield 1
+      cvar set scr_allow_sten 1
+      cvar set ui_allow_sten 1
+      cvar set scr_allow_bren 1
+      cvar set ui_allow_bren 1
+      cvar set scr_allow_nagant 1
+      cvar set ui_allow_nagant 1
+      cvar set scr_allow_svt40 1
+      cvar set ui_allow_svt40 1
+      cvar set scr_allow_ppsh 1
+      cvar set ui_allow_ppsh 1
+      cvar set scr_allow_nagantsniper 1
+      cvar set ui_allow_nagantsniper 1
+      cvar set scr_allow_dp28 1
+      cvar set ui_allow_dp28 1
+      cvar set scr_allow_kar98k 1
+      cvar set ui_allow_kar98k 1
+      cvar set scr_allow_gewehr43 1
+      cvar set ui_allow_gewehr43 1
+      cvar set scr_allow_mp40 1
+      cvar set ui_allow_mp40 1
+      cvar set scr_allow_mp44 1
+      cvar set ui_allow_mp44 1
+      cvar set scr_allow_kar98ksniper 1
+      cvar set ui_allow_kar98ksniper 1
+      cvar set scr_allow_mg34 1
+      cvar set ui_allow_mg34 1
+      cvar set scr_allow_fg42 1
+      cvar set ui_allow_fg42 1
+      cvar set scr_allow_panzerfaust 1
+      cvar set ui_allow_panzerfaust 1
+      cvar set scr_allow_bazooka 1
+      cvar set ui_allow_bazooka 1
+      cvar set scr_allow_panzerschreck 1
+      cvar set ui_allow_panzerschreck 1
+      cvar set scr_allow_flamethrower 1
+      cvar set ui_allow_flamethrower 1
+      cvar set scr_allow_binoculars 1
+      cvar set ui_allow_binoculars 1
+      cvar set scr_allow_artillery 1
+      cvar set ui_allow_artillery 1
+      cvar set scr_allow_satchel 1
+      cvar set ui_allow_satchel 1
+      cvar set scr_allow_grenades 1
+      cvar set ui_allow_grenades 1
+      cvar set scr_allow_smoke 1
+      cvar set ui_allow_smoke 1
+      cvar set scr_allow_pistols 1
+      cvar set ui_allow_pistols 1
+=============================== CVAR DUMP ========================================
+
+650 total cvars
+650 cvar indexes
+=============================== END CVAR DUMP =====================================
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set sv_paks 
+      cvar set sv_pakNames 
+      cvar set sv_referencedPaks 217417886 419375006 401794639 -914447005 -235342179 -659938473 1622099944 -858314597 77111478 -1825805837 1048127331 411039402 323984529 -788625739 968878365 -961133319 
+      cvar set sv_referencedPakNames uo/stoop-jeeparena uo/pakuo07 uo/pakuo04 uo/pakuo03 uo/pakuo01 uo/pakuo00 main/pak9 main/pak8 main/pak5 main/pak4 main/pak0 uo/localized_english_pakuo01 uo/localized_english_pakuo00 main/localized_english_pak3 main/localized_english_pak2 main/localized_english_pak1
+      cvar set sv_serverRestarting 0
+-----------------------------------
+      cvar set sv_punkbuster 0
+      cvar set sv_cheats 0
+PunkBuster Server: 0 Aliases Written to pbalias.dat
+PunkBuster Server: 0 Stat Records Written to pbstat.dat
+PunkBuster Server: Preparing to Disable PB Server... (C:\Program Files\Call of Duty\pb\)
+Hitch warning: 3437 msec frame time
+Client 10 connecting with 0 challenge ping from 192.168.1.175:28960
+      cvar set cg_atmos -1
+Going from CS_FREE to CS_CONNECTED for Doin it for the Kids (num 5 guid 0)
+Hitch warning: 515 msec frame time
+Client 11 connecting with 0 challenge ping from 192.168.1.246:28960
+      cvar set cg_atmos -1
+Going from CS_FREE to CS_CONNECTED for Chickendales (num 6 guid 0)
+      cvar set g_gametype dom
+      cvar set g_gametype dom
+      cvar set sv_serverid 69
+      cvar set sv_serverRestarting 1
+==== RestartGame ====
+------- Game Initialization -------
+gamename: CoD:United Offensive
+gamedate: Dec  6 2004
+      cvar set cg_atmos -1
+      cvar set g_gravity 800
+0 teams with 0 entities
+      cvar set ui_allowvote 1
+      cvar set ui_allowVoteMapRestart 1
+      cvar set ui_allowVoteMapRotate 1
+      cvar set ui_allowVoteTypeMap 1
+      cvar set ui_allowVoteMap 1
+      cvar set ui_allowVoteGameType 1
+      cvar set ui_allowVoteKick 1
+      cvar set ui_allowVoteClientKick 1
+      cvar set ui_allowVoteTempBanUser 1
+      cvar set ui_allowVoteTempBanClient 1
+      cvar set ui_allowVoteDrawFriend 0
+      cvar set ui_allowVoteKillCam 0
+      cvar set ui_allowVoteFriendlyFire 0
+      cvar set ui_drawfriend 1
+      cvar set ui_friendlyfire 3
+      cvar set ui_killcam 1
+      cvar set ui_timeoutsAllowed 0
+      cvar set ui_timeoutBank 180000
+      cvar set ui_timeoutLength 90000
+      cvar set ui_timeoutRecovery 10000
+      cvar set cg_atmos -1
+-----------------------------------
+WARNING: Spawn point entity 424 is in solid at (-1439, -2740, 9)
+      cvar set ui_dom_timelimit 60
+      cvar set ui_dom_roundlength 20
+      cvar set ui_dom_scorelimit 0
+      cvar set ui_battlerank 1
+      cvar set ui_dom_clearscoreeachround 0
+      cvar set ui_shellshock 1
+      cvar set scr_allow_vote 1
+      cvar set scr_ceasefire 0
+      cvar set scr_killcam 1
+      cvar set ui_killcam 1
+      cvar set ui_dom_roundlimit 0
+      cvar set cg_hudcompassMaxRange 6124
+      cvar set sv_night 0
+      cvar set sv_night 0
+      cvar set scr_allow_flak88 1
+      cvar set ui_allow_flak88 1
+      cvar set scr_allow_tanks 1
+      cvar set ui_allow_tanks 1
+      cvar set scr_allow_t34 1
+      cvar set ui_allow_t34 1
+      cvar set scr_allow_elefant 1
+      cvar set ui_allow_elefant 1
+      cvar set scr_allow_sherman 1
+      cvar set ui_allow_sherman 1
+      cvar set scr_allow_panzeriv 1
+      cvar set ui_allow_panzeriv 1
+      cvar set scr_allow_su152 1
+      cvar set ui_allow_su152 1
+      cvar set scr_allow_jeeps 1
+      cvar set ui_allow_jeeps 1
+      cvar set scr_allow_willyjeep 1
+      cvar set ui_allow_willyjeep 1
+      cvar set scr_allow_gaz67b 1
+      cvar set ui_allow_gaz67b 1
+      cvar set scr_allow_horch 1
+      cvar set ui_allow_horch 1
+      cvar set sv_hostname G-Day X
+      cvar set ui_hostname G-Day X
+      cvar set scr_motd Welcome to G-Day X!
+      cvar set ui_motd Welcome to G-Day X!
+      cvar set g_allowvote 1
+      cvar set ui_allowvote 1
+      cvar set g_allowvotemaprestart 1
+      cvar set ui_allowvotemaprestart 1
+      cvar set g_allowvotemaprotate 1
+      cvar set ui_allowvotemaprotate 1
+      cvar set g_allowvotemap 1
+      cvar set ui_allowvotemap 1
+      cvar set g_allowvotetypemap 1
+      cvar set ui_allowvotetypemap 1
+      cvar set g_allowvotekick 1
+      cvar set ui_allowvotekick 1
+      cvar set g_allowvotetempbanuser 1
+      cvar set ui_allowvotetempbanuser 1
+      cvar set scr_friendlyfire 3
+      cvar set ui_friendlyfire 3
+      cvar set scr_allow_m1carbine 1
+      cvar set ui_allow_m1carbine 1
+      cvar set scr_allow_m1garand 1
+      cvar set ui_allow_m1garand 1
+      cvar set scr_allow_thompson 1
+      cvar set ui_allow_thompson 1
+      cvar set scr_allow_bar 1
+      cvar set ui_allow_bar 1
+      cvar set scr_allow_springfield 1
+      cvar set ui_allow_springfield 1
+      cvar set scr_allow_mg30cal 1
+      cvar set ui_allow_mg30cal 1
+      cvar set scr_allow_enfield 1
+      cvar set ui_allow_enfield 1
+      cvar set scr_allow_sten 1
+      cvar set ui_allow_sten 1
+      cvar set scr_allow_bren 1
+      cvar set ui_allow_bren 1
+      cvar set scr_allow_nagant 1
+      cvar set ui_allow_nagant 1
+      cvar set scr_allow_svt40 1
+      cvar set ui_allow_svt40 1
+      cvar set scr_allow_ppsh 1
+      cvar set ui_allow_ppsh 1
+      cvar set scr_allow_nagantsniper 1
+      cvar set ui_allow_nagantsniper 1
+      cvar set scr_allow_dp28 1
+      cvar set ui_allow_dp28 1
+      cvar set scr_allow_kar98k 1
+      cvar set ui_allow_kar98k 1
+      cvar set scr_allow_gewehr43 1
+      cvar set ui_allow_gewehr43 1
+      cvar set scr_allow_mp40 1
+      cvar set ui_allow_mp40 1
+      cvar set scr_allow_mp44 1
+      cvar set ui_allow_mp44 1
+      cvar set scr_allow_kar98ksniper 1
+      cvar set ui_allow_kar98ksniper 1
+      cvar set scr_allow_mg34 1
+      cvar set ui_allow_mg34 1
+      cvar set scr_allow_fg42 1
+      cvar set ui_allow_fg42 1
+      cvar set scr_allow_panzerfaust 1
+      cvar set ui_allow_panzerfaust 1
+      cvar set scr_allow_bazooka 1
+      cvar set ui_allow_bazooka 1
+      cvar set scr_allow_panzerschreck 1
+      cvar set ui_allow_panzerschreck 1
+      cvar set scr_allow_flamethrower 1
+      cvar set ui_allow_flamethrower 1
+      cvar set scr_allow_binoculars 1
+      cvar set ui_allow_binoculars 1
+      cvar set scr_allow_artillery 1
+      cvar set ui_allow_artillery 1
+      cvar set scr_allow_satchel 1
+      cvar set ui_allow_satchel 1
+      cvar set scr_allow_grenades 1
+      cvar set ui_allow_grenades 1
+      cvar set scr_allow_smoke 1
+      cvar set ui_allow_smoke 1
+      cvar set scr_allow_pistols 1
+      cvar set ui_allow_pistols 1
+=============================== CVAR DUMP ========================================
+      .Admin "Luda"
+      .Email ""
+      .Irc ""
+      .Location "Beavercreek, OH"
+      .Website "http://cward-nb/gday10"
+      arch "winnt"
+      bg_debugWeaponAnim "0"
+      bg_debugWeaponState "0"
+      bg_fallDamageMaxHeight "480"
+      bg_fallDamageMinHeight "256"
+      bg_foliagesnd_fastinterval "500"
+      bg_foliagesnd_maxspeed "180"
+      bg_foliagesnd_minspeed "40"
+      bg_foliagesnd_resetinterval "500"
+      bg_foliagesnd_slowinterval "1500"
+      bg_ladder_yawcap "100"
+      bg_lmg_yawcap "55"
+      bg_nofatigue "0"
+      bg_prone_yawcap "85"
+      bg_swingSpeed "0.2"
+      bg_viewheight_crouched "40"
+      bg_viewheight_prone "11"
+      bg_viewheight_standing "60"
+      cg_announcerSounds "1"
+      cg_atmos "-1"
+      cg_autodemo "0"
+      cg_autoscreenshot "0"
+      cg_blood "1"
+      cg_bobAmplitudeDucked "0.0075"
+      cg_bobAmplitudeProne "0.03"
+      cg_bobAmplitudeStanding "0.007"
+      cg_bobMax "8"
+      cg_brass "1"
+      cg_chatHeight "8"
+      cg_chatTime "12000"
+      cg_crosshairAlpha "1.0"
+      cg_crosshairAlphaMin "0.7"
+      cg_crosshairDynamic "0"
+      cg_crosshairNoGun "gfx/reticle/hud@center_ads.tga"
+      cg_crosshairSize "48"
+      cg_currentSelectedPlayer "0"
+      cg_currentSelectedPlayerName ""
+      cg_cursorHints "4"
+      cg_deadbodyque "32"
+      cg_descriptiveText "1"
+      cg_drawCompass "1"
+      cg_drawCrosshair "1"
+      cg_drawCrosshairNames "1"
+      cg_drawCrosshairPickups "1"
+      cg_drawFPS "0"
+      cg_drawGun "1"
+      cg_drawNotifyText "1"
+      cg_drawRewards "1"
+      cg_drawSnapshot "0"
+      cg_drawStatus "1"
+      cg_drawTeamOverlay "2"
+      cg_fov "80"
+      cg_gameBoldMessageWidth "60"
+      cg_gameMessageWidth "70"
+      cg_hintFadeTime "100"
+      cg_hudAlpha "1.0"
+      cg_hudCompassMaxRange "6124"
+      cg_hudCompassMinRadius "0"
+      cg_hudCompassMinRange "0"
+      cg_hudCompassSize "1.0"
+      cg_hudCompassSpringyPointers "0"
+      cg_hudDamageIconHeight "64"
+      cg_hudDamageIconInScope "0"
+      cg_hudDamageIconOffset "32"
+      cg_hudDamageIconTime "2000"
+      cg_hudDamageIconWidth "128"
+      cg_hudObjectiveMaxHeight "70"
+      cg_hudObjectiveMaxRange "2048"
+      cg_hudObjectiveMinAlpha "1"
+      cg_hudObjectiveMinHeight "-70"
+      cg_hudStanceHintPrints "1"
+      cg_lagometer "0"
+      cg_marks "1"
+      cg_noTaunt "0"
+      cg_noVoiceChats "0"
+      cg_noVoiceText "0"
+      cg_predictItems "1"
+      cg_railTrailTime "400"
+      cg_scoreboardScrollStep "3"
+      cg_selectedPlayer "0"
+      cg_shadows "0"
+      cg_showdemoname "1"
+      cg_stereoSeparation "0.4"
+      cg_subtitleMinTime "3"
+      cg_subtitles "1"
+      cg_subtitleWidth "80"
+      cg_teamChatsOnly "0"
+      cg_vehicletrails "1"
+      cg_viewsize "100"
+      cg_voiceSpriteTime "6000"
+      cg_weaponCycleDelay "0"
+      cl_allowDownload "0"
+      cl_anonymous "0"
+      cl_autocmd "1"
+      cl_freelook "1"
+      cl_goStandJumpTime "0"
+      cl_language "0"
+      cl_languagesavailable "1"
+      cl_languagetranslate "1"
+      cl_languagewarnings "0"
+      cl_languagewarningsaserrors "0"
+      cl_maxpackets "30"
+      cl_maxPing "800"
+      cl_mouseAccel "0"
+      cl_packetdup "1"
+      cl_paused "0"
+      cl_pitchspeed "140"
+      cl_punkbuster "0"
+      cl_running "0"
+      cl_wwwDownload "1"
+      cl_xmodelcheck "0"
+      cl_yawspeed "140"
+      cm_noCurves "0"
+      cm_playerCurveClip "1"
+      com_animCheck "0"
+      com_expectedhunkusage "98583456"
+      com_hunkmegs "128"
+      com_introplayed "1"
+      com_maxfps "85"
+      com_recommendedSet "1"
+      com_speeds "0"
+      com_statmon "0"
+      con_debug "0"
+      con_minicon "0"
+      con_miniconlines "5"
+      con_minicontime "4"
+      dedicated "1"
+      developer "0"
+      developer_script "0"
+      fixedtime "0"
+      fs_basegame "uo"
+      fs_basepath "C:\Program Files\Call of Duty"
+      fs_cdpath ""
+      fs_copyfiles "0"
+      fs_debug "0"
+      fs_game "cod-stats"
+      fs_homepath "C:\Program Files\Call of Duty"
+      fs_ignoreLozalized "0"
+      fs_restrict ""
+      fx_cullbias "0"
+      fx_cullscale "1"
+      g_allowvote "1"
+      g_allowVoteClientKick "1"
+      g_allowVoteDrawFriend "0"
+      g_allowVoteFriendlyFire "0"
+      g_allowVoteGameType "1"
+      g_allowVoteKick "1"
+      g_allowVoteKillCam "0"
+      g_allowVoteMap "1"
+      g_allowVoteMapRestart "1"
+      g_allowVoteMapRotate "1"
+      g_allowVoteTempBanClient "1"
+      g_allowVoteTempBanUser "1"
+      g_allowVoteTypeMap "1"
+      g_autodemo "0"
+      g_autoscreenshot "0"
+      g_banIPs ""
+      g_bounds_height_standing "70"
+      g_bounds_width "30"
+      g_complaintlimit "3"
+      g_deadChat "1"
+      g_debugAlloc "0"
+      g_debuganim "0"
+      g_debugBullets "0"
+      g_debugDamage "0"
+      g_debugLocDamage "0"
+      g_debugMove "0"
+      g_debugProneCheck "0"
+      g_debugProneCheckDepthCheck "1"
+      g_debugShowHit "0"
+      g_dumpAnims "-1"
+      g_gametype "dom"
+      g_gravity "800"
+      g_inactivity "0"
+      g_inactivityspectator "0"
+      g_intermissionDelay "1000"
+      g_knockback "1000"
+      g_listEntity "0"
+      g_log "games_mp.log"
+      g_logSync "1"
+      g_maxDroppedWeapons "16"
+      g_motd ""
+      g_no_script_spam "0"
+      g_password ""
+      g_ScoresBanner_Allies "gfx/hud/hud@mpflag_american.tga"
+      g_ScoresBanner_Axis "gfx/hud/hud@mpflag_german.tga"
+      g_ScoresBanner_None "gfx/hud/hud@mpflag_none.tga"
+      g_ScoresBanner_Spectators "gfx/hud/hud@mpflag_spectator.tga"
+      g_scriptMainMenu ""
+      g_scriptMap ""
+      g_smoothClients "1"
+      g_speed "190"
+      g_synchronousClients "0"
+      g_TeamColor_Allies ".25 .75 .25"
+      g_TeamColor_Axis ".6 .6 .6"
+      g_TeamName_Allies "MPSCRIPT_AMERICAN"
+      g_TeamName_Axis "MPSCRIPT_GERMAN"
+      g_timeoutBank "180000"
+      g_timeoutlength "90000"
+      g_timeoutRecovery "10000"
+      g_timeoutsallowed "0"
+      g_tracerchance "0.4"
+      g_tracerchancelmg "0.7"
+      g_useGear "1"
+      g_vehicleBurnTime "10"
+      g_vehicleDebug "0"
+      g_vehicleDrawPath "0"
+      g_vehicleEnableCollisionDamage "0"
+      g_vehicleForceBulletDamage "0"
+      g_vehicleForceGrenadeDamage "0"
+      g_vehicleHorns "1"
+      g_vehicleTexScrollScale "0"
+      g_vehicleTrafficStressTest "0"
+      g_voiceChatsAllowed "4"
+      g_weaponAmmoPools "0"
+      g_weaponrespawn "5"
+      gamedate "Dec  6 2004"
+      gamename "CoD:United Offensive"
+      handicap "100"
+      head ""
+      hurtgentrees "off"
+      in_debugjoystick "0"
+      in_joyBallScale "0.02"
+      in_joystick "0"
+      in_midi "0"
+      in_midichannel "1"
+      in_mididevice "0"
+      in_midiport "1"
+      in_mouse "1"
+      journal "0"
+      joy_threshold "0.15"
+      logfile "2"
+      m_filter "0"
+      m_forward "0.25"
+      m_pitch "0.022"
+      m_side "0.25"
+      m_yaw "0.022"
+      mapname "mp_foy"
+      model ""
+      mss_3d_provider "Miles Fast 2D Positional Audio"
+      mss_bits "16"
+      mss_errorOnMissing "1"
+      mss_khz "44"
+      mss_stereo "1"
+      mss_volume "0.8"
+      name "Luda"
+      net_ip "localhost"
+      net_lanauthorize "0"
+      net_noipx "0"
+      net_noudp "0"
+      net_port "28960"
+      net_profile "0"
+      net_qport "16618"
+      net_showprofile "0"
+      net_socksEnabled "0"
+      net_socksPassword ""
+      net_socksPort "1080"
+      net_socksServer ""
+      net_socksUsername ""
+      nextmap "map_restart"
+      pmove_fixed "0"
+      pmove_msec "8"
+      protocol "22"
+      r_ati_fsaa_samples "1"
+      r_ati_pntriangles "0"
+      r_ati_truform_normalmode "QUADRATIC"
+      r_ati_truform_pointmode "CUBIC"
+      r_ati_truform_tess "1"
+      r_colorbits "32"
+      r_customaspect "1"
+      r_customheight "1024"
+      r_customwidth "1600"
+      r_depthbits "0"
+      r_detailtextures "1"
+      r_diffuseSunQuality "2"
+      r_diffuseSunSteps "3"
+      r_dlightQuality "1"
+      r_drawSun "1"
+      r_dynamiclight "1"
+      r_entLightCutoff "0.2"
+      r_ext_texture_filter_anisotropic "0"
+      r_finish "0"
+      r_fullscreen "1"
+      r_gamma "1.0"
+      r_ignoreGLErrors "1"
+      r_ignorehwgamma "0"
+      r_inGameVideo "1"
+      r_lastValidRenderer "Quadro FX 1600M/PCI/SSE2"
+      r_lodbias "0"
+      r_lodscale "1"
+      r_maxEntLights "8"
+      r_mem_agp "8"
+      r_mem_backend "0.5"
+      r_mem_manual "0"
+      r_mem_video "2"
+      r_minEntLightIntensity "0.02"
+      r_mode "6"
+      r_nv_fog_dist "1"
+      r_nv_fogdist_mode "GL_EYE_RADIAL_NV"
+      r_overBrightBits "1"
+      r_picmip "1"
+      r_picmip2 "1"
+      r_portalbevels "0.7"
+      r_primitives "0"
+      r_railCoreWidth "1"
+      r_railSegmentLength "32"
+      r_railWidth "16"
+      r_simpleMipMaps "1"
+      r_skip_auto_config "0"
+      r_stencilbits "8"
+      r_swapDelay "0"
+      r_swapInterval "1"
+      r_texturebits "0"
+      r_textureMode "GL_LINEAR_MIPMAP_NEAREST"
+      r_uiFullScreen "1"
+      r_vbo_interleave "0"
+      r_vbo_paranoia "0"
+      r_vbo_smc_static_draw "1"
+      r_vbo_stream_draw "1"
+      rate "25000"
+      rconPassword "jeeps"
+      scr_allow_allied_secondary "1"
+      scr_allow_artillery "1"
+      scr_allow_axis_secondary "1"
+      scr_allow_bar "1"
+      scr_allow_bazooka "1"
+      scr_allow_binoculars "1"
+      scr_allow_bren "1"
+      scr_allow_dp28 "1"
+      scr_allow_elefant "1"
+      scr_allow_enfield "1"
+      scr_allow_fg42 "1"
+      scr_allow_flak88 "1"
+      scr_allow_flamethrower "1"
+      scr_allow_gaz67b "1"
+      scr_allow_gewehr43 "1"
+      scr_allow_grenades "1"
+      scr_allow_horch "1"
+      scr_allow_jeeps "1"
+      scr_allow_kar98k "1"
+      scr_allow_kar98ksniper "1"
+      scr_allow_m1carbine "1"
+      scr_allow_m1garand "1"
+      scr_allow_mg30cal "1"
+      scr_allow_mg34 "1"
+      scr_allow_mp40 "1"
+      scr_allow_mp44 "1"
+      scr_allow_nagant "1"
+      scr_allow_nagantsniper "1"
+      scr_allow_panzerfaust "1"
+      scr_allow_panzeriv "1"
+      scr_allow_panzerschreck "1"
+      scr_allow_pistols "1"
+      scr_allow_ppsh "1"
+      scr_allow_satchel "1"
+      scr_allow_sherman "1"
+      scr_allow_smoke "1"
+      scr_allow_springfield "1"
+      scr_allow_sten "1"
+      scr_allow_su152 "1"
+      scr_allow_svt40 "1"
+      scr_allow_t34 "1"
+      scr_allow_tanks "1"
+      scr_allow_thompson "1"
+      scr_allow_vote "1"
+      scr_allow_willyjeep "1"
+      scr_artillery_first_interval "45"
+      scr_artillery_interval "120"
+      scr_artillery_interval_range "15"
+      scr_bas_clearscoreeachround "0"
+      scr_bas_endrounddelay "10"
+      scr_bas_respawn_wave_time "10"
+      scr_bas_roundlength "20"
+      scr_bas_roundlimit "0"
+      scr_bas_scorelimit "0"
+      scr_bas_startrounddelay "15"
+      scr_bas_timelimit "60"
+      scr_battlerank "1"
+      scr_bel_alivepointtime "10"
+      scr_bel_scorelimit "0"
+      scr_bel_timelimit "30"
+      scr_ceasefire "0"
+      scr_ctf_clearscoreeachround "0"
+      scr_ctf_endrounddelay "10"
+      scr_ctf_positiontime "6"
+      scr_ctf_roundlength "20"
+      scr_ctf_roundlimit "0"
+      scr_ctf_scorelimit "0"
+      scr_ctf_showoncompass "1"
+      scr_ctf_startrounddelay "10"
+      scr_ctf_timelimit "60"
+      scr_death_wait_time "5"
+      scr_debug_ctf "0"
+      scr_debug_dom "0"
+      scr_dm_scorelimit "0"
+      scr_dm_timelimit "30"
+      scr_dom_clearscoreeachround "0"
+      scr_dom_domination_points "2"
+      scr_dom_endrounddelay "10"
+      scr_dom_respawn_wave_time "10"
+      scr_dom_roundlength "20"
+      scr_dom_roundlimit "0"
+      scr_dom_scorelimit "0"
+      scr_dom_startrounddelay "10"
+      scr_dom_timelimit "60"
+      scr_drawfriend "1"
+      scr_drophealth "1"
+      scr_forcerank "0"
+      scr_forcerespawn "0"
+      scr_forcerespawn_ftf "0"
+      scr_freelook "1"
+      scr_friendlyfire "3"
+      scr_ftf_flagicons "1"
+      scr_ftf_flagmodel "cow_standing"
+      scr_ftf_flagmodel_dropped "cow_dead"
+      scr_ftf_flagname "cow"
+      scr_ftf_flagrecovertime "10"
+      scr_ftf_flagspawndelay "20"
+      scr_ftf_holdtime "90"
+      scr_ftf_mode "3"
+      scr_ftf_removeflagspawns "1"
+      scr_ftf_respawntime "0"
+      scr_ftf_scorelimit "10"
+      scr_ftf_timelimit "20"
+      scr_hq_scorelimit "0"
+      scr_hq_timelimit "30"
+      scr_jeep_respawn_wait "5"
+      scr_jeep_spawn_limit "0"
+      scr_killcam "1"
+      scr_layoutimage "levelshots/layouts/hud@layout_mp_foy_dom"
+      scr_motd "Welcome to G-Day X!"
+      scr_rank_ppr "10"
+      scr_re_graceperiod "15"
+      scr_re_roundlength "5"
+      scr_re_roundlimit "0"
+      scr_re_scorelimit "0"
+      scr_re_showcarrier "1"
+      scr_re_timelimit "30"
+      scr_sd_graceperiod "15"
+      scr_sd_roundlength "5"
+      scr_sd_roundlimit "0"
+      scr_sd_scorelimit "0"
+      scr_sd_timelimit "30"
+      scr_selfDestructJeepTime "90"
+      scr_shellshock "1"
+      scr_showicons "1"
+      scr_spectateenemy "1"
+      scr_tank_respawn_wait "10"
+      scr_tank_spawn_limit "0"
+      scr_tdm_scorelimit "0"
+      scr_tdm_timelimit "30"
+      scr_teambalance "0"
+      scr_teamscorepenalty "1"
+      scr_ttdm_scorelimit "100"
+      scr_ttdm_timelimit "30"
+      sensitivity "3.114583"
+      server1 ""
+      server10 ""
+      server11 ""
+      server12 ""
+      server13 ""
+      server14 ""
+      server15 ""
+      server16 ""
+      server2 ""
+      server3 ""
+      server4 ""
+      server5 ""
+      server6 ""
+      server7 ""
+      server8 ""
+      server9 ""
+      shortversion "1.51"
+      showdrop "0"
+      showpackets "0"
+      snaps "20"
+      sv_allowAnonymous "0"
+      sv_allowDownload "1"
+      sv_cheats "0"
+      sv_console_lockout "0"
+      sv_disableClientConsole "0"
+      sv_dl_maxrate "900000"
+      sv_floodProtect "1"
+      sv_fps "20"
+      sv_hostname "G-Day X"
+      sv_invulnerabletime "3"
+      sv_keywords ""
+      sv_kickBanTime "300"
+      sv_killserver "0"
+      sv_mapname ""
+      sv_mapRotation ""
+      sv_mapRotationCurrent ""
+      sv_maxclients "50"
+      sv_maxPing "999"
+      sv_maxRate "25000"
+      sv_minPing "0"
+      sv_night "0"
+      sv_obituary "1"
+      sv_onlyVisibleClients "0"
+      sv_packet_info "0"
+      sv_padPackets "0"
+      sv_pakNames ""
+      sv_paks ""
+      sv_paused "0"
+      sv_privateClients "0"
+      sv_privatePassword ""
+      sv_punkbuster "0"
+      sv_pure "0"
+      sv_reconnectlimit "3"
+      sv_referencedPakNames "uo/stoop-jeeparena uo/pakuo07 uo/pakuo04 uo/pakuo03 uo/pakuo01 uo/pakuo00 main/pak9 main/pak8 main/pak5 main/pak4 main/pak0 uo/localized_english_pakuo01 uo/localized_english_pakuo00 main/localized_english_pak3 main/localized_english_pak2 main/localized_english_pak1"
+      sv_referencedPaks "217417886 419375006 401794639 -914447005 -235342179 -659938473 1622099944 -858314597 77111478 -1825805837 1048127331 411039402 323984529 -788625739 968878365 -961133319 "
+      sv_running "1"
+      sv_serverid "69"
+      sv_serverRestarting "1"
+      sv_showAverageBPS "0"
+      sv_showCommands "0"
+      sv_showloss "0"
+      sv_timeout "960"
+      sv_wwwBaseURL ""
+      sv_wwwDlDisconnected "0"
+      sv_wwwDownload "0"
+      sv_zombietime "2"
+      sys_configSum "70957801"
+      sys_cpuid "35"
+      sys_cpuMHz "2491.69"
+      sys_cpustring "Intel Pentium III"
+      sys_sysMB "1024"
+      sys_vidMB "512"
+      timescale "1"
+      ui_allow_artillery "1"
+      ui_allow_bar "1"
+      ui_allow_bazooka "1"
+      ui_allow_binoculars "1"
+      ui_allow_bren "1"
+      ui_allow_dp28 "1"
+      ui_allow_elefant "1"
+      ui_allow_enfield "1"
+      ui_allow_fg42 "1"
+      ui_allow_flak88 "1"
+      ui_allow_flamethrower "1"
+      ui_allow_gaz67b "1"
+      ui_allow_gewehr43 "1"
+      ui_allow_grenades "1"
+      ui_allow_horch "1"
+      ui_allow_jeeps "1"
+      ui_allow_kar98k "1"
+      ui_allow_kar98ksniper "1"
+      ui_allow_m1carbine "1"
+      ui_allow_m1garand "1"
+      ui_allow_mg30cal "1"
+      ui_allow_mg34 "1"
+      ui_allow_mp40 "1"
+      ui_allow_mp44 "1"
+      ui_allow_nagant "1"
+      ui_allow_nagantsniper "1"
+      ui_allow_panzerfaust "1"
+      ui_allow_panzeriv "1"
+      ui_allow_panzerschreck "1"
+      ui_allow_pistols "1"
+      ui_allow_ppsh "1"
+      ui_allow_satchel "1"
+      ui_allow_sherman "1"
+      ui_allow_smoke "1"
+      ui_allow_sniperrifles "1"
+      ui_allow_springfield "1"
+      ui_allow_sten "1"
+      ui_allow_su152 "1"
+      ui_allow_svt40 "1"
+      ui_allow_t34 "1"
+      ui_allow_tanks "1"
+      ui_allow_thompson "1"
+      ui_allow_willyjeep "1"
+      ui_allowVote "1"
+      ui_allowVoteClientKick "1"
+      ui_allowVoteDrawFriend "0"
+      ui_allowVoteFriendlyFire "0"
+      ui_allowVoteGameType "1"
+      ui_allowVoteKick "1"
+      ui_allowVoteKillCam "0"
+      ui_allowVoteMap "1"
+      ui_allowVoteMapRestart "1"
+      ui_allowVoteMapRotate "1"
+      ui_allowVoteTempBanClient "1"
+      ui_allowVoteTempBanUser "1"
+      ui_allowVoteTypeMap "1"
+      ui_battlerank "1"
+      ui_bigFont "0.4"
+      ui_browserFriendlyfire "-1"
+      ui_browserGameType "0"
+      ui_browserKillcam "-1"
+      ui_browserMaster "0"
+      ui_browserMod "-1"
+      ui_browserShowDedicated "0"
+      ui_browserShowEmpty "1"
+      ui_browserShowFull "1"
+      ui_browserShowJeeps "-1"
+      ui_browserShowNoPassword "1"
+      ui_browserShowPassword "1"
+      ui_browserShowPunkBuster "-1"
+      ui_browserShowPure "0"
+      ui_browserShowTanks "-1"
+      ui_browserSortKey "4"
+      ui_ctf_clearscoreeachround "0"
+      ui_ctf_roundlength "20"
+      ui_ctf_roundlimit "0"
+      ui_ctf_scorelimit "0"
+      ui_ctf_timelimit "60"
+      ui_currentMap "11"
+      ui_currentNetMap "11"
+      ui_dedicated "0"
+      ui_dom_clearscoreeachround "0"
+      ui_dom_roundlength "20"
+      ui_dom_roundlimit "0"
+      ui_dom_scorelimit "0"
+      ui_dom_timelimit "60"
+      ui_drawfriend "1"
+      ui_extraBigFont "0.55"
+      ui_friendlyfire "3"
+      ui_gametype "3"
+      ui_hostname "G-Day X"
+      ui_joinGametype "0"
+      ui_killcam "1"
+      ui_mapIndex "8"
+      ui_motd "Welcome to G-Day X!"
+      ui_mousePitch "0"
+      ui_netGametype "4"
+      ui_netGametypeName "bel"
+      ui_netSource "0"
+      ui_serverStatusTimeOut "7000"
+      ui_shellshock "1"
+      ui_smallFont "0.25"
+      ui_tdm_scorelimit "0"
+      ui_tdm_timelimit "30"
+      ui_timeoutBank "180000"
+      ui_timeoutLength "90000"
+      ui_timeoutRecovery "10000"
+      ui_timeoutsAllowed "0"
+      username "CWARD"
+      version "CODUO MP 1.51 build 1463 Dec  6 2004 20:33:18 win-x86"
+      vid_xpos "388"
+      vid_ypos "181"
+      viewlog "1"
+      win_allowalttab "0"
+      win_hinstance "4194304"
+      win_wndproc "4651856"
+
+650 total cvars
+650 cvar indexes
+=============================== END CVAR DUMP =====================================
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set sv_serverRestarting 0
+----- CL_Shutdown -----
+      cvar set cl_running 0
+-----------------------
+----- Server Shutdown -----
+==== ShutdownGame ====
+      cvar set sv_running 0
+---------------------------
+Hunk_Clear: reset the hunk ok
