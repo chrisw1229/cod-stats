@@ -17,18 +17,20 @@
 (defn create-new-player-id
   "Creates a new player ID to associate with name/client-id pair."
   ([name client-id]
-     (dosync (alter *player-id-map* assoc [name client-id] @*new-id*)
-	     (alter *name-id-map* assoc name @*new-id*)
-	     (alter *client-id-id-map* assoc client-id @*new-id*)
-	     (alter *new-id* inc)
-	     (dec @*new-id*)))
+     (do
+       (dosync (alter *player-id-map* assoc [name client-id] @*new-id*)
+	       (alter *name-id-map* assoc name @*new-id*)
+	       (alter *client-id-id-map* assoc client-id @*new-id*)
+	       (alter *new-id* inc))
+       (dec @*new-id*)))
   ([name client-id ip-address]
-     (dosync (alter *player-id-map* assoc [name client-id] @*new-id*)
-	     (alter *name-id-map* assoc name @*new-id*)
-	     (alter *client-id-id-map* assoc client-id @*new-id*)
-	     (alter *ip-id-map* assoc ip-address @*new-id*)
-	     (alter *new-id* inc)
-	     (dec @*new-id*))))
+     (do
+       (dosync (alter *player-id-map* assoc [name client-id] @*new-id*)
+	       (alter *name-id-map* assoc name @*new-id*)
+	       (alter *client-id-id-map* assoc client-id @*new-id*)
+	       (alter *ip-id-map* assoc ip-address @*new-id*)
+	       (alter *new-id* inc))
+       (dec @*new-id*))))
 
 (defn get-player-id
   "Gets the current id associated with name/client-id combination."
@@ -40,7 +42,11 @@
 	ip-id (get @*ip-id-map* ip-address)]
     (cond
      ;Everything matches and is non-nil
-     (and (not (nil? player-id)) (= player-id ip-id name-id client-id-id))
+     (and (not (nil? player-id))
+	  (not (nil? name-id))
+	  (not (nil? client-id-id))
+	  (not (nil? ip-id))
+	  (= player-id ip-id name-id client-id-id))
      player-id
      
      ;We have an ID associated with the IP address that's different (IP takes precedence)

@@ -37,7 +37,7 @@
 	(and (is-int? a) (not (nil? b)))
 	[{:id :none :num a :team :none :name b} (drop 2 str-seq)]
 
-	(and (= "" a) (= "-1" b) (= "world" c) (= "" d))
+	(and (= "" a) (= "-1" b) (= "world" c) (not (nil? d)))
 	[{:id :none :num b :team :all :name c} (drop 4 str-seq)]))))
 
 (defn get-people [str-seq]
@@ -286,4 +286,4 @@
        (= :quit (:action potential-struct))))
 
 (defn spectator? [potential-struct]
-  (and (contains? potential-struct :spectator)))
+  (contains? potential-struct :spectator))

@@ -27,13 +27,13 @@
 (defn calc-seconds [start-time-millis end-time-millis]
   (int (* 0.001 (- end-time-millis start-time-millis))))
 
-(defstruct player-stats :name :photo :place :rank :team :kills :deaths :inflicted :received :ratio)
+(defstruct player-stats :name :photo :place :rank :team :kills :deaths :inflicted :received :trend)
 
 (defn get-player
   "Gets the player's identity using codIdentity and either returns their current stats or creates a
 new stats object for them."
   [player-struct]
-  (let [player-id (get-player-id (:name player-struct) (:id player-struct))
+  (let [player-id (get-player-id (:name player-struct) (:num player-struct))
 	player (get @*player-stats-map* player-id)]
     (if player
       player
@@ -46,7 +46,7 @@ new stats object for them."
 (defn update-player 
   "Merges new-stats with the player-stats structure currently associated with the player."
   [player new-stats]
-  (dosync (alter *player-stats-map* assoc (get-player-id (:name player) (:id player))
+  (dosync (alter *player-stats-map* assoc (get-player-id (:name player) (:num player))
 		 (merge (get-player player) new-stats {:name (:name player)}))))
 
 (defn create-player-update-packet 
@@ -54,8 +54,8 @@ new stats object for them."
   [player]
   (let [player-team (get @*current-teams* (:team player))]
     (if (nil? player-team)
-      (merge {:id (get-player-id (:name player) (:id player))} (get-player player))
-      (merge {:id (get-player-id (:name player) (:id player))}
+      (merge {:id (get-player-id (:name player) (:num player))} (get-player player))
+      (merge {:id (get-player-id (:name player) (:num player))}
 	     (get-player player)
 	     (if (not (nil? player-team))
 	       {:team (str (first player-team))}
@@ -106,7 +106,7 @@ new stats object for them."
 	  new-ratio (calculate-ratio old-player)
 	  ratio-trend (get-ratio-trend new-ratio old-ratio)]
       (dosync (alter ratio-ref assoc player-id new-ratio)
-	      (alter stats-ref assoc player-id (assoc old-player :ratio ratio-trend)))))))
+	      (alter stats-ref assoc player-id (assoc old-player :trend ratio-trend)))))))
 
 (def *ratio-calculator* (timed-action 60 update-ratios *player-stats-map* *player-id-ratio-map*))
 
@@ -146,7 +146,7 @@ time for this game."
 	  (ref-set *transformer* (get-transformer map-name))
 	  (ref-set *current-teams* {:allies allies-team :axis axis-team :spectator "spectator"})))
 
-(defn process-game-event 
+(defn process-game-event
   "Adds an event packet to the data to be sent to the frontend."
   [team]
   (dosync (alter *game-records* conj {:team (str (first (get @*current-teams* (keyword team))))
@@ -156,13 +156,13 @@ time for this game."
   [player]
   (do
     (update-player player {:team :none})
-    (create-player-update-packet player)))
+    (dosync (alter *game-records* conj (create-player-update-packet player)))))
 
 (defn process-spectator-event
   [player]
   (do
     (update-player player {:team :spectator})
-    (create-player-update-packet player)))
+    (dosync (alter *game-records* conj (create-player-update-packet player)))))
 
 (defn process-input-line
   "Parses the input-line and then determines how to process the parsed input."

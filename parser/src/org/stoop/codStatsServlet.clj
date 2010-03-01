@@ -32,11 +32,11 @@
 	game-records (filter game-record? records)
 	event-records (filter event-record? records)
 	player-records (filter player-record? records)]
-    (flatten (filter #(not (nil? %)) [(if (> (count map-records) 0)
+    (flatten (filter #(not (nil? %)) [(if (> (count game-records) 0)
+					{:type "game" :data (last game-records)})
+				      (if (> (count map-records) 0)
 					(for [record map-records]
 					  {:type "map" :data record}))
-				      (if (> (count game-records) 0)
-					{:type "game" :data (last game-records)})
 				      (if (> (count event-records) 0)
 					(for [record event-records]
 					  {:type "event" :data record}))
