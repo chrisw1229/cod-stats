@@ -166,6 +166,10 @@ time for this game."
     (update-player player {:team :spectator})
     (dosync (alter *game-records* conj (create-player-update-packet player)))))
 
+(defn process-rank-event
+  [player new-rank]
+  (update-player player {:rank new-rank}))
+
 (defn process-input-line
   "Parses the input-line and then determines how to process the parsed input."
   [input-line]
@@ -201,6 +205,10 @@ time for this game."
       
       (spectator? (parsed-input :entry))
       (process-spectator-event (get-in parsed-input [:entry :spectator]))
+
+      (rank? (parsed-input :entry))
+      (process-rank-event (get-in parsed-input [:entry :player])
+			  (get-in parsed-input [:entry :rank]))
 
       (quit? (parsed-input :entry))
       (process-quit-event (get-in parsed-input [:entry :player])))))

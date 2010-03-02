@@ -209,7 +209,8 @@
       (or (= "J" first-entry) (= "Q" first-entry)) (first (get-connection str-seq))
       (or (= "W" first-entry) (= "L" first-entry)) (first (get-win-loss str-seq))
       (= "Game" first-entry) (first (get-game-start str-seq))
-      (= "A" first-entry) (first (get-game-event str-seq)))))
+      (= "A" first-entry) (first (get-game-event str-seq))
+      (= "Rank" first-entry) (first (get-rank str-seq)))))
 
 (defn parse-time [time-string]
   (let [split-seq (re-split #":" time-string)]
@@ -287,3 +288,7 @@
 
 (defn spectator? [potential-struct]
   (contains? potential-struct :spectator))
+
+(defn rank? [potential-struct]
+  (and (contains? potential-struct :player)
+       (contains? potential-struct :rank)))
