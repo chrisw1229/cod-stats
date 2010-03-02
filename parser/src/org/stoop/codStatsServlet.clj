@@ -11,10 +11,13 @@
        (catch NumberFormatException nfe 0)))
 
 (defn map-record? [record]
-  (and (contains? record :kx)
-       (contains? record :ky)
-       (contains? record :dx)
-       (contains? record :dy)))
+  (or
+   (and (contains? record :kx)
+	(contains? record :ky)
+	(contains? record :dx)
+	(contains? record :dy))
+   (and (contains? record :sx)
+	(contains? record :sy))))
 
 (defn game-record? [record]
   (and (contains? record :map)

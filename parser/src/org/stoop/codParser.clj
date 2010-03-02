@@ -253,6 +253,9 @@
   (= (dk-struct :victim) (dk-struct :attacker)))
 (defn team-damage? [dk-struct]
   (= (:team (dk-struct :victim)) (:team (dk-struct :attacker))))
+(defn suicide? [dk-struct]
+  (and (kill? dk-struct)
+       (self-damage? dk-struct)))
 
 (defn talk? [potential-struct]
   (and (contains? potential-struct :player)

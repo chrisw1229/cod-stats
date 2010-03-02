@@ -53,7 +53,8 @@ new stats object for them."
   [attacker victim damage]
   (let [old-attacker (get-player attacker)
 	old-victim (get-player victim)]
-    (update-player attacker (update-in old-attacker [:inflicted] + (int damage)))
+    (when (not (= (:team attacker) (:team victim)))
+      (update-player attacker (update-in old-attacker [:inflicted] + (int damage))))
     (update-player victim (update-in old-victim [:received] + (int damage)))))
 
 (defn update-places 
@@ -108,8 +109,7 @@ and victim to be sent to the frontend."
 	trans-dx (x-transformer dx dy)
 	trans-dy (y-transformer dx dy)]
     ;Update kills and deaths
-    (when (not (= (:name attacker) (:name victim)))
-      (update-player attacker (update-in old-attacker [:kills] inc)))
+    (update-player attacker (update-in old-attacker [:kills] inc))
     (update-player victim (update-in old-victim [:deaths] inc))
     ;Update team values
     (update-player attacker {:team (:team attacker)})
@@ -117,8 +117,23 @@ and victim to be sent to the frontend."
     ;Update stats and game records
     (update-places player-stats-map)
     (dosync (alter game-records conj
-		   {:kx trans-kx :ky trans-ky :dx trans-dx :dy trans-dy}
+		   {:kx trans-kx :ky trans-ky :dx trans-dx :dy trans-dy
+		    :kname (:name attacker) :kteam (:team attacker)
+		    :dname (:name victim) :dteam (:team victim)}
 		   (create-player-update-packet attacker)
+		   (create-player-update-packet victim)))))
+
+(defn process-suicide
+  "Increments deaths for suicide victim."
+  [victim sx sy x-transformer y-transformer]
+  (let [old-victim (get-player victim)
+	trans-sx (x-transformer sx sy)
+	trans-sy (y-transformer sx sy)]
+    (update-player victim (update-in old-victim [:deaths] inc))
+    (update-player victim {:team (:team victim)})
+    (update-places player-stats-map)
+    (dosync (alter game-records conj
+		   {:sx trans-sx :sy trans-sy :sname (:name victim) :steam (:team victim)}
 		   (create-player-update-packet victim)))))
 
 ;Update to archive game-records for whole match stats calculation
@@ -184,16 +199,23 @@ time for this game."
 	 (process-damage (get-in parsed-input [:entry :attacker])
 			 (get-in parsed-input [:entry :victim])
 			 (get-in parsed-input [:entry :hit-details :damage]))
-					;Handle case of no location data as well
-	 (if (kill? (parsed-input :entry))
-	   (process-kill (get-in parsed-input [:entry :attacker])
-			 (get-in parsed-input [:entry :victim])
-			 (get-in parsed-input [:entry :attacker-loc :x])
-			 (get-in parsed-input [:entry :attacker-loc :y])
-			 (get-in parsed-input [:entry :victim-loc :x])
-			 (get-in parsed-input [:entry :victim-loc :y])
-			 (get @*transformer* :x)
-			 (get @*transformer* :y))))
+	 (cond
+	  (suicide? (parsed-input :entry))
+	  (process-suicide (get-in parsed-input [:entry :victim])
+			   (get-in parsed-input [:entry :victim-loc :x])
+			   (get-in parsed-input [:entry :victim-loc :y])
+			   (get @*transformer* :x)
+			   (get @*transformer* :y))
+
+	  (kill? (parsed-input :entry))
+	  (process-kill (get-in parsed-input [:entry :attacker])
+			(get-in parsed-input [:entry :victim])
+			(get-in parsed-input [:entry :attacker-loc :x])
+			(get-in parsed-input [:entry :attacker-loc :y])
+			(get-in parsed-input [:entry :victim-loc :x])
+			(get-in parsed-input [:entry :victim-loc :y])
+			(get @*transformer* :x)
+			(get @*transformer* :y))))
       
        (game-event? (parsed-input :entry))
        (process-game-event (get-in parsed-input [:entry :player :team])
