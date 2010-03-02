@@ -1,7 +1,7 @@
 ;web stuff
 (ns org.stoop.codStatsServlet
   (:gen-class :extends javax.servlet.http.HttpServlet)
-  (:use org.stoop.codStatsIo org.stoop.codStatsRealTime
+  (:use org.stoop.codStatsIo org.stoop.codStatsRealTime org.stoop.schedule
 	compojure.http clojure.contrib.json.write clojure.contrib.seq-utils))
 
 (def max-map-records 20)
@@ -22,8 +22,11 @@
        (contains? record :time)))
 
 (defn event-record? [record]
-  (and (contains? record :team)
-       (contains? record :time)))
+  (or 
+   (and (contains? record :team)
+	(contains? record :time))
+   (and (contains? record :time)
+	(= 1 (count record)))))
 
 (defn player-record? [record]
   (and (contains? record :name)
@@ -52,9 +55,9 @@
 (defroutes cod-stats-routes
   (GET "/stats/live"
     (let [ts (parse-integer (params :ts))]
-      (if (<= ts (count @*game-records*))
-	(json-str (conj (process-records (drop ts @*game-records*)) {:type "ts" :data (count @*game-records*)}))
-	(json-str (conj (process-records @*game-records*) {:type "ts" :data (count @*game-records*)})))))
+      (if (<= ts (count @game-records))
+	(json-str (conj (process-records (drop ts @game-records)) {:type "ts" :data (count @game-records)}))
+	(json-str (conj (process-records @game-records) {:type "ts" :data (count @game-records)})))))
 	
   (GET "/stats/start"
     (when (not (nil? (params :log)))
@@ -63,9 +66,21 @@
       (dosync (ref-set *connect-log-location* (params :conn))))
     (let [log-reader (tail-f @*log-file-location* 1000 process-input-line)
 	  connect-reader (tail-f @*connect-log-location* 1000 process-connect-line)]
+      ;Start log readers
       ((connect-reader :start))
       ((log-reader :start))
-      ((*ratio-calculator* :start))
+      ;Start trend calculation to repeat once every minute
+      (fixedrate {:name "Trend"
+		  :task #(update-ratios player-stats-map player-id-ratio-map)
+		  :start-delay 0
+		  :rate 1
+		  :unit (:minutes unit)})
+      ;Start event heartbeat for jeep meter once every 5 seconds
+      (fixedrate {:name "Heartbeat"
+		  :task #(heartbeat-game-event (last @game-archive))
+		  :start-delay 0
+		  :rate 5
+		  :unit (:seconds unit)})
       (str "File watching started for " @*log-file-location*))))
 
 (defservice cod-stats-routes)

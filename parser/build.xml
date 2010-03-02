@@ -44,6 +44,7 @@
       <arg value="org.stoop.codStatsIo" />
       <arg value="org.stoop.codStatsRealTime" />
       <arg value="org.stoop.codAnalytics" />
+      <arg value="org.stoop.schedule" />
       <arg value="org.stoop.codStatsServlet" />
     </java>
   </target>

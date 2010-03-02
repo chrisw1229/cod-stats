@@ -281,6 +281,11 @@
        (contains? potential-struct :map-name)
        (contains? potential-struct :round-time)))
 
+(defn join? [potential-struct]
+  (and (contains? potential-struct :player)
+       (contains? potential-struct :action)
+       (= :join (:action potential-struct))))
+
 (defn quit? [potential-struct]
   (and (contains? potential-struct :player)
        (contains? potential-struct :action)

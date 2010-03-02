@@ -1,25 +1,15 @@
 (ns org.stoop.codStatsRealTime
-  (:use org.stoop.codParser org.stoop.codData org.stoop.codIdentity
+  (:use org.stoop.codParser org.stoop.codData org.stoop.codIdentity org.stoop.schedule
 	clojure.contrib.seq-utils))
 
 ;Real time processing
+(def game-records (ref []))
+(def game-archive (ref []))
+(def connect-archive (ref []))
 
-(defn timed-action
-  "Calls a function f every interval seconds with arguments rest"
-  [interval f & rest]
-  (let [keep-running (atom true)
-	thread (Thread. #(while @keep-running
-			   (do
-			     (apply f rest)
-			     (Thread/sleep (* 1000 interval)))))]
-    {:start #(.start thread)
-     :stop #(do (reset! keep-running false)
-		(.join thread))}))
+(def player-stats-map (ref {}))
+(def player-id-ratio-map (ref {}))
 
-(def *player-id-ratio-map* (ref {}))
-
-(def *game-records* (ref []))
-(def *player-stats-map* (ref {}))
 (def *transformer* (ref (get-transformer "none")))
 (def *current-teams* (ref {:allies "american" :axis "german" :spectator "spectator" :none ""}))
 
@@ -32,18 +22,18 @@
 new stats object for them."
   [player-struct]
   (let [player-id (get-player-id (:name player-struct) (:num player-struct))
-	player (get @*player-stats-map* player-id)]
+	player (get @player-stats-map player-id)]
     (if player
       player
       (let [new-player (struct player-stats (:name player-struct)
-			       "default.jpg" (count @*player-stats-map*) 0 "none" 0 0 0 0 "")]
-	(dosync (alter *player-stats-map* assoc player-id new-player))
+			       "default.jpg" (count @player-stats-map) 0 "none" 0 0 0 0 "")]
+	(dosync (alter player-stats-map assoc player-id new-player))
 	(do new-player)))))
 
 (defn update-player 
   "Merges new-stats with the player-stats structure currently associated with the player."
   [player new-stats]
-  (dosync (alter *player-stats-map* assoc (get-player-id (:name player) (:num player))
+  (dosync (alter player-stats-map assoc (get-player-id (:name player) (:num player))
 		 (merge (get-player player) new-stats {:name (:name player)}))))
 
 (defn create-player-update-packet 
@@ -106,8 +96,6 @@ new stats object for them."
       (dosync (alter ratio-ref assoc player-id new-ratio)
 	      (alter stats-ref assoc player-id (assoc old-player :trend ratio-trend)))))))
 
-(def *ratio-calculator* (timed-action 60 update-ratios *player-stats-map* *player-id-ratio-map*))
-
 (defn process-kill 
   "Increments kills for attacker and deaths for victim.  Kills is not incremented for self kills.
 Also adds a map packet indicating the location of the kills and player update packets for both the attacker
@@ -127,8 +115,8 @@ and victim to be sent to the frontend."
     (update-player attacker {:team (:team attacker)})
     (update-player victim {:team (:team victim)})
     ;Update stats and game records
-    (update-places *player-stats-map*)
-    (dosync (alter *game-records* conj
+    (update-places player-stats-map)
+    (dosync (alter game-records conj
 		   {:kx trans-kx :ky trans-ky :dx trans-dx :dy trans-dy}
 		   (create-player-update-packet attacker)
 		   (create-player-update-packet victim)))))
@@ -138,33 +126,39 @@ and victim to be sent to the frontend."
   "Sets the data for the frontend to a game start packet, resets player stats records and resets the start
 time for this game."
   [game-type map-name round-time allies-team axis-team time-stamp]
-  (dosync (ref-set *game-records* [{:map map-name :type game-type :time round-time}
-				   {:type "event" :data {:time 0}}])
-	  (ref-set *player-stats-map* {})
+  (dosync (ref-set game-records [{:map map-name :type game-type :time round-time}
+				 {:time 0}])
+	  (ref-set player-stats-map {})
 	  (ref-set *start-time* time-stamp)
 	  (ref-set *transformer* (get-transformer map-name))
 	  (ref-set *current-teams* {:allies allies-team :axis axis-team :spectator "spectator"})
-	  (ref-set *player-id-ratio-map* {})))
+	  (ref-set player-id-ratio-map {})))
 
 (defn process-game-event
   "Adds an event packet to the data to be sent to the frontend."
   [team time-stamp]
   (if (= team :none)
-    (dosync (alter *game-records* conj {:time (- time-stamp @*start-time*)}))
-    (dosync (alter *game-records* conj {:team (str (first (get @*current-teams* (keyword team))))
-					:time (- time-stamp @*start-time*)}))))
+    (dosync (alter game-records conj {:time (- time-stamp @*start-time*)}))
+    (dosync (alter game-records conj {:team (str (first (get @*current-teams* (keyword team))))
+				      :time (- time-stamp @*start-time*)}))))
+
+(defn heartbeat-game-event
+  "Takes a log-entry, extracts the time stamp and generates a game event with team of none and the time stamp."
+  [log-entry]
+  (when (not (nil? (get log-entry :time)))
+      (process-game-event :none (:time log-entry))))
 
 (defn process-quit-event
   [player]
   (do
     (update-player player {:team :none})
-    (dosync (alter *game-records* conj (create-player-update-packet player)))))
+    (dosync (alter game-records conj (create-player-update-packet player)))))
 
 (defn process-spectator-event
   [player]
   (do
     (update-player player {:team :spectator})
-    (dosync (alter *game-records* conj (create-player-update-packet player)))))
+    (dosync (alter game-records conj (create-player-update-packet player)))))
 
 (defn process-rank-event
   [player new-rank]
@@ -174,48 +168,51 @@ time for this game."
   "Parses the input-line and then determines how to process the parsed input."
   [input-line]
   (let [parsed-input (parse-line input-line)]
-    (cond
-      (start-game? (parsed-input :entry))
-      (process-start-game (get-in parsed-input [:entry :game-type])
-			  (get-in parsed-input [:entry :map-name])
-			  (get-in parsed-input [:entry :round-time])
-			  (get-in parsed-input [:entry :allies-team])
-			  (get-in parsed-input [:entry :axis-team])
-			  (get parsed-input :time))
+    (when (not (nil? parsed-input))
+      (dosync (alter game-archive conj parsed-input))
+      (cond
+       (start-game? (parsed-input :entry))
+       (process-start-game (get-in parsed-input [:entry :game-type])
+			   (get-in parsed-input [:entry :map-name])
+			   (get-in parsed-input [:entry :round-time])
+			   (get-in parsed-input [:entry :allies-team])
+			   (get-in parsed-input [:entry :axis-team])
+			   (get parsed-input :time))
 
-      (damage-kill? (parsed-input :entry))
-      (do
-	(process-damage (get-in parsed-input [:entry :attacker])
-			(get-in parsed-input [:entry :victim])
-			(get-in parsed-input [:entry :hit-details :damage]))
-	;Handle case of no location data as well
-	(if (kill? (parsed-input :entry))
-	  (process-kill (get-in parsed-input [:entry :attacker])
-			(get-in parsed-input [:entry :victim])
-			(get-in parsed-input [:entry :attacker-loc :x])
-			(get-in parsed-input [:entry :attacker-loc :y])
-			(get-in parsed-input [:entry :victim-loc :x])
-			(get-in parsed-input [:entry :victim-loc :y])
-			(get @*transformer* :x)
-			(get @*transformer* :y))))
+       (damage-kill? (parsed-input :entry))
+       (do
+	 (process-damage (get-in parsed-input [:entry :attacker])
+			 (get-in parsed-input [:entry :victim])
+			 (get-in parsed-input [:entry :hit-details :damage]))
+					;Handle case of no location data as well
+	 (if (kill? (parsed-input :entry))
+	   (process-kill (get-in parsed-input [:entry :attacker])
+			 (get-in parsed-input [:entry :victim])
+			 (get-in parsed-input [:entry :attacker-loc :x])
+			 (get-in parsed-input [:entry :attacker-loc :y])
+			 (get-in parsed-input [:entry :victim-loc :x])
+			 (get-in parsed-input [:entry :victim-loc :y])
+			 (get @*transformer* :x)
+			 (get @*transformer* :y))))
       
-      (game-event? (parsed-input :entry))
-      (process-game-event (get-in parsed-input [:entry :player :team])
-			  (get parsed-input :time))
+       (game-event? (parsed-input :entry))
+       (process-game-event (get-in parsed-input [:entry :player :team])
+			   (get parsed-input :time))
       
-      (spectator? (parsed-input :entry))
-      (process-spectator-event (get-in parsed-input [:entry :spectator]))
+       (spectator? (parsed-input :entry))
+       (process-spectator-event (get-in parsed-input [:entry :spectator]))
 
-      (rank? (parsed-input :entry))
-      (process-rank-event (get-in parsed-input [:entry :player])
-			  (get-in parsed-input [:entry :rank]))
+       (rank? (parsed-input :entry))
+       (process-rank-event (get-in parsed-input [:entry :player])
+			   (get-in parsed-input [:entry :rank]))
 
-      (quit? (parsed-input :entry))
-      (process-quit-event (get-in parsed-input [:entry :player])))))
+       (quit? (parsed-input :entry))
+       (process-quit-event (get-in parsed-input [:entry :player]))))))
 
 (defn process-connect-line
   "Parses the input-line and updates the IP address records if its a valid line."
   [input-line]
   (let [parsed-input (parse-connect-line input-line)]
     (when parsed-input
+      (dosync (alter connect-archive conj parsed-input))
       (associate-client-id-to-ip (:client-id parsed-input) (:ip-address parsed-input)))))
