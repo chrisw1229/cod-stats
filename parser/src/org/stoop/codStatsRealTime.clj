@@ -5,7 +5,6 @@
 ;Real time processing
 (def game-records (ref []))
 (def game-archive (ref []))
-(def connect-archive (ref []))
 
 (def player-stats-map (ref {}))
 (def player-id-ratio-map (ref {}))
@@ -163,12 +162,6 @@ time for this game."
   (when (not (nil? (get log-entry :time)))
       (process-game-event :none (:time log-entry))))
 
-(defn process-quit-event
-  [player]
-  (do
-    (update-player player {:team :none})
-    (dosync (alter game-records conj (create-player-update-packet player)))))
-
 (defn process-spectator-event
   [player]
   (do
@@ -178,6 +171,17 @@ time for this game."
 (defn process-rank-event
   [player new-rank]
   (update-player player {:rank new-rank}))
+
+(defn process-join-event
+  [client-id]
+  (let [ip-address (get-and-remove-ip client-id)]
+    (associate-client-id-to-ip client-id ip-address)))
+
+(defn process-quit-event
+  [player]
+  (do
+    (update-player player {:team :none})
+    (dosync (alter game-records conj (create-player-update-packet player)))))
 
 (defn process-input-line
   "Parses the input-line and then determines how to process the parsed input."
@@ -228,13 +232,15 @@ time for this game."
        (process-rank-event (get-in parsed-input [:entry :player])
 			   (get-in parsed-input [:entry :rank]))
 
+       (join? (parsed-input :entry))
+       (process-join-event (get-in parsed-input [:entry :player :num]))
+
        (quit? (parsed-input :entry))
        (process-quit-event (get-in parsed-input [:entry :player]))))))
 
 (defn process-connect-line
-  "Parses the input-line and updates the IP address records if its a valid line."
+  "Parses the input-line and stores the IP address records if it's a valid line."
   [input-line]
   (let [parsed-input (parse-connect-line input-line)]
     (when parsed-input
-      (dosync (alter connect-archive conj parsed-input))
-      (associate-client-id-to-ip (:client-id parsed-input) (:ip-address parsed-input)))))
+      (store-connect-record parsed-input))))

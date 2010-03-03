@@ -28,7 +28,9 @@
 		       "mp_berlin" {:x (make-coord-transformer 3345.23 0.4493 0.000073669)
 				    :y (make-coord-transformer 3343.8 -0.002766 -0.4605)}
 		       "mp_bocage" {:x (make-coord-transformer 1271.94 0.02848 0.2354)
-				    :y (make-coord-transformer 2352.14 0.2367 -0.023267)}})
+				    :y (make-coord-transformer 2352.14 0.2367 -0.023267)}
+		       "mp_brecourt" {:x (make-coord-transformer 1801.21 0.447 -0.003862)
+				      :y (make-coord-transformer 1431.46 0.157 -0.4881)}})
 
 (defn get-transformer [map-name]
   (get map-transformers map-name {:x (make-coord-transformer 0 1 1)
