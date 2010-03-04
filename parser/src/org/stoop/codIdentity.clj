@@ -1,7 +1,6 @@
 (ns org.stoop.codIdentity
   (:use clojure.contrib.seq-utils))
 
-
 (def connect-archive (ref []))
 
 (def player-id-map (ref {}))
@@ -11,20 +10,30 @@
 (def *new-id* (ref 1))
 
 (def client-id-ip-map (ref {}))
+(def client-id-index (ref {}))
 (def *check-ip* true)
 
 (defn store-connect-record
   [connect-record]
   (dosync (alter connect-archive conj connect-record)))
 
-(defn get-and-remove-ip
-  "Retrieves the first IP address associated with client-id in the connect-archive and removes it from
-connect-archive."
+(defn get-next-ip
+  "Retrieves the next IP address associated with client-id in the connect-archive.
+
+IE: If an IP of 0.1 and 0.2 is associated with client-id 1, the 1st call will return 0.1 and the 2nd 0.2"
   [client-id]
-  (let [client-record (find-first #(= client-id (:client-id %)) @connect-archive)]
-    (when (not (nil? client-record))
-      (dosync (ref-set connect-archive (filter #(not= client-record %) @connect-archive)))
-      (:ip-address client-record))))
+  (let [client-records (filter #(= client-id (:client-id %)) @connect-archive)
+	index (get @client-id-index client-id)]
+    (cond 
+     ;First time we've tried to get the client-id and it exists
+     (and (not (contains? client-id-index client-id)) (not (nil? (first client-records))))
+     (do (dosync (alter client-id-index assoc client-id 1))
+	 (get (first client-records) :ip-address))
+     
+     ;We have a valid index value
+     (< index (count client-records)) 
+     (do (dosync (ref-set client-id-index (update-in @client-id-index [client-id] inc)))
+	 (:ip-address (nth client-records index))))))
 
 (defn associate-client-id-to-ip
   "Associates an IP address to the client ID passed in."
@@ -60,9 +69,6 @@ connect-archive."
     (cond
      ;Everything matches and is non-nil
      (and (not (nil? player-id))
-	  (not (nil? name-id))
-	  (not (nil? client-id-id))
-	  (not (nil? ip-id))
 	  (= player-id ip-id name-id client-id-id))
      player-id
      

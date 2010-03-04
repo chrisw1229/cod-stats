@@ -174,7 +174,7 @@ time for this game."
 
 (defn process-join-event
   [client-id]
-  (let [ip-address (get-and-remove-ip client-id)]
+  (let [ip-address (get-next-ip client-id)]
     (associate-client-id-to-ip client-id ip-address)))
 
 (defn process-quit-event
