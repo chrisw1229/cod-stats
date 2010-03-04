@@ -1,8 +1,6 @@
 (ns org.stoop.codIdentity
   (:use clojure.contrib.seq-utils))
 
-(def connect-archive (ref []))
-
 (def player-id-map (ref {}))
 (def name-id-map (ref {}))
 (def client-id-id-map (ref {}))
@@ -10,30 +8,7 @@
 (def *new-id* (ref 1))
 
 (def client-id-ip-map (ref {}))
-(def client-id-index (ref {}))
 (def *check-ip* true)
-
-(defn store-connect-record
-  [connect-record]
-  (dosync (alter connect-archive conj connect-record)))
-
-(defn get-next-ip
-  "Retrieves the next IP address associated with client-id in the connect-archive.
-
-IE: If an IP of 0.1 and 0.2 is associated with client-id 1, the 1st call will return 0.1 and the 2nd 0.2"
-  [client-id]
-  (let [client-records (filter #(= client-id (:client-id %)) @connect-archive)
-	index (get @client-id-index client-id)]
-    (cond 
-     ;First time we've tried to get the client-id and it exists
-     (and (not (contains? client-id-index client-id)) (not (nil? (first client-records))))
-     (do (dosync (alter client-id-index assoc client-id 1))
-	 (get (first client-records) :ip-address))
-     
-     ;We have a valid index value
-     (< index (count client-records)) 
-     (do (dosync (ref-set client-id-index (update-in @client-id-index [client-id] inc)))
-	 (:ip-address (nth client-records index))))))
 
 (defn associate-client-id-to-ip
   "Associates an IP address to the client ID passed in."
@@ -105,3 +80,7 @@ IE: If an IP of 0.1 and 0.2 is associated with client-id 1, the 1st call will re
      ;No IP address and a new player
      :else
      (create-new-player-id name client-id))))
+
+(defn inject-player-id
+  [player-struct]
+  (assoc player-struct :id (get-player-id (:name player-struct) (:num player-struct))))

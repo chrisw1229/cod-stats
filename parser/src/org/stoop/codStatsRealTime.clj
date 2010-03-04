@@ -172,23 +172,22 @@ time for this game."
   [player new-rank]
   (update-player player {:rank new-rank}))
 
-(defn process-join-event
-  [client-id]
-  (let [ip-address (get-next-ip client-id)]
-    (associate-client-id-to-ip client-id ip-address)))
-
 (defn process-quit-event
   [player]
   (do
     (update-player player {:team :none})
     (dosync (alter game-records conj (create-player-update-packet player)))))
 
+(defn store-game-record
+  [game-record]
+  (dosync (alter game-archive conj game-record)))
+
 (defn process-input-line
   "Parses the input-line and then determines how to process the parsed input."
   [input-line]
   (let [parsed-input (parse-line input-line)]
     (when (not (nil? parsed-input))
-      (dosync (alter game-archive conj parsed-input))
+      (store-game-record parsed-input)
       (cond
        (start-game? (parsed-input :entry))
        (process-start-game (get-in parsed-input [:entry :game-type])
@@ -232,9 +231,6 @@ time for this game."
        (process-rank-event (get-in parsed-input [:entry :player])
 			   (get-in parsed-input [:entry :rank]))
 
-       (join? (parsed-input :entry))
-       (process-join-event (get-in parsed-input [:entry :player :num]))
-
        (quit? (parsed-input :entry))
        (process-quit-event (get-in parsed-input [:entry :player]))))))
 
@@ -243,4 +239,4 @@ time for this game."
   [input-line]
   (let [parsed-input (parse-connect-line input-line)]
     (when parsed-input
-      (store-connect-record parsed-input))))
+      (store-game-record parsed-input))))
