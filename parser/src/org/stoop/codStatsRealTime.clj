@@ -1,6 +1,6 @@
 (ns org.stoop.codStatsRealTime
   (:use org.stoop.codParser org.stoop.codData org.stoop.codIdentity org.stoop.schedule
-	clojure.contrib.seq-utils))
+	clojure.contrib.seq-utils clojure.contrib.str-utils))
 
 ;Real time processing
 (def game-records (ref []))
@@ -178,16 +178,34 @@ time for this game."
     (update-player player {:team :none})
     (dosync (alter game-records conj (create-player-update-packet player)))))
 
+;Update to write to file?
 (defn store-game-record
   [game-record]
   (dosync (alter game-archive conj game-record)))
+
+(defn resolve-player-id
+  "Searches through a game record and updates the :id field of player maps to their current ID."
+  [record]
+  (cond 
+   (player? record) (inject-player-id record)
+   
+   (map? record)
+   (reduce merge (for [key-val record]
+		   (hash-map (key key-val) (resolve-player-id (val key-val)))))
+   
+   (vector? record)
+   (vec (for [item record]
+	  (resolve-player-id item)))
+
+   :else
+   record))
 
 (defn process-input-line
   "Parses the input-line and then determines how to process the parsed input."
   [input-line]
   (let [parsed-input (parse-line input-line)]
     (when (not (nil? parsed-input))
-      (store-game-record parsed-input)
+      (store-game-record (resolve-player-id parsed-input))
       (cond
        (start-game? (parsed-input :entry))
        (process-start-game (get-in parsed-input [:entry :game-type])
@@ -239,4 +257,9 @@ time for this game."
   [input-line]
   (let [parsed-input (parse-connect-line input-line)]
     (when parsed-input
-      (store-game-record parsed-input))))
+      (associate-client-id-to-ip (:client-id parsed-input) (:ip parsed-input)))))
+
+(defn process-file
+  [file line-process-function]
+  (doseq [line (re-split #"[\r*\n]+" (slurp file))]
+    (line-process-function line)))

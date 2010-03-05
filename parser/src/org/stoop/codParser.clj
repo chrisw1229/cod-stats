@@ -228,7 +228,8 @@
 	 :ip-address (last connect-seq)}))))
 
 (defn split-log [file]
-  (map parse-line (re-split #"[\r*\n]+" (slurp file))))
+  (doseq [line (re-split #"[\r*\n]+" (slurp file))]
+    (parse-line line)))
 
 (defn player? [potential-struct]
   (and (contains? potential-struct :num)
