@@ -69,6 +69,7 @@
      ;Old player identified by name with new client ID
      (not (nil? name-id))
      (dosync (alter player-id-map assoc [name client-id] name-id)
+	     (alter client-id-id-map assoc client-id name-id)
 	     name-id)
 
      ;Old player identified by client-id (change name case)

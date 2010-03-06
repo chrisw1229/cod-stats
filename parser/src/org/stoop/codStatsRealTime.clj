@@ -176,7 +176,8 @@ time for this game."
   [player]
   (do
     (update-player player {:team :none})
-    (dosync (alter game-records conj (create-player-update-packet player)))))
+    (dosync (alter game-records conj (create-player-update-packet player)))
+    (associate-client-id-to-ip (:num player) nil)))
 
 ;Update to write to file?
 (defn store-game-record
@@ -252,12 +253,20 @@ time for this game."
        (quit? (parsed-input :entry))
        (process-quit-event (get-in parsed-input [:entry :player]))))))
 
+(def last-ip (ref nil))
+
 (defn process-connect-line
   "Parses the input-line and stores the IP address records if it's a valid line."
   [input-line]
   (let [parsed-input (parse-connect-line input-line)]
     (when parsed-input
-      (associate-client-id-to-ip (:client-id parsed-input) (:ip parsed-input)))))
+      (cond
+       (contains? parsed-input :ip-address)
+       (dosync (ref-set last-ip (:ip-address parsed-input)))
+
+       (contains? parsed-input :client-id)
+       (do (associate-client-id-to-ip (:client-id parsed-input) @last-ip)
+	   (dosync (ref-set last-ip nil)))))))
 
 (defn process-file
   [file line-process-function]

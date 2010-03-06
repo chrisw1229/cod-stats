@@ -221,11 +221,13 @@
     {:time (parse-time (first split-seq)) :entry (line-dispatch (re-split #";" (second split-seq)))}))
 
 (defn parse-connect-line [line]
-  (let [split-seq (re-split #" " (.trim line) 2)]
-    (when (= "Client" (first split-seq))
-      (let [connect-seq (re-split #" " (second split-seq))]
-	{:client-id (Integer/parseInt (first connect-seq))
-	 :ip-address (last connect-seq)}))))
+  (let [split-seq (re-split #" " (.trim line))]
+    (cond 
+     (= "Client" (first split-seq))
+     {:ip-address (last split-seq)}
+
+     (= "Going" (first split-seq))
+     {:client-id (last (drop-last 2 split-seq))})))
 
 (defn split-log [file]
   (doseq [line (re-split #"[\r*\n]+" (slurp file))]
