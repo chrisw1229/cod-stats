@@ -110,21 +110,27 @@ Map.addMarkers = function(markers) {
   }
 
   // Build arrays of all the marker objects to add them in batches
+  // Invert the y-coordinates since we are plotting raw pixels
   var targets = [], deaths = [], kills = [];
   for (var i = 0; i < markers.length; i++) {
     var marker = markers[i];
 
-    // Invert the y-coordinates since we are plotting raw pixels
-    var kp = new OpenLayers.Geometry.Point(marker.kx,
-        Map.options.maxSize - marker.ky);
-    var dp = new OpenLayers.Geometry.Point(marker.dx,
-        Map.options.maxSize - marker.dy);
+    // Create a vector point for the kill marker
+    var kx = (marker.kx ? marker.kx : marker.sx);
+    var ky = (marker.ky ? marker.ky : marker.sy);
+    var kp = new OpenLayers.Geometry.Point(kx, Map.options.maxSize - ky);
+    kills.push(new OpenLayers.Feature.Vector(kp, marker));
 
+    // Create a vector point for the death marker
+    var dx = (marker.dx ? marker.dx : marker.sx);
+    var dy = (marker.dy ? marker.dy : marker.sy);
+    var dp = new OpenLayers.Geometry.Point(dx, Map.options.maxSize - dy);
+    deaths.push(new OpenLayers.Feature.Vector(dp, marker));
+
+    // Create a vector line from the kill to the death marker
     targets.push(new OpenLayers.Feature.Vector(
       new OpenLayers.Geometry.LineString([kp, dp])
     ));
-    deaths.push(new OpenLayers.Feature.Vector(dp));
-    kills.push(new OpenLayers.Feature.Vector(kp));
   }
 
   // Add all the markers to the appropriate layers
@@ -188,20 +194,28 @@ Map._initMarkerLayer = function(type) {
 
   // Configure the style for the layer
   var styleOpts = new OpenLayers.Style({
-    externalGraphic: "styles/images/markers/" + type + "${size}.png",
+    externalGraphic: "styles/images/markers/${type}${size}.png",
     graphicWidth: "${size}", graphicHeight: "${size}"
   }, {
     context: {
+      type: function(m) {
+        if (m.attributes.steam || (type == "kill"
+              && m.attributes.kteam == m.attributes.dteam)) {
+          return "suicide";
+        }
+        return type;
+      },
+
       size: function(m) {
 
         // Use the marker count to select an image size when clustering
         if (m.cluster) {
-          return Math.min(m.attributes.count, 13);
+          return Math.min(m.attributes.count, 13) + 7;
         }
 
         // Use the current zoom level to select an image size otherwise
         var zoom = Map.ol.getZoom();
-        return (2 * zoom + zoom + 8);
+        return (3 * zoom + 8);
       }
     }
   });
