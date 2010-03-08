@@ -1,17 +1,17 @@
 { "type": "log", "data": { "info": "Setting map to mp_uo_carentan" } }
-{ "type": "game", "data": { "map": "mp_uo_carentan", "type": "tdm", "time": 30 } }
+{ "type": "game", "data": { "map": "mp_uo_hurtgen", "type": "tdm", "time": 30 } }
 { "type": "log", "data": { "info": "Displaying 5 sets of map markers" } }
-{ "type": "map", "data": { "kx": 2500, "ky": 1312, "kteam": "g", "dx": 1618, "dy": 1361, "dteam": "a" } }
-{ "type": "map", "data": { "kx": 2498, "ky": 1303, "kteam": "a", "dx": 1602, "dy": 1591, "dteam": "g" } }
-{ "type": "map", "data": { "kx": 2495, "ky": 1296, "kteam": "g", "dx": 1625, "dy": 1876, "dteam": "a" } }
-{ "type": "map", "data": { "kx": 2416, "ky": 2913, "kteam": "a", "dx": 1841, "dy": 2666, "dteam": "g" } }
-{ "type": "map", "data": { "kx": 2660, "ky": 1153, "kteam": "g", "dx": 3199, "dy": 1943, "dteam": "a" } }
+{ "type": "map", "data": { "kx": 2500, "ky": 1312, "kname": "ThePine", "kteam": "g", "dx": 1618, "dy": 1361, "dname": "Turn Left Nower", "dteam": "a" } }
+{ "type": "map", "data": { "kx": 2498, "ky": 1303, "kname": "Scope", "kteam": "a", "dx": 1602, "dy": 1591, "dname": "Tim - Target Drone", "dteam": "g" } }
+{ "type": "map", "data": { "kx": 2495, "ky": 1296, "kname": "A Figment of Your Imagination", "kteam": "g", "dx": 1625, "dy": 1876, "dname": "CHUCKNORRISCOUNTEDTOINFINITY...", "dteam": "a" } }
+{ "type": "map", "data": { "kx": 2416, "ky": 2913, "kname": "Note To Self", "kteam": "a", "dx": 1841, "dy": 2666, "dname": "CDJ Wobbly Wiggly", "dteam": "g" } }
+{ "type": "map", "data": { "kx": 2660, "ky": 1153, "kname": "Jaymz", "kteam": "g", "dx": 3199, "dy": 1943, "dname": "Colonel Billiam", "dteam": "a" } }
 
 { "type": "log", "data": { "info": "Displaying 2 team kill markers" } }
-{ "type": "map", "data": { "kx": 2000, "ky": 1000, "kteam": "a", "dx": 3000, "dy": 2000, "dteam": "a" } }
-{ "type": "map", "data": { "kx": 1000, "ky": 2500, "kteam": "g", "dx": 1000, "dy": 1500, "dteam": "g" } }
+{ "type": "map", "data": { "kx": 2000, "ky": 1000, "kname": "Bazooka John", "kteam": "a", "dx": 3000, "dy": 2000, "dname": "Scope", "dteam": "a" } }
+{ "type": "map", "data": { "kx": 1000, "ky": 2500, "kname": "ThePine", "kteam": "g", "dx": 1000, "dy": 1500, "dname": "A Figment of Your Imagination", "dteam": "g" } }
 
-{ "type": "log", "data": { "info": "Displaying 1 suicide markers" } }
-{ "type": "map", "data": { "sx": 2400, "sy": 2200, "steam": "a" } }
+{ "type": "log", "data": { "info": "Displaying 1 suicide marker" } }
+{ "type": "map", "data": { "sx": 2400, "sy": 2200, "sname": "Bazooka John", "steam": "a" } }
 
 { "type": "log", "data": { "info": "Test complete" } }

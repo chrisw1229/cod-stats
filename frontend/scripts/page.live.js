@@ -27,6 +27,7 @@ $.extend({ mgr: {
 
   // Callback from the server when map markers change
   mapChanged: function(data) {
+    $("#message").message("addMessages", data);
     Map.addMarkers(data);
   }
 
@@ -36,6 +37,7 @@ $.extend({ mgr: {
   $("#nav").navigation();
   $("#ticker").ticker();
   $("#meter").meter();
+  $("#message").message();
   $("#logger").logger();
 
   // Load the map component with an empty map
