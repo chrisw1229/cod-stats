@@ -100,7 +100,7 @@ new stats object for them."
   "Increments kills for attacker and deaths for victim.  Kills is not incremented for self kills.
 Also adds a map packet indicating the location of the kills and player update packets for both the attacker
 and victim to be sent to the frontend."
-  [attacker victim kx ky dx dy x-transformer y-transformer]
+  [attacker victim kx ky dx dy weapon x-transformer y-transformer]
   (let [old-attacker (get-player attacker)
 	old-victim (get-player victim)
         trans-kx (x-transformer kx ky)
@@ -118,13 +118,14 @@ and victim to be sent to the frontend."
     (dosync (alter game-records conj
 		   {:kx trans-kx :ky trans-ky :dx trans-dx :dy trans-dy
 		    :kname (:name attacker) :kteam (:team attacker)
-		    :dname (:name victim) :dteam (:team victim)}
+		    :dname (:name victim) :dteam (:team victim)
+		    :weapon weapon}
 		   (create-player-update-packet attacker)
 		   (create-player-update-packet victim)))))
 
 (defn process-suicide
   "Increments deaths for suicide victim."
-  [victim sx sy x-transformer y-transformer]
+  [victim sx sy weapon x-transformer y-transformer]
   (let [old-victim (get-player victim)
 	trans-sx (x-transformer sx sy)
 	trans-sy (y-transformer sx sy)]
@@ -132,7 +133,9 @@ and victim to be sent to the frontend."
     (update-player victim {:team (:team victim)})
     (update-places player-stats-map)
     (dosync (alter game-records conj
-		   {:sx trans-sx :sy trans-sy :sname (:name victim) :steam (:team victim)}
+		   {:sx trans-sx :sy trans-sy 
+		    :sname (:name victim) :steam (:team victim)
+		    :weapon weapon}
 		   (create-player-update-packet victim)))))
 
 ;Update to archive game-records for whole match stats calculation
@@ -226,6 +229,7 @@ time for this game."
 	  (process-suicide (get-in parsed-input [:entry :victim])
 			   (get-in parsed-input [:entry :victim-loc :x])
 			   (get-in parsed-input [:entry :victim-loc :y])
+			   (get-in parsed-input [:entry :hit-details :weapon])
 			   (get @*transformer* :x)
 			   (get @*transformer* :y))
 
@@ -236,6 +240,7 @@ time for this game."
 			(get-in parsed-input [:entry :attacker-loc :y])
 			(get-in parsed-input [:entry :victim-loc :x])
 			(get-in parsed-input [:entry :victim-loc :y])
+			(get-in parsed-input [:entry :hit-details :weapon])
 			(get @*transformer* :x)
 			(get @*transformer* :y))))
       
