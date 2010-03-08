@@ -30,7 +30,15 @@
 		       "mp_bocage" {:x (make-coord-transformer 1271.94 0.02848 0.2354)
 				    :y (make-coord-transformer 2352.14 0.2367 -0.023267)}
 		       "mp_brecourt" {:x (make-coord-transformer 1801.21 0.447 -0.003862)
-				      :y (make-coord-transformer 1431.46 0.157 -0.4881)}})
+				      :y (make-coord-transformer 1431.46 0.157 -0.4881)}
+		       "mp_cassino" {:x (make-coord-transformer 746.29 0.4168 -0.001304)
+				     :y (make-coord-transformer 1656.26 -0.0009419 -0.4177)}
+		       "mp_chateau" {:x (make-coord-transformer 1640.29 1.0396 -0.008571)
+				     :y (make-coord-transformer 3033.23 -0.005201 -1.0373)}
+		       "mp_neuville" {:x (make-coord-transformer 10673.55 0.6144 0.01809)
+				      :y (make-coord-transformer 4396.89 -0.001637 -0.6379)}
+		       "mp_italy" {:x (make-coord-transformer 2207.56 0.00024116 0.2037)
+				   :y (make-coord-transformer 2018.39 0.1796 0.01177)}})
 
 (defn get-transformer [map-name]
   (get map-transformers map-name {:x (make-coord-transformer 0 1 1)

@@ -180,9 +180,8 @@ time for this game."
   (do
     (update-player player {:team :none})
     (dosync (alter game-records conj (create-player-update-packet player)))
-    (associate-client-id-to-ip (:num player) nil)))
+    (next-ip (:num player))))
 
-;Update to write to file?
 (defn store-game-record
   [game-record]
   (dosync (alter game-archive conj game-record)))

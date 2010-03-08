@@ -13,7 +13,21 @@
 (defn associate-client-id-to-ip
   "Associates an IP address to the client ID passed in."
   [client-id ip-address]
-  (dosync (alter client-id-ip-map assoc client-id ip-address)))
+  (let [ip-addresses (get @client-id-ip-map client-id)]
+    (if (nil? ip-addresses)
+      (dosync (alter client-id-ip-map assoc client-id [ip-address]))
+      (dosync (alter client-id-ip-map assoc client-id (conj ip-addresses ip-address))))))
+
+(defn get-ip
+  "Returns the IP currently associated with client-id.  Returns nil if no IP is associated."
+  [client-id]
+  (first (get @client-id-ip-map client-id)))
+
+(defn next-ip
+  "Cycles to the next IP address associated with client-id."
+  [client-id]
+  (let [ip-addresses (get @client-id-ip-map client-id)]
+    (dosync (alter client-id-ip-map assoc client-id (rest ip-addresses)))))
 
 (defn create-new-player-id
   "Creates a new player ID to associate with name/client-id pair."
@@ -39,7 +53,7 @@
   (let [player-id (get @player-id-map [name client-id])
 	name-id (get @name-id-map name)
 	client-id-id (get @client-id-id-map client-id)
-	ip-address (get @client-id-ip-map client-id)
+	ip-address (get-ip client-id)
 	ip-id (get @ip-id-map ip-address)]
     (cond
      ;Everything matches and is non-nil

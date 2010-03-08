@@ -84,6 +84,9 @@
 		  :start-delay 0
 		  :rate 5
 		  :unit (:seconds unit)})
-      (str "File watching started for " @*log-file-location*))))
+      (str "File watching started for " @*log-file-location*)))
+
+  (GET "/stats/archive"
+    (map #(str % "\n") @game-archive)))
 
 (defservice cod-stats-routes)
