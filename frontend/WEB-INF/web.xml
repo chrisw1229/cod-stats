@@ -43,6 +43,7 @@
       <url-pattern>/live</url-pattern>
       <url-pattern>/start</url-pattern>
 	<url-pattern>/archive</url-pattern>
+	<url-pattern>/photo</url-pattern>
    </servlet-mapping>
 
    <servlet-mapping>

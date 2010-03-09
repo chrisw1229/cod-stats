@@ -1,7 +1,7 @@
 ;web stuff
 (ns org.stoop.codStatsServlet
   (:gen-class :extends javax.servlet.http.HttpServlet)
-  (:use org.stoop.codStatsIo org.stoop.codStatsRealTime org.stoop.schedule
+  (:use org.stoop.codStatsIo org.stoop.codStatsRealTime org.stoop.codIdentity org.stoop.schedule
 	compojure.http clojure.contrib.json.write clojure.contrib.seq-utils))
 
 (def max-map-records 20)
@@ -57,36 +57,43 @@
 
 (defroutes cod-stats-routes
   (GET "/stats/live"
-    (let [ts (parse-integer (params :ts))]
-      (if (<= ts (count @game-records))
-	(json-str (conj (process-records (drop ts @game-records)) {:type "ts" :data (count @game-records)}))
-	(json-str (conj (process-records @game-records) {:type "ts" :data (count @game-records)})))))
+       (let [ts (parse-integer (:ts params))]
+	 (if (<= ts (count @game-records))
+	   (json-str (conj (process-records (drop ts @game-records)) {:type "ts" :data (count @game-records)}))
+	   (json-str (conj (process-records @game-records) {:type "ts" :data (count @game-records)})))))
 	
   (GET "/stats/start"
-    (when (not (nil? (params :log)))
-      (dosync (ref-set *log-file-location* (params :log))))
-    (when (not (nil? (params :conn)))
-      (dosync (ref-set *connect-log-location* (params :conn))))
-    (let [log-reader (tail-f @*log-file-location* 1000 process-input-line)
-	  connect-reader (tail-f @*connect-log-location* 1000 process-connect-line)]
-      ;Start log readers
-      ((connect-reader :start))
-      ((log-reader :start))
-      ;Start trend calculation to repeat once every minute
-      (fixedrate {:name "Trend"
-		  :task #(update-ratios player-stats-map player-id-ratio-map)
-		  :start-delay 0
-		  :rate 1
-		  :unit (:minutes unit)})
-      ;Start event heartbeat for jeep meter once every 5 seconds
-      (fixedrate {:name "Heartbeat"
-		  :task #(heartbeat-game-event (last @game-archive))
-		  :start-delay 0
-		  :rate 5
-		  :unit (:seconds unit)})
-      (str "File watching started for " @*log-file-location*)))
+       (when (not (nil? (:log params)))
+	 (dosync (ref-set *log-file-location* (:log params))))
+       (when (not (nil? (:conn params)))
+	 (dosync (ref-set *connect-log-location* (:conn params))))
+       (let [log-reader (tail-f @*log-file-location* 1000 process-input-line)
+	     connect-reader (tail-f @*connect-log-location* 1000 process-connect-line)]
+	 ;Start log readers
+	 ((:start connect-reader))
+	 ((:start log-reader))
+	 ;Start trend calculation to repeat once every minute
+	 (fixedrate {:name "Trend"
+		     :task #(update-ratios player-stats-map player-id-ratio-map)
+		     :start-delay 0
+		     :rate 1
+		     :unit (:minutes unit)})
+	 ;Start event heartbeat for jeep meter once every 5 seconds
+	 (fixedrate {:name "Heartbeat"
+		     :task #(heartbeat-game-event (last @game-archive))
+		     :start-delay 0
+		     :rate 5
+		     :unit (:seconds unit)})
+	 (str "File watching started for " @*log-file-location*)))
 
   (GET "/stats/archive"
-    (map #(str % "\n") @game-archive)))
+       (map #(str % "\n") @game-archive))
+
+  (GET "/stats/photo"
+       (let [ip-address (:remote-addr request)
+	     photo (:set params)]
+	 (when (not (nil? photo))
+	   (set-photo ip-address photo)
+	   (str "Photo set to " photo " for " ip-address)))))
 
 (defservice cod-stats-routes)

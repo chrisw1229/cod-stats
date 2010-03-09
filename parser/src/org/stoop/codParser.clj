@@ -224,7 +224,7 @@
   (let [split-seq (re-split #" " (.trim line))]
     (cond 
      (= "Client" (first split-seq))
-     {:ip-address (last split-seq)}
+     {:ip-address (first (re-split #":" (last split-seq)))}
 
      (= "Going" (first split-seq))
      {:client-id (last (drop-last 2 split-seq))})))

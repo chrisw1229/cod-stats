@@ -10,6 +10,8 @@
 (def client-id-ip-map (ref {}))
 (def *check-ip* true)
 
+(def ip-photo-map (ref {}))
+
 (defn associate-client-id-to-ip
   "Associates an IP address to the client ID passed in."
   [client-id ip-address]
@@ -99,3 +101,11 @@
 (defn inject-player-id
   [player-struct]
   (assoc player-struct :id (get-player-id (:name player-struct) (:num player-struct))))
+
+(defn set-photo
+  [ip-address photo]
+  (dosync (alter ip-photo-map assoc ip-address photo)))
+
+(defn get-photo
+  [client-id]
+  (get ip-photo-map (get-ip client-id)))
