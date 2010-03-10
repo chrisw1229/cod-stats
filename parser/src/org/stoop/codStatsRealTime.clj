@@ -16,43 +16,57 @@
 
 (defstruct player-stats :name :photo :place :rank :team :kills :deaths :inflicted :received :trend)
 
+(defn create-new-player
+  [player-struct]
+  (let [player-id (get-player-id (:name player-struct) (:num player-struct))
+	new-player (struct player-stats (:name player-struct)
+			   "default.jpg" (count @player-stats-map) 0 "none" 0 0 0 0 "")]
+    (dosync (alter player-stats-map assoc player-id new-player))
+    new-player))
+
 (defn get-player
   "Gets the player's identity using codIdentity and either returns their current stats or creates a
 new stats object for them."
   [player-struct]
   (let [player-id (get-player-id (:name player-struct) (:num player-struct))
 	player (get @player-stats-map player-id)]
-    (if player
+    (if (not (nil? player))
       player
-      (let [new-player (struct player-stats (:name player-struct)
-			       "default.jpg" (count @player-stats-map) 0 "none" 0 0 0 0 "")]
-	(dosync (alter player-stats-map assoc player-id new-player))
-	(do new-player)))))
+      (create-new-player player-struct))))
 
 (defn update-player 
   "Merges new-stats with the player-stats structure currently associated with the player."
   [player new-stats]
   (dosync (alter player-stats-map assoc (get-player-id (:name player) (:num player))
-		 (merge (get-player player) new-stats {:name (:name player)}))))
+		 (merge (get-player player)
+			new-stats
+			{:name (:name player)}
+			{:photo (get-photo (:num player))}))))
 
 (defn create-player-update-packet 
   "Creates a map to represent the player packet to send to the front end."
   [player]
-  (let [player-team (get @*current-teams* (:team player))]
-    (if (nil? player-team)
-      (merge {:id (get-player-id (:name player) (:num player))} (get-player player))
-      (merge {:id (get-player-id (:name player) (:num player))}
-	     (get-player player)
-	     (if (not (nil? player-team))
-	       {:team (str (first player-team))}
-	       {:team ""})))))
+  (let [player-team (get @*current-teams* (:team player))
+	player-stats (get-player player)
+	player-name (:name player-stats)]
+    (merge {:id (get-player-id (:name player) (:num player))}
+	   player-stats
+	   {:name (.replaceAll (re-matcher #"\^\d" player-name) "")}
+	   (if (not (nil? player-team))
+	     {:team (str (first player-team))}
+	     {:team ""}))))
+
+(defn add-game-record
+  [record]
+  (dosync (alter game-records conj record)))
 
 (defn process-damage 
   "Increments the inflicted field for attacker and received field for victim by damage."
   [attacker victim damage]
   (let [old-attacker (get-player attacker)
 	old-victim (get-player victim)]
-    (when (not (= (:team attacker) (:team victim)))
+    (when (and (not (= (:team attacker) (:team victim)))
+	       (not (npc? victim)))
       (update-player attacker (update-in old-attacker [:inflicted] + (int damage))))
     (update-player victim (update-in old-victim [:received] + (int damage)))))
 
@@ -108,20 +122,23 @@ and victim to be sent to the frontend."
 	trans-dx (x-transformer dx dy)
 	trans-dy (y-transformer dx dy)]
     ;Update kills and deaths
-    (update-player attacker (update-in old-attacker [:kills] inc))
+    (when (and (not (npc? attacker))
+	       (not= (:team attacker) (:team victim)))
+      (update-player attacker (update-in old-attacker [:kills] inc)))
     (update-player victim (update-in old-victim [:deaths] inc))
     ;Update team values
     (update-player attacker {:team (:team attacker)})
     (update-player victim {:team (:team victim)})
     ;Update stats and game records
     (update-places player-stats-map)
-    (dosync (alter game-records conj
-		   {:kx trans-kx :ky trans-ky :dx trans-dx :dy trans-dy
-		    :kname (:name attacker) :kteam (:team attacker)
-		    :dname (:name victim) :dteam (:team victim)
-		    :weapon weapon}
-		   (create-player-update-packet attacker)
-		   (create-player-update-packet victim)))))
+    ;Add game records
+    (add-game-record {:kx trans-kx :ky trans-ky :dx trans-dx :dy trans-dy
+		      :kname (:name attacker) :kteam (:team attacker)
+		      :dname (:name victim) :dteam (:team victim)
+		      :weapon weapon})
+    (when (not (npc? attacker))
+      (add-game-record (create-player-update-packet attacker)))
+    (add-game-record (create-player-update-packet victim))))
 
 (defn process-suicide
   "Increments deaths for suicide victim."
@@ -132,11 +149,10 @@ and victim to be sent to the frontend."
     (update-player victim (update-in old-victim [:deaths] inc))
     (update-player victim {:team (:team victim)})
     (update-places player-stats-map)
-    (dosync (alter game-records conj
-		   {:sx trans-sx :sy trans-sy 
-		    :sname (:name victim) :steam (:team victim)
-		    :weapon weapon}
-		   (create-player-update-packet victim)))))
+    (add-game-record {:sx trans-sx :sy trans-sy 
+		      :sname (:name victim) :steam (:team victim)
+		      :weapon weapon})
+    (add-game-record (create-player-update-packet victim))))
 
 ;Update to archive game-records for whole match stats calculation
 (defn process-start-game 
@@ -155,9 +171,9 @@ time for this game."
   "Adds an event packet to the data to be sent to the frontend."
   [team time-stamp]
   (if (= team :none)
-    (dosync (alter game-records conj {:time (- time-stamp @*start-time*)}))
-    (dosync (alter game-records conj {:team (str (first (get @*current-teams* (keyword team))))
-				      :time (- time-stamp @*start-time*)}))))
+    (add-game-record {:time (- time-stamp @*start-time*)})
+    (add-game-record {:team (str (first (get @*current-teams* (keyword team))))
+		      :time (- time-stamp @*start-time*)})))
 
 (defn heartbeat-game-event
   "Takes a log-entry, extracts the time stamp and generates a game event with team of none and the time stamp."
@@ -169,7 +185,7 @@ time for this game."
   [player]
   (do
     (update-player player {:team :spectator})
-    (dosync (alter game-records conj (create-player-update-packet player)))))
+    (add-game-record (create-player-update-packet player))))
 
 (defn process-rank-event
   [player new-rank]
@@ -179,7 +195,7 @@ time for this game."
   [player]
   (do
     (update-player player {:team :none})
-    (dosync (alter game-records conj (create-player-update-packet player)))
+    (add-game-record (create-player-update-packet player))
     (next-ip (:num player))))
 
 (defn store-game-record
@@ -232,7 +248,8 @@ time for this game."
 			   (get @*transformer* :x)
 			   (get @*transformer* :y))
 
-	  (kill? (parsed-input :entry))
+	  (and (kill? (parsed-input :entry))
+	       (not (npc? (get-in parsed-input [:entry :victim]))))
 	  (process-kill (get-in parsed-input [:entry :attacker])
 			(get-in parsed-input [:entry :victim])
 			(get-in parsed-input [:entry :attacker-loc :x])

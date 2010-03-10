@@ -239,6 +239,10 @@
        (contains? potential-struct :team)
        (contains? potential-struct :name)))
 
+(defn npc? [potential-struct]
+  (and (player? potential-struct)
+       (= "-1" (:num potential-struct))))
+
 (defn hit-info? [potential-struct]
   (and (contains? potential-struct :weapon)
        (contains? potential-struct :damage)

@@ -108,4 +108,4 @@
 
 (defn get-photo
   [client-id]
-  (get ip-photo-map (get-ip client-id)))
+  (get @ip-photo-map (get-ip client-id)))
