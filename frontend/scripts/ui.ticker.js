@@ -71,7 +71,7 @@ $.widget("ui.ticker", {
     if (this.running) {
 
       // Cleanup the animation timers
-      clearInterval(this.running);
+      clearTimeout(this.running);
       this.running = undefined;
       clearInterval(this.sliding);
       this.sliding = undefined;
