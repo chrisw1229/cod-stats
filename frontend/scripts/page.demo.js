@@ -72,6 +72,7 @@ $.extend({ mgr: {
   // Callback from the server when the game changes
   gameChanged: function(data) {
     $("#meter").meter("reset", data.time);
+    $("#message").message("clear");
     Map.clearMarkers();
     Map.setTiles(data.map);
   },

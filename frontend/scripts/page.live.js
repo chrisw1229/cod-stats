@@ -11,6 +11,7 @@ $.extend({ mgr: {
   gameChanged: function(data) {
     $("#ticker").ticker("clear");
     $("#meter").meter("reset", data.time);
+    $("#message").message("clear");
     Map.clearMarkers();
     Map.setTiles(data.map);
   },

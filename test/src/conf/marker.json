@@ -1,5 +1,5 @@
 { "type": "log", "data": { "info": "Setting map to mp_uo_carentan" } }
-{ "type": "game", "data": { "map": "mp_uo_hurtgen", "type": "tdm", "time": 30 } }
+{ "type": "game", "data": { "map": "mp_uo_carentan", "type": "tdm", "time": 30 } }
 { "type": "log", "data": { "info": "Displaying 5 sets of map markers" } }
 { "type": "map", "data": { "kx": 2500, "ky": 1312, "kname": "ThePine", "kteam": "g", "dx": 1618, "dy": 1361, "dname": "Turn Left Nower", "dteam": "a" } }
 { "type": "map", "data": { "kx": 2498, "ky": 1303, "kname": "Scope", "kteam": "a", "dx": 1602, "dy": 1591, "dname": "Tim - Target Drone", "dteam": "g" } }
@@ -13,5 +13,9 @@
 
 { "type": "log", "data": { "info": "Displaying 1 suicide marker" } }
 { "type": "map", "data": { "sx": 2400, "sy": 2200, "sname": "Bazooka John", "steam": "a" } }
+
+
+{ "type": "log", "data": { "info": "Resetting game" } }
+{ "type": "game", "data": { "map": "mp_uo_carentan", "type": "tdm", "time": 30 } }
 
 { "type": "log", "data": { "info": "Test complete" } }

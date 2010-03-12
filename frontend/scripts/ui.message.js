@@ -46,6 +46,14 @@ $.widget("ui.message", {
     }
   },
 
+  clear: function() {
+    this.messages = [];
+    var self = this;
+    this.listDiv.children().each(function() {
+      self._unloadItem(this);
+    });
+  },
+
   _createItem: function(index) {
     var itemDiv = $('<li class="ui-message-item"/>');
 
@@ -80,6 +88,11 @@ $.widget("ui.message", {
 
     var iconDiv = $(".ui-message-icon", itemDiv);
     iconDiv.text(name2.length > 0 ? "->" : "");
+  },
+
+  _unloadItem: function(itemDiv) {
+    $(".ui-message-name", itemDiv).text("");
+    $(".ui-message-icon", itemDiv).text("");
   }
 
 });
