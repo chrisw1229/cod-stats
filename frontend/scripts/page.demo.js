@@ -31,18 +31,18 @@ $.extend({ mgr: {
       packets.push({ type: "player", data: $.mgr.players });
     }
 
-    if (ts == 0 || ts % 60 == 0) {
-      packets.push({ type: "game", data: { map: "mp_uo_carentan", type: "tdm", time: 30 } });
-    } else if (ts % 30 == 0) {
-      packets.push({ type: "game", data: { map: "mp_peaks", type: "tdm", time: 30 } });
+    if (ts == 0 || ts % 120 == 0) {
+      packets.push({ type: "game", data: { map: "mp_uo_carentan", type: "tdm", time: 60 } });
+    } else if (ts % 60 == 0) {
+      packets.push({ type: "game", data: { map: "mp_peaks", type: "tdm", time: 60 } });
     } else {
       packets.push({ type: "map", data: $.mgr.randMarkers(1) });
     }
 
-    if (ts == 0 || ts % 30 == 0) {
+    if (ts == 0 || ts % 60 == 0) {
       packets.push({ type: "event", data: { time: 0 } });
     } else {
-      var data = { time: (ts % 30) };
+      var data = { time: (ts % 60) };
       if (Math.floor(Math.random() * 100) > 80) {
         data.team = $.mgr.teams.charAt(Math.floor(Math.random() * 4));
       }

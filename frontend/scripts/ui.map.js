@@ -115,6 +115,9 @@ Map.addMarkers = function(markers) {
   for (var i = 0; i < markers.length; i++) {
     var marker = markers[i];
 
+    // Set the fade out stamp for the marker
+    marker.fadeCount = Map.fadeCount;
+
     // Create a vector point for the kill marker
     var kx = (marker.kx ? marker.kx : marker.sx);
     var ky = (marker.ky ? marker.ky : marker.sy);
@@ -128,9 +131,8 @@ Map.addMarkers = function(markers) {
     deaths.push(new OpenLayers.Feature.Vector(dp, marker));
 
     // Create a vector line from the kill to the death marker
-    targets.push(new OpenLayers.Feature.Vector(
-      new OpenLayers.Geometry.LineString([kp, dp])
-    ));
+    var tl = new OpenLayers.Geometry.LineString([kp, dp]);
+    targets.push(new OpenLayers.Feature.Vector(tl, marker));
   }
 
   // Add all the markers to the appropriate layers
@@ -174,7 +176,32 @@ Map._initTargetLayer = function() {
 
   // Configure the style for the layer
   var styleOpts = new OpenLayers.Style({
-    strokeColor: "#ffb709", strokeWidth: 1
+    strokeColor: "${color}", strokeWidth: "${width}", strokeOpacity: "${opacity}"
+  }, {
+    context: {
+      color: function(m) {
+        var team = m.attributes.kteam;
+        if (team == "g") {
+          return "#ABABAB";
+        } else if (team == "a") {
+          return "#64C461";
+        } else if (team == "r") {
+          return "#B4433F";
+        } else if (team == "b") {
+          return "#46489B";
+        }
+        return "#FFB709";
+      },
+
+      width: function(m) {
+        return Map.ol.getZoom() + 1;
+      },
+
+      opacity: function(m) {
+        var diff = Map.fadeCount - m.attributes.fadeCount;
+        return (diff < 3 ? 1 - (diff * 0.2) : 0.4);
+      }
+    }
   });
 
   // Configure the target layer
@@ -195,7 +222,7 @@ Map._initMarkerLayer = function(type) {
   // Configure the style for the layer
   var styleOpts = new OpenLayers.Style({
     externalGraphic: "styles/images/markers/${type}${size}.png",
-    graphicWidth: "${size}", graphicHeight: "${size}"
+    graphicWidth: "${size}", graphicHeight: "${size}", graphicOpacity: "${opacity}"
   }, {
     context: {
       type: function(m) {
@@ -216,6 +243,11 @@ Map._initMarkerLayer = function(type) {
         // Use the current zoom level to select an image size otherwise
         var zoom = Map.ol.getZoom();
         return (3 * zoom + 8);
+      },
+
+      opacity: function(m) {
+        var diff = Map.fadeCount - m.attributes.fadeCount;
+        return (diff < 3 ? 1 - (diff * 0.2) : 0.4);
       }
     }
   });
@@ -290,6 +322,21 @@ Map._enabled = function(enabled) {
       Map.ol.setCenter(new OpenLayers.LonLat(lon, lat), Map.options.zoom);
     } else {
       $(".olMap").removeClass("enabled");
+    }
+
+    // Enable/disable the timer used to fade out old markers
+    if (enabled && Map.running == undefined) {
+      Map.fadeCount = 0;
+      Map.running = setInterval(function() {
+        Map.fadeCount++;
+        Map.targetLayer.redraw();
+        Map.killLayer.redraw();
+        Map.deathLayer.redraw();
+      }, 10000);
+    } else if (!enabled && Map.running) {
+      clearInterval(Map.running);
+      Map.fadeCount = 0;
+      Map.running = undefined;
     }
   }
 };
