@@ -107,8 +107,9 @@ $.widget("ui.meter", {
     }
 
     // Update the time remaining tool tip
-    var mins = this.value >= 60 ? (this.value / 60) : 0;
-    var secs = (this.value % 60);
+    var remaining = this.max - this.value;
+    var mins = remaining >= 60 ? Math.round(remaining / 60) : 0;
+    var secs = Math.round(remaining % 60);
     var time = mins + ":" + (secs < 10 ? "0" : "") + secs;
     this.barDiv.attr("title", "Time Remaining: " + time);
   },
