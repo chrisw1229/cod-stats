@@ -82,7 +82,7 @@ $.widget("ui.message", {
     }
 
     $('<span class="ui-message-name"/>').appendTo(itemDiv);
-    $('<span class="ui-message-icon"/>').appendTo(itemDiv);
+    $('<span class="ui-message-symbol"/>').appendTo(itemDiv);
     $('<span class="ui-message-name"/>').appendTo(itemDiv);
     return itemDiv;
   },
@@ -95,24 +95,24 @@ $.widget("ui.message", {
     var name2Div = nameDivs.eq(1);
 
     // Update the name 1 display
-    var name1 = (item.sname ? item.sname : item.kname);
+    var name1 = (item.sname ? "" : item.kname);
     name1Div.text(name1);
 
     // Update the name 1 team color
-    var team1 = (item.steam ? item.steam : item.kteam);
+    var team1 = (item.steam ? "" : item.kteam);
     name1Div.attr("class", "ui-message-name ui-message-team-" + team1);
 
+    // Update the kill type symbol
+    var symbolDiv = $(".ui-message-symbol", itemDiv);
+    symbolDiv.html(name1.length > 0 ? "&#9658;" : "&#9650;");
+
     // Update the name 2 display
-    var name2 = (item.sname ? "" : item.dname);
+    var name2 = (item.sname ? item.sname : item.dname);
     name2Div.text(name2);
 
     // Update the name 2 team color
-    var team2 = (item.steam ? "" : item.dteam);
+    var team2 = (item.steam ? item.steam : item.dteam);
     name2Div.attr("class", "ui-message-name ui-message-team-" + team2);
-
-    // Update the kill type symbol
-    var iconDiv = $(".ui-message-icon", itemDiv);
-    iconDiv.text(name2.length > 0 ? "->" : "");
 
     // Store the mapping for future use
     item.div = itemDiv;
@@ -121,7 +121,7 @@ $.widget("ui.message", {
   _unloadItem: function(item) {
     if (item.div) {
       $(".ui-message-name", item.div).text("");
-      $(".ui-message-icon", item.div).text("");
+      $(".ui-message-symbol", item.div).text("");
       item.div = undefined;
     }
   },
