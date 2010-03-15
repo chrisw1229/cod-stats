@@ -263,6 +263,10 @@
 (defn suicide? [dk-struct]
   (and (kill? dk-struct)
        (self-damage? dk-struct)))
+(defn world-kill? [dk-struct]
+  (and (kill? dk-struct)
+       (npc? (:attacker dk-struct))
+       (not (npc? (:victim dk-struct)))))
 
 (defn talk? [potential-struct]
   (and (contains? potential-struct :player)

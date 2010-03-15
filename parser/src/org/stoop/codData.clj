@@ -38,7 +38,21 @@
 		       "mp_neuville" {:x (make-coord-transformer 10673.55 0.6144 0.01809)
 				      :y (make-coord-transformer 4396.89 -0.001637 -0.6379)}
 		       "mp_italy" {:x (make-coord-transformer 2207.56 0.00024116 0.2037)
-				   :y (make-coord-transformer 2018.39 0.1796 0.01177)}})
+				   :y (make-coord-transformer 2018.39 0.1796 0.01177)}
+		       "mp_uo_depot" {:x (make-coord-transformer 2006.08 -0.00362 0.57603)
+				      :y (make-coord-transformer 2752.87 0.5688 0.004178)}
+		       "mp_streets" {:x (make-coord-transformer -671.16 0.003213 -0.4655)
+				     :y (make-coord-transformer 2809.23 -0.4742 0.001135)}
+		       "enclave" {:x (make-coord-transformer 1909.75 -0.3634 -0.002011)
+				  :y (make-coord-transformer 2505.98 -0.001483 0.3604)}
+		       "jeeparena" {:x (make-coord-transformer 2146.47 -0.002134 -0.2482)
+				    :y (make-coord-transformer 1969.07 -0.2472 0.002444)}
+		       "mp_pavlov" {:x (make-coord-transformer 7308.46 -0.001906 -0.5576)
+				    :y (make-coord-transformer -2982.32 -0.5549 -0.002028)}
+		       "mp_ponyri" {:x (make-coord-transformer 1399.05 -0.00007585 -0.1922)
+				    :y (make-coord-transformer 2559.21 -0.1919 0.003295)}
+		       "mp_railyard" {:x (make-coord-transformer 1564.88 0.01408 0.523)
+				      :y (make-coord-transformer 2697.46 0.5087 0.001226)}})
 
 (defn get-transformer [map-name]
   (get map-transformers map-name {:x (make-coord-transformer 0 1 1)
@@ -158,7 +172,7 @@
 		      "mg30cal_mp"
 		      "mk1britishfrag_mp"])
 (defn is-british? [weapon-name]
-  (includes? british-weapons  weapon-name))
+  (includes? british-weapons weapon-name))
 
 (def german-weapons ["kar98k_mp" 
 		     "mp40_mp" 
@@ -169,7 +183,7 @@
 		     "mg34_mp" 
 		     "stielhandgranate_mp"])
 (defn is-german? [weapon-name]
-  (includes? german-weapons  weapon-name))
+  (includes? german-weapons weapon-name))
 
 (defn is-jeep-crush? [weapon-name]
   (includes? ["jeepcrush_mp"] weapon-name))

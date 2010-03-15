@@ -43,18 +43,21 @@ new stats object for them."
 			{:name (:name player)}
 			{:photo (get-photo (:num player))}))))
 
+(defn get-team-code
+  "Gets the first letter as a string of the nationality of the current allied or axis team."
+  [team]
+  (let [player-team (get @*current-teams* team)]
+    (str (first player-team))))
+
 (defn create-player-update-packet 
   "Creates a map to represent the player packet to send to the front end."
   [player]
-  (let [player-team (get @*current-teams* (:team player))
-	player-stats (get-player player)
+  (let [player-stats (get-player player)
 	player-name (:name player-stats)]
     (merge {:id (get-player-id (:name player) (:num player))}
 	   player-stats
 	   {:name (.replaceAll (re-matcher #"\^\d" player-name) "")}
-	   (if (not (nil? player-team))
-	     {:team (str (first player-team))}
-	     {:team ""}))))
+	   {:team (get-team-code (:team player))})))
 
 (defn add-game-record
   [record]
@@ -65,21 +68,28 @@ new stats object for them."
   [attacker victim damage]
   (let [old-attacker (get-player attacker)
 	old-victim (get-player victim)]
-    (when (and (not (= (:team attacker) (:team victim)))
-	       (not (npc? victim)))
+    (when (not (= (:team attacker) (:team victim)))
       (update-player attacker (update-in old-attacker [:inflicted] + (int damage))))
     (update-player victim (update-in old-victim [:received] + (int damage)))))
+
+(defn active-player?
+  [stats-entry]
+  (includes? [:allies :axis :spectator] (:team stats-entry)))
+
+(defn get-indexed-players
+  [stats-map]
+  (let [filtered-map (filter #(active-player? (val %)) stats-map)]
+    (indexed (reverse (sort-by #(:kills (val %)) filtered-map)))))
 
 (defn update-places 
   "Recalculates the places for all players based upon current number of kills and sets them in map-ref."
   [map-ref]
-  (let [sorted-list (indexed (reverse (sort-by #(:kills (val %)) @map-ref)))]
-    (dorun
-     (for [player-entry sorted-list]
-       (let [player-place (first player-entry)
-	     player-id (first (second player-entry))
-	     old-player (get @map-ref player-id)]
-	 (dosync (alter map-ref assoc player-id (assoc old-player :place (inc player-place)))))))))
+  (let [sorted-list (get-indexed-players @map-ref)]
+    (doseq [player-entry sorted-list]
+      (let [player-place (first player-entry)
+	    player-id (first (second player-entry))
+	    old-player (get @map-ref player-id)]
+	(dosync (alter map-ref assoc player-id (assoc old-player :place (inc player-place))))))))
 
 (defn calculate-ratio
   "Calculates the ratio of kills over deaths in a player struct"
@@ -120,12 +130,9 @@ and victim to be sent to the frontend."
         trans-kx (x-transformer kx ky)
 	trans-ky (y-transformer kx ky)
 	trans-dx (x-transformer dx dy)
-	trans-dy (y-transformer dx dy)
-	attacker-team (get @*current-teams* (:team attacker))
-	victim-team (get @*current-teams* (:team victim))]
+	trans-dy (y-transformer dx dy)]
     ;Update kills and deaths
-    (when (and (not (npc? attacker))
-	       (not= (:team attacker) (:team victim)))
+    (when (not= (:team attacker) (:team victim))
       (update-player attacker (update-in old-attacker [:kills] inc)))
     (update-player victim (update-in old-victim [:deaths] inc))
     ;Update team values
@@ -135,8 +142,8 @@ and victim to be sent to the frontend."
     (update-places player-stats-map)
     ;Add game records
     (add-game-record {:kx trans-kx :ky trans-ky :dx trans-dx :dy trans-dy
-		      :kname (:name attacker) :kteam (str (first attacker-team))
-		      :dname (:name victim) :dteam (str (first victim-team))
+		      :kname (:name attacker) :kteam (get-team-code (:team attacker))
+		      :dname (:name victim) :dteam (get-team-code (:team victim))
 		      :weapon weapon})
     (when (not (npc? attacker))
       (add-game-record (create-player-update-packet attacker)))
@@ -147,13 +154,12 @@ and victim to be sent to the frontend."
   [victim sx sy weapon x-transformer y-transformer]
   (let [old-victim (get-player victim)
 	trans-sx (x-transformer sx sy)
-	trans-sy (y-transformer sx sy)
-	suicide-team (get @*current-teams* (:team victim))]
+	trans-sy (y-transformer sx sy)]
     (update-player victim (update-in old-victim [:deaths] inc))
     (update-player victim {:team (:team victim)})
     (update-places player-stats-map)
     (add-game-record {:sx trans-sx :sy trans-sy 
-		      :sname (:name victim) :steam (str (first suicide-team))
+		      :sname (:name victim) :steam (get-team-code (:team victim))
 		      :weapon weapon})
     (add-game-record (create-player-update-packet victim))))
 
@@ -198,6 +204,7 @@ time for this game."
   [player]
   (do
     (update-player player {:team :none})
+    (update-places player-stats-map)
     (add-game-record (create-player-update-packet player))
     (next-ip (:num player))))
 
@@ -239,11 +246,14 @@ time for this game."
 
        (damage-kill? (parsed-input :entry))
        (do
+	 (when (and (not (npc? (get-in parsed-input [:entry :attacker])))
+		    (not (npc? (get-in parsed-input [:entry :victim])))))
 	 (process-damage (get-in parsed-input [:entry :attacker])
 			 (get-in parsed-input [:entry :victim])
 			 (get-in parsed-input [:entry :hit-details :damage]))
 	 (cond
-	  (suicide? (parsed-input :entry))
+	  (or (suicide? (parsed-input :entry))
+	      (world-kill? (parsed-input :entry)))
 	  (process-suicide (get-in parsed-input [:entry :victim])
 			   (get-in parsed-input [:entry :victim-loc :x])
 			   (get-in parsed-input [:entry :victim-loc :y])

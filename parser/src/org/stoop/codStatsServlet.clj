@@ -2,7 +2,8 @@
 (ns org.stoop.codStatsServlet
   (:gen-class :extends javax.servlet.http.HttpServlet)
   (:use org.stoop.codStatsIo org.stoop.codStatsRealTime org.stoop.codIdentity org.stoop.schedule
-	compojure.http clojure.contrib.json.write clojure.contrib.seq-utils))
+	org.danlarkin.json
+	compojure.http clojure.contrib.seq-utils))
 
 (def max-map-records 20)
 
@@ -24,22 +25,30 @@
        (contains? record :type)
        (contains? record :time)))
 
-(defn event-record? [record]
-  (or 
-   (and (contains? record :team)
-	(contains? record :time))
-   (and (contains? record :time)
-	(= 1 (count record)))))
+(defn event-record? [record] 
+  (and (contains? record :team)
+       (contains? record :time)))
+
+(defn heartbeat-event? [record]
+  (and (contains? record :time)
+	(= 1 (count record))))
 
 (defn player-record? [record]
   (and (contains? record :name)
        (contains? record :team)))
 
+(defn unique-player-records
+  [records]
+  (let [ids (set (for [player records] (:id player)))]
+    (for [id ids]
+      (last (filter #(= id (:id %)) records)))))
+
 (defn process-records [records]
   (let [map-records (filter map-record? records)
 	game-records (filter game-record? records)
 	event-records (filter event-record? records)
-	player-records (filter player-record? records)]
+	heartbeats (filter heartbeat-event? records)
+	player-records (unique-player-records (filter player-record? records))]
     (flatten (filter #(not (nil? %)) [(when (> (count game-records) 0)
 					{:type "game" :data (last game-records)})
 				      
@@ -50,6 +59,9 @@
 				      (when (> (count event-records) 0)
 					(for [record event-records]
 					  {:type "event" :data record}))
+
+				      (when (> (count heartbeats) 0)
+					{:type "event" :data (last heartbeats)})
 				      
 				      (when (> (count player-records) 0)
 					(for [record player-records]
@@ -59,8 +71,10 @@
   (GET "/stats/live"
        (let [ts (parse-integer (:ts params))]
 	 (if (<= ts (count @game-records))
-	   (json-str (conj (process-records (drop ts @game-records)) {:type "ts" :data (count @game-records)}))
-	   (json-str (conj (process-records @game-records) {:type "ts" :data (count @game-records)})))))
+	   (encode-to-str (conj (process-records (drop ts @game-records)) 
+				{:type "ts" :data (count @game-records)}))
+	   (encode-to-str (conj (process-records @game-records) 
+				{:type "ts" :data (count @game-records)})))))
 	
   (GET "/stats/start"
        (when (not (nil? (:log params)))
