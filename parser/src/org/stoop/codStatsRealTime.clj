@@ -120,7 +120,9 @@ and victim to be sent to the frontend."
         trans-kx (x-transformer kx ky)
 	trans-ky (y-transformer kx ky)
 	trans-dx (x-transformer dx dy)
-	trans-dy (y-transformer dx dy)]
+	trans-dy (y-transformer dx dy)
+	attacker-team (get @*current-teams* (:team attacker))
+	victim-team (get @*current-teams* (:team victim))]
     ;Update kills and deaths
     (when (and (not (npc? attacker))
 	       (not= (:team attacker) (:team victim)))
@@ -133,8 +135,8 @@ and victim to be sent to the frontend."
     (update-places player-stats-map)
     ;Add game records
     (add-game-record {:kx trans-kx :ky trans-ky :dx trans-dx :dy trans-dy
-		      :kname (:name attacker) :kteam (:team attacker)
-		      :dname (:name victim) :dteam (:team victim)
+		      :kname (:name attacker) :kteam (str (first attacker-team))
+		      :dname (:name victim) :dteam (str (first victim-team))
 		      :weapon weapon})
     (when (not (npc? attacker))
       (add-game-record (create-player-update-packet attacker)))
@@ -145,12 +147,13 @@ and victim to be sent to the frontend."
   [victim sx sy weapon x-transformer y-transformer]
   (let [old-victim (get-player victim)
 	trans-sx (x-transformer sx sy)
-	trans-sy (y-transformer sx sy)]
+	trans-sy (y-transformer sx sy)
+	suicide-team (get @*current-teams* (:team victim))]
     (update-player victim (update-in old-victim [:deaths] inc))
     (update-player victim {:team (:team victim)})
     (update-places player-stats-map)
     (add-game-record {:sx trans-sx :sy trans-sy 
-		      :sname (:name victim) :steam (:team victim)
+		      :sname (:name victim) :steam (str (first suicide-team))
 		      :weapon weapon})
     (add-game-record (create-player-update-packet victim))))
 
