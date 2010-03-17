@@ -199,13 +199,13 @@
 (defn line-dispatch [str-seq]
   (let [first-entry (first str-seq)]
     (cond
-      (= "Shell" first-entry) (first (get-shell-shock str-seq))
+      (= "Shock" first-entry) (first (get-shell-shock str-seq))
       (= "Spec" first-entry) (first (get-spectator str-seq))
       (= "Spawn" first-entry) (first (get-spawn str-seq))
       (or (= "K" first-entry) (= "D" first-entry)) (first (get-dk str-seq))
       (= "Use" first-entry) (first (get-use-vehicle str-seq))
       (or (= "say" first-entry) (= "sayteam" first-entry)) (first (get-talk str-seq))
-      (or (= "Weapon" first-entry) (= "Use" first-entry)) (first (get-pickup str-seq))
+      (or (= "Weapon" first-entry) (= "Item" first-entry)) (first (get-pickup str-seq))
       (or (= "J" first-entry) (= "Q" first-entry)) (first (get-connection str-seq))
       (or (= "W" first-entry) (= "L" first-entry)) (first (get-win-loss str-seq))
       (= "Game" first-entry) (first (get-game-start str-seq))
@@ -263,10 +263,24 @@
 (defn suicide? [dk-struct]
   (and (kill? dk-struct)
        (self-damage? dk-struct)))
+(defn world-damage? [dk-struct]
+  (and (npc? (:attacker dk-struct))
+       (not (npc? (:victim dk-struct)))))
 (defn world-kill? [dk-struct]
   (and (kill? dk-struct)
-       (npc? (:attacker dk-struct))
+       (world-damage? dk-struct)))
+(defn hurt-world? [dk-struct]
+  (and (not (npc? (:attacker dk-struct)))
+       (npc? (:victim dk-struct))))
+(defn non-npc? [dk-struct]
+  (and (not (npc? (:attacker dk-struct)))
        (not (npc? (:victim dk-struct)))))
+(defn clean-damage? [dk-struct]
+  (and (not (team-damage? dk-struct))
+       (non-npc? dk-struct)))
+(defn clean-kill? [dk-struct]
+  (and (kill? dk-struct)
+       (clean-damage? dk-struct)))
 
 (defn talk? [potential-struct]
   (and (contains? potential-struct :player)
@@ -276,6 +290,12 @@
   (and (contains? potential-struct :player)
        (contains? potential-struct :type)
        (contains? potential-struct :item)))
+(defn item-pickup? [potential-struct]
+  (and (pickup? potential-struct)
+       (= :item (:type potential-struct))))
+(defn weapon-pickup? [potential-struct]
+  (and (pickup? potential-struct)
+       (= :weapon (:type potential-struct))))
 
 (defn connection? [potential-struct]
   (and (contains? potential-struct :player)
@@ -311,3 +331,7 @@
 (defn rank? [potential-struct]
   (and (contains? potential-struct :player)
        (contains? potential-struct :rank)))
+
+(defn shell-shock? [potential-struct]
+  (and (contains? potential-struct :shock)
+       (contains? potential-struct :shock-info)))

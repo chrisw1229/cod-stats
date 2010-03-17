@@ -44,38 +44,40 @@
   (reduce + (doall (map #(get-in % nested-keys) log-seq))))
 
 (defn get-total-damage-dealt [dk-seq player-id]
-  (let [dk-good-recs (get-log-type dk-seq #(not (team-damage? %)))
+  (let [dk-good-recs (get-log-type dk-seq clean-damage?)
 	player-dks (select-pid-from-seq dk-good-recs :attacker player-id)
 	player-name (get-in (last player-dks) [:entry :attacker :name])]
     {:player player-name :value (sum-over player-dks [:entry :hit-details :damage])}))
 
 (defn get-total-damage-received [dk-seq player-id]
-  (let [dk-good-recs (get-log-type dk-seq #(not (team-damage? %)))
+  (let [dk-good-recs (get-log-type dk-seq clean-damage?)
 	player-dks (select-pid-from-seq dk-good-recs :victim player-id)
 	player-name (get-in (last player-dks) [:entry :victim :name])]
     {:name player-name :value (sum-over player-dks [:entry :hit-details :damage])}))
 
 (defn get-total-team-damage-dealt [dk-seq player-id]
-  (let [dk-team-recs (get-log-type dk-seq team-damage?)
+  (let [dk-player-recs (get-log-type dk-seq non-npc?)
+	dk-team-recs (get-log-type dk-player-recs team-damage?)
 	player-td (select-pid-from-seq dk-team-recs :attacker player-id)
 	player-name (get-in (last player-td) [:entry :attacker :name])]
     {:name player-name :value (sum-over player-td [:entry :hit-details :damage])}))
 
 (defn get-total-team-damage-received [dk-seq player-id]
-  (let [dk-team-recs (get-log-type dk-seq team-damage?)
+  (let [dk-player-recs (get-log-type dk-seq non-npc?)
+	dk-team-recs (get-log-type dk-player-recs team-damage?)
 	player-td (select-pid-from-seq dk-team-recs :victim player-id)
 	player-name (get-in (last player-td) [:entry :victim :name])]
     {:name player-name :value (sum-over player-td [:entry :hit-details :damage])}))
 
 (defn get-num-kills [dk-seq player-id]
-  (let [dk-good-recs (get-log-type dk-seq #(not (team-damage? %)))
-	k-good-recs (get-log-type dk-good-recs kill?)
+  (let [k-good-recs (get-log-type dk-seq clean-kill?)
 	player-ks (select-pid-from-seq k-good-recs :attacker player-id)
 	player-name (get-in (last player-ks) [:entry :attacker :name])]
     {:name player-name :value (count player-ks)}))
 
 (defn get-num-team-kills [dk-seq player-id]
-  (let [dk-team-recs (get-log-type dk-seq team-damage?)
+  (let [dk-player-recs (get-log-type dk-seq non-npc?)
+	dk-team-recs (get-log-type dk-player-recs team-damage?)
 	tk-recs (get-log-type dk-team-recs kill?)
 	player-tks (select-pid-from-seq tk-recs :attacker player-id)
 	player-name (get-in (last player-tks) [:entry :attacker :name])]
@@ -105,10 +107,36 @@
 	player-name (get-in (last player-falls) [:entry :victim :name])]
     {:name player-name :value (sum-over player-falls [:entry :hit-details :damage])}))
 
+(defn get-total-damage-to-world [dk-seq player-id]
+  (let [world-recs (get-log-type dk-seq hurt-world?)
+	player-dam (select-pid-from-seq world-recs :attacker player-id)
+	player-name (get-in (last player-dam) [:entry :attacker :name])]
+    {:name player-name :value (sum-over player-dam [:entry :hit-details :damage])}))
+
+(defn get-total-damage-from-world [dk-seq player-id]
+  (let [world-recs (get-log-type dk-seq world-damage?)
+	player-dam (select-pid-from-seq world-recs :victim player-id)
+	player-name (get-in (last player-dam) [:entry :victim :name])]
+    {:name player-name :value (sum-over player-dam [:entry :hit-details :damage])}))
+
+(defn get-total-self-fire-damage [dk-seq player-id]
+  (let [fire-recs (select-damage-type dk-seq "MOD_FLAME")]
+    (get-total-self-damage fire-recs player-id)))
+
 (defn get-num-talks [chat-recs player-id]
   (let [player-talks (select-pid-from-seq chat-recs :player player-id)
 	player-name (get-in (last player-talks) [:entry :player :name])]
     {:name player-name :value (count player-talks)}))
+
+(defn get-num-item-pickups [item-recs player-id]
+  (let [player-wep-picks (select-pid-from-seq item-recs :player player-id)
+	player-name (get-in (last player-wep-picks) [:entry :player :name])]
+    {:name player-name :value (count player-wep-picks)}))
+
+(defn get-shock-duration [shock-recs player-id]
+  (let [player-shocks (select-pid-from-seq shock-recs :shock player-id)
+	player-name (get-in (last player-shocks) [:entry :shock :name])]
+    {:name player-name :value (sum-over player-shocks [:entry :shock-info :damage])}))
 
 ;Calculate overall rankings of things
 
@@ -120,6 +148,11 @@
 	player-seq (get-unique-ids-from-seq dk-seq :attacker)]
     (create-ranking get-num-kills dk-seq player-seq)))
 
+(defn rank-num-team-kills [log-seq]
+  (let [dk-seq (get-log-type log-seq damage-kill?)
+	player-seq (get-unique-ids-from-seq dk-seq :attacker)]
+    (create-ranking get-num-team-kills dk-seq player-seq)))
+
 (defn rank-total-dam-dealt [log-seq]
   (let [dk-seq (get-log-type log-seq damage-kill?)
 	player-seq (get-unique-ids-from-seq dk-seq :attacker)]
@@ -129,6 +162,11 @@
   (let [dk-seq (get-log-type log-seq damage-kill?)
 	player-seq (get-unique-ids-from-seq dk-seq :victim)]
     (create-ranking get-total-damage-received dk-seq player-seq)))
+
+(defn rank-total-team-dam-received [log-seq]
+  (let [dk-seq (get-log-type log-seq damage-kill?)
+	player-seq (get-unique-ids-from-seq dk-seq :victim)]
+    (create-ranking get-total-team-damage-received dk-seq player-seq)))
 
 (defn rank-num-deaths [log-seq]
   (let [dk-seq (get-log-type log-seq damage-kill?)
@@ -144,6 +182,21 @@
   (let [talk-seq (get-log-type log-seq talk?)
 	player-seq (get-unique-ids-from-seq talk-seq :player)]
     (create-ranking get-num-talks talk-seq player-seq)))
+
+(defn rank-num-weapon-pickups [log-seq]
+  (let [weapon-seq (get-log-type log-seq weapon-pickup?)
+	player-seq (get-unique-ids-from-seq weapon-seq :player)]
+    (create-ranking get-num-item-pickups weapon-seq player-seq)))
+
+(defn rank-num-item-pickups [log-seq]
+  (let [item-seq (get-log-type log-seq item-pickup?)
+	player-seq (get-unique-ids-from-seq item-seq :player)]
+    (create-ranking get-num-item-pickups item-seq player-seq)))
+
+(defn rank-shock-duration [log-seq]
+  (let [shock-seq (get-log-type log-seq shell-shock?)
+	player-seq (get-unique-ids-from-seq shock-seq :shock)]
+    (create-ranking get-shock-duration shock-seq player-seq)))
 
 (defn rank-kills-plus-deaths [log-seq]
   (let [dk-seq (get-log-type log-seq damage-kill?)
@@ -164,6 +217,21 @@
 	player-seq (get-unique-ids-from-seq dk-seq :attacker)]
     (create-ranking get-total-self-damage dk-seq player-seq)))
 
+(defn rank-total-world-damage [log-seq]
+  (let [dk-seq (get-log-type log-seq damage-kill?)
+	player-seq (get-unique-ids-from-seq dk-seq :attacker)]
+    (create-ranking get-total-damage-to-world dk-seq player-seq)))
+
+(defn rank-total-damage-from-world [log-seq]
+  (let [dk-seq (get-log-type log-seq damage-kill?)
+	player-seq (get-unique-ids-from-seq dk-seq :victim)]
+    (create-ranking get-total-damage-from-world dk-seq player-seq)))
+
+(defn rank-self-fire-damage [log-seq]
+  (let [dk-seq (get-log-type log-seq damage-kill?)
+	player-seq (get-unique-ids-from-seq dk-seq :victim)]
+    (create-ranking get-total-self-fire-damage dk-seq player-seq)))
+
 (defn create-weapon-ranking [value-function weapon-predicate log-seq player-seq]
   (reverse (sort-by :value (doall (map #(value-function (select-weapon-type log-seq weapon-predicate) %) player-seq)))))
 
@@ -172,7 +240,65 @@
 	player-seq (get-unique-ids-from-seq dk-seq :attacker)]
     (create-weapon-ranking get-total-damage-dealt weapon-predicate dk-seq player-seq)))
 
+(defn rank-weapon-damage-received [log-seq weapon-predicate]
+  (let [dk-seq (get-log-type log-seq damage-kill?)
+	player-seq (get-unique-ids-from-seq dk-seq :victim)]
+    (create-weapon-ranking get-total-damage-received weapon-predicate dk-seq player-seq)))
+
 (defn rank-weapon-kills [log-seq weapon-predicate]
   (let [dk-seq (get-log-type log-seq damage-kill?)
 	player-seq (get-unique-ids-from-seq dk-seq :attacker)]
     (create-weapon-ranking get-num-kills weapon-predicate dk-seq player-seq)))
+
+(defn rank-weapon-deaths [log-seq weapon-predicate]
+  (let [dk-seq (get-log-type log-seq damage-kill?)
+	player-seq (get-unique-ids-from-seq dk-seq :victim)]
+    (create-weapon-ranking get-num-deaths weapon-predicate dk-seq player-seq)))
+
+(defn rank-artillery-damage [log-seq]
+  (rank-weapon-damage log-seq artillery?))
+
+(defn rank-bazooka-kills [log-seq]
+  (rank-weapon-kills log-seq bazooka?))
+
+(defn rank-russian-wep-kills [log-seq]
+  (rank-weapon-kills log-seq russian?))
+
+(defn rank-flamethrower-damage [log-seq]
+  (rank-weapon-damage log-seq flame-thrower?))
+
+(defn rank-flamethrower-dam-received [log-seq]
+  (rank-weapon-damage-received log-seq flame-thrower?))
+
+(defn rank-fubar-damage [log-seq]
+  (rank-weapon-damage log-seq fubar?))
+
+(defn rank-grenade-damage [log-seq]
+  (rank-weapon-damage log-seq grenade?))
+
+(defn rank-heavy-mg-kills [log-seq]
+  (rank-weapon-kills log-seq heavy-mg?))
+
+(defn rank-jeep-gun-kills [log-seq]
+  (rank-weapon-kills log-seq jeep?))
+
+(defn rank-light-mg-kills [log-seq]
+  (rank-weapon-kills log-seq light-mg?))
+
+(defn rank-british-wep-kills [log-seq]
+  (rank-weapon-kills log-seq british?))
+
+(defn rank-german-wep-kills [log-seq]
+  (rank-weapon-kills log-seq german?))
+
+(defn rank-pistol-kills [log-seq]
+  (rank-weapon-kills log-seq pistol?))
+
+(defn rank-rifle-kills [log-seq]
+  (rank-weapon-kills log-seq rifle?))
+
+(defn rank-tank-kills [log-seq]
+  (rank-weapon-kills log-seq tank?))
+
+(defn rank-american-wep-kills [log-seq]
+  (rank-weapon-kills log-seq american?))

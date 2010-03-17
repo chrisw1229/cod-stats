@@ -199,10 +199,10 @@
 (defn german? [weapon-name]
   (includes? german-weapons weapon-name))
 
-(defn jeep-crush? [weapon-name]
-  (includes? ["jeepcrush_mp"] weapon-name))
-(defn tank-crush? [weapon-name]
-  (includes? ["tankcrush_mp"] weapon-name))
+(defn jeep-crush? [type-name]
+  (includes? ["MOD_JEEP_CRUSH"] type-name))
+(defn tank-crush? [type-name]
+  (includes? ["MOD_TANK_CRUSH"] type-name))
 (defn flame-thrower? [weapon-name]
   (includes? ["flamethrower_mp"] weapon-name))
 (defn melee? [type-name]
