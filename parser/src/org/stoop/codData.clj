@@ -37,8 +37,8 @@
 				     :y (make-coord-transformer 3033.23 -0.005201 -1.0373)}
 		       "mp_neuville" {:x (make-coord-transformer 10673.55 0.6144 0.01809)
 				      :y (make-coord-transformer 4396.89 -0.001637 -0.6379)}
-		       "mp_italy" {:x (make-coord-transformer 2207.56 0.00024116 0.2037)
-				   :y (make-coord-transformer 2018.39 0.1796 0.01177)}
+		       "mp_italy" {:x (make-coord-transformer 2202.59 0.002778 0.2025)
+				   :y (make-coord-transformer 1973.99 0.2021 0.001427)}
 		       "mp_uo_depot" {:x (make-coord-transformer 2006.08 -0.00362 0.57603)
 				      :y (make-coord-transformer 2752.87 0.5688 0.004178)}
 		       "mp_streets" {:x (make-coord-transformer -671.16 0.003213 -0.4655)
@@ -52,7 +52,21 @@
 		       "mp_ponyri" {:x (make-coord-transformer 1399.05 -0.00007585 -0.1922)
 				    :y (make-coord-transformer 2559.21 -0.1919 0.003295)}
 		       "mp_railyard" {:x (make-coord-transformer 1564.88 0.01408 0.523)
-				      :y (make-coord-transformer 2697.46 0.5087 0.001226)}})
+				      :y (make-coord-transformer 2697.46 0.5087 0.001226)}
+		       "reserves" {:x (make-coord-transformer 1983.35 -0.002727 0.5899)
+				   :y (make-coord-transformer 1660.26 0.5875 0.002758)}
+		       "mp_rhinevalley" {:x (make-coord-transformer 3236.26 -0.1621 0.109)
+					 :y (make-coord-transformer 3035.92 0.1096 0.1499)}
+		       "mp_rocket" {:x (make-coord-transformer -2277.55 0.285 0.3392)
+				    :y (make-coord-transformer -25.95 0.3367 -0.2829)}
+		       "mp_ship" {:x (make-coord-transformer 3953.61 0.3997 -0.01218)
+				  :y (make-coord-transformer 2141.3 0.0007916 -0.4194)}
+		       "mp_sicily" {:x (make-coord-transformer 618.45 -0.3659 0.09869)
+				    :y (make-coord-transformer 1798.28 0.09372 0.3698)}
+		       "mp_stalingrad" {:x (make-coord-transformer -493.67 0.716 -0.003368)
+					:y (make-coord-transformer 1313.59 0.00728 -0.706)}
+		       "warehousefun" {:x (make-coord-transformer -196.52 -0.005807 1.688)
+				       :y (make-coord-transformer 5140.77 1.688 0.002167)}})
 
 (defn get-transformer [map-name]
   (get map-transformers map-name {:x (make-coord-transformer 0 1 1)
@@ -64,7 +78,7 @@
 	      "colt_mp" 
 	      "webley_mp" 
 	      "tt33_mp"])
-(defn is-pistol? [weapon-name]
+(defn pistol? [weapon-name]
   (includes? pistols  weapon-name))
 
 (def rifles ["gewehr43_mp" 
@@ -74,7 +88,7 @@
 	     "m1carbine_mp" 
 	     "kar98k_mp" 
 	     "mosin_nagant_mp"])
-(defn is-rifle? [weapon-name]
+(defn rifle? [weapon-name]
   (includes? rifles weapon-name))
 
 (def light-mgs ["mp44_mp" 
@@ -86,7 +100,7 @@
 		"bren_mp" 
 		"sten_mp" 
 		"silenced_sten_mp"])
-(defn is-light-mg? [weapon-name]
+(defn light-mg? [weapon-name]
   (includes? light-mgs  weapon-name))
 
 (def heavy-mgs ["30cal_tank_mp" 
@@ -102,7 +116,7 @@
 		"mg50cal_tripod_stand_mp"
 		"mg_sg43_tank_mp" 
 		"sg43_turret_mp"])
-(defn is-heavy-mg? [weapon-name]
+(defn heavy-mg? [weapon-name]
   (includes? heavy-mgs weapon-name))
 
 (def grenades ["fraggrenade_mp" 
@@ -111,7 +125,7 @@
 	       "stielhandgranate_mp" 
 	       "satchelcharge_mp" 
 	       "smokegrenade_mp"])
-(defn is-grenade? [weapon-name]
+(defn grenade? [weapon-name]
   (includes? grenades weapon-name))
 
 (def tanks ["elefant_turret_mp" 
@@ -119,27 +133,27 @@
 	    "sherman_turret_mp"
 	    "su152_turret_mp" 
 	    "t34_turret_mp"])
-(defn is-tank? [weapon-name]
+(defn tank? [weapon-name]
   (includes? tanks weapon-name))
 
 (def jeeps ["cal_tank_mp" "50cal_tank_mp"])
-(defn is-jeep? [weapon-name]
+(defn jeep? [weapon-name]
   (includes? jeeps weapon-name))
 
 (def artillery ["binoculars_artillery_mp" "flak88_turret_mp"])
-(defn is-artillery? [weapon-name]
+(defn artillery? [weapon-name]
   (includes? artillery weapon-name))
 
 (def bazookas ["bazooka_mp" 
 	       "panzerfaust_mp" 
 	       "panzerschreck_mp"])
-(defn is-bazooka? [weapon-name]
+(defn bazooka? [weapon-name]
   (includes? bazookas weapon-name))
 
 (def fubars ["bazooka_fubar_mp" 
 	     "panzerfaust_fubar_mp" 
 	     "panzerschreck_fubar_mp"])
-(defn is-fubar? [weapon-name]
+(defn fubar? [weapon-name]
   (includes? fubars weapon-name))
 
 ;Country's weapons
@@ -153,7 +167,7 @@
 		       "springfield_mp" 
 		       "mg30cal_mp"
 		       "fraggrenade_mp"])
-(defn is-american? [weapon-name]
+(defn american? [weapon-name]
   (includes? american-weapons weapon-name))
 
 (def russian-weapons ["mosin_nagant_mp" 
@@ -162,7 +176,7 @@
 		      "mosin_nagant_sniper_mp"
 		      "dp28_mp" 
 		      "rgd-33russiangrag_mp"])
-(defn is-russian? [weapon-name]
+(defn russian? [weapon-name]
   (includes? russian-weapons weapon-name))
 
 (def british-weapons ["enfield_mp" 
@@ -171,7 +185,7 @@
 		      "springfield_mp" 
 		      "mg30cal_mp"
 		      "mk1britishfrag_mp"])
-(defn is-british? [weapon-name]
+(defn british? [weapon-name]
   (includes? british-weapons weapon-name))
 
 (def german-weapons ["kar98k_mp" 
@@ -182,16 +196,16 @@
 		     "kar98k_sniper_mp" 
 		     "mg34_mp" 
 		     "stielhandgranate_mp"])
-(defn is-german? [weapon-name]
+(defn german? [weapon-name]
   (includes? german-weapons weapon-name))
 
-(defn is-jeep-crush? [weapon-name]
+(defn jeep-crush? [weapon-name]
   (includes? ["jeepcrush_mp"] weapon-name))
-(defn is-tank-crush? [weapon-name]
+(defn tank-crush? [weapon-name]
   (includes? ["tankcrush_mp"] weapon-name))
-(defn is-flame-thrower? [weapon-name]
+(defn flame-thrower? [weapon-name]
   (includes? ["flamethrower_mp"] weapon-name))
-(defn is-melee? [type-name]
+(defn melee? [type-name]
   (includes? ["MOD_MELEE"] type-name))
 
 

@@ -44,6 +44,7 @@
       <url-pattern>/start</url-pattern>
 	<url-pattern>/archive</url-pattern>
 	<url-pattern>/photo</url-pattern>
+	<url-pattern>/awards/*</url-pattern>
    </servlet-mapping>
 
    <servlet-mapping>

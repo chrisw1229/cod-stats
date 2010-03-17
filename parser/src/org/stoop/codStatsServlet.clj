@@ -1,7 +1,8 @@
 ;web stuff
 (ns org.stoop.codStatsServlet
   (:gen-class :extends javax.servlet.http.HttpServlet)
-  (:use org.stoop.codStatsIo org.stoop.codStatsRealTime org.stoop.codIdentity org.stoop.schedule
+  (:use org.stoop.codStatsIo org.stoop.codStatsRealTime org.stoop.codIdentity org.stoop.codAnalytics
+	org.stoop.schedule
 	org.danlarkin.json
 	compojure.http clojure.contrib.seq-utils))
 
@@ -67,6 +68,14 @@
 					(for [record player-records]
 					  {:type "player" :data record}))]))))
 
+(defn format-award
+  [award-list]
+  (encode-to-str
+   {:columns [{:name "Name" :type "string"}
+	      {:name "Value" :type "number"}]
+    :rows (for [award award-list :when (not (nil? (:name award)))]
+	    [(:name award) (:value award)])}))
+
 (defroutes cod-stats-routes
   (GET "/stats/live"
        (let [ts (parse-integer (:ts params))]
@@ -108,6 +117,18 @@
 	     photo (:set params)]
 	 (when (not (nil? photo))
 	   (set-photo ip-address photo)
-	   (str "Photo set to " photo " for " ip-address)))))
+	   (str "Photo set to " photo " for " ip-address))))
+
+  (GET "/stats/awards/:award.json"
+       (let [award (params :award)]
+	 (cond
+	  (= award "index")
+	  (encode-to-str 
+	   [{:name "Broken Ankles" :id "broken_ankles" :tip "Most damage due to falling."}])
+
+	  (= award "broken_ankles")
+	  (format-award (rank-total-fall-damage @game-archive))
+
+	  :else (str award)))))
 
 (defservice cod-stats-routes)
