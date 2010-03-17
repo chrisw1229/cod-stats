@@ -177,11 +177,13 @@ $.widget("ui.picker", {
     var maxH = ($(window).height() / 2) - listT;
     var listH = Math.floor(maxH / itemH) * itemH; 
     this.popupDiv.css({ left: offset.left, top: listT });
-    this.listDiv.css({ height: listH });
+
+    var currentH = Math.min(this.items.length * itemH, listH);
+    this.listDiv.css("height", currentH);
 
     // Set the position of the shadow
     this.shadowDiv.width(listW);
-    this.shadowDiv.height(listH);
+    this.shadowDiv.height(currentH);
 
     // Store the dimensions for use during dynamic filtering
     this.listDiv.maxHeight = listH;
