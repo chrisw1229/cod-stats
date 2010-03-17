@@ -14,22 +14,26 @@ $.widget("ui.picker", {
     // Build the document model
     this.element.addClass("ui-picker");
     this.bodyDiv = $('<div class="ui-widget-header ui-corner-all'
-        + ' ui-picker-body" />').appendTo(this.element);
+        + ' ui-picker-body"/>').appendTo(this.element);
     $('<div class="ui-picker-title">' + this.options.title
         + '</div>').appendTo(this.bodyDiv);
 
-    this.comboDiv = $('<div class="ui-picker-combo" />').appendTo(this.bodyDiv);
+    this.comboDiv = $('<div class="ui-picker-combo"/>').appendTo(this.bodyDiv);
     this.inputDiv = $('<input class="ui-widget-content ui-corner-tl'
-        + ' ui-corner-bl ui-picker-combo-input" />').appendTo(this.comboDiv);
+        + ' ui-corner-bl ui-picker-combo-input"/>').appendTo(this.comboDiv);
     this.buttonDiv = $('<div class="ui-state-default ui-corner-tr ui-corner-br'
         + ' ui-picker-combo-button" title="Click to choose from a list of '
-        + this.options.title.toLowerCase() + '">').appendTo(this.comboDiv);
-    $('<span class="ui-icon ui-icon-circle-triangle-s" />').appendTo(this.buttonDiv);
+        + this.options.title.toLowerCase() + '"/>').appendTo(this.comboDiv);
+    $('<span class="ui-icon ui-icon-circle-triangle-s"/>').appendTo(this.buttonDiv);
+    if (this.options.selection) {
+      this.comboDiv.hide();
+    }
 
-    this.popupDiv = $('<div class="ui-picker-popup"></div>').appendTo($("body"));
+    this.popupDiv = $('<div class="ui-picker-popup"/>').appendTo($("body"));
     this.popupContentDiv = $('<div class="ui-corner-bottom ui-picker-popup-content"/>').appendTo(this.popupDiv);
     this.listDiv = $('<div class="ui-picker-list"/>').appendTo(this.popupContentDiv);
     this.shadowDiv = $('<div class="ui-widget-shadow ui-corner-all ui-picker-shadow"/>').appendTo(this.popupDiv);
+    this.popupDiv.hide();
 
     // Bind the event handlers
     this.comboDiv.bind("mouseenter", function(e) { self._toggleButton(); });
@@ -42,7 +46,12 @@ $.widget("ui.picker", {
     $(window).bind("hashchange.picker", function(e) { self._addressChanged(e); });
 
     // Fetch the remote content
-    this._requestIndex();
+    if (this.options.selection) {
+      this.selection = { id: this.options.selection };
+      this._requestSelection(this.selection);
+    } else {
+      this._requestIndex();
+    }
   },
 
   destroy: function() {
@@ -452,7 +461,11 @@ $.widget("ui.picker", {
 
       // Restore the last selection name
       this.inputDiv.val(this.selection ? this.selection.name : "");
-      this._filterList(this.inputDiv.val().toLowerCase());
+
+      // Reset the filter if the user ever entered one
+      if (this.filter) {
+        this._filterList(this.inputDiv.val().toLowerCase());
+      }
     }
   },
 
@@ -514,11 +527,6 @@ $.widget("ui.picker", {
       return;
     }
 
-    // Notify listeners that the data is being loaded
-    if (this.options.callback) {
-      this.options.callback({ loading: true });
-    }
-
     // Update the appearance of the widget
     this.inputDiv.val(this.selection.name);
     var selectedDiv = $("li", this.listDiv).eq(this.selIndex);
@@ -534,6 +542,11 @@ $.widget("ui.picker", {
       return;
     }
     this.loading = selection;
+
+    // Notify listeners that the data is being loaded
+    if (this.options.callback) {
+      this.options.callback({ loading: true });
+    }
 
     // Configure the request options
     var options = {
@@ -595,6 +608,7 @@ $.extend($.ui.picker, {
   defaults: {
     title: "",
     type: "",
+    selection: undefined,
     callback: undefined
   }
 });

@@ -93,7 +93,7 @@ $.widget("ui.table", {
 
     // Create table elements for each row of values
     for (var i = 0; i < this.rows.length; i++) {
-      this._createRow(i, this.rows[i]);
+      this._createRow(i);
     }
 
     // Fill the table elements with row values
@@ -214,13 +214,21 @@ $.widget("ui.table", {
       var cellDivs = $(rowDivs[i]).children();
 
       // Fill in each cell of values
+      var r = i - 1;
       for (var j = 1; j < cellDivs.length; j++) {
-        $(cellDivs[j]).text(this.rows[i - 1][j - 1]);
+        var c = j - 1;
+
+        // Check if there is a value defined for the cell
+        if (r < this.rows.length && c < this.rows[r].length) {
+          $(cellDivs[j]).text(this.rows[r][c]);
+        } else {
+          $(cellDivs[j]).text("");
+        }
       }
     }
   },
 
-  _createRow: function(index, row) {
+  _createRow: function(index) {
 
     // Create a new table row to store the data
     var sequence = (index % 2 == 0 ? "even" : "odd");
@@ -230,7 +238,7 @@ $.widget("ui.table", {
     $('<td class="ui-table-cell ui-table-cell-num">' + (index + 1) + '</td>').appendTo(rowDiv);
 
     // Add all the values as cells to the table row
-    for (var i = 0; i < row.length; i++) {
+    for (var i = 0; i < this.columns.length; i++) {
       $('<td class="ui-table-cell"/>').appendTo(rowDiv);
     }
   }

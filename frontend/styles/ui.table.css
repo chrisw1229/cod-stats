@@ -64,10 +64,10 @@
   cursor: pointer;
 }
 .ui-table-header .ui-table-sort-icon {
-  visibility: hidden;
+  display: none;
 }
 .ui-table-header-sorted .ui-table-sort-icon {
-  visibility: visible;
+  display: inline;
 }
 .ui-table-footer td {
   border-top: none;

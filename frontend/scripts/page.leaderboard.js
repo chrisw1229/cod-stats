@@ -1,4 +1,4 @@
-// Handles all the controller logic for the awards page
+// Handles all the controller logic for the leaderboard page
 $(function() {
 
 // Register the page manager as a jQuery extension
@@ -23,6 +23,6 @@ $.extend({ mgr: {
   // Load the custom jQuery user interface components
   $("#nav").navigation();
   $("#table").table({ sortIndex: 1, sortAsc: false });
-  $("#picker").picker({ type: "awards", title: "Player Awards",
-      callback: $.mgr.itemSelected });
+  $("#picker").picker({ type: "leaderboard", title: "Leaderboard",
+      selection: "index", callback: $.mgr.itemSelected });
 });
