@@ -1,0 +1,1 @@
+"C:\Program Files\Call of Duty\CoDUOMP.exe" +set dedicated 1 +set fs_game cod-stats +exec dedicated.cfg
