@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!--
+   Copy this file to TOMCAT_HOME/conf/Catalina/localhost
+   Edit the docBase attribute below to point to the web application directory.
+   Replace PATH_TO_CHECKOUT with the root directory of the project.
+-->
+<Context docBase="C:/develop/cod-stats/frontend" path="" reloadable="true">
+</Context>
