@@ -23,7 +23,7 @@
   font-weight: bold;
   height: 18px;
   padding: 3px 4px;
-  width: 350px;
+  width: 330px;
 }
 .ui-picker-combo-loading {
   font-style: italic;
@@ -35,8 +35,16 @@
   padding: 4px;
   position: relative;
 }
+.ui-picker-desc {
+  float: left;
+  font-style: italic;
+  font-weight: normal;
+  margin: 3px 10px;
+  padding-top: 4px;
+}
 .ui-picker-popup {
   position: absolute;
+  width: 400px;
   z-index: 1000;
 }
 .ui-picker-popup-content {

@@ -25,8 +25,14 @@ $.widget("ui.picker", {
         + ' ui-picker-combo-button" title="Click to choose from a list of '
         + this.options.title.toLowerCase() + '"/>').appendTo(this.comboDiv);
     $('<span class="ui-icon ui-icon-circle-triangle-s"/>').appendTo(this.buttonDiv);
+
+    this.descDiv = $('<div class="ui-picker-desc">' + this.options.desc
+        + '</div>').appendTo(this.bodyDiv);
+
+    // Hide the extra components if a direct selection is given
     if (this.options.selection) {
       this.comboDiv.hide();
+      this.descDiv.hide();
     }
 
     this.popupDiv = $('<div class="ui-picker-popup"/>').appendTo($("body"));
@@ -529,6 +535,7 @@ $.widget("ui.picker", {
 
     // Update the appearance of the widget
     this.inputDiv.val(this.selection.name);
+    this.descDiv.text(this.selection.tip);
     var selectedDiv = $("li", this.listDiv).eq(this.selIndex);
     selectedDiv.removeClass("ui-state-default");
     selectedDiv.addClass("ui-state-highlight");
@@ -597,6 +604,7 @@ $.widget("ui.picker", {
       this._selectId(id);
     } else {
       this.inputDiv.val("");
+      this.descDiv.text("");
       this._selectIndex(-1);
     }
   }
@@ -608,6 +616,7 @@ $.extend($.ui.picker, {
   defaults: {
     title: "",
     type: "",
+    desc: "",
     selection: undefined,
     callback: undefined
   }
