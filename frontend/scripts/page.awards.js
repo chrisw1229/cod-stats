@@ -22,7 +22,7 @@ $.extend({ mgr: {
 
   // Load the custom jQuery user interface components
   $("#nav").navigation();
-  $("#table").table({ sortIndex: 1, sortAsc: false });
+  $("#table").table();
   $("#picker").picker({ type: "awards", title: "Player Awards",
       callback: $.mgr.itemSelected });
 });

@@ -1,7 +1,7 @@
 {
   "columns": [
     { "name": "Player Name", "type": "string" },
-    { "name": "Kills", "type": "number" }
+    { "name": "Kills", "type": "number", "sort": false }
   ],
   "rows": [
     [ "Jaymz-'Lil Dana's Sweet Caboose", 92 ],

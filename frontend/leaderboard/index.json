@@ -1,7 +1,7 @@
 {
   "columns": [
     { "name": "Player Name", "type": "string" },
-    { "name": "Kills", "type": "number" },
+    { "name": "Kills", "type": "number", "sort": false },
     { "name": "Deaths", "type": "number" },
     { "name": "Suicides", "type": "number" },
     { "name": "Games", "type": "number" },

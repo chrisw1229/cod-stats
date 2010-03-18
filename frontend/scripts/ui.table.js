@@ -49,11 +49,15 @@ $.widget("ui.table", {
     $('<th class="ui-state-default ui-corner-tl ui-table-cell-num">#</th>').appendTo(this.headerDiv);
 
     // Add the new table column header elements
+    var sortIndex = -1;
     for (var i = 0; i < columns.length; i++) {
 
       // Store the column data for future use
       var column = columns[i];
       this.columns.push(column);
+
+      // Check if this is the default sort column
+      sortIndex = (column.sort != undefined ? i : sortIndex);
 
       // Create an element to represent the column header
       column.div = $('<th class="ui-state-default ui-table-header'
@@ -77,6 +81,11 @@ $.widget("ui.table", {
 
     // Style the table boundaries
     this.columns[this.columns.length - 1].div.addClass("ui-corner-tr");
+
+    // Update the default sort if applicable
+    if (sortIndex >= 0) {
+      this.setSort(sortIndex, this.columns[sortIndex].sort);
+    }
   },
 
   setRows: function(rows) {
@@ -249,8 +258,8 @@ $.extend($.ui.table, {
   version: "1.7.2",
   defaults: {
     columns: [],
-    sortIndex: 0,
-    sortAsc: true
+    sortIndex: -1,
+    sortAsc: undefined
   }
 });
 
