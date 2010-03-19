@@ -39,9 +39,11 @@
     <java classname="clojure.lang.Compile" classpathref="project.classpath" failonerror="true">
       <classpath path="${src.dir}" />
       <sysproperty key="clojure.compile.path" value="${classes.dir}" />
+      <arg value="org.danlarkin.json" />
       <arg value="org.stoop.codData" />
       <arg value="org.stoop.codParser" />
       <arg value="org.stoop.codStatsIo" />
+      <arg value="org.stoop.codIdentity" />
       <arg value="org.stoop.codStatsRealTime" />
       <arg value="org.stoop.codAnalytics" />
       <arg value="org.stoop.schedule" />

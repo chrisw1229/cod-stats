@@ -52,7 +52,7 @@
   (let [dk-good-recs (get-log-type dk-seq clean-damage?)
 	player-dks (select-pid-from-seq dk-good-recs :attacker player-id)
 	player-name (get-in (last player-dks) [:entry :attacker :name])]
-    {:player player-name :value (sum-over player-dks [:entry :hit-details :damage])}))
+    {:name player-name :value (sum-over player-dks [:entry :hit-details :damage])}))
 
 (defn get-total-damage-received [dk-seq player-id]
   (let [dk-good-recs (get-log-type dk-seq clean-damage?)
@@ -68,7 +68,7 @@
     {:name player-name :value (sum-over player-td [:entry :hit-details :damage])}))
 
 (defn get-total-team-damage-received [dk-seq player-id]
-  (let [dk-player-recs (get-log-type dk-seq non-npc?)
+  (let [dk-player-recs (get-log-type dk-seq #(and (non-npc? %) (not (self-damage? %))))
 	dk-team-recs (get-log-type dk-player-recs team-damage?)
 	player-td (select-pid-from-seq dk-team-recs :victim player-id)
 	player-name (get-in (last player-td) [:entry :victim :name])]

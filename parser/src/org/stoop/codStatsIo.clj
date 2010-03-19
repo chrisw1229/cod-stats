@@ -1,13 +1,19 @@
 (ns org.stoop.codStatsIo
-  (:use clojure.contrib.json.write clojure.contrib.duck-streams))
-
-;Award related functions
-
-(defn write-award [file award-name award-data]
-  (spit file (json-str {:award award-name :data award-data})))
+  (:use clojure.contrib.duck-streams org.danlarkin.json))
 
 ;File watching functions
 ;Watch for console_mp.log and games_mp.log.
+
+(def *photo-info-location* (ref (str "C:/Program Files/Call of Duty/cod-stats/photos.json")))
+
+(defn write-photo-log [photo-map]
+  (spit @*photo-info-location* (encode-to-str photo-map)))
+
+(defn read-photo-log []
+  (try
+   (decode-from-str (slurp @*photo-info-location*))
+   (catch Exception e
+     {})))
 
 (def *log-file-location* (ref (str "C:/Program Files/Call of Duty/cod-stats/games_mp.log")))
 (def *connect-log-location* (ref (str "C:/Program Files/Call of Duty/cod-stats/console_mp.log")))

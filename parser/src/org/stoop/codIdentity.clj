@@ -1,5 +1,5 @@
 (ns org.stoop.codIdentity
-  (:use clojure.contrib.seq-utils))
+  (:use clojure.contrib.seq-utils org.stoop.codStatsIo))
 
 (def player-id-map (ref {}))
 (def name-id-map (ref {}))
@@ -10,7 +10,7 @@
 (def client-id-ip-map (ref {}))
 (def *check-ip* true)
 
-(def ip-photo-map (ref {}))
+(def ip-photo-map (ref (read-photo-log)))
 
 (defn associate-client-id-to-ip
   "Associates an IP address to the client ID passed in."
@@ -104,7 +104,8 @@
 
 (defn set-photo
   [ip-address photo]
-  (dosync (alter ip-photo-map assoc ip-address photo)))
+  (dosync (alter ip-photo-map assoc ip-address photo))
+  (write-photo-log @ip-photo-map))
 
 (defn get-photo
   [client-id]
