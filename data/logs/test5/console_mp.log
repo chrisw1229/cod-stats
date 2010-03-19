@@ -1,0 +1,1549 @@
+logfile opened on Wed Mar 17 22:20:18 2010
+
+      cvar set g_log games_mp.log
+      cvar set g_logsync 1
+      cvar set g_banips 
+      cvar set sv_kickbantime 300
+      cvar set sv_fps 20
+      cvar set sv_allowanonymous 0
+      cvar set sv_floodprotect 1
+      cvar set sv_maxrate 25000
+      cvar set sv_dl_maxrate 900000
+      cvar set sv_maxping 999
+      cvar set sv_minping 0
+      cvar set sv_timeout 960
+      cvar set g_gametype tdm
+g_gametype will be changed upon restarting.
+      cvar set g_allowvote 1
+      cvar set g_deadChat 1
+      cvar set scr_allow_vote 1
+      cvar set scr_drawfriend 1
+      cvar set scr_forcerespawn 0
+      cvar set scr_friendlyfire 3
+      cvar set scr_killcam 1
+      cvar set scr_freelook 1
+      cvar set scr_spectateenemy 1
+      cvar set scr_teambalance 0
+      cvar set scr_dm_scorelimit 0
+      cvar set scr_dm_timelimit 30
+      cvar set scr_tdm_scorelimit 0
+      cvar set scr_tdm_timelimit 30
+      cvar set scr_bel_scorelimit 0
+      cvar set scr_bel_timelimit 30
+      cvar set scr_bel_alivepointtime 10
+      cvar set scr_re_scorelimit 0
+      cvar set scr_re_timelimit 30
+      cvar set scr_re_graceperiod 15
+      cvar set scr_re_roundlength 5
+      cvar set scr_re_roundlimit 0
+      cvar set scr_re_showcarrier 1
+      cvar set scr_sd_scorelimit 0
+      cvar set scr_sd_timelimit 30
+      cvar set scr_sd_graceperiod 15
+      cvar set scr_sd_roundlength 5
+      cvar set scr_sd_roundlimit 0
+      cvar set scr_hq_scorelimit 0
+      cvar set scr_hq_timelimit 30
+      cvar set scr_allow_m1carbine 1
+      cvar set scr_allow_m1garand 1
+      cvar set scr_allow_thompson 1
+      cvar set scr_allow_bar 1
+      cvar set scr_allow_enfield 1
+      cvar set scr_allow_sten 1
+      cvar set scr_allow_bren 1
+      cvar set scr_allow_springfield 1
+      cvar set scr_allow_kar98k 1
+      cvar set scr_allow_mp40 1
+      cvar set scr_allow_mp44 1
+      cvar set scr_allow_kar98ksniper 1
+      cvar set scr_allow_nagant 1
+      cvar set scr_allow_ppsh 1
+      cvar set scr_allow_nagantsniper 1
+      cvar set scr_allow_fg42 1
+      cvar set scr_allow_panzerfaust 1
+      cvar set g_allowvotetempbanuser 1
+      cvar set g_allowvotetempbanclient 1
+      cvar set g_allowvotekick 1
+      cvar set g_allowvoteclientkick 1
+      cvar set g_allowvotegametype 1
+      cvar set g_allowvotetypemap 1
+      cvar set g_allowvotemap 1
+      cvar set g_allowvotemaprotate 1
+      cvar set g_allowvotemaprestart 1
+      cvar set scr_shellshock 1
+      cvar set scr_drophealth 1
+      cvar set scr_battlerank 1
+      cvar set scr_allow_pistols 1
+      cvar set scr_allow_satchel 1
+      cvar set scr_allow_smoke 1
+      cvar set scr_allow_grenades 1
+      cvar set scr_allow_flamethrower 1
+      cvar set scr_allow_artillery 1
+      cvar set scr_allow_bazooka 1
+      cvar set scr_allow_mg34 1
+      cvar set scr_allow_dp28 1
+      cvar set scr_allow_mg30cal 1
+      cvar set scr_allow_gewehr43 1
+      cvar set scr_allow_svt40 1
+      cvar set scr_allow_flak88 1
+      cvar set scr_allow_su152 1
+      cvar set scr_allow_elefant 1
+      cvar set scr_allow_panzeriv 1
+      cvar set scr_allow_t34 1
+      cvar set scr_allow_sherman 1
+      cvar set scr_allow_horch 1
+      cvar set scr_allow_gaz67b 1
+      cvar set scr_allow_willyjeep 1
+      cvar set scr_bas_scorelimit 0
+      cvar set scr_bas_timelimit 60
+      cvar set scr_bas_roundlimit 0
+      cvar set scr_bas_roundlength 20
+      cvar set scr_bas_respawn_wave_time 10
+      cvar set scr_bas_startrounddelay 15
+      cvar set scr_bas_endrounddelay 10
+      cvar set scr_bas_clearscoreeachround 0
+      cvar set scr_ctf_scorelimit 0
+      cvar set scr_ctf_timelimit 60
+      cvar set scr_ctf_roundlimit 0
+      cvar set scr_ctf_roundlength 20
+      cvar set scr_ctf_startrounddelay 10
+      cvar set scr_ctf_endrounddelay 10
+      cvar set scr_ctf_clearscoreeachround 0
+      cvar set scr_ctf_showoncompass 1
+      cvar set scr_dom_scorelimit 0
+      cvar set scr_dom_timelimit 60
+      cvar set scr_dom_roundlimit 0
+      cvar set scr_dom_roundlength 20
+      cvar set scr_dom_respawn_wave_time 10
+      cvar set scr_dom_startrounddelay 10
+      cvar set scr_dom_endrounddelay 10
+      cvar set scr_dom_clearscoreeachround 0
+      cvar set scr_ftf_timelimit 20
+      cvar set scr_ftf_scorelimit 10
+      cvar set scr_ftf_mode 3
+      cvar set scr_ftf_holdtime 90
+      cvar set scr_ftf_flagspawndelay 20
+      cvar set scr_ftf_flagrecovertime 10
+      cvar set scr_ftf_removeflagspawns 1
+      cvar set scr_ftf_respawntime 0
+      cvar set scr_ftf_flagicons 1
+      cvar set scr_forcerespawn_ftf 0
+      cvar set scr_ftf_flagmodel cow_standing
+      cvar set scr_ftf_flagmodel_dropped cow_dead
+      cvar set scr_ftf_flagname cow
+couldn't exec mp_streets_dm.cfg
+      cvar set g_gametype tdm
+------ Server Initialization ------
+Server: mp_streets
+Hunk_Clear: reset the hunk ok
+Current language: english
+Current search path:
+C:\Program Files\Call of Duty\cod-stats\stoop-cod-stats-mod.pk3 (25 files)
+C:\Program Files\Call of Duty/cod-stats
+C:\Program Files\Call of Duty\uo\uomappack00.pk3 (143 files)
+C:\Program Files\Call of Duty\uo\stoop-warehouse-fun.pk3 (6 files)
+C:\Program Files\Call of Duty\uo\stoop-reserves.pk3 (16 files)
+C:\Program Files\Call of Duty\uo\stoop-jeeparena.pk3 (24 files)
+C:\Program Files\Call of Duty\uo\stoop-enclave.pk3 (16 files)
+C:\Program Files\Call of Duty\uo\pakuo07.pk3 (157 files)
+C:\Program Files\Call of Duty\uo\pakuo06.pk3 (12 files)
+C:\Program Files\Call of Duty\uo\pakuo05.pk3 (3 files)
+C:\Program Files\Call of Duty\uo\pakuo04.pk3 (7646 files)
+C:\Program Files\Call of Duty\uo\pakuo03.pk3 (2275 files)
+C:\Program Files\Call of Duty\uo\pakuo02.pk3 (790 files)
+C:\Program Files\Call of Duty\uo\pakuo01.pk3 (1657 files)
+C:\Program Files\Call of Duty\uo\pakuo00.pk3 (6233 files)
+C:\Program Files\Call of Duty/uo
+C:\Program Files\Call of Duty\main\zzz_Rifle_RangeV1.3.1.pk3 (66 files)
+C:\Program Files\Call of Duty\main\paka.pk3 (41 files)
+C:\Program Files\Call of Duty\main\pak9.pk3 (149 files)
+C:\Program Files\Call of Duty\main\pak8.pk3 (235 files)
+C:\Program Files\Call of Duty\main\pak6.pk3 (3 files)
+C:\Program Files\Call of Duty\main\pak5.pk3 (4858 files)
+C:\Program Files\Call of Duty\main\pak4.pk3 (1668 files)
+C:\Program Files\Call of Duty\main\pak3.pk3 (1992 files)
+C:\Program Files\Call of Duty\main\pak2.pk3 (694 files)
+C:\Program Files\Call of Duty\main\pak1.pk3 (2642 files)
+C:\Program Files\Call of Duty\main\pak0.pk3 (12816 files)
+C:\Program Files\Call of Duty/main
+C:\Program Files\Call of Duty\uo\localized_english_pakuo02.pk3 (12 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\uo\localized_english_pakuo01.pk3 (37 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\uo\localized_english_pakuo00.pk3 (2578 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\main\localized_english_pak3.pk3 (7 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\main\localized_english_pak2.pk3 (9 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\main\localized_english_pak1.pk3 (3736 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\main\localized_english_pak0.pk3 (1204 files)
+    localized assets pak file for english
+
+File Handles:
+handle 1: console_mp.log
+----------------------
+51750 files in pk3 files
+      cvar set cl_languagesavailable 1
+      cvar set sv_running 1
+      cvar set g_gametype tdm
+      cvar set nextmap map_restart
+      cvar set com_expectedhunkusage 83242784
+      cvar set cl_paused 0
+      cvar set cm_playerCurveClip 1
+      cvar set mapname mp_streets
+      cvar set sv_serverid 16
+      cvar set sv_serverRestarting 1
+------- Game Initialization -------
+gamename: CoD:United Offensive
+gamedate: Dec  6 2004
+      cvar set cg_atmos -1
+      cvar set g_gravity 800
+0 teams with 0 entities
+      cvar set ui_allowvote 1
+      cvar set ui_allowVoteMapRestart 1
+      cvar set ui_allowVoteMapRotate 1
+      cvar set ui_allowVoteTypeMap 1
+      cvar set ui_allowVoteMap 1
+      cvar set ui_allowVoteGameType 1
+      cvar set ui_allowVoteKick 1
+      cvar set ui_allowVoteClientKick 1
+      cvar set ui_allowVoteTempBanUser 1
+      cvar set ui_allowVoteTempBanClient 1
+      cvar set ui_allowVoteDrawFriend 0
+      cvar set ui_allowVoteKillCam 0
+      cvar set ui_allowVoteFriendlyFire 0
+      cvar set ui_drawfriend 1
+      cvar set ui_friendlyfire 3
+      cvar set ui_killcam 1
+      cvar set ui_timeoutsAllowed 0
+      cvar set ui_timeoutBank 180000
+      cvar set ui_timeoutLength 90000
+      cvar set ui_timeoutRecovery 10000
+      cvar set cg_atmos -1
+-----------------------------------
+      cvar set scr_rank_ppr 10
+      cvar set scr_artillery_first_interval 45
+      cvar set scr_artillery_interval 120
+      cvar set scr_artillery_interval_range 15
+      cvar set scr_forcerank 0
+      cvar set ui_tdm_timelimit 30
+      cvar set ui_tdm_scorelimit 0
+      cvar set scr_teamscorepenalty 1
+      cvar set ui_battlerank 1
+      cvar set ui_shellshock 1
+      cvar set cg_hudcompassMaxRange 1024
+      cvar set scr_killcam 1
+      cvar set scr_ceasefire 0
+      cvar set sv_night 0
+      cvar set scr_layoutimage levelshots/layouts/hud@layout_mp_streets.dds
+      cvar set g_TeamName_Allies MPSCRIPT_AMERICAN
+      cvar set g_TeamColor_Allies .25 .75 .25
+      cvar set g_ScoresBanner_Allies gfx/hud/hud@mpflag_american.tga
+      cvar set g_TeamName_Axis MPSCRIPT_GERMAN
+      cvar set g_TeamColor_Axis .6 .6 .6
+      cvar set g_ScoresBanner_Axis gfx/hud/hud@mpflag_german.tga
+      cvar set sv_hostname G-Day XI
+      cvar set ui_hostname G-Day XI
+      cvar set scr_motd Welcome to G-Day XI!
+      cvar set ui_motd Welcome to G-Day XI!
+      cvar set g_allowvote 1
+      cvar set ui_allowvote 1
+      cvar set g_allowvotemaprestart 1
+      cvar set ui_allowvotemaprestart 1
+      cvar set g_allowvotemaprotate 1
+      cvar set ui_allowvotemaprotate 1
+      cvar set g_allowvotemap 1
+      cvar set ui_allowvotemap 1
+      cvar set g_allowvotetypemap 1
+      cvar set ui_allowvotetypemap 1
+      cvar set g_allowvotekick 1
+      cvar set ui_allowvotekick 1
+      cvar set g_allowvotetempbanuser 1
+      cvar set ui_allowvotetempbanuser 1
+      cvar set scr_friendlyfire 3
+      cvar set ui_friendlyfire 3
+      cvar set scr_allow_m1carbine 1
+      cvar set ui_allow_m1carbine 1
+      cvar set scr_allow_m1garand 1
+      cvar set ui_allow_m1garand 1
+      cvar set scr_allow_thompson 1
+      cvar set ui_allow_thompson 1
+      cvar set scr_allow_bar 1
+      cvar set ui_allow_bar 1
+      cvar set scr_allow_springfield 1
+      cvar set ui_allow_springfield 1
+      cvar set scr_allow_mg30cal 1
+      cvar set ui_allow_mg30cal 1
+      cvar set scr_allow_enfield 1
+      cvar set ui_allow_enfield 1
+      cvar set scr_allow_sten 1
+      cvar set ui_allow_sten 1
+      cvar set scr_allow_bren 1
+      cvar set ui_allow_bren 1
+      cvar set scr_allow_nagant 1
+      cvar set ui_allow_nagant 1
+      cvar set scr_allow_svt40 1
+      cvar set ui_allow_svt40 1
+      cvar set scr_allow_ppsh 1
+      cvar set ui_allow_ppsh 1
+      cvar set scr_allow_nagantsniper 1
+      cvar set ui_allow_nagantsniper 1
+      cvar set scr_allow_dp28 1
+      cvar set ui_allow_dp28 1
+      cvar set scr_allow_kar98k 1
+      cvar set ui_allow_kar98k 1
+      cvar set scr_allow_gewehr43 1
+      cvar set ui_allow_gewehr43 1
+      cvar set scr_allow_mp40 1
+      cvar set ui_allow_mp40 1
+      cvar set scr_allow_mp44 1
+      cvar set ui_allow_mp44 1
+      cvar set scr_allow_kar98ksniper 1
+      cvar set ui_allow_kar98ksniper 1
+      cvar set scr_allow_mg34 1
+      cvar set ui_allow_mg34 1
+      cvar set scr_allow_fg42 1
+      cvar set ui_allow_fg42 1
+      cvar set scr_allow_panzerfaust 1
+      cvar set ui_allow_panzerfaust 1
+      cvar set scr_allow_bazooka 1
+      cvar set ui_allow_bazooka 1
+      cvar set scr_allow_panzerschreck 1
+      cvar set ui_allow_panzerschreck 1
+      cvar set scr_allow_flamethrower 1
+      cvar set ui_allow_flamethrower 1
+      cvar set scr_allow_binoculars 1
+      cvar set ui_allow_binoculars 1
+      cvar set scr_allow_artillery 1
+      cvar set ui_allow_artillery 1
+      cvar set scr_allow_satchel 1
+      cvar set ui_allow_satchel 1
+      cvar set scr_allow_grenades 1
+      cvar set ui_allow_grenades 1
+      cvar set scr_allow_smoke 1
+      cvar set ui_allow_smoke 1
+      cvar set scr_allow_pistols 1
+      cvar set ui_allow_pistols 1
+=============================== CVAR DUMP ========================================
+
+616 total cvars
+616 cvar indexes
+=============================== END CVAR DUMP =====================================
+      cvar set sv_paks 
+      cvar set sv_pakNames 
+      cvar set sv_referencedPaks 1069152445 1091839960 217417886 419375006 401794639 -914447005 -235342179 -659938473 -883723302 1622099944 -858314597 77111478 -1825805837 1048127331 411039402 323984529 -788625739 968878365 -961133319 
+      cvar set sv_referencedPakNames cod-stats/stoop-cod-stats-mod uo/uomappack00 uo/stoop-jeeparena uo/pakuo07 uo/pakuo04 uo/pakuo03 uo/pakuo01 uo/pakuo00 main/zzz_Rifle_RangeV1.3.1 main/pak9 main/pak8 main/pak5 main/pak4 main/pak0 uo/localized_english_pakuo01 uo/localized_english_pakuo00 main/localized_english_pak3 main/localized_english_pak2 main/localized_english_pak1
+      cvar set sv_serverRestarting 0
+-----------------------------------
+      cvar set sv_punkbuster 0
+      cvar set sv_cheats 0
+PunkBuster Server: 0 Aliases Written to pbalias.dat
+PunkBuster Server: 0 Stat Records Written to pbstat.dat
+PunkBuster Server: Preparing to Disable PB Server... (C:\Program Files\Call of Duty\pb\)
+Hitch warning: 3066 msec frame time
+Hitch warning: 2198 msec frame time
+Client 0 connecting with 50 challenge ping from 192.168.2.134:28960
+      cvar set cg_atmos -1
+Going from CS_FREE to CS_CONNECTED for Luda (num 0 guid 0)
+Client 1 connecting with 0 challenge ping from 192.168.2.105:28960
+      cvar set cg_atmos -1
+Going from CS_FREE to CS_CONNECTED for jpt-Lou Cenas (num 1 guid 0)
+clientDownload: 1 : file "cod-stats/stoop-cod-stats-mod.pk3" completed
+Client 2 connecting with 0 challenge ping from 192.168.2.2:28960
+      cvar set cg_atmos -1
+Going from CS_FREE to CS_CONNECTED for jpt-death taxi (num 2 guid 0)
+clientDownload: 2 : file "cod-stats/stoop-cod-stats-mod.pk3" completed
+Client 3 connecting with 0 challenge ping from 192.168.2.135:28960
+      cvar set cg_atmos -1
+Going from CS_FREE to CS_CONNECTED for Chocolate Flower (num 3 guid 0)
+clientDownload: 2 : file "uo/stoop-jeeparena.pk3" completed
+couldn't exec mp_ship_tdm.cfg
+==== ShutdownGame ====
+------ Server Initialization ------
+Server: mp_ship
+Hunk_Clear: reset the hunk ok
+Current language: english
+Current search path:
+C:\Program Files\Call of Duty\cod-stats\stoop-cod-stats-mod.pk3 (25 files)
+C:\Program Files\Call of Duty/cod-stats
+C:\Program Files\Call of Duty\uo\uomappack00.pk3 (143 files)
+C:\Program Files\Call of Duty\uo\stoop-warehouse-fun.pk3 (6 files)
+C:\Program Files\Call of Duty\uo\stoop-reserves.pk3 (16 files)
+C:\Program Files\Call of Duty\uo\stoop-jeeparena.pk3 (24 files)
+C:\Program Files\Call of Duty\uo\stoop-enclave.pk3 (16 files)
+C:\Program Files\Call of Duty\uo\pakuo07.pk3 (157 files)
+C:\Program Files\Call of Duty\uo\pakuo06.pk3 (12 files)
+C:\Program Files\Call of Duty\uo\pakuo05.pk3 (3 files)
+C:\Program Files\Call of Duty\uo\pakuo04.pk3 (7646 files)
+C:\Program Files\Call of Duty\uo\pakuo03.pk3 (2275 files)
+C:\Program Files\Call of Duty\uo\pakuo02.pk3 (790 files)
+C:\Program Files\Call of Duty\uo\pakuo01.pk3 (1657 files)
+C:\Program Files\Call of Duty\uo\pakuo00.pk3 (6233 files)
+C:\Program Files\Call of Duty/uo
+C:\Program Files\Call of Duty\main\zzz_Rifle_RangeV1.3.1.pk3 (66 files)
+C:\Program Files\Call of Duty\main\paka.pk3 (41 files)
+C:\Program Files\Call of Duty\main\pak9.pk3 (149 files)
+C:\Program Files\Call of Duty\main\pak8.pk3 (235 files)
+C:\Program Files\Call of Duty\main\pak6.pk3 (3 files)
+C:\Program Files\Call of Duty\main\pak5.pk3 (4858 files)
+C:\Program Files\Call of Duty\main\pak4.pk3 (1668 files)
+C:\Program Files\Call of Duty\main\pak3.pk3 (1992 files)
+C:\Program Files\Call of Duty\main\pak2.pk3 (694 files)
+C:\Program Files\Call of Duty\main\pak1.pk3 (2642 files)
+C:\Program Files\Call of Duty\main\pak0.pk3 (12816 files)
+C:\Program Files\Call of Duty/main
+C:\Program Files\Call of Duty\uo\localized_english_pakuo02.pk3 (12 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\uo\localized_english_pakuo01.pk3 (37 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\uo\localized_english_pakuo00.pk3 (2578 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\main\localized_english_pak3.pk3 (7 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\main\localized_english_pak2.pk3 (9 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\main\localized_english_pak1.pk3 (3736 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\main\localized_english_pak0.pk3 (1204 files)
+    localized assets pak file for english
+
+File Handles:
+handle 1: console_mp.log
+----------------------
+51750 files in pk3 files
+      cvar set cl_languagesavailable 1
+      cvar set g_gametype tdm
+      cvar set nextmap map_restart
+      cvar set com_expectedhunkusage 51746592
+      cvar set cl_paused 0
+      cvar set cm_noCurves 0
+      cvar set cm_playerCurveClip 1
+      cvar set mapname mp_ship
+      cvar set sv_serverid 32
+      cvar set sv_serverRestarting 1
+WARNING: Com_PushEvent overflow
+------- Game Initialization -------
+gamename: CoD:United Offensive
+gamedate: Dec  6 2004
+      cvar set g_debugDamage 0
+      cvar set g_debugBullets 0
+      cvar set g_tracerchancelmg 0.7
+      cvar set g_vehicleDrawPath 0
+      cvar set g_vehicleDebug 0
+      cvar set g_vehicleTexScrollScale 0
+      cvar set g_vehicleTrafficStressTest 0
+      cvar set bg_nofatigue 0
+      cvar set bg_fallDamageMinHeight 256
+      cvar set bg_fallDamageMaxHeight 480
+      cvar set bg_debugWeaponAnim 0
+      cvar set bg_debugWeaponState 0
+      cvar set g_bounds_width 30
+      cvar set g_bounds_height_standing 70
+      cvar set g_debugShowHit 0
+      cvar set g_debugLocDamage 0
+      cvar set g_debuganim 0
+      cvar set bg_swingSpeed 0.2
+      cvar set g_dumpAnims -1
+      cvar set cg_atmos -1
+      cvar set g_gravity 800
+0 teams with 0 entities
+      cvar set ui_allowvote 1
+      cvar set ui_allowVoteMapRestart 1
+      cvar set ui_allowVoteMapRotate 1
+      cvar set ui_allowVoteTypeMap 1
+      cvar set ui_allowVoteMap 1
+      cvar set ui_allowVoteGameType 1
+      cvar set ui_allowVoteKick 1
+      cvar set ui_allowVoteClientKick 1
+      cvar set ui_allowVoteTempBanUser 1
+      cvar set ui_allowVoteTempBanClient 1
+      cvar set ui_allowVoteDrawFriend 0
+      cvar set ui_allowVoteKillCam 0
+      cvar set ui_allowVoteFriendlyFire 0
+      cvar set ui_drawfriend 1
+      cvar set ui_friendlyfire 3
+      cvar set ui_killcam 1
+      cvar set ui_timeoutsAllowed 0
+      cvar set ui_timeoutBank 180000
+      cvar set ui_timeoutLength 90000
+      cvar set ui_timeoutRecovery 10000
+      cvar set cg_atmos -1
+-----------------------------------
+      cvar set ui_tdm_timelimit 30
+      cvar set ui_tdm_scorelimit 0
+      cvar set scr_teamscorepenalty 1
+      cvar set ui_battlerank 1
+      cvar set ui_shellshock 1
+      cvar set cg_hudcompassMaxRange 1024
+      cvar set scr_killcam 1
+      cvar set scr_ceasefire 0
+      cvar set sv_night 0
+      cvar set scr_layoutimage levelshots/layouts/hud@layout_mp_ship
+      cvar set g_TeamName_Allies MPSCRIPT_BRITISH
+      cvar set g_TeamColor_Allies .25 .25 .75
+      cvar set g_ScoresBanner_Allies gfx/hud/hud@mpflag_british.tga
+      cvar set g_TeamName_Axis MPSCRIPT_GERMAN
+      cvar set g_TeamColor_Axis .6 .6 .6
+      cvar set g_ScoresBanner_Axis gfx/hud/hud@mpflag_german.tga
+      cvar set sv_hostname G-Day XI
+      cvar set ui_hostname G-Day XI
+      cvar set scr_motd Welcome to G-Day XI!
+      cvar set ui_motd Welcome to G-Day XI!
+      cvar set g_allowvote 1
+      cvar set ui_allowvote 1
+      cvar set g_allowvotemaprestart 1
+      cvar set ui_allowvotemaprestart 1
+      cvar set g_allowvotemaprotate 1
+      cvar set ui_allowvotemaprotate 1
+      cvar set g_allowvotemap 1
+      cvar set ui_allowvotemap 1
+      cvar set g_allowvotetypemap 1
+      cvar set ui_allowvotetypemap 1
+      cvar set g_allowvotekick 1
+      cvar set ui_allowvotekick 1
+      cvar set g_allowvotetempbanuser 1
+      cvar set ui_allowvotetempbanuser 1
+      cvar set scr_friendlyfire 3
+      cvar set ui_friendlyfire 3
+      cvar set scr_allow_m1carbine 1
+      cvar set ui_allow_m1carbine 1
+      cvar set scr_allow_m1garand 1
+      cvar set ui_allow_m1garand 1
+      cvar set scr_allow_thompson 1
+      cvar set ui_allow_thompson 1
+      cvar set scr_allow_bar 1
+      cvar set ui_allow_bar 1
+      cvar set scr_allow_springfield 1
+      cvar set ui_allow_springfield 1
+      cvar set scr_allow_mg30cal 1
+      cvar set ui_allow_mg30cal 1
+      cvar set scr_allow_enfield 1
+      cvar set ui_allow_enfield 1
+      cvar set scr_allow_sten 1
+      cvar set ui_allow_sten 1
+      cvar set scr_allow_bren 1
+      cvar set ui_allow_bren 1
+      cvar set scr_allow_nagant 1
+      cvar set ui_allow_nagant 1
+      cvar set scr_allow_svt40 1
+      cvar set ui_allow_svt40 1
+      cvar set scr_allow_ppsh 1
+      cvar set ui_allow_ppsh 1
+      cvar set scr_allow_nagantsniper 1
+      cvar set ui_allow_nagantsniper 1
+      cvar set scr_allow_dp28 1
+      cvar set ui_allow_dp28 1
+      cvar set scr_allow_kar98k 1
+      cvar set ui_allow_kar98k 1
+      cvar set scr_allow_gewehr43 1
+      cvar set ui_allow_gewehr43 1
+      cvar set scr_allow_mp40 1
+      cvar set ui_allow_mp40 1
+      cvar set scr_allow_mp44 1
+      cvar set ui_allow_mp44 1
+      cvar set scr_allow_kar98ksniper 1
+      cvar set ui_allow_kar98ksniper 1
+      cvar set scr_allow_mg34 1
+      cvar set ui_allow_mg34 1
+      cvar set scr_allow_fg42 1
+      cvar set ui_allow_fg42 1
+      cvar set scr_allow_panzerfaust 1
+      cvar set ui_allow_panzerfaust 1
+      cvar set scr_allow_bazooka 1
+      cvar set ui_allow_bazooka 1
+      cvar set scr_allow_panzerschreck 1
+      cvar set ui_allow_panzerschreck 1
+      cvar set scr_allow_flamethrower 1
+      cvar set ui_allow_flamethrower 1
+      cvar set scr_allow_binoculars 1
+      cvar set ui_allow_binoculars 1
+      cvar set scr_allow_artillery 1
+      cvar set ui_allow_artillery 1
+      cvar set scr_allow_satchel 1
+      cvar set ui_allow_satchel 1
+      cvar set scr_allow_grenades 1
+      cvar set ui_allow_grenades 1
+      cvar set scr_allow_smoke 1
+      cvar set ui_allow_smoke 1
+      cvar set scr_allow_pistols 1
+      cvar set ui_allow_pistols 1
+=============================== CVAR DUMP ========================================
+
+616 total cvars
+616 cvar indexes
+=============================== END CVAR DUMP =====================================
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set sv_paks 
+      cvar set sv_pakNames 
+      cvar set sv_referencedPaks 1069152445 217417886 419375006 401794639 -914447005 -235342179 -659938473 -883723302 1622099944 -858314597 77111478 -1825805837 1048127331 411039402 323984529 -788625739 968878365 -961133319 
+      cvar set sv_referencedPakNames cod-stats/stoop-cod-stats-mod uo/stoop-jeeparena uo/pakuo07 uo/pakuo04 uo/pakuo03 uo/pakuo01 uo/pakuo00 main/zzz_Rifle_RangeV1.3.1 main/pak9 main/pak8 main/pak5 main/pak4 main/pak0 uo/localized_english_pakuo01 uo/localized_english_pakuo00 main/localized_english_pak3 main/localized_english_pak2 main/localized_english_pak1
+      cvar set sv_serverRestarting 0
+-----------------------------------
+      cvar set sv_punkbuster 0
+      cvar set sv_cheats 0
+PunkBuster Server: 0 Aliases Written to pbalias.dat
+PunkBuster Server: 0 Stat Records Written to pbstat.dat
+PunkBuster Server: Preparing to Disable PB Server... (C:\Program Files\Call of Duty\pb\)
+Hitch warning: 5480 msec frame time
+
+******* script runtime error *******
+cannot cast undefined to bool: (file 'maps\mp\gametypes\tdm.gsc', line 823)
+  if (level.teamkill_penalty)
+            *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 65)
+ [[level.callbackPlayerKilled]](eInflictor, eAttacker, iDamage, sMeansOfDeath, sWeapon, vDir, sHitLoc);
+         *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 63)
+CodeCallback_PlayerKilled(eInflictor, eAttacker, iDamage, sMeansOfDeath, sWeapon, vDir, sHitLoc)
+*
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 56)
+ [[level.callbackPlayerDamage]](eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc);
+         *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 54)
+CodeCallback_PlayerDamage(eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc)
+*
+************************************
+^9jpt-Homobonerus^7: Oh yea?
+^9jpt-Homobonerus^7: I've got a thing to say about that.
+^9jpt-chocolate chocolate^7: yeah
+^9(GAME_DEAD)jpt-Homobonerus^7: Go to hell Luda.
+^9jpt-chocolate chocolate^7: fuck that
+^8Chocolate Flower^7: Oh, my friend, Chuck?
+^9(GAME_DEAD)jpt-Homobonerus^7: Go to hell chocolate.
+^8Chocolate Flower^7: He loves beer
+^9(GAME_DEAD)jpt-Homobonerus^7: I hate Luda.
+^9(GAME_DEAD)(GAME_AXIS)jpt-Homobonerus^7: My team!
+^9jpt-chocolate chocolate^7: everyone hates luda
+^8Chocolate Flower^7: plus
+^9jpt-chocolate chocolate^7: luda, you can't reach the top!
+^8Chocolate Flower^7: Cuz he's chatty
+^8Chocolate Flower^7: and he's cathy
+^9jpt-Homobonerus^7: And he's luda
+^8Chocolate Flower^7: that's for sure
+^9jpt-Homobonerus^7: When he's talking to you
+
+******* script runtime error *******
+cannot cast undefined to bool: (file 'maps\mp\gametypes\tdm.gsc', line 823)
+  if (level.teamkill_penalty)
+            *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 65)
+ [[level.callbackPlayerKilled]](eInflictor, eAttacker, iDamage, sMeansOfDeath, sWeapon, vDir, sHitLoc);
+         *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 63)
+CodeCallback_PlayerKilled(eInflictor, eAttacker, iDamage, sMeansOfDeath, sWeapon, vDir, sHitLoc)
+*
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 56)
+ [[level.callbackPlayerDamage]](eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc);
+         *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 54)
+CodeCallback_PlayerDamage(eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc)
+*
+************************************
+^8Chocolate Flower^7: and he's listening to me
+^9jpt-Homobonerus^7: You really wanna put your foot in his ass
+^8Chocolate Flower^7: you really wanna
+^9jpt-Homobonerus^7: You wanna stick your foot in his ass
+^9jpt-Homobonerus^7: what you want?
+^9jpt-Homobonerus^7: DAmn your eyes!
+couldn't exec mp_cassino_tdm.cfg
+==== ShutdownGame ====
+------ Server Initialization ------
+Server: mp_cassino
+Hunk_Clear: reset the hunk ok
+Current language: english
+Current search path:
+C:\Program Files\Call of Duty\cod-stats\stoop-cod-stats-mod.pk3 (25 files)
+C:\Program Files\Call of Duty/cod-stats
+C:\Program Files\Call of Duty\uo\uomappack00.pk3 (143 files)
+C:\Program Files\Call of Duty\uo\stoop-warehouse-fun.pk3 (6 files)
+C:\Program Files\Call of Duty\uo\stoop-reserves.pk3 (16 files)
+C:\Program Files\Call of Duty\uo\stoop-jeeparena.pk3 (24 files)
+C:\Program Files\Call of Duty\uo\stoop-enclave.pk3 (16 files)
+C:\Program Files\Call of Duty\uo\pakuo07.pk3 (157 files)
+C:\Program Files\Call of Duty\uo\pakuo06.pk3 (12 files)
+C:\Program Files\Call of Duty\uo\pakuo05.pk3 (3 files)
+C:\Program Files\Call of Duty\uo\pakuo04.pk3 (7646 files)
+C:\Program Files\Call of Duty\uo\pakuo03.pk3 (2275 files)
+C:\Program Files\Call of Duty\uo\pakuo02.pk3 (790 files)
+C:\Program Files\Call of Duty\uo\pakuo01.pk3 (1657 files)
+C:\Program Files\Call of Duty\uo\pakuo00.pk3 (6233 files)
+C:\Program Files\Call of Duty/uo
+C:\Program Files\Call of Duty\main\zzz_Rifle_RangeV1.3.1.pk3 (66 files)
+C:\Program Files\Call of Duty\main\paka.pk3 (41 files)
+C:\Program Files\Call of Duty\main\pak9.pk3 (149 files)
+C:\Program Files\Call of Duty\main\pak8.pk3 (235 files)
+C:\Program Files\Call of Duty\main\pak6.pk3 (3 files)
+C:\Program Files\Call of Duty\main\pak5.pk3 (4858 files)
+C:\Program Files\Call of Duty\main\pak4.pk3 (1668 files)
+C:\Program Files\Call of Duty\main\pak3.pk3 (1992 files)
+C:\Program Files\Call of Duty\main\pak2.pk3 (694 files)
+C:\Program Files\Call of Duty\main\pak1.pk3 (2642 files)
+C:\Program Files\Call of Duty\main\pak0.pk3 (12816 files)
+C:\Program Files\Call of Duty/main
+C:\Program Files\Call of Duty\uo\localized_english_pakuo02.pk3 (12 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\uo\localized_english_pakuo01.pk3 (37 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\uo\localized_english_pakuo00.pk3 (2578 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\main\localized_english_pak3.pk3 (7 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\main\localized_english_pak2.pk3 (9 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\main\localized_english_pak1.pk3 (3736 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\main\localized_english_pak0.pk3 (1204 files)
+    localized assets pak file for english
+
+File Handles:
+handle 1: console_mp.log
+----------------------
+51750 files in pk3 files
+      cvar set cl_languagesavailable 1
+      cvar set g_gametype tdm
+      cvar set nextmap map_restart
+      cvar set com_expectedhunkusage 83530880
+      cvar set cl_paused 0
+      cvar set cm_noCurves 0
+      cvar set cm_playerCurveClip 1
+      cvar set mapname mp_cassino
+      cvar set sv_serverid 48
+      cvar set sv_serverRestarting 1
+WARNING: Com_PushEvent overflow
+------- Game Initialization -------
+gamename: CoD:United Offensive
+gamedate: Dec  6 2004
+      cvar set g_debugDamage 0
+      cvar set g_debugBullets 0
+      cvar set g_tracerchancelmg 0.7
+      cvar set g_vehicleDrawPath 0
+      cvar set g_vehicleDebug 0
+      cvar set g_vehicleTexScrollScale 0
+      cvar set g_vehicleTrafficStressTest 0
+      cvar set bg_nofatigue 0
+      cvar set bg_fallDamageMinHeight 256
+      cvar set bg_fallDamageMaxHeight 480
+      cvar set bg_debugWeaponAnim 0
+      cvar set bg_debugWeaponState 0
+      cvar set g_bounds_width 30
+      cvar set g_bounds_height_standing 70
+      cvar set g_debugShowHit 0
+      cvar set g_debugLocDamage 0
+      cvar set g_debuganim 0
+      cvar set bg_swingSpeed 0.2
+      cvar set g_dumpAnims -1
+      cvar set cg_atmos -1
+      cvar set g_gravity 800
+0 teams with 0 entities
+      cvar set ui_allowvote 1
+      cvar set ui_allowVoteMapRestart 1
+      cvar set ui_allowVoteMapRotate 1
+      cvar set ui_allowVoteTypeMap 1
+      cvar set ui_allowVoteMap 1
+      cvar set ui_allowVoteGameType 1
+      cvar set ui_allowVoteKick 1
+      cvar set ui_allowVoteClientKick 1
+      cvar set ui_allowVoteTempBanUser 1
+      cvar set ui_allowVoteTempBanClient 1
+      cvar set ui_allowVoteDrawFriend 0
+      cvar set ui_allowVoteKillCam 0
+      cvar set ui_allowVoteFriendlyFire 0
+      cvar set ui_drawfriend 1
+      cvar set ui_friendlyfire 3
+      cvar set ui_killcam 1
+      cvar set ui_timeoutsAllowed 0
+      cvar set ui_timeoutBank 180000
+      cvar set ui_timeoutLength 90000
+      cvar set ui_timeoutRecovery 10000
+      cvar set cg_atmos -1
+-----------------------------------
+      cvar set ui_tdm_timelimit 30
+      cvar set ui_tdm_scorelimit 0
+      cvar set scr_teamscorepenalty 1
+      cvar set ui_battlerank 1
+      cvar set ui_shellshock 1
+      cvar set cg_hudcompassMaxRange 1024
+      cvar set scr_killcam 1
+      cvar set scr_ceasefire 0
+      cvar set sv_night 0
+      cvar set scr_tank_respawn_wait 10
+      cvar set scr_tank_spawn_limit 0
+      cvar set scr_allow_tanks 1
+      cvar set ui_allow_tanks 1
+      cvar set scr_allow_t34 1
+      cvar set ui_allow_t34 1
+      cvar set scr_allow_elefant 1
+      cvar set ui_allow_elefant 1
+      cvar set scr_allow_sherman 1
+      cvar set ui_allow_sherman 1
+      cvar set scr_allow_panzeriv 1
+      cvar set ui_allow_panzeriv 1
+      cvar set scr_allow_su152 1
+      cvar set ui_allow_su152 1
+      cvar set hurtgentrees off
+      cvar set scr_layoutimage levelshots/layouts/hud@layout_mp_cassino.dds
+      cvar set g_TeamName_Allies MPSCRIPT_AMERICAN
+      cvar set g_TeamColor_Allies .25 .75 .25
+      cvar set g_ScoresBanner_Allies gfx/hud/hud@mpflag_american.tga
+      cvar set g_TeamName_Axis MPSCRIPT_GERMAN
+      cvar set g_TeamColor_Axis .6 .6 .6
+      cvar set g_ScoresBanner_Axis gfx/hud/hud@mpflag_german.tga
+      cvar set sv_hostname G-Day XI
+      cvar set ui_hostname G-Day XI
+      cvar set scr_motd Welcome to G-Day XI!
+      cvar set ui_motd Welcome to G-Day XI!
+      cvar set g_allowvote 1
+      cvar set ui_allowvote 1
+      cvar set g_allowvotemaprestart 1
+      cvar set ui_allowvotemaprestart 1
+      cvar set g_allowvotemaprotate 1
+      cvar set ui_allowvotemaprotate 1
+      cvar set g_allowvotemap 1
+      cvar set ui_allowvotemap 1
+      cvar set g_allowvotetypemap 1
+      cvar set ui_allowvotetypemap 1
+      cvar set g_allowvotekick 1
+      cvar set ui_allowvotekick 1
+      cvar set g_allowvotetempbanuser 1
+      cvar set ui_allowvotetempbanuser 1
+      cvar set scr_friendlyfire 3
+      cvar set ui_friendlyfire 3
+      cvar set scr_allow_m1carbine 1
+      cvar set ui_allow_m1carbine 1
+      cvar set scr_allow_m1garand 1
+      cvar set ui_allow_m1garand 1
+      cvar set scr_allow_thompson 1
+      cvar set ui_allow_thompson 1
+      cvar set scr_allow_bar 1
+      cvar set ui_allow_bar 1
+      cvar set scr_allow_springfield 1
+      cvar set ui_allow_springfield 1
+      cvar set scr_allow_mg30cal 1
+      cvar set ui_allow_mg30cal 1
+      cvar set scr_allow_enfield 1
+      cvar set ui_allow_enfield 1
+      cvar set scr_allow_sten 1
+      cvar set ui_allow_sten 1
+      cvar set scr_allow_bren 1
+      cvar set ui_allow_bren 1
+      cvar set scr_allow_nagant 1
+      cvar set ui_allow_nagant 1
+      cvar set scr_allow_svt40 1
+      cvar set ui_allow_svt40 1
+      cvar set scr_allow_ppsh 1
+      cvar set ui_allow_ppsh 1
+      cvar set scr_allow_nagantsniper 1
+      cvar set ui_allow_nagantsniper 1
+      cvar set scr_allow_dp28 1
+      cvar set ui_allow_dp28 1
+      cvar set scr_allow_kar98k 1
+      cvar set ui_allow_kar98k 1
+      cvar set scr_allow_gewehr43 1
+      cvar set ui_allow_gewehr43 1
+      cvar set scr_allow_mp40 1
+      cvar set ui_allow_mp40 1
+      cvar set scr_allow_mp44 1
+      cvar set ui_allow_mp44 1
+      cvar set scr_allow_kar98ksniper 1
+      cvar set ui_allow_kar98ksniper 1
+      cvar set scr_allow_mg34 1
+      cvar set ui_allow_mg34 1
+      cvar set scr_allow_fg42 1
+      cvar set ui_allow_fg42 1
+      cvar set scr_allow_panzerfaust 1
+      cvar set ui_allow_panzerfaust 1
+      cvar set scr_allow_bazooka 1
+      cvar set ui_allow_bazooka 1
+      cvar set scr_allow_panzerschreck 1
+      cvar set ui_allow_panzerschreck 1
+      cvar set scr_allow_flamethrower 1
+      cvar set ui_allow_flamethrower 1
+      cvar set scr_allow_binoculars 1
+      cvar set ui_allow_binoculars 1
+      cvar set scr_allow_artillery 1
+      cvar set ui_allow_artillery 1
+      cvar set scr_allow_satchel 1
+      cvar set ui_allow_satchel 1
+      cvar set scr_allow_grenades 1
+      cvar set ui_allow_grenades 1
+      cvar set scr_allow_smoke 1
+      cvar set ui_allow_smoke 1
+      cvar set scr_allow_pistols 1
+      cvar set ui_allow_pistols 1
+=============================== CVAR DUMP ========================================
+
+625 total cvars
+625 cvar indexes
+=============================== END CVAR DUMP =====================================
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set sv_paks 
+      cvar set sv_pakNames 
+      cvar set sv_referencedPaks 1069152445 217417886 419375006 401794639 -914447005 -235342179 -659938473 -883723302 1622099944 -858314597 77111478 -1825805837 1048127331 411039402 323984529 -788625739 968878365 -961133319 
+      cvar set sv_referencedPakNames cod-stats/stoop-cod-stats-mod uo/stoop-jeeparena uo/pakuo07 uo/pakuo04 uo/pakuo03 uo/pakuo01 uo/pakuo00 main/zzz_Rifle_RangeV1.3.1 main/pak9 main/pak8 main/pak5 main/pak4 main/pak0 uo/localized_english_pakuo01 uo/localized_english_pakuo00 main/localized_english_pak3 main/localized_english_pak2 main/localized_english_pak1
+      cvar set sv_serverRestarting 0
+-----------------------------------
+      cvar set sv_punkbuster 0
+      cvar set sv_cheats 0
+PunkBuster Server: 0 Aliases Written to pbalias.dat
+PunkBuster Server: 0 Stat Records Written to pbstat.dat
+PunkBuster Server: Preparing to Disable PB Server... (C:\Program Files\Call of Duty\pb\)
+Hitch warning: 5104 msec frame time
+^9jpt-Homobonerus^7: I go squish now!
+
+******* script runtime error *******
+cannot cast undefined to bool: (file 'maps\mp\gametypes\tdm.gsc', line 823)
+  if (level.teamkill_penalty)
+            *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 65)
+ [[level.callbackPlayerKilled]](eInflictor, eAttacker, iDamage, sMeansOfDeath, sWeapon, vDir, sHitLoc);
+         *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 63)
+CodeCallback_PlayerKilled(eInflictor, eAttacker, iDamage, sMeansOfDeath, sWeapon, vDir, sHitLoc)
+*
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 56)
+ [[level.callbackPlayerDamage]](eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc);
+         *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 54)
+CodeCallback_PlayerDamage(eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc)
+*
+called from:
+(file 'maps\mp\_tankeffects_gmi.gsc', line 230)
+  wait 0.5;
+  *
+************************************
+Hitch warning: 503 msec frame time
+couldn't exec warehouse_fun_tdm.cfg
+==== ShutdownGame ====
+------ Server Initialization ------
+Server: warehouse_fun
+Hunk_Clear: reset the hunk ok
+Current language: english
+Current search path:
+C:\Program Files\Call of Duty\cod-stats\stoop-cod-stats-mod.pk3 (25 files)
+C:\Program Files\Call of Duty/cod-stats
+C:\Program Files\Call of Duty\uo\uomappack00.pk3 (143 files)
+C:\Program Files\Call of Duty\uo\stoop-warehouse-fun.pk3 (6 files)
+C:\Program Files\Call of Duty\uo\stoop-reserves.pk3 (16 files)
+C:\Program Files\Call of Duty\uo\stoop-jeeparena.pk3 (24 files)
+C:\Program Files\Call of Duty\uo\stoop-enclave.pk3 (16 files)
+C:\Program Files\Call of Duty\uo\pakuo07.pk3 (157 files)
+C:\Program Files\Call of Duty\uo\pakuo06.pk3 (12 files)
+C:\Program Files\Call of Duty\uo\pakuo05.pk3 (3 files)
+C:\Program Files\Call of Duty\uo\pakuo04.pk3 (7646 files)
+C:\Program Files\Call of Duty\uo\pakuo03.pk3 (2275 files)
+C:\Program Files\Call of Duty\uo\pakuo02.pk3 (790 files)
+C:\Program Files\Call of Duty\uo\pakuo01.pk3 (1657 files)
+C:\Program Files\Call of Duty\uo\pakuo00.pk3 (6233 files)
+C:\Program Files\Call of Duty/uo
+C:\Program Files\Call of Duty\main\zzz_Rifle_RangeV1.3.1.pk3 (66 files)
+C:\Program Files\Call of Duty\main\paka.pk3 (41 files)
+C:\Program Files\Call of Duty\main\pak9.pk3 (149 files)
+C:\Program Files\Call of Duty\main\pak8.pk3 (235 files)
+C:\Program Files\Call of Duty\main\pak6.pk3 (3 files)
+C:\Program Files\Call of Duty\main\pak5.pk3 (4858 files)
+C:\Program Files\Call of Duty\main\pak4.pk3 (1668 files)
+C:\Program Files\Call of Duty\main\pak3.pk3 (1992 files)
+C:\Program Files\Call of Duty\main\pak2.pk3 (694 files)
+C:\Program Files\Call of Duty\main\pak1.pk3 (2642 files)
+C:\Program Files\Call of Duty\main\pak0.pk3 (12816 files)
+C:\Program Files\Call of Duty/main
+C:\Program Files\Call of Duty\uo\localized_english_pakuo02.pk3 (12 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\uo\localized_english_pakuo01.pk3 (37 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\uo\localized_english_pakuo00.pk3 (2578 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\main\localized_english_pak3.pk3 (7 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\main\localized_english_pak2.pk3 (9 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\main\localized_english_pak1.pk3 (3736 files)
+    localized assets pak file for english
+C:\Program Files\Call of Duty\main\localized_english_pak0.pk3 (1204 files)
+    localized assets pak file for english
+
+File Handles:
+handle 1: console_mp.log
+----------------------
+51750 files in pk3 files
+      cvar set cl_languagesavailable 1
+      cvar set g_gametype tdm
+      cvar set nextmap map_restart
+      cvar set com_expectedhunkusage 64680896
+      cvar set cl_paused 0
+      cvar set cm_noCurves 0
+      cvar set cm_playerCurveClip 1
+      cvar set mapname warehouse_fun
+      cvar set sv_serverid 64
+      cvar set sv_serverRestarting 1
+WARNING: Com_PushEvent overflow
+------- Game Initialization -------
+gamename: CoD:United Offensive
+gamedate: Dec  6 2004
+      cvar set g_debugDamage 0
+      cvar set g_debugBullets 0
+      cvar set g_tracerchancelmg 0.7
+      cvar set g_vehicleDrawPath 0
+      cvar set g_vehicleDebug 0
+      cvar set g_vehicleTexScrollScale 0
+      cvar set g_vehicleTrafficStressTest 0
+      cvar set bg_nofatigue 0
+      cvar set bg_fallDamageMinHeight 256
+      cvar set bg_fallDamageMaxHeight 480
+      cvar set bg_debugWeaponAnim 0
+      cvar set bg_debugWeaponState 0
+      cvar set g_bounds_width 30
+      cvar set g_bounds_height_standing 70
+      cvar set g_debugShowHit 0
+      cvar set g_debugLocDamage 0
+      cvar set g_debuganim 0
+      cvar set bg_swingSpeed 0.2
+      cvar set g_dumpAnims -1
+      cvar set cg_atmos -1
+      cvar set g_gravity 800
+0 teams with 0 entities
+      cvar set ui_allowvote 1
+      cvar set ui_allowVoteMapRestart 1
+      cvar set ui_allowVoteMapRotate 1
+      cvar set ui_allowVoteTypeMap 1
+      cvar set ui_allowVoteMap 1
+      cvar set ui_allowVoteGameType 1
+      cvar set ui_allowVoteKick 1
+      cvar set ui_allowVoteClientKick 1
+      cvar set ui_allowVoteTempBanUser 1
+      cvar set ui_allowVoteTempBanClient 1
+      cvar set ui_allowVoteDrawFriend 0
+      cvar set ui_allowVoteKillCam 0
+      cvar set ui_allowVoteFriendlyFire 0
+      cvar set ui_drawfriend 1
+      cvar set ui_friendlyfire 3
+      cvar set ui_killcam 1
+      cvar set ui_timeoutsAllowed 0
+      cvar set ui_timeoutBank 180000
+      cvar set ui_timeoutLength 90000
+      cvar set ui_timeoutRecovery 10000
+      cvar set cg_atmos -1
+-----------------------------------
+      cvar set ui_tdm_timelimit 30
+      cvar set ui_tdm_scorelimit 0
+      cvar set scr_teamscorepenalty 1
+      cvar set ui_battlerank 1
+      cvar set ui_shellshock 1
+      cvar set cg_hudcompassMaxRange 1024
+      cvar set scr_killcam 1
+      cvar set scr_ceasefire 0
+      cvar set scr_layoutimage levelshots/layouts/hud@layout_default
+      cvar set g_TeamName_Allies MPSCRIPT_AMERICAN
+      cvar set g_TeamColor_Allies .25 .75 .25
+      cvar set g_ScoresBanner_Allies gfx/hud/hud@mpflag_american.tga
+      cvar set g_TeamName_Axis MPSCRIPT_GERMAN
+      cvar set g_TeamColor_Axis .6 .6 .6
+      cvar set g_ScoresBanner_Axis gfx/hud/hud@mpflag_german.tga
+      cvar set sv_hostname G-Day XI
+      cvar set ui_hostname G-Day XI
+      cvar set scr_motd Welcome to G-Day XI!
+      cvar set ui_motd Welcome to G-Day XI!
+      cvar set g_allowvote 1
+      cvar set ui_allowvote 1
+      cvar set g_allowvotemaprestart 1
+      cvar set ui_allowvotemaprestart 1
+      cvar set g_allowvotemaprotate 1
+      cvar set ui_allowvotemaprotate 1
+      cvar set g_allowvotemap 1
+      cvar set ui_allowvotemap 1
+      cvar set g_allowvotetypemap 1
+      cvar set ui_allowvotetypemap 1
+      cvar set g_allowvotekick 1
+      cvar set ui_allowvotekick 1
+      cvar set g_allowvotetempbanuser 1
+      cvar set ui_allowvotetempbanuser 1
+      cvar set scr_friendlyfire 3
+      cvar set ui_friendlyfire 3
+      cvar set scr_allow_m1carbine 1
+      cvar set ui_allow_m1carbine 1
+      cvar set scr_allow_m1garand 1
+      cvar set ui_allow_m1garand 1
+      cvar set scr_allow_thompson 1
+      cvar set ui_allow_thompson 1
+      cvar set scr_allow_bar 1
+      cvar set ui_allow_bar 1
+      cvar set scr_allow_springfield 1
+      cvar set ui_allow_springfield 1
+      cvar set scr_allow_mg30cal 1
+      cvar set ui_allow_mg30cal 1
+      cvar set scr_allow_enfield 1
+      cvar set ui_allow_enfield 1
+      cvar set scr_allow_sten 1
+      cvar set ui_allow_sten 1
+      cvar set scr_allow_bren 1
+      cvar set ui_allow_bren 1
+      cvar set scr_allow_nagant 1
+      cvar set ui_allow_nagant 1
+      cvar set scr_allow_svt40 1
+      cvar set ui_allow_svt40 1
+      cvar set scr_allow_ppsh 1
+      cvar set ui_allow_ppsh 1
+      cvar set scr_allow_nagantsniper 1
+      cvar set ui_allow_nagantsniper 1
+      cvar set scr_allow_dp28 1
+      cvar set ui_allow_dp28 1
+      cvar set scr_allow_kar98k 1
+      cvar set ui_allow_kar98k 1
+      cvar set scr_allow_gewehr43 1
+      cvar set ui_allow_gewehr43 1
+      cvar set scr_allow_mp40 1
+      cvar set ui_allow_mp40 1
+      cvar set scr_allow_mp44 1
+      cvar set ui_allow_mp44 1
+      cvar set scr_allow_kar98ksniper 1
+      cvar set ui_allow_kar98ksniper 1
+      cvar set scr_allow_mg34 1
+      cvar set ui_allow_mg34 1
+      cvar set scr_allow_fg42 1
+      cvar set ui_allow_fg42 1
+      cvar set scr_allow_panzerfaust 1
+      cvar set ui_allow_panzerfaust 1
+      cvar set scr_allow_bazooka 1
+      cvar set ui_allow_bazooka 1
+      cvar set scr_allow_panzerschreck 1
+      cvar set ui_allow_panzerschreck 1
+      cvar set scr_allow_flamethrower 1
+      cvar set ui_allow_flamethrower 1
+      cvar set scr_allow_binoculars 1
+      cvar set ui_allow_binoculars 1
+      cvar set scr_allow_artillery 1
+      cvar set ui_allow_artillery 1
+      cvar set scr_allow_satchel 1
+      cvar set ui_allow_satchel 1
+      cvar set scr_allow_grenades 1
+      cvar set ui_allow_grenades 1
+      cvar set scr_allow_smoke 1
+      cvar set ui_allow_smoke 1
+      cvar set scr_allow_pistols 1
+      cvar set ui_allow_pistols 1
+=============================== CVAR DUMP ========================================
+
+625 total cvars
+625 cvar indexes
+=============================== END CVAR DUMP =====================================
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set cg_atmos -1
+      cvar set sv_paks 
+      cvar set sv_pakNames 
+      cvar set sv_referencedPaks 1069152445 -1310450077 217417886 419375006 401794639 -914447005 -235342179 -659938473 -883723302 -858314597 77111478 -1825805837 1048127331 411039402 323984529 -788625739 968878365 -961133319 
+      cvar set sv_referencedPakNames cod-stats/stoop-cod-stats-mod uo/stoop-warehouse-fun uo/stoop-jeeparena uo/pakuo07 uo/pakuo04 uo/pakuo03 uo/pakuo01 uo/pakuo00 main/zzz_Rifle_RangeV1.3.1 main/pak8 main/pak5 main/pak4 main/pak0 uo/localized_english_pakuo01 uo/localized_english_pakuo00 main/localized_english_pak3 main/localized_english_pak2 main/localized_english_pak1
+      cvar set sv_serverRestarting 0
+-----------------------------------
+      cvar set sv_punkbuster 0
+      cvar set sv_cheats 0
+PunkBuster Server: 0 Aliases Written to pbalias.dat
+PunkBuster Server: 0 Stat Records Written to pbstat.dat
+PunkBuster Server: Preparing to Disable PB Server... (C:\Program Files\Call of Duty\pb\)
+Hitch warning: 3146 msec frame time
+clientDownload: 2 : file "uo/stoop-warehouse-fun.pk3" completed
+1:jpt-Homobonerus EXE_DISCONNECTED
+Client 4 connecting with 0 challenge ping from 192.168.2.105:28960
+      cvar set cg_atmos -1
+Going from CS_FREE to CS_CONNECTED for jpt-Lou Cenas (num 1 guid 0)
+
+******* script runtime error *******
+cannot cast undefined to bool: (file 'maps\mp\gametypes\tdm.gsc', line 823)
+  if (level.teamkill_penalty)
+            *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 65)
+ [[level.callbackPlayerKilled]](eInflictor, eAttacker, iDamage, sMeansOfDeath, sWeapon, vDir, sHitLoc);
+         *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 63)
+CodeCallback_PlayerKilled(eInflictor, eAttacker, iDamage, sMeansOfDeath, sWeapon, vDir, sHitLoc)
+*
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 56)
+ [[level.callbackPlayerDamage]](eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc);
+         *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 54)
+CodeCallback_PlayerDamage(eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc)
+*
+************************************
+
+******* script runtime error *******
+cannot cast undefined to bool: (file 'maps\mp\gametypes\tdm.gsc', line 823)
+  if (level.teamkill_penalty)
+            *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 65)
+ [[level.callbackPlayerKilled]](eInflictor, eAttacker, iDamage, sMeansOfDeath, sWeapon, vDir, sHitLoc);
+         *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 63)
+CodeCallback_PlayerKilled(eInflictor, eAttacker, iDamage, sMeansOfDeath, sWeapon, vDir, sHitLoc)
+*
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 56)
+ [[level.callbackPlayerDamage]](eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc);
+         *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 54)
+CodeCallback_PlayerDamage(eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc)
+*
+************************************
+
+******* script runtime error *******
+cannot cast undefined to bool: (file 'maps\mp\gametypes\tdm.gsc', line 823)
+  if (level.teamkill_penalty)
+            *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 65)
+ [[level.callbackPlayerKilled]](eInflictor, eAttacker, iDamage, sMeansOfDeath, sWeapon, vDir, sHitLoc);
+         *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 63)
+CodeCallback_PlayerKilled(eInflictor, eAttacker, iDamage, sMeansOfDeath, sWeapon, vDir, sHitLoc)
+*
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 56)
+ [[level.callbackPlayerDamage]](eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc);
+         *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 54)
+CodeCallback_PlayerDamage(eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc)
+*
+************************************
+
+******* script runtime error *******
+cannot cast undefined to bool: (file 'maps\mp\gametypes\tdm.gsc', line 823)
+  if (level.teamkill_penalty)
+            *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 65)
+ [[level.callbackPlayerKilled]](eInflictor, eAttacker, iDamage, sMeansOfDeath, sWeapon, vDir, sHitLoc);
+         *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 63)
+CodeCallback_PlayerKilled(eInflictor, eAttacker, iDamage, sMeansOfDeath, sWeapon, vDir, sHitLoc)
+*
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 56)
+ [[level.callbackPlayerDamage]](eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc);
+         *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 54)
+CodeCallback_PlayerDamage(eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc)
+*
+************************************
+
+******* script runtime error *******
+cannot cast undefined to bool: (file 'maps\mp\gametypes\tdm.gsc', line 823)
+  if (level.teamkill_penalty)
+            *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 65)
+ [[level.callbackPlayerKilled]](eInflictor, eAttacker, iDamage, sMeansOfDeath, sWeapon, vDir, sHitLoc);
+         *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 63)
+CodeCallback_PlayerKilled(eInflictor, eAttacker, iDamage, sMeansOfDeath, sWeapon, vDir, sHitLoc)
+*
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 56)
+ [[level.callbackPlayerDamage]](eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc);
+         *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 54)
+CodeCallback_PlayerDamage(eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc)
+*
+************************************
+
+******* script runtime error *******
+cannot cast undefined to bool: (file 'maps\mp\gametypes\tdm.gsc', line 823)
+  if (level.teamkill_penalty)
+            *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 65)
+ [[level.callbackPlayerKilled]](eInflictor, eAttacker, iDamage, sMeansOfDeath, sWeapon, vDir, sHitLoc);
+         *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 63)
+CodeCallback_PlayerKilled(eInflictor, eAttacker, iDamage, sMeansOfDeath, sWeapon, vDir, sHitLoc)
+*
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 56)
+ [[level.callbackPlayerDamage]](eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc);
+         *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 54)
+CodeCallback_PlayerDamage(eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc)
+*
+************************************
+
+******* script runtime error *******
+cannot cast undefined to bool: (file 'maps\mp\gametypes\tdm.gsc', line 823)
+  if (level.teamkill_penalty)
+            *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 65)
+ [[level.callbackPlayerKilled]](eInflictor, eAttacker, iDamage, sMeansOfDeath, sWeapon, vDir, sHitLoc);
+         *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 63)
+CodeCallback_PlayerKilled(eInflictor, eAttacker, iDamage, sMeansOfDeath, sWeapon, vDir, sHitLoc)
+*
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 56)
+ [[level.callbackPlayerDamage]](eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc);
+         *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 54)
+CodeCallback_PlayerDamage(eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc)
+*
+************************************
+Unknown command "announce"
+Unknown command "client_announce"
+
+******* script runtime error *******
+cannot cast undefined to bool: (file 'maps\mp\gametypes\tdm.gsc', line 823)
+  if (level.teamkill_penalty)
+            *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 65)
+ [[level.callbackPlayerKilled]](eInflictor, eAttacker, iDamage, sMeansOfDeath, sWeapon, vDir, sHitLoc);
+         *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 63)
+CodeCallback_PlayerKilled(eInflictor, eAttacker, iDamage, sMeansOfDeath, sWeapon, vDir, sHitLoc)
+*
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 56)
+ [[level.callbackPlayerDamage]](eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc);
+         *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 54)
+CodeCallback_PlayerDamage(eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc)
+*
+************************************
+
+******* script runtime error *******
+cannot cast undefined to bool: (file 'maps\mp\gametypes\tdm.gsc', line 823)
+  if (level.teamkill_penalty)
+            *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 65)
+ [[level.callbackPlayerKilled]](eInflictor, eAttacker, iDamage, sMeansOfDeath, sWeapon, vDir, sHitLoc);
+         *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 63)
+CodeCallback_PlayerKilled(eInflictor, eAttacker, iDamage, sMeansOfDeath, sWeapon, vDir, sHitLoc)
+*
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 56)
+ [[level.callbackPlayerDamage]](eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc);
+         *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 54)
+CodeCallback_PlayerDamage(eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc)
+*
+************************************
+3:Chocolate Flower EXE_DISCONNECTED
+Client 5 connecting with 0 challenge ping from 192.168.2.135:28960
+      cvar set cg_atmos -1
+Going from CS_FREE to CS_CONNECTED for Chocolate Flower (num 3 guid 0)
+3:Chocolate Flower EXE_DISCONNECTED
+Client 6 connecting with 0 challenge ping from 192.168.2.135:28960
+      cvar set cg_atmos -1
+Going from CS_FREE to CS_CONNECTED for Chocolate Flower (num 3 guid 0)
+clientDownload: 3 : file "cod-stats/stoop-cod-stats-mod.pk3" completed
+clientDownload: 3 : file "uo/stoop-warehouse-fun.pk3" completed
+
+******* script runtime error *******
+cannot cast undefined to bool: (file 'maps\mp\gametypes\tdm.gsc', line 823)
+  if (level.teamkill_penalty)
+            *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 65)
+ [[level.callbackPlayerKilled]](eInflictor, eAttacker, iDamage, sMeansOfDeath, sWeapon, vDir, sHitLoc);
+         *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 63)
+CodeCallback_PlayerKilled(eInflictor, eAttacker, iDamage, sMeansOfDeath, sWeapon, vDir, sHitLoc)
+*
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 56)
+ [[level.callbackPlayerDamage]](eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc);
+         *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 54)
+CodeCallback_PlayerDamage(eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc)
+*
+************************************
+Hitch warning: 510 msec frame time
+clientDownload: 3 : file "uo/stoop-jeeparena.pk3" completed
+
+******* script runtime error *******
+cannot cast undefined to bool: (file 'maps\mp\gametypes\tdm.gsc', line 823)
+  if (level.teamkill_penalty)
+            *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 65)
+ [[level.callbackPlayerKilled]](eInflictor, eAttacker, iDamage, sMeansOfDeath, sWeapon, vDir, sHitLoc);
+         *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 63)
+CodeCallback_PlayerKilled(eInflictor, eAttacker, iDamage, sMeansOfDeath, sWeapon, vDir, sHitLoc)
+*
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 56)
+ [[level.callbackPlayerDamage]](eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc);
+         *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 54)
+CodeCallback_PlayerDamage(eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc)
+*
+************************************
+
+******* script runtime error *******
+cannot cast undefined to bool: (file 'maps\mp\gametypes\tdm.gsc', line 823)
+  if (level.teamkill_penalty)
+            *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 65)
+ [[level.callbackPlayerKilled]](eInflictor, eAttacker, iDamage, sMeansOfDeath, sWeapon, vDir, sHitLoc);
+         *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 63)
+CodeCallback_PlayerKilled(eInflictor, eAttacker, iDamage, sMeansOfDeath, sWeapon, vDir, sHitLoc)
+*
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 56)
+ [[level.callbackPlayerDamage]](eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc);
+         *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 54)
+CodeCallback_PlayerDamage(eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc)
+*
+************************************
+2:jpt-chocolate chocolate EXE_DISCONNECTED
+Hitch warning: 690 msec frame time
+Client 7 connecting with 0 challenge ping from 192.168.2.2:28960
+      cvar set cg_atmos -1
+Going from CS_FREE to CS_CONNECTED for jpt-death taxi (num 2 guid 0)
+Hitch warning: 509 msec frame time
+
+******* script runtime error *******
+cannot cast undefined to bool: (file 'maps\mp\gametypes\tdm.gsc', line 823)
+  if (level.teamkill_penalty)
+            *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 65)
+ [[level.callbackPlayerKilled]](eInflictor, eAttacker, iDamage, sMeansOfDeath, sWeapon, vDir, sHitLoc);
+         *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 63)
+CodeCallback_PlayerKilled(eInflictor, eAttacker, iDamage, sMeansOfDeath, sWeapon, vDir, sHitLoc)
+*
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 56)
+ [[level.callbackPlayerDamage]](eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc);
+         *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 54)
+CodeCallback_PlayerDamage(eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc)
+*
+************************************
+
+******* script runtime error *******
+cannot cast undefined to bool: (file 'maps\mp\gametypes\tdm.gsc', line 823)
+  if (level.teamkill_penalty)
+            *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 65)
+ [[level.callbackPlayerKilled]](eInflictor, eAttacker, iDamage, sMeansOfDeath, sWeapon, vDir, sHitLoc);
+         *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 63)
+CodeCallback_PlayerKilled(eInflictor, eAttacker, iDamage, sMeansOfDeath, sWeapon, vDir, sHitLoc)
+*
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 56)
+ [[level.callbackPlayerDamage]](eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc);
+         *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 54)
+CodeCallback_PlayerDamage(eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc)
+*
+************************************
+
+******* script runtime error *******
+cannot cast undefined to bool: (file 'maps\mp\gametypes\tdm.gsc', line 823)
+  if (level.teamkill_penalty)
+            *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 65)
+ [[level.callbackPlayerKilled]](eInflictor, eAttacker, iDamage, sMeansOfDeath, sWeapon, vDir, sHitLoc);
+         *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 63)
+CodeCallback_PlayerKilled(eInflictor, eAttacker, iDamage, sMeansOfDeath, sWeapon, vDir, sHitLoc)
+*
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 56)
+ [[level.callbackPlayerDamage]](eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc);
+         *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 54)
+CodeCallback_PlayerDamage(eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc)
+*
+************************************
+
+******* script runtime error *******
+cannot cast undefined to bool: (file 'maps\mp\gametypes\tdm.gsc', line 823)
+  if (level.teamkill_penalty)
+            *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 65)
+ [[level.callbackPlayerKilled]](eInflictor, eAttacker, iDamage, sMeansOfDeath, sWeapon, vDir, sHitLoc);
+         *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 63)
+CodeCallback_PlayerKilled(eInflictor, eAttacker, iDamage, sMeansOfDeath, sWeapon, vDir, sHitLoc)
+*
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 56)
+ [[level.callbackPlayerDamage]](eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc);
+         *
+called from:
+(file 'maps\mp\gametypes\_callbacksetup.gsc', line 54)
+CodeCallback_PlayerDamage(eInflictor, eAttacker, iDamage, iDFlags, sMeansOfDeath, sWeapon, vPoint, vDir, sHitLoc)
+*
+************************************
+----- CL_Shutdown -----
+      cvar set cl_running 0
+-----------------------
+----- Server Shutdown -----
+==== ShutdownGame ====
+      cvar set sv_running 0
+---------------------------
+Hunk_Clear: reset the hunk ok

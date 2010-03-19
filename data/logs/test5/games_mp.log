@@ -1,0 +1,1613 @@
+  0:00 ------------------------------------------------------------
+  0:00 InitGame: \.Admin\Luda\.Location\Beavercreek, OH\.Website\http://gday/stats\fs_game\cod-stats\g_gametype\tdm\g_timeoutsallowed\0\gamename\CoD:United Offensive\mapname\mp_streets\protocol\22\scr_allow_jeeps\1\scr_allow_tanks\1\shortversion\1.51\sv_allowAnonymous\0\sv_floodProtect\1\sv_hostname\G-Day XI\sv_maxclients\50\sv_maxPing\999\sv_maxRate\25000\sv_minPing\0\sv_privateClients\0\sv_punkbuster\0\sv_pure\0
+  0:00 Game;tdm;mp_streets;30;american;german
+  0:29 J;0;0;Luda
+  0:29 Spec;0;0;Luda
+  0:34 Spawn;0;0;allies;Luda;thompson_mp;509,-6829,-191.875;-90
+  3:09 J;0;1;jpt-goose
+  3:09 Spec;0;1;jpt-goose
+  3:18 Spawn;0;1;axis;jpt-goose;mp44_mp;1948,-6240,0.125;0
+  3:55 K;0;1;axis;jpt-Homobonerus;0;1;axis;jpt-Homobonerus;stielhandgranate_mp;112;MOD_GRENADE_SPLASH;none;834.793,-5745.12,-1.40176;834.793,-5745.12,-1.40176;-115.28;-115.28;stand;stand
+  3:55 Shock;0;1;axis;jpt-Homobonerus;stielhandgranate_mp;4;MOD_GRENADE_SPLASH;none
+  4:13 Shock;0;0;allies;Luda;fraggrenade_mp;3;MOD_GRENADE_SPLASH;none
+  4:13 D;0;0;allies;Luda;0;0;allies;Luda;fraggrenade_mp;65;MOD_GRENADE_SPLASH;none
+  4:23 Spec;0;0;Luda
+  4:28 Spawn;0;0;allies;Luda;thompson_mp;32,-7182,-287.875;0
+  5:23 Spawn;0;1;axis;jpt-Homobonerus;mp44_mp;-279.626,-4016.14,-120.52;0
+  6:03 D;0;0;allies;Luda;0;1;axis;jpt-Homobonerus;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower
+  6:04 K;0;0;allies;Luda;0;1;axis;jpt-Homobonerus;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower;1852.4,-5901.17,0.124996;1427,-6039,33;92.5653;18.067;stand;stand
+  6:09 Spawn;0;0;allies;Luda;thompson_mp;39.9135,-4816.03,-155.877;0
+  6:55 D;0;0;allies;Luda;0;1;axis;jpt-Homobonerus;mp44_mp;40;MOD_PISTOL_BULLET;left_arm_upper
+  6:55 D;0;0;allies;Luda;0;1;axis;jpt-Homobonerus;mp44_mp;34;MOD_PISTOL_BULLET;left_arm_lower
+  6:56 K;0;0;allies;Luda;0;1;axis;jpt-Homobonerus;mp44_mp;27;MOD_PISTOL_BULLET;left_hand;1732.93,-5181.19,-143.411;1311,-5626,48;-138.411;46.0657;stand;stand
+  7:00 Spawn;0;0;allies;Luda;thompson_mp;338,-3692,-31.875;0
+  7:13 Weapon;0;1;jpt-Homobonerus;thompson_mp
+  7:22 D;0;1;axis;jpt-Homobonerus;0;0;allies;Luda;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower
+  7:24 D;0;1;axis;jpt-Homobonerus;0;0;allies;Luda;thompson_mp;30;MOD_PISTOL_BULLET;left_arm_upper
+  7:24 K;0;1;axis;jpt-Homobonerus;0;0;allies;Luda;thompson_mp;75;MOD_HEAD_SHOT;head;2187.26,-3621.27,-166.918;2193,-3727,-169;-94.5923;93.3344;stand;stand
+  7:45 Spawn;0;1;axis;jpt-Homobonerus;mp44_mp;1208,-6102,-277.875;0
+  8:25 K;0;0;allies;Luda;0;0;allies;Luda;fraggrenade_mp;105;MOD_GRENADE_SPLASH;none;1576.02,-4921.35,-91.875;1576.02,-4921.35,-91.875;-112.78;-112.78;stand;stand
+  8:25 Shock;0;0;allies;Luda;fraggrenade_mp;4;MOD_GRENADE_SPLASH;none
+  8:41 Spawn;0;0;allies;Luda;thompson_mp;1752.21,-2645.88,-161.197;0
+  9:50 J;0;3;Pedosmile
+  9:50 Spec;0;3;Pedosmile
+  9:54 Spawn;0;3;allies;Pedosmile;thompson_mp;2519.93,-2503.68,-321.02;0
+  9:56 J;0;2;jpt-death taxi
+  9:56 Spec;0;2;jpt-death taxi
+ 10:01 Spawn;0;2;axis;jpt-death taxi;mp44_mp;-224,-5734,-111.875;0
+ 10:09 D;0;0;allies;Luda;0;1;axis;jpt-Homobonerus;mp44_mp;34;MOD_PISTOL_BULLET;right_arm_lower
+ 10:09 D;0;0;allies;Luda;0;1;axis;jpt-Homobonerus;mp44_mp;61;MOD_PISTOL_BULLET;torso_upper
+ 10:09 K;0;0;allies;Luda;0;1;axis;jpt-Homobonerus;mp44_mp;102;MOD_HEAD_SHOT;head;1678.44,-4240.63,-159.875;1644,-4004,-160;176.765;-78.4259;stand;stand
+ 10:19 Spawn;0;0;allies;Luda;thompson_mp;2511.82,-2559.62,-305.632;0
+ 10:38 Weapon;0;3;Chocolate Flower;thompson_mp
+ 10:46 Weapon;0;3;Chocolate Flower;thompson_mp
+ 10:50 D;0;3;allies;Chocolate Flower;0;1;axis;jpt-Homobonerus;mp44_mp;40;MOD_PISTOL_BULLET;right_leg_upper
+ 10:51 D;0;3;allies;Chocolate Flower;0;1;axis;jpt-Homobonerus;mp44_mp;40;MOD_PISTOL_BULLET;right_leg_upper
+ 10:51 K;0;3;allies;Chocolate Flower;0;1;axis;jpt-Homobonerus;mp44_mp;102;MOD_HEAD_SHOT;head;1676.38,-5363.9,-224.875;1415,-5835,0;-120.674;60.282;stand;stand
+ 10:55 Spawn;0;3;allies;Chocolate Flower;thompson_mp;2511.82,-2559.62,-305.632;0
+ 11:23 ShutdownGame:
+ 11:23 ------------------------------------------------------------
+ 11:23 ------------------------------------------------------------
+ 11:23 InitGame: \.Admin\Luda\.Location\Beavercreek, OH\.Website\http://gday/stats\fs_game\cod-stats\g_gametype\tdm\g_timeoutsallowed\0\gamename\CoD:United Offensive\mapname\mp_ship\protocol\22\scr_allow_jeeps\1\scr_allow_tanks\1\shortversion\1.51\sv_allowAnonymous\0\sv_floodProtect\1\sv_hostname\G-Day XI\sv_maxclients\50\sv_maxPing\999\sv_maxRate\25000\sv_minPing\0\sv_privateClients\0\sv_punkbuster\0\sv_pure\0
+ 11:23 Game;tdm;mp_ship;30;british;german
+ 11:46 J;0;0;Chocolate Luda
+ 11:46 Spec;0;0;Chocolate Luda
+ 11:49 J;0;2;jpt-chocolate cho
+ 11:49 Spec;0;2;jpt-chocolate cho
+ 11:53 Spawn;0;2;axis;jpt-chocolate cho;mp44_mp;3304,288,480.125;-180
+ 12:00 Spawn;0;0;allies;Chocolate Luda;bren_mp;5384,-304,56.125;-90
+ 12:01 J;0;3;Chocolate Flower
+ 12:01 Spec;0;3;Chocolate Flower
+ 12:10 Spawn;0;3;allies;Chocolate Flower;bren_mp;6120,-40,56.125;0
+ 12:12 J;0;1;jpt-Homobonerus
+ 12:12 Spec;0;1;jpt-Homobonerus
+ 12:17 Spawn;0;1;axis;jpt-Homobonerus;mp44_mp;2512,-24,56.125;-135
+ 12:31 Shock;0;0;allies;Chocolate Luda;mk1britishfrag_mp;1;MOD_GRENADE_SPLASH;none
+ 12:31 D;0;0;allies;Chocolate Luda;0;0;allies;Chocolate Luda;mk1britishfrag_mp;23.5;MOD_GRENADE_SPLASH;none
+ 12:31 K;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;mk1britishfrag_mp;112;MOD_GRENADE_SPLASH;none;8373.42,114.266,-63.875;8373.42,114.266,-63.875;17.1936;17.1936;stand;stand
+ 12:31 Shock;0;3;allies;Chocolate Flower;mk1britishfrag_mp;4;MOD_GRENADE_SPLASH;none
+ 12:34 Spawn;0;3;allies;Chocolate Flower;bren_mp;7568,104,-63.875;0
+ 12:35 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;mp44_mp;30.5;MOD_PISTOL_BULLET;torso_upper
+ 12:36 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;mp44_mp;20;MOD_PISTOL_BULLET;left_arm_upper
+ 12:37 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;mp44_mp;13.5;MOD_PISTOL_BULLET;left_hand
+ 12:38 K;0;1;axis;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;stielhandgranate_mp;47;MOD_GRENADE_SPLASH;none;2676.98,899.523,-63.875;3679.38,354.149,352.125;-23.2196;154.698;stand;stand
+ 12:38 K;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;stielhandgranate_mp;47;MOD_GRENADE_SPLASH;none;3679.38,354.149,352.125;3679.38,354.149,352.125;154.698;154.698;stand;stand
+ 12:38 Shock;0;1;axis;jpt-Homobonerus;stielhandgranate_mp;2;MOD_GRENADE_SPLASH;none
+ 12:40 Weapon;0;3;Chocolate Flower;bren_mp
+ 12:45 K;0;0;allies;Chocolate Luda;0;0;allies;Chocolate Luda;mk1britishfrag_mp;113;MOD_GRENADE_SPLASH;none;8740.05,13.3464,-63.875;8740.05,13.3464,-63.875;-23.28;-23.28;stand;stand
+ 12:45 Shock;0;0;allies;Chocolate Luda;mk1britishfrag_mp;4;MOD_GRENADE_SPLASH;none
+ 12:46 Spawn;0;2;axis;jpt-chocolate chocolate;mp44_mp;3304,-152,480.125;-180
+ 12:46 Spawn;0;1;axis;jpt-Homobonerus;mp44_mp;2936,-248,-63.875;-45
+ 12:56 Spawn;0;0;allies;Chocolate Luda;bren_mp;5976,160,204.125;0
+ 13:10 K;0;0;allies;Chocolate Luda;0;0;allies;Chocolate Luda;mk1britishfrag_mp;108;MOD_GRENADE_SPLASH;none;5693.95,406.683,204.125;5693.95,406.683,204.125;163.284;163.284;stand;stand
+ 13:10 Shock;0;0;allies;Chocolate Luda;mk1britishfrag_mp;4;MOD_GRENADE_SPLASH;none
+ 13:15 Spawn;0;0;allies;Chocolate Luda;bren_mp;2512,192,56.125;135
+ 13:36 Weapon;0;3;Chocolate Flower;panzerfaust_mp
+ 13:41 K;0;1;axis;jpt-Homobonerus;0;1;axis;jpt-Homobonerus;stielhandgranate_mp;115;MOD_GRENADE_SPLASH;none;8465.04,86.6963,-63.875;8465.04,86.6963,-63.875;102.404;102.404;stand;stand
+ 13:41 Shock;0;1;axis;jpt-Homobonerus;stielhandgranate_mp;4;MOD_GRENADE_SPLASH;none
+ 13:53 K;0;2;axis;jpt-chocolate chocolate;;-1;world;;none;110;MOD_FALLING;none;4056,265,312;0,0,0;-22.6758;0;stand;none
+ 13:55 Spawn;0;1;axis;jpt-Homobonerus;mp44_mp;7568,104,-63.875;0
+ 13:59 Spawn;0;2;axis;jpt-chocolate chocolate;mp44_mp;7568,104,-63.875;0
+ 14:11 D;0;1;axis;jpt-Homobonerus;0;1;axis;jpt-Homobonerus;mp44_mp;13.5;MOD_PISTOL_BULLET;right_foot
+ 14:11 D;0;1;axis;jpt-Homobonerus;0;1;axis;jpt-Homobonerus;mp44_mp;17;MOD_PISTOL_BULLET;left_leg_lower
+ 14:29 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;mp44_mp;51;MOD_PISTOL_BULLET;head
+ 14:29 K;0;2;axis;jpt-chocolate chocolate;0;1;axis;jpt-Homobonerus;mp44_mp;27;MOD_PISTOL_BULLET;torso_lower;5462.32,86.2394,352.125;5583,84,352;152.413;-172.557;crouch;stand
+ 14:29 K;0;1;axis;jpt-Homobonerus;0;1;axis;jpt-Homobonerus;mp44_mp;27;MOD_PISTOL_BULLET;torso_lower;5583,84,352;5583,84,352;-172.557;-172.557;stand;stand
+ 14:34 Spawn;0;1;axis;jpt-Homobonerus;mp44_mp;3682,88,616.125;-180
+ 14:38 Spawn;0;2;axis;jpt-chocolate chocolate;mp44_mp;2936,-248,-63.875;-45
+ 15:22 D;0;3;allies;Chocolate Flower;0;1;axis;jpt-Homobonerus;mp44_mp;61;MOD_PISTOL_BULLET;torso_upper
+ 15:24 K;0;3;allies;Chocolate Flower;0;1;axis;jpt-Homobonerus;mp44_mp;40;MOD_PISTOL_BULLET;right_arm_upper;5029.88,90.4705,1219.13;3824,-102,1128;-171.26;9.16809;stand;stand
+ 15:34 Spawn;0;3;allies;Chocolate Flower;bren_mp;6712,304,-63.875;45
+ 15:43 say;0;1;jpt-Homobonerus;Oh yea?
+ 15:48 say;0;1;jpt-Homobonerus;I've got a thing to say about that.
+ 15:48 say;0;2;jpt-chocolate chocolate;yeah
+ 15:49 D;0;1;axis;jpt-Homobonerus;0;0;allies;Chocolate Luda;bren_mp;60;MOD_RIFLE_BULLET;torso_lower
+ 15:49 K;0;1;axis;jpt-Homobonerus;0;0;allies;Chocolate Luda;bren_mp;67;MOD_RIFLE_BULLET;torso_upper;3824.87,237.764,1128.13;3704,293,1128;-10.6018;-24.0656;stand;stand
+ 15:52 say;0;1;jpt-Homobonerus;Go to hell Luda.
+ 15:53 say;0;2;jpt-chocolate chocolate;fuck that
+ 15:54 say;0;3;Chocolate Flower;Oh, my friend, Chuck?
+ 15:57 say;0;1;jpt-Homobonerus;Go to hell chocolate.
+ 15:59 say;0;3;Chocolate Flower;He loves beer
+ 16:00 say;0;1;jpt-Homobonerus;I hate Luda.
+ 16:04 sayteam;0;1;jpt-Homobonerus;My team!
+ 16:06 Spawn;0;1;axis;jpt-Homobonerus;mp44_mp;3256,216,56.125;-90
+ 16:06 Weapon;0;3;Chocolate Flower;bren_mp
+ 16:07 say;0;2;jpt-chocolate chocolate;everyone hates luda
+ 16:10 say;0;3;Chocolate Flower;plus
+ 16:14 say;0;2;jpt-chocolate chocolate;luda, you can't reach the top!
+ 16:27 say;0;3;Chocolate Flower;Cuz he's chatty
+ 16:30 say;0;3;Chocolate Flower;and he's cathy
+ 16:33 say;0;1;jpt-Homobonerus;And he's luda
+ 16:35 D;0;0;allies;Chocolate Luda;;-1;world;;none;27;MOD_FALLING;none
+ 16:37 say;0;3;Chocolate Flower;that's for sure
+ 16:49 say;0;1;jpt-Homobonerus;When he's talking to you
+ 16:49 Weapon;0;0;Chocolate Luda;bren_mp
+ 16:49 K;0;0;allies;Chocolate Luda;;-1;world;;none;110;MOD_FALLING;none;4717,61,56;0,0,0;-1.41174;0;stand;none
+ 16:52 Spawn;0;0;allies;Chocolate Luda;bren_mp;7568,104,-63.875;0
+ 16:58 say;0;3;Chocolate Flower;and he's listening to me
+ 17:05 say;0;1;jpt-Homobonerus;You really wanna put your foot in his ass
+ 17:08 D;0;0;allies;Chocolate Luda;0;2;axis;jpt-chocolate chocolate;mp44_mp;34;MOD_PISTOL_BULLET;right_leg_upper
+ 17:09 D;0;0;allies;Chocolate Luda;0;2;axis;jpt-chocolate chocolate;mp44_mp;44;MOD_PISTOL_BULLET;torso_lower
+ 17:09 K;0;0;allies;Chocolate Luda;0;2;axis;jpt-chocolate chocolate;mp44_mp;84;MOD_HEAD_SHOT;head;5870.3,938.546,-63.875;3644,223,896;-55.014;18.3746;stand;crouch
+ 17:09 Weapon;0;3;Chocolate Flower;mk1britishfrag_mp
+ 17:10 say;0;3;Chocolate Flower;you really wanna
+ 17:12 Spawn;0;0;allies;Chocolate Luda;bren_mp;6712,304,-63.875;45
+ 17:18 Weapon;0;1;jpt-Homobonerus;mp44_mp
+ 17:26 say;0;1;jpt-Homobonerus;You wanna stick your foot in his ass
+ 17:39 D;0;1;axis;jpt-Homobonerus;0;0;allies;Chocolate Luda;bren_mp;45;MOD_RIFLE_BULLET;left_leg_upper
+ 17:41 K;0;1;axis;jpt-Homobonerus;0;0;allies;Chocolate Luda;bren_mp;60;MOD_RIFLE_BULLET;torso_lower;4964.29,35.1251,1219.13;5007,172,568;-8.71216;-115.889;stand;stand
+ 17:51 Spawn;0;1;axis;jpt-Homobonerus;mp44_mp;1162,63,-63.875;-180
+ 17:52 D;0;0;allies;Chocolate Luda;0;2;axis;jpt-chocolate chocolate;mp44_mp;34;MOD_PISTOL_BULLET;left_leg_lower
+ 17:52 D;0;0;allies;Chocolate Luda;0;2;axis;jpt-chocolate chocolate;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower
+ 17:54 Item;0;0;Chocolate Luda;item_health
+ 17:56 Item;0;0;Chocolate Luda;item_health
+ 18:00 Weapon;0;3;Chocolate Flower;panzerfaust_mp
+ 18:07 D;0;2;axis;jpt-chocolate chocolate;0;0;allies;Chocolate Luda;bren_mp;37;MOD_RIFLE_BULLET;right_arm_lower
+ 18:12 K;0;2;axis;jpt-chocolate chocolate;0;0;allies;Chocolate Luda;bren_mp;67;MOD_RIFLE_BULLET;torso_upper;3816.41,86.038,1128.13;4961,35,1219;-2.28516;177.237;stand;crouch
+ 18:17 Spawn;0;2;axis;jpt-chocolate chocolate;mp44_mp;1162,63,-63.875;-180
+ 18:36 D;0;0;allies;Chocolate Luda;0;2;axis;jpt-chocolate chocolate;mp44_mp;32;MOD_PISTOL_BULLET;left_arm_lower
+ 18:38 D;0;0;allies;Chocolate Luda;0;2;axis;jpt-chocolate chocolate;mp44_mp;26;MOD_PISTOL_BULLET;left_foot
+ 18:44 K;0;0;allies;Chocolate Luda;0;2;axis;jpt-chocolate chocolate;mp44_mp;54;MOD_PISTOL_BULLET;torso_upper;4613.05,62.1748,1160.08;3214,976,-63;179.632;-33.1512;stand;stand
+ 19:20 D;0;3;allies;Chocolate Flower;0;1;axis;jpt-Homobonerus;luger_mp;63;MOD_PISTOL_BULLET;neck
+ 19:24 K;0;3;allies;Chocolate Flower;0;1;axis;jpt-Homobonerus;luger_mp;67;MOD_HEAD_SHOT;head;5155.57,66.3736,568.125;5601,163,352;16.3806;-165.674;stand;stand
+ 19:27 Spawn;0;3;allies;Chocolate Flower;bren_mp;3688,128,992.125;-180
+ 19:31 Spawn;0;0;allies;Chocolate Luda;bren_mp;3688,128,992.125;-180
+ 19:35 say;0;1;jpt-Homobonerus;what you want?
+ 19:37 Weapon;0;1;jpt-Homobonerus;mp44_mp
+ 19:47 D;0;3;allies;Chocolate Flower;;-1;world;;none;18;MOD_FALLING;none
+ 19:50 D;0;0;allies;Chocolate Luda;;-1;world;;none;31;MOD_FALLING;none
+ 20:00 D;0;1;axis;jpt-Homobonerus;0;3;allies;Chocolate Flower;bren_mp;60;MOD_RIFLE_BULLET;torso_lower
+ 20:01 K;0;1;axis;jpt-Homobonerus;0;3;allies;Chocolate Flower;bren_mp;60;MOD_RIFLE_BULLET;torso_lower;5387.02,-62.0968,352.125;5373,-193,352;-179.121;76.2561;stand;stand
+ 20:02 Item;0;3;Chocolate Flower;item_health
+ 20:05 Spawn;0;1;axis;jpt-Homobonerus;mp44_mp;2936,-248,-63.875;-45
+ 20:08 say;0;1;jpt-Homobonerus;DAmn your eyes!
+ 20:29 ShutdownGame:
+ 20:29 ------------------------------------------------------------
+ 20:29 ------------------------------------------------------------
+ 20:29 InitGame: \.Admin\Luda\.Location\Beavercreek, OH\.Website\http://gday/stats\fs_game\cod-stats\g_gametype\tdm\g_timeoutsallowed\0\gamename\CoD:United Offensive\mapname\mp_cassino\protocol\22\scr_allow_jeeps\1\scr_allow_tanks\1\shortversion\1.51\sv_allowAnonymous\0\sv_floodProtect\1\sv_hostname\G-Day XI\sv_maxclients\50\sv_maxPing\999\sv_maxRate\25000\sv_minPing\0\sv_privateClients\0\sv_punkbuster\0\sv_pure\0
+ 20:29 Game;tdm;mp_cassino;30;american;german
+ 20:56 J;0;0;Chocolate Luda
+ 20:56 Spec;0;0;Chocolate Luda
+ 21:00 J;0;2;jpt-chocolate chocolate
+ 21:00 Spec;0;2;jpt-chocolate chocolate
+ 21:01 Spawn;0;0;axis;Chocolate Luda;mp44_mp;304,-784,0.125;135
+ 21:06 Spawn;0;2;allies;jpt-chocolate chocolate;springfield_mp;2159.69,-3031.29,43.5207;90
+ 21:09 Use;0;0;axis;Chocolate Luda;1;all;shermantank_mp;1;-274,-295.685,58.73;-90.3406
+ 21:12 J;0;3;Chocolate Flower
+ 21:12 Spec;0;3;Chocolate Flower
+ 21:15 D;;-1;world;xmodel/light_streetlight2off;0;0;axis;Chocolate Luda;shermantank_mp;100;MOD_CRUSH_TANK;none
+ 21:15 Spawn;0;3;allies;Chocolate Flower;thompson_mp;4938,-1317,256.125;-180
+ 21:21 D;;-1;world;xmodel/light_streetlight2off;0;0;axis;Chocolate Luda;shermantank_mp;100;MOD_CRUSH_TANK;none
+ 21:21 Use;0;2;allies;jpt-chocolate chocolate;0;all;panzeriv_mp;1;4686.2,-1979,108.838;-180
+ 21:25 D;;-1;world;xmodel/light_streetlight2off;0;0;axis;Chocolate Luda;shermantank_mp;100;MOD_CRUSH_TANK;none
+ 21:26 J;0;1;jpt-Homobonerus
+ 21:26 Spec;0;1;jpt-Homobonerus
+ 21:28 D;;-1;world;xmodel/light_streetlight2off;0;0;axis;Chocolate Luda;shermantank_mp;100;MOD_CRUSH_TANK;none
+ 21:29 D;;-1;world;xmodel/light_streetlight2off;0;2;allies;jpt-chocolate chocolate;panzeriv_mp;100;MOD_CRUSH_TANK;none
+ 21:29 Spawn;0;1;axis;jpt-Homobonerus;mp44_mp;-687.482,-1160.02,72.9507;0
+ 21:31 D;;-1;world;xmodel/light_streetlight2off;0;2;allies;jpt-chocolate chocolate;none;700;MOD_PROJECTILE;none
+ 21:37 Use;0;0;axis;Chocolate Luda;1;all;shermantank_mp;0;2441.31,-2431.42,47.5002;6.05896
+ 21:38 D;;-1;world;xmodel/light_streetlight2off;0;2;allies;jpt-chocolate chocolate;panzeriv_mp;100;MOD_CRUSH_TANK;none
+ 21:43 D;0;0;axis;Chocolate Luda;0;2;allies;jpt-chocolate chocolate;panzeriv_turret_mp;60;MOD_CRUSH_TANK;none
+ 21:44 D;0;0;axis;Chocolate Luda;;-1;world;;sherman_turret_mp;1;MOD_CRUSH_TANK;none
+ 21:47 K;0;0;axis;Chocolate Luda;0;2;allies;jpt-chocolate chocolate;panzeriv_turret_mp;47;MOD_CRUSH_TANK;none;2757.36,-2651.58,-7.875;2878.78,-2517.03,136.635;57.9309;216.587;stand;stand
+ 21:51 D;0;1;axis;jpt-Homobonerus;0;2;allies;jpt-chocolate chocolate;panzeriv_turret_mp;1;MOD_CRUSH_TANK;none
+ 21:53 D;0;1;axis;jpt-Homobonerus;0;2;allies;jpt-chocolate chocolate;panzeriv_turret_mp;76;MOD_CRUSH_TANK;none
+ 21:54 D;0;1;axis;jpt-Homobonerus;0;2;allies;jpt-chocolate chocolate;panzeriv_turret_mp;15;MOD_CRUSH_TANK;none
+ 21:55 Spawn;0;0;axis;Chocolate Luda;mp44_mp;64,152,0.125;-90
+ 21:56 K;0;1;axis;jpt-Homobonerus;0;3;allies;Chocolate Flower;thompson_mp;30;MOD_PISTOL_BULLET;right_leg_upper;2165.25,-2827.35,1.125;2154,-2663,-7;4.1748;-91.2854;stand;stand
+ 22:01 Spawn;0;1;axis;jpt-Homobonerus;mp44_mp;136,560,0.125;-135
+ 22:07 Shock;0;3;allies;Chocolate Flower;panzeriv_turret_mp;3;MOD_PROJECTILE_SPLASH;none
+ 22:07 D;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;panzeriv_turret_mp;87.5;MOD_PROJECTILE_SPLASH;none
+ 22:07 Use;0;3;allies;Chocolate Flower;0;all;panzeriv_mp;2;2018.1,-2383.54,106.578;-142.432
+ 22:13 K;0;0;axis;Chocolate Luda;0;2;allies;jpt-chocolate chocolate;panzeriv_turret_mp;289;MOD_PROJECTILE_SPLASH;none;1475.81,-1576.52,-7.875;1818.44,-1859.41,128.503;-29.1577;118.448;stand;stand
+ 22:13 Shock;0;0;axis;Chocolate Luda;panzeriv_turret_mp;4;MOD_PROJECTILE_SPLASH;none
+ 22:16 Spawn;0;0;axis;Chocolate Luda;mp44_mp;136,560,0.125;-135
+ 22:19 D;0;1;axis;jpt-Homobonerus;0;2;allies;jpt-chocolate chocolate;panzeriv_turret_mp;78;MOD_CRUSH_TANK;none
+ 22:20 K;0;1;axis;jpt-Homobonerus;0;2;allies;jpt-chocolate chocolate;panzeriv_turret_mp;79;MOD_CRUSH_TANK;none;742.82,-1414.74,-7.875;894.177,-1344.64,128.625;19.6106;172.694;stand;stand
+ 22:22 D;;-1;world;xmodel/light_streetlight2off;0;2;allies;jpt-chocolate chocolate;panzeriv_mp;100;MOD_CRUSH_TANK;none
+ 22:27 D;0;0;axis;Chocolate Luda;0;2;allies;jpt-chocolate chocolate;panzeriv_turret_mp;79;MOD_CRUSH_TANK;none
+ 22:28 Spawn;0;1;axis;jpt-Homobonerus;mp44_mp;3936,-1160,128.125;-135
+ 22:30 D;0;0;axis;Chocolate Luda;0;2;allies;jpt-chocolate chocolate;panzeriv_turret_mp;1;MOD_CRUSH_TANK;none
+ 22:34 K;0;0;axis;Chocolate Luda;0;2;allies;jpt-chocolate chocolate;panzeriv_turret_mp;34;MOD_CRUSH_TANK;none;-272.351,-879.165,-7.875;-190.292,-1020.66,136.759;-37.9028;127.288;stand;stand
+ 22:36 D;;-1;world;xmodel/light_streetlight2off;0;2;allies;jpt-chocolate chocolate;panzeriv_mp;100;MOD_CRUSH_TANK;none
+ 22:37 say;0;1;jpt-Homobonerus;I go squish now!
+ 22:40 Spawn;0;0;axis;Chocolate Luda;mp44_mp;4938,-1317,256.125;-180
+ 22:43 D;;-1;world;xmodel/light_streetlight2off;0;2;allies;jpt-chocolate chocolate;panzeriv_mp;100;MOD_CRUSH_TANK;none
+ 22:57 K;0;3;allies;Chocolate Flower;0;1;axis;jpt-Homobonerus;mp44_mp;40;MOD_PISTOL_BULLET;left_arm_upper;90.2579,-1382.93,90.4524;476,-1374,-7;2.24121;178.033;stand;stand
+ 22:57 Use;0;3;allies;Chocolate Flower;0;all;panzeriv_mp;0;81.2666,-1385.65,128.296;2.24121
+ 23:00 Shock;0;1;axis;jpt-Homobonerus;panzeriv_turret_mp;2;MOD_PROJECTILE_SPLASH;none
+ 23:00 D;0;1;axis;jpt-Homobonerus;0;2;allies;jpt-chocolate chocolate;panzeriv_turret_mp;32;MOD_PROJECTILE_SPLASH;none
+ 23:03 K;0;1;axis;jpt-Homobonerus;0;2;allies;jpt-chocolate chocolate;panzeriv_turret_mp;73;MOD_PROJECTILE_SPLASH;none;524.981,-1712.47,0.125;607.055,-1344.61,130.991;-79.4147;-133.967;stand;stand
+ 23:03 Shock;0;1;axis;jpt-Homobonerus;panzeriv_turret_mp;3;MOD_PROJECTILE_SPLASH;none
+ 23:05 Spawn;0;3;allies;Chocolate Flower;thompson_mp;571,-1832,0.125;45
+ 23:06 Weapon;0;3;Chocolate Flower;panzerfaust_mp
+ 23:16 Shock;0;2;allies;jpt-chocolate chocolate;panzerfaust_mp;1;MOD_EXPLOSIVE;none
+ 23:16 D;0;2;allies;jpt-chocolate chocolate;0;2;allies;jpt-chocolate chocolate;panzerfaust_mp;9;MOD_EXPLOSIVE;none
+ 23:16 Use;0;2;allies;jpt-chocolate chocolate;0;all;panzeriv_mp;0;593.205,-1457.43,63.3824;-25.8948
+ 23:16 K;0;-1;all;panzeriv_mp;0;3;allies;Chocolate Flower;none;10000;MOD_EXPLOSIVE;none;824.586,-1341.05,-7.875;444.105,-1383.14,-7.875;-2.05444;6.74011;none;stand
+ 23:16 K;0;2;allies;jpt-chocolate chocolate;0;3;allies;Chocolate Flower;panzerfaust_mp;5000;MOD_EXPLOSIVE;none;593.205,-1457.43,63.3824;444.105,-1383.14,-7.875;-25.8948;6.74011;stand;stand
+ 23:16 K;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;panzerfaust_mp;5000;MOD_EXPLOSIVE;none;444.105,-1383.14,-7.875;444.105,-1383.14,-7.875;6.74011;6.74011;stand;stand
+ 23:16 Shock;0;2;allies;jpt-chocolate chocolate;panzerfaust_mp;4;MOD_EXPLOSIVE;none
+ 23:18 Spawn;0;1;axis;jpt-Homobonerus;mp44_mp;1304,-1968,0.125;45
+ 23:19 Spawn;0;2;allies;jpt-chocolate chocolate;springfield_mp;2376,16,0.125;-45
+ 23:20 Spawn;0;3;allies;Chocolate Flower;thompson_mp;2056,-32,128.125;-180
+ 23:22 Weapon;0;0;Chocolate Luda;mp44_mp
+ 23:25 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;mp44_mp;17;MOD_PISTOL_BULLET;left_leg_lower
+ 23:25 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;mp44_mp;20;MOD_PISTOL_BULLET;left_arm_upper
+ 23:25 Weapon;0;2;jpt-chocolate chocolate;panzerfaust_mp
+ 23:25 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;mp44_mp;13.5;MOD_PISTOL_BULLET;right_foot
+ 23:26 K;0;0;axis;Chocolate Luda;;-1;world;;panzeriv_turret_mp;82;MOD_EXPLOSIVE;none;965.24,-1358.21,-7.875;0,0,0;166.718;0;stand;none
+ 23:26 Shock;0;0;axis;Chocolate Luda;panzeriv_turret_mp;3;MOD_EXPLOSIVE;none
+ 23:27 Item;0;1;jpt-Homobonerus;item_health
+ 23:28 Weapon;0;1;jpt-Homobonerus;smokegrenade_mp
+ 23:30 Item;0;1;jpt-Homobonerus;item_health
+ 23:37 Weapon;0;3;Chocolate Flower;panzerfaust_mp
+ 23:38 Spawn;0;0;axis;Chocolate Luda;mp44_mp;528,88,128.125;-90
+ 23:43 Shock;0;1;axis;jpt-Homobonerus;panzerfaust_mp;2;MOD_PROJECTILE_SPLASH;none
+ 23:43 D;0;1;axis;jpt-Homobonerus;0;3;allies;Chocolate Flower;panzerfaust_mp;32;MOD_PROJECTILE_SPLASH;none
+ 23:48 Weapon;0;0;Chocolate Luda;mp44_mp
+ 23:48 D;0;1;axis;jpt-Homobonerus;0;3;allies;Chocolate Flower;thompson_mp;25;MOD_PISTOL_BULLET;left_arm_lower
+ 23:48 D;0;1;axis;jpt-Homobonerus;0;3;allies;Chocolate Flower;thompson_mp;25;MOD_PISTOL_BULLET;left_arm_lower
+ 23:48 K;0;1;axis;jpt-Homobonerus;0;3;allies;Chocolate Flower;thompson_mp;25;MOD_PISTOL_BULLET;left_arm_lower;1893.57,-2200.06,-7.875;1947,-2090,-7;61.106;-116.801;stand;stand
+ 23:50 Weapon;0;2;jpt-chocolate chocolate;smokegrenade_mp
+ 23:51 Spawn;0;1;axis;jpt-Homobonerus;mp44_mp;-279.84,-1631.9,44.4792;45
+ 23:54 Weapon;0;3;Chocolate Flower;panzerfaust_mp
+ 23:57 Weapon;0;1;jpt-Homobonerus;mp44_mp
+ 24:07 D;0;1;axis;jpt-Homobonerus;0;2;allies;jpt-chocolate chocolate;panzerfaust_mp;64;MOD_MELEE;torso_upper
+ 24:08 K;0;1;axis;jpt-Homobonerus;0;2;allies;jpt-chocolate chocolate;panzerfaust_mp;59;MOD_MELEE;torso_lower;1496.36,-1070.77,1.125;1532,-1086,-7;-15.7214;145.761;stand;stand
+ 24:11 Spawn;0;1;axis;jpt-Homobonerus;mp44_mp;4938,-1317,256.125;-180
+ 24:13 Shock;0;2;allies;jpt-chocolate chocolate;panzerfaust_mp;3;MOD_PROJECTILE_SPLASH;none
+ 24:13 D;0;2;allies;jpt-chocolate chocolate;0;2;allies;jpt-chocolate chocolate;panzerfaust_mp;53;MOD_PROJECTILE_SPLASH;none
+ 24:13 Shock;0;3;allies;Chocolate Flower;panzerfaust_mp;2;MOD_PROJECTILE_SPLASH;none
+ 24:13 D;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;panzerfaust_mp;40.5;MOD_PROJECTILE_SPLASH;none
+ 24:15 Item;0;2;jpt-chocolate chocolate;item_health
+ 24:17 D;0;0;axis;Chocolate Luda;0;3;allies;Chocolate Flower;fraggrenade_mp;45;MOD_MELEE;torso_upper
+ 24:18 D;0;0;axis;Chocolate Luda;0;3;allies;Chocolate Flower;fraggrenade_mp;47;MOD_MELEE;torso_upper
+ 24:19 K;0;0;axis;Chocolate Luda;0;3;allies;Chocolate Flower;fraggrenade_mp;40;MOD_MELEE;torso_lower;1532.08,-1281.5,-7.875;1490,-1287,-7;175.507;12.5299;stand;stand
+ 24:23 Item;0;3;Chocolate Flower;item_health
+ 24:24 K;0;3;allies;Chocolate Flower;0;2;allies;jpt-chocolate chocolate;springfield_mp;90;MOD_HEAD_SHOT;head;1490.66,-1287.23,-7.875;1511,-1166,-7;67.9834;-99.6515;stand;stand
+ 24:24 K;0;2;allies;jpt-chocolate chocolate;0;2;allies;jpt-chocolate chocolate;springfield_mp;90;MOD_HEAD_SHOT;head;1511,-1166,-7;1511,-1166,-7;-99.6515;-99.6515;stand;stand
+ 24:26 Weapon;0;1;jpt-Homobonerus;smokegrenade_mp
+ 24:28 Spawn;0;3;allies;Chocolate Flower;thompson_mp;136,560,0.125;-135
+ 24:28 Spawn;0;2;allies;jpt-chocolate chocolate;springfield_mp;720,344,256.125;-90
+ 24:35 Use;0;1;axis;jpt-Homobonerus;1;all;shermantank_mp;1;2436.73,-2589.09,74.6164;7.09167
+ 24:40 Spawn;0;0;axis;Chocolate Luda;mp44_mp;2159.69,-3031.29,43.5207;90
+ 24:41 Weapon;0;3;Chocolate Flower;panzerfaust_mp
+ 24:46 Shock;0;0;axis;Chocolate Luda;panzerfaust_mp;3;MOD_PROJECTILE_SPLASH;none
+ 24:46 D;0;0;axis;Chocolate Luda;0;3;allies;Chocolate Flower;panzerfaust_mp;53;MOD_PROJECTILE_SPLASH;none
+ 24:46 K;0;3;allies;Chocolate Flower;0;1;axis;jpt-Homobonerus;sherman_turret_mp;247;MOD_PROJECTILE_SPLASH;none;1435.23,-1608.32,1.125;2296.85,-2621.46,77.9617;-28.0591;131.171;stand;stand
+ 24:46 Shock;0;3;allies;Chocolate Flower;sherman_turret_mp;4;MOD_PROJECTILE_SPLASH;none
+ 24:49 Shock;0;0;axis;Chocolate Luda;sherman_turret_mp;1;MOD_PROJECTILE_SPLASH;none
+ 24:49 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;sherman_turret_mp;24.5;MOD_PROJECTILE_SPLASH;none
+ 24:53 K;0;0;axis;Chocolate Luda;0;1;axis;jpt-Homobonerus;sherman_turret_mp;89;MOD_PROJECTILE_SPLASH;none;1921.82,-1927.22,-7.875;2294.53,-2619.23,78.2178;59.9084;119.949;stand;stand
+ 24:53 K;0;1;axis;jpt-Homobonerus;0;1;axis;jpt-Homobonerus;sherman_turret_mp;89;MOD_PROJECTILE_SPLASH;none;2294.53,-2619.23,78.2178;2294.53,-2619.23,78.2178;119.949;119.949;stand;stand
+ 24:53 Shock;0;0;axis;Chocolate Luda;sherman_turret_mp;1;MOD_PROJECTILE_SPLASH;none
+ 24:53 Use;0;1;axis;jpt-Homobonerus;1;all;shermantank_mp;0;2294.53,-2619.23,78.2178;119.949
+ 24:57 Spawn;0;3;allies;Chocolate Flower;thompson_mp;1064,-1952,0.125002;45
+ 24:57 Spawn;0;0;axis;Chocolate Luda;mp44_mp;136,560,0.125;-135
+ 24:58 Spawn;0;1;axis;jpt-Homobonerus;mp44_mp;136,560,0.125;-135
+ 25:04 Use;0;2;allies;jpt-chocolate chocolate;1;all;shermantank_mp;1;2294.92,-2617.07,58.3385;19.1821
+ 25:17 Weapon;0;1;jpt-Homobonerus;mp44_mp
+ 25:22 Weapon;0;1;jpt-Homobonerus;panzerfaust_mp
+ 25:25 Shock;0;1;axis;jpt-Homobonerus;panzerfaust_mp;1;MOD_PROJECTILE_SPLASH;none
+ 25:25 D;0;1;axis;jpt-Homobonerus;0;1;axis;jpt-Homobonerus;panzerfaust_mp;11;MOD_PROJECTILE_SPLASH;none
+ 25:26 Weapon;0;3;Chocolate Flower;panzerfaust_mp
+ 25:27 D;0;1;axis;jpt-Homobonerus;0;2;allies;jpt-chocolate chocolate;30cal_tank_mp;24;MOD_RIFLE_BULLET;left_foot
+ 25:27 D;0;1;axis;jpt-Homobonerus;0;2;allies;jpt-chocolate chocolate;30cal_tank_mp;36;MOD_RIFLE_BULLET;left_leg_upper
+ 25:29 D;0;0;axis;Chocolate Luda;0;2;allies;jpt-chocolate chocolate;sherman_turret_mp;1;MOD_CRUSH_TANK;none
+ 25:32 D;0;0;axis;Chocolate Luda;0;2;allies;jpt-chocolate chocolate;sherman_turret_mp;1;MOD_CRUSH_TANK;none
+ 25:32 Shock;0;0;axis;Chocolate Luda;panzerfaust_mp;3;MOD_PROJECTILE_SPLASH;none
+ 25:32 D;0;0;axis;Chocolate Luda;0;3;allies;Chocolate Flower;panzerfaust_mp;56;MOD_PROJECTILE_SPLASH;none
+ 25:34 D;0;0;axis;Chocolate Luda;0;2;allies;jpt-chocolate chocolate;sherman_turret_mp;8;MOD_CRUSH_TANK;none
+ 25:35 D;0;0;axis;Chocolate Luda;0;3;allies;Chocolate Flower;thompson_mp;20;MOD_PISTOL_BULLET;left_foot
+ 25:35 K;0;0;axis;Chocolate Luda;0;3;allies;Chocolate Flower;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower;2451.33,-1099.47,-7.875;2303,-1046,-7;-20.4346;-13.8098;stand;stand
+ 25:35 D;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;sherman_turret_mp;40.5;MOD_CRUSH_TANK;none
+ 25:37 D;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;sherman_turret_mp;30.5;MOD_CRUSH_TANK;none
+ 25:42 Spawn;0;0;axis;Chocolate Luda;mp44_mp;4938,-1317,256.125;-180
+ 25:46 Item;0;3;Chocolate Flower;item_health
+ 25:50 Weapon;0;3;Chocolate Flower;panzerfaust_mp
+ 25:50 Weapon;0;1;jpt-Homobonerus;panzerfaust_mp
+ 25:54 Item;0;3;Chocolate Flower;item_health
+ 26:05 Weapon;0;0;Chocolate Luda;mp44_mp
+ 26:08 Weapon;0;3;Chocolate Flower;panzerfaust_mp
+ 26:09 Weapon;0;0;Chocolate Luda;smokegrenade_mp
+ 26:14 Shock;0;3;allies;Chocolate Flower;panzerfaust_mp;1;MOD_PROJECTILE_SPLASH;none
+ 26:14 D;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;panzerfaust_mp;12;MOD_PROJECTILE_SPLASH;none
+ 26:14 K;0;2;allies;jpt-chocolate chocolate;0;3;allies;Chocolate Flower;panzerfaust_mp;30;MOD_EXPLOSIVE;none;774.548,-1286.8,56.3553;438.719,-1433.1,-7.875;56.8158;-5.0592;stand;stand
+ 26:14 Shock;0;2;allies;jpt-chocolate chocolate;panzerfaust_mp;2;MOD_EXPLOSIVE;none
+ 26:14 Use;0;2;allies;jpt-chocolate chocolate;1;all;shermantank_mp;0;774.548,-1286.8,56.3553;56.8158
+ 26:14 K;1;-1;all;shermantank_mp;0;3;allies;Chocolate Flower;none;10000;MOD_EXPLOSIVE;none;798.234,-1429.98,1.125;438.719,-1433.1,-7.875;3.46069;-5.0592;none;stand
+ 26:14 K;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;panzerfaust_mp;5000;MOD_EXPLOSIVE;none;438.719,-1433.1,-7.875;438.719,-1433.1,-7.875;-5.0592;-5.0592;stand;stand
+ 26:14 Shock;0;2;allies;jpt-chocolate chocolate;panzerfaust_mp;4;MOD_EXPLOSIVE;none
+ 26:16 Item;0;1;jpt-Homobonerus;item_health
+ 26:17 Spawn;0;3;allies;Chocolate Flower;thompson_mp;3936,-1160,128.125;-135
+ 26:18 Spawn;0;2;allies;jpt-chocolate chocolate;springfield_mp;4938,-1317,256.125;-180
+ 26:25 Weapon;0;3;Chocolate Flower;panzerfaust_mp
+ 26:27 Item;0;1;jpt-Homobonerus;item_health
+ 26:40 K;0;3;allies;Chocolate Flower;0;1;axis;jpt-Homobonerus;mp44_mp;137;MOD_MELEE;torso_upper;1507.24,-1426.71,-4.45492;1483,-1446,-7;-115.659;55.5029;stand;stand
+ 26:40 Item;0;1;jpt-Homobonerus;item_health
+ 26:47 Shock;0;0;axis;Chocolate Luda;colt_mp;3;MOD_MELEE;head
+ 26:47 D;0;0;axis;Chocolate Luda;0;2;allies;jpt-chocolate chocolate;colt_mp;81;MOD_MELEE;head
+ 26:50 Spawn;0;3;allies;Chocolate Flower;thompson_mp;3352,-408,128.125;-135
+ 26:52 K;0;0;axis;Chocolate Luda;0;2;allies;jpt-chocolate chocolate;colt_mp;81;MOD_MELEE;head;2637.85,-895.169,0.125;2661,-876,0;51.5424;-145.635;prone;stand
+ 26:52 Shock;0;0;axis;Chocolate Luda;colt_mp;3;MOD_MELEE;head
+ 26:56 Spawn;0;0;axis;Chocolate Luda;mp44_mp;824,-2176,0.125;45
+ 27:09 D;0;3;allies;Chocolate Flower;0;1;axis;jpt-Homobonerus;luger_mp;46;MOD_MELEE;torso_upper
+ 27:10 Shock;0;1;axis;jpt-Homobonerus;colt_mp;3;MOD_MELEE;head
+ 27:10 D;0;1;axis;jpt-Homobonerus;0;3;allies;Chocolate Flower;colt_mp;81;MOD_MELEE;head
+ 27:33 Weapon;0;2;jpt-chocolate chocolate;springfield_mp
+ 27:44 K;0;1;axis;jpt-Homobonerus;0;1;axis;jpt-Homobonerus;luger_mp;24;MOD_MELEE;torso_upper;623,-1132,17;623,-1132,17;-37.8809;-37.8809;stand;stand
+ 27:44 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;luger_mp;24;MOD_MELEE;torso_upper
+ 27:44 Item;0;0;Chocolate Luda;item_health
+ 27:44 Weapon;0;0;Chocolate Luda;luger_mp
+ 27:49 Spawn;0;1;axis;jpt-Homobonerus;mp44_mp;4938,-1317,256.125;-180
+ 27:50 D;0;0;axis;Chocolate Luda;0;2;allies;jpt-chocolate chocolate;fraggrenade_mp;47;MOD_MELEE;torso_upper
+ 27:55 K;0;2;allies;jpt-chocolate chocolate;0;2;allies;jpt-chocolate chocolate;none;100000;MOD_SUICIDE;none;643,-1182,17;643,-1182,17;84.5508;84.5508;stand;stand
+ 27:55 Item;0;0;Chocolate Luda;item_health
+ 27:55 Shock;0;2;allies;jpt-chocolate chocolate;fraggrenade_mp;4;MOD_GRENADE_SPLASH;none
+ 27:55 K;0;0;axis;Chocolate Luda;0;2;allies;jpt-chocolate chocolate;fraggrenade_mp;98;MOD_GRENADE_SPLASH;none;645.476,-1152.69,19.32;643.431,-1182.75,17.1677;-139.521;84.5508;stand;stand
+ 27:55 Shock;0;0;axis;Chocolate Luda;fraggrenade_mp;4;MOD_GRENADE_SPLASH;none
+ 27:55 Shock;0;3;allies;Chocolate Flower;fraggrenade_mp;1;MOD_GRENADE_SPLASH;none
+ 27:55 D;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;fraggrenade_mp;16;MOD_GRENADE_SPLASH;none
+ 28:01 Spawn;0;0;axis;Chocolate Luda;mp44_mp;3352,-408,128.125;-135
+ 28:02 Spawn;0;2;allies;jpt-chocolate chocolate;springfield_mp;-687.482,-1160.02,72.9507;0
+ 28:15 D;0;2;allies;jpt-chocolate chocolate;0;1;axis;jpt-Homobonerus;stielhandgranate_mp;47;MOD_MELEE;torso_upper
+ 28:22 D;0;2;allies;jpt-chocolate chocolate;0;1;axis;jpt-Homobonerus;stielhandgranate_mp;31;MOD_MELEE;left_leg_upper
+ 28:27 D;0;0;axis;Chocolate Luda;0;2;allies;jpt-chocolate chocolate;fraggrenade_mp;46;MOD_MELEE;torso_upper
+ 28:30 D;0;0;axis;Chocolate Luda;0;2;allies;jpt-chocolate chocolate;fraggrenade_mp;31;MOD_MELEE;left_arm_upper
+ 28:32 Weapon;0;0;Chocolate Luda;stielhandgranate_mp
+ 28:41 K;0;2;allies;jpt-chocolate chocolate;0;1;axis;jpt-Homobonerus;stielhandgranate_mp;84;MOD_GRENADE_SPLASH;none;426.608,-1227.23,-7.875;1266.3,-1270.67,-7.875;-42.7863;-178.022;stand;stand
+ 28:41 Shock;0;2;allies;jpt-chocolate chocolate;stielhandgranate_mp;3;MOD_GRENADE_SPLASH;none
+ 28:41 K;0;0;axis;Chocolate Luda;0;1;axis;jpt-Homobonerus;stielhandgranate_mp;34;MOD_GRENADE_SPLASH;none;630.633,-1225.32,11.5558;1266.3,-1270.67,-7.875;-152.402;-178.022;prone;stand
+ 28:41 Shock;0;0;axis;Chocolate Luda;stielhandgranate_mp;2;MOD_GRENADE_SPLASH;none
+ 28:41 K;0;3;allies;Chocolate Flower;0;1;axis;jpt-Homobonerus;stielhandgranate_mp;84;MOD_GRENADE_SPLASH;none;527.489,-1409.96,-7.875;1266.3,-1270.67,-7.875;104.628;-178.022;prone;stand
+ 28:41 Shock;0;3;allies;Chocolate Flower;stielhandgranate_mp;3;MOD_GRENADE_SPLASH;none
+ 29:09 Spawn;0;2;allies;jpt-chocolate chocolate;springfield_mp;136,560,0.125;-135
+ 29:14 Use;0;2;allies;jpt-chocolate chocolate;1;all;shermantank_mp;1;-274,-288.543,58.7369;-90
+ 29:19 Spawn;0;3;allies;Chocolate Flower;thompson_mp;-687.482,-1160.02,72.9507;0
+ 29:25 K;0;1;axis;jpt-Homobonerus;0;2;allies;jpt-chocolate chocolate;sherman_turret_mp;78;MOD_CRUSH_TANK;none;1268.6,-1269.27,-7.875;1108.31,-1232.7,78.3976;-178.022;-12.5739;stand;stand
+ 29:30 Weapon;0;3;Chocolate Flower;panzerfaust_mp
+ 30:00 Spawn;0;1;axis;jpt-Homobonerus;mp44_mp;2159.69,-3031.29,43.5207;90
+ 30:01 Use;0;3;allies;Chocolate Flower;0;all;panzeriv_mp;1;4689.78,-1979,109.081;180
+ 30:15 Use;0;3;allies;Chocolate Flower;0;all;panzeriv_mp;0;2508.76,-2674.41,121.968;143.366
+ 30:15 Use;0;3;allies;Chocolate Flower;0;all;panzeriv_mp;2;2481.78,-2671.76,81.9195;143.366
+ 30:19 D;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;30cal_tank_mp;26.5;MOD_RIFLE_BULLET;torso_upper
+ 30:20 D;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;30cal_tank_mp;45;MOD_RIFLE_BULLET;head
+ 30:20 D;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;30cal_tank_mp;26.5;MOD_RIFLE_BULLET;torso_upper
+ 30:20 K;0;3;allies;Chocolate Flower;0;2;allies;jpt-chocolate chocolate;30cal_tank_mp;18;MOD_RIFLE_BULLET;left_leg_upper;2473.53,-2670.54,82.0487;1680.09,-1899.54,67.5342;135.731;-44.3408;stand;stand
+ 30:20 K;0;2;allies;jpt-chocolate chocolate;0;2;allies;jpt-chocolate chocolate;30cal_tank_mp;18;MOD_RIFLE_BULLET;left_leg_upper;1680.09,-1899.54,67.5342;1680.09,-1899.54,67.5342;-44.3408;-44.3408;stand;stand
+ 30:20 Use;0;2;allies;jpt-chocolate chocolate;1;all;shermantank_mp;0;1681.31,-1898.17,87.3571;-44.3408
+ 30:20 Use;0;3;allies;Chocolate Flower;0;all;panzeriv_mp;0;2475.02,-2671.37,81.7351;135.731
+ 30:23 Spawn;0;2;allies;jpt-chocolate chocolate;springfield_mp;-279.84,-1631.9,44.4792;45
+ 30:30 Use;0;1;axis;jpt-Homobonerus;0;all;panzeriv_mp;1;2463.65,-2658.26,108.883;-178.841
+ 30:31 Weapon;0;2;jpt-chocolate chocolate;satchelcharge_mp
+ 30:32 Spawn;0;3;allies;Chocolate Flower;thompson_mp;-279.84,-1631.9,44.4792;45
+ 30:38 K;0;2;allies;jpt-chocolate chocolate;0;1;axis;jpt-Homobonerus;panzeriv_turret_mp;209;MOD_PROJECTILE_SPLASH;none;1458.75,-2209.94,27.0179;2463.91,-2658.58,128.879;56.3159;153.765;stand;stand
+ 30:38 Shock;0;2;allies;jpt-chocolate chocolate;panzeriv_turret_mp;4;MOD_PROJECTILE_SPLASH;none
+ 30:41 Spawn;0;2;allies;jpt-chocolate chocolate;springfield_mp;-687.482,-1160.02,72.9507;0
+ 30:42 K;1;-1;all;shermantank_mp;0;1;axis;jpt-Homobonerus;none;10000;MOD_EXPLOSIVE;none;1676.61,-1903.43,1.125;2463.65,-2658.26,108.883;-72.9053;135.176;none;stand
+ 30:52 Weapon;0;2;jpt-chocolate chocolate;satchelcharge_mp
+ 30:52 Weapon;0;3;Chocolate Flower;panzerfaust_mp
+ 30:59 D;0;3;allies;Chocolate Flower;0;1;axis;jpt-Homobonerus;mg34_tank_mp;36;MOD_RIFLE_BULLET;left_leg_upper
+ 30:59 D;0;3;allies;Chocolate Flower;0;1;axis;jpt-Homobonerus;mg34_tank_mp;30;MOD_RIFLE_BULLET;left_leg_lower
+ 30:59 D;0;3;allies;Chocolate Flower;0;1;axis;jpt-Homobonerus;mg34_tank_mp;30;MOD_RIFLE_BULLET;left_leg_lower
+ 30:59 K;0;3;allies;Chocolate Flower;0;1;axis;jpt-Homobonerus;mg34_tank_mp;36;MOD_RIFLE_BULLET;right_leg_upper;1341.55,-1578.64,1.125;2419.11,-2662.71,108.758;-46.0712;134.517;stand;stand
+ 31:01 D;0;2;allies;jpt-chocolate chocolate;0;1;axis;jpt-Homobonerus;mg34_tank_mp;30;MOD_RIFLE_BULLET;left_leg_lower
+ 31:01 D;0;2;allies;jpt-chocolate chocolate;0;1;axis;jpt-Homobonerus;mg34_tank_mp;30;MOD_RIFLE_BULLET;left_leg_lower
+ 31:01 D;0;2;allies;jpt-chocolate chocolate;0;1;axis;jpt-Homobonerus;mg34_tank_mp;30;MOD_RIFLE_BULLET;right_leg_lower
+ 31:01 K;0;2;allies;jpt-chocolate chocolate;0;1;axis;jpt-Homobonerus;mg34_tank_mp;30;MOD_RIFLE_BULLET;right_leg_lower;1705.98,-2448.99,7.83567;2419.11,-2662.71,108.758;-9.05823;163.449;stand;stand
+ 31:03 Spawn;0;3;allies;Chocolate Flower;thompson_mp;-687.482,-1160.02,72.9507;0
+ 31:06 Spawn;0;2;allies;jpt-chocolate chocolate;springfield_mp;-687.482,-1160.02,72.9507;0
+ 31:12 Use;0;1;axis;jpt-Homobonerus;0;all;panzeriv_mp;0;1588.71,-1686.79,137.549;138.895
+ 31:12 Use;0;1;axis;jpt-Homobonerus;0;all;panzeriv_mp;2;1556.68,-1647.59,96.7415;141.097
+ 31:15 Weapon;0;2;jpt-chocolate chocolate;panzerfaust_mp
+ 31:18 D;0;2;allies;jpt-chocolate chocolate;0;1;axis;jpt-Homobonerus;mg42_turret_mp;36;MOD_RIFLE_BULLET;left_leg_upper
+ 31:18 Shock;0;1;axis;jpt-Homobonerus;panzerfaust_mp;1;MOD_EXPLOSIVE;none
+ 31:18 D;0;1;axis;jpt-Homobonerus;0;2;allies;jpt-chocolate chocolate;panzerfaust_mp;5;MOD_EXPLOSIVE;none
+ 31:18 K;0;1;axis;jpt-Homobonerus;0;2;allies;jpt-chocolate chocolate;panzerfaust_mp;108;MOD_EXPLOSIVE;none;1318.62,-1214.22,124.119;803.258,-1720.53,0.125;-135.192;47.1259;stand;stand
+ 31:18 Shock;0;1;axis;jpt-Homobonerus;panzerfaust_mp;1;MOD_EXPLOSIVE;none
+ 31:18 Use;0;1;axis;jpt-Homobonerus;0;all;panzeriv_mp;0;1318.62,-1214.22,124.119;-135.192
+ 31:18 K;0;-1;all;panzeriv_mp;0;2;allies;jpt-chocolate chocolate;none;10000;MOD_EXPLOSIVE;none;1297.19,-1158.14,10.282;803.258,-1720.53,0.125;118.548;47.1259;none;stand
+ 31:18 Shock;0;1;axis;jpt-Homobonerus;panzerfaust_mp;1;MOD_EXPLOSIVE;none
+ 31:21 Spawn;0;1;axis;jpt-Homobonerus;mp44_mp;136,560,0.125;-135
+ 31:26 Use;0;1;axis;jpt-Homobonerus;1;all;shermantank_mp;1;-274,-288,58.7392;-90
+ 31:28 Item;0;2;jpt-chocolate chocolate;item_health
+ 31:31 Item;0;2;jpt-chocolate chocolate;item_health
+ 31:31 Weapon;0;3;Chocolate Flower;panzerfaust_mp
+ 31:34 Weapon;0;2;jpt-chocolate chocolate;panzerfaust_mp
+ 31:35 K;0;3;allies;Chocolate Flower;0;1;axis;jpt-Homobonerus;sherman_turret_mp;275;MOD_PROJECTILE_SPLASH;none;1188.34,-2181.21,0.124996;133.673,-1272.41,87.6566;21.5662;-43.2532;stand;stand
+ 31:35 Shock;0;3;allies;Chocolate Flower;sherman_turret_mp;4;MOD_PROJECTILE_SPLASH;none
+ 31:39 Spawn;0;3;allies;Chocolate Flower;thompson_mp;2159.69,-3031.29,43.5207;90
+ 31:43 K;0;3;allies;Chocolate Flower;0;2;allies;jpt-chocolate chocolate;panzerfaust_mp;500;MOD_PROJECTILE;none;2111.3,-3005.31,24.1254;2083.08,-3056.41,16.2978;162.647;54.2285;crouch;crouch
+ 31:43 K;0;2;allies;jpt-chocolate chocolate;0;2;allies;jpt-chocolate chocolate;panzerfaust_mp;500;MOD_PROJECTILE;none;2083.08,-3056.41,16.2978;2083.08,-3056.41,16.2978;54.2285;54.2285;crouch;crouch
+ 31:43 Shock;0;3;allies;Chocolate Flower;panzerfaust_mp;4;MOD_PROJECTILE;none
+ 31:43 Shock;0;2;allies;jpt-chocolate chocolate;panzerfaust_mp;3;MOD_PROJECTILE_SPLASH;none
+ 31:46 Spawn;0;2;allies;jpt-chocolate chocolate;springfield_mp;720,344,256.125;-90
+ 31:46 Spawn;0;3;allies;Chocolate Flower;thompson_mp;136,560,0.125;-135
+ 32:03 Weapon;0;3;Chocolate Flower;satchelcharge_mp
+ 32:04 K;0;2;allies;jpt-chocolate chocolate;0;1;axis;jpt-Homobonerus;sherman_turret_mp;125;MOD_PROJECTILE_SPLASH;none;293.221,-1224.07,1.125;2032.7,-1941.2,77.6998;-38.4192;153.177;stand;stand
+ 32:04 Shock;0;2;allies;jpt-chocolate chocolate;sherman_turret_mp;4;MOD_PROJECTILE_SPLASH;none
+ 32:07 Spawn;0;2;allies;jpt-chocolate chocolate;springfield_mp;-687.482,-1160.02,72.9507;0
+ 32:13 D;0;3;allies;Chocolate Flower;0;1;axis;jpt-Homobonerus;30cal_tank_mp;30;MOD_RIFLE_BULLET;right_arm_lower
+ 32:14 Weapon;0;3;Chocolate Flower;fraggrenade_mp
+ 32:24 Weapon;0;3;Chocolate Flower;panzerfaust_mp
+ 32:30 Weapon;0;3;Chocolate Flower;panzerfaust_mp
+ 32:35 Weapon;0;2;jpt-chocolate chocolate;panzerfaust_mp
+ 32:37 Shock;0;1;axis;jpt-Homobonerus;panzerfaust_mp;1;MOD_EXPLOSIVE;none
+ 32:37 D;0;1;axis;jpt-Homobonerus;0;3;allies;Chocolate Flower;panzerfaust_mp;24;MOD_EXPLOSIVE;none
+ 32:37 Use;0;1;axis;jpt-Homobonerus;1;all;shermantank_mp;0;2050.63,-1728.28,69.7996;98.7286
+ 32:37 K;1;-1;all;shermantank_mp;0;3;allies;Chocolate Flower;none;10000;MOD_EXPLOSIVE;none;2202.4,-1559.49,34.5383;2087.46,-1179.43,41.0993;-131.891;-63.869;none;crouch
+ 32:37 K;0;1;axis;jpt-Homobonerus;0;3;allies;Chocolate Flower;panzerfaust_mp;10000;MOD_EXPLOSIVE;none;2050.63,-1728.28,69.7996;2087.46,-1179.43,41.0993;98.7286;-63.869;stand;crouch
+ 32:37 Shock;0;1;axis;jpt-Homobonerus;panzerfaust_mp;4;MOD_EXPLOSIVE;none
+ 32:39 Weapon;0;3;Chocolate Flower;panzerfaust_mp
+ 32:42 Spawn;0;1;axis;jpt-Homobonerus;mp44_mp;-687.482,-1160.02,72.9507;0
+ 32:52 Weapon;0;1;jpt-Homobonerus;mp44_mp
+ 32:58 Weapon;0;1;jpt-Homobonerus;panzerfaust_mp
+ 33:11 Shock;0;1;axis;jpt-Homobonerus;panzerfaust_mp;1;MOD_PROJECTILE_SPLASH;none
+ 33:11 D;0;1;axis;jpt-Homobonerus;0;2;allies;jpt-chocolate chocolate;panzerfaust_mp;49;MOD_PROJECTILE_SPLASH;none
+ 33:12 Item;0;1;jpt-Homobonerus;item_health
+ 33:19 Shock;0;2;allies;jpt-chocolate chocolate;panzerfaust_mp;2;MOD_PROJECTILE_SPLASH;none
+ 33:19 D;0;2;allies;jpt-chocolate chocolate;0;1;axis;jpt-Homobonerus;panzerfaust_mp;47;MOD_PROJECTILE_SPLASH;none
+ 33:21 D;0;1;axis;jpt-Homobonerus;0;2;allies;jpt-chocolate chocolate;springfield_mp;72;MOD_RIFLE_BULLET;left_leg_upper
+ 33:21 D;0;2;allies;jpt-chocolate chocolate;0;1;axis;jpt-Homobonerus;mp44_mp;34;MOD_PISTOL_BULLET;right_leg_lower
+ 33:22 K;0;2;allies;jpt-chocolate chocolate;0;1;axis;jpt-Homobonerus;mp44_mp;27;MOD_PISTOL_BULLET;right_hand;1564.67,-609.363,272.125;2413,-1188,-7;-34.5685;146.376;stand;stand
+ 33:24 Spawn;0;2;allies;jpt-chocolate chocolate;springfield_mp;3936,-1160,128.125;-135
+ 33:39 Weapon;0;1;jpt-Homobonerus;panzerfaust_mp
+ 33:43 Item;0;1;jpt-Homobonerus;item_health
+ 33:45 K;0;1;axis;jpt-Homobonerus;0;2;allies;jpt-chocolate chocolate;springfield_mp;107;MOD_RIFLE_BULLET;torso_upper;1566.87,-618.635,272.125;3341,-737,128;-73.2623;176.424;stand;crouch
+ 33:48 Spawn;0;1;axis;jpt-Homobonerus;mp44_mp;1064,-1952,0.125002;45
+ 33:52 Weapon;0;1;jpt-Homobonerus;panzerfaust_mp
+ 33:59 Item;0;3;Chocolate Flower;item_health
+ 34:05 Shock;0;1;axis;jpt-Homobonerus;panzerfaust_mp;3;MOD_PROJECTILE_SPLASH;none
+ 34:05 D;0;1;axis;jpt-Homobonerus;0;1;axis;jpt-Homobonerus;panzerfaust_mp;69;MOD_PROJECTILE_SPLASH;none
+ 34:05 Shock;0;2;allies;jpt-chocolate chocolate;panzerfaust_mp;3;MOD_PROJECTILE_SPLASH;none
+ 34:05 D;0;2;allies;jpt-chocolate chocolate;0;1;axis;jpt-Homobonerus;panzerfaust_mp;62;MOD_PROJECTILE_SPLASH;none
+ 34:09 K;0;2;allies;jpt-chocolate chocolate;0;1;axis;jpt-Homobonerus;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower;1246.05,-298.464,136.125;1167,-237,128;-69.0985;-34.4861;stand;stand
+ 34:11 Item;0;1;jpt-Homobonerus;item_health
+ 34:12 Spawn;0;2;allies;jpt-chocolate chocolate;springfield_mp;2016.09,-1296.13,53.7281;0
+ 34:13 Weapon;0;3;Chocolate Flower;panzerfaust_mp
+ 34:18 Weapon;0;1;jpt-Homobonerus;panzerfaust_mp
+ 34:21 Shock;0;2;allies;jpt-chocolate chocolate;fraggrenade_mp;1;MOD_GRENADE_SPLASH;none
+ 34:21 D;0;2;allies;jpt-chocolate chocolate;0;2;allies;jpt-chocolate chocolate;fraggrenade_mp;5;MOD_GRENADE_SPLASH;none
+ 34:23 Item;0;1;jpt-Homobonerus;item_health
+ 34:24 Shock;0;2;allies;jpt-chocolate chocolate;panzerfaust_mp;3;MOD_PROJECTILE_SPLASH;none
+ 34:24 D;0;2;allies;jpt-chocolate chocolate;0;1;axis;jpt-Homobonerus;panzerfaust_mp;54;MOD_PROJECTILE_SPLASH;none
+ 34:30 D;0;1;axis;jpt-Homobonerus;0;3;allies;Chocolate Flower;thompson_mp;30;MOD_PISTOL_BULLET;right_leg_upper
+ 34:31 D;0;1;axis;jpt-Homobonerus;0;3;allies;Chocolate Flower;thompson_mp;25;MOD_PISTOL_BULLET;right_arm_lower
+ 34:31 K;0;1;axis;jpt-Homobonerus;0;3;allies;Chocolate Flower;thompson_mp;75;MOD_HEAD_SHOT;head;1185.13,-1054.88,272.125;2135,-984,4;-166.157;-177.314;stand;crouch
+ 34:34 Weapon;0;3;Chocolate Flower;panzerfaust_mp
+ 34:35 Spawn;0;1;axis;jpt-Homobonerus;mp44_mp;2056,-32,128.125;-180
+ 34:37 Use;0;2;allies;jpt-chocolate chocolate;1;all;shermantank_mp;1;-274,-288,58.7392;-90
+ 34:44 Item;0;3;Chocolate Flower;item_health
+ 34:49 Weapon;0;1;jpt-Homobonerus;panzerfaust_mp
+ 34:53 Weapon;0;3;Chocolate Flower;satchelcharge_mp
+ 35:00 Weapon;0;1;jpt-Homobonerus;panzerfaust_mp
+ 35:01 Shock;0;3;allies;Chocolate Flower;sherman_turret_mp;2;MOD_PROJECTILE_SPLASH;none
+ 35:01 D;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;sherman_turret_mp;34;MOD_PROJECTILE_SPLASH;none
+ 35:10 Shock;0;1;axis;jpt-Homobonerus;panzerfaust_mp;2;MOD_PROJECTILE_SPLASH;none
+ 35:10 D;0;1;axis;jpt-Homobonerus;0;3;allies;Chocolate Flower;panzerfaust_mp;45;MOD_PROJECTILE_SPLASH;none
+ 35:12 D;0;1;axis;jpt-Homobonerus;0;3;allies;Chocolate Flower;thompson_mp;30;MOD_PISTOL_BULLET;left_arm_upper
+ 35:12 D;0;1;axis;jpt-Homobonerus;0;3;allies;Chocolate Flower;thompson_mp;20;MOD_PISTOL_BULLET;left_foot
+ 35:12 K;0;1;axis;jpt-Homobonerus;0;3;allies;Chocolate Flower;thompson_mp;30;MOD_PISTOL_BULLET;left_leg_upper;1976.7,-1475.92,51.1605;2052,-1682,17;-98.2782;105.782;stand;stand
+ 35:14 Item;0;3;Chocolate Flower;item_health
+ 35:15 Spawn;0;1;axis;jpt-Homobonerus;mp44_mp;136,560,0.125;-135
+ 35:20 Weapon;0;3;Chocolate Flower;panzerfaust_mp
+ 35:27 K;0;2;allies;jpt-chocolate chocolate;0;3;allies;Chocolate Flower;panzerfaust_mp;26;MOD_EXPLOSIVE;none;2285.11,-1166.73,53.468;1831.13,-1068.42,33.0891;157.819;-2.46094;stand;crouch
+ 35:27 Shock;0;2;allies;jpt-chocolate chocolate;panzerfaust_mp;2;MOD_EXPLOSIVE;none
+ 35:27 Use;0;2;allies;jpt-chocolate chocolate;1;all;shermantank_mp;0;2285.11,-1166.73,53.468;157.819
+ 35:27 K;1;-1;all;shermantank_mp;0;3;allies;Chocolate Flower;none;10000;MOD_EXPLOSIVE;none;2449.27,-1126.63,-7.71411;1831.13,-1068.42,33.0891;-107.254;-2.46094;none;crouch
+ 35:27 K;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;panzerfaust_mp;5000;MOD_EXPLOSIVE;none;1831.13,-1068.42,33.0891;1831.13,-1068.42,33.0891;-2.46094;-2.46094;crouch;crouch
+ 35:27 Shock;0;2;allies;jpt-chocolate chocolate;panzerfaust_mp;4;MOD_EXPLOSIVE;none
+ 35:30 Spawn;0;2;allies;jpt-chocolate chocolate;springfield_mp;3072,-1896,0.125;-90
+ 35:32 Spawn;0;3;allies;Chocolate Flower;thompson_mp;3072,-1896,0.125;-90
+ 35:34 Weapon;0;1;jpt-Homobonerus;panzerfaust_mp
+ 35:42 Weapon;0;2;jpt-chocolate chocolate;panzerfaust_mp
+ 35:43 Shock;0;3;allies;Chocolate Flower;panzerfaust_mp;3;MOD_PROJECTILE_SPLASH;none
+ 35:43 D;0;3;allies;Chocolate Flower;0;1;axis;jpt-Homobonerus;panzerfaust_mp;55;MOD_PROJECTILE_SPLASH;none
+ 35:43 D;0;1;axis;jpt-Homobonerus;0;3;allies;Chocolate Flower;thompson_mp;30;MOD_PISTOL_BULLET;left_arm_upper
+ 35:44 D;0;1;axis;jpt-Homobonerus;0;3;allies;Chocolate Flower;thompson_mp;44;MOD_PISTOL_BULLET;torso_upper
+ 35:45 K;0;3;allies;Chocolate Flower;0;1;axis;jpt-Homobonerus;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower;2442.35,-2783.29,-7.875;2199,-2432,16;123.426;-57.0081;crouch;stand
+ 35:47 Item;0;1;jpt-Homobonerus;item_health
+ 35:52 D;0;2;allies;jpt-chocolate chocolate;0;1;axis;jpt-Homobonerus;mp44_mp;34;MOD_PISTOL_BULLET;left_leg_lower
+ 35:53 K;0;1;axis;jpt-Homobonerus;0;2;allies;jpt-chocolate chocolate;springfield_mp;96;MOD_RIFLE_BULLET;torso_lower;2179.51,-2572.88,-4.94863;1408,-2837,224;-161.093;19.281;stand;crouch
+ 35:54 Spawn;0;3;allies;Chocolate Flower;thompson_mp;1600,-2504,136.125;45
+ 35:58 Spawn;0;1;axis;jpt-Homobonerus;mp44_mp;4938,-1317,256.125;-180
+ 36:04 Weapon;0;2;jpt-chocolate chocolate;panzerfaust_mp
+ 36:13 Weapon;0;1;jpt-Homobonerus;panzerfaust_mp
+ 36:35 D;0;1;axis;jpt-Homobonerus;0;3;allies;Chocolate Flower;thompson_mp;30;MOD_PISTOL_BULLET;left_arm_upper
+ 36:35 D;0;1;axis;jpt-Homobonerus;0;3;allies;Chocolate Flower;thompson_mp;20;MOD_PISTOL_BULLET;right_foot
+ 36:36 D;0;1;axis;jpt-Homobonerus;0;3;allies;Chocolate Flower;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower
+ 36:36 D;0;3;allies;Chocolate Flower;0;1;axis;jpt-Homobonerus;mp44_mp;40;MOD_PISTOL_BULLET;left_arm_upper
+ 36:36 K;0;1;axis;jpt-Homobonerus;0;3;allies;Chocolate Flower;thompson_mp;75;MOD_HEAD_SHOT;head;2116,-1906.21,14.095;2076,-2192,27;-100.052;81.2274;stand;crouch
+ 36:39 Item;0;3;Chocolate Flower;item_health
+ 36:41 D;0;2;allies;jpt-chocolate chocolate;;-1;world;;none;28;MOD_FALLING;none
+ 36:41 Spawn;0;1;axis;jpt-Homobonerus;mp44_mp;64,152,0.125;-90
+ 36:43 Weapon;0;2;jpt-chocolate chocolate;panzerfaust_mp
+ 36:45 Use;0;1;axis;jpt-Homobonerus;1;all;shermantank_mp;1;-274,-288,58.7392;-90
+ 36:45 Weapon;0;3;Chocolate Flower;satchelcharge_mp
+ 36:58 Weapon;0;3;Chocolate Flower;panzerfaust_mp
+ 36:59 Item;0;3;Chocolate Flower;item_health
+ 36:59 ShutdownGame:
+ 36:59 ------------------------------------------------------------
+ 36:59 ------------------------------------------------------------
+ 36:59 InitGame: \.Admin\Luda\.Location\Beavercreek, OH\.Website\http://gday/stats\fs_game\cod-stats\g_gametype\tdm\g_timeoutsallowed\0\gamename\CoD:United Offensive\mapname\warehouse_fun\protocol\22\scr_allow_jeeps\1\scr_allow_tanks\1\shortversion\1.51\sv_allowAnonymous\0\sv_floodProtect\1\sv_hostname\G-Day XI\sv_maxclients\50\sv_maxPing\999\sv_maxRate\25000\sv_minPing\0\sv_privateClients\0\sv_punkbuster\0\sv_pure\0
+ 36:59 Game;tdm;warehouse_fun;30;american;german
+ 37:20 J;0;0;Chocolate Luda
+ 37:20 Spec;0;0;Chocolate Luda
+ 37:32 J;0;3;Chocolate Flower
+ 37:32 Spec;0;3;Chocolate Flower
+ 37:32 J;0;2;jpt-chocolate chocolate
+ 37:32 Spec;0;2;jpt-chocolate chocolate
+ 37:33 Spawn;0;0;axis;Chocolate Luda;mp44_mp;-1512,1070,14.125;-90
+ 37:37 Spawn;0;3;allies;Chocolate Flower;thompson_mp;-1924,2230,14.125;-90
+ 37:40 J;0;1;jpt-Homobonerus
+ 37:40 Spec;0;1;jpt-Homobonerus
+ 37:45 Q;0;1;jpt-Homobonerus
+ 37:52 K;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;stielhandgranate_mp;104;MOD_GRENADE_SPLASH;none;-2336.88,743.125,14.125;-2336.88,743.125,14.125;71.9769;71.9769;stand;stand
+ 37:52 Shock;0;0;axis;Chocolate Luda;stielhandgranate_mp;4;MOD_GRENADE_SPLASH;none
+ 38:00 Spawn;0;2;axis;jpt-chocolate chocolate;mp44_mp;-1676,398,14.125;90
+ 38:01 Spawn;0;0;axis;Chocolate Luda;mp44_mp;-1512,1070,14.125;-90
+ 38:19 Shock;0;3;allies;Chocolate Flower;fraggrenade_mp;3;MOD_GRENADE_SPLASH;none
+ 38:19 D;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;fraggrenade_mp;76;MOD_GRENADE_SPLASH;none
+ 38:20 K;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;stielhandgranate_mp;115;MOD_GRENADE_SPLASH;none;-1744.97,1101.9,233.125;-1744.97,1101.9,233.125;71.7023;71.7023;stand;stand
+ 38:20 Shock;0;0;axis;Chocolate Luda;stielhandgranate_mp;4;MOD_GRENADE_SPLASH;none
+ 38:25 Spawn;0;0;axis;Chocolate Luda;mp44_mp;-1676,398,14.125;90
+ 38:29 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;mp44_mp;27;MOD_PISTOL_BULLET;torso_lower
+ 38:29 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;mp44_mp;13.5;MOD_PISTOL_BULLET;left_foot
+ 38:31 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;mp44_mp;27;MOD_PISTOL_BULLET;torso_lower
+ 38:31 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;mp44_mp;30.5;MOD_PISTOL_BULLET;torso_upper
+ 38:31 K;0;0;axis;Chocolate Luda;0;2;axis;jpt-chocolate chocolate;mp44_mp;27;MOD_PISTOL_BULLET;torso_lower;-1925.09,520.351,14.125;-1861,555,14;-53.8879;-155.325;stand;stand
+ 38:31 K;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;mp44_mp;27;MOD_PISTOL_BULLET;torso_lower;-1861,555,14;-1861,555,14;-155.325;-155.325;stand;stand
+ 38:39 Spawn;0;2;axis;jpt-chocolate chocolate;mp44_mp;-1676,398,14.125;90
+ 38:41 Weapon;0;2;jpt-chocolate chocolate;mp44_mp
+ 38:42 Weapon;0;2;jpt-chocolate chocolate;mp44_mp
+ 38:44 Spawn;0;0;axis;Chocolate Luda;mp44_mp;-1676,398,14.125;90
+ 38:55 J;0;1;jpt-Homobonerus
+ 38:55 Spec;0;1;jpt-Homobonerus
+ 39:39 Weapon;0;3;Chocolate Flower;panzerfaust_mp
+ 39:50 Shock;0;0;axis;Chocolate Luda;panzerfaust_mp;3;MOD_PROJECTILE_SPLASH;none
+ 39:50 D;0;0;axis;Chocolate Luda;0;3;allies;Chocolate Flower;panzerfaust_mp;53;MOD_PROJECTILE_SPLASH;none
+ 39:52 D;0;0;axis;Chocolate Luda;0;3;allies;Chocolate Flower;thompson_mp;25;MOD_PISTOL_BULLET;left_arm_lower
+ 39:52 K;0;3;allies;Chocolate Flower;0;0;axis;Chocolate Luda;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower;-2144.45,1298.54,14.125;-2254,1091,14;-109.16;68.2855;stand;stand
+ 39:55 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;mp44_mp;20;MOD_PISTOL_BULLET;right_leg_upper
+ 39:57 Weapon;0;2;jpt-chocolate chocolate;flamethrower_mp
+ 39:59 Weapon;0;0;Chocolate Luda;sten_silenced_mp
+ 39:59 Weapon;0;2;jpt-chocolate chocolate;flamethrower_mp
+ 40:00 K;0;0;axis;Chocolate Luda;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;4;MOD_FLAME;none;-2107.26,1351.93,15.1;-1974.67,1325.97,14.125;-5.52063;163.806;stand;stand
+ 40:01 Spawn;0;3;allies;Chocolate Flower;thompson_mp;-1924,2230,14.125;-90
+ 40:04 Item;0;2;jpt-chocolate chocolate;item_health
+ 40:06 Spawn;0;0;axis;Chocolate Luda;mp44_mp;-2075,1189,18.125;0
+ 40:18 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 40:18 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 40:18 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 40:18 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 40:18 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 40:18 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 40:18 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 40:18 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;mp44_mp;17;MOD_PISTOL_BULLET;left_arm_lower
+ 40:18 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 40:18 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 40:18 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;mp44_mp;30.5;MOD_PISTOL_BULLET;torso_upper
+ 40:18 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 40:18 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 40:18 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 40:18 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 40:18 K;0;0;axis;Chocolate Luda;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;4;MOD_FLAME;none;-2109.78,1337.26,14.125;-2327.44,1295.3,14.125;-171.052;7.37732;stand;stand
+ 40:18 K;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;4;MOD_FLAME;none;-2327.44,1295.3,14.125;-2327.44,1295.3,14.125;7.37732;7.37732;stand;stand
+ 40:19 K;0;3;allies;Chocolate Flower;;-1;world;;none;1000;MOD_TRIGGER_HURT;none;-1381,1611,-38;0,0,0;-114.725;0;stand;none
+ 40:23 Spawn;0;0;axis;Chocolate Luda;mp44_mp;-1924,2230,14.125;-90
+ 40:24 Spawn;0;2;axis;jpt-chocolate chocolate;mp44_mp;-1812,1688,14.125;90
+ 40:25 Spawn;0;3;allies;Chocolate Flower;thompson_mp;-1512,1070,14.125;-90
+ 40:30 Weapon;0;2;jpt-chocolate chocolate;flamethrower_mp
+ 40:32 D;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 40:32 D;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 40:32 D;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 40:32 D;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 40:32 D;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 40:32 D;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 40:32 D;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 40:32 D;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 40:32 D;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 40:32 D;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 40:32 D;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 40:32 D;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 40:32 K;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none;-2303.28,933.759,14.125;-2280.58,1077.62,14.125;96.2183;-106.54;stand;stand
+ 40:35 Spawn;0;3;allies;Chocolate Flower;thompson_mp;-1924,2230,14.125;-90
+ 40:38 D;0;0;axis;Chocolate Luda;0;3;allies;Chocolate Flower;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower
+ 40:38 D;0;0;axis;Chocolate Luda;0;3;allies;Chocolate Flower;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower
+ 40:39 K;0;0;axis;Chocolate Luda;0;3;allies;Chocolate Flower;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower;-1706.54,1949.23,14.125;-1734,2146,14;-91.7798;-86.5393;stand;stand
+ 40:41 Spawn;0;0;axis;Chocolate Luda;mp44_mp;-2136,1566,14.125;90
+ 40:43 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 40:43 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 40:43 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 40:43 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 40:43 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 40:43 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 40:43 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 40:43 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 40:43 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 40:44 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 40:44 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 40:44 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 40:44 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 40:44 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 40:44 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 40:44 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 40:44 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 40:44 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 40:44 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 40:44 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 40:45 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 40:45 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 40:45 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 40:45 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 40:45 K;0;0;axis;Chocolate Luda;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;4;MOD_FLAME;none;-2211.35,1700.68,14.125;-2126.13,1519.13,14.125;-64.9951;98.4485;stand;crouch
+ 40:45 K;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;4;MOD_FLAME;none;-2126.13,1519.13,14.125;-2126.13,1519.13,14.125;98.4485;98.4485;crouch;crouch
+ 40:47 Spawn;0;2;axis;jpt-chocolate chocolate;mp44_mp;-1676,398,14.125;90
+ 40:48 Spawn;0;0;axis;Chocolate Luda;mp44_mp;-1512,1070,14.125;-90
+ 40:55 D;0;0;axis;Chocolate Luda;0;3;allies;Chocolate Flower;thompson_mp;30;MOD_PISTOL_BULLET;right_leg_upper
+ 40:55 D;0;0;axis;Chocolate Luda;0;3;allies;Chocolate Flower;thompson_mp;20;MOD_PISTOL_BULLET;left_hand
+ 40:56 D;0;0;axis;Chocolate Luda;0;3;allies;Chocolate Flower;thompson_mp;30;MOD_PISTOL_BULLET;left_leg_upper
+ 40:56 D;0;3;allies;Chocolate Flower;0;0;axis;Chocolate Luda;mp44_mp;34;MOD_PISTOL_BULLET;right_arm_lower
+ 40:56 D;0;3;allies;Chocolate Flower;0;0;axis;Chocolate Luda;mp44_mp;34;MOD_PISTOL_BULLET;right_arm_lower
+ 40:57 K;0;3;allies;Chocolate Flower;0;0;axis;Chocolate Luda;mp44_mp;40;MOD_PISTOL_BULLET;left_arm_upper;-2299.58,1400.77,14.125;-2302,975,14;-87.2534;89.7858;stand;stand
+ 41:00 Spawn;0;3;allies;Chocolate Flower;thompson_mp;-1812,1688,14.125;90
+ 41:02 Item;0;0;Chocolate Luda;item_health
+ 41:03 Item;0;0;Chocolate Luda;item_health
+ 41:05 Weapon;0;3;Chocolate Flower;thompson_mp
+ 41:05 K;0;3;allies;Chocolate Flower;;-1;world;;none;1000;MOD_TRIGGER_HURT;none;-1396,1611,-37;0,0,0;-108.413;0;stand;none
+ 41:09 Spawn;0;1;allies;jpt-Homobonerus;bar_mp;-1812,1688,14.125;90
+ 41:11 Spawn;0;3;allies;Chocolate Flower;thompson_mp;-1924,2230,14.125;-90
+ 41:13 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;bar_mp;42;MOD_RIFLE_BULLET;right_arm_upper
+ 41:13 K;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;bar_mp;56;MOD_RIFLE_BULLET;torso_lower;-1434.65,1854.24,14.125;-1689,1834,14;-172.914;4.53186;stand;stand
+ 41:14 Weapon;0;2;jpt-chocolate chocolate;mp44_mp
+ 41:17 K;0;1;allies;jpt-Homobonerus;;-1;world;;none;1000;MOD_TRIGGER_HURT;none;-1358,1611,-35;0,0,0;-95.5646;0;stand;none
+ 41:17 Spawn;0;0;axis;Chocolate Luda;mp44_mp;-2075,1189,18.125;0
+ 41:17 Weapon;0;2;jpt-chocolate chocolate;sten_silenced_mp
+ 41:23 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;sten_silenced_mp;14;MOD_PISTOL_BULLET;left_leg_upper
+ 41:25 Item;0;2;jpt-chocolate chocolate;item_health_large
+ 41:25 K;0;2;axis;jpt-chocolate chocolate;;-1;world;;none;1000;MOD_TRIGGER_HURT;none;-1411,1646,-35;0,0,0;103.337;0;stand;none
+ 41:28 Spawn;0;1;allies;jpt-Homobonerus;bar_mp;-1924,2230,14.125;-90
+ 41:30 K;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;fraggrenade_mp;108;MOD_GRENADE_SPLASH;none;-1636.13,1989.8,14.125;-1636.13,1989.8,14.125;-47.5708;-47.5708;stand;stand
+ 41:30 Shock;0;3;allies;Chocolate Flower;fraggrenade_mp;4;MOD_GRENADE_SPLASH;none
+ 41:31 Spawn;0;2;axis;jpt-chocolate chocolate;mp44_mp;-1676,398,14.125;90
+ 41:33 Spawn;0;3;allies;Chocolate Flower;thompson_mp;-1924,2230,14.125;-90
+ 41:42 K;0;3;allies;Chocolate Flower;;-1;world;;none;1000;MOD_TRIGGER_HURT;none;-1446,1611,-41;0,0,0;-94.2737;0;stand;none
+ 41:44 Spawn;0;3;allies;Chocolate Flower;thompson_mp;-1812,1688,14.125;90
+ 41:46 K;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;none;100000;MOD_SUICIDE;none;-1952,498,14;-1952,498,14;138.757;138.757;stand;stand
+ 41:46 Shock;0;2;axis;jpt-chocolate chocolate;stielhandgranate_mp;4;MOD_GRENADE_SPLASH;none
+ 41:49 Spawn;0;2;axis;jpt-chocolate chocolate;mp44_mp;-1924,2230,14.125;-90
+ 41:49 K;0;3;allies;Chocolate Flower;;-1;world;;none;1000;MOD_TRIGGER_HURT;none;-1408,1611,-39;0,0,0;-78.9038;0;stand;none
+ 41:52 Spawn;0;3;allies;Chocolate Flower;thompson_mp;-1676,398,14.125;90
+ 41:56 K;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;none;100000;MOD_SUICIDE;none;-1924,2230,14;-1924,2230,14;-90;-90;stand;stand
+ 41:56 Shock;0;2;axis;jpt-chocolate chocolate;stielhandgranate_mp;4;MOD_GRENADE_SPLASH;none
+ 41:58 Spawn;0;2;axis;jpt-chocolate chocolate;mp44_mp;-1924,2230,14.125;-90
+ 42:03 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;bar_mp;35;MOD_RIFLE_BULLET;right_arm_lower
+ 42:04 K;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;bar_mp;62;MOD_RIFLE_BULLET;torso_upper;-1378.74,1808,14.125;-1543,1636,236;259.504;47.5049;stand;stand
+ 42:07 Spawn;0;0;axis;Chocolate Luda;mp44_mp;-1924,2230,14.125;-90
+ 42:09 Weapon;0;2;jpt-chocolate chocolate;mp44_mp
+ 42:23 Weapon;0;1;jpt-Homobonerus;panzerschreck_mp
+ 42:30 Weapon;0;0;Chocolate Luda;flamethrower_mp
+ 42:30 K;0;2;axis;jpt-chocolate chocolate;;-1;world;;none;1000;MOD_TRIGGER_HURT;none;-1419,1611,-35;0,0,0;-104.485;0;stand;none
+ 42:31 Weapon;0;0;Chocolate Luda;flamethrower_mp
+ 42:32 K;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;panzerschreck_mp;1000;MOD_PROJECTILE;none;-1867.42,1296.76,14.125;-2248.88,1292.39,14.125;-178.874;-2.65869;prone;stand
+ 42:32 Shock;0;0;axis;Chocolate Luda;panzerschreck_mp;4;MOD_PROJECTILE;none
+ 42:33 Spawn;0;2;axis;jpt-chocolate chocolate;mp44_mp;-1924,2230,14.125;-90
+ 42:36 Weapon;0;1;jpt-Homobonerus;flamethrower_mp
+ 42:44 Weapon;0;3;Chocolate Flower;panzerschreck_mp
+ 42:47 Spawn;0;0;axis;Chocolate Luda;mp44_mp;-1924,2230,14.125;-90
+ 43:04 Weapon;0;0;Chocolate Luda;flamethrower_mp
+ 43:05 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;2;MOD_FLAME;none
+ 43:05 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;2;MOD_FLAME;none
+ 43:07 D;0;0;axis;Chocolate Luda;0;3;allies;Chocolate Flower;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower
+ 43:07 D;0;0;axis;Chocolate Luda;0;3;allies;Chocolate Flower;thompson_mp;44;MOD_PISTOL_BULLET;torso_upper
+ 43:07 K;0;0;axis;Chocolate Luda;0;3;allies;Chocolate Flower;thompson_mp;44;MOD_PISTOL_BULLET;torso_upper;-2165.72,1760.13,14.125;-2277,1352,14;-39.364;74.5697;stand;crouch
+ 43:09 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;mp44_mp;34;MOD_PISTOL_BULLET;left_leg_lower
+ 43:10 Spawn;0;0;axis;Chocolate Luda;mp44_mp;-1812,1688,14.125;90
+ 43:10 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;mp44_mp;40;MOD_PISTOL_BULLET;left_leg_upper
+ 43:10 K;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;mp44_mp;34;MOD_PISTOL_BULLET;left_leg_lower;-2081.88,1657.5,236.125;-1900,1797,14;45.0989;-142.196;stand;stand
+ 43:12 Weapon;0;0;Chocolate Luda;flamethrower_mp
+ 43:12 Spawn;0;1;allies;jpt-Homobonerus;bar_mp;-1676,398,14.125;90
+ 43:14 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;mp44_mp;27;MOD_PISTOL_BULLET;torso_lower
+ 43:14 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;mp44_mp;13.5;MOD_PISTOL_BULLET;right_foot
+ 43:14 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;mp44_mp;20;MOD_PISTOL_BULLET;left_leg_upper
+ 43:14 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;mp44_mp;20;MOD_PISTOL_BULLET;right_leg_upper
+ 43:14 K;0;0;axis;Chocolate Luda;0;2;axis;jpt-chocolate chocolate;mp44_mp;20;MOD_PISTOL_BULLET;right_leg_upper;-1946.17,1748.39,14.125;-1890,1861,14;164.07;-111.923;stand;stand
+ 43:14 K;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;mp44_mp;20;MOD_PISTOL_BULLET;right_leg_upper;-1890,1861,14;-1890,1861,14;-111.923;-111.923;stand;stand
+ 43:17 Spawn;0;0;axis;Chocolate Luda;mp44_mp;-1812,1688,14.125;90
+ 43:18 Spawn;0;2;axis;jpt-chocolate chocolate;mp44_mp;-1924,2230,14.125;-90
+ 43:19 Weapon;0;0;Chocolate Luda;mp44_mp
+ 43:20 Weapon;0;0;Chocolate Luda;flamethrower_mp
+ 43:22 D;0;0;axis;Chocolate Luda;0;3;allies;Chocolate Flower;thompson_mp;44;MOD_PISTOL_BULLET;torso_upper
+ 43:23 D;0;0;axis;Chocolate Luda;0;3;allies;Chocolate Flower;thompson_mp;25;MOD_PISTOL_BULLET;right_leg_lower
+ 43:23 D;0;3;allies;Chocolate Flower;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 43:23 D;0;3;allies;Chocolate Flower;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 43:23 D;0;3;allies;Chocolate Flower;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 43:23 D;0;3;allies;Chocolate Flower;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 43:23 D;0;3;allies;Chocolate Flower;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 43:23 D;0;3;allies;Chocolate Flower;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 43:23 D;0;3;allies;Chocolate Flower;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 43:23 D;0;3;allies;Chocolate Flower;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 43:23 D;0;3;allies;Chocolate Flower;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 43:23 D;0;3;allies;Chocolate Flower;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 43:23 D;0;0;axis;Chocolate Luda;0;3;allies;Chocolate Flower;thompson_mp;25;MOD_PISTOL_BULLET;right_leg_lower
+ 43:23 D;0;3;allies;Chocolate Flower;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 43:23 D;0;3;allies;Chocolate Flower;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 43:24 K;0;3;allies;Chocolate Flower;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none;-2283.87,1408.4,14.125;-2250.8,1784.12,14.125;85.968;-93.6969;crouch;stand
+ 43:26 Spawn;0;3;allies;Chocolate Flower;thompson_mp;-1676,398,14.125;90
+ 43:28 Item;0;0;Chocolate Luda;item_health
+ 43:33 Shock;0;2;axis;jpt-chocolate chocolate;fraggrenade_mp;2;MOD_GRENADE_SPLASH;none
+ 43:33 D;0;2;axis;jpt-chocolate chocolate;0;3;allies;Chocolate Flower;fraggrenade_mp;39;MOD_GRENADE_SPLASH;none
+ 43:33 K;0;0;axis;Chocolate Luda;0;3;allies;Chocolate Flower;fraggrenade_mp;70;MOD_GRENADE_SPLASH;none;-2132.1,1759.97,14.125;-1882.1,679.867,94.7682;-6.39954;89.8956;stand;stand
+ 43:33 Shock;0;0;axis;Chocolate Luda;fraggrenade_mp;3;MOD_GRENADE_SPLASH;none
+ 43:33 Item;0;2;jpt-chocolate chocolate;item_health
+ 43:35 Weapon;0;2;jpt-chocolate chocolate;flamethrower_mp
+ 43:36 Item;0;2;jpt-chocolate chocolate;item_health
+ 43:38 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 43:38 D;0;2;axis;jpt-chocolate chocolate;0;1;allies;jpt-Homobonerus;bar_mp;42;MOD_RIFLE_BULLET;left_leg_upper
+ 43:38 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 43:38 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 43:38 D;0;2;axis;jpt-chocolate chocolate;0;1;allies;jpt-Homobonerus;bar_mp;42;MOD_RIFLE_BULLET;right_leg_upper
+ 43:38 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 43:38 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 43:38 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 43:38 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 43:38 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 43:38 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 43:38 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 43:38 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 43:39 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 43:39 K;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none;-2252.43,1212.35,14.125;-2303.99,1476.31,14.125;92.5543;-81.0297;stand;stand
+ 43:39 Item;0;2;jpt-chocolate chocolate;item_health
+ 43:41 Weapon;0;2;jpt-chocolate chocolate;mp44_mp
+ 43:42 Spawn;0;0;axis;Chocolate Luda;mp44_mp;-2136,1566,14.125;90
+ 43:42 Item;0;2;jpt-chocolate chocolate;item_health
+ 43:43 Weapon;0;0;Chocolate Luda;mp44_mp
+ 43:45 Spawn;0;1;allies;jpt-Homobonerus;bar_mp;-1676,398,14.125;90
+ 43:48 Weapon;0;0;Chocolate Luda;flamethrower_mp
+ 44:09 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;bar_mp;56;MOD_RIFLE_BULLET;torso_lower
+ 44:09 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 44:09 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 44:09 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 44:09 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 44:09 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 44:09 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 44:09 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 44:09 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 44:09 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 44:09 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 44:09 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 44:10 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 44:10 K;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none;-2221.29,1087.11,14.125;-2321.81,1781.55,14.125;98.4705;-82.0569;stand;stand
+ 44:11 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;2;MOD_FLAME;none
+ 44:11 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;2;MOD_FLAME;none
+ 44:11 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;2;MOD_FLAME;none
+ 44:11 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;2;MOD_FLAME;none
+ 44:11 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;2;MOD_FLAME;none
+ 44:11 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;2;MOD_FLAME;none
+ 44:11 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;2;MOD_FLAME;none
+ 44:12 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;2;MOD_FLAME;none
+ 44:12 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;2;MOD_FLAME;none
+ 44:12 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;2;MOD_FLAME;none
+ 44:12 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;2;MOD_FLAME;none
+ 44:12 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;2;MOD_FLAME;none
+ 44:12 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;2;MOD_FLAME;none
+ 44:12 Item;0;0;Chocolate Luda;item_health
+ 44:13 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;2;MOD_FLAME;none
+ 44:13 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;2;MOD_FLAME;none
+ 44:13 Item;0;0;Chocolate Luda;item_health
+ 44:13 Spawn;0;1;allies;jpt-Homobonerus;bar_mp;-1512,1070,14.125;-90
+ 44:13 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;2;MOD_FLAME;none
+ 44:15 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 44:15 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 44:15 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 44:15 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 44:15 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 44:15 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 44:15 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 44:15 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 44:15 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 44:15 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 44:15 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 44:15 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 44:15 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 44:16 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 44:16 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 44:16 K;0;0;axis;Chocolate Luda;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;4;MOD_FLAME;none;-2265.29,1308.5,14.125;-2119.13,1232.12,14.125;-73.4875;152.902;stand;crouch
+ 44:20 K;0;2;axis;jpt-chocolate chocolate;0;1;allies;jpt-Homobonerus;bar_mp;35;MOD_RIFLE_BULLET;left_arm_lower;-2225.18,1301.32,14.125;-2262,1136,14;172.535;82.2272;crouch;stand
+ 44:22 Weapon;0;1;jpt-Homobonerus;flamethrower_mp
+ 44:22 Spawn;0;2;axis;jpt-chocolate chocolate;mp44_mp;-1924,2230,14.125;-90
+ 44:34 Weapon;0;1;jpt-Homobonerus;bar_mp
+ 44:36 Weapon;0;1;jpt-Homobonerus;flamethrower_mp
+ 44:36 Weapon;0;1;jpt-Homobonerus;flamethrower_mp
+ 44:39 Spawn;0;0;axis;Chocolate Luda;mp44_mp;-1924,2230,14.125;-90
+ 44:46 K;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;mp44_mp;102;MOD_HEAD_SHOT;head;-1557.55,1195.51,233.125;-1578,1513,232;93.4167;-87.1381;crouch;stand
+ 44:47 Weapon;0;1;jpt-Homobonerus;bar_mp
+ 44:50 Spawn;0;3;allies;Chocolate Flower;thompson_mp;-1676,398,14.125;90
+ 44:53 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;mp44_mp;61;MOD_PISTOL_BULLET;torso_upper
+ 44:53 Weapon;0;1;jpt-Homobonerus;flamethrower_mp
+ 44:54 K;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;mp44_mp;61;MOD_PISTOL_BULLET;torso_upper;-2255.65,1214.11,14.125;-1991,1424,240;11.7993;-142.196;stand;stand
+ 44:56 Spawn;0;1;allies;jpt-Homobonerus;bar_mp;-1676,398,14.125;90
+ 45:00 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;mp44_mp;17;MOD_PISTOL_BULLET;right_arm_lower
+ 45:00 Item;0;0;Chocolate Luda;item_health
+ 45:00 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;mp44_mp;30.5;MOD_PISTOL_BULLET;torso_upper
+ 45:00 Item;0;0;Chocolate Luda;item_health
+ 45:00 Weapon;0;0;Chocolate Luda;flamethrower_mp
+ 45:02 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;mp44_mp;17;MOD_PISTOL_BULLET;right_leg_lower
+ 45:07 Item;0;2;jpt-chocolate chocolate;item_health
+ 45:08 Weapon;0;2;jpt-chocolate chocolate;thompson_mp
+ 45:09 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;4;MOD_FLAME;none
+ 45:09 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;4;MOD_FLAME;none
+ 45:09 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;4;MOD_FLAME;none
+ 45:09 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;4;MOD_FLAME;none
+ 45:09 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;4;MOD_FLAME;none
+ 45:10 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;4;MOD_FLAME;none
+ 45:10 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;4;MOD_FLAME;none
+ 45:10 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;4;MOD_FLAME;none
+ 45:10 Weapon;0;2;jpt-chocolate chocolate;thompson_mp
+ 45:11 Weapon;0;2;jpt-chocolate chocolate;thompson_mp
+ 45:17 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;bar_mp;42;MOD_RIFLE_BULLET;left_leg_upper
+ 45:17 K;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;bar_mp;56;MOD_RIFLE_BULLET;torso_lower;-1451.05,1404.22,14.125;-1688,1269,14;-164.344;33.3215;stand;stand
+ 45:18 Weapon;0;3;Chocolate Flower;thompson_mp
+ 45:19 Weapon;0;1;jpt-Homobonerus;thompson_mp
+ 45:19 Weapon;0;1;jpt-Homobonerus;flamethrower_mp
+ 45:21 Spawn;0;0;axis;Chocolate Luda;mp44_mp;-1924,2230,14.125;-90
+ 45:21 D;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;mp44_mp;34;MOD_PISTOL_BULLET;right_arm_lower
+ 45:22 D;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower
+ 45:22 K;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower;-2243.91,1702.22,14.125;-2107,1759,14;24.7522;-158.643;stand;stand
+ 45:24 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;2;MOD_FLAME;none
+ 45:24 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;2;MOD_FLAME;none
+ 45:24 Weapon;0;2;jpt-chocolate chocolate;thompson_mp
+ 45:24 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;2;MOD_FLAME;none
+ 45:24 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;2;MOD_FLAME;none
+ 45:24 D;0;2;axis;jpt-chocolate chocolate;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 45:24 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;2;MOD_FLAME;none
+ 45:24 D;0;2;axis;jpt-chocolate chocolate;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 45:24 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;2;MOD_FLAME;none
+ 45:24 D;0;2;axis;jpt-chocolate chocolate;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 45:24 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;2;MOD_FLAME;none
+ 45:25 Spawn;0;3;allies;Chocolate Flower;thompson_mp;-1812,1688,14.125;90
+ 45:25 D;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;flamethrower_mp;4;MOD_FLAME;none
+ 45:25 D;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;flamethrower_mp;4;MOD_FLAME;none
+ 45:25 D;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;flamethrower_mp;4;MOD_FLAME;none
+ 45:25 D;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;flamethrower_mp;4;MOD_FLAME;none
+ 45:25 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;2;MOD_FLAME;none
+ 45:26 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;2;MOD_FLAME;none
+ 45:26 D;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;flamethrower_mp;4;MOD_FLAME;none
+ 45:26 Item;0;2;jpt-chocolate chocolate;item_health
+ 45:26 D;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;flamethrower_mp;4;MOD_FLAME;none
+ 45:26 D;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;flamethrower_mp;4;MOD_FLAME;none
+ 45:26 D;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;flamethrower_mp;4;MOD_FLAME;none
+ 45:26 D;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;flamethrower_mp;4;MOD_FLAME;none
+ 45:27 D;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;flamethrower_mp;4;MOD_FLAME;none
+ 45:27 D;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;flamethrower_mp;4;MOD_FLAME;none
+ 45:27 D;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;flamethrower_mp;4;MOD_FLAME;none
+ 45:27 D;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;flamethrower_mp;4;MOD_FLAME;none
+ 45:27 D;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;flamethrower_mp;4;MOD_FLAME;none
+ 45:27 D;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;flamethrower_mp;4;MOD_FLAME;none
+ 45:27 D;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;flamethrower_mp;4;MOD_FLAME;none
+ 45:27 D;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;flamethrower_mp;4;MOD_FLAME;none
+ 45:27 D;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;flamethrower_mp;4;MOD_FLAME;none
+ 45:27 D;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;flamethrower_mp;4;MOD_FLAME;none
+ 45:27 D;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;flamethrower_mp;4;MOD_FLAME;none
+ 45:27 K;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;4;MOD_FLAME;none;-1713.69,1803.56,14.125;-1713.69,1803.56,14.125;-113.934;-113.934;stand;stand
+ 45:27 D;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;flamethrower_mp;4;MOD_FLAME;none
+ 45:27 D;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;flamethrower_mp;4;MOD_FLAME;none
+ 45:27 D;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;none;4;MOD_FLAME;none
+ 45:27 D;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;none;4;MOD_FLAME;none
+ 45:27 K;0;3;allies;Chocolate Flower;0;1;allies;jpt-Homobonerus;none;4;MOD_FLAME;none;-1722.58,1762.19,14.125;-1726.09,1818.21,14.125;112.181;-113.934;stand;stand
+ 45:30 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;mp44_mp;17;MOD_PISTOL_BULLET;right_leg_lower
+ 45:30 Spawn;0;1;allies;jpt-Homobonerus;bar_mp;-1676,398,14.125;90
+ 45:30 K;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;mp44_mp;30;MOD_PISTOL_BULLET;torso_upper;-1880,1726,14;-1880,1726,14;9.55811;9.55811;stand;stand
+ 45:30 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;mp44_mp;30.5;MOD_PISTOL_BULLET;torso_upper
+ 45:30 Item;0;0;Chocolate Luda;item_health
+ 45:30 Weapon;0;0;Chocolate Luda;mp44_mp
+ 45:31 Spawn;0;3;allies;Chocolate Flower;thompson_mp;-1512,1070,14.125;-90
+ 45:33 Spawn;0;2;axis;jpt-chocolate chocolate;mp44_mp;-2136,1566,14.125;90
+ 45:36 Weapon;0;3;Chocolate Flower;fraggrenade_mp
+ 45:37 K;0;3;allies;Chocolate Flower;;-1;world;;none;1000;MOD_TRIGGER_HURT;none;-1330,1646,-36;0,0,0;119.196;0;stand;none
+ 45:39 Spawn;0;3;allies;Chocolate Flower;thompson_mp;-1676,398,14.125;90
+ 45:42 Item;0;0;Chocolate Luda;item_health
+ 45:43 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;mg42_bipod_stand_mp;45;MOD_RIFLE_BULLET;head
+ 45:43 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;mg42_bipod_stand_mp;45;MOD_RIFLE_BULLET;head
+ 45:43 K;0;0;axis;Chocolate Luda;0;2;axis;jpt-chocolate chocolate;mg42_bipod_stand_mp;45;MOD_HEAD_SHOT;head;-1528.7,1340.23,14.125;-1372.64,1805.68,14.125;43.8904;259.498;stand;stand
+ 45:43 K;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;mg42_bipod_stand_mp;45;MOD_HEAD_SHOT;head;-1372.64,1805.68,14.125;-1372.64,1805.68,14.125;259.498;259.498;stand;stand
+ 45:46 Spawn;0;2;axis;jpt-chocolate chocolate;mp44_mp;-1924,2230,14.125;-90
+ 45:48 Spawn;0;0;axis;Chocolate Luda;mp44_mp;-1924,2230,14.125;-90
+ 45:56 D;0;2;axis;jpt-chocolate chocolate;0;1;allies;jpt-Homobonerus;bar_mp;35;MOD_RIFLE_BULLET;left_leg_lower
+ 45:58 Shock;0;1;allies;jpt-Homobonerus;stielhandgranate_mp;3;MOD_GRENADE_SPLASH;none
+ 45:58 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;stielhandgranate_mp;78;MOD_GRENADE_SPLASH;none
+ 45:59 K;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;mp44_mp;34;MOD_PISTOL_BULLET;left_leg_lower;-2046.64,1753.51,14.125;-2242,1835,14;166.948;-23.5712;stand;stand
+ 45:59 Shock;0;3;allies;Chocolate Flower;fraggrenade_mp;1;MOD_GRENADE_SPLASH;none
+ 45:59 D;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;fraggrenade_mp;6;MOD_GRENADE_SPLASH;none
+ 46:03 Weapon;0;2;jpt-chocolate chocolate;flamethrower_mp
+ 46:04 Spawn;0;1;allies;jpt-Homobonerus;bar_mp;-1676,398,14.125;90
+ 46:08 Weapon;0;2;jpt-chocolate chocolate;mp44_mp
+ 46:11 D;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 46:11 D;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 46:11 D;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 46:11 D;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 46:11 D;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 46:11 D;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 46:11 D;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 46:11 D;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 46:11 D;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 46:11 D;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 46:11 D;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 46:11 K;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none;-1434.36,838.426,14.125;-1340.43,1143.67,14.125;72.7295;-108.902;stand;stand
+ 46:14 Spawn;0;3;allies;Chocolate Flower;thompson_mp;-1676,398,14.125;90
+ 46:17 Item;0;2;jpt-chocolate chocolate;item_health
+ 46:18 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:18 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:18 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:18 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:18 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:18 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:18 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:18 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:18 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:18 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:18 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:18 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:18 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:18 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:18 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:18 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:18 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:18 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:18 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:18 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:19 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:19 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:19 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:19 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:19 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:19 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:19 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:19 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:19 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:19 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:20 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:20 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:20 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:20 Shock;0;3;allies;Chocolate Flower;fraggrenade_mp;2;MOD_GRENADE_SPLASH;none
+ 46:20 D;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;fraggrenade_mp;28;MOD_GRENADE_SPLASH;none
+ 46:20 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:21 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:21 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:21 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:21 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:21 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:21 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:21 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:21 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:21 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:21 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 46:21 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 46:21 K;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none;-2130.44,1320.58,14.125;-2130.44,1320.58,14.125;-168.788;-168.788;stand;stand
+ 46:21 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 46:21 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;none;8;MOD_FLAME;none
+ 46:21 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;none;8;MOD_FLAME;none
+ 46:22 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;none;8;MOD_FLAME;none
+ 46:22 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;none;8;MOD_FLAME;none
+ 46:22 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;none;8;MOD_FLAME;none
+ 46:22 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;none;8;MOD_FLAME;none
+ 46:22 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;none;8;MOD_FLAME;none
+ 46:22 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;none;8;MOD_FLAME;none
+ 46:22 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;none;8;MOD_FLAME;none
+ 46:22 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;none;8;MOD_FLAME;none
+ 46:22 K;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;none;8;MOD_FLAME;none;-2282.39,1187.88,14.125;-2175.33,1341.31,14.125;72.3999;-175.089;stand;stand
+ 46:25 Spawn;0;1;allies;jpt-Homobonerus;bar_mp;-1512,1070,14.125;-90
+ 46:27 Weapon;0;0;Chocolate Luda;bar_mp
+ 46:29 Spawn;0;2;axis;jpt-chocolate chocolate;mp44_mp;-2083,1438,141.125;90
+ 46:31 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;bar_mp;42;MOD_RIFLE_BULLET;left_leg_upper
+ 46:31 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;bar_mp;35;MOD_RIFLE_BULLET;left_leg_lower
+ 46:31 Weapon;0;0;Chocolate Luda;flamethrower_mp
+ 46:31 K;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;bar_mp;62;MOD_RIFLE_BULLET;torso_upper;-2290.45,1322.61,14.125;-2248,1062,14;-0.714111;95.8008;stand;stand
+ 46:40 Spawn;0;0;axis;Chocolate Luda;mp44_mp;-1812,1688,14.125;90
+ 46:41 Weapon;0;1;jpt-Homobonerus;flamethrower_mp
+ 46:42 Weapon;0;1;jpt-Homobonerus;flamethrower_mp
+ 46:45 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;mp44_mp;34;MOD_PISTOL_BULLET;left_leg_lower
+ 46:46 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;mp44_mp;27;MOD_PISTOL_BULLET;right_foot
+ 46:46 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;mp44_mp;27;MOD_PISTOL_BULLET;left_foot
+ 46:46 K;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower;-2161.84,931.5,14.125;-2304,1270,14;-21.6101;-66.0992;stand;stand
+ 46:48 Spawn;0;1;allies;jpt-Homobonerus;bar_mp;-1676,398,14.125;90
+ 46:49 Weapon;0;2;jpt-chocolate chocolate;flamethrower_mp
+ 46:49 K;0;0;axis;Chocolate Luda;;-1;world;;none;1000;MOD_TRIGGER_HURT;none;-1473,1611,-37;0,0,0;-89.6649;0;stand;none
+ 46:52 D;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;bar_mp;28;MOD_RIFLE_BULLET;torso_lower
+ 46:53 D;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;bar_mp;28;MOD_RIFLE_BULLET;torso_lower
+ 46:53 Spawn;0;0;axis;Chocolate Luda;mp44_mp;-1924,2230,14.125;-90
+ 46:53 K;0;3;allies;Chocolate Flower;0;1;allies;jpt-Homobonerus;bar_mp;21;MOD_RIFLE_BULLET;right_leg_upper;-1802.18,679.885,14.125;-1733,452,14;114.45;107.051;stand;stand
+ 46:56 Spawn;0;3;allies;Chocolate Flower;thompson_mp;-1676,398,14.125;90
+ 46:59 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 46:59 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 47:00 K;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none;-2006,842.229,14.125;-1569.29,860.798,14.125;124.431;-178.044;stand;stand
+ 47:02 Spawn;0;1;allies;jpt-Homobonerus;bar_mp;-2075,1189,18.125;0
+ 47:07 Weapon;0;0;Chocolate Luda;flamethrower_mp
+ 47:08 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 47:08 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 47:08 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 47:08 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 47:08 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 47:08 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 47:08 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 47:08 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 47:08 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 47:08 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 47:09 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 47:09 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 47:09 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 47:09 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 47:09 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 47:09 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 47:09 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 47:09 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 47:09 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 47:09 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 47:09 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 47:09 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 47:09 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 47:09 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 47:09 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 47:09 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 47:09 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 47:09 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 47:09 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 47:09 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 47:09 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 47:09 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 47:09 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 47:09 Item;0;0;Chocolate Luda;item_health
+ 47:09 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 47:09 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 47:09 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 47:09 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 47:10 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 47:10 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 47:10 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 47:10 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 47:10 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 47:10 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 47:10 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 47:10 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 47:10 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 47:10 K;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;4;MOD_FLAME;none;-2022.53,1383.62,14.125;-2022.53,1383.62,14.125;-159.472;-159.472;stand;stand
+ 47:10 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 47:10 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;none;4;MOD_FLAME;none
+ 47:11 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;none;4;MOD_FLAME;none
+ 47:11 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;none;4;MOD_FLAME;none
+ 47:11 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;none;4;MOD_FLAME;none
+ 47:11 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;none;4;MOD_FLAME;none
+ 47:11 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;none;4;MOD_FLAME;none
+ 47:11 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;none;4;MOD_FLAME;none
+ 47:11 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;none;4;MOD_FLAME;none
+ 47:11 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;none;4;MOD_FLAME;none
+ 47:11 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;none;4;MOD_FLAME;none
+ 47:11 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;none;4;MOD_FLAME;none
+ 47:11 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;none;4;MOD_FLAME;none
+ 47:11 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;none;4;MOD_FLAME;none
+ 47:11 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;none;4;MOD_FLAME;none
+ 47:12 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;none;4;MOD_FLAME;none
+ 47:12 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;none;4;MOD_FLAME;none
+ 47:12 K;0;0;axis;Chocolate Luda;0;2;axis;jpt-chocolate chocolate;none;4;MOD_FLAME;none;-2166.48,1280.23,14.125;-2041.25,1378.17,14.125;13.3264;-159.472;stand;stand
+ 47:13 Item;0;1;jpt-Homobonerus;item_health
+ 47:14 Item;0;1;jpt-Homobonerus;item_health
+ 47:16 Q;0;3;Chocolate Flower
+ 47:16 Spawn;0;0;axis;Chocolate Luda;mp44_mp;-1676,398,14.125;90
+ 47:16 Spawn;0;2;axis;jpt-chocolate chocolate;mp44_mp;-1512,1070,14.125;-90
+ 47:19 Weapon;0;1;jpt-Homobonerus;flamethrower_mp
+ 47:23 D;0;2;axis;jpt-chocolate chocolate;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 47:23 D;0;2;axis;jpt-chocolate chocolate;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 47:23 D;0;2;axis;jpt-chocolate chocolate;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 47:23 D;0;2;axis;jpt-chocolate chocolate;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 47:23 D;0;2;axis;jpt-chocolate chocolate;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 47:23 D;0;2;axis;jpt-chocolate chocolate;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 47:24 D;0;2;axis;jpt-chocolate chocolate;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 47:24 D;0;2;axis;jpt-chocolate chocolate;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 47:24 D;0;2;axis;jpt-chocolate chocolate;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 47:24 D;0;2;axis;jpt-chocolate chocolate;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 47:24 D;0;2;axis;jpt-chocolate chocolate;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 47:24 D;0;2;axis;jpt-chocolate chocolate;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 47:24 K;0;2;axis;jpt-chocolate chocolate;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none;-1399.54,1020.4,14.125;-1403.16,1306.47,14.125;-143.668;-85.1056;stand;stand
+ 47:27 Spawn;0;2;axis;jpt-chocolate chocolate;mp44_mp;-1676,398,14.125;90
+ 47:30 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 47:30 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 47:31 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 47:31 Item;0;0;Chocolate Luda;item_health
+ 47:31 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 47:31 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 47:31 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 47:31 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 47:31 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 47:31 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 47:31 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 47:31 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 47:31 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 47:31 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 47:32 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 47:32 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 47:32 Item;0;0;Chocolate Luda;item_health
+ 47:32 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 47:32 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 47:32 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 47:32 K;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none;-2197.85,922.88,14.125;-1676.88,936.875,14.125;88.8464;-171.129;stand;stand
+ 47:35 Spawn;0;0;axis;Chocolate Luda;mp44_mp;-1512,1070,14.125;-90
+ 47:40 Shock;0;2;axis;jpt-chocolate chocolate;stielhandgranate_mp;1;MOD_GRENADE_SPLASH;none
+ 47:40 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;stielhandgranate_mp;25;MOD_GRENADE_SPLASH;none
+ 47:47 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 47:47 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 47:47 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 47:47 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 47:47 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 47:47 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 47:47 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 47:47 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 47:47 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 47:47 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 47:47 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 47:47 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 47:47 K;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none;-1422.13,1386.45,14.125;-1448.09,1444.25,14.125;93.3508;-117.669;stand;stand
+ 47:52 Spawn;0;0;axis;Chocolate Luda;mp44_mp;-1676,398,14.125;90
+ 47:55 Item;0;2;jpt-chocolate chocolate;item_health
+ 47:58 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;mp44_mp;27;MOD_PISTOL_BULLET;torso_lower
+ 47:59 Item;0;0;Chocolate Luda;item_health
+ 48:00 D;0;2;axis;jpt-chocolate chocolate;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 48:00 Item;0;0;Chocolate Luda;item_health
+ 48:00 D;0;2;axis;jpt-chocolate chocolate;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 48:00 D;0;2;axis;jpt-chocolate chocolate;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 48:01 D;0;2;axis;jpt-chocolate chocolate;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 48:01 D;0;2;axis;jpt-chocolate chocolate;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 48:01 D;0;2;axis;jpt-chocolate chocolate;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 48:01 D;0;2;axis;jpt-chocolate chocolate;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 48:01 D;0;2;axis;jpt-chocolate chocolate;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 48:01 D;0;2;axis;jpt-chocolate chocolate;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 48:01 K;0;2;axis;jpt-chocolate chocolate;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none;-2088.34,943.875,14.125;-2336.88,1114.84,14.125;150.172;-42.8687;stand;stand
+ 48:01 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 48:02 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 48:02 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 48:02 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 48:02 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 48:02 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 48:02 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 48:02 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 48:02 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 48:02 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 48:03 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 48:03 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 48:03 K;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none;-2159.02,1208.26,14.125;-2336.87,1252.42,14.125;-67.121;-36.3812;stand;stand
+ 48:05 Spawn;0;0;axis;Chocolate Luda;mp44_mp;-1676,398,14.125;90
+ 48:11 Spawn;0;2;axis;jpt-chocolate chocolate;mp44_mp;-1676,398,14.125;90
+ 48:18 Weapon;0;0;Chocolate Luda;mp44_mp
+ 48:19 Weapon;0;0;Chocolate Luda;mp44_mp
+ 48:26 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 48:26 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 48:26 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 48:26 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 48:26 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 48:26 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 48:27 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 48:27 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 48:27 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 48:27 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 48:27 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 48:27 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 48:27 K;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none;-1478.08,1708.35,14.125;-1637.42,1814.93,14.125;-57.0355;-46.7194;stand;stand
+ 48:29 Spawn;0;0;axis;Chocolate Luda;mp44_mp;-1676,398,14.125;90
+ 48:37 Q;0;3;Chocolate Flower
+ 48:42 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower
+ 48:43 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;mp44_mp;40;MOD_PISTOL_BULLET;left_leg_upper
+ 48:43 K;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower;-2211.12,965.549,14.125;-1930,856,14;85.578;162.911;stand;stand
+ 48:46 Weapon;0;0;Chocolate Luda;flamethrower_mp
+ 48:47 Spawn;0;1;allies;jpt-Homobonerus;bar_mp;-2136,1566,14.125;90
+ 48:50 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 48:50 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 48:50 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 48:50 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 48:50 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 48:51 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 48:51 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 48:51 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 48:51 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 48:51 Item;0;1;jpt-Homobonerus;item_health
+ 48:51 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 48:51 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 48:51 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 48:51 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 48:51 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 48:51 Item;0;1;jpt-Homobonerus;item_health
+ 48:52 Item;0;1;jpt-Homobonerus;item_health
+ 48:53 Weapon;0;1;jpt-Homobonerus;flamethrower_mp
+ 48:53 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;2;MOD_FLAME;none
+ 48:53 Weapon;0;1;jpt-Homobonerus;flamethrower_mp
+ 48:53 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;2;MOD_FLAME;none
+ 48:53 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;2;MOD_FLAME;none
+ 48:53 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;2;MOD_FLAME;none
+ 48:53 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;2;MOD_FLAME;none
+ 48:53 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;2;MOD_FLAME;none
+ 48:54 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;2;MOD_FLAME;none
+ 48:55 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 48:55 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 48:55 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 48:55 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 48:55 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 48:55 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 48:55 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 48:55 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 48:55 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 48:55 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none
+ 48:55 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 48:55 K;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;flamethrower_mp;8;MOD_FLAME;none;-1507.44,1350.28,14.125;-1828.15,1305.28,14.125;-173.425;11.8213;stand;stand
+ 48:55 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;none;8;MOD_FLAME;none
+ 48:55 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;none;8;MOD_FLAME;none
+ 48:55 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;none;8;MOD_FLAME;none
+ 48:56 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;none;8;MOD_FLAME;none
+ 48:56 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;none;8;MOD_FLAME;none
+ 48:56 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;none;8;MOD_FLAME;none
+ 48:56 K;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;none;8;MOD_FLAME;none;-1743.66,1325.41,14.125;-1482.62,1338.19,14.125;11.684;-173.425;stand;stand
+ 48:58 Spawn;0;1;allies;jpt-Homobonerus;bar_mp;-2136,1566,14.125;90
+ 48:59 Spawn;0;0;axis;Chocolate Luda;mp44_mp;-1676,398,14.125;90
+ 49:08 Weapon;0;1;jpt-Homobonerus;flamethrower_mp
+ 49:08 Weapon;0;1;jpt-Homobonerus;flamethrower_mp
+ 49:10 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 49:10 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 49:10 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 49:10 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 49:10 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 49:10 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 49:10 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 49:10 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 49:10 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 49:10 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 49:10 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;mp44_mp;61;MOD_PISTOL_BULLET;torso_upper
+ 49:10 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 49:10 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 49:10 K;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none;-1976.83,1301.54,14.125;-1786.17,1325.22,14.125;0.615234;-170.7;stand;stand
+ 49:10 Item;0;1;jpt-Homobonerus;item_health
+ 49:10 Weapon;0;2;jpt-chocolate chocolate;thompson_mp
+ 49:11 Rank;0;1;allies;jpt-Homobonerus;1
+ 49:12 Item;0;1;jpt-Homobonerus;item_health
+ 49:13 Spawn;0;0;axis;Chocolate Luda;mp44_mp;-1512,1070,14.125;-90
+ 49:13 Weapon;0;2;jpt-chocolate chocolate;stielhandgranate_mp
+ 49:14 D;0;2;axis;jpt-chocolate chocolate;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 49:16 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;2;MOD_FLAME;none
+ 49:16 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;2;MOD_FLAME;none
+ 49:16 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;2;MOD_FLAME;none
+ 49:16 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;2;MOD_FLAME;none
+ 49:16 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;2;MOD_FLAME;none
+ 49:16 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;2;MOD_FLAME;none
+ 49:17 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 49:17 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 49:17 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 49:17 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 49:17 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;mp44_mp;61;MOD_PISTOL_BULLET;torso_upper
+ 49:17 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 49:17 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 49:17 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 49:17 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 49:17 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 49:17 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 49:17 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 49:17 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none
+ 49:18 K;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;flamethrower_mp;8;MOD_FLAME;none;-1520.87,1114.88,14.125;-1318.57,994.917,14.125;-16.4081;-179.39;stand;stand
+ 49:18 K;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;stielhandgranate_mp;68;MOD_GRENADE_SPLASH;none;-1321.39,970.008,14.125;-1759.28,861.655,14.125;156.846;13.1781;stand;stand
+ 49:18 Shock;0;1;allies;jpt-Homobonerus;stielhandgranate_mp;3;MOD_GRENADE_SPLASH;none
+ 49:20 Spawn;0;0;axis;Chocolate Luda;mp44_mp;-1512,1070,14.125;-90
+ 49:20 Spawn;0;1;allies;jpt-Homobonerus;bar_mp;-1924,2230,14.125;-90
+ 49:21 Weapon;0;2;jpt-chocolate chocolate;mp44_mp
+ 49:22 Item;0;2;jpt-chocolate chocolate;item_health
+ 49:23 Weapon;0;2;jpt-chocolate chocolate;bar_mp
+ 49:28 Weapon;0;0;Chocolate Luda;mp44_mp
+ 49:30 Weapon;0;2;jpt-chocolate chocolate;thompson_mp
+ 49:31 Weapon;0;0;Chocolate Luda;mp44_mp
+ 49:37 Shock;0;0;axis;Chocolate Luda;fraggrenade_mp;3;MOD_GRENADE_SPLASH;none
+ 49:37 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;fraggrenade_mp;77;MOD_GRENADE_SPLASH;none
+ 49:38 K;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;bar_mp;35;MOD_RIFLE_BULLET;right_leg_lower;-1371.54,1805.36,14.125;-1790,1886,14;259.5;-8.82202;stand;stand
+ 49:41 Spawn;0;0;axis;Chocolate Luda;mp44_mp;-2136,1566,14.125;90
+ 49:44 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;mp44_mp;40;MOD_PISTOL_BULLET;right_leg_upper
+ 49:44 Item;0;1;jpt-Homobonerus;item_health
+ 49:45 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;mp44_mp;40;MOD_PISTOL_BULLET;right_leg_upper
+ 49:49 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;mg42_bipod_stand_mp;36;MOD_RIFLE_BULLET;right_leg_upper
+ 49:49 K;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;mg42_bipod_stand_mp;30;MOD_RIFLE_BULLET;right_leg_lower;-1388.15,1516.17,14.125;-1387.33,1811,14.125;-120.723;259.496;stand;stand
+ 49:59 Spawn;0;1;allies;jpt-Homobonerus;bar_mp;-1676,398,14.125;90
+ 50:04 Weapon;0;0;Chocolate Luda;mp44_mp
+ 50:07 Weapon;0;2;jpt-chocolate chocolate;thompson_mp
+ 50:07 K;0;2;axis;jpt-chocolate chocolate;;-1;world;;none;1000;MOD_TRIGGER_HURT;none;-1404,1611,-35;0,0,0;-105.579;0;stand;none
+ 50:10 Spawn;0;2;axis;jpt-chocolate chocolate;mp44_mp;-2083,1438,141.125;90
+ 50:16 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;bar_mp;42;MOD_RIFLE_BULLET;left_leg_upper
+ 50:17 K;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;bar_mp;105;MOD_HEAD_SHOT;head;-2116.29,1239.13,181.78;-1666,1265,14;-93.2135;-175.182;stand;stand
+ 50:20 Spawn;0;0;axis;Chocolate Luda;mp44_mp;-2136,1566,14.125;90
+ 50:32 Weapon;0;1;jpt-Homobonerus;bar_mp
+ 50:38 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;mp44_mp;40;MOD_PISTOL_BULLET;right_leg_upper
+ 50:38 Item;0;1;jpt-Homobonerus;item_health
+ 50:39 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;mp44_mp;40;MOD_PISTOL_BULLET;left_arm_upper
+ 50:39 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;mp44_mp;40;MOD_PISTOL_BULLET;right_leg_upper
+ 50:40 K;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;mp44_mp;40;MOD_PISTOL_BULLET;left_leg_upper;-1807.5,1823.6,14.125;-2198,1695,14;-163.823;17.5726;stand;stand
+ 50:44 Spawn;0;1;allies;jpt-Homobonerus;bar_mp;-1676,398,14.125;90
+ 50:46 J;0;3;Chocolate Flower
+ 50:46 Spec;0;3;Chocolate Flower
+ 50:49 Weapon;0;2;jpt-chocolate chocolate;mp44_mp
+ 50:50 Spawn;0;3;allies;Chocolate Flower;thompson_mp;-1676,398,14.125;90
+ 50:58 Weapon;0;0;Chocolate Luda;mp44_mp
+ 50:58 Weapon;0;0;Chocolate Luda;mp44_mp
+ 50:59 K;0;0;axis;Chocolate Luda;;-1;world;;none;1000;MOD_TRIGGER_HURT;none;-1395,1611,-36;0,0,0;-98.7231;0;stand;none
+ 51:00 Weapon;0;2;jpt-chocolate chocolate;flamethrower_mp
+ 51:01 Weapon;0;3;Chocolate Flower;fraggrenade_mp
+ 51:01 Weapon;0;2;jpt-chocolate chocolate;flamethrower_mp
+ 51:02 D;0;2;axis;jpt-chocolate chocolate;0;1;allies;jpt-Homobonerus;bar_mp;56;MOD_RIFLE_BULLET;torso_lower
+ 51:03 Spawn;0;0;axis;Chocolate Luda;mp44_mp;-1512,1057.45,14.125;-90
+ 51:03 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 51:03 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 51:03 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 51:03 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 51:03 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 51:03 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 51:03 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 51:03 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 51:03 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 51:03 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 51:03 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 51:03 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 51:04 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 51:04 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 51:04 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 51:04 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 51:04 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 51:04 K;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none;-2089.94,1285.2,14.125;-1498.35,1225.13,14.125;-5.48218;-172.93;stand;crouch
+ 51:06 Spawn;0;1;allies;jpt-Homobonerus;bar_mp;-2136,1566,14.125;90
+ 51:07 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 51:07 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 51:07 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 51:07 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 51:07 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 51:07 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 51:07 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 51:07 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 51:07 K;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;4;MOD_FLAME;none;-1333.11,1143.03,14.125;-1333.11,1143.03,14.125;-122.943;-122.943;crouch;crouch
+ 51:07 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 51:07 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;none;4;MOD_FLAME;none
+ 51:07 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;none;4;MOD_FLAME;none
+ 51:07 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;none;4;MOD_FLAME;none
+ 51:07 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;none;4;MOD_FLAME;none
+ 51:07 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;none;4;MOD_FLAME;none
+ 51:07 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;none;4;MOD_FLAME;none
+ 51:07 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;none;4;MOD_FLAME;none
+ 51:08 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;none;4;MOD_FLAME;none
+ 51:08 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;none;4;MOD_FLAME;none
+ 51:08 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;none;4;MOD_FLAME;none
+ 51:08 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;none;4;MOD_FLAME;none
+ 51:08 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;none;4;MOD_FLAME;none
+ 51:08 Item;0;0;Chocolate Luda;item_health
+ 51:10 Weapon;0;1;jpt-Homobonerus;bar_mp
+ 51:12 Item;0;0;Chocolate Luda;item_health
+ 51:14 Spawn;0;2;axis;jpt-chocolate chocolate;mp44_mp;-1676,398,14.125;90
+ 51:14 K;0;0;axis;Chocolate Luda;0;3;allies;Chocolate Flower;fraggrenade_mp;76;MOD_GRENADE_SPLASH;none;-1503.17,1030.15,14.125;-1478.8,1276.53,14.125;102.816;-54.4812;stand;stand
+ 51:14 Shock;0;0;axis;Chocolate Luda;fraggrenade_mp;3;MOD_GRENADE_SPLASH;none
+ 51:16 Weapon;0;3;Chocolate Flower;flamethrower_mp
+ 51:17 Spawn;0;0;axis;Chocolate Luda;mp44_mp;-2075,1189,18.125;0
+ 51:21 Weapon;0;1;jpt-Homobonerus;bar_mp
+ 51:24 K;0;3;allies;Chocolate Flower;0;0;axis;Chocolate Luda;mp44_mp;102;MOD_HEAD_SHOT;head;-1369.99,1101.92,14.125;-1366,997,14;178.841;96.8884;stand;stand
+ 51:27 Weapon;0;0;Chocolate Luda;flamethrower_mp
+ 51:27 Spawn;0;3;allies;Chocolate Flower;thompson_mp;-2083,1438,141.125;90
+ 51:31 Weapon;0;0;Chocolate Luda;mp44_mp
+ 51:32 K;0;0;axis;Chocolate Luda;;-1;world;;none;1000;MOD_TRIGGER_HURT;none;-1330,1646,-35;0,0,0;126.623;0;stand;none
+ 51:35 Spawn;0;0;axis;Chocolate Luda;mp44_mp;-1676,398,14.125;90
+ 51:38 K;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;mp44_mp;102;MOD_HEAD_SHOT;head;-2015.63,1137.32,233.125;-1897,717,240;107.49;104.233;stand;stand
+ 51:41 Spawn;0;1;allies;jpt-Homobonerus;bar_mp;-2136,1566,14.125;90
+ 51:41 D;0;2;axis;jpt-chocolate chocolate;0;3;allies;Chocolate Flower;thompson_mp;30;MOD_PISTOL_BULLET;left_leg_upper
+ 51:42 D;0;2;axis;jpt-chocolate chocolate;0;3;allies;Chocolate Flower;thompson_mp;30;MOD_PISTOL_BULLET;right_leg_upper
+ 51:42 K;0;2;axis;jpt-chocolate chocolate;0;3;allies;Chocolate Flower;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower;-1895.88,712.572,240.125;-2096,1486,236;105.595;-75.3442;stand;stand
+ 51:42 Weapon;0;0;Chocolate Luda;mp44_mp
+ 51:48 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;mp44_mp;40;MOD_PISTOL_BULLET;right_leg_upper
+ 51:48 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower
+ 51:48 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;mg42_bipod_stand_mp;53;MOD_RIFLE_BULLET;torso_upper
+ 51:48 K;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;mg42_bipod_stand_mp;53;MOD_RIFLE_BULLET;torso_upper;-1336.27,1037.85,14.125;-1390.24,1811.55,14.125;94.3121;259.498;stand;stand
+ 51:51 Spawn;0;0;axis;Chocolate Luda;mp44_mp;-1676,398,14.125;90
+ 51:52 Item;0;1;jpt-Homobonerus;item_health
+ 51:57 Item;0;1;jpt-Homobonerus;item_health
+ 51:57 Item;0;1;jpt-Homobonerus;item_health
+ 51:59 Q;0;2;jpt-chocolate chocolate
+ 52:01 K;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;mp44_mp;102;MOD_HEAD_SHOT;head;-2196.83,949.69,14.125;-2042,810,14;-27.5372;137.274;stand;stand
+ 52:04 Spawn;0;1;allies;jpt-Homobonerus;bar_mp;-1812,1688,14.125;90
+ 52:17 Weapon;0;1;jpt-Homobonerus;bar_mp
+ 52:27 Weapon;0;0;Chocolate Luda;mp44_mp
+ 52:31 K;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;bar_mp;105;MOD_HEAD_SHOT;head;-1380.99,1798.48,14.125;-1571,1184,233;-161.334;74.5093;stand;stand
+ 52:35 Spawn;0;0;axis;Chocolate Luda;mp44_mp;-1924,2230,14.125;-90
+ 52:47 Weapon;0;1;jpt-Homobonerus;panzerschreck_mp
+ 52:50 Shock;0;1;allies;jpt-Homobonerus;fraggrenade_mp;1;MOD_GRENADE_SPLASH;none
+ 52:50 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;fraggrenade_mp;16;MOD_GRENADE_SPLASH;none
+ 52:51 Item;0;1;jpt-Homobonerus;item_health
+ 52:55 D;0;3;allies;Chocolate Flower;0;0;axis;Chocolate Luda;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower
+ 52:57 K;0;3;allies;Chocolate Flower;0;0;axis;Chocolate Luda;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower;-2018.04,1634.43,232.125;-1737,1886,14;-144.185;-137.829;crouch;stand
+ 53:00 Spawn;0;3;allies;Chocolate Flower;thompson_mp;-2075,1189,18.125;0
+ 53:02 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;mp44_mp;40;MOD_PISTOL_BULLET;left_leg_upper
+ 53:03 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;mp44_mp;40;MOD_PISTOL_BULLET;right_leg_upper
+ 53:03 Item;0;1;jpt-Homobonerus;item_health
+ 53:03 K;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower;-2172.03,961.691,14.125;-2258,1708,14;91.5601;-86.3031;stand;stand
+ 53:07 Spawn;0;1;allies;jpt-Homobonerus;bar_mp;-1676,398,14.125;90
+ 53:09 Weapon;0;0;Chocolate Luda;flamethrower_mp
+ 53:10 Weapon;0;0;Chocolate Luda;flamethrower_mp
+ 53:25 D;0;0;axis;Chocolate Luda;0;3;allies;Chocolate Flower;thompson_mp;44;MOD_PISTOL_BULLET;torso_upper
+ 53:25 D;0;0;axis;Chocolate Luda;0;3;allies;Chocolate Flower;thompson_mp;30;MOD_PISTOL_BULLET;right_leg_upper
+ 53:25 D;0;0;axis;Chocolate Luda;0;3;allies;Chocolate Flower;thompson_mp;25;MOD_PISTOL_BULLET;right_arm_lower
+ 53:26 K;0;0;axis;Chocolate Luda;0;3;allies;Chocolate Flower;thompson_mp;40;MOD_PISTOL_BULLET;torso_lower;-1983.14,1140.56,18.125;-1730,1102,18;-11.0632;167.679;stand;crouch
+ 53:26 D;0;3;allies;Chocolate Flower;0;0;axis;Chocolate Luda;none;8;MOD_FLAME;none
+ 53:26 D;0;3;allies;Chocolate Flower;0;0;axis;Chocolate Luda;none;8;MOD_FLAME;none
+ 53:26 D;0;3;allies;Chocolate Flower;0;0;axis;Chocolate Luda;none;8;MOD_FLAME;none
+ 53:26 D;0;3;allies;Chocolate Flower;0;0;axis;Chocolate Luda;none;8;MOD_FLAME;none
+ 53:26 D;0;3;allies;Chocolate Flower;0;0;axis;Chocolate Luda;none;8;MOD_FLAME;none
+ 53:26 D;0;3;allies;Chocolate Flower;0;0;axis;Chocolate Luda;none;8;MOD_FLAME;none
+ 53:26 D;0;3;allies;Chocolate Flower;0;0;axis;Chocolate Luda;none;8;MOD_FLAME;none
+ 53:26 D;0;3;allies;Chocolate Flower;0;0;axis;Chocolate Luda;none;8;MOD_FLAME;none
+ 53:27 D;0;3;allies;Chocolate Flower;0;0;axis;Chocolate Luda;none;8;MOD_FLAME;none
+ 53:29 Spawn;0;0;axis;Chocolate Luda;mp44_mp;-1676,398,14.125;90
+ 53:29 Weapon;0;3;Chocolate Flower;flamethrower_mp
+ 53:33 J;0;2;jpt-chocolate chocolate
+ 53:33 Spec;0;2;jpt-chocolate chocolate
+ 53:35 Item;0;3;Chocolate Flower;item_health
+ 53:42 Item;0;3;Chocolate Flower;item_health
+ 53:42 D;0;0;axis;Chocolate Luda;0;3;allies;Chocolate Flower;flamethrower_mp;8;MOD_FLAME;none
+ 53:42 D;0;0;axis;Chocolate Luda;0;3;allies;Chocolate Flower;flamethrower_mp;8;MOD_FLAME;none
+ 53:42 D;0;0;axis;Chocolate Luda;0;3;allies;Chocolate Flower;flamethrower_mp;8;MOD_FLAME;none
+ 53:42 D;0;0;axis;Chocolate Luda;0;3;allies;Chocolate Flower;flamethrower_mp;8;MOD_FLAME;none
+ 53:42 D;0;0;axis;Chocolate Luda;0;3;allies;Chocolate Flower;flamethrower_mp;8;MOD_FLAME;none
+ 53:43 D;0;0;axis;Chocolate Luda;0;3;allies;Chocolate Flower;flamethrower_mp;8;MOD_FLAME;none
+ 53:43 D;0;0;axis;Chocolate Luda;0;3;allies;Chocolate Flower;flamethrower_mp;8;MOD_FLAME;none
+ 53:43 D;0;0;axis;Chocolate Luda;0;3;allies;Chocolate Flower;flamethrower_mp;8;MOD_FLAME;none
+ 53:43 D;0;0;axis;Chocolate Luda;0;3;allies;Chocolate Flower;flamethrower_mp;8;MOD_FLAME;none
+ 53:43 D;0;0;axis;Chocolate Luda;0;3;allies;Chocolate Flower;flamethrower_mp;8;MOD_FLAME;none
+ 53:43 D;0;0;axis;Chocolate Luda;0;3;allies;Chocolate Flower;flamethrower_mp;8;MOD_FLAME;none
+ 53:43 D;0;0;axis;Chocolate Luda;0;3;allies;Chocolate Flower;flamethrower_mp;8;MOD_FLAME;none
+ 53:43 K;0;0;axis;Chocolate Luda;0;3;allies;Chocolate Flower;flamethrower_mp;8;MOD_FLAME;none;-1551.95,934.203,14.125;-1316.13,1036.32,14.125;30.1959;-153.66;stand;crouch
+ 53:45 Spawn;0;0;axis;Chocolate Luda;mp44_mp;-1924,2217.45,14.125;-90
+ 53:48 Spawn;0;2;axis;jpt-chocolate chocolate;mp44_mp;-1924,2230,14.125;-90
+ 53:58 D;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;mp44_mp;61;MOD_PISTOL_BULLET;torso_upper
+ 53:58 K;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;mp44_mp;61;MOD_PISTOL_BULLET;torso_upper;-1973.75,1762.21,14.125;-1826,1767,14;-10.3986;175.265;stand;stand
+ 53:59 D;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower
+ 53:59 K;0;1;allies;jpt-Homobonerus;0;0;axis;Chocolate Luda;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower;-1864.25,1299.11,14.125;-1618,1433,17;-172.062;-149.474;stand;stand
+ 54:01 Spawn;0;3;allies;Chocolate Flower;thompson_mp;-1676,398,14.125;90
+ 54:01 Weapon;0;2;jpt-chocolate chocolate;flamethrower_mp
+ 54:02 Spawn;0;1;allies;jpt-Homobonerus;bar_mp;-1512,1070,14.125;-90
+ 54:10 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;bar_mp;56;MOD_RIFLE_BULLET;torso_lower
+ 54:11 K;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;bar_mp;62;MOD_RIFLE_BULLET;torso_upper;-1598.81,1282.13,14.125;-1424,1313,14;9.45923;-171.727;stand;stand
+ 54:12 D;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 54:13 D;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 54:13 D;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 54:13 D;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 54:13 D;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 54:13 D;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 54:13 D;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 54:13 D;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 54:13 D;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 54:13 D;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 54:14 Spawn;0;0;axis;Chocolate Luda;mp44_mp;-2075,1189,18.125;0
+ 54:14 Item;0;3;Chocolate Flower;item_health
+ 54:15 D;0;3;allies;Chocolate Flower;0;0;axis;Chocolate Luda;mp44_mp;40;MOD_PISTOL_BULLET;left_leg_upper
+ 54:17 Weapon;0;1;jpt-Homobonerus;bar_mp
+ 54:17 D;0;0;axis;Chocolate Luda;0;3;allies;Chocolate Flower;thompson_mp;30;MOD_PISTOL_BULLET;left_leg_upper
+ 54:18 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 54:18 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 54:18 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 54:18 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 54:18 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 54:18 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 54:18 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 54:18 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 54:18 K;0;3;allies;Chocolate Flower;0;0;axis;Chocolate Luda;mp44_mp;34;MOD_PISTOL_BULLET;right_arm_lower;-1559.13,982.126,18.125;-1991,1180,18;155.121;-24.4611;crouch;stand
+ 54:18 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 54:18 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 54:18 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 54:18 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none
+ 54:18 K;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;8;MOD_FLAME;none;-2126.97,1306.79,14.125;-2268.61,1432.63,14.125;135.143;38.1995;stand;stand
+ 54:20 Item;0;0;Chocolate Luda;item_health
+ 54:22 Spawn;0;1;allies;jpt-Homobonerus;bar_mp;-1924,2230,14.125;-90
+ 54:23 Item;0;0;Chocolate Luda;item_health
+ 54:23 Spawn;0;3;allies;Chocolate Flower;thompson_mp;-1924,2230,14.125;-90
+ 54:24 Weapon;0;0;Chocolate Luda;mp44_mp
+ 54:26 Weapon;0;0;Chocolate Luda;mp44_mp
+ 54:28 Weapon;0;2;jpt-chocolate chocolate;mp44_mp
+ 54:28 Weapon;0;2;jpt-chocolate chocolate;mp44_mp
+ 54:31 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 54:31 D;0;2;axis;jpt-chocolate chocolate;0;2;axis;jpt-chocolate chocolate;flamethrower_mp;2;MOD_FLAME;none
+ 54:32 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 54:32 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 54:32 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;flamethrower_mp;4;MOD_FLAME;none
+ 54:32 Item;0;2;jpt-chocolate chocolate;item_health
+ 54:34 K;0;1;allies;jpt-Homobonerus;;-1;world;;none;1000;MOD_TRIGGER_HURT;none;-1475,1611,-37;0,0,0;-99.5691;0;stand;none
+ 54:35 Item;0;0;Chocolate Luda;item_health
+ 54:37 Spawn;0;1;allies;jpt-Homobonerus;bar_mp;-1676,398,14.125;90
+ 54:40 D;0;3;allies;Chocolate Flower;0;0;axis;Chocolate Luda;mp44_mp;34;MOD_PISTOL_BULLET;left_leg_lower
+ 54:40 K;0;3;allies;Chocolate Flower;0;0;axis;Chocolate Luda;mp44_mp;102;MOD_HEAD_SHOT;head;-2076.66,1837.82,14.125;-1708,1740,14;-104.348;167.959;crouch;stand
+ 54:43 Spawn;0;3;allies;Chocolate Flower;thompson_mp;-1676,398,14.125;90
+ 54:45 Shock;0;0;axis;Chocolate Luda;fraggrenade_mp;1;MOD_GRENADE_SPLASH;none
+ 54:45 D;0;0;axis;Chocolate Luda;0;1;allies;jpt-Homobonerus;fraggrenade_mp;22;MOD_GRENADE_SPLASH;none
+ 54:48 Item;0;0;Chocolate Luda;item_health
+ 54:48 K;0;0;axis;Chocolate Luda;;-1;world;;none;1000;MOD_TRIGGER_HURT;none;-1451,1611,-36;0,0,0;-71.922;0;stand;none
+ 54:53 Spawn;0;0;axis;Chocolate Luda;mp44_mp;-1924,2230,14.125;-90
+ 54:56 D;0;2;axis;jpt-chocolate chocolate;0;1;allies;jpt-Homobonerus;bar_mp;35;MOD_RIFLE_BULLET;right_arm_lower
+ 54:56 Item;0;2;jpt-chocolate chocolate;item_health
+ 54:56 D;0;2;axis;jpt-chocolate chocolate;0;1;allies;jpt-Homobonerus;bar_mp;56;MOD_RIFLE_BULLET;torso_lower
+ 54:56 D;0;1;allies;jpt-Homobonerus;0;2;axis;jpt-chocolate chocolate;mg42_bipod_stand_mp;36;MOD_RIFLE_BULLET;left_leg_upper
+ 54:56 K;0;2;axis;jpt-chocolate chocolate;0;1;allies;jpt-Homobonerus;bar_mp;56;MOD_RIFLE_BULLET;torso_lower;-1388.18,1811.19,14.125;-1363,1231,14;-88.1158;91.3184;stand;stand
+ 54:58 Spawn;0;2;axis;jpt-chocolate chocolate;mp44_mp;-1924,2230,14.125;-90
+ 55:00 Item;0;1;jpt-Homobonerus;item_health
+ 55:00 Weapon;0;3;Chocolate Flower;thompson_mp
+ 55:02 K;0;0;axis;Chocolate Luda;;-1;world;;none;1000;MOD_TRIGGER_HURT;none;-1347,1626,-39;0,0,0;-81.5076;0;stand;none
+ 55:11 Weapon;0;3;Chocolate Flower;flamethrower_mp
+ 55:12 Weapon;0;3;Chocolate Flower;flamethrower_mp
+ 55:13 D;0;2;axis;jpt-chocolate chocolate;0;1;allies;jpt-Homobonerus;bar_mp;56;MOD_RIFLE_BULLET;torso_lower
+ 55:13 K;0;2;axis;jpt-chocolate chocolate;0;1;allies;jpt-Homobonerus;bar_mp;56;MOD_RIFLE_BULLET;torso_lower;-1508.66,1852.56,14.125;-1409,1851,14;-2.95532;179.429;stand;stand
+ 55:16 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;4;MOD_FLAME;none
+ 55:16 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;4;MOD_FLAME;none
+ 55:16 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;4;MOD_FLAME;none
+ 55:16 Item;0;1;jpt-Homobonerus;item_health
+ 55:16 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;4;MOD_FLAME;none
+ 55:16 Spawn;0;2;axis;jpt-chocolate chocolate;mp44_mp;-1676,398,14.125;90
+ 55:19 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;4;MOD_FLAME;none
+ 55:19 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;4;MOD_FLAME;none
+ 55:19 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;4;MOD_FLAME;none
+ 55:19 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;4;MOD_FLAME;none
+ 55:19 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;4;MOD_FLAME;none
+ 55:19 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;4;MOD_FLAME;none
+ 55:19 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;4;MOD_FLAME;none
+ 55:19 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;4;MOD_FLAME;none
+ 55:20 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;4;MOD_FLAME;none
+ 55:20 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;4;MOD_FLAME;none
+ 55:20 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;4;MOD_FLAME;none
+ 55:20 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;4;MOD_FLAME;none
+ 55:20 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;4;MOD_FLAME;none
+ 55:20 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;4;MOD_FLAME;none
+ 55:20 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;4;MOD_FLAME;none
+ 55:20 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;4;MOD_FLAME;none
+ 55:20 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;4;MOD_FLAME;none
+ 55:20 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;4;MOD_FLAME;none
+ 55:20 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;4;MOD_FLAME;none
+ 55:20 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;4;MOD_FLAME;none
+ 55:20 K;0;3;allies;Chocolate Flower;0;3;allies;Chocolate Flower;flamethrower_mp;4;MOD_FLAME;none;-1386.35,1363.44,14.125;-1386.35,1363.44,14.125;93.2574;93.2574;stand;stand
+ 55:20 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;flamethrower_mp;4;MOD_FLAME;none
+ 55:20 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;none;4;MOD_FLAME;none
+ 55:20 D;0;1;allies;jpt-Homobonerus;0;1;allies;jpt-Homobonerus;none;4;MOD_FLAME;none
+ 55:20 K;0;1;allies;jpt-Homobonerus;0;3;allies;Chocolate Flower;none;4;MOD_FLAME;none;-1391.56,1530.18,14.125;-1385.88,1356.99,14.125;-86.9623;93.2574;stand;stand
+ 55:23 Spawn;0;3;allies;Chocolate Flower;thompson_mp;-2136,1566,14.125;90
+ 55:31 Weapon;0;3;Chocolate Flower;flamethrower_mp
+ 55:32 Weapon;0;3;Chocolate Flower;smokegrenade_mp
+ 55:37 Spawn;0;0;axis;Chocolate Luda;mp44_mp;-2075,1189,18.125;0
+ 55:38 D;0;2;axis;jpt-chocolate chocolate;0;3;allies;Chocolate Flower;flamethrower_mp;8;MOD_FLAME;none
+ 55:38 Item;0;2;jpt-chocolate chocolate;item_health
+ 55:38 D;0;2;axis;jpt-chocolate chocolate;0;3;allies;Chocolate Flower;flamethrower_mp;8;MOD_FLAME;none
+ 55:38 D;0;2;axis;jpt-chocolate chocolate;0;3;allies;Chocolate Flower;flamethrower_mp;8;MOD_FLAME;none
+ 55:38 D;0;2;axis;jpt-chocolate chocolate;0;3;allies;Chocolate Flower;flamethrower_mp;8;MOD_FLAME;none
+ 55:38 D;0;2;axis;jpt-chocolate chocolate;0;3;allies;Chocolate Flower;flamethrower_mp;8;MOD_FLAME;none
+ 55:38 D;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;mp44_mp;54;MOD_PISTOL_BULLET;torso_lower
+ 55:38 Item;0;3;Chocolate Flower;item_health
+ 55:38 D;0;2;axis;jpt-chocolate chocolate;0;3;allies;Chocolate Flower;flamethrower_mp;8;MOD_FLAME;none
+ 55:38 D;0;2;axis;jpt-chocolate chocolate;0;3;allies;Chocolate Flower;flamethrower_mp;8;MOD_FLAME;none
+ 55:38 D;0;2;axis;jpt-chocolate chocolate;0;3;allies;Chocolate Flower;flamethrower_mp;8;MOD_FLAME;none
+ 55:38 D;0;2;axis;jpt-chocolate chocolate;0;3;allies;Chocolate Flower;flamethrower_mp;8;MOD_FLAME;none
+ 55:38 D;0;2;axis;jpt-chocolate chocolate;0;3;allies;Chocolate Flower;flamethrower_mp;8;MOD_FLAME;none
+ 55:38 D;0;2;axis;jpt-chocolate chocolate;0;3;allies;Chocolate Flower;flamethrower_mp;8;MOD_FLAME;none
+ 55:38 D;0;2;axis;jpt-chocolate chocolate;0;3;allies;Chocolate Flower;flamethrower_mp;8;MOD_FLAME;none
+ 55:38 K;0;3;allies;Chocolate Flower;0;2;axis;jpt-chocolate chocolate;mp44_mp;102;MOD_HEAD_SHOT;head;-1530.68,1291.52,14.125;-1803,1355,14;173.743;-10.3766;stand;stand
+ 55:38 D;0;2;axis;jpt-chocolate chocolate;0;3;allies;Chocolate Flower;flamethrower_mp;8;MOD_FLAME;none
+ 55:38 K;0;2;axis;jpt-chocolate chocolate;0;3;allies;Chocolate Flower;none;8;MOD_FLAME;none;-1794.18,1362.07,14.125;-1517.23,1289.71,14.125;-15.2325;173.743;stand;stand
+ 55:41 Spawn;0;3;allies;Chocolate Flower;thompson_mp;-1924,2230,14.125;-90
+ 55:41 Spawn;0;2;axis;jpt-chocolate chocolate;mp44_mp;-2075,1189,18.125;0
+ 55:49 Weapon;0;2;jpt-chocolate chocolate;flamethrower_mp
+ 55:50 Weapon;0;2;jpt-chocolate chocolate;mp44_mp
+ 56:03 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;mp44_mp;51;MOD_PISTOL_BULLET;neck
+ 56:03 D;0;0;axis;Chocolate Luda;0;0;axis;Chocolate Luda;mp44_mp;17;MOD_PISTOL_BULLET;right_arm_lower
+ 56:05 Item;0;2;jpt-chocolate chocolate;item_health
+ 56:06 Item;0;2;jpt-chocolate chocolate;item_health
+ 56:07 Spawn;0;1;allies;jpt-Homobonerus;bar_mp;-1924,2230,14.125;-90
+ 56:09 Item;0;0;Chocolate Luda;item_health
+ 56:14 Weapon;0;0;Chocolate Luda;mp44_mp
+ 56:16 K;0;3;allies;Chocolate Flower;0;0;axis;Chocolate Luda;mp44_mp;102;MOD_HEAD_SHOT;head;-1512.13,1685.67,14.125;-1408,1391,14;-73.7622;112.643;stand;stand
+ 56:18 Shock;0;0;axis;Chocolate Luda;fraggrenade_mp;2;MOD_GRENADE_SPLASH;none
+ 56:18 D;0;0;axis;Chocolate Luda;0;3;allies;Chocolate Flower;fraggrenade_mp;39;MOD_GRENADE_SPLASH;none
+ 56:18 Weapon;0;0;Chocolate Luda;mp44_mp
+ 56:19 Spawn;0;3;allies;Chocolate Flower;thompson_mp;-1924,2230,14.125;-90
+ 56:19 Item;0;0;Chocolate Luda;item_health
+ 56:19 K;0;0;axis;Chocolate Luda;;-1;world;;none;1000;MOD_TRIGGER_HURT;none;-1487,1633,-37;0,0,0;110.242;0;stand;none
+ 56:23 Weapon;0;1;jpt-Homobonerus;bar_mp
+ 56:29 ShutdownGame:
+ 56:29 ------------------------------------------------------------
