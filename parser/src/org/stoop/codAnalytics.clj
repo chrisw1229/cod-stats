@@ -35,6 +35,11 @@
 (defn get-unique-ids-from-seq [log-seq id-field]
   (remove nil? (get-unique-from-seq log-seq [:entry id-field :id])))
 
+(defn get-all-ids [dk-seq]
+  (let [attack-ids (get-unique-ids-from-seq dk-seq :attacker)
+	victim-ids (get-unique-ids-from-seq dk-seq :victim)]
+    (distinct (concat attack-ids victim-ids))))
+
 (defn get-unique-weapons-from-seq [dk-seq]
   (get-unique-from-seq dk-seq [:entry :hit-details :weapon]))
 
@@ -302,3 +307,25 @@
 
 (defn rank-american-wep-kills [log-seq]
   (rank-weapon-kills log-seq american?))
+
+(defn get-leaderboard-stats [player-id dk-seq]
+  (let [kill-results (get-num-kills dk-seq player-id)
+	death-results (get-num-deaths dk-seq player-id)
+	suicide-results (get-num-suicides dk-seq player-id)
+	inflicted-results (get-total-damage-dealt dk-seq player-id)
+	received-results (get-total-damage-received dk-seq player-id)]
+    (list (:name kill-results)
+	  (:value kill-results)
+	  (:value death-results)
+	  (:value suicide-results)
+	  20 ;time played
+	  (:value inflicted-results)
+	  (:value received-results)
+	  "Best Weapon"
+	  "Best Enemy")))
+
+(defn get-all-leaderboard-stats [log-seq]
+  (let [dk-seq (get-log-type log-seq damage-kill?)
+	player-ids (get-all-ids dk-seq)]
+    (for [player-id player-ids]
+      (get-leaderboard-stats player-id dk-seq))))

@@ -119,8 +119,21 @@
 	   (set-photo ip-address photo)
 	   (str "Photo set to " photo " for " ip-address))))
 
+  (GET "/stats/leaderboard/:leader.json"
+       (encode-to-str
+	{:columns [{:name "Player Name" :type "string"}
+		   {:name "Kills" :type "number"}
+		   {:name "Deaths" :type "number"}
+		   {:name "Suicides" :type "number"}
+		   {:name "Time" :type "number"}
+		   {:name "Damage Inflicted" :type "number"}
+		   {:name "Damage Received" :type "number"}
+		   {:name "Best Weapon" :type "number"}
+		   {:name "Best Enemy" :type "string"}]
+	 :rows (get-all-leaderboard-stats @game-archive)}))
+
   (GET "/stats/awards/:award.json"
-       (let [award (params :award)]
+       (let [award (:award params)]
 	 (cond
 	  (= award "index")
 	  (encode-to-str 

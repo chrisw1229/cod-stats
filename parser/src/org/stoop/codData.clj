@@ -59,13 +59,13 @@
 					 :y (make-coord-transformer 3035.92 0.1096 0.1499)}
 		       "mp_rocket" {:x (make-coord-transformer -2277.55 0.285 0.3392)
 				    :y (make-coord-transformer -25.95 0.3367 -0.2829)}
-		       "mp_ship" {:x (make-coord-transformer 3953.61 0.3997 -0.01218)
-				  :y (make-coord-transformer 2141.3 0.0007916 -0.4194)}
+		       "mp_ship" {:x (make-coord-transformer 497.6 0.3962 -0.2014)
+				  :y (make-coord-transformer 2145.9 -0.0003552 -0.4154)}
 		       "mp_sicily" {:x (make-coord-transformer 618.45 -0.3659 0.09869)
 				    :y (make-coord-transformer 1798.28 0.09372 0.3698)}
 		       "mp_stalingrad" {:x (make-coord-transformer -493.67 0.716 -0.003368)
 					:y (make-coord-transformer 1313.59 0.00728 -0.706)}
-		       "warehousefun" {:x (make-coord-transformer -196.52 -0.005807 1.688)
+		       "warehouse_fun" {:x (make-coord-transformer -196.52 -0.005807 1.688)
 				       :y (make-coord-transformer 5140.77 1.688 0.002167)}})
 
 (defn get-transformer [map-name]
