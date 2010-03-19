@@ -164,7 +164,17 @@
 	    {:name "Pistol" :id "pistol" :tip "Most kills by pistol."}
 	    {:name "Rifle" :id "rifle" :tip "Most kills by rifle."}
 	    {:name "Tank" :id "tank" :tip "Most kills by tank."}
-	    {:name "Yankee" :id "yankee" :tip "Most kills by American weapons."}])
+	    {:name "Yankee" :id "yankee" :tip "Most kills by American weapons."}
+	    {:name "CTF - Winner" :id "ctf_winner" :tip "Most times on winning team for CTF."}
+	    {:name "CTF - Loser" :id "ctf_loser" :tip "Most times on losing team for CTF."}
+	    {:name "DOM - Winner" :id "dom_winner" :tip "Most times on winning team for DOM."}
+	    {:name "DOM - Loser" :id "dom_loser" :tip "Most times on losing team for DOM."}
+	    {:name "FTF - Winner" :id "ftf_winner" :tip "Most times on winning team for FTF."}
+	    {:name "FTF - Loser" :id "ftf_loser" :tip "Most times on losing team for FTF."}
+	    {:name "SFTF - Winner" :id "sftf_winner" :tip "Most times on winning team for SFTF."}
+	    {:name "SFTF - Loser" :id "sftf_loser" :tip "Most times on losing team for SFTF."}
+	    {:name "TDM - Winner" :id "tdm_winner" :tip "Most times on winning team for TDM."}
+	    {:name "TDM - Loser" :id "tdm_loser" :tip "Most times on losing team for TDM."}])
 
 	  (= award "bulldozer") (format-award (rank-total-world-damage @game-archive))
 	  (= award "broken_ankles") (format-award (rank-total-fall-damage @game-archive))
@@ -181,7 +191,7 @@
 	  (= award "wolverine") (format-award (rank-num-item-pickups @game-archive))
 	  
 	  (= award "artillery") (format-award (rank-artillery-damage @game-archive))
-	  (= award "bazooka") (format-award (rank-bazooka-kills @game-archive))
+	  (= award "bazooka") (format-award (rank-bazooka-damage @game-archive))
 	  (= award "comrade") (format-award (rank-russian-wep-kills @game-archive))
 	  (= award "flamethrower") (format-award (rank-flamethrower-damage @game-archive))
 	  (= award "fubar") (format-award (rank-fubar-damage @game-archive))
@@ -195,6 +205,17 @@
 	  (= award "rifle") (format-award (rank-rifle-kills @game-archive))
 	  (= award "tank") (format-award (rank-tank-kills @game-archive))
 	  (= award "yankee") (format-award (rank-american-wep-kills @game-archive))
+
+	  (= award "ctf_winner") (format-award (rank-num-ctf-wins @game-archive))
+	  (= award "ctf_loser") (format-award (rank-num-ctf-losses @game-archive))
+	  (= award "dom_winner") (format-award (rank-num-dom-wins @game-archive))
+	  (= award "dom_loser") (format-award (rank-num-dom-losses @game-archive))
+	  (= award "ftf_winner") (format-award (rank-num-ftf-wins @game-archive))
+	  (= award "ftf_loser") (format-award (rank-num-ftf-losses @game-archive))
+	  (= award "sftf_winner") (format-award (rank-num-sftf-wins @game-archive))
+	  (= award "sftf_loser") (format-award (rank-num-sftf-losses @game-archive))
+	  (= award "tdm_winner") (format-award (rank-num-tdm-wins @game-archive))
+	  (= award "tdm_loser") (format-award (rank-num-tdm-losses @game-archive))
 
 	  :else (str award)))))
 

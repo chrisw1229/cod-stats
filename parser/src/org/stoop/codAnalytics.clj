@@ -1,5 +1,6 @@
 (ns org.stoop.codAnalytics
-  (:use org.stoop.codParser org.stoop.codData))
+  (:use org.stoop.codParser org.stoop.codData
+	clojure.contrib.seq-utils))
 
 ;General stuff
 
@@ -143,10 +144,132 @@
 	player-name (get-in (last player-shocks) [:entry :shock :name])]
     {:name player-name :value (sum-over player-shocks [:entry :shock-info :damage])}))
 
+(defn has-player? [player-seq player-id]
+  (> (count (filter #(= player-id (:id %)) player-seq)) 0))
+
+(defn get-player-in-seq [player-seq player-id]
+  (last (filter #(= player-id (:id %)) player-seq)))
+
+(defn get-wins [win-loss-seq player-id]
+  (let [wins (filter #(= :win (get-in % [:entry :type])) win-loss-seq)
+	player-wins (filter #(has-player? (get-in % [:entry :players]) player-id) wins)
+	player-name (:name (get-player-in-seq (get-in (last player-wins) [:entry :players]) player-id))]
+    {:name player-name :value (count player-wins)}))
+
+(defn get-losses [win-loss-seq player-id]
+  (let [losses (filter #(= :loss (get-in % [:entry :type])) win-loss-seq)
+	player-losses (filter #(has-player? (get-in % [:entry :players]) player-id) losses)
+	player-name (:name (get-player-in-seq (get-in (last player-losses) [:entry :players]) player-id))]
+    {:name player-name :value (count player-losses)}))
+
+(defn partition-game-win-loss [log-seq]
+  (let [game-win-loss (get-log-type log-seq #(or (start-game? %) (win-loss? %)))
+	partitioned-list (partition 3 1 game-win-loss)
+	valid-ones (filter #(and (start-game? (:entry (first %))) 
+				 (win-loss? (:entry (second %))))
+			   partitioned-list)]
+    valid-ones))
+
+(defn filter-game-type [game-win-loss-triple-seq game-type]
+  (let [filtered-list (filter #(= game-type (:game-type (:entry (first %)))) game-win-loss-triple-seq)]
+    (flatten (for [triple filtered-list]
+	       (for [item (rest triple)]
+		 item)))))
+
+(defn get-number-wins [log-seq game-type player-id]
+  (let [partitioned (partition-game-win-loss log-seq)
+	filtered (filter-game-type partitioned game-type)]
+    (get-wins filtered player-id)))
+
+(defn get-number-losses [log-seq game-type player-id]
+  (let [partitioned (partition-game-win-loss log-seq)
+	filtered (filter-game-type partitioned game-type)]
+    (get-losses filtered player-id)))
+
+(defn get-number-tdm-wins [log-seq player-id]
+  (get-number-wins log-seq "tdm" player-id))
+
+(defn get-number-tdm-losses [log-seq player-id]
+  (get-number-losses log-seq "tdm" player-id))
+
+(defn get-number-ctf-wins [log-seq player-id]
+  (get-number-wins log-seq "ctf" player-id))
+
+(defn get-number-ctf-losses [log-seq player-id]
+  (get-number-losses log-seq "ctf" player-id))
+
+(defn get-number-dom-wins [log-seq player-id]
+  (get-number-wins log-seq "dom" player-id))
+
+(defn get-number-dom-losses [log-seq player-id]
+  (get-number-losses log-seq "dom" player-id))
+
+(defn get-number-ftf-wins [log-seq player-id]
+  (get-number-wins log-seq "ftf" player-id))
+
+(defn get-number-ftf-losses [log-seq player-id]
+  (get-number-losses log-seq "ftf" player-id))
+
+(defn get-number-sftf-wins [log-seq player-id]
+  (get-number-wins log-seq "sftf" player-id))
+
+(defn get-number-sftf-losses [log-seq player-id]
+  (get-number-losses log-seq "sftf" player-id))
+
 ;Calculate overall rankings of things
 
 (defn create-ranking [value-function log-seq player-seq]
   (reverse (sort-by :value (doall (map #(value-function log-seq %) player-seq)))))
+
+(defn rank-num-tdm-wins [log-seq]
+  (let [join-seq (get-log-type log-seq join?)
+	player-seq (get-unique-ids-from-seq join-seq :player)]
+    (create-ranking get-number-tdm-wins log-seq player-seq)))
+
+(defn rank-num-tdm-losses [log-seq]
+  (let [join-seq (get-log-type log-seq join?)
+	player-seq (get-unique-ids-from-seq join-seq :player)]
+    (create-ranking get-number-tdm-losses log-seq player-seq)))
+
+(defn rank-num-ctf-wins [log-seq]
+  (let [join-seq (get-log-type log-seq join?)
+	player-seq (get-unique-ids-from-seq join-seq :player)]
+    (create-ranking get-number-ctf-wins log-seq player-seq)))
+
+(defn rank-num-ctf-losses [log-seq]
+  (let [join-seq (get-log-type log-seq join?)
+	player-seq (get-unique-ids-from-seq join-seq :player)]
+    (create-ranking get-number-ctf-losses log-seq player-seq)))
+
+(defn rank-num-dom-wins [log-seq]
+  (let [join-seq (get-log-type log-seq join?)
+	player-seq (get-unique-ids-from-seq join-seq :player)]
+    (create-ranking get-number-dom-wins log-seq player-seq)))
+
+(defn rank-num-dom-losses [log-seq]
+  (let [join-seq (get-log-type log-seq join?)
+	player-seq (get-unique-ids-from-seq join-seq :player)]
+    (create-ranking get-number-dom-losses log-seq player-seq)))
+
+(defn rank-num-ftf-wins [log-seq]
+  (let [join-seq (get-log-type log-seq join?)
+	player-seq (get-unique-ids-from-seq join-seq :player)]
+    (create-ranking get-number-ftf-wins log-seq player-seq)))
+
+(defn rank-num-ftf-losses [log-seq]
+  (let [join-seq (get-log-type log-seq join?)
+	player-seq (get-unique-ids-from-seq join-seq :player)]
+    (create-ranking get-number-ftf-losses log-seq player-seq)))
+
+(defn rank-num-sftf-wins [log-seq]
+  (let [join-seq (get-log-type log-seq join?)
+	player-seq (get-unique-ids-from-seq join-seq :player)]
+    (create-ranking get-number-sftf-wins log-seq player-seq)))
+
+(defn rank-num-sftf-losses [log-seq]
+  (let [join-seq (get-log-type log-seq join?)
+	player-seq (get-unique-ids-from-seq join-seq :player)]
+    (create-ranking get-number-sftf-losses log-seq player-seq)))
 
 (defn rank-num-kills [log-seq]
   (let [dk-seq (get-log-type log-seq damage-kill?)
