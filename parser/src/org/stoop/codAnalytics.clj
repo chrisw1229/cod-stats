@@ -263,8 +263,8 @@
 (defn rank-artillery-damage [log-seq]
   (rank-weapon-damage log-seq artillery?))
 
-(defn rank-bazooka-kills [log-seq]
-  (rank-weapon-kills log-seq bazooka?))
+(defn rank-bazooka-damage [log-seq]
+  (rank-weapon-damage log-seq bazooka?))
 
 (defn rank-russian-wep-kills [log-seq]
   (rank-weapon-kills log-seq russian?))
@@ -327,5 +327,8 @@
 (defn get-all-leaderboard-stats [log-seq]
   (let [dk-seq (get-log-type log-seq damage-kill?)
 	player-ids (get-all-ids dk-seq)]
-    (for [player-id player-ids]
-      (get-leaderboard-stats player-id dk-seq))))
+    (filter #(not (nil? %))
+	    (for [player-id player-ids]
+	      (let [leader-stats (get-leaderboard-stats player-id dk-seq)]
+		(when (not (nil? (first leader-stats)))
+		  leader-stats))))))
