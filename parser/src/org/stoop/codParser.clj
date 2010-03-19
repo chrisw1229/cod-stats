@@ -335,3 +335,8 @@
 (defn shell-shock? [potential-struct]
   (and (contains? potential-struct :shock)
        (contains? potential-struct :shock-info)))
+
+(defn spawn? [potential-struct]
+  (and (contains? potential-struct :spawn)
+       (contains? potential-struct :weapon)
+       (contains? potential-struct :location)))

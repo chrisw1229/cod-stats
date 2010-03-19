@@ -216,6 +216,21 @@
 (defn get-number-sftf-losses [log-seq player-id]
   (get-number-losses log-seq "sftf" player-id))
 
+(defn get-time-played [log-seq player-id]
+  (let [start-games (get-log-type log-seq start-game?)
+	dk-seq (get-log-type log-seq damage-kill?)
+	k-seq (get-log-type dk-seq kill?)
+	player-d-seq (select-pid-from-seq k-seq :victim player-id)
+	spawn-seq (get-log-type log-seq spawn?)
+	player-spawn-seq (select-pid-from-seq spawn-seq :spawn player-id)
+	master-seq (sort-by :time (concat start-games player-d-seq player-spawn-seq))
+	paired-seq (partition 2 1 master-seq)
+	valid-pairs (filter #(and (spawn? (:entry (first %)))
+				  (or (kill? (:entry (second %)))
+				      (start-game? (:entry (second %))))) paired-seq)
+	play-times (map #(- (:time (second %)) (:time (first %))) valid-pairs)]
+    (reduce + play-times)))
+
 ;Calculate overall rankings of things
 
 (defn create-ranking [value-function log-seq player-seq]
