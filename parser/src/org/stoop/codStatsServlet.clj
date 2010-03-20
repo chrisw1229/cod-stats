@@ -182,9 +182,9 @@
 	    {:name "SFTF - Winner" :id "sftf_winner" :tip "Most times on winning team for SFTF."}
 	    {:name "SFTF - Loser" :id "sftf_loser" :tip "Most times on losing team for SFTF."}
 	    {:name "TDM - Winner" :id "tdm_winner" :tip "Most times on winning team for TDM."}
-	    {:name "TDM - Loser" :id "tdm_loser" :tip "Most times on losing team for TDM."}]
+	    {:name "TDM - Loser" :id "tdm_loser" :tip "Most times on losing team for TDM."}])
 
-	   (= award "bulldozer")) (format-award (rank-total-world-damage @game-archive))
+	  (= award "bulldozer") (format-award (rank-total-world-damage @game-archive))
 	  (= award "broken_ankles") (format-award (rank-total-fall-damage @game-archive))
 	  (= award "burning_man") (format-award (rank-self-fire-damage @game-archive))
 	  (= award "chatty_cathy") (format-award (rank-num-talks @game-archive))
@@ -213,7 +213,7 @@
 	  (= award "rifle") (format-award (rank-rifle-kills @game-archive))
 	  (= award "tank") (format-award (rank-tank-kills @game-archive))
 	  (= award "yankee") (format-award (rank-american-wep-kills @game-archive))
-
+	  
 	  (= award "ctf_winner") (format-award (rank-num-ctf-wins @game-archive))
 	  (= award "ctf_loser") (format-award (rank-num-ctf-losses @game-archive))
 	  (= award "dom_winner") (format-award (rank-num-dom-wins @game-archive))
@@ -224,7 +224,7 @@
 	  (= award "sftf_loser") (format-award (rank-num-sftf-losses @game-archive))
 	  (= award "tdm_winner") (format-award (rank-num-tdm-wins @game-archive))
 	  (= award "tdm_loser") (format-award (rank-num-tdm-losses @game-archive))
-
+	  
 	  :else (str award)))))
 
 (defservice cod-stats-routes)

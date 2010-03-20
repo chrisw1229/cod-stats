@@ -273,7 +273,13 @@ time for this game."
 			(get @*transformer* :x)
 			(get @*transformer* :y))))
       
-       (game-event? (parsed-input :entry))
+       (and (game-event? (parsed-input :entry))
+	    (some #(= % (get-in parsed-input [:entry :event])) 
+		  ["ctf_captured"
+		   "ctf_defended"
+		   "dom_captured"
+		   "ftf_scored"
+		   "sftf_scored"]))
        (process-game-event (get-in parsed-input [:entry :player :team])
 			   (get parsed-input :time))
       

@@ -48,8 +48,9 @@
   (let [k-good-recs (get-log-type dk-seq clean-kill?)
 	player-ks (select-pid-from-seq k-good-recs :attacker player-id)
 	weapons (get-unique-weapons-from-seq player-ks)]
-    (:weapon (first (sort-by :value (for [weapon weapons]
-				      {:weapon weapon :value (count (select-weapon-from-seq player-ks weapon))}))))))
+    (:weapon (first (reverse (sort-by :value (for [weapon weapons]
+					       {:weapon weapon 
+						:value (count (select-weapon-from-seq player-ks weapon))})))))))
 
 ;Get totals of stuff
 
@@ -464,6 +465,13 @@
 	seconds (int (mod (* 60 time-in-minutes) 60))]
     (str (pad-number hours) ":" (pad-number minutes) ":" (pad-number seconds))))
 
+(defn get-best-enemy [dk-seq player-id]
+  (let [k-good-recs (get-log-type dk-seq clean-kill?)
+	player-ds (select-pid-from-seq k-good-recs :victim player-id)
+	attacker-ids (get-unique-ids-from-seq player-ds :attacker)]
+    (:name (first (reverse (sort-by :value (for [attacker-id attacker-ids]
+					     (get-num-kills player-ds attacker-id))))))))
+
 (defn get-leaderboard-stats [player-id log-seq]
   (let [dk-seq (get-log-type log-seq damage-kill?)
 	kill-results (get-num-kills dk-seq player-id)
@@ -479,7 +487,7 @@
 	  (:value inflicted-results)
 	  (:value received-results)
 	  (get-best-weapon dk-seq player-id)
-	  "Best Enemy")))
+	  (get-best-enemy dk-seq player-id))))
 
 (defn get-all-leaderboard-stats [log-seq]
   (let [dk-seq (get-log-type log-seq damage-kill?)
