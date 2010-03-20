@@ -44,6 +44,13 @@
 (defn get-unique-weapons-from-seq [dk-seq]
   (get-unique-from-seq dk-seq [:entry :hit-details :weapon]))
 
+(defn get-best-weapon [dk-seq player-id]
+  (let [k-good-recs (get-log-type dk-seq clean-kill?)
+	player-ks (select-pid-from-seq k-good-recs :attacker player-id)
+	weapons (get-unique-weapons-from-seq player-ks)]
+    (:weapon (first (sort-by :value (for [weapon weapons]
+				      {:weapon weapon :value (count (select-weapon-from-seq player-ks weapon))}))))))
+
 ;Get totals of stuff
 
 (defn sum-over [log-seq nested-keys]
@@ -446,8 +453,20 @@
 (defn rank-american-wep-kills [log-seq]
   (rank-weapon-kills log-seq american?))
 
-(defn get-leaderboard-stats [player-id dk-seq]
-  (let [kill-results (get-num-kills dk-seq player-id)
+(defn pad-number [padee]
+  (if (> 10 padee)
+    (str "0" padee)
+    (str padee)))
+
+(defn convert-to-hms [time-in-minutes]
+  (let [hours (int (/ time-in-minutes 60))
+	minutes (int (mod time-in-minutes 60))
+	seconds (int (mod (* 60 time-in-minutes) 60))]
+    (str (pad-number hours) ":" (pad-number minutes) ":" (pad-number seconds))))
+
+(defn get-leaderboard-stats [player-id log-seq]
+  (let [dk-seq (get-log-type log-seq damage-kill?)
+	kill-results (get-num-kills dk-seq player-id)
 	death-results (get-num-deaths dk-seq player-id)
 	suicide-results (get-num-suicides dk-seq player-id)
 	inflicted-results (get-total-damage-dealt dk-seq player-id)
@@ -456,10 +475,10 @@
 	  (:value kill-results)
 	  (:value death-results)
 	  (:value suicide-results)
-	  20 ;time played
+	  (convert-to-hms (get-time-played log-seq player-id))
 	  (:value inflicted-results)
 	  (:value received-results)
-	  "Best Weapon"
+	  (get-best-weapon dk-seq player-id)
 	  "Best Enemy")))
 
 (defn get-all-leaderboard-stats [log-seq]
@@ -467,6 +486,6 @@
 	player-ids (get-all-ids dk-seq)]
     (filter #(not (nil? %))
 	    (for [player-id player-ids]
-	      (let [leader-stats (get-leaderboard-stats player-id dk-seq)]
+	      (let [leader-stats (get-leaderboard-stats player-id log-seq)]
 		(when (not (nil? (first leader-stats)))
 		  leader-stats))))))

@@ -72,7 +72,15 @@
   [award-list]
   (encode-to-str
    {:columns [{:name "Name" :type "string"}
-	      {:name "Value" :type "number"}]
+	      {:name "Value" :type "number" :sort false}]
+    :rows (for [award award-list :when (not (nil? (:name award)))]
+	    [(:name award) (:value award)])}))
+
+(defn reverse-format-award
+  [award-list]
+  (encode-to-str
+   {:columns [{:name "Name" :type "string"}
+	      {:name "Value" :type "number" :sort true}]
     :rows (for [award award-list :when (not (nil? (:name award)))]
 	    [(:name award) (:value award)])}))
 
@@ -174,14 +182,14 @@
 	    {:name "SFTF - Winner" :id "sftf_winner" :tip "Most times on winning team for SFTF."}
 	    {:name "SFTF - Loser" :id "sftf_loser" :tip "Most times on losing team for SFTF."}
 	    {:name "TDM - Winner" :id "tdm_winner" :tip "Most times on winning team for TDM."}
-	    {:name "TDM - Loser" :id "tdm_loser" :tip "Most times on losing team for TDM."}])
+	    {:name "TDM - Loser" :id "tdm_loser" :tip "Most times on losing team for TDM."}]
 
-	  (= award "bulldozer") (format-award (rank-total-world-damage @game-archive))
+	   (= award "bulldozer")) (format-award (rank-total-world-damage @game-archive))
 	  (= award "broken_ankles") (format-award (rank-total-fall-damage @game-archive))
 	  (= award "burning_man") (format-award (rank-self-fire-damage @game-archive))
 	  (= award "chatty_cathy") (format-award (rank-num-talks @game-archive))
 	  (= award "darwin") (format-award (rank-total-damage-from-world @game-archive))
-	  (= award "elusive") (format-award (reverse (rank-kills-plus-deaths @game-archive)))
+	  (= award "elusive") (reverse-format-award (rank-kills-plus-deaths @game-archive))
 	  (= award "lemming") (format-award (rank-num-suicides @game-archive))
 	  (= award "masochist") (format-award (rank-total-self-damage @game-archive))
 	  (= award "scapegoat") (format-award (rank-total-team-dam-received @game-archive))

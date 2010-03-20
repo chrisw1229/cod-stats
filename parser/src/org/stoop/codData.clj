@@ -207,9 +207,3 @@
   (includes? ["flamethrower_mp"] weapon-name))
 (defn melee? [type-name]
   (includes? ["MOD_MELEE"] type-name))
-
-
-
-
-
-
