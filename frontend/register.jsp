@@ -12,7 +12,7 @@
   StringBuilder nameData = new StringBuilder();
   BufferedReader reader = null;
   try {
-     URL url = new URL("http://localhost/stats/players/index.json");
+     URL url = new URL("http://localhost:8080/stats/players/index.json");
      URLConnection conn = url.openConnection();
      reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
 
@@ -99,7 +99,7 @@
         $("#submit-button").click(function(e) {
           $("#message").text("Sending...");
           var options = {
-            url: "http://localhost/stats/registration",
+            url: "http://localhost:8080/stats/registration",
             data: selection,
             success: function() { $("#message").text("Submitted.") },
             error: function() { $("#message").text("Failed.") }

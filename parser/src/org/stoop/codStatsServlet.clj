@@ -120,12 +120,16 @@
   (GET "/stats/archive"
        (map #(str % "\n") @game-archive))
 
-  (GET "/stats/photo"
-       (let [ip-address (:remote-addr request)
-	     photo (:set params)]
-	 (when (not (nil? photo))
+  (GET "/stats/registration"
+       (let [ip-address (:ip params)
+	     photo (:photo params)]
+	 (when (and (not (nil? photo)) (not (nil? ip-address)))
 	   (set-photo ip-address photo)
 	   (str "Photo set to " photo " for " ip-address))))
+
+  (GET "/stats/players/:index.json"
+       (encode-to-str
+	(get-ip-photo-name)))
 
   (GET "/stats/leaderboard/:leader.json"
        (encode-to-str

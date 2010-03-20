@@ -12,6 +12,27 @@
 
 (def ip-photo-map (ref (read-photo-log)))
 
+(defn get-name [id]
+  (first (filter #(not (nil? %))
+		 (for [entry @name-id-map]
+		   (when (= (val entry) id)
+		     (key entry))))))
+
+(defn get-ip-address [id]
+  (first (filter #(not (nil? %))
+		 (for [entry @ip-id-map]
+		   (when (= (val entry) id)
+		     (key entry))))))
+
+(defn get-ip-photo-name 
+ []
+ (let [ips-with-photos (set (keys @ip-photo-map))
+       ips-with-ids (set (keys @ip-id-map))
+       ips-with-no-photo (clojure.set/difference ips-with-ids ips-with-photos)
+       ids-with-no-photo (for [ip ips-with-no-photo] (get @ip-id-map ip))
+       names-with-no-photo (for [id ids-with-no-photo] {:ip (get-ip-address id) :name (get-name id)})]
+   names-with-no-photo))
+
 (defn associate-client-id-to-ip
   "Associates an IP address to the client ID passed in."
   [client-id ip-address]

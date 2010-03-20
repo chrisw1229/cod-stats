@@ -43,9 +43,10 @@
       <url-pattern>/live</url-pattern>
       <url-pattern>/start</url-pattern>
 	<url-pattern>/archive</url-pattern>
-	<url-pattern>/photo</url-pattern>
 	<url-pattern>/awards/*</url-pattern>
 	<url-pattern>/leaderboard/*</url-pattern>
+	<url-pattern>/registration</url-pattern>
+	<url-pattern>/players/*</url-pattern>
    </servlet-mapping>
 
    <servlet-mapping>
