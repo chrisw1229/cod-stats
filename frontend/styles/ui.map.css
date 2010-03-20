@@ -68,3 +68,30 @@
 img[src=""] {
   display: none;
 }
+.map-dialog {
+  border-width: 2px;
+  font-family: courier new;
+  font-weight: bold;
+  padding: 8px;
+  position: absolute;
+  text-align: center;
+  text-shadow: 1px 1px 1px black;
+  z-index: 1000;
+}
+.map-dialog-name1 {
+  color: #2A2ADC;
+}
+.map-dialog-weapon-a,
+.map-dialog-weapon-b,
+.map-dialog-weapon-r {
+  color: #64C461;
+}
+.map-dialog-weapon-g {
+  color: #FFB709;
+}
+.map-dialog-name2 {
+  color: #DC2A2A;
+}
+.map-dialog-suicide {
+  color: #953DA5;
+}

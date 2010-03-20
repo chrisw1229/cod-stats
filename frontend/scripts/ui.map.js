@@ -29,15 +29,14 @@ Map._init = function(element, options) {
   $('<div class="ui-widget-overlay"/>').appendTo(Map.owner);
 
   // Create the map controls
-  var navCtrl = new OpenLayers.Control.Navigation();
-  var panCtrl = new OpenLayers.Control.CustomPanPanel();
-  var zoomCtrl = new OpenLayers.Control.ZoomPanel();
-  var keyCtrl = new OpenLayers.Control.KeyboardDefaults();
-  Map.controls = [navCtrl, panCtrl, zoomCtrl, keyCtrl];
+  Map.navCtrl = new OpenLayers.Control.Navigation();
+  Map.panCtrl = new OpenLayers.Control.CustomPanPanel();
+  Map.zoomCtrl = new OpenLayers.Control.ZoomPanel();
+  Map.keyCtrl = new OpenLayers.Control.KeyboardDefaults();
 
   // Create the actual map component
   var mapOpts = {
-    controls: Map.controls,
+    controls: [Map.navCtrl, Map.panCtrl, Map.zoomCtrl, Map.keyCtrl],
     maxExtent: new OpenLayers.Bounds(0, 0, options.maxSize, options.maxSize),
     maxResolution: (options.maxSize / options.maxTile),
     numZoomLevels: options.maxZoom,
@@ -50,6 +49,11 @@ Map._init = function(element, options) {
   Map.targetLayer = Map._initTargetLayer();
   Map.deathLayer = Map._initMarkerLayer("death");
   Map.killLayer = Map._initMarkerLayer("kill");
+  Map.layers = [Map.targetLayer, Map.deathLayer, Map.killLayer];
+
+  // Add the hover control after the feature layers are created
+  Map.hoverCtrl = new OpenLayers.Control.Hover();
+  Map.ol.addControl(Map.hoverCtrl);
 
   // Set control tool tips
   $(".olControlPanNorthItemInactive").attr("title", "Pan up");
@@ -65,6 +69,8 @@ Map._init = function(element, options) {
 
   // Set the initial map appearance
   Map._resize();
+
+  // Disable user input until tiles are loaded
   Map._enabled(false);
 };
 
@@ -175,22 +181,18 @@ Map._initTileLayer = function() {
 Map._initTargetLayer = function() {
 
   // Configure the style for the layer
-  var styleOpts = new OpenLayers.Style({
-    strokeColor: "${color}", strokeWidth: "${width}", strokeOpacity: "${opacity}"
+  var styleOpts = new OpenLayers.Style({ strokeColor: "${color}",
+    strokeWidth: "${width}", strokeOpacity: "${opacity}"
   }, {
     context: {
       color: function(m) {
         var team = m.attributes.kteam;
         if (team == "g") {
-          return "#ABABAB";
-        } else if (team == "a") {
+          return "#FFB709";
+        } else if (team == "a" || team == "r" || team == "b") {
           return "#64C461";
-        } else if (team == "r") {
-          return "#B4433F";
-        } else if (team == "b") {
-          return "#46489B";
         }
-        return "#FFB709";
+        return "#ABABAB";
       },
 
       width: function(m) {
@@ -220,7 +222,7 @@ Map._initTargetLayer = function() {
 Map._initMarkerLayer = function(type) {
 
   // Configure the style for the layer
-  var styleOpts = new OpenLayers.Style({
+  var styleOpts = new OpenLayers.Style({ cursor: "pointer",
     externalGraphic: "styles/images/markers/${type}${size}.png",
     graphicWidth: "${size}", graphicHeight: "${size}", graphicOpacity: "${opacity}"
   }, {
@@ -294,6 +296,9 @@ Map._resize = function(e) {
 
   // Update the dimensions of the map
   Map.ol.updateSize();
+
+  // Update the dimensions of the hover dialog
+  Map.hoverCtrl.resize();
 };
 
 // Enables or disables the map controls
@@ -303,13 +308,13 @@ Map._enabled = function(enabled) {
   if (Map.enabled != enabled) {
     Map.enabled = enabled;
 
-    // Only allow mouse wheel zoom when tiles are loaded
-    if (Map.controls && Map.controls.length > 0) {
-      if (enabled) {
-        Map.controls[0].activate();
-      } else {
-        Map.controls[0].deactivate();
-      }
+    // Only allow mouse interaction when tiles are loaded
+    if (enabled) {
+      Map.navCtrl.activate();
+      Map.hoverCtrl.activate();
+    } else {
+      Map.navCtrl.deactivate();
+      Map.hoverCtrl.deactivate();
     }
 
     // Adjust the map appearance
@@ -360,4 +365,103 @@ OpenLayers.Control.CustomPanPanel = OpenLayers.Class(OpenLayers.Control.Panel, {
   },
 
   CLASS_NAME: "OpenLayers.Control.CustomPanPanel"
+});
+
+OpenLayers.Control.Hover = OpenLayers.Class(OpenLayers.Control, {                
+
+  initialize: function(options) {
+    OpenLayers.Control.prototype.initialize.apply(this, arguments); 
+
+    this.layer = new OpenLayers.Layer.Vector.RootContainer(
+      this.id + "_container", { layers: Map.layers }
+    );
+
+    this.callbacks = { over: this.overFeature, out: this.outFeature };
+    this.handlers = {
+      feature: new OpenLayers.Handler.Feature(this, this.layer, this.callbacks)
+    };
+
+    // Create a dialog element for displaying hover information
+    this.dialog = $('<div class="ui-widget ui-widget-content ui-corner-all map-dialog"/>').appendTo($(Map.owner));
+    $('<div class="map-dialog-name1"/>').appendTo(this.dialog);
+    $('<div class="map-dialog-weapon"/>').appendTo(this.dialog);
+    $('<div class="map-dialog-name2"/>').appendTo(this.dialog);
+    this.dialog.css("opacity", 0.8);
+    this.dialog.hide();
+  },
+
+  destroy: function() {
+    OpenLayers.Control.prototype.destroy.apply(this, arguments);
+
+    this.dialog.remove();
+    this.layer.destroy();
+  },
+
+  activate: function () {
+    if (!this.active) {
+      this.map.addLayer(this.layer);
+      this.handlers.feature.activate();
+    }
+    return OpenLayers.Control.prototype.activate.apply(this, arguments);
+  },
+
+  deactivate: function () {
+    if (this.active) {
+      this.handlers.feature.deactivate();
+      this.map.removeLayer(this.layer);
+    }
+    return OpenLayers.Control.prototype.deactivate.apply(this, arguments);
+  },
+
+  overFeature: function(feature) {
+    this.selected = feature.attributes;
+
+    var marker = feature.attributes;
+    var name1Div = $(".map-dialog-name1", this.dialog);
+    var weaponDiv = $(".map-dialog-weapon", this.dialog);
+    var name2Div = $(".map-dialog-name2", this.dialog);
+
+    name1Div.text(marker.kname);
+    weaponDiv.text(marker.weapon);
+    name2Div.text(marker.sname ? marker.sname : marker.dname);
+
+    if (marker.steam) {
+      name1Div.hide();
+      name2Div.addClass("map-dialog-suicide");
+    } else {
+      if (marker.kteam == marker.dteam) {
+        name1Div.addClass("map-dialog-suicide");
+      } else {
+        name1Div.removeClass("map-dialog-suicde");
+      }
+      name1Div.show();
+      name2Div.removeClass("map-dialog-suicide");
+    }
+  
+    var team = (marker.steam ? marker.steam : marker.kteam);
+    weaponDiv.attr("class", "map-dialog-weapon map-dialog-weapon-" + team);
+
+    var maxW = $(Map.owner).width();
+    var maxH = $(Map.owner).height();
+    this.dialog.css({ left: (maxW - this.dialog.width()) / 2,
+        top: maxH - this.dialog.outerHeight(true) });
+    this.dialog.show();
+  },
+
+  outFeature: function(feature) {
+    this.selected = undefined;
+    this.dialog.hide();
+  },
+
+  setMap: function(map) {
+    this.handlers.feature.setMap(map);
+
+    OpenLayers.Control.prototype.setMap.apply(this, arguments);
+  },
+
+  resize: function() {
+    this.dialog.hide();
+  },
+
+  CLASS_NAME: "OpenLayers.Control.Hover"
 });

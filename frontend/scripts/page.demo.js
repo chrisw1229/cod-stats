@@ -22,6 +22,16 @@ $.extend({ mgr: {
     { id: 13, name: "Turn Left Nower", photo: "player12.jpg", place: "13", rank: "0", team: "a", trend: "-", kills: "12", deaths: "31", inflicted: "2,741", received: "5,515" }
   ],
 
+  weapons: [
+    "50cal_tank_mp", "bar_mp", "bren_mp", "elefant_turret_mp",
+    "flak88_turret_mp", "kar98k_mp", "kar98k_sniper_mp", "gewehr43_mp",
+    "m1garand_mp", "mg34_tank_mp", "mg42_bipod_stand_mp", "mg42_turret_mp",
+    "mosin_nagant_sniper_mp", "mp40_mp", "mp44_mp", "panzeriv_turret_mp",
+    "panzerfaust_fubar_mp", "ppsh_mp", "satchelcharge_mp", "sherman_turret_mp",
+    "springfield_mp", "sten_mp", "stielhandgranate_mp", "svt40_mp",
+    "t34_turret_mp", "thompson_mp"
+  ],
+
   // Produces synthetic packets to simulate an interesting demo
   packetProducer: function(options) {
     var ts = options.data.ts;
@@ -63,8 +73,10 @@ $.extend({ mgr: {
       var dy = ((parseInt(Math.random() * 2700))) + 700;
       var dplayer = $.mgr.players[Math.floor(Math.random() * $.mgr.players.length)];
 
+      var weapon = $.mgr.weapons[Math.floor(Math.random() * $.mgr.weapons.length)];
+
       markers.push({ kx: kx, ky: ky, kname: kplayer.name, kteam: kplayer.team,
-        dx: dx, dy: dy, dname: dplayer.name, dteam: dplayer.team });
+        dx: dx, dy: dy, dname: dplayer.name, dteam: dplayer.team, weapon: weapon });
     }
     return markers;
   },

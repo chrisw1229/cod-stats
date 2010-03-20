@@ -21,17 +21,13 @@
 .ui-message-name {
   text-shadow: 2px 2px 1px black;
 }
-.ui-message-team-a {
+.ui-message-team-a,
+.ui-message-team-b,
+.ui-message-team-r {
   color: #64C461;
 }
-.ui-message-team-b {
-  color: #46489B;
-}
-.ui-message-team-r {
-  color: #B4433F
-}
 .ui-message-team-g {
-  color: #ABABAB;
+  color: #FFB709;
 }
 .ui-message-symbol {
   height: 32px;
