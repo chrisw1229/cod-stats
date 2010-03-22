@@ -987,7 +987,8 @@ Callback_PlayerKilled(eInflictor, attacker, iDamage, sMeansOfDeath, sWeapon, vDi
 				}
 
                 // Log actions if applicable
-                if (attacker.carrying || (self is_near_carrier(attacker.pers["team"]))) {
+                if (isDefined(attacker.carrying)
+                        || (self is_near_carrier(attacker.pers["team"]))) {
 
                     // Victim was near attacker's carrier teammate (attacker defended)
                     lpaction = getCvar("g_gametype") + "_defended";
@@ -2640,7 +2641,7 @@ is_near_flag() {
 is_near_carrier(team) {
 
     // If the attacker is the carrier then return false
-    if (self.carrying) {
+    if (isDefined(self.carrying)) {
         return false;
     }
 
