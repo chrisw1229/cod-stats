@@ -125,20 +125,22 @@ treefall_checkdamage()
 			}
 			health = health - dmg;
 
-	        lpobjectguid = "";
-	        lpobjectnum = "-1";
-	        lpobjectteam = "world";
-	        lpobjectname = self.model;
+            if (isPlayer(who)) {
+	            lpobjectguid = "";
+	            lpobjectnum = "-1";
+	            lpobjectteam = "world";
+	            lpobjectname = self.model;
 
-	        lpplayerguid = who getGuid();
-            lpplayernum = who getEntityNumber();
-            lpplayerteam = who.pers["team"];
-            lpplayername = who.name;
-            lpweapon = "none";
-            lpdamage = dmg;
-            lpdamagemod = mod;
-            lphitloc = "none";
-            logPrint("D;" + lpobjectguid + ";" + lpobjectnum + ";" + lpobjectteam + ";" + lpobjectname + ";" + lpplayerguid + ";" + lpplayernum + ";" + lpplayerteam + ";" + lpplayername + ";" + lpweapon + ";" + lpdamage + ";" + lpdamagemod + ";" + lphitloc + "\n");
+	            lpplayerguid = who getGuid();
+                lpplayernum = who getEntityNumber();
+                lpplayerteam = who.pers["team"];
+                lpplayername = who.name;
+                lpweapon = "none";
+                lpdamage = dmg;
+                lpdamagemod = mod;
+                lphitloc = "none";
+                logPrint("D;" + lpobjectguid + ";" + lpobjectnum + ";" + lpobjectteam + ";" + lpobjectname + ";" + lpplayerguid + ";" + lpplayernum + ";" + lpplayerteam + ";" + lpplayername + ";" + lpweapon + ";" + lpdamage + ";" + lpdamagemod + ";" + lphitloc + "\n");
+            }
 
 			if (health <= 0)
 			{
