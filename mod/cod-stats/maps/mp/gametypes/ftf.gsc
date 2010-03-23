@@ -2012,9 +2012,9 @@ returnflag()
 
 	// See if map contains a predefined marker (not likely)
 	flagspawnpoints = getentarray("ftf_flag_home","targetname");
-        if (isDefined(flagspawnpoints)) {
-		level.flag["marker"] = flagspawnpoints[randomInt(flagspawnpoints.size)];
-	}
+    if (isDefined(flagspawnpoints) && isDefined(flagspawnpoints.size) && flagspawnpoints.size > 0) {
+        level.flag["marker"] = flagspawnpoints[randomInt(flagspawnpoints.size)];
+    }
 
 	// No marker
 	if(!isdefined(level.flag["marker"]))
