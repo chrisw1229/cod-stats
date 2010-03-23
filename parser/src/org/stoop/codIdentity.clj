@@ -92,7 +92,7 @@
 	     ip-id)
 
      ;We have a new IP address and an old name (new machine, old player case)
-     (and (not (nil? ip-address)) (not (nil? name-id)))
+     (and (not (nil? ip-address)) (not (nil? name-id)) (not (= name "Unknown Soldier")))
      (dosync (alter ip-id-map assoc ip-address name-id)
 	     name-id)
 
@@ -125,9 +125,11 @@
 
 (defn set-photo
   [ip-address photo]
-  (dosync (alter ip-photo-map assoc ip-address photo))
+  (dosync (alter ip-photo-map assoc (keyword ip-address) photo))
   (write-photo-log @ip-photo-map))
 
 (defn get-photo
   [client-id]
-  (get @ip-photo-map (get-ip client-id)))
+  (let [ip-address-string (get-ip client-id)]
+    (when (not (nil? ip-address-string))
+      (get @ip-photo-map (keyword ip-address-string)))))
