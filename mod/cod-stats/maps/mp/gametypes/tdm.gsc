@@ -820,7 +820,7 @@ Callback_PlayerKilled(eInflictor, attacker, iDamage, sMeansOfDeath, sWeapon, vDi
 		
 		self.score--;
 		
-		if (level.teamkill_penalty)
+		if (getCvarInt("scr_teamscorepenalty") && isdefined(self.pers["team"]))
 		{
 			//penalize team as well
 			teamscore = getTeamScore(self.pers["team"]);
