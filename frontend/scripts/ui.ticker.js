@@ -432,7 +432,7 @@ $.widget("ui.ticker", {
     // Load all the basic values for the given ticker item
     $("div.ui-ticker-item-name", itemDiv).text(item.name);
     $("div.ui-ticker-item-photo", itemDiv).css("background-image",
-        "url(players/" + item.photo + ")");
+        "url(" + item.photo + ")");
 
     // Check whether the current item is a spectator
     var team = (item.team && item.team.length > 0 ? item.team.charAt(0) : "").toLowerCase();

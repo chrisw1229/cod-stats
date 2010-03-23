@@ -2,7 +2,7 @@
 
 <%
   String basePath = config.getServletContext().getRealPath(".");
-  File photoDir = new File(basePath + File.separator + "players");
+  File photoDir = new File(basePath + File.separator + "photos");
   File[] photoFiles = photoDir.listFiles(new FilenameFilter() {
     public boolean accept(File dir, String name) {
       return name.endsWith(".jpg");    
@@ -99,7 +99,7 @@
         $("#submit-button").click(function(e) {
           $("#message").text("Sending...");
           var options = {
-            url: "http://localhost/stats/registration",
+            url: "http://gday/stats/registration",
             data: selection,
             success: function() { $("#message").text("Submitted.") },
             error: function() { $("#message").text("Failed.") }
@@ -138,7 +138,7 @@
     <td valign="top">
     <div id="photos" style="float:left;">
       <% for (File photoFile : photoFiles) { %>
-        <img src="players/<%= photoFile.getName() %>"/>
+        <img src="photos/<%= photoFile.getName() %>"/>
       <% } %>
     </div>
     </td>
