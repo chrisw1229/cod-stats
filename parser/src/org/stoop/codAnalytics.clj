@@ -44,6 +44,25 @@
 (defn get-unique-weapons-from-seq [dk-seq]
   (get-unique-from-seq dk-seq [:entry :hit-details :weapon]))
 
+;One of something calculations
+
+;Play time
+(defn get-time-played [log-seq player-id]
+  (let [start-games (get-log-type log-seq start-game?)
+	dk-seq (get-log-type log-seq damage-kill?)
+	k-seq (get-log-type dk-seq kill?)
+	player-d-seq (select-pid-from-seq k-seq :victim player-id)
+	spawn-seq (get-log-type log-seq spawn?)
+	player-spawn-seq (select-pid-from-seq spawn-seq :spawn player-id)
+	master-seq (sort-by :time (concat start-games player-d-seq player-spawn-seq))
+	paired-seq (partition 2 1 master-seq)
+	valid-pairs (filter #(and (spawn? (:entry (first %)))
+				  (or (kill? (:entry (second %)))
+				      (start-game? (:entry (second %))))) paired-seq)
+	play-times (map #(- (:time (second %)) (:time (first %))) valid-pairs)]
+    (reduce + play-times)))
+
+;Best weapons
 (defn get-best-weapon [dk-seq player-id]
   (let [k-good-recs (get-log-type dk-seq clean-kill?)
 	player-ks (select-pid-from-seq k-good-recs :attacker player-id)
@@ -52,11 +71,43 @@
 					       {:weapon weapon 
 						:value (count (select-weapon-from-seq player-ks weapon))})))))))
 
-;Get totals of stuff
+;Streaks
+(defn get-max-kill-streak [dk-seq player-id]
+  (let [kills (get-log-type dk-seq #(or (clean-kill? %) (and (kill? %)
+							     (= player-id (get-in % [:entry :victim :id])))))
+	player-ks (select-pid-from-seq kills :attacker player-id)
+	player-name (get-in (last player-ks) [:entry :attacker :name])
+	player-ds (select-pid-from-seq kills :victim player-id)
+	player-ks-ds (sort-by :time (concat player-ks player-ds))
+	player-streaks (partition-by #(= player-id (get-in % [:entry :victim :id])) player-ks-ds)
+	kill-streaks (filter #(= player-id (get-in (first %) [:entry :attacker :id])) player-streaks)
+	streak-lengths (map count kill-streaks)]
+    (when (> (count streak-lengths) 0)
+      {:name player-name :value (apply max streak-lengths)})))
 
+(defn get-max-death-streak [dk-seq player-id]
+  (let [kills (get-log-type dk-seq #(or (clean-kill? %) (and (kill? %)
+							     (= player-id (get-in % [:entry :victim :id])))))
+	player-ks (select-pid-from-seq kills :attacker player-id)
+	player-ds (select-pid-from-seq kills :victim player-id)
+	player-name (get-in (last player-ds) [:entry :victim :name])
+	player-ks-ds (sort-by :time (concat player-ks player-ds))
+	player-streaks (partition-by #(= player-id (get-in % [:entry :victim :id])) player-ks-ds)
+	death-streaks (filter #(= player-id (get-in (first %) [:entry :victim :id])) player-streaks)
+	streak-lengths (map count death-streaks)]
+    (when (> (count streak-lengths) 0)
+      {:name player-name :value (apply max streak-lengths)})))
+
+;Get totals of stuff and create rankings
+
+;Generic builders
 (defn sum-over [log-seq nested-keys]
   (reduce + (doall (map #(get-in % nested-keys) log-seq))))
 
+(defn create-ranking [value-function log-seq player-seq]
+  (reverse (sort-by :value (doall (map #(value-function log-seq %) player-seq)))))
+
+;Specific calculations and rankings
 (defn get-total-damage-dealt [dk-seq player-id]
   (let [dk-good-recs (get-log-type dk-seq clean-damage?)
 	player-dks (select-pid-from-seq dk-good-recs :attacker player-id)
@@ -152,6 +203,8 @@
 	player-name (get-in (last player-shocks) [:entry :shock :name])]
     {:name player-name :value (sum-over player-shocks [:entry :shock-info :damage])}))
 
+;Wins and losses for various game types
+
 (defn has-player? [player-seq player-id]
   (> (count (filter #(= player-id (:id %)) player-seq)) 0))
 
@@ -194,105 +247,22 @@
 	filtered (filter-game-type partitioned game-type)]
     (get-losses filtered player-id)))
 
-(defn get-number-tdm-wins [log-seq player-id]
-  (get-number-wins log-seq "tdm" player-id))
+(defmacro create-game-type-calculators [game-type postfix]
+  `(do 
+     (defn ~(symbol (str "get-number-" game-type postfix)) [log-seq# player-id#] 
+       (~(symbol (str "get-number" postfix)) log-seq# ~game-type player-id#))
+     (defn ~(symbol (str "rank-num-" game-type postfix)) [log-seq#]
+       (let [join-seq# (get-log-type log-seq# join?)
+	     player-seq# (get-unique-ids-from-seq join-seq# :player)]
+	 (create-ranking ~(symbol (str "get-number-" game-type postfix)) log-seq# player-seq#)))))
 
-(defn get-number-tdm-losses [log-seq player-id]
-  (get-number-losses log-seq "tdm" player-id))
-
-(defn get-number-ctf-wins [log-seq player-id]
-  (get-number-wins log-seq "ctf" player-id))
-
-(defn get-number-ctf-losses [log-seq player-id]
-  (get-number-losses log-seq "ctf" player-id))
-
-(defn get-number-dom-wins [log-seq player-id]
-  (get-number-wins log-seq "dom" player-id))
-
-(defn get-number-dom-losses [log-seq player-id]
-  (get-number-losses log-seq "dom" player-id))
-
-(defn get-number-ftf-wins [log-seq player-id]
-  (get-number-wins log-seq "ftf" player-id))
-
-(defn get-number-ftf-losses [log-seq player-id]
-  (get-number-losses log-seq "ftf" player-id))
-
-(defn get-number-sftf-wins [log-seq player-id]
-  (get-number-wins log-seq "sftf" player-id))
-
-(defn get-number-sftf-losses [log-seq player-id]
-  (get-number-losses log-seq "sftf" player-id))
-
-(defn get-time-played [log-seq player-id]
-  (let [start-games (get-log-type log-seq start-game?)
-	dk-seq (get-log-type log-seq damage-kill?)
-	k-seq (get-log-type dk-seq kill?)
-	player-d-seq (select-pid-from-seq k-seq :victim player-id)
-	spawn-seq (get-log-type log-seq spawn?)
-	player-spawn-seq (select-pid-from-seq spawn-seq :spawn player-id)
-	master-seq (sort-by :time (concat start-games player-d-seq player-spawn-seq))
-	paired-seq (partition 2 1 master-seq)
-	valid-pairs (filter #(and (spawn? (:entry (first %)))
-				  (or (kill? (:entry (second %)))
-				      (start-game? (:entry (second %))))) paired-seq)
-	play-times (map #(- (:time (second %)) (:time (first %))) valid-pairs)]
-    (reduce + play-times)))
+(create-game-type-calculators "tdm" "-wins") (create-game-type-calculators "tdm" "-losses")
+(create-game-type-calculators "ctf" "-wins") (create-game-type-calculators "ctf" "-losses")
+(create-game-type-calculators "dom" "-wins") (create-game-type-calculators "dom" "-losses")
+(create-game-type-calculators "ftf" "-wins") (create-game-type-calculators "ftf" "-losses")
+(create-game-type-calculators "sftf" "-wins") (create-game-type-calculators "sftf" "-losses")
 
 ;Calculate overall rankings of things
-
-(defn create-ranking [value-function log-seq player-seq]
-  (reverse (sort-by :value (doall (map #(value-function log-seq %) player-seq)))))
-
-(defn rank-num-tdm-wins [log-seq]
-  (let [join-seq (get-log-type log-seq join?)
-	player-seq (get-unique-ids-from-seq join-seq :player)]
-    (create-ranking get-number-tdm-wins log-seq player-seq)))
-
-(defn rank-num-tdm-losses [log-seq]
-  (let [join-seq (get-log-type log-seq join?)
-	player-seq (get-unique-ids-from-seq join-seq :player)]
-    (create-ranking get-number-tdm-losses log-seq player-seq)))
-
-(defn rank-num-ctf-wins [log-seq]
-  (let [join-seq (get-log-type log-seq join?)
-	player-seq (get-unique-ids-from-seq join-seq :player)]
-    (create-ranking get-number-ctf-wins log-seq player-seq)))
-
-(defn rank-num-ctf-losses [log-seq]
-  (let [join-seq (get-log-type log-seq join?)
-	player-seq (get-unique-ids-from-seq join-seq :player)]
-    (create-ranking get-number-ctf-losses log-seq player-seq)))
-
-(defn rank-num-dom-wins [log-seq]
-  (let [join-seq (get-log-type log-seq join?)
-	player-seq (get-unique-ids-from-seq join-seq :player)]
-    (create-ranking get-number-dom-wins log-seq player-seq)))
-
-(defn rank-num-dom-losses [log-seq]
-  (let [join-seq (get-log-type log-seq join?)
-	player-seq (get-unique-ids-from-seq join-seq :player)]
-    (create-ranking get-number-dom-losses log-seq player-seq)))
-
-(defn rank-num-ftf-wins [log-seq]
-  (let [join-seq (get-log-type log-seq join?)
-	player-seq (get-unique-ids-from-seq join-seq :player)]
-    (create-ranking get-number-ftf-wins log-seq player-seq)))
-
-(defn rank-num-ftf-losses [log-seq]
-  (let [join-seq (get-log-type log-seq join?)
-	player-seq (get-unique-ids-from-seq join-seq :player)]
-    (create-ranking get-number-ftf-losses log-seq player-seq)))
-
-(defn rank-num-sftf-wins [log-seq]
-  (let [join-seq (get-log-type log-seq join?)
-	player-seq (get-unique-ids-from-seq join-seq :player)]
-    (create-ranking get-number-sftf-wins log-seq player-seq)))
-
-(defn rank-num-sftf-losses [log-seq]
-  (let [join-seq (get-log-type log-seq join?)
-	player-seq (get-unique-ids-from-seq join-seq :player)]
-    (create-ranking get-number-sftf-losses log-seq player-seq)))
 
 (defn rank-num-kills [log-seq]
   (let [dk-seq (get-log-type log-seq damage-kill?)
@@ -382,6 +352,16 @@
   (let [dk-seq (get-log-type log-seq damage-kill?)
 	player-seq (get-unique-ids-from-seq dk-seq :victim)]
     (create-ranking get-total-self-fire-damage dk-seq player-seq)))
+
+(defn rank-kill-streaks [log-seq]
+  (let [dk-seq (get-log-type log-seq damage-kill?)
+	player-seq (get-unique-ids-from-seq dk-seq :attacker)]
+    (create-ranking get-max-kill-streak dk-seq player-seq)))
+
+(defn rank-death-streaks [log-seq]
+  (let [dk-seq (get-log-type log-seq damage-kill?)
+	player-seq (get-unique-ids-from-seq dk-seq :victim)]
+    (create-ranking get-max-death-streak dk-seq player-seq)))
 
 (defn create-weapon-ranking [value-function weapon-predicate log-seq player-seq]
   (reverse (sort-by :value (doall (map #(value-function (select-weapon-type log-seq weapon-predicate) %) player-seq)))))

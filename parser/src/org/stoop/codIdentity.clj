@@ -125,11 +125,11 @@
 
 (defn set-photo
   [ip-address photo]
-  (dosync (alter ip-photo-map assoc (keyword ip-address) photo))
+  (dosync (alter ip-photo-map assoc ip-address photo))
   (write-photo-log @ip-photo-map))
 
 (defn get-photo
   [client-id]
   (let [ip-address-string (get-ip client-id)]
     (when (not (nil? ip-address-string))
-      (get @ip-photo-map (keyword ip-address-string)))))
+      (get @ip-photo-map ip-address-string))))

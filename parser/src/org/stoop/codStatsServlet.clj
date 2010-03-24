@@ -154,7 +154,9 @@
 	    {:name "Burning Man" :id "burning_man" :tip "Most self inflicted fire damage."}
 	    {:name "Chatty Cathy" :id "chatty_cathy" :tip "Highest number of chat messages sent."}
 	    {:name "Darwin" :id "darwin" :tip "Most damage from the environment."}
+	    {:name "Death Frenzy" :id "death_frenzy" :tip "Highest streak of deaths without a kill."}
 	    {:name "Elusive" :id "elusive" :tip "Lowest kills plus deaths."}
+	    {:name "Kill Frenzy" :id "kill_frenzy" :tip "Highest streak of kills without a death."}
 	    {:name "Lemming" :id "lemming" :tip "Most deaths by suicide."}
 	    {:name "Masochist" :id "masochist" :tip "Most self-inflicted damage."}
 	    {:name "Scapegoat" :id "scapegoat" :tip "Most damage received from teammates."}
@@ -193,7 +195,9 @@
 	  (= award "burning_man") (format-award (rank-self-fire-damage @game-archive))
 	  (= award "chatty_cathy") (format-award (rank-num-talks @game-archive))
 	  (= award "darwin") (format-award (rank-total-damage-from-world @game-archive))
+	  (= award "death_frenzy") (format-award (rank-death-streaks @game-archive))
 	  (= award "elusive") (reverse-format-award (rank-kills-plus-deaths @game-archive))
+	  (= award "kill_frenzy") (format-award (rank-kill-streaks @game-archive))
 	  (= award "lemming") (format-award (rank-num-suicides @game-archive))
 	  (= award "masochist") (format-award (rank-total-self-damage @game-archive))
 	  (= award "scapegoat") (format-award (rank-total-team-dam-received @game-archive))

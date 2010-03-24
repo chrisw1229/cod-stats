@@ -222,7 +222,7 @@
 
 (defn parse-connect-line [line]
   (let [split-seq (re-split #" " (.trim line))]
-    (cond 
+    (cond
      (= "Client" (first split-seq))
      {:ip-address (first (re-split #":" (last split-seq)))}
 

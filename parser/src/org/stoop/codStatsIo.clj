@@ -11,7 +11,9 @@
 
 (defn read-photo-log []
   (try
-   (decode-from-str (slurp @*photo-info-location*))
+   (let [photo-map (decode-from-str (slurp @*photo-info-location*))]
+     (when (map? photo-map)
+       (zipmap (map name (keys photo-map)) (vals photo-map))))
    (catch Exception e
      {})))
 
