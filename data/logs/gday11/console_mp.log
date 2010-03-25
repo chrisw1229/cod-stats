@@ -1349,7 +1349,7 @@ Hitch warning: 4076 msec frame time
 ^8(GAME_ALLIES)Mats hunter!!^7: QUICKMESSAGE_MOVE_IN
 Client 32 connecting with 0 challenge ping from 192.168.1.203:28960
       cvar set cg_atmos -1
-Going from CS_FREE to CS_CONNECTED for Unknown Soldier (num 19 guid 0)
+Going from CS_FREE to CS_CONNECTED for Herpes (num 19 guid 0)
 ^9Optimus Prime and Chris SaboSab^7: unknown soldier change your name
 ^9(GAME_AXIS)Tim - Target Drone^7: QUICKMESSAGE_FOLLOW_ME
 17:VanDammage EXE_DISCONNECTED
@@ -3550,7 +3550,7 @@ gamedate: Dec  6 2004
 19:Herpes EXE_DISCONNECTED
 Client 36 connecting with 0 challenge ping from 192.168.1.203:28960
       cvar set cg_atmos -1
-Going from CS_FREE to CS_CONNECTED for Unknown Soldier (num 17 guid 0)
+Going from CS_FREE to CS_CONNECTED for Herpes (num 17 guid 0)
 Client 37 connecting with 50 challenge ping from 192.168.1.109:28960
       cvar set cg_atmos -1
 Going from CS_FREE to CS_CONNECTED for Chocolate Flower (num 19 guid 0)
@@ -5438,7 +5438,7 @@ gamedate: Dec  6 2004
 Hitch warning: 1116 msec frame time
 Client 38 connecting with 50 challenge ping from 192.168.1.138:28960
       cvar set cg_atmos -1
-Going from CS_FREE to CS_CONNECTED for Unknown Soldier (num 33 guid 0)
+Going from CS_FREE to CS_CONNECTED for CRUD (num 33 guid 0)
 Client 39 connecting with 0 challenge ping from 192.168.1.140:28960
       cvar set cg_atmos -1
 Going from CS_FREE to CS_CONNECTED for RolfisthenewBoby (num 34 guid 0)
