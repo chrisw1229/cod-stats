@@ -179,12 +179,31 @@
 	    {:name "Rifle" :id "rifle" :tip "Most kills by rifle."}
 	    {:name "Tank" :id "tank" :tip "Most kills by tank."}
 	    {:name "Yankee" :id "yankee" :tip "Most kills by American weapons."}
+	    {:name "CTF - Agent" :id "ctf_agent" :tip "Most flags stolen from an enemy base."}
+	    {:name "CTF - Conqueror" :id "ctf_conqueror" :tip "Most enemy flags returned to home flag."}
+	    {:name "CTF - Hero" :id "ctf_hero" :tip "Most dropped friendly flags picked up."}
+	    {:name "CTF - Ranger" :id "ctf_ranger" :tip "Most dropped enemy flags picked up."}
 	    {:name "CTF - Winner" :id "ctf_winner" :tip "Most times on winning team for CTF."}
 	    {:name "CTF - Loser" :id "ctf_loser" :tip "Most times on losing team for CTF."}
+	    {:name "DOM - Agent" :id "dom_agent" :tip "Most attempted flag point captures."}
+	    {:name "DOM - Conqueror" :id "dom_conqueror" :tip "Most flag points captured."}
+	    {:name "DOM - Defender" :id "dom_defender" :tip "Most kills near a friendly flag point."}
+	    {:name "DOM - Patriot" :id "dom_patriot" :tip "Most deaths near a flag point."}
+	    {:name "DOM - Wingman" :id "dom_wingman" :tip "Most kills near an enemy flag point."}
 	    {:name "DOM - Winner" :id "dom_winner" :tip "Most times on winning team for DOM."}
 	    {:name "DOM - Loser" :id "dom_loser" :tip "Most times on losing team for DOM."}
+	    {:name "FTF - Agent" :id "ftf_agent" :tip "Most cows picked up."}
+	    {:name "FTF - Conqeror" :id "ftf_conqueror" :tip "Most cows scored."}
+	    {:name "FTF - Defender" :id "ftf_defender" :tip "Most kills near a friendly cow carrier."}
+	    {:name "FTF - Patriot" :id "ftf_patriot" :tip "Most deaths near a cow."}
+	    {:name "FTF - Wingman" :id "ftf_wingman" :tip "Most kills near a cow carrier."}
 	    {:name "FTF - Winner" :id "ftf_winner" :tip "Most times on winning team for FTF."}
 	    {:name "FTF - Loser" :id "ftf_loser" :tip "Most times on losing team for FTF."}
+	    {:name "SFTF - Agent" :id "sftf_agent" :tip "Most cows picked up."}
+	    {:name "SFTF - Conqeror" :id "sftf_conqueror" :tip "Most cows scored."}
+	    {:name "SFTF - Defender" :id "sftf_defender" :tip "Most kills near a friendly cow carrier."}
+	    {:name "SFTF - Patriot" :id "sftf_patriot" :tip "Most deaths near a cow."}
+	    {:name "SFTF - Wingman" :id "sftf_wingman" :tip "Most kills near a cow carrier."}
 	    {:name "SFTF - Winner" :id "sftf_winner" :tip "Most times on winning team for SFTF."}
 	    {:name "SFTF - Loser" :id "sftf_loser" :tip "Most times on losing team for SFTF."}
 	    {:name "TDM - Winner" :id "tdm_winner" :tip "Most times on winning team for TDM."}
@@ -222,12 +241,31 @@
 	  (= award "tank") (format-award (rank-tank-kills @game-archive))
 	  (= award "yankee") (format-award (rank-american-wep-kills @game-archive))
 	  
+	  (= award "ctf_agent") (format-award (rank-num-ctf-takes @game-archive))
+	  (= award "ctf_conqueror") (format-award (rank-num-ctf-captures @game-archive))
+	  (= award "ctf_hero") (format-award (rank-num-ctf-returns @game-archive))
+	  (= award "ctf_ranger") (format-award (rank-num-ctf-pickups @game-archive))
 	  (= award "ctf_winner") (format-award (rank-num-ctf-wins @game-archive))
 	  (= award "ctf_loser") (format-award (rank-num-ctf-losses @game-archive))
+	  (= award "dom_agent") (format-award (rank-num-dom-takes @game-archive))
+	  (= award "dom_conqueror") (format-award (rank-num-dom-captures @game-archive))
+	  (= award "dom_defender") (format-award (rank-num-dom-defends @game-archive))
+	  (= award "dom_patriot") (format-award (rank-num-dom-fails @game-archive))
+	  (= award "dom_wingman") (format-award (rank-num-dom-assists @game-archive))
 	  (= award "dom_winner") (format-award (rank-num-dom-wins @game-archive))
 	  (= award "dom_loser") (format-award (rank-num-dom-losses @game-archive))
+	  (= award "ftf_agent") (format-award (rank-num-ftf-steals @game-archive))
+	  (= award "ftf_conqueror") (format-award (rank-num-ftf-scores @game-archive))
+	  (= award "ftf_defender") (format-award (rank-num-ftf-defends @game-archive))
+	  (= award "ftf_patriot") (format-award (rank-num-ftf-fails @game-archive))
+	  (= award "ftf_wingman") (format-award (rank-num-ftf-assists @game-archive))
 	  (= award "ftf_winner") (format-award (rank-num-ftf-wins @game-archive))
 	  (= award "ftf_loser") (format-award (rank-num-ftf-losses @game-archive))
+	  (= award "sftf_agent") (format-award (rank-num-sftf-steals @game-archive))
+	  (= award "sftf_conqueror") (format-award (rank-num-sftf-scores @game-archive))
+	  (= award "sftf_defender") (format-award (rank-num-sftf-defends @game-archive))
+	  (= award "sftf_patriot") (format-award (rank-num-sftf-fails @game-archive))
+	  (= award "sftf_wingman") (format-award (rank-num-sftf-assists @game-archive))
 	  (= award "sftf_winner") (format-award (rank-num-sftf-wins @game-archive))
 	  (= award "sftf_loser") (format-award (rank-num-sftf-losses @game-archive))
 	  (= award "tdm_winner") (format-award (rank-num-tdm-wins @game-archive))

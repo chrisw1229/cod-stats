@@ -25,6 +25,9 @@
 (defn select-damage-type [dk-seq type-name]
   (filter #(.equalsIgnoreCase type-name (get-in % [:entry :hit-details :type])) dk-seq))
 
+(defn select-event-type [event-seq event-name]
+  (filter #(.equalsIgnoreCase event-name (get-in % [:entry :event])) event-seq))
+
 ;Get unique stuff from sequences
 
 (defn get-unique-from-seq [log-seq nested-keys]
@@ -202,6 +205,120 @@
   (let [player-shocks (select-pid-from-seq shock-recs :shock player-id)
 	player-name (get-in (last player-shocks) [:entry :shock :name])]
     {:name player-name :value (sum-over player-shocks [:entry :shock-info :damage])}))
+
+(defn get-num-ctf-takes [event-recs player-id]
+  (let [ctf-takes (select-event-type event-recs "ctf_take")
+	player-takes (select-pid-from-seq ctf-takes :player player-id)
+	player-name (get-in (last player-takes) [:entry :player :name])]
+    {:name player-name :value (count player-takes)}))
+
+(defn get-num-ctf-captures [event-recs player-id]
+  (let [ctf-captures (select-event-type event-recs "ctf_captured")
+	player-takes (select-pid-from-seq ctf-captures :player player-id)
+	player-name (get-in (last player-takes) [:entry :player :name])]
+    {:name player-name :value (count player-takes)}))
+
+(defn get-num-ctf-returns [event-recs player-id]
+  (let [ctf-returns (select-event-type event-recs "ctf_returned")
+	player-takes (select-pid-from-seq ctf-returns :player player-id)
+	player-name (get-in (last player-takes) [:entry :player :name])]
+    {:name player-name :value (count player-takes)}))
+
+(defn get-num-ctf-pickups [event-recs player-id]
+  (let [ctf-pickups (select-event-type event-recs "ctf_pickup")
+	player-takes (select-pid-from-seq ctf-pickups :player player-id)
+	player-name (get-in (last player-takes) [:entry :player :name])]
+    {:name player-name :value (count player-takes)}))
+
+(defn get-num-dom-takes [event-recs player-id]
+  (let [dom-takes (select-event-type event-recs "dom_take")
+	player-takes (select-pid-from-seq dom-takes :player player-id)
+	player-name (get-in (last player-takes) [:entry :player :name])]
+    {:name player-name :value (count player-takes)}))
+
+(defn get-num-dom-captures [event-recs player-id]
+  (let [dom-captures (select-event-type event-recs "dom_captured")
+	player-takes (select-pid-from-seq dom-captures :player player-id)
+	player-name (get-in (last player-takes) [:entry :player :name])]
+    {:name player-name :value (count player-takes)}))
+
+(defn get-num-dom-defends [event-recs player-id]
+  (let [dom-defends (select-event-type event-recs "dom_defended")
+	player-takes (select-pid-from-seq dom-defends :player player-id)
+	player-name (get-in (last player-takes) [:entry :player :name])]
+    {:name player-name :value (count player-takes)}))
+
+(defn get-num-dom-fails [event-recs player-id]
+  (let [dom-fails (select-event-type event-recs "dom_fail")
+	player-takes (select-pid-from-seq dom-fails :player player-id)
+	player-name (get-in (last player-takes) [:entry :player :name])]
+    {:name player-name :value (count player-takes)}))
+
+(defn get-num-dom-assists [event-recs player-id]
+  (let [dom-assists (select-event-type event-recs "dom_assist")
+	player-takes (select-pid-from-seq dom-assists :player player-id)
+	player-name (get-in (last player-takes) [:entry :player :name])]
+    {:name player-name :value (count player-takes)}))
+
+(defn get-num-ftf-steals [event-recs player-id]
+  (let [ftf-steals (select-event-type event-recs "ftf_stole")
+	player-takes (select-pid-from-seq ftf-steals :player player-id)
+	player-name (get-in (last player-takes) [:entry :player :name])]
+    {:name player-name :value (count player-takes)}))
+
+(defn get-num-ftf-scores [event-recs player-id]
+  (let [ftf-scores (select-event-type event-recs "ftf_scored")
+	player-takes (select-pid-from-seq ftf-scores :player player-id)
+	player-name (get-in (last player-takes) [:entry :player :name])]
+    {:name player-name :value (count player-takes)}))
+
+(defn get-num-ftf-defends [event-recs player-id]
+  (let [ftf-defends (select-event-type event-recs "ftf_defended")
+	player-takes (select-pid-from-seq ftf-defends :player player-id)
+	player-name (get-in (last player-takes) [:entry :player :name])]
+    {:name player-name :value (count player-takes)}))
+
+(defn get-num-ftf-fails [event-recs player-id]
+  (let [ftf-fails (select-event-type event-recs "ftf_fail")
+	player-takes (select-pid-from-seq ftf-fails :player player-id)
+	player-name (get-in (last player-takes) [:entry :player :name])]
+    {:name player-name :value (count player-takes)}))
+
+(defn get-num-ftf-assists [event-recs player-id]
+  (let [ftf-assists (select-event-type event-recs "ftf_assist")
+	player-takes (select-pid-from-seq ftf-assists :player player-id)
+	player-name (get-in (last player-takes) [:entry :player :name])]
+    {:name player-name :value (count player-takes)}))
+
+(defn get-num-sftf-steals [event-recs player-id]
+  (let [sftf-steals (select-event-type event-recs "sftf_stole")
+	player-takes (select-pid-from-seq sftf-steals :player player-id)
+	player-name (get-in (last player-takes) [:entry :player :name])]
+    {:name player-name :value (count player-takes)}))
+
+(defn get-num-sftf-scores [event-recs player-id]
+  (let [sftf-scores (select-event-type event-recs "sftf_scored")
+	player-takes (select-pid-from-seq sftf-scores :player player-id)
+	player-name (get-in (last player-takes) [:entry :player :name])]
+    {:name player-name :value (count player-takes)}))
+
+(defn get-num-sftf-defends [event-recs player-id]
+  (let [sftf-defends (select-event-type event-recs "sftf_defended")
+	player-takes (select-pid-from-seq sftf-defends :player player-id)
+	player-name (get-in (last player-takes) [:entry :player :name])]
+    {:name player-name :value (count player-takes)}))
+
+(defn get-num-sftf-fails [event-recs player-id]
+  (let [sftf-fails (select-event-type event-recs "sftf_fail")
+	player-takes (select-pid-from-seq sftf-fails :player player-id)
+	player-name (get-in (last player-takes) [:entry :player :name])]
+    {:name player-name :value (count player-takes)}))
+
+(defn get-num-sftf-assists [event-recs player-id]
+  (let [sftf-assists (select-event-type event-recs "sftf_assist")
+	player-takes (select-pid-from-seq sftf-assists :player player-id)
+	player-name (get-in (last player-takes) [:entry :player :name])]
+    {:name player-name :value (count player-takes)}))
 
 ;Wins and losses for various game types
 
@@ -386,53 +503,117 @@
 	player-seq (get-unique-ids-from-seq dk-seq :victim)]
     (create-weapon-ranking get-num-deaths weapon-predicate dk-seq player-seq)))
 
-(defn rank-artillery-damage [log-seq]
-  (rank-weapon-damage log-seq artillery?))
+(defn rank-artillery-damage [log-seq] (rank-weapon-damage log-seq artillery?))
+(defn rank-bazooka-damage [log-seq] (rank-weapon-damage log-seq bazooka?))
+(defn rank-russian-wep-kills [log-seq] (rank-weapon-kills log-seq russian?))
+(defn rank-flamethrower-damage [log-seq] (rank-weapon-damage log-seq flame-thrower?))
+(defn rank-flamethrower-dam-received [log-seq] (rank-weapon-damage-received log-seq flame-thrower?))
+(defn rank-fubar-damage [log-seq] (rank-weapon-damage log-seq fubar?))
+(defn rank-grenade-damage [log-seq] (rank-weapon-damage log-seq grenade?))
+(defn rank-heavy-mg-kills [log-seq] (rank-weapon-kills log-seq heavy-mg?))
+(defn rank-jeep-gun-kills [log-seq] (rank-weapon-kills log-seq jeep?))
+(defn rank-light-mg-kills [log-seq] (rank-weapon-kills log-seq light-mg?))
+(defn rank-british-wep-kills [log-seq] (rank-weapon-kills log-seq british?))
+(defn rank-german-wep-kills [log-seq] (rank-weapon-kills log-seq german?))
+(defn rank-pistol-kills [log-seq] (rank-weapon-kills log-seq pistol?))
+(defn rank-rifle-kills [log-seq] (rank-weapon-kills log-seq rifle?))
+(defn rank-tank-kills [log-seq] (rank-weapon-kills log-seq tank?))
+(defn rank-american-wep-kills [log-seq] (rank-weapon-kills log-seq american?))
 
-(defn rank-bazooka-damage [log-seq]
-  (rank-weapon-damage log-seq bazooka?))
+(defn rank-num-ctf-takes [log-seq]
+  (let [event-seq (get-log-type log-seq game-event?)
+	player-seq (get-unique-ids-from-seq event-seq :player)]
+    (create-ranking get-num-ctf-takes event-seq player-seq)))
 
-(defn rank-russian-wep-kills [log-seq]
-  (rank-weapon-kills log-seq russian?))
+(defn rank-num-ctf-captures [log-seq]
+  (let [event-seq (get-log-type log-seq game-event?)
+	player-seq (get-unique-ids-from-seq event-seq :player)]
+    (create-ranking get-num-ctf-captures event-seq player-seq)))
 
-(defn rank-flamethrower-damage [log-seq]
-  (rank-weapon-damage log-seq flame-thrower?))
+(defn rank-num-ctf-returns [log-seq]
+  (let [event-seq (get-log-type log-seq game-event?)
+	player-seq (get-unique-ids-from-seq event-seq :player)]
+    (create-ranking get-num-ctf-returns event-seq player-seq)))
 
-(defn rank-flamethrower-dam-received [log-seq]
-  (rank-weapon-damage-received log-seq flame-thrower?))
+(defn rank-num-ctf-pickups [log-seq]
+  (let [event-seq (get-log-type log-seq game-event?)
+	player-seq (get-unique-ids-from-seq event-seq :player)]
+    (create-ranking get-num-ctf-pickups event-seq player-seq)))
 
-(defn rank-fubar-damage [log-seq]
-  (rank-weapon-damage log-seq fubar?))
+(defn rank-num-dom-takes [log-seq]
+  (let [event-seq (get-log-type log-seq game-event?)
+	player-seq (get-unique-ids-from-seq event-seq :player)]
+    (create-ranking get-num-dom-takes event-seq player-seq)))
 
-(defn rank-grenade-damage [log-seq]
-  (rank-weapon-damage log-seq grenade?))
+(defn rank-num-dom-captures [log-seq]
+  (let [event-seq (get-log-type log-seq game-event?)
+	player-seq (get-unique-ids-from-seq event-seq :player)]
+    (create-ranking get-num-dom-captures event-seq player-seq)))
 
-(defn rank-heavy-mg-kills [log-seq]
-  (rank-weapon-kills log-seq heavy-mg?))
+(defn rank-num-dom-defends [log-seq]
+  (let [event-seq (get-log-type log-seq game-event?)
+	player-seq (get-unique-ids-from-seq event-seq :player)]
+    (create-ranking get-num-dom-defends event-seq player-seq)))
 
-(defn rank-jeep-gun-kills [log-seq]
-  (rank-weapon-kills log-seq jeep?))
+(defn rank-num-dom-fails [log-seq]
+  (let [event-seq (get-log-type log-seq game-event?)
+	player-seq (get-unique-ids-from-seq event-seq :player)]
+    (create-ranking get-num-dom-fails event-seq player-seq)))
 
-(defn rank-light-mg-kills [log-seq]
-  (rank-weapon-kills log-seq light-mg?))
+(defn rank-num-dom-assists [log-seq]
+  (let [event-seq (get-log-type log-seq game-event?)
+	player-seq (get-unique-ids-from-seq event-seq :player)]
+    (create-ranking get-num-dom-assists event-seq player-seq)))
 
-(defn rank-british-wep-kills [log-seq]
-  (rank-weapon-kills log-seq british?))
+(defn rank-num-ftf-steals [log-seq]
+  (let [event-seq (get-log-type log-seq game-event?)
+	player-seq (get-unique-ids-from-seq event-seq :player)]
+    (create-ranking get-num-ftf-steals event-seq player-seq)))
 
-(defn rank-german-wep-kills [log-seq]
-  (rank-weapon-kills log-seq german?))
+(defn rank-num-ftf-scores [log-seq]
+  (let [event-seq (get-log-type log-seq game-event?)
+	player-seq (get-unique-ids-from-seq event-seq :player)]
+    (create-ranking get-num-ftf-scores event-seq player-seq)))
 
-(defn rank-pistol-kills [log-seq]
-  (rank-weapon-kills log-seq pistol?))
+(defn rank-num-ftf-defends [log-seq]
+  (let [event-seq (get-log-type log-seq game-event?)
+	player-seq (get-unique-ids-from-seq event-seq :player)]
+    (create-ranking get-num-ftf-defends event-seq player-seq)))
 
-(defn rank-rifle-kills [log-seq]
-  (rank-weapon-kills log-seq rifle?))
+(defn rank-num-ftf-fails [log-seq]
+  (let [event-seq (get-log-type log-seq game-event?)
+	player-seq (get-unique-ids-from-seq event-seq :player)]
+    (create-ranking get-num-ftf-fails event-seq player-seq)))
 
-(defn rank-tank-kills [log-seq]
-  (rank-weapon-kills log-seq tank?))
+(defn rank-num-ftf-assists [log-seq]
+  (let [event-seq (get-log-type log-seq game-event?)
+	player-seq (get-unique-ids-from-seq event-seq :player)]
+    (create-ranking get-num-ftf-assists event-seq player-seq)))
 
-(defn rank-american-wep-kills [log-seq]
-  (rank-weapon-kills log-seq american?))
+(defn rank-num-sftf-steals [log-seq]
+  (let [event-seq (get-log-type log-seq game-event?)
+	player-seq (get-unique-ids-from-seq event-seq :player)]
+    (create-ranking get-num-sftf-steals event-seq player-seq)))
+
+(defn rank-num-sftf-scores [log-seq]
+  (let [event-seq (get-log-type log-seq game-event?)
+	player-seq (get-unique-ids-from-seq event-seq :player)]
+    (create-ranking get-num-sftf-scores event-seq player-seq)))
+
+(defn rank-num-sftf-defends [log-seq]
+  (let [event-seq (get-log-type log-seq game-event?)
+	player-seq (get-unique-ids-from-seq event-seq :player)]
+    (create-ranking get-num-sftf-defends event-seq player-seq)))
+
+(defn rank-num-sftf-fails [log-seq]
+  (let [event-seq (get-log-type log-seq game-event?)
+	player-seq (get-unique-ids-from-seq event-seq :player)]
+    (create-ranking get-num-sftf-fails event-seq player-seq)))
+
+(defn rank-num-sftf-assists [log-seq]
+  (let [event-seq (get-log-type log-seq game-event?)
+	player-seq (get-unique-ids-from-seq event-seq :player)]
+    (create-ranking get-num-sftf-assists event-seq player-seq)))
 
 (defn pad-number [padee]
   (if (> 10 padee)
