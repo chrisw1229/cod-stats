@@ -16408,7 +16408,7 @@ Going from CS_FREE to CS_CONNECTED for Echobrain (num 13 guid 0)
 ^8(GAME_DEAD)(GAME_ALLIES)Colonel Billiam^7: attic
 ^8(GAME_ALLIES)Colonel Billiam^7: attic protect
 (GAME_SPECTATOR)King^7: recxe
-Client 69 connecting with 50 challenge ping from 192.168.1.186:28960
+Client 69 connecting with 50 challenge ping from 192.168.1.187:28960
       cvar set cg_atmos -1
 Going from CS_FREE to CS_CONNECTED for Luigi (num 19 guid 0)
 (GAME_SPECTATOR)King^7: yyyyyyyyyyyyyyyyy
