@@ -207,3 +207,24 @@
   (includes? ["flamethrower_mp"] weapon-name))
 (defn melee? [type-name]
   (includes? ["MOD_MELEE"] type-name))
+
+(defn crotch? [area-name]
+  (includes? ["torso_lower"] area-name))
+(defn arm? [area-name]
+  (includes? ["left_arm_upper" "left_arm_lower"
+	      "right_arm_upper" "right_arm_lower"] area-name))
+(defn hand? [area-name]
+  (includes? ["left_hand" "right_hand"] area-name))
+(defn foot? [area-name]
+  (includes? ["left_foot" "right_foot"] area-name))
+(defn leg? [area-name]
+  (includes? ["left_leg_upper" "left_leg_lower"
+	      "right_leg_upper" "right_leg_lower"] area-name))
+(defn limb? [area-name]
+  (or (arm? area-name) (hand? area-name) (foot? area-name) (leg? area-name)))
+(defn head? [area-name]
+  (includes? ["head"] area-name))
+(defn neck? [area-name]
+  (includes? ["neck"] area-name))
+(defn head-neck? [area-name]
+  (or (head? area-name) (neck? area-name)))

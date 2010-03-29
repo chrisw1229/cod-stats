@@ -19,8 +19,8 @@
 (defn select-weapon-type [dk-seq weapon-pred]
   (filter #(weapon-pred (get-in % [:entry :hit-details :weapon])) dk-seq))
 
-(defn select-hit-area [dk-seq area-name]
-  (filter #(.equalsIgnoreCase area-name (get-in % [:entry :hit-details :area])) dk-seq))
+(defn select-hit-area [dk-seq area-pred]
+  (filter #(area-pred (get-in % [:entry :hit-details :area])) dk-seq))
 
 (defn select-damage-type [dk-seq type-name]
   (filter #(.equalsIgnoreCase type-name (get-in % [:entry :hit-details :type])) dk-seq))
@@ -46,6 +46,16 @@
 
 (defn get-unique-weapons-from-seq [dk-seq]
   (get-unique-from-seq dk-seq [:entry :hit-details :weapon]))
+
+(defn list-names [dk-seq player-id]
+  (let [player-recs (select-pid-from-seq dk-seq :victim player-id)]
+    (get-unique-names-from-seq player-recs :victim)))
+
+(defn list-all-names-ids [log-seq]
+  (let [dk-seq (get-log-type log-seq damage-kill?)
+	player-ids (get-all-ids dk-seq)]
+    (for [player-id player-ids]
+      {:id player-id :names (list-names dk-seq player-id)})))
 
 ;One of something calculations
 
@@ -190,6 +200,47 @@
 (defn get-total-self-fire-damage [dk-seq player-id]
   (let [fire-recs (select-damage-type dk-seq "MOD_FLAME")]
     (get-total-self-damage fire-recs player-id)))
+
+(defn get-num-water-deaths [dk-seq player-id]
+  (let [kill-recs (get-log-type dk-seq kill?)
+	player-ds (select-pid-from-seq kill-recs :victim player-id)
+	water-recs (select-damage-type player-ds "MOD_TRIGGER_HURT")
+	player-name (get-in (last water-recs) [:entry :victim :name])]
+    {:name player-name :value (count water-recs)}))
+
+(defn get-num-melee-kills [dk-seq player-id]
+  (let [kill-recs (get-log-type dk-seq clean-kill?)
+	player-ks (select-pid-from-seq kill-recs :attacker player-id)
+	melee-recs (select-damage-type player-ks "MOD_MELEE")]
+    (count melee-recs)))
+
+(defn get-num-artillery-kills [dk-seq player-id]
+  (let [kill-recs (get-log-type dk-seq clean-kill?)
+	player-ks (select-pid-from-seq kill-recs :attacker player-id)
+	arti-recs (select-weapon-type player-ks artillery?)]
+    (count arti-recs)))
+
+(defn get-num-lame-kills [dk-seq player-id]
+  (let [player-recs (select-pid-from-seq dk-seq :attacker player-id)
+	player-name (get-in (last player-recs) [:entry :attacker :name])]
+    {:name player-name
+     :value (+ (get-num-melee-kills dk-seq player-id) (get-num-artillery-kills dk-seq player-id))}))
+
+(defn get-total-jeep-crush-damage [dk-seq player-id]
+  (let [clean-recs (get-log-type dk-seq clean-damage?)
+	jeep-crush-recs (select-damage-type clean-recs "MOD_CRUSH_JEEP")
+	player-crushes (select-pid-from-seq jeep-crush-recs :attacker player-id)
+	player-name (get-in (last player-crushes) [:entry :attacker :name])]
+    {:name player-name :value (sum-over player-crushes [:entry :hit-details :damage])}))
+
+(defn get-total-tank-crush-damage [dk-seq player-id]
+  (let [clean-recs (get-log-type dk-seq clean-damage?)
+	tank-crush-recs (select-damage-type clean-recs "MOD_CRUSH_TANK")
+	player-crushes (select-pid-from-seq tank-crush-recs :attacker player-id)
+	player-name (get-in (last player-crushes) [:entry :attacker :name])]
+    {:name player-name :value (sum-over player-crushes [:entry :hit-details :damage])}))
+
+;Non-DK computations
 
 (defn get-num-talks [chat-recs player-id]
   (let [player-talks (select-pid-from-seq chat-recs :player player-id)
@@ -416,6 +467,26 @@
 	player-seq (get-unique-ids-from-seq dk-seq :attacker)]
     (create-ranking get-num-suicides dk-seq player-seq)))
 
+(defn rank-num-water-deaths [log-seq]
+  (let [dk-seq (get-log-type log-seq damage-kill?)
+	player-seq (get-unique-ids-from-seq dk-seq :victim)]
+    (create-ranking get-num-water-deaths dk-seq player-seq)))
+
+(defn rank-num-lame-kills [log-seq]
+  (let [dk-seq (get-log-type log-seq damage-kill?)
+	player-seq (get-unique-ids-from-seq dk-seq :attacker)]
+    (create-ranking get-num-lame-kills dk-seq player-seq)))
+
+(defn rank-jeep-crush-damage [log-seq]
+  (let [dk-seq (get-log-type log-seq damage-kill?)
+	player-seq (get-unique-ids-from-seq dk-seq :attacker)]
+    (create-ranking get-total-jeep-crush-damage dk-seq player-seq)))
+
+(defn rank-tank-crush-damage [log-seq]
+  (let [dk-seq (get-log-type log-seq damage-kill?)
+	player-seq (get-unique-ids-from-seq dk-seq :attacker)]
+    (create-ranking get-total-tank-crush-damage dk-seq player-seq)))
+
 (defn rank-num-talks [log-seq]
   (let [talk-seq (get-log-type log-seq talk?)
 	player-seq (get-unique-ids-from-seq talk-seq :player)]
@@ -480,6 +551,8 @@
 	player-seq (get-unique-ids-from-seq dk-seq :victim)]
     (create-ranking get-max-death-streak dk-seq player-seq)))
 
+;Weapon rankings
+
 (defn create-weapon-ranking [value-function weapon-predicate log-seq player-seq]
   (reverse (sort-by :value (doall (map #(value-function (select-weapon-type log-seq weapon-predicate) %) player-seq)))))
 
@@ -519,6 +592,22 @@
 (defn rank-rifle-kills [log-seq] (rank-weapon-kills log-seq rifle?))
 (defn rank-tank-kills [log-seq] (rank-weapon-kills log-seq tank?))
 (defn rank-american-wep-kills [log-seq] (rank-weapon-kills log-seq american?))
+
+;Area rankings
+
+(defn create-area-ranking [value-function area-predicate log-seq player-seq]
+  (reverse (sort-by :value (doall (map #(value-function (select-hit-area log-seq area-predicate) %) player-seq)))))
+
+(defn rank-area-kills [log-seq area-predicate]
+  (let [dk-seq (get-log-type log-seq damage-kill?)
+	player-seq (get-unique-ids-from-seq dk-seq :attacker)]
+    (create-area-ranking get-num-kills area-predicate dk-seq player-seq)))
+
+(defn rank-crotch-kills [log-seq] (rank-area-kills log-seq crotch?))
+(defn rank-limb-kills [log-seq] (rank-area-kills log-seq limb?))
+(defn rank-head-neck-kills [log-seq] (rank-area-kills log-seq head-neck?))
+
+;Game type awards
 
 (defn rank-num-ctf-takes [log-seq]
   (let [event-seq (get-log-type log-seq game-event?)

@@ -118,7 +118,7 @@
 	 (str "File watching started for " @*log-file-location*)))
 
   (GET "/stats/archive"
-       (map #(str % "\n") @game-archive))
+       (encode-to-str (list-all-names-ids @game-archive)))
 
   (GET "/stats/registration"
        (let [ip-address (:ip params)
@@ -157,27 +157,35 @@
 	    {:name "Death Frenzy" :id "death_frenzy" :tip "Highest streak of deaths without a kill."}
 	    {:name "Elusive" :id "elusive" :tip "Lowest kills plus deaths."}
 	    {:name "Kill Frenzy" :id "kill_frenzy" :tip "Highest streak of kills without a death."}
+	    {:name "Lamer" :id "lamer" :tip "Number of melee plus artillery kills."}
 	    {:name "Lemming" :id "lemming" :tip "Most deaths by suicide."}
 	    {:name "Masochist" :id "masochist" :tip "Most self-inflicted damage."}
 	    {:name "Scapegoat" :id "scapegoat" :tip "Most damage received from teammates."}
 	    {:name "Scavenger" :id "scavenger" :tip "Most weapon pickups."}
 	    {:name "The Shocker" :id "shocker" :tip "Most time spent shell shocked."}
 	    {:name "Traitor" :id "traitor" :tip "Most team kills."}
+	    {:name "Watery Grave" :id "watery_grave" :tip "Most deaths by water."}
 	    {:name "Wolverine" :id "wolverine" :tip "Most health pickups."}
 	    {:name "Artillery" :id "artillery" :tip "Most damage done by artillery weapons."}
 	    {:name "Bazooka" :id "bazooka" :tip "Most damage done by bazooka."}
 	    {:name "Comrade" :id "comrade" :tip "Most kills by Russian weapons."}
+	    {:name "Crotch Shot" :id "crotch_shot" :tip "Most kills by hits to the lower torso."}
 	    {:name "Flamethrower" :id "flamethrower" :tip "Most damage done by flamethrower."}
 	    {:name "FUBAR" :id "fubar" :tip "Most damage done by FUBAR weapons."}
 	    {:name "Grenade" :id "grenade" :tip "Most damage done by grenades."}
 	    {:name "Heavy Machine Gun" :id "heavy_mg" :tip "Most kills by heavy machine gun."}
 	    {:name "Jeep" :id "jeep" :tip "Most kills by mounted jeep gun."}
+	    {:name "Jeep Crush" :id "jeep_crush" :tip "Most damage by jeep crush."}
 	    {:name "Light Machine Gun" :id "light_mg" :tip "Most kills by light machine gun."}
+	    {:name "Limb Shot" :id "limb_shot" :tip "Most kills by hits to the arm, leg, hand or foot."}
 	    {:name "Limey" :id "limey" :tip "Most kills by British weapons."}
+	    {:name "Marksmanship" :id "marksmanship" :tip "Most kills by hits to the head or neck."}
 	    {:name "Nazi" :id "nazi" :tip "Most kills by German weapons."}
 	    {:name "Pistol" :id "pistol" :tip "Most kills by pistol."}
 	    {:name "Rifle" :id "rifle" :tip "Most kills by rifle."}
+	    {:name "Scorched Earth" :id "scorched_earth" :tip "Most damage dealt."}
 	    {:name "Tank" :id "tank" :tip "Most kills by tank."}
+	    {:name "Tank Crush" :id "tank_crush" :tip "Most damage by tank crush."}
 	    {:name "Yankee" :id "yankee" :tip "Most kills by American weapons."}
 	    {:name "CTF - Agent" :id "ctf_agent" :tip "Most flags stolen from an enemy base."}
 	    {:name "CTF - Conqueror" :id "ctf_conqueror" :tip "Most enemy flags returned to home flag."}
@@ -217,28 +225,36 @@
 	  (= award "death_frenzy") (format-award (rank-death-streaks @game-archive))
 	  (= award "elusive") (reverse-format-award (rank-kills-plus-deaths @game-archive))
 	  (= award "kill_frenzy") (format-award (rank-kill-streaks @game-archive))
+	  (= award "lamer") (format-award (rank-num-lame-kills @game-archive))
 	  (= award "lemming") (format-award (rank-num-suicides @game-archive))
 	  (= award "masochist") (format-award (rank-total-self-damage @game-archive))
 	  (= award "scapegoat") (format-award (rank-total-team-dam-received @game-archive))
 	  (= award "scavenger") (format-award (rank-num-weapon-pickups @game-archive))
 	  (= award "shocker") (format-award (rank-shock-duration @game-archive))
 	  (= award "traitor") (format-award (rank-num-team-kills @game-archive))
+	  (= award "watery_grave") (format-award (rank-num-water-deaths @game-archive))
 	  (= award "wolverine") (format-award (rank-num-item-pickups @game-archive))
 	  
 	  (= award "artillery") (format-award (rank-artillery-damage @game-archive))
 	  (= award "bazooka") (format-award (rank-bazooka-damage @game-archive))
 	  (= award "comrade") (format-award (rank-russian-wep-kills @game-archive))
+	  (= award "crotch_shot") (format-award (rank-crotch-kills @game-archive))
 	  (= award "flamethrower") (format-award (rank-flamethrower-damage @game-archive))
 	  (= award "fubar") (format-award (rank-fubar-damage @game-archive))
 	  (= award "grenade") (format-award (rank-grenade-damage @game-archive))
 	  (= award "heavy_mg") (format-award (rank-heavy-mg-kills @game-archive))
 	  (= award "jeep") (format-award (rank-jeep-gun-kills @game-archive))
+	  (= award "jeep_crush") (format-award (rank-jeep-crush-damage @game-archive))
 	  (= award "light_mg") (format-award (rank-light-mg-kills @game-archive))
+	  (= award "limb_shot") (format-award (rank-limb-kills @game-archive))
 	  (= award "limey") (format-award (rank-british-wep-kills @game-archive))
+	  (= award "marksmanship") (format-award (rank-head-neck-kills @game-archive))
 	  (= award "nazi") (format-award (rank-german-wep-kills @game-archive))
 	  (= award "pistol") (format-award (rank-pistol-kills @game-archive))
 	  (= award "rifle") (format-award (rank-rifle-kills @game-archive))
+	  (= award "scorched_earth") (format-award (rank-total-dam-dealt @game-archive))
 	  (= award "tank") (format-award (rank-tank-kills @game-archive))
+	  (= award "tank_crush") (format-award (rank-tank-crush-damage @game-archive))
 	  (= award "yankee") (format-award (rank-american-wep-kills @game-archive))
 	  
 	  (= award "ctf_agent") (format-award (rank-num-ctf-takes @game-archive))
