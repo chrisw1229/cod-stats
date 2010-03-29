@@ -118,7 +118,7 @@
 	 (str "File watching started for " @*log-file-location*)))
 
   (GET "/stats/archive"
-       (encode-to-str (list-all-names-ids @game-archive)))
+       (encode-to-str @ip-id-map))
 
   (GET "/stats/registration"
        (let [ip-address (:ip params)
