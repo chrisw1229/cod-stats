@@ -1,0 +1,59 @@
+/*
+  WEAPONS
+  - id: The unique identifier assigned to the weapon in game.
+  - name: The display name of the weapon.
+  - team: The team that can start with the weapon.
+  - type: The category the weapon belongs to.
+  - desc: A longer description of the weapon.
+  - specs: Accuracy, damage, mobility, reload (max 6), clip (max 75). Values: (0 - 100)
+*/
+[
+  {
+    id: "bar_mp",
+    name: "BAR",
+    team: "American",
+    type: "Automatic Rifle",
+    desc: "The Browning Automatic Rifle is a squad support weapon, used to lay down accurate suppression fire at enemy positions. It is most effective when used while prone.",
+    specs: [70, 75, 52, 43, 27]
+  },
+  {
+    id: "bren_mp",
+    name: "Bren LMG",
+    team: "British",
+    type: "Light Machine Gun",
+    desc: "The Bren is an excellent machine gun in the role of squad support. Its large size limits mobility, but allows it to deliver accurate automatic fire when fired while prone.",
+    specs: [76, 77, 52, 52, 40]
+  },
+  {
+    id: "enfield_mp",
+    name: "Lee-Enfield",
+    team: "British",
+    type: "Service Rifle",
+    desc: "The Lee-Enfield rifle is a bolt-action rifle, powerful and effective at long range. It carries up to ten rounds, loaded by two 5-round stripper clips.",
+    specs: [70, 100, 89, 43, 13]
+  },
+  {
+    id: "gewehr43_mp",
+    name: "Gewehr 43",
+    team: "German",
+    type: "Semi-Automatic Rifle",
+    desc: "The Gewehr 43 is a powerful and accurate semi-automatic rifle. Its 10 round magazine allows for quicker reloading during combat.",
+    specs: [63, 75, 76, 34, 13]
+  },
+  {
+    id: "mp40_mp",
+    name: "MP40",
+    team: "German",
+    type: "Submachine Gun",
+    desc: "The MP40 submachine gun is an effective room clearing weapon. It has a relatively minimal muzzle climb even when fired fully automatic in extended bursts.",
+    specs: [39, 60, 94, 67, 43]
+  },
+  {
+    id: "mp44_mp",
+    name: "MP44",
+    team: "German",
+    type: "Assault Rifle",
+    desc: "The MP44 is an assault rifle that fires a unique short rifle round. Up close, it can be used as a submachine gun, while at longer ranges it can operate as a rifle.",
+    specs: [55, 73, 73, 60, 40]
+  }
+]
